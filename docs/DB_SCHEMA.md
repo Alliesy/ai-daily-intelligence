@@ -1,6 +1,6 @@
 # AI Daily Intelligence Web V1 Database Schema
 
-> 상태: 설계안 — 사용자 승인 대기
+> 상태: 제품·UX 및 기술 설계 승인 — 구현 지시 대기
 > 작성일: 2026-08-07 (Asia/Seoul)
 > 대상: Supabase PostgreSQL
 > 원칙: Git 콘텐츠 정본을 Event 중심 서비스 조회 모델로 투영하고 사용자 데이터는 분리한다.
@@ -143,6 +143,7 @@ Event의 안정적인 정체성과 현재 표시 필드를 보유한다.
 | `importance` | event_importance | required |
 | `hero_image_url` | text | nullable |
 | `hero_image_source_id` | uuid | nullable FK → sources |
+| `hero_image_attribution` | text | nullable, publisher/creator/source 표시 |
 | `hero_image_alt_ko` | text | nullable |
 | `publication_state` | publication_state | required |
 | `first_seen_date` | date | required |
@@ -155,7 +156,9 @@ Event의 안정적인 정체성과 현재 표시 필드를 보유한다.
 제약:
 
 - `first_seen_date <= last_seen_date`
-- `hero_image_url`과 `hero_image_source_id`는 독립적으로 nullable이지만 UI는 source attribution 없는 외부 image를 게시하지 않음
+- `hero_image_url`이 있으면 `hero_image_source_id`와 `hero_image_attribution`이 모두 필요함
+- importer는 연결 Source가 검증 가능한 원문 또는 공식 출처인지 확인하고 그렇지 않으면 image를 저장하지 않음
+- AI 생성 이미지는 V1 Event hero image로 허용하지 않음
 - Event hard delete 대신 `archived` 사용
 
 ### `event_analysis`
@@ -196,6 +199,8 @@ Event 분석을 버전과 언어별로 보존한다.
 - partial UNIQUE `(event_id, language) WHERE is_current = true`
 - `ai_score IS NULL OR ai_score BETWEEN 0 AND 5`
 - score가 있으면 `score_method_version`도 있어야 함
+
+`ai_score`와 breakdown은 향후 평가 체계를 보존할 수 있도록 DB에 유지하지만 V1 public UI와 public API response projection에는 포함하지 않는다. 공개 여부는 별도 결정 전까지 비활성이다.
 
 현재 Git `summary`의 원문은 항상 `summary_raw`에 그대로 저장한다. importer는 네 label이 명확한 경우에만 구조 필드로 분리한다. 일부 label만 있으면 `partial`, label이 없으면 `unparsed`로 기록하고 알 수 없는 문장을 FACT로 승격하지 않는다. `unparsed`도 유효한 legacy packet으로 import할 수 있으며 UI는 구조 섹션 대신 `원문 분석`으로 `summary_raw`를 표시한다. 이 fallback은 데이터 손실이나 발행 중단 없이 기존 validator가 허용하는 자유 형식 summary를 보존한다.
 
@@ -495,7 +500,7 @@ V1에서 profile은 다른 사용자에게 공개하지 않는다.
 
 `EXISTS` 조건은 FK join과 `publication_state`를 함께 확인한다. 직접 table select와 join 경로 모두에 대해 `anon`, `authenticated`, `service_role` 역할별 DB policy test를 작성한다. Draft Event에만 연결된 Source와 unreviewed relation이 공개 query로 누출되지 않는 test case를 포함한다.
 
-Briefing이 public select 대상이 되려면 `publication_state = published`여야 한다. `status = partial`인 packet을 공개할지 여부는 importer publication rule로 명시하고 경고를 함께 표시한다.
+Briefing이 public select 대상이 되려면 `publication_state = published`여야 한다. `status = complete`와 `status = partial` 모두 published가 될 수 있다. Partial Briefing은 `warnings`와 상태를 함께 제공하며 Web UI가 비차단 안내를 표시한다.
 
 ### 사용자 데이터
 
@@ -507,6 +512,8 @@ Briefing이 public select 대상이 되려면 `publication_state = published`여
 | follows | 본인 | 본인 | 해당 없음 | 본인 |
 
 모든 policy는 `(select auth.uid()) = user_id` 또는 profile PK와 같은 식으로 소유권을 확인한다. mutation에는 `WITH CHECK`를 별도로 명시한다.
+
+V1 Supabase Auth provider는 Google OAuth 하나만 활성화한다. Provider token은 `auth.users` 또는 Supabase session에서 관리하고 application table에 복제하지 않는다. 향후 provider 추가를 위해 `profiles`는 Google 고유 ID에 종속시키지 않고 `auth.users.id`만 참조한다.
 
 ### Import RPC
 
@@ -617,10 +624,7 @@ V1에 검색 화면 요구가 없으므로 full-text search index는 미리 추�
 ## 12. 미결정 사항
 
 1. Supabase project region과 backup/PITR 수준
-2. `partial` briefing의 public publication rule
-3. Source `tier`에서 authority/verification으로 가는 승인된 매핑표
-4. Event analysis version 생성 조건
-5. legacy 한국어 번역 backfill의 위치와 소유권
-6. 대표 이미지 URL만 참조할지, 허용 자산을 Storage에 복제할지
-7. `event_key`의 전역 동일성 계약
-8. Opportunity stable key와 supporting event key를 Git contract에 추가할지
+2. Source `tier`에서 authority/verification으로 가는 승인된 매핑표
+3. Event analysis version 생성 조건
+4. `event_key`의 전역 동일성 계약
+5. Opportunity stable key와 supporting event key를 Git contract에 추가할지

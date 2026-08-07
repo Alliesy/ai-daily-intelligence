@@ -1,6 +1,6 @@
 # AI Daily Intelligence Web V1 Architecture
 
-> 상태: 설계안 — 사용자 승인 대기
+> 상태: 제품·UX 및 기술 설계 승인 — 구현 지시 대기
 > 작성일: 2026-08-07 (Asia/Seoul)
 > 관련 문서: [CURRENT_ARCHITECTURE.md](CURRENT_ARCHITECTURE.md), [DB_SCHEMA.md](DB_SCHEMA.md), [DECISIONS.md](DECISIONS.md), [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md)
 
@@ -17,6 +17,8 @@ AI Daily Intelligence Web V1은 AI 관련 정보를 매일 읽기 좋은 한국�
 5. Event를 핵심 콘텐츠 단위로 사용하고 하나의 Event에 여러 Source를 연결한다.
 6. 사용자 반응은 추천·관심도에만 사용할 수 있고 사실 신뢰도나 검증 상태를 변경하지 않는다.
 7. V1에 필요하지 않은 결제, entitlement, 댓글, 커뮤니티 인프라는 미리 구현하지 않는다.
+8. 공개 콘텐츠는 로그인 없이 즉시 열람할 수 있고 로그인은 개인 기능을 위한 선택 사항이다.
+9. 사용자 표시용 신규 콘텐츠는 한국어를 기본으로 하되 고유명사는 필요한 경우 원문을 유지한다.
 
 ## 2. 기술 스택
 
@@ -25,7 +27,7 @@ AI Daily Intelligence Web V1은 AI 관련 정보를 매일 읽기 좋은 한국�
 | Web | Next.js App Router, TypeScript | SSR, Server Components, Route Handlers, metadata |
 | UI | Tailwind CSS, shadcn/ui | 반응형 레이아웃과 접근 가능한 UI primitive |
 | Database | Supabase PostgreSQL | Event 중심 조회 모델과 사용자 데이터 |
-| Authentication | Supabase Auth | 로그인, 세션, 사용자 식별 |
+| Authentication | Supabase Auth + Google OAuth | V1의 유일한 로그인 provider, 세션, 사용자 식별 |
 | Authorization | PostgreSQL RLS | 공개 읽기와 사용자별 쓰기 격리 |
 | Hosting | Vercel | Next.js 배포, 캐시, 관측 로그 |
 | Sync | GitHub Actions + TypeScript importer | Git JSON 검증 및 Supabase upsert |
@@ -99,6 +101,9 @@ Today | Opportunities | Trends | Saved
 - 데스크톱: 상단 내비게이션
 - 모바일: 압축된 상단 헤더와 주요 메뉴 하단 내비게이션
 - 본문 최대 폭과 긴 문장 행 길이를 제한하여 정보 밀도와 가독성을 함께 유지한다.
+- 데스크톱에서는 헤더 우측 또는 사이드 영역에 작은 `로그인` 버튼/배너를 둔다.
+- 모바일에서는 헤더 또는 메뉴 영역에 로그인 진입점을 둔다.
+- 로그인하지 않은 사용자의 탐색과 콘텐츠 열람을 가리는 modal, popup, full-screen gate를 최초 진입 시 표시하지 않는다.
 
 ### Today — `/`
 
@@ -114,14 +119,17 @@ Newsio 스타일의 정보 중심 홈이다.
 
 데스크톱은 핵심 Event를 주 열에, Opportunity와 Trend를 보조 열에 배치한다. 모바일은 위 순서로 한 열에 쌓는다. 이미지는 검증된 이미지가 있을 때만 제한적으로 사용하고, 이미지가 없어도 정보 구조가 유지되어야 한다.
 
+`partial` Briefing도 공개할 수 있다. 이 경우 날짜와 상태 영역에 작은 `일부 수집·검증 진행 중` badge 또는 callout을 표시하고 `warnings`를 확인할 수 있게 한다. 경고는 사실을 숨기지 않되 핵심 콘텐츠를 덮는 modal이나 full-screen alert로 표시하지 않는다.
+
 Event card는 다음을 표시한다.
 
 - 한국어 제목과 한 줄 요약
 - 중요도
-- AI 평가 점수 또는 `평가 점수 미제공`
 - 주요 Topic
 - 연결 Source 수
 - 대표 이미지가 있을 경우 작은 보조 이미지
+
+V1 UI에는 AI 수치 점수를 표시하지 않고 중요도 `S/A/B`만 표시한다. 점수 저장 구조는 유지하되 공개 여부는 평가 체계가 안정화된 후 다시 결정한다.
 
 ### News Detail — `/events/[slug]`
 
@@ -131,7 +139,6 @@ Event card는 다음을 표시한다.
 - 한 줄 요약
 - 대표 이미지와 이미지 출처
 - 중요도
-- AI 평가 점수와 산정 방식
 - FACT
 - INTERPRETATION
 - SIGNAL
@@ -143,9 +150,11 @@ Event card는 다음을 표시한다.
 - 좋아요, 싫어요, 관심, 저장
 - 연결된 모든 Source
 
-원본 출처 링크는 상단 주요 CTA와 하단 Source 목록에 모두 노출한다. Source card는 source type, authority, verification status, publisher, published date를 보여준다.
+대표 원본의 `원문 보기` CTA를 상단에서 쉽게 찾을 수 있게 하고 하단에는 Event와 연결된 모든 Source를 노출한다. Source card는 source type, authority, verification status, publisher, published date를 보여준다. OFFICIAL, INDEPENDENT, ANALYSIS, COMMUNITY 등의 출처 성격과 verified, corroborated, unverified, disputed 상태는 색상에만 의존하지 않는 text badge로 구분한다.
 
-YouTube source는 `external_id` 또는 URL에서 video ID를 안전하게 추출할 수 있을 때 썸네일 카드로 표시한다. 자동재생은 사용하지 않으며 실패 시 일반 Source card로 fallback한다.
+공식 YouTube 또는 관련 분석 영상은 `external_id` 또는 URL에서 video ID를 안전하게 추출할 수 있을 때 썸네일 카드로 표시한다. 자동재생은 사용하지 않으며 실패 시 일반 Source card로 fallback한다.
+
+대표 이미지는 검증 가능한 원문 또는 공식 출처에서만 사용하고 Source 연결과 attribution을 보존한다. 이미지를 확보하지 못한 Event는 이미지 영역 없이 정상 렌더링한다. V1 뉴스 대표 이미지에는 AI 생성 이미지를 사용하지 않으며 사진이 텍스트보다 과도하게 강조되지 않게 한다.
 
 ### Opportunities — `/opportunities`
 
@@ -171,13 +180,36 @@ YouTube source는 `external_id` 또는 URL에서 video ID를 안전하게 추출
 
 ### Saved — `/saved`
 
-- 비로그인 사용자: 로그인 안내
+- 비로그인 사용자가 직접 진입하면 콘텐츠 탐색을 막지 않는 로그인 안내와 공개 페이지 복귀 동선을 제공
 - 로그인 사용자: bookmark Event, interested Event, followed Topic
 - 최신순, 저장순, Topic 필터
 
-보조 인증 route로 `/login`, `/auth/callback`을 둔다. 구체적인 V1 로그인 provider는 승인 대기 사항이다.
+보조 인증 route로 `/login`, `/auth/callback`을 둔다. `/login`은 OAuth 처리 또는 사용자의 직접 로그인 진입점이며 사이트 기본 진입 화면으로 사용하지 않는다. V1 provider는 Google OAuth 하나만 구현한다.
 
-## 5. 렌더링, 캐시, SEO
+## 5. 로그인 UX와 복귀 흐름
+
+### 공개 우선
+
+- `/`, Event Detail, Opportunities, Trends는 로그인 없이 직접 접근할 수 있다.
+- 최초 진입을 `/login`으로 redirect하지 않는다.
+- 로그인하지 않았다는 이유로 modal, popup, full-screen overlay를 자동 표시하지 않는다.
+- 로그인 CTA는 작고 지속적으로 찾을 수 있지만 콘텐츠보다 우선하지 않는다.
+
+### 개인 기능 요청 시 안내
+
+사용자가 좋아요, 싫어요, 관심, 저장, Topic Follow 또는 Saved를 직접 사용하려는 경우에만 로그인 안내를 표시한다. 현재 페이지를 유지할 수 있는 inline prompt, popover 또는 작은 dialog를 사용할 수 있으나 사용자가 요청하지 않은 시점에는 표시하지 않는다.
+
+### Google OAuth와 return path
+
+1. 사용자가 개인 기능을 요청한다.
+2. 현재 same-origin relative path, Event slug, scroll anchor와 pending intent를 보존한다.
+3. Google OAuth를 시작하고 `/auth/callback`으로 돌아온다.
+4. callback은 허용된 relative `next` 값만 검증한 뒤 원래 페이지로 redirect한다.
+5. 원래 Event와 읽던 위치를 복원하고 요청했던 action을 다시 수행할 수 있게 한다.
+
+Open redirect를 방지하기 위해 외부 URL이나 protocol-relative URL을 `next`로 허용하지 않는다. OAuth 전 action을 자동 확정하지 않고 로그인 후 사용자가 상태를 확인하거나 다시 실행할 수 있게 한다. 향후 provider를 추가할 수 있도록 auth adapter 경계는 유지하지만 V1에서는 Google 외 provider를 구성하거나 UI에 노출하지 않는다.
+
+## 6. 렌더링, 캐시, SEO
 
 ### 렌더링
 
@@ -200,18 +232,20 @@ YouTube source는 `external_id` 또는 URL에서 video ID를 안전하게 추출
 - 제목, 요약, 대표 이미지가 있는 경우 Open Graph metadata
 - 외부 Source 링크는 명확한 출처 레이블과 안전한 외부 링크 속성을 사용
 
-## 6. 인증, 권한, 개인정보
+## 7. 인증, 권한, 개인정보
 
 ### 공개 사용자
 
 - 게시된 Briefing, Event, Analysis, Source, Topic, Opportunity, Resource, Trend를 읽을 수 있다.
 - 사용자 테이블을 읽거나 쓸 수 없다.
+- 로그인하지 않은 상태가 기본 사용자 경험이며 공개 route 접근에 Auth session을 요구하지 않는다.
 
 ### 로그인 사용자
 
 - 자신의 profile을 읽고 수정할 수 있다.
 - 자신의 reaction, bookmark, follow만 생성·조회·수정·삭제할 수 있다.
 - 다른 사용자의 식별 가능한 활동 데이터는 조회할 수 없다.
+- V1 로그인 provider는 Google OAuth만 사용한다.
 
 ### 운영 권한
 
@@ -225,7 +259,7 @@ YouTube source는 `external_id` 또는 URL에서 video ID를 안전하게 추출
 - Auth provider 원본 토큰을 애플리케이션 테이블에 복제하지 않는다.
 - 반응·저장·팔로우는 사용자 정본 데이터이며 account deletion 정책에서 함께 삭제할 수 있어야 한다.
 
-## 7. 사용자 반응과 신뢰도 분리
+## 8. 사용자 반응과 신뢰도 분리
 
 사용자 반응은 다음 용도로만 사용한다.
 
@@ -243,7 +277,7 @@ YouTube source는 `external_id` 또는 URL에서 video ID를 안전하게 추출
 
 V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 개인 반응 상태만 제공할 수 있다. 공개 집계가 필요해지면 사용자 ID를 노출하지 않는 별도 aggregate를 설계한다.
 
-## 8. Git → Supabase 동기화
+## 9. Git → Supabase 동기화
 
 ### 트리거
 
@@ -304,7 +338,7 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 | A→B→A checksum reversion | 내용 no-op이어도 per-path revision watermark를 전진시켜 지연 B 차단 |
 | 과거 correction | 해당 Briefing만 갱신하고 최신 Event current state 유지 |
 
-## 9. 현재 데이터 계약의 호환성 보완
+## 10. 현재 데이터 계약의 호환성 보완
 
 현재 Git packet과 Web 요구사항 사이에는 다음 차이가 있다.
 
@@ -312,8 +346,11 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 
 - 현재 일부 Event 제목과 요약은 영어다.
 - V1 DB는 `title_original`, `title_ko`, `one_line_summary_ko`를 구분한다.
-- 한국어 값이 명시되지 않은 legacy packet에는 임의 번역을 사실처럼 저장하지 않는다.
-- 신규 daily output의 언어 규칙을 한국어 중심으로 보완하는 변경은 기존 자동화 호환성을 별도 검증한 뒤 진행한다.
+- 앞으로 AI Researcher가 생성하는 사용자 표시용 콘텐츠는 한국어를 기본으로 한다.
+- 기업명, 제품명, 모델명, 기술명 등 고유명사는 필요한 경우 원문을 유지한다.
+- 기존 legacy 영어 데이터를 V1 구축 과정에서 일괄 번역하지 않는다.
+- 한국어 값이 없는 legacy Event는 `title_original`과 원문 summary를 fallback으로 표시한다.
+- 이 결정은 출력 언어 정책이며, 이번 문서 변경에서 기존 Researcher 자동화나 Git schema를 수정하지 않는다.
 
 ### AI 평가 점수
 
@@ -321,6 +358,8 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 - `ai_score`와 `score_breakdown`은 nullable로 설계한다.
 - 중요도에서 임의 수치 점수를 만들지 않는다.
 - 향후 Git schema에 명시적 평가 결과가 추가되면 importer가 해당 값을 사용한다.
+- V1 사용자 UI는 중요도 `S/A/B`만 표시하고 수치 점수와 세부 산정 방식은 표시하지 않는다.
+- 평가 체계가 안정화되면 공개 여부를 별도 제품 결정으로 다시 검토한다.
 
 ### Legacy 분석 원문
 
@@ -332,9 +371,12 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 ### 대표 이미지
 
 - 현재 Event 대표 이미지 필드가 없다.
-- 명시적 Source image 또는 YouTube thumbnail만 우선 사용한다.
+- 검증 가능한 원문 또는 공식 Source의 image와 YouTube thumbnail만 사용한다.
+- 이미지 URL, 연결 Source, attribution을 추적할 수 있어야 한다.
 - 이미지가 없으면 text-first fallback을 사용한다.
 - 외부 저작물을 권리 확인 없이 Supabase Storage로 복제하지 않는다.
+- V1 뉴스 대표 이미지에 AI 생성 이미지를 사용하지 않는다.
+- 이미지 크기와 배치는 텍스트 가독성을 우선하며 콘텐츠보다 과도하게 강조하지 않는다.
 
 ### Source taxonomy
 
@@ -348,7 +390,7 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 - 기존 packet은 Briefing과만 연결하고 Event 근거 관계는 비워 둔다.
 - 제목 유사도만으로 Opportunity–Event 관계를 만들지 않는다.
 
-## 10. 관측성과 운영
+## 11. 관측성과 운영
 
 V1 최소 관측 항목:
 
@@ -362,7 +404,7 @@ V1 최소 관측 항목:
 
 운영자가 확인할 수 있는 server-only health check는 Git latest date와 Supabase latest briefing date를 비교해야 한다. 사용자에게는 민감한 오류 세부정보 대신 최신 데이터 상태와 안전한 fallback을 표시한다.
 
-## 11. V1 범위
+## 12. V1 범위
 
 ### 포함
 
@@ -388,7 +430,11 @@ V1 최소 관측 항목:
 - 기존 Notion 구조 변경
 - AI Architect 또는 제품 구현 자동 실행
 
-## 12. 예상 디렉터리 구조
+### 향후 확장 경계
+
+향후 FREE/PLUS/PRO membership, entitlement, payment, comment, collection, personal recommendation, notification, community를 최소 변경으로 추가할 수 있도록 Auth identity, Server Action/Route Handler, RLS와 domain module 경계를 명확히 유지한다. 그러나 V1에서는 관련 table, 결제 provider, entitlement engine, comment moderation, notification worker 또는 recommendation pipeline을 생성하지 않는다. 실제 요구가 승인될 때 별도 migration과 결정 기록으로 추가한다.
+
+## 13. 예상 디렉터리 구조
 
 ```text
 ai-daily-intelligence/
@@ -436,9 +482,9 @@ ai-daily-intelligence/
 └─ pnpm-lock.yaml
 ```
 
-## 13. 구현 순서
+## 14. 구현 순서
 
-1. 사용자 설계 승인과 미결정 사항 확정
+1. 승인된 제품·UX 결정을 기준으로 최종 기술 검토와 남은 운영 사항 확정
 2. 기존 자동화 회귀 기준과 Web workspace 경계 설정
 3. Supabase schema, index, RLS, import RPC 및 DB 테스트
 4. importer, single-day sync, same-day rerun, full backfill
@@ -449,7 +495,7 @@ ai-daily-intelligence/
 9. 전체 회귀·보안·접근성·복구 검증
 10. 독립 release review 후 배포
 
-## 14. 기술 승인 기준
+## 15. 기술 승인 기준
 
 - 기존 AI Researcher와 Git/Notion 자동화 결과가 변경되지 않는다.
 - 기존 Python 테스트와 daily validation이 계속 통과한다.
@@ -460,20 +506,22 @@ ai-daily-intelligence/
 - Supabase 장애가 Git Publisher를 실패시키지 않는다.
 - Event Detail에서 복수 Source와 눈에 띄는 원본 링크를 제공한다.
 - 비로그인 사용자는 공개 콘텐츠를 읽을 수 있다.
+- 최초 진입에서 로그인 redirect, 강제 modal, popup 또는 full-screen gate가 나타나지 않는다.
+- 개인 기능 요청 때만 Google 로그인을 안내하고 성공 후 검증된 same-origin return path로 원래 페이지에 복귀한다.
 - 로그인 사용자는 자신의 reaction, bookmark, follow만 변경할 수 있다.
 - 계정 삭제 시 reaction, bookmark, follow가 cascade 삭제되어 FK가 삭제를 막지 않는다.
 - 사용자 반응이 source verification 또는 AI 분석 점수를 변경하지 않는다.
 - 모바일 360px부터 데스크톱까지 핵심 정보 손실 없이 표시한다.
+- partial Briefing은 공개되며 비차단 상태 안내와 warnings 접근 경로를 제공한다.
+- V1 UI는 수치 AI 평가 점수를 노출하지 않고 `S/A/B`만 표시한다.
+- 대표 이미지가 없는 Event도 정상 렌더링되고 뉴스 대표 이미지에 AI 생성 이미지를 사용하지 않는다.
 - 서비스 credential이 client bundle이나 로그에 노출되지 않는다.
 
-## 15. 승인 대기 사항
+## 16. 구현 전 미결정 사항
 
-다음 항목은 구현 전에 사용자 결정 또는 별도 호환성 승인이 필요하다.
+다음 항목은 구현 전에 별도 기술·운영 확정이 필요하다.
 
-1. V1 로그인 provider: email magic link만 사용할지, Google 등 OAuth를 포함할지
-2. 한국어가 없는 legacy Event의 처리: 미제공 표시, 별도 번역 backfill, 또는 Researcher 계약 보완
-3. AI 평가 점수를 V1 필수 공개 항목으로 볼지, explicit score가 있을 때만 표시할지
-4. 대표 이미지 수집·저장 정책과 외부 이미지 사용 범위
-5. Source taxonomy 자동 매핑 규칙의 보수성 수준
-6. `event_key`가 여러 날짜에 걸쳐 전역적으로 동일 Event를 가리킨다는 계약
-7. Supabase 및 Vercel 배포 리전과 예상 비용 한도
+1. Source taxonomy 자동 매핑 규칙의 보수성 수준
+2. `event_key`가 여러 날짜에 걸쳐 전역적으로 동일 Event를 가리킨다는 계약
+3. Supabase 및 Vercel 배포 리전, backup 수준과 예상 비용 한도
+4. Google OAuth consent screen, 허용 계정 범위와 개인정보 처리 고지

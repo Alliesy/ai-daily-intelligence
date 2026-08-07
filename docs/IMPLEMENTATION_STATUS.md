@@ -2,7 +2,7 @@
 
 > 마지막 갱신: 2026-08-07 (Asia/Seoul)
 > 현재 단계: 설계
-> 전체 상태: 사용자 승인 대기
+> 전체 상태: 제품·UX 및 기술 설계 승인, 구현 지시 대기
 > 구현 권한: 승인되지 않음
 
 ## 1. 현재 목표
@@ -17,11 +17,12 @@
 |---|---|---|
 | 현재 저장소 분석 | 완료 | `CURRENT_ARCHITECTURE.md` |
 | V1 요구사항 정리 | 완료 | 사용자 메시지와 `V1_ARCHITECTURE.md` |
-| 시스템 아키텍처 설계 | 완료, 승인 대기 | `V1_ARCHITECTURE.md` |
-| Supabase DB/ERD 설계 | 완료, 승인 대기 | `DB_SCHEMA.md` |
-| 중요 결정 기록 | 완료, 일부 승인 대기 | `DECISIONS.md` |
-| 독립 설계 검토 | revision required 후 지적 보완, 독립 재확인 대기 | RLS, raw summary, cascade, sync ordering/watermark, candidate scope, composite FK 보완 |
-| 사용자 설계 승인 | 대기 | 구현 시작의 필수 gate |
+| 시스템 아키텍처 설계 | 완료, 제품 방향 승인 | `V1_ARCHITECTURE.md` |
+| Supabase DB/ERD 설계 | 완료, 제품 방향 승인 | `DB_SCHEMA.md` |
+| 중요 결정 기록 | 완료, 제품·UX 결정 반영 | `DECISIONS.md` |
+| 독립 설계 검토 | approve | RLS, raw summary, cascade, sync ordering/watermark, candidate scope, composite FK 및 제품·UX 결정 일관성 확인 |
+| 사용자 제품·UX 승인 | 완료 | 2026-08-07 승인 및 8개 결정 확정 |
+| 구현 지시 | 대기 | 이번 단계에서는 문서만 변경 |
 | Web workspace/scaffold | 시작 안 함 | 승인 후 진행 |
 | Supabase migration/RLS | 시작 안 함 | 승인 후 진행 |
 | Git-to-Supabase sync | 시작 안 함 | 승인 후 진행 |
@@ -55,10 +56,18 @@
 - 사용자 반응은 사실 신뢰도에 영향을 주지 않는다.
 - 기존 AI Researcher 자동화와 Git 정본을 깨뜨리면 안 된다.
 - membership, entitlement, payment, comment, collection, recommendation, notification, community는 V1에서 과도하게 미리 구현하지 않는다.
+- 공개 콘텐츠는 로그인 없이 즉시 열람하며 최초 진입 로그인 gate를 두지 않는다.
+- V1 로그인 provider는 Google OAuth 하나다.
+- 개인 기능 요청 때만 로그인 안내를 표시하고 OAuth 후 원래 페이지로 복귀한다.
+- 신규 표시 콘텐츠는 한국어가 기본이며 legacy 영어는 일괄 번역 없이 원문 fallback을 허용한다.
+- AI 점수는 DB에 유지하지만 V1 UI는 `S/A/B` 중요도만 표시한다.
+- 대표 이미지는 검증 가능한 원문/공식 출처만 사용하고 AI 생성 이미지를 사용하지 않는다.
+- partial Briefing도 비차단 경고와 함께 공개할 수 있다.
+- News Detail은 상단 원문 CTA와 하단 전체 Source 목록을 제공한다.
 
-## 5. 승인 대기 설계 결정
+## 5. 승인된 설계 결정
 
-다음 권고는 아직 사용자 승인 전이다.
+다음 설계 방향은 사용자에게 승인되었다.
 
 - `apps/web` 기반 monorepo 구조
 - GitHub Actions 기반 비동기 Supabase sync
@@ -80,26 +89,22 @@
 
 | 항목 | 권장 기본값 | 결정이 필요한 이유 |
 |---|---|---|
-| V1 Auth provider | email magic link 우선 | OAuth 추가 시 provider 설정·개인정보·운영 범위 증가 |
-| Legacy 한국어 콘텐츠 | 미제공 표시 후 별도 backfill | 자동 번역의 품질과 정본 위치를 결정해야 함 |
-| AI 평가 점수 | explicit score가 있을 때만 표시 | S/A/B 임의 숫자 변환은 신뢰성 저하 |
-| 대표 이미지 | Source URL 참조 + text fallback | 저작권, hotlink, 저장 정책 필요 |
 | Source taxonomy mapping | 보수적 매핑, 불확실하면 unverified | 잘못된 verified 표시는 신뢰 위험 |
 | `event_key` 범위 | 전역 stable identity | 여러 날짜 재등장 Event의 upsert 의미 결정 |
-| `partial` 공개 | 경고와 함께 공개 또는 draft 유지 | 현재 자동화 status와 Web publication 분리 필요 |
 | Supabase/Vercel region | 한국 사용자 latency 우선 | 비용, 데이터 위치, 가용 region 확인 필요 |
+| Backup/PITR | 구현 전 운영 수준 확정 | 콘텐츠 projection과 사용자 데이터의 복구 요구가 다름 |
 | 비용 한도 | 구현 전 owner 확정 | 외부 서비스 생성과 운영비 승인 필요 |
+| Google OAuth 운영 | consent screen, 허용 계정, 개인정보 고지 확정 | 외부 OAuth 설정과 개인정보 처리가 필요 |
 
 ## 7. 구현 전 필수 gate
 
 구현은 다음이 모두 충족된 후 시작한다.
 
-1. 사용자가 V1 architecture와 DB schema를 승인한다.
-2. 승인 대기 결정과 미결정 사항 중 V1을 막는 항목을 확정한다.
-3. 마지막 sync watermark 보완에 대한 독립 재검토를 통과한다.
-4. 기존 자동화 보호 acceptance criteria를 동의한다.
-5. Supabase/Vercel project 생성 또는 비용 발생에 대한 권한을 확인한다.
-6. 구현 branch와 배포 범위를 확정한다.
+1. 미결정 사항 중 구현을 막는 운영 항목을 확정한다.
+2. 사용자가 애플리케이션 구현 시작을 명시적으로 지시한다.
+3. 기존 자동화 보호 acceptance criteria를 동의한다.
+4. Supabase/Vercel project 생성 또는 비용 발생에 대한 권한을 확인한다.
+5. 구현 branch와 배포 범위를 확정한다.
 
 ## 8. 구현 순서
 
@@ -132,6 +137,11 @@
 - 사용자 반응은 analysis/verification/importance를 변경하지 않는다.
 - News Detail은 복수 Source와 원본 링크를 명확히 표시한다.
 - 핵심 화면이 모바일과 데스크톱에서 동작한다.
+- 공개 route는 로그인 없이 열리고 최초 진입 강제 login UX가 없다.
+- Google OAuth 후 안전한 return path로 원래 Event 또는 페이지에 복귀한다.
+- partial Briefing은 명확하지만 비차단 상태 안내와 함께 공개된다.
+- V1 UI는 수치 AI 점수를 노출하지 않는다.
+- 검증 가능한 출처가 없는 대표 이미지와 AI 생성 뉴스 이미지를 사용하지 않는다.
 
 ## 10. 변경 기록 규칙
 
@@ -142,4 +152,4 @@
 
 ## 11. 다음 권장 작업
 
-사용자가 설계 문서를 검토하고 승인 여부와 미결정 사항에 대한 방향을 제공한다. 승인 전에는 구현을 시작하지 않는다.
+남은 운영 결정을 정리한 뒤 사용자가 별도로 구현 시작을 지시할 때까지 애플리케이션 구현을 시작하지 않는다.
