@@ -761,3 +761,14 @@ Event key alias/merge와 Source URL alias/canonical override는 Supabase에서�
 2. Source taxonomy rule registry의 최초 confirmed 항목
 3. Event analysis version 생성 조건
 4. Opportunity stable key와 supporting event key를 Git contract에 추가할지
+
+## 13. Phase A 구현 매핑
+
+- `supabase/migrations/20260808000100_initial_v1_schema.sql`: enum, public content/user table, private identity/sync table, index, trigger, GRANT와 RLS 정책
+- `supabase/migrations/20260808000200_identity_and_import_rpc.sql`: identity registry 적용과 daily packet 원자적 import RPC
+- `data/identity/event-aliases.json`, `data/identity/source-aliases.json`: Git main이 추적하는 stable identity bootstrap registry
+- `schema/event-aliases.schema.json`, `schema/source-aliases.schema.json`: registry 형식 계약
+- `supabase/tests/verify-foundation.mjs`: DB runtime 없이 수행하는 구조·권한·fixture 정적 계약 테스트
+- `supabase/tests/schema_contract.sql`: migration 적용 후 수행하는 RLS/권한 검증문
+
+Phase A migration은 기존 daily schema를 변경하지 않는다. service-role guard는 PostgREST `request.jwt.claims`와 직접 DB 세션의 `session_user`를 구분해 처리하되 anon/authenticated/PUBLIC의 RPC 실행 권한과 service-role의 public table 직접 write를 허용하지 않는다. identity registry는 이전 identity를 생략할 수 없는 complete append-preserving snapshot이며, `private.identity_registry_state` checksum을 import transaction 안에서 확인해 registry 적용과 packet import 사이의 경쟁을 fail-closed로 처리한다. merge target은 registry 내부에 존재하는 단일 단계 target만 허용하고, target Event가 projection에 존재하면 기존 Event를 archived redirect row로 갱신한다. 실제 PostgreSQL 실행 및 역할별 RLS 검증은 로컬 또는 preview Supabase runtime을 준비한 뒤 필수 gate로 수행한다.

@@ -1,15 +1,15 @@
 # AI Daily Intelligence Web V1 Implementation Status
 
-> 마지막 갱신: 2026-08-07 (Asia/Seoul)
-> 현재 단계: 설계
-> 전체 상태: 최종 기술 검토 READY, 구현 지시 대기
-> 구현 권한: 승인되지 않음
+> 마지막 갱신: 2026-08-08 (Asia/Seoul)
+> 현재 단계: Phase B — Git → Supabase importer
+> 전체 상태: 구현 진행 중
+> 구현 권한: 승인된 V1 범위 내 자율 구현
 
 ## 1. 현재 목표
 
-기존 Git 정본과 AI Researcher 자동화를 보존하면서 Next.js, TypeScript, Supabase, Tailwind CSS, shadcn/ui, Vercel 기반의 반응형 AI Daily Intelligence Web V1을 설계한다.
+기존 Git 정본과 AI Researcher 자동화를 보존하면서 Next.js, TypeScript, Supabase, Tailwind CSS, shadcn/ui, Vercel 기반의 반응형 AI Daily Intelligence Web V1을 실제 실행 가능한 상태까지 구현한다.
 
-이번 단계는 문서화된 설계까지만 포함한다. 애플리케이션 scaffold, dependency 설치, Supabase project/migration 생성, Vercel 설정, 자동화 변경 또는 제품 배포는 시작하지 않는다.
+현재는 Web workspace와 Supabase content projection 기반을 만들고 있다. 기존 `AUTOMATION_PROMPT.md`, `schema/daily.schema.json`, `data/daily/**`, renderer와 validator는 변경하지 않는다.
 
 ## 2. 단계별 상태
 
@@ -23,14 +23,14 @@
 | 1차 독립 설계 검토 | approve | RLS, raw summary, cascade, candidate scope, composite FK 및 제품·UX 결정 일관성 확인 |
 | 구현 전 최종 기술 검토 | READY | identity, Source taxonomy, Git ancestry/CAS, RLS, OAuth, rebuild, 다중 날짜 occurrence 보완 완료 |
 | 사용자 제품·UX 승인 | 완료 | 2026-08-07 승인 및 8개 결정 확정 |
-| 구현 지시 | 대기 | 이번 단계에서는 문서만 변경 |
-| Web workspace/scaffold | 시작 안 함 | 승인 후 진행 |
-| Supabase migration/RLS | 시작 안 함 | 승인 후 진행 |
-| Git-to-Supabase sync | 시작 안 함 | 승인 후 진행 |
+| 구현 지시 | 완료 | 2026-08-07 V1 자율 구현 승인 |
+| Phase A: Web workspace/scaffold | 완료 | pnpm workspace, Next.js 16.3, TypeScript, Tailwind CSS 4 기반 생성; typecheck/lint/build 통과 |
+| Phase A: Supabase migration/RLS | 완료 | schema, identity registry, 원자적 import RPC, 최소 권한 RLS/GRANT, 정적 계약 테스트 및 독립 보안 gate 통과 |
+| Phase B-C: Git-to-Supabase sync | 진행 중 | importer, ancestry 판정, URL normalization, checksum과 workflow 구현 |
 | Today/News Detail | 시작 안 함 | DB와 sync 검증 후 진행 |
 | Opportunities/Trends | 시작 안 함 | 공개 read model 후 진행 |
 | Auth/Saved/반응 기능 | 시작 안 함 | RLS 검증 후 진행 |
-| Vercel 배포 | 시작 안 함 | 구현·검토·승인 후 진행 |
+| Vercel 배포 | 외부 설정 필요 | 구현·검토 후 프로젝트/secret 설정 시 사용자 작업 필요 |
 
 ## 3. 완료된 문서
 
@@ -170,4 +170,7 @@
 
 ## 11. 다음 권장 작업
 
-최종 기술 판정은 `READY`다. 사용자가 별도로 구현 시작을 지시하면 먼저 identity registry schema/fixture와 Supabase migration/RLS test를 작성한다. 그 전에는 애플리케이션 구현을 시작하지 않는다.
+1. Git ancestry 판정, URL normalization, projection checksum과 RPC 호출을 담당하는 Phase B importer를 구현한다.
+2. fixture 기반 correction·A→B→A·과거 날짜·전체 archive backfill 테스트를 통과시킨다.
+3. GitHub Actions sync workflow에 concurrency와 safe retry/reconcile 경계를 추가한다.
+4. 실제 Supabase runtime을 사용할 수 있게 되면 migration, 역할별 RLS와 account deletion cascade SQL 검증을 실행한다.

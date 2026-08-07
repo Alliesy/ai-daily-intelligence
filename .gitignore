@@ -1,3 +1,14 @@
 __pycache__/
 *.py[cod]
 .validation-deps/
+
+# Web workspace
+node_modules/
+.next/
+out/
+.vercel/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example

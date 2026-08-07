@@ -390,6 +390,27 @@
 - 영향: 실패 시 `/`로 안전하게 복귀하고 OAuth 전 mutation은 자동 실행하지 않는다.
 - 재검토 조건: 추가 provider 또는 native app callback이 승인될 때
 
+### D-033 — pnpm workspace와 Next.js 16 기준선
+
+- 상태: `confirmed`
+- 결정: 기존 archive 저장소 루트에 pnpm workspace를 두고 Web 앱은 `apps/web`에 격리한다. 구현 기준선은 Next.js 16.3, React 19, TypeScript, Tailwind CSS 4이며 Next.js 16의 `proxy.ts` 및 Server Component 보안 모델을 따른다.
+- 근거: 기존 Git 정본 경로를 이동하지 않으면서 Web/동기화 코드를 독립적으로 빌드하고 Vercel root directory를 명시할 수 있어야 한다.
+- dependency 이유: Next.js/React는 승인된 Web runtime, TypeScript는 승인된 언어, Tailwind CSS는 승인된 styling layer, ESLint는 정적 품질 gate다. pnpm은 단일 lockfile과 workspace별 명령을 제공한다.
+- 고려한 대안: 저장소 루트에 Next.js 생성, npm workspace, 별도 저장소
+- 이유: `apps/web` 경계가 기존 자동화와 경로 충돌 위험을 가장 작게 유지한다.
+- 영향: root script는 앱별 script를 filter하고 native build 허용 목록은 `sharp`, `unrs-resolver`로 제한한다.
+- 재검토 조건: Vercel 또는 운영 환경이 pnpm/Next.js 16을 지원하지 않을 때
+
+### D-034 — migration 우선 DB 계약과 fail-closed import
+
+- 상태: `confirmed`
+- 결정: 공개 content projection과 사용자 table/RLS를 SQL migration으로 관리하고, Git packet write는 service-role 전용 원자적 RPC만 허용한다. identity 누락·충돌, cursor CAS 불일치, 지원하지 않는 packet은 projection을 부분 변경하지 않고 실패시킨다.
+- 근거: Git main 정본의 재현성과 사용자 데이터 격리를 코드 관례가 아닌 DB constraint와 권한 경계로 보장해야 한다.
+- 고려한 대안: importer가 public table을 순차 직접 upsert, 클라이언트가 service-role 사용
+- 이유: transaction 중간 실패와 credential/RLS 우회 노출면을 줄인다.
+- 영향: 실제 Supabase 적용 전 정적 계약 테스트를 사용한다. service-role은 public table 직접 write 권한을 받지 않으며 RPC는 PostgREST JWT claim 또는 직접 세션 role을 검증한다. identity registry checksum은 import transaction에서 재확인하고 Event merge는 단일 단계 target만 허용해 기존 row를 redirect 상태로 reconcile한다. 로컬/preview DB가 준비되면 migration·RLS·cascade 통합 테스트를 추가 통과해야 한다.
+- 재검토 조건: 별도 trusted backend role 또는 queue worker가 도입될 때
+
 ## 미결정 사항
 
 다음 항목은 아직 결정되지 않았다.
