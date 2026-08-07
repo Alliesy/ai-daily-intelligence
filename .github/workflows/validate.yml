@@ -1,0 +1,27 @@
+name: Validate daily intelligence
+
+on:
+  push:
+    paths:
+      - "data/daily/**"
+      - "scripts/**"
+      - "tests/**"
+      - "schema/**"
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m unittest discover -s tests -v
+      - name: Validate all daily packets
+        shell: bash
+        run: |
+          shopt -s globstar nullglob
+          for packet in data/daily/**/*.json; do
+            python scripts/validate_daily.py "$packet"
+          done
