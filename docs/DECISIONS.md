@@ -21,16 +21,16 @@
 | D-005 | confirmed | Web은 `apps/web`, importer는 별도 package, DB migration은 `supabase`에 격리한다. |
 | D-006 | confirmed | Next.js App Router의 Server Component 우선 구조를 사용한다. |
 | D-007 | confirmed | 사용자 반응은 사실 신뢰도와 출처 검증 상태를 변경하지 않는다. |
-| D-008 | confirmed | Source authority는 source에, verification status는 event-source 관계에 저장한다. |
+| D-008 | superseded | Source authority는 source에, verification status는 event-source 관계에 저장한다. |
 | D-009 | confirmed | 명시적 AI 점수가 없는 legacy Event에는 임의 점수를 만들지 않는다. |
 | D-010 | confirmed | 사용자 reaction은 Event별 단일 row에 sentiment와 interested를 분리한다. |
 | D-011 | confirmed | 결제, entitlement, 댓글, 컬렉션, 추천, 알림, 커뮤니티는 V1에서 제외한다. |
-| D-012 | confirmed | Supabase write는 service-role 전용 atomic RPC로 제한한다. |
+| D-012 | superseded | Supabase write는 service-role 전용 atomic RPC로 제한한다. |
 | D-013 | confirmed | 외부 이미지는 명시적 출처가 있을 때만 사용하고 무단 복제를 하지 않는다. |
 | D-014 | confirmed | Opportunity–Event 관계는 명시적 근거 키가 있을 때만 생성한다. |
 | D-015 | confirmed | Build-candidate 상태는 Opportunity 전역이 아니라 Briefing occurrence에 저장한다. |
 | D-016 | confirmed | Legacy analysis 원문을 항상 보존하고 명확한 label만 구조화한다. |
-| D-017 | confirmed | 공개 Event route는 내부 `event_key`가 아니라 별도 `slug`를 사용한다. |
+| D-017 | superseded | 공개 Event route는 내부 `event_key`가 아니라 별도 `slug`를 사용한다. |
 | D-018 | confirmed | 공개 콘텐츠 우선이며 로그인은 개인 기능 사용 시에만 안내한다. |
 | D-019 | confirmed | V1 로그인 provider는 Google OAuth 하나만 구현한다. |
 | D-020 | confirmed | 신규 표시 콘텐츠는 한국어 기본, legacy 영어는 원문 fallback으로 처리한다. |
@@ -39,6 +39,13 @@
 | D-023 | confirmed | Partial Briefing도 비차단 경고와 함께 공개할 수 있다. |
 | D-024 | confirmed | News Detail 상단 원문 CTA와 하단 전체 Source 목록을 제공한다. |
 | D-025 | confirmed | 미래 기능의 확장 경계만 유지하고 V1 인프라를 선구축하지 않는다. |
+| D-026 | confirmed | Event UUID를 영구 identity로 사용하고 Git event_key는 versioned alias로 관리한다. |
+| D-027 | confirmed | Source UUID와 URL alias/canonical 이력을 분리하고 불확실한 taxonomy는 unknown으로 보존한다. |
+| D-028 | confirmed | Git sync 순서는 commit ancestry와 cursor CAS로 판정한다. |
+| D-029 | confirmed | 날짜별 Event·Source·Opportunity occurrence snapshot을 비손실 보존한다. |
+| D-030 | confirmed | 운영 content rebuild는 staging reconcile로 사용자 데이터를 보존한다. |
+| D-031 | confirmed | Supabase privileged client/function/view 경계를 명시적으로 봉쇄한다. |
+| D-032 | confirmed | OAuth return path는 PKCE와 엄격한 same-origin route 검증을 사용한다. |
 
 ## 상세 결정
 
@@ -131,7 +138,7 @@
 
 ### D-008 — Authority와 verification 분리
 
-- 상태: `confirmed`
+- 상태: `superseded` — D-027, D-029로 구체화
 - 결정: `sources.authority`는 출처 자체 속성, `event_sources.verification_status`는 특정 Event에 대한 근거 상태로 저장한다.
 - 근거: 같은 Source도 사건마다 근거의 역할과 검증 상태가 다를 수 있다.
 - 고려한 대안: 두 값을 모두 `sources`에 저장
@@ -173,7 +180,7 @@
 
 ### D-012 — Service-role 전용 atomic import RPC
 
-- 상태: `confirmed`
+- 상태: `superseded` — D-028, D-031로 구체화
 - 결정: importer는 일반 Web mutation과 분리된 제한적 RPC로 content projection을 한 transaction 안에서 upsert하고 global advisory lock으로 import를 직렬화한다.
 - 근거: 여러 관계 테이블의 부분 성공을 방지해야 한다.
 - 고려한 대안:
@@ -225,7 +232,7 @@
 
 ### D-017 — Public route는 slug 사용
 
-- 상태: `confirmed`
+- 상태: `superseded` — D-026으로 identity 정의를 교체하되 slug 사용 결정은 유지
 - 결정: Event 내부 identity는 `event_key`, 공개 URL은 `/events/[slug]`를 사용한다.
 - 근거: event key의 장기 형식과 URL 안전성이 아직 계약으로 확정되지 않았다.
 - 고려한 대안: `/events/[eventKey]` 직접 사용
@@ -313,13 +320,82 @@
 - 영향: V1 domain/auth/RLS interface는 확장을 막지 않지만 미래 기능 코드는 존재하지 않는다.
 - 재검토 조건: 후속 기능이 승인 scope에 포함될 때
 
+### D-026 — UUID 기반 Event identity와 Git alias registry
+
+- 상태: `confirmed`
+- 결정: `events.id` UUID를 영구 identity로 사용하고 Git `event_key`는 `event_keys`와 Git main의 versioned identity registry를 통해 resolve한다. key 변경·merge는 명시적 registry만 허용하고 충돌은 quarantine한다.
+- 근거: 현재 daily schema는 `event_key`의 불변성이나 전역 유일성을 보장하지 않으며 실제 key에 날짜가 포함될 수 있다.
+- 고려한 대안: event_key 단독 UNIQUE, 제목/Source 유사도 자동 merge
+- 이유: 후속 보강, key 변경과 충돌을 복구 가능하게 만들고 오병합을 막는다.
+- 영향: production bootstrap 전에 immutable `event_uid`를 가진 registry를 Git에 고정하며 slug와 사용자 FK는 key 변경에도 유지된다.
+- 재검토 조건: upstream Git schema가 영구 UUID를 직접 발급할 때
+
+### D-027 — Source UUID, URL 이력과 보수적 taxonomy
+
+- 상태: `confirmed`
+- 결정: Source UUID와 `source_urls`를 분리하고 raw/normalized/canonical/alternate/redirect URL 이력을 보존한다. 불확실한 매핑은 `other`/`unknown`/`unverified`로 둔다.
+- 근거: tracking, redirect, YouTube, X, GitHub와 canonical URL은 단일 generic normalization으로 안전하게 식별할 수 없다.
+- 고려한 대안: normalized URL 하나를 Source PK로 사용
+- 이유: 중복과 오병합을 모두 줄이고 매핑 근거와 rule version을 감사할 수 있게 한다.
+- 영향: provider별 fixture, SSRF-safe redirect 정책과 Git alias registry가 importer acceptance criteria가 된다.
+- 재검토 조건: upstream이 provider ID와 taxonomy를 구조화해 제공할 때
+
+### D-028 — Commit ancestry와 cursor CAS 기반 sync 순서
+
+- 상태: `confirmed`
+- 결정: `git rev-list --count`는 진단값으로만 사용하고 stored cursor SHA와 incoming SHA의 ancestry 및 RPC의 `expected_cursor_sha` CAS로 correction 순서를 결정한다.
+- 근거: GitHub Actions와 advisory lock은 실행 도착 순서를 보장하지 않고 commit count는 history rewrite에서 권위가 될 수 없다.
+- 고려한 대안: workflow concurrency FIFO, 숫자 revision 단독 비교
+- 이유: 동일 날짜 재실행, 역순, A→B→A, 과거 correction과 force-push divergence를 명시적으로 판정한다.
+- 영향: shallow/diverged history는 자동 적용하지 않고 retry 또는 reconcile failure로 중단한다. Identity-only 변경도 sync를 trigger하며 packet, identity registry, mapper version을 합친 projection checksum이 달라지면 재투영한다.
+- 재검토 조건: Git 외부의 신뢰 가능한 monotonic sequence가 도입될 때
+
+### D-029 — 날짜별 occurrence snapshot 보존
+
+- 상태: `confirmed`
+- 결정: Briefing×Event에 표시 snapshot과 Analysis를, Briefing×Event×Source에 verification/대표/순서/인용문을, Briefing×Opportunity에 당시 평가 snapshot을 저장한다.
+- 근거: 전역 current row만 갱신하면 동일 Event의 과거 날짜 문맥이 손실된다.
+- 고려한 대안: Event, event_sources, opportunities의 최신 row만 유지
+- 이유: 후속 보강과 correction이 다른 날짜 기록을 덮어쓰지 않게 한다.
+- 영향: Today는 occurrence snapshot, 최신 Event Detail은 current projection, 과거 Briefing은 해당 occurrence를 조회한다.
+- 재검토 조건: 완전한 event-sourcing model이 별도 승인될 때
+
+### D-030 — 사용자 데이터 보존형 content rebuild
+
+- 상태: `confirmed`
+- 결정: 신규 빈 DB rebuild와 운영 DB rebuild를 분리한다. 운영 DB는 staging backfill 후 stable UUID reconcile/upsert하며 content table을 truncate하지 않는다.
+- 근거: reaction/bookmark의 Event FK 때문에 content truncate는 사용자 데이터 보존 요구와 충돌한다.
+- 고려한 대안: production content truncate 후 backfill
+- 이유: 사용자 정본과 연결을 유지하면서 Git projection만 재구축한다.
+- 영향: Git은 콘텐츠만 복구하며 Auth/사용자 재난 복구는 Supabase backup/PITR가 담당한다.
+- 재검토 조건: 사용자 데이터를 포함한 별도 export/import 체계가 승인될 때
+
+### D-031 — Supabase privileged boundary 강화
+
+- 상태: `confirmed`
+- 결정: service-role importer를 SSR session client와 분리하고 service-role 전용 public RPC façade의 `PUBLIC`/`anon`/`authenticated` 실행을 revoke한다. 운영 table은 private schema에 두고 모든 공개 object는 RLS+GRANT, view는 security-invoker 원칙을 따른다.
+- 근거: service-role은 RLS를 우회하고 definer function/view는 잘못 노출되면 RLS 우회 경로가 된다.
+- 고려한 대안: service client 공유, public function의 policy 의존
+- 이유: credential 노출과 권한 상승 경로를 구조적으로 줄인다.
+- 영향: 역할별 DB test, client bundle secret scan과 account deletion cascade test가 필수다.
+- 재검토 조건: 별도 backend worker와 DB role model을 도입할 때
+
+### D-032 — OAuth PKCE와 엄격한 return path 검증
+
+- 상태: `confirmed`
+- 결정: Google OAuth callback은 PKCE와 exact production callback allowlist를 사용하고, 서명된 return state의 same-origin route만 허용한다.
+- 근거: 선택 로그인 UX를 유지하면서 open redirect와 action replay를 막아야 한다.
+- 고려한 대안: 임의 relative `next`, client storage만으로 복귀 상태 관리
+- 이유: 외부 URL, protocol-relative, backslash와 encoding 우회를 일관되게 거부한다.
+- 영향: 실패 시 `/`로 안전하게 복귀하고 OAuth 전 mutation은 자동 실행하지 않는다.
+- 재검토 조건: 추가 provider 또는 native app callback이 승인될 때
+
 ## 미결정 사항
 
 다음 항목은 아직 결정되지 않았다.
 
-1. Source tier → authority/verification 매핑표
-2. `event_key` 전역 identity 계약
-3. Supabase/Vercel 리전, backup/PITR와 비용 한도
-4. Google OAuth consent screen, 허용 계정 범위와 개인정보 처리 고지
+1. Source taxonomy registry의 최초 confirmed domain/provider 목록
+2. Supabase/Vercel 리전, backup/PITR와 비용 한도
+3. Google OAuth consent screen, 허용 계정 범위와 개인정보 처리 고지
 
 새 결정을 추가할 때는 날짜, 상태, 근거, 대안, 이유, 영향과 재검토 조건을 포함한다. 기존 결정을 수정할 때는 원문을 삭제하지 않고 상태를 `superseded`로 변경한 뒤 새 Decision ID를 추가한다.

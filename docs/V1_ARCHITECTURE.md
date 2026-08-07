@@ -1,6 +1,6 @@
 # AI Daily Intelligence Web V1 Architecture
 
-> 상태: 제품·UX 및 기술 설계 승인 — 구현 지시 대기
+> 상태: 구현 전 최종 기술 검토 READY — 구현 지시 대기
 > 작성일: 2026-08-07 (Asia/Seoul)
 > 관련 문서: [CURRENT_ARCHITECTURE.md](CURRENT_ARCHITECTURE.md), [DB_SCHEMA.md](DB_SCHEMA.md), [DECISIONS.md](DECISIONS.md), [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md)
 
@@ -202,12 +202,12 @@ V1 UI에는 AI 수치 점수를 표시하지 않고 중요도 `S/A/B`만 표시�
 ### Google OAuth와 return path
 
 1. 사용자가 개인 기능을 요청한다.
-2. 현재 same-origin relative path, Event slug, scroll anchor와 pending intent를 보존한다.
+2. 현재 same-origin relative path, Event slug, scroll anchor와 pending intent를 보존한다. return path는 짧은 수명의 서명된 HttpOnly cookie 또는 서버 검증 state로 전달하며 action payload 자체를 신뢰하지 않는다.
 3. Google OAuth를 시작하고 `/auth/callback`으로 돌아온다.
 4. callback은 허용된 relative `next` 값만 검증한 뒤 원래 페이지로 redirect한다.
 5. 원래 Event와 읽던 위치를 복원하고 요청했던 action을 다시 수행할 수 있게 한다.
 
-Open redirect를 방지하기 위해 외부 URL이나 protocol-relative URL을 `next`로 허용하지 않는다. OAuth 전 action을 자동 확정하지 않고 로그인 후 사용자가 상태를 확인하거나 다시 실행할 수 있게 한다. 향후 provider를 추가할 수 있도록 auth adapter 경계는 유지하지만 V1에서는 Google 외 provider를 구성하거나 UI에 노출하지 않는다.
+Open redirect를 방지하기 위해 `next`는 단일 `/`로 시작하는 route allowlist만 허용한다. `//`, 역슬래시, scheme/host, 제어문자, 중복·다중 percent encoding은 거부하고 실패 시 `/`로 보낸다. Supabase production callback은 exact URL allowlist와 PKCE code exchange를 사용하며 wildcard는 preview 환경에만 한정한다. OAuth 전 action을 자동 확정하지 않고 로그인 후 사용자가 상태를 확인하거나 다시 실행할 수 있게 한다. 향후 provider를 추가할 수 있도록 auth adapter 경계는 유지하지만 V1에서는 Google 외 provider를 구성하거나 UI에 노출하지 않는다.
 
 ## 6. 렌더링, 캐시, SEO
 
@@ -252,6 +252,9 @@ Open redirect를 방지하기 위해 외부 URL이나 protocol-relative URL을 `
 - GitHub sync job만 service-role로 콘텐츠 projection을 변경한다.
 - service-role key는 GitHub Actions secret 또는 승인된 server-only 환경에만 저장한다.
 - 브라우저와 public build artifact에는 publishable/anon key만 포함한다.
+- service-role importer는 사용자 cookie/session을 읽는 Next.js SSR client와 인스턴스를 공유하지 않는 전용 server-only client를 사용한다.
+- public schema의 모든 table은 RLS와 명시적 GRANT를 함께 적용하고, view는 `security_invoker`로 만들거나 API 비노출 schema에 둔다.
+- `SECURITY DEFINER` import는 service-role만 실행 가능한 좁은 public RPC façade로 제공하고 운영 table은 private schema에 둔다. 고정 search path, schema-qualified object, `PUBLIC`/`anon`/`authenticated` EXECUTE revoke를 필수로 한다.
 
 ### 개인정보 최소화
 
@@ -281,7 +284,8 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 
 ### 트리거
 
-- `main` push 중 `data/daily/**`가 변경된 경우 별도 GitHub Actions workflow 실행
+- `main` push 중 `data/daily/**` 또는 `data/identity/**`가 변경된 경우 별도 GitHub Actions workflow 실행
+- identity registry만 변경되면 영향 key를 계산하되 V1 안전 기본값은 고정된 main snapshot에서 전체 archive reconcile
 - 최초 도입 또는 복구 시 전체 archive backfill command 실행
 - Vercel Cron을 별도 일일 수집 스케줄러로 사용하지 않음
 
@@ -290,11 +294,11 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 1. push된 정확한 commit을 checkout한다.
 2. 기존 `scripts/validate_daily.py`를 실행한다.
 3. Web importer의 runtime schema로 타입과 필수 매핑을 검증한다.
-4. 원본 파일 SHA-256 checksum을 계산한다.
-5. Full Git main history에서 commit revision을 계산하고 대상 commit이 현재 main의 ancestor인지 확인한다.
+4. 원본 파일 SHA-256과 identity registry checksum을 계산하고, 두 값과 importer mapping version을 합친 projection input checksum을 만든다.
+5. Full Git main history에서 DB cursor SHA → incoming SHA → 현재 remote main SHA의 ancestry를 검증한다. commit count는 진단값으로만 기록한다.
 6. DB의 global advisory transaction lock을 획득해 content import를 직렬화한다.
-7. per-path revision watermark를 확인하고 낮은 revision은 superseded로 skip한다.
-8. 더 높은 revision이면 checksum이 같아도 watermark를 전진시키고, 내용이 같으면 content write 없이 종료한다.
+7. RPC가 global lock 안에서 workflow가 읽은 `expected_cursor_sha`를 실제 cursor와 compare-and-swap한다. cursor가 바뀌었으면 write 없이 재시도한다.
+8. accepted descendant commit이면 checksum이 같아도 SHA watermark를 전진시킨다. raw JSON뿐 아니라 identity registry와 mapper version까지 포함한 projection input checksum이 같을 때만 content write 없이 종료한다. ancestor 지연 실행은 skip하고 diverged/force-push history는 reconcile failure로 중단한다.
 9. 내용이 달라졌으면 Git field를 Supabase Event model로 변환한다.
 10. 제한된 service-role 전용 RPC로 한 transaction 안에서 upsert한다.
 11. 입력/출력 record count와 관계 무결성을 검증한다.
@@ -306,8 +310,8 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 | 도메인 | 안정 키 |
 |---|---|
 | Daily Briefing | `date_kst` |
-| Event | `event_key` |
-| Source | normalized URL |
+| Event | immutable UUID; Git `event_key`는 versioned alias registry로 resolve |
+| Source | immutable UUID; provider external ID와 versioned URL alias/canonical registry로 resolve |
 | Topic | normalized slug |
 | Entity | type + canonical name |
 | Opportunity | explicit stable key; 없으면 date + normalized name |
@@ -318,10 +322,13 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 - 해당 Briefing의 노출 순서와 membership을 새 packet과 일치시킨다.
 - 다른 날짜가 참조하는 Event, Source, Topic은 삭제하지 않는다.
 - 정정 때문에 orphan이 생겨도 자동 hard delete하지 않고 reconcile 또는 archive 대상으로 기록한다.
-- 같은 날짜 correction은 Git main의 monotonic `source_revision`이 더 클 때만 적용한다.
-- Event의 현재 표시 필드와 current analysis는 `(input date, source_revision)`이 저장된 순서보다 클 때만 갱신한다.
+- correction으로 제거된 occurrence가 Event/Opportunity의 current 근거였으면 같은 transaction에서 남은 occurrence를 `(date_kst, accepted commit ancestry)` 순으로 다시 계산한다. 남은 published occurrence가 없으면 본체를 `archived`로 전환한다.
+- `first_seen_date`, `last_seen_date`, `is_current` analysis와 Event/Opportunity current 표시 필드는 영향 occurrence 전체에서 재계산하여 stale current를 노출하지 않는다.
+- 같은 날짜 correction은 incoming commit이 stored cursor의 descendant일 때만 적용한다.
+- Event의 현재 표시 필드와 current analysis는 날짜가 더 최신이거나 같은 날짜의 accepted descendant correction일 때만 갱신한다.
 - 과거 날짜 correction은 그 Briefing에 연결된 analysis version만 갱신하고 최신 Event 상태를 뒤로 되돌리지 않는다.
 - build-candidate 상태는 Opportunity 전역 속성이 아니라 `Briefing × Opportunity` occurrence에 저장한다.
+- 제목, 요약, 중요도, 이미지, Analysis, Source verification/대표 여부/순서/인용문, Opportunity 평가 필드는 날짜별 occurrence snapshot에 저장하여 다른 Briefing의 기록을 덮어쓰지 않는다.
 
 ### 실패 처리
 
@@ -334,8 +341,10 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 | cache revalidation 실패 | DB 성공 유지, 경고 기록, time-based cache로 회복 |
 | 동일 실행 중복 | checksum과 unique constraint로 no-op/upsert |
 | 동시 push/sync | DB advisory lock으로 직렬화한 뒤 lock 안에서 checksum 재검사 |
-| 같은 날짜 correction 역순 도착 | 더 낮은 source revision을 superseded로 skip |
-| A→B→A checksum reversion | 내용 no-op이어도 per-path revision watermark를 전진시켜 지연 B 차단 |
+| 같은 날짜 correction 역순 도착 | cursor의 ancestor인 지연 commit을 superseded로 skip |
+| A→B→A checksum reversion | 내용 no-op이어도 descendant commit SHA watermark를 전진시켜 지연 B 차단 |
+| cursor/incoming history divergence | 자동 순서를 추측하지 않고 reconcile failure |
+| identity registry만 변경 | Web sync를 실행하고 영향 archive를 새 projection checksum으로 reconcile |
 | 과거 correction | 해당 Briefing만 갱신하고 최신 Event current state 유지 |
 
 ## 10. 현재 데이터 계약의 호환성 보완
@@ -381,8 +390,20 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 ### Source taxonomy
 
 - 현재 `tier A/B/C`만으로 source type, authority, verification status를 완전히 결정할 수 없다.
-- 명확한 URL/provider 규칙만 자동 매핑하고 불확실한 값은 `other` 또는 `unverified`로 둔다.
+- 명확한 URL/provider 규칙만 자동 매핑하고 불확실한 값은 `source_type=other`, `authority=unknown`, `verification_status=unverified`로 둔다.
 - 검증 상태를 과장하는 추정 매핑을 금지한다.
+- Source identity는 URL 문자열 하나가 아니라 stable UUID다. raw/normalized/canonical/alternate/redirect URL을 별도 이력으로 보존하고 mapping rule version과 근거를 기록한다.
+- YouTube video ID, X status ID, GitHub resource 종류를 보수적으로 정규화하고 tracking parameter는 명시적 denylist만 제거한다.
+- 서로 다른 URL은 검증된 canonical/provider ID/redirect 또는 Git identity registry 없이 자동 병합하지 않는다.
+- redirect 확인은 SSRF 방어, public HTTP(S) 주소, hop/timeout 제한을 충족할 때만 수행하며 실패하면 관측 URL을 그대로 보존한다.
+
+### Event identity
+
+- `events.id` UUID가 영구 identity이며 `event_key`는 Git 입력 alias다.
+- 동일 key의 재등장은 같은 UUID로 resolve한다. key 변경은 Git main의 schema-validated identity registry가 이전 key와 새 key를 같은 immutable `event_uid`에 연결할 때만 같은 Event로 합친다.
+- 동일 key가 다른 Event에 연결되거나 alias/merge가 모순되면 해당 import를 `needs_review`로 격리하고 기존 Event를 덮어쓰지 않는다.
+- 제목·Source 유사도는 review 후보만 만들 수 있고 자동 merge 근거가 될 수 없다.
+- merge된 Event row는 hard delete하지 않고 redirect target과 사유를 남겨 public slug, bookmark, reaction을 보존한다.
 
 ### Opportunity 근거 관계
 
@@ -403,6 +424,13 @@ V1 최소 관측 항목:
 - Auth callback 및 RLS 거부 오류
 
 운영자가 확인할 수 있는 server-only health check는 Git latest date와 Supabase latest briefing date를 비교해야 한다. 사용자에게는 민감한 오류 세부정보 대신 최신 데이터 상태와 안전한 fallback을 표시한다.
+
+### 복구 경계
+
+- Event/Source alias와 merge/canonical override도 Git main의 versioned identity registry에 보존하여 새 콘텐츠 DB에서 동일 identity 관계를 재현한다.
+- 신규 빈 DB는 migrations + Git snapshot만으로 콘텐츠 projection을 재구축할 수 있다. Auth와 사용자 데이터는 Git 복구 범위가 아니며 Supabase backup/PITR 대상이다.
+- 사용자 데이터가 존재하는 운영 DB의 콘텐츠 rebuild는 truncate가 아니라 staging backfill → 검증 → stable UUID reconcile/upsert로 수행한다.
+- rebuild 역할은 `auth.users`, `profiles`, `reactions`, `bookmarks`, `follows`에 delete/truncate 권한을 갖지 않으며 전후 row count와 FK 연결을 검증한다.
 
 ## 12. V1 범위
 
@@ -443,6 +471,8 @@ ai-daily-intelligence/
 │  ├─ web-ci.yml                   # 신규
 │  └─ sync-supabase.yml            # 신규
 ├─ data/                            # 기존 Git 정본
+│  ├─ daily/                        # 기존 AI Researcher archive, 변경 없음
+│  └─ identity/                     # Web identity alias/merge registry, 구현 시 별도 schema/review 추가
 ├─ reports/                         # 기존 보고서
 ├─ publish/                         # 기존 Notion projection
 ├─ schema/                          # 기존 daily 계약
@@ -501,8 +531,14 @@ ai-daily-intelligence/
 - 기존 Python 테스트와 daily validation이 계속 통과한다.
 - 같은 JSON을 반복 sync해도 DB 결과가 동일하다.
 - 동시에 같은 packet을 sync해도 한 번 처리한 것과 결과가 같다.
+- Git commit 실행 순서가 역전되거나 A→B→A로 되돌아와도 commit ancestry와 cursor CAS가 최신 main 상태를 보존한다.
+- diverged/force-push history는 자동 적용하지 않고 reconcile failure로 중단한다.
 - 과거 correction이 더 최신 Event current state를 덮어쓰지 않는다.
-- 빈 콘텐츠 DB를 Git archive로 재구축할 수 있다.
+- 빈 콘텐츠 DB를 Git archive와 identity registry로 동일한 stable identity까지 재구축할 수 있다.
+- 운영 content rebuild가 기존 profile/reaction/bookmark/follow를 삭제하거나 Event 연결을 끊지 않는다.
+- 동일 Event의 날짜별 제목·중요도·Analysis·Source 상태·Opportunity occurrence가 비손실로 보존된다.
+- Event key 변경은 alias로 복구되고 key 충돌은 quarantine되며 자동 오병합되지 않는다.
+- Source URL 변형은 versioned normalization fixture를 통과하고 불확실한 taxonomy는 `other`/`unknown`/`unverified`로 fallback한다.
 - Supabase 장애가 Git Publisher를 실패시키지 않는다.
 - Event Detail에서 복수 Source와 눈에 띄는 원본 링크를 제공한다.
 - 비로그인 사용자는 공개 콘텐츠를 읽을 수 있다.
@@ -516,12 +552,15 @@ ai-daily-intelligence/
 - V1 UI는 수치 AI 평가 점수를 노출하지 않고 `S/A/B`만 표시한다.
 - 대표 이미지가 없는 Event도 정상 렌더링되고 뉴스 대표 이미지에 AI 생성 이미지를 사용하지 않는다.
 - 서비스 credential이 client bundle이나 로그에 노출되지 않는다.
+- anon/authenticated는 import RPC, private 운영 table, 다른 사용자의 개인 row, definer view 우회 경로에 접근할 수 없다.
+- OAuth callback은 PKCE와 exact production callback allowlist를 사용하고 악성 `next`를 `/`로 fallback한다.
 
 ## 16. 구현 전 미결정 사항
 
 다음 항목은 구현 전에 별도 기술·운영 확정이 필요하다.
 
-1. Source taxonomy 자동 매핑 규칙의 보수성 수준
-2. `event_key`가 여러 날짜에 걸쳐 전역적으로 동일 Event를 가리킨다는 계약
-3. Supabase 및 Vercel 배포 리전, backup 수준과 예상 비용 한도
-4. Google OAuth consent screen, 허용 계정 범위와 개인정보 처리 고지
+1. Source taxonomy rule registry의 최초 confirmed domain/provider 목록
+2. Supabase 및 Vercel 배포 리전, backup 수준과 예상 비용 한도
+3. Google OAuth consent screen, 허용 계정 범위와 개인정보 처리 고지
+
+위 항목은 환경 생성·운영 전에는 확정해야 하지만 schema와 importer 구현 시작을 막는 구조적 미결정은 아니다.

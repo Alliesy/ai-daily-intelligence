@@ -2,7 +2,7 @@
 
 > 마지막 갱신: 2026-08-07 (Asia/Seoul)
 > 현재 단계: 설계
-> 전체 상태: 제품·UX 및 기술 설계 승인, 구현 지시 대기
+> 전체 상태: 최종 기술 검토 READY, 구현 지시 대기
 > 구현 권한: 승인되지 않음
 
 ## 1. 현재 목표
@@ -20,7 +20,8 @@
 | 시스템 아키텍처 설계 | 완료, 제품 방향 승인 | `V1_ARCHITECTURE.md` |
 | Supabase DB/ERD 설계 | 완료, 제품 방향 승인 | `DB_SCHEMA.md` |
 | 중요 결정 기록 | 완료, 제품·UX 결정 반영 | `DECISIONS.md` |
-| 독립 설계 검토 | approve | RLS, raw summary, cascade, sync ordering/watermark, candidate scope, composite FK 및 제품·UX 결정 일관성 확인 |
+| 1차 독립 설계 검토 | approve | RLS, raw summary, cascade, candidate scope, composite FK 및 제품·UX 결정 일관성 확인 |
+| 구현 전 최종 기술 검토 | READY | identity, Source taxonomy, Git ancestry/CAS, RLS, OAuth, rebuild, 다중 날짜 occurrence 보완 완료 |
 | 사용자 제품·UX 승인 | 완료 | 2026-08-07 승인 및 8개 결정 확정 |
 | 구현 지시 | 대기 | 이번 단계에서는 문서만 변경 |
 | Web workspace/scaffold | 시작 안 함 | 승인 후 진행 |
@@ -43,6 +44,8 @@
   - 확정 및 제안된 제품·기술 결정과 근거
 - `docs/IMPLEMENTATION_STATUS.md`
   - 현재 단계, 승인 gate, 구현 진행 상태
+- `docs/FINAL_TECHNICAL_REVIEW.md`
+  - 구현 전 7개 핵심 영역의 문제, 보완 내용, 남은 위험과 READY 판정
 
 ## 4. 확정 요구사항
 
@@ -81,7 +84,14 @@
 - build-candidate 상태의 Briefing occurrence 저장
 - legacy summary 원문 보존과 parse fallback
 - public Event route의 별도 slug 사용
-- checksum reversion을 포함한 per-path Git revision watermark
+- checksum reversion을 포함한 per-path Git commit ancestry watermark
+- immutable Event UUID와 versioned event key alias/merge registry
+- Source UUID, URL alias/canonical 이력과 보수적 taxonomy fallback
+- commit ancestry + cursor CAS 기반 Git watermark
+- 날짜별 Event/Source/Opportunity occurrence snapshot
+- staging reconcile 기반 사용자 데이터 보존형 content rebuild
+- service-role 전용 definer RPC façade, private 운영 table, service client 분리, security-invoker view 원칙
+- PKCE와 엄격한 same-origin return path 검증
 
 상세 근거는 `DECISIONS.md`를 따른다.
 
@@ -89,8 +99,7 @@
 
 | 항목 | 권장 기본값 | 결정이 필요한 이유 |
 |---|---|---|
-| Source taxonomy mapping | 보수적 매핑, 불확실하면 unverified | 잘못된 verified 표시는 신뢰 위험 |
-| `event_key` 범위 | 전역 stable identity | 여러 날짜 재등장 Event의 upsert 의미 결정 |
+| Source taxonomy registry seed | 불확실하면 other/unknown/unverified | 최초 confirmed provider/domain 목록은 fixture 작성 시 확정 |
 | Supabase/Vercel region | 한국 사용자 latency 우선 | 비용, 데이터 위치, 가용 region 확인 필요 |
 | Backup/PITR | 구현 전 운영 수준 확정 | 콘텐츠 projection과 사용자 데이터의 복구 요구가 다름 |
 | 비용 한도 | 구현 전 owner 확정 | 외부 서비스 생성과 운영비 승인 필요 |
@@ -100,11 +109,12 @@
 
 구현은 다음이 모두 충족된 후 시작한다.
 
-1. 미결정 사항 중 구현을 막는 운영 항목을 확정한다.
-2. 사용자가 애플리케이션 구현 시작을 명시적으로 지시한다.
-3. 기존 자동화 보호 acceptance criteria를 동의한다.
-4. Supabase/Vercel project 생성 또는 비용 발생에 대한 권한을 확인한다.
-5. 구현 branch와 배포 범위를 확정한다.
+1. 사용자가 애플리케이션 구현 시작을 명시적으로 지시한다.
+2. 기존 자동화 보호 acceptance criteria를 동의한다.
+3. 외부 Supabase/Vercel project 생성 또는 비용 발생 전 권한을 확인한다.
+4. 구현 branch와 배포 범위를 확정한다.
+
+리전, backup/PITR, 비용, OAuth consent 운영 설정은 외부 환경 생성 전 gate이며 local scaffold, migration 초안과 importer 구현을 시작하는 구조적 blocker는 아니다.
 
 ## 8. 구현 순서
 
@@ -128,17 +138,25 @@
 - Git commit 성공이 Supabase 또는 Vercel 상태에 의존하지 않는다.
 - 동일 packet sync는 멱등이다.
 - 동시 sync는 직렬화되며 한 번 실행한 것과 결과가 같다.
+- sync 순서는 commit ancestry와 cursor CAS로 판정하고 diverged history는 중단한다.
+- identity-only correction과 mapper version 변경은 projection input checksum으로 감지해 raw JSON이 같아도 재투영한다.
 - 과거 correction은 최신 Event current state를 덮어쓰지 않는다.
-- Git archive에서 콘텐츠 projection 전체를 복구할 수 있다.
+- Event key 변경은 alias로 복구되고 충돌은 quarantine된다.
+- Source URL 변형과 불확실 taxonomy가 보수적으로 처리된다.
+- 동일 Event의 날짜별 표시·Analysis·Source·Opportunity occurrence가 덮어써지지 않는다.
+- current occurrence가 correction에서 제거되면 남은 occurrence로 current/first/last를 재계산하고 없으면 archive한다.
+- Git archive와 identity registry에서 콘텐츠 projection 전체를 stable identity까지 복구할 수 있다.
+- 운영 content rebuild는 사용자 데이터와 Event 연결을 보존한다.
 - public user는 게시 콘텐츠만 읽을 수 있다.
 - authenticated user는 자신의 user data만 변경할 수 있다.
 - 계정 삭제 시 reaction, bookmark, follow가 cascade 삭제된다.
 - service-role key가 client에 노출되지 않는다.
+- anon/authenticated가 import RPC, private 운영 table, 다른 사용자의 row, definer view를 통해 RLS를 우회할 수 없다.
 - 사용자 반응은 analysis/verification/importance를 변경하지 않는다.
 - News Detail은 복수 Source와 원본 링크를 명확히 표시한다.
 - 핵심 화면이 모바일과 데스크톱에서 동작한다.
 - 공개 route는 로그인 없이 열리고 최초 진입 강제 login UX가 없다.
-- Google OAuth 후 안전한 return path로 원래 Event 또는 페이지에 복귀한다.
+- Google OAuth PKCE 후 검증된 same-origin return path로 원래 Event 또는 페이지에 복귀하고 악성 next는 `/`로 fallback한다.
 - partial Briefing은 명확하지만 비차단 상태 안내와 함께 공개된다.
 - V1 UI는 수치 AI 점수를 노출하지 않는다.
 - 검증 가능한 출처가 없는 대표 이미지와 AI 생성 뉴스 이미지를 사용하지 않는다.
@@ -152,4 +170,4 @@
 
 ## 11. 다음 권장 작업
 
-남은 운영 결정을 정리한 뒤 사용자가 별도로 구현 시작을 지시할 때까지 애플리케이션 구현을 시작하지 않는다.
+최종 기술 판정은 `READY`다. 사용자가 별도로 구현 시작을 지시하면 먼저 identity registry schema/fixture와 Supabase migration/RLS test를 작성한다. 그 전에는 애플리케이션 구현을 시작하지 않는다.
