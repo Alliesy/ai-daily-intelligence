@@ -1,0 +1,106 @@
+name: Sync Supabase content projection
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/daily/**"
+      - "data/identity/**"
+      - "schema/**"
+      - "packages/importer/**"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Sync mode; dry-run does not require Supabase secrets
+        required: true
+        default: dry-run
+        type: choice
+        options:
+          - dry-run
+          - backfill
+
+permissions:
+  contents: read
+
+# GitHub may replace an older pending run in the same group. Every write run
+# scans the complete archive, so the newest main snapshot safely subsumes it.
+concurrency:
+  group: supabase-content-projection-main
+  cancel-in-progress: false
+
+jobs:
+  validate-and-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SYNC_MODE: ${{ github.event_name == 'push' && 'backfill' || inputs.mode }}
+    steps:
+      - name: Check out the immutable triggering snapshot
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: "3.12"
+
+      - name: Re-run canonical archive validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest discover -s tests -v
+          while IFS= read -r -d '' packet; do
+            python scripts/validate_daily.py "$packet"
+          done < <(find data/daily -type f -name '*.json' -print0)
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@f520eceda224fe1a4aed5a2a27a194379a409996 # v6
+
+      - name: Install Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify importer and projection contracts
+        run: pnpm test
+
+      - name: Build importer
+        run: pnpm --filter @ai-daily/importer build
+
+      - name: Dry-run the current main snapshot
+        if: env.SYNC_MODE == 'dry-run'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          incoming_sha="${GITHUB_SHA}"
+          remote_main_sha="$(git rev-parse origin/main)"
+          node packages/importer/dist/cli.js \
+            --mode dry-run \
+            --commit "${incoming_sha}" \
+            --remote-main "${remote_main_sha}" \
+            --repo-root "${GITHUB_WORKSPACE}"
+
+      - name: Sync the current main snapshot
+        if: env.SYNC_MODE == 'backfill'
+        shell: bash
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin main
+          incoming_sha="${GITHUB_SHA}"
+          remote_main_sha="$(git rev-parse origin/main)"
+          node packages/importer/dist/cli.js \
+            --mode backfill \
+            --commit "${incoming_sha}" \
+            --remote-main "${remote_main_sha}" \
+            --repo-root "${GITHUB_WORKSPACE}"

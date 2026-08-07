@@ -46,6 +46,11 @@
 | D-030 | confirmed | 운영 content rebuild는 staging reconcile로 사용자 데이터를 보존한다. |
 | D-031 | confirmed | Supabase privileged client/function/view 경계를 명시적으로 봉쇄한다. |
 | D-032 | confirmed | OAuth return path는 PKCE와 엄격한 same-origin route 검증을 사용한다. |
+| D-033 | confirmed | pnpm workspace와 Next.js 16 기준선을 사용한다. |
+| D-034 | confirmed | migration 우선 DB 계약과 fail-closed import를 사용한다. |
+| D-035 | confirmed | main sync는 전체 archive snapshot reconcile로 실행한다. |
+| D-036 | confirmed | Source URL과 taxonomy는 무네트워크·보수적 규칙으로 projection한다. |
+| D-037 | confirmed | 새 archive identity는 전체 Git snapshot에서 deterministic하게 발견한다. |
 
 ## 상세 결정
 
@@ -105,7 +110,7 @@
 ### D-005 — Monorepo 내 경계 분리
 
 - 상태: `confirmed`
-- 결정: `apps/web`, `packages/intelligence-sync`, `supabase`를 새 영역으로 사용하고 기존 Python 자동화 경로를 보존한다.
+- 결정: `apps/web`, `packages/importer`, `supabase`를 새 영역으로 사용하고 기존 Python 자동화 경로를 보존한다.
 - 근거: 같은 저장소를 사용하면서도 수집, sync, web 책임을 구분해야 한다.
 - 고려한 대안:
   - 저장소 root에 Next.js 직접 설치
@@ -410,6 +415,36 @@
 - 이유: transaction 중간 실패와 credential/RLS 우회 노출면을 줄인다.
 - 영향: 실제 Supabase 적용 전 정적 계약 테스트를 사용한다. service-role은 public table 직접 write 권한을 받지 않으며 RPC는 PostgREST JWT claim 또는 직접 세션 role을 검증한다. identity registry checksum은 import transaction에서 재확인하고 Event merge는 단일 단계 target만 허용해 기존 row를 redirect 상태로 reconcile한다. 로컬/preview DB가 준비되면 migration·RLS·cascade 통합 테스트를 추가 통과해야 한다.
 - 재검토 조건: 별도 trusted backend role 또는 queue worker가 도입될 때
+
+### D-035 — main sync는 전체 snapshot reconcile
+
+- 상태: `confirmed`
+- 결정: main push의 write workflow는 고정된 commit에서 전체 `data/daily/**`를 backfill/reconcile한다. GitHub Actions concurrency가 이전 pending run을 대체해도 최신 main snapshot 하나가 누락된 중간 변경을 포함한다.
+- 근거: GitHub Actions concurrency는 실행 중 job을 유지하더라도 pending run의 FIFO를 보장하지 않는다.
+- 고려한 대안: 마지막 commit의 changed path만 incremental sync, workflow queue 순서 신뢰
+- 이유: daily archive 규모에서 전체 scan 비용은 작고 correction·identity·mapper 변경과 실행 누락을 같은 경로로 복구한다.
+- 영향: full-history checkout, commit ancestry 검증, registry 2-field CAS, packet cursor CAS와 projection checksum no-op을 함께 사용한다. manual dry-run에는 secret을 주입하지 않는다.
+- 재검토 조건: archive 규모로 매 실행 전체 scan이 운영 한도를 넘을 때
+
+### D-036 — 무네트워크 URL 정규화와 보수적 taxonomy
+
+- 상태: `confirmed`
+- 결정: importer는 URL fetch나 redirect 추적 없이 generic tracking parameter와 YouTube/X/GitHub의 명확한 provider 형식만 정규화한다. taxonomy 근거가 부족하면 `other/unknown/unknown/unverified`를 유지한다.
+- 근거: 자동 redirect 추적은 SSRF와 identity 오병합 위험을 만들고 legacy packet에는 authority/verification의 충분한 근거가 없다.
+- 고려한 대안: 모든 redirect 자동 추적, publisher 이름 기반 official 추정, 모든 URL generic canonicalization
+- 이유: 원문 접근성을 유지하면서 잘못된 사실 신뢰도 표시와 Source 합병을 방지한다.
+- 영향: raw URL을 별도 보존하고 YouTube thumbnail은 검증 가능한 video ID에서만 파생한다. Domain rule은 Source의 성격만 분류하며 Event별 verification은 자동 승격하지 않는다. GitHub URL만으로 repository owner를 알 수 없으므로 authority는 unknown이다. 추가 provider/domain mapping은 fixture와 review를 거쳐 rule version으로 도입한다.
+- 재검토 조건: 안전한 redirect resolver 또는 검토된 taxonomy registry가 승인될 때
+
+### D-037 — 전체 archive 기반 deterministic identity discovery
+
+- 상태: `confirmed`
+- 결정: importer는 매 sync마다 고정된 Git snapshot의 전체 daily archive를 읽어 explicit identity registry에 없는 Event key와 normalized Source URL을 UUIDv5로 deterministic하게 추가한 effective registry를 만든다. explicit alias/merge가 항상 우선한다.
+- 근거: 기존 AI Researcher와 Git Publisher는 `data/identity/**`를 갱신하지 않으며 그 동작은 변경할 수 없다. explicit registry만 요구하면 다음 daily packet부터 Web projection이 중단된다.
+- 고려한 대안: 기존 Publisher가 registry를 commit, workflow가 Git에 자동 commit, 신규 identity마다 운영자 승인
+- 이유: 기존 자동화를 수정하거나 workflow write 권한을 주지 않고도 Git archive만으로 빈 DB의 동일 UUID를 재구축한다.
+- 영향: namespace, normalization version과 semantic effective identity가 checksum/CAS 입력이다. `generated_from_commit` 같은 provenance는 별도 watermark로 저장해 내용 checksum에서 제외한다. Key rename·merge는 추측하지 않으며 별도 explicit registry correction으로 같은 UUID에 연결한다.
+- 재검토 조건: upstream daily schema가 immutable Event/Source UUID를 직접 발급할 때
 
 ## 미결정 사항
 

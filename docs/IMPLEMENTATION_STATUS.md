@@ -1,7 +1,7 @@
 # AI Daily Intelligence Web V1 Implementation Status
 
 > 마지막 갱신: 2026-08-08 (Asia/Seoul)
-> 현재 단계: Phase B — Git → Supabase importer
+> 현재 단계: Phase D-E — Web foundation, Today, Event Detail
 > 전체 상태: 구현 진행 중
 > 구현 권한: 승인된 V1 범위 내 자율 구현
 
@@ -26,8 +26,8 @@
 | 구현 지시 | 완료 | 2026-08-07 V1 자율 구현 승인 |
 | Phase A: Web workspace/scaffold | 완료 | pnpm workspace, Next.js 16.3, TypeScript, Tailwind CSS 4 기반 생성; typecheck/lint/build 통과 |
 | Phase A: Supabase migration/RLS | 완료 | schema, identity registry, 원자적 import RPC, 최소 권한 RLS/GRANT, 정적 계약 테스트 및 독립 보안 gate 통과 |
-| Phase B-C: Git-to-Supabase sync | 진행 중 | importer, ancestry 판정, URL normalization, checksum과 workflow 구현 |
-| Today/News Detail | 시작 안 함 | DB와 sync 검증 후 진행 |
+| Phase B-C: Git-to-Supabase sync | 완료 | full archive effective registry, importer CLI, ancestry/CAS, URL taxonomy, 14 tests, workflow와 독립 gate 통과 |
+| Today/News Detail | 진행 중 | Server Component read model과 공개 UI 구현 |
 | Opportunities/Trends | 시작 안 함 | 공개 read model 후 진행 |
 | Auth/Saved/반응 기능 | 시작 안 함 | RLS 검증 후 진행 |
 | Vercel 배포 | 외부 설정 필요 | 구현·검토 후 프로젝트/secret 설정 시 사용자 작업 필요 |
@@ -99,20 +99,20 @@
 
 | 항목 | 권장 기본값 | 결정이 필요한 이유 |
 |---|---|---|
-| Source taxonomy registry seed | 불확실하면 other/unknown/unverified | 최초 confirmed provider/domain 목록은 fixture 작성 시 확정 |
+| Source taxonomy 확장 | V1 exact-domain v1 외에는 other/unknown/unverified | 추가 provider/domain은 evidence fixture와 review 필요 |
 | Supabase/Vercel region | 한국 사용자 latency 우선 | 비용, 데이터 위치, 가용 region 확인 필요 |
 | Backup/PITR | 구현 전 운영 수준 확정 | 콘텐츠 projection과 사용자 데이터의 복구 요구가 다름 |
 | 비용 한도 | 구현 전 owner 확정 | 외부 서비스 생성과 운영비 승인 필요 |
 | Google OAuth 운영 | consent screen, 허용 계정, 개인정보 고지 확정 | 외부 OAuth 설정과 개인정보 처리가 필요 |
 
-## 7. 구현 전 필수 gate
+## 7. 외부 환경·배포 전 필수 gate
 
-구현은 다음이 모두 충족된 후 시작한다.
+외부 환경 연결과 배포는 다음이 모두 충족된 후 진행한다.
 
-1. 사용자가 애플리케이션 구현 시작을 명시적으로 지시한다.
-2. 기존 자동화 보호 acceptance criteria를 동의한다.
-3. 외부 Supabase/Vercel project 생성 또는 비용 발생 전 권한을 확인한다.
-4. 구현 branch와 배포 범위를 확정한다.
+1. Supabase/Vercel project와 비용·region을 사용자가 승인한다.
+2. production migration을 사전 검토하고 destructive operation이 없음을 확인한다.
+3. Google OAuth consent, callback URL과 개인정보 고지를 설정한다.
+4. service-role secret을 GitHub environment에, public key만 Vercel server/client 경계에 설정한다.
 
 리전, backup/PITR, 비용, OAuth consent 운영 설정은 외부 환경 생성 전 gate이며 local scaffold, migration 초안과 importer 구현을 시작하는 구조적 blocker는 아니다.
 
@@ -170,7 +170,7 @@
 
 ## 11. 다음 권장 작업
 
-1. Git ancestry 판정, URL normalization, projection checksum과 RPC 호출을 담당하는 Phase B importer를 구현한다.
-2. fixture 기반 correction·A→B→A·과거 날짜·전체 archive backfill 테스트를 통과시킨다.
-3. GitHub Actions sync workflow에 concurrency와 safe retry/reconcile 경계를 추가한다.
+1. Supabase public read adapter와 credential 없는 archive preview adapter를 구현한다.
+2. Today와 Event Detail을 text-first 반응형 Server Component로 구현한다.
+3. Source CTA, authority/verification badge, partial briefing 안내와 이미지 없는 fallback을 검증한다.
 4. 실제 Supabase runtime을 사용할 수 있게 되면 migration, 역할별 RLS와 account deletion cascade SQL 검증을 실행한다.

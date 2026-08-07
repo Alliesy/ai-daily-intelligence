@@ -84,7 +84,9 @@ create or replace function public.apply_identity_registry(
   p_event_registry jsonb,
   p_source_registry jsonb,
   p_source_commit_sha text,
-  p_registry_checksum text
+  p_registry_checksum text,
+  p_expected_registry_commit_sha text,
+  p_expected_registry_checksum text
 )
 returns jsonb
 language plpgsql
@@ -95,13 +97,34 @@ declare
   item jsonb;
   applied_events integer := 0;
   applied_sources integer := 0;
+  registry_state private.identity_registry_state%rowtype;
 begin
   perform private.assert_service_role();
   perform pg_advisory_xact_lock(7341220260808);
 
   if p_source_commit_sha !~ '^[0-9a-f]{40}$'
-     or p_registry_checksum !~ '^[0-9a-f]{64}$' then
+     or p_registry_checksum !~ '^[0-9a-f]{64}$'
+     or (p_expected_registry_commit_sha is null) <> (p_expected_registry_checksum is null)
+     or p_expected_registry_commit_sha is not null and p_expected_registry_commit_sha !~ '^[0-9a-f]{40}$'
+     or p_expected_registry_checksum is not null and p_expected_registry_checksum !~ '^[0-9a-f]{64}$' then
     raise exception using errcode = '22023', message = 'invalid registry provenance';
+  end if;
+
+  select * into registry_state
+  from private.identity_registry_state
+  where singleton
+  for update;
+  if found then
+    if p_expected_registry_commit_sha is distinct from registry_state.source_commit_sha
+       or p_expected_registry_checksum is distinct from registry_state.registry_checksum then
+      return jsonb_build_object(
+        'status', 'retry_registry_changed',
+        'registry_commit_sha', registry_state.source_commit_sha,
+        'registry_checksum', registry_state.registry_checksum
+      );
+    end if;
+  elsif p_expected_registry_commit_sha is not null or p_expected_registry_checksum is not null then
+    return jsonb_build_object('status', 'retry_registry_changed', 'registry_commit_sha', null, 'registry_checksum', null);
   end if;
   if p_event_registry ->> 'schema_version' <> '1.0'
      or jsonb_typeof(p_event_registry -> 'events') is distinct from 'array'
@@ -247,7 +270,7 @@ begin
     source_commit_sha = excluded.source_commit_sha,
     applied_at = excluded.applied_at;
 
-  return jsonb_build_object('events', applied_events, 'sources', applied_sources);
+  return jsonb_build_object('status', 'applied', 'events', applied_events, 'sources', applied_sources);
 end;
 $$;
 
@@ -574,16 +597,33 @@ begin
     for source_item in select value from jsonb_array_elements(news_item -> 'sources') loop
       source_uuid := private.source_uid_for_url(source_item ->> 'url');
       insert into public.sources (
-        id, source_type, authority, taxonomy_mapping_status, title, publisher,
-        published_date_text, provider, external_id, metadata
+        id, source_type, authority, taxonomy_mapping_status, taxonomy_rule_version, title, publisher,
+        published_at, published_date_text, provider, external_id, thumbnail_url, metadata
       )
-      select source_uuid, 'other', 'unknown', 'unknown', source_item ->> 'title',
-        source_item ->> 'publisher', source_item ->> 'published_at', provider, external_id,
+      select source_uuid,
+        coalesce(nullif(source_item ->> 'source_type', ''), 'other')::public.source_type,
+        coalesce(nullif(source_item ->> 'authority', ''), 'unknown')::public.source_authority,
+        coalesce(nullif(source_item ->> 'taxonomy_mapping_status', ''), 'unknown')::public.taxonomy_mapping_status,
+        nullif(source_item ->> 'taxonomy_rule_version', ''),
+        source_item ->> 'title', source_item ->> 'publisher',
+        nullif(source_item ->> 'published_at_iso', '')::timestamptz,
+        source_item ->> 'published_at',
+        coalesce(nullif(source_item ->> 'provider', ''), provider),
+        coalesce(nullif(source_item ->> 'external_id', ''), external_id),
+        nullif(source_item ->> 'thumbnail_url', ''),
         jsonb_build_object('legacy_tier', source_item ->> 'tier')
       from private.source_identity_registry where source_uid = source_uuid
       on conflict (id) do update set
+        source_type = case when excluded.taxonomy_mapping_status <> 'unknown' then excluded.source_type else public.sources.source_type end,
+        authority = case when excluded.taxonomy_mapping_status <> 'unknown' then excluded.authority else public.sources.authority end,
+        taxonomy_mapping_status = case when excluded.taxonomy_mapping_status <> 'unknown' then excluded.taxonomy_mapping_status else public.sources.taxonomy_mapping_status end,
+        taxonomy_rule_version = case when excluded.taxonomy_mapping_status <> 'unknown' then excluded.taxonomy_rule_version else public.sources.taxonomy_rule_version end,
         title = excluded.title, publisher = excluded.publisher,
+        published_at = coalesce(excluded.published_at, public.sources.published_at),
         published_date_text = excluded.published_date_text,
+        provider = coalesce(excluded.provider, public.sources.provider),
+        external_id = coalesce(excluded.external_id, public.sources.external_id),
+        thumbnail_url = coalesce(excluded.thumbnail_url, public.sources.thumbnail_url),
         metadata = public.sources.metadata || excluded.metadata;
 
       update public.source_urls set is_current_canonical = false, url_kind = 'alternate'
@@ -621,7 +661,7 @@ begin
         source_id, raw_url, normalized_url, url_kind, is_current_canonical,
         first_seen_at, last_seen_at, source_commit_sha
       )
-      select source_uuid, source_item ->> 'url', source_item ->> 'url',
+      select source_uuid, coalesce(source_item ->> 'raw_url', source_item ->> 'url'), source_item ->> 'url',
         case when registry.canonical_url = source_item ->> 'url' then 'canonical'::public.source_url_kind else 'alternate'::public.source_url_kind end,
         registry.canonical_url = source_item ->> 'url',
         (p_payload ->> 'generated_at')::timestamptz,
@@ -644,7 +684,8 @@ begin
         briefing_id, event_id, source_id, verification_status, is_primary,
         display_order, key_quote, quote_translation, source_commit_sha, source_revision
       ) values (
-        briefing_uuid, event_uuid, source_uuid, 'unverified',
+        briefing_uuid, event_uuid, source_uuid,
+        coalesce(nullif(source_item ->> 'verification_status', ''), 'unverified')::public.verification_status,
         source_item ->> 'url' = news_item ->> 'original_url', source_order,
         nullif(news_item ->> 'key_quote', ''), nullif(news_item ->> 'quote_translation', ''),
         p_source_commit_sha, p_source_revision
@@ -672,7 +713,10 @@ begin
 
   build_candidate := p_payload -> 'build_candidate';
   for idea_item in select value from jsonb_array_elements(p_payload -> 'business_ideas') loop
-    stable_value := encode(extensions.digest(lower(btrim(idea_item ->> 'name')), 'sha256'), 'hex');
+    stable_value := encode(extensions.digest(
+      packet_date::text || ':' || lower(btrim(idea_item ->> 'name')),
+      'sha256'
+    ), 'hex');
     insert into public.opportunities (
       stable_key, name, customer, problem, competitors, differentiation, mvp_2_weeks,
       difficulty, monetization, falsification, score, stars, potential,
@@ -923,13 +967,77 @@ begin
 end;
 $$;
 
-revoke all on function public.apply_identity_registry(jsonb, jsonb, text, text)
+create or replace function public.get_sync_cursor(p_packet_path text)
+returns jsonb
+language plpgsql
+stable
+security definer
+set search_path = ''
+as $$
+declare
+  cursor_value private.sync_cursors%rowtype;
+begin
+  perform private.assert_service_role();
+  if p_packet_path !~ '^data/daily/[0-9]{4}/[0-9]{4}-[0-9]{2}-[0-9]{2}\.json$' then
+    raise exception using errcode = '22023', message = 'invalid packet path';
+  end if;
+
+  select * into cursor_value
+  from private.sync_cursors
+  where packet_path = p_packet_path;
+
+  if not found then
+    return null;
+  end if;
+  return jsonb_build_object(
+    'packet_path', cursor_value.packet_path,
+    'authoritative_commit_sha', cursor_value.authoritative_commit_sha,
+    'authoritative_revision', cursor_value.authoritative_revision,
+    'authoritative_checksum', cursor_value.authoritative_checksum,
+    'authoritative_projection_checksum', cursor_value.authoritative_projection_checksum,
+    'updated_at', cursor_value.updated_at
+  );
+end;
+$$;
+
+create or replace function public.get_identity_registry_state()
+returns jsonb
+language plpgsql
+stable
+security definer
+set search_path = ''
+as $$
+declare
+  registry_state private.identity_registry_state%rowtype;
+begin
+  perform private.assert_service_role();
+  select * into registry_state from private.identity_registry_state where singleton;
+  if not found then
+    return null;
+  end if;
+  return jsonb_build_object(
+    'registry_checksum', registry_state.registry_checksum,
+    'source_commit_sha', registry_state.source_commit_sha,
+    'applied_at', registry_state.applied_at
+  );
+end;
+$$;
+
+revoke all on function public.apply_identity_registry(jsonb, jsonb, text, text, text, text)
   from public, anon, authenticated;
 revoke all on function public.import_daily_packet(text, jsonb, text, text, bigint, text, text, text)
   from public, anon, authenticated;
-grant execute on function public.apply_identity_registry(jsonb, jsonb, text, text)
+revoke all on function public.get_sync_cursor(text)
+  from public, anon, authenticated;
+revoke all on function public.get_identity_registry_state()
+  from public, anon, authenticated;
+grant execute on function public.apply_identity_registry(jsonb, jsonb, text, text, text, text)
   to service_role;
 grant execute on function public.import_daily_packet(text, jsonb, text, text, bigint, text, text, text)
+  to service_role;
+grant execute on function public.get_sync_cursor(text)
+  to service_role;
+grant execute on function public.get_identity_registry_state()
   to service_role;
 
 revoke all on function private.assert_service_role() from public, anon, authenticated;

@@ -95,12 +95,22 @@ assert.match(
 );
 assert.match(migrations, /pg_advisory_xact_lock\(7341220260808\)/);
 assert.match(migrations, /retry_cursor_changed/);
+assert.match(migrations, /retry_registry_changed/);
 assert.match(migrations, /identity registry changed; retry with the current registry/);
 assert.match(migrations, /identity registry cannot omit an existing identity/);
 assert.match(migrations, /merged_into_event_id = registry\.merged_into_event_uid/);
+assert.match(
+  migrations,
+  /packet_date::text \|\| ':' \|\| lower\(btrim\(idea_item ->> 'name'\)\)/,
+  "legacy Opportunity fallback identity must include the briefing date",
+);
 assert.match(migrations, /stable_value := 'topic-' \|\| substring\(/, "non-ASCII topics need a stable slug fallback");
 assert.match(migrations, /revoke all on function public\.import_daily_packet[\s\S]*from public, anon, authenticated;/i);
 assert.match(migrations, /grant execute on function public\.import_daily_packet[\s\S]*to service_role;/i);
+assert.match(migrations, /revoke all on function public\.get_sync_cursor\(text\)[\s\S]*from public, anon, authenticated;/i);
+assert.match(migrations, /grant execute on function public\.get_sync_cursor\(text\)[\s\S]*to service_role;/i);
+assert.match(migrations, /revoke all on function public\.get_identity_registry_state\(\)[\s\S]*from public, anon, authenticated;/i);
+assert.match(migrations, /grant execute on function public\.get_identity_registry_state\(\)[\s\S]*to service_role;/i);
 assert.doesNotMatch(migrations, /grant\s+(insert|update|delete|all)[^;]+to\s+anon/i);
 assert.doesNotMatch(migrations, /grant\s+all\s+on\s+all\s+tables[^;]+service_role/i);
 assert.doesNotMatch(migrations, /grant\s+(insert|update|delete|all)[^;]+daily_briefings[^;]+authenticated/i);

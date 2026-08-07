@@ -632,7 +632,9 @@ OAuth callback은 Supabase PKCE code exchange 후에만 session을 설정한다.
 
 ### Import RPC
 
-- 함수 예시: `public.import_daily_packet(packet_path text, payload jsonb, source_commit_sha text, expected_cursor_sha text, source_revision bigint, raw_checksum text, identity_registry_checksum text, projection_input_checksum text)`
+- content 함수: `public.import_daily_packet(packet_path text, payload jsonb, source_commit_sha text, expected_cursor_sha text, source_revision bigint, raw_checksum text, identity_registry_checksum text, projection_input_checksum text)`
+- identity 함수: `public.apply_identity_registry(event_registry jsonb, source_registry jsonb, source_commit_sha text, registry_checksum text, expected_registry_commit_sha text, expected_registry_checksum text)`
+- watermark read 함수: `public.get_sync_cursor(packet_path text)`, `public.get_identity_registry_state()`
 - transaction 단위로 실행
 - `SECURITY DEFINER` 사용 시 고정 `search_path` 설정
 - Data API에서 호출 가능한 좁은 `public` RPC façade만 두고 object owner를 migration 전용 role로 고정한다. 운영 table은 계속 API 비노출 `private` schema에 둔다.
@@ -642,6 +644,8 @@ OAuth callback은 Supabase PKCE code exchange 후에만 session을 설정한다.
 - 입력 packet을 다시 검증하고 예상하지 않은 schema version 거부
 - RPC 진입 즉시 고정 advisory transaction lock을 획득해 content import를 직렬화
 - workflow가 전달한 `expected_cursor_sha`와 lock 안의 실제 cursor SHA가 다르면 write 없이 `retry_cursor_changed`
+- identity registry도 commit SHA와 checksum을 함께 CAS하고 값이 다르면 registry row를 변경하지 않은 채 `retry_registry_changed`
+- packet import는 lock 안에서 live identity registry checksum을 다시 확인해 registry apply와 packet import 사이의 경쟁을 거부
 - workflow는 Git에서 cursor SHA와 incoming SHA의 ancestry를 검증하고 그 결과에 따라 호출 여부를 결정한다. RPC는 Git을 판정하지 않고 trusted service importer가 전달한 incoming SHA와 `expected_cursor_sha`의 CAS만 강제한다.
 - same SHA는 duplicate로 호출하지 않고, cursor가 incoming의 ancestor이면 descendant correction으로 호출하며, incoming이 cursor의 ancestor이거나 두 SHA가 diverged/불명확하면 workflow가 각각 superseded 또는 reconcile failure로 종료한다.
 - 수락한 descendant는 같은 checksum이어도 commit SHA cursor를 먼저 전진
@@ -653,7 +657,7 @@ OAuth callback은 Supabase PKCE code exchange 후에만 session을 설정한다.
 - Event의 현재 표시 필드와 `is_current` analysis는 날짜가 더 최신이거나, 같은 날짜에서 accepted descendant correction일 때만 전진한다.
 - 과거 날짜 correction은 해당 Briefing occurrence와 analysis version을 갱신하지만 더 최신 Event current state를 덮어쓰지 않음
 
-V1은 단일 global advisory lock으로 모든 content import를 직렬화한다. GitHub Actions concurrency와 advisory lock은 도착 순서를 보장하지 않으므로 workflow의 commit ancestry 검증과 RPC의 per-path cursor CAS를 함께 사용한다. Checksum no-op보다 SHA watermark 갱신을 먼저 수행한다. Full backfill은 하나의 고정된 main HEAD snapshot을 checkout하고 identity registry를 먼저 적용한 뒤 날짜 오름차순으로 실행하며, 각 packet cursor에는 그 snapshot SHA를 기록한다. Identity-only commit은 V1에서 전체 archive reconcile을 실행한다. Force-push, diverged history, shallow history 또는 cursor 불일치는 자동 순서를 추측하지 않고 reconcile/retry로 중단한다.
+V1은 단일 global advisory lock으로 모든 registry/content import를 직렬화한다. GitHub Actions concurrency와 advisory lock은 도착 순서를 보장하지 않으므로 workflow의 commit ancestry 검증, registry 2-field CAS와 RPC의 per-path cursor CAS를 함께 사용한다. Checksum no-op보다 SHA watermark 갱신을 먼저 수행한다. Main write workflow는 매번 하나의 고정된 main HEAD snapshot에서 identity registry를 먼저 적용하고 전체 archive를 날짜 오름차순으로 reconcile하며, 각 packet cursor에는 그 snapshot SHA를 기록한다. 따라서 GitHub가 이전 pending run을 대체해도 최신 snapshot이 중간 변경을 흡수한다. Force-push, diverged history, shallow history 또는 cursor 불일치는 자동 순서를 추측하지 않고 reconcile/retry로 중단한다.
 
 ## 9. Index와 조회 경로
 
@@ -699,7 +703,7 @@ V1에 검색 화면 요구가 없으므로 full-text search index는 미리 추�
 | `news[].industry_mood` | `event_analysis.industry_mood` |
 | `news[].sources[]` | `sources`, `source_urls`, `event_sources`, `event_source_occurrences` |
 | `news[].tags[]` | `topics`, `event_topics` |
-| `business_ideas[]` | `opportunities`, `daily_briefing_opportunities` |
+| `business_ideas[]` | `opportunities`, `daily_briefing_opportunities`; legacy fallback key는 `date_kst + normalized name` |
 | `build_candidate` | 해당 `daily_briefing_opportunities` occurrence candidate fields |
 | `tools[]` | `resources(type=tool)` |
 | `worth_reading[]` | `resources` |
@@ -731,7 +735,7 @@ V1에 검색 화면 요구가 없으므로 full-text search index는 미리 추�
 5. `profiles`, `reactions`, `bookmarks`, `follows`, `auth.users`는 rebuild 대상/삭제 권한에서 제외하며 전후 row count와 FK를 검증한다.
 6. latest date, occurrence별 checksum, 모든 alias resolve, current projection을 검증한 뒤 cache를 재검증한다.
 
-Event key alias/merge와 Source URL alias/canonical override는 Supabase에서만 편집하지 않는다. 미래 구현 시 Git main에 schema-validated `data/identity/event-aliases.json`과 `data/identity/source-aliases.json`을 두어 daily archive와 함께 rebuild 입력으로 사용한다. Event registry entry는 immutable `event_uid`, canonical key, aliases, merge target과 사유를 포함하고 Source registry entry는 immutable `source_uid`, provider/external ID, canonical URL, aliases와 merge 사유를 포함한다. 기존 `schema/daily.schema.json`과 AI Researcher 출력은 변경하지 않으며, registry 변경은 별도 review와 correction commit으로 관리한다. production 최초 sync 전에 legacy key와 URL의 deterministic UUIDv5 bootstrap registry를 Git에 고정하고 이후 key/URL 변경에도 해당 UUID를 유지한다.
+Event key alias/merge와 Source URL alias/canonical override는 Supabase에서만 편집하지 않는다. Git main의 schema-validated `data/identity/event-aliases.json`과 `data/identity/source-aliases.json`은 reviewed override이고, importer는 고정된 snapshot의 전체 daily archive에서 아직 없는 Event key와 normalized Source URL을 deterministic UUIDv5로 발견해 complete effective registry를 만든다. Event registry entry는 immutable `event_uid`와 `identity_seed`, canonical key, aliases, merge target과 사유를 포함하고 Source registry entry는 immutable `source_uid`와 `identity_seed`, provider/external ID, canonical URL, aliases와 merge 사유를 포함한다. 기존 `schema/daily.schema.json`과 AI Researcher 출력은 변경하지 않으며, key rename·alias·merge는 별도 review와 correction commit으로 관리한다. 따라서 새 daily identity는 자동 수용되지만 서로 다른 key를 같은 Event로 추측하지 않는다.
 
 ### 필수 sync test matrix
 

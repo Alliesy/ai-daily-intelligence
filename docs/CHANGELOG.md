@@ -24,3 +24,16 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 - Supabase foundation 정적 계약 테스트 및 `git diff --check` 통과
 - Phase A 독립 보안 리뷰 `READY`
 - 실제 PostgreSQL/Supabase migration 적용 테스트는 로컬 DB runtime 확보 후 수행 예정
+
+### Git → Supabase importer
+
+- JSON Schema runtime validation과 Event/Source complete registry 검증
+- raw/registry/mapper projection checksum 및 full-history ancestry 판정
+- registry commit+checksum CAS와 packet별 cursor CAS
+- tracking parameter, YouTube, X, GitHub URL normalization 및 보수적 taxonomy fallback
+- incremental/backfill/dry-run CLI와 10개 importer 회귀 테스트
+- secret 없는 manual dry-run과 main 전체 archive reconcile을 제공하는 별도 sync workflow
+- legacy Opportunity의 이름 충돌을 막는 `date_kst + normalized name` fallback identity
+- 전체 archive에서 신규 Event/Source를 deterministic UUIDv5로 발견하는 effective registry
+- provenance와 semantic registry checksum 분리, stateful A→B→A·stale run 회귀 테스트
+- Phase B-C 독립 기술 검토 `READY`

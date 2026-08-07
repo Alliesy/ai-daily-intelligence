@@ -27,8 +27,26 @@ begin
     raise exception 'import_daily_packet is executable by an unprivileged role';
   end if;
 
+  if has_function_privilege('anon', 'public.apply_identity_registry(jsonb,jsonb,text,text,text,text)', 'EXECUTE')
+     or has_function_privilege('authenticated', 'public.apply_identity_registry(jsonb,jsonb,text,text,text,text)', 'EXECUTE')
+     or has_function_privilege('PUBLIC', 'public.apply_identity_registry(jsonb,jsonb,text,text,text,text)', 'EXECUTE') then
+    raise exception 'apply_identity_registry is executable by an unprivileged role';
+  end if;
+
   if not has_function_privilege('service_role', 'public.import_daily_packet(text,jsonb,text,text,bigint,text,text,text)', 'EXECUTE') then
     raise exception 'service_role cannot execute import_daily_packet';
+  end if;
+
+  if has_function_privilege('anon', 'public.get_sync_cursor(text)', 'EXECUTE')
+     or has_function_privilege('authenticated', 'public.get_sync_cursor(text)', 'EXECUTE')
+     or has_function_privilege('PUBLIC', 'public.get_sync_cursor(text)', 'EXECUTE') then
+    raise exception 'get_sync_cursor is executable by an unprivileged role';
+  end if;
+
+  if has_function_privilege('anon', 'public.get_identity_registry_state()', 'EXECUTE')
+     or has_function_privilege('authenticated', 'public.get_identity_registry_state()', 'EXECUTE')
+     or has_function_privilege('PUBLIC', 'public.get_identity_registry_state()', 'EXECUTE') then
+    raise exception 'get_identity_registry_state is executable by an unprivileged role';
   end if;
 
   if has_table_privilege('anon', 'public.event_keys', 'SELECT')

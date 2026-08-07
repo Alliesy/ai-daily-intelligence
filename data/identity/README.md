@@ -1,8 +1,8 @@
 # Identity registries
 
-These versioned registries make the Git archive sufficient to rebuild the
-Supabase content projection without treating mutable external keys or URLs as
-database identities.
+These versioned registries combine with deterministic discovery from the full
+Git daily archive to rebuild the Supabase content projection without treating
+mutable external keys or URLs as database identities.
 
 - `event-aliases.json` assigns an immutable `event_uid` to every accepted Git
   `event_key` and records reviewed aliases or merges.
@@ -19,3 +19,10 @@ fuzzy or last-write-wins merge.
 
 These files are inputs to the Web projection only. They do not change
 `schema/daily.schema.json` or the AI Researcher output contract.
+
+The importer creates a complete effective registry for each fixed Git snapshot.
+Any previously unseen `event_key` or normalized Source URL receives a UUIDv5
+from the immutable namespace and becomes reproducible from the archive alone.
+These files remain the reviewed override layer for aliases, canonical renames,
+and merges; automatic discovery never guesses that two different keys are one
+Event.

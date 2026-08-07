@@ -294,16 +294,18 @@ V1에서는 전체 사용자 반응 수 공개가 필수 요구가 아니므로 
 1. push된 정확한 commit을 checkout한다.
 2. 기존 `scripts/validate_daily.py`를 실행한다.
 3. Web importer의 runtime schema로 타입과 필수 매핑을 검증한다.
-4. 원본 파일 SHA-256과 identity registry checksum을 계산하고, 두 값과 importer mapping version을 합친 projection input checksum을 만든다.
-5. Full Git main history에서 DB cursor SHA → incoming SHA → 현재 remote main SHA의 ancestry를 검증한다. commit count는 진단값으로만 기록한다.
-6. DB의 global advisory transaction lock을 획득해 content import를 직렬화한다.
-7. RPC가 global lock 안에서 workflow가 읽은 `expected_cursor_sha`를 실제 cursor와 compare-and-swap한다. cursor가 바뀌었으면 write 없이 재시도한다.
-8. accepted descendant commit이면 checksum이 같아도 SHA watermark를 전진시킨다. raw JSON뿐 아니라 identity registry와 mapper version까지 포함한 projection input checksum이 같을 때만 content write 없이 종료한다. ancestor 지연 실행은 skip하고 diverged/force-push history는 reconcile failure로 중단한다.
-9. 내용이 달라졌으면 Git field를 Supabase Event model로 변환한다.
-10. 제한된 service-role 전용 RPC로 한 transaction 안에서 upsert한다.
-11. 입력/출력 record count와 관계 무결성을 검증한다.
-12. sync run 결과를 저장한다.
-13. 성공 시 관련 Next.js cache tag를 재검증한다.
+4. 전체 archive에서 explicit registry에 없는 Event key와 normalized Source URL을 deterministic UUIDv5로 발견해 complete effective registry를 만든다. Alias/merge correction은 explicit registry가 우선한다.
+5. 원본 파일 SHA-256과 effective identity registry checksum을 계산하고, 두 값과 importer mapping version을 합친 projection input checksum을 만든다.
+6. Full Git main history에서 DB registry/cursor SHA → incoming SHA → 현재 remote main SHA의 ancestry를 검증한다. commit count는 진단값으로만 기록한다.
+7. Registry는 commit SHA와 checksum의 2-field CAS로 적용해 A→B→A 또는 늦은 실행의 registry rollback을 막는다.
+8. DB의 global advisory transaction lock을 획득해 registry와 content import를 각각 직렬화한다.
+9. Packet RPC가 global lock 안에서 workflow가 읽은 `expected_cursor_sha`와 live registry checksum을 실제 값과 비교한다. 하나라도 바뀌었으면 write 없이 재시도한다.
+10. accepted descendant commit이면 checksum이 같아도 SHA watermark를 전진시킨다. raw JSON뿐 아니라 identity registry와 mapper version까지 포함한 projection input checksum이 같을 때만 content write 없이 종료한다. ancestor 지연 실행은 skip하고 diverged/force-push history는 reconcile failure로 중단한다.
+11. 내용이 달라졌으면 Git field를 Supabase Event model로 변환한다.
+12. 제한된 service-role 전용 RPC로 한 transaction 안에서 upsert한다.
+13. 입력/출력 record count와 관계 무결성을 검증한다.
+14. sync run 결과를 저장한다.
+15. 성공 시 관련 Next.js cache tag를 재검증한다.
 
 ### 안정 키
 
@@ -500,7 +502,7 @@ ai-daily-intelligence/
 │     ├─ styles/
 │     └─ types/
 ├─ packages/
-│  └─ intelligence-sync/
+│  └─ importer/
 │     ├─ src/
 │     └─ tests/
 ├─ supabase/
