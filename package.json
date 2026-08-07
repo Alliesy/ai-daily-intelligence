@@ -9,8 +9,8 @@
   "scripts": {
     "dev": "pnpm --filter @ai-daily/web dev",
     "build": "pnpm --filter @ai-daily/importer build && pnpm --filter @ai-daily/web build",
-    "lint": "pnpm -r --if-present lint",
-    "typecheck": "pnpm -r --if-present typecheck",
-    "test": "node supabase/tests/verify-foundation.mjs && pnpm -r --if-present test"
+    "lint": "pnpm --filter @ai-daily/web lint",
+    "typecheck": "pnpm --filter @ai-daily/importer typecheck && pnpm --filter @ai-daily/web typecheck",
+    "test": "node supabase/tests/verify-foundation.mjs && pnpm --filter @ai-daily/importer test && pnpm --filter @ai-daily/web test"
   }
 }

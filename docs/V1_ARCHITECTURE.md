@@ -2,13 +2,21 @@
 
 ## 구현 반영: 공개 Web read path (2026-08-08)
 
+## 구현 반영: Auth와 개인 기능 (2026-08-08)
+
+공개 route는 Proxy 인증 gate를 두지 않는다. Header의 작은 로그인 진입점과 개인 기능 클릭만 `/login`으로 연결된다. Google OAuth callback은 Supabase PKCE code를 server route에서 교환하고 검증된 same-origin 상대 경로로 복귀한다.
+
+reaction, bookmark, follow는 browser session client와 RLS를 사용한다. Saved는 server-only 사용자 DAL이 `auth.getUser()`로 사용자 identity를 확인한 뒤 본인 row만 조회한다. UI 숨김이나 로그인 상태 표시는 보안 경계가 아니며 DB RLS가 최종 권한 경계다.
+
+Trends는 최신 공개 Briefing 날짜를 기준으로 7/30일 occurrence를 집계한다. 기간 전·후반의 Topic/Entity 등장 횟수 차이를 방향 신호로 표시하며, 중요도나 검증 점수로 해석하지 않는다.
+
 공개 페이지는 `Server Component → server-only content DAL → Supabase public RLS projection` 경로를 사용한다. DAL은 화면 전용 최소 DTO를 반환하며 service-role credential을 참조하지 않는다. 자격 증명이 없는 개발·CI에서는 Git daily archive adapter가 같은 DTO를 생성해 Today/Event Detail build와 archive 복구 가능성을 검증한다.
 
 `CONTENT_SOURCE=supabase`는 Supabase URL과 publishable/anon key가 모두 있을 때만 동작한다. 설정 쌍이 불완전하면 자동 fallback하지 않고 오류로 중단한다. archive mode는 preview/build fallback이고 운영의 조회 대상은 Supabase projection이다.
 
 Today와 Event Detail은 text-first Server Component로 구현한다. 이미지가 없으면 이미지 영역을 렌더링하지 않는다. YouTube는 검증 가능한 video ID가 있는 Source에 한해 원본 thumbnail card를 표시한다.
 
-> 상태: 구현 전 최종 기술 검토 READY — 구현 지시 대기
+> 상태: V1 코드 구현 및 로컬 release gate 완료 — 운영 외부 설정 대기
 > 작성일: 2026-08-07 (Asia/Seoul)
 > 관련 문서: [CURRENT_ARCHITECTURE.md](CURRENT_ARCHITECTURE.md), [DB_SCHEMA.md](DB_SCHEMA.md), [DECISIONS.md](DECISIONS.md), [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md)
 
@@ -210,12 +218,14 @@ V1 UI에는 AI 수치 점수를 표시하지 않고 중요도 `S/A/B`만 표시�
 ### Google OAuth와 return path
 
 1. 사용자가 개인 기능을 요청한다.
-2. 현재 same-origin relative path, Event slug, scroll anchor와 pending intent를 보존한다. return path는 짧은 수명의 서명된 HttpOnly cookie 또는 서버 검증 state로 전달하며 action payload 자체를 신뢰하지 않는다.
+2. 현재 same-origin relative path, Event slug와 scroll anchor를 `next`로 보존한다. Supabase가 PKCE state/code verifier를 관리하고 애플리케이션은 `next`에 권한이나 mutation payload를 넣지 않으며 callback에서 다시 검증한다.
 3. Google OAuth를 시작하고 `/auth/callback`으로 돌아온다.
 4. callback은 허용된 relative `next` 값만 검증한 뒤 원래 페이지로 redirect한다.
 5. 원래 Event와 읽던 위치를 복원하고 요청했던 action을 다시 수행할 수 있게 한다.
 
-Open redirect를 방지하기 위해 `next`는 단일 `/`로 시작하는 route allowlist만 허용한다. `//`, 역슬래시, scheme/host, 제어문자, 중복·다중 percent encoding은 거부하고 실패 시 `/`로 보낸다. Supabase production callback은 exact URL allowlist와 PKCE code exchange를 사용하며 wildcard는 preview 환경에만 한정한다. OAuth 전 action을 자동 확정하지 않고 로그인 후 사용자가 상태를 확인하거나 다시 실행할 수 있게 한다. 향후 provider를 추가할 수 있도록 auth adapter 경계는 유지하지만 V1에서는 Google 외 provider를 구성하거나 UI에 노출하지 않는다.
+Open redirect를 방지하기 위해 `next`는 반복 decoding 후 단일 `/`로 시작하는 same-origin path만 허용한다. `//`, 역슬래시, scheme/host, 제어문자, decoding 상한 뒤에도 남은 encoding은 거부하고 실패 시 `/`로 보낸다. unsigned `next`는 권한 부여나 mutation replay에 사용하지 않고 안전한 로컬 탐색 위치만 담으므로 별도 애플리케이션 서명 state를 두지 않는다. Supabase production callback은 exact URL allowlist와 PKCE code exchange를 사용하며 wildcard는 preview 환경에만 한정한다. OAuth 전 action을 자동 확정하지 않고 로그인 후 사용자가 상태를 확인하거나 다시 실행할 수 있게 한다. 향후 provider를 추가할 수 있도록 auth adapter 경계는 유지하지만 V1에서는 Google 외 provider를 구성하거나 UI에 노출하지 않는다.
+
+Event Detail은 Event가 등장한 가장 최신 `date_kst` occurrence의 표시·Analysis를 사용한다. 과거 날짜 correction의 높은 revision은 최신 날짜를 덮지 않으며 revision은 같은 날짜 tie-breaker에만 사용한다. 검토된 merge route는 canonical Event로 permanent redirect하고, Source 목록은 전체 Event occurrence를 누적한 뒤 Source별 최신 verification 상태를 표시한다.
 
 ## 6. 렌더링, 캐시, SEO
 

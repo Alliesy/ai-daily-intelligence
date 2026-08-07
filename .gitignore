@@ -9,6 +9,8 @@ out/
 .vercel/
 coverage/
 *.tsbuildinfo
+.next-dev*.log
 .env
 .env.*
 !.env.example
+!apps/web/.env.example

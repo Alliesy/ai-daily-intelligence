@@ -47,6 +47,10 @@ export interface EventDto {
   sources: SourceDto[];
 }
 
+export type EventRouteDto =
+  | { kind: "event"; event: EventDto }
+  | { kind: "redirect"; slug: string };
+
 export interface OpportunityDto {
   id: string;
   name: string;
@@ -91,3 +95,12 @@ export interface BriefingDto {
   trends: TrendSignalDto[];
 }
 
+export interface TrendMetricDto { label: string; count: number; change: number; }
+export interface TrendOverviewDto {
+  window: 7 | 30;
+  from: string;
+  to: string;
+  topics: TrendMetricDto[];
+  entities: TrendMetricDto[];
+  signals: TrendSignalDto[];
+}

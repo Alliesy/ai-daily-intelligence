@@ -12,6 +12,18 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 - shadcn/ui 최소 primitive와 Supabase SSR/client dependency 추가
 - Web typecheck, ESLint, production build와 archive 정적 페이지 생성을 검증
 
+### V1 기능 화면과 개인 기능
+
+- Opportunities, 7/30일 Trends, Saved 화면 추가
+- Google OAuth PKCE callback과 open-redirect 방어 return path 추가
+- 좋아요·싫어요·관심·저장·Topic Follow와 사용자별 Saved 조회 추가
+- sitemap, robots, 404, 동적 metadata와 반응형·접근성 보강
+- 모바일/데스크톱 브라우저에서 공개 탐색과 선택적 로그인 복귀 흐름 검증
+- Event Detail의 최신 날짜 우선 occurrence 선택, 과거 correction 방지와 reviewed merge permanent redirect 구현
+- Event 전체 Source 이력을 누적하고 Source별 최신 verification을 결정적으로 표시
+- OAuth return path의 반복 encoding·제어문자 방어와 비대화형 Vitest thread pool 안정화
+- 전체 test/lint/typecheck/build 통과 및 Phase F-I 독립 보안·릴리스 리뷰 `READY`
+
 ### 추가
 
 - pnpm workspace와 `apps/web` Next.js 16.3 애플리케이션 기반

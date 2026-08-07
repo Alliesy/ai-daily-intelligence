@@ -1,8 +1,8 @@
 import "server-only";
 
 import { cache } from "react";
-import { getArchiveEvent, getArchiveEventSlugs, getLatestArchiveBriefing } from "./archive";
-import { getLatestSupabaseBriefing, getSupabaseEvent } from "./supabase";
+import { getArchiveEvent, getArchiveEventSlugs, getArchiveTrendOverview, getLatestArchiveBriefing } from "./archive";
+import { getLatestSupabaseBriefing, getSupabaseEventRoute, getSupabaseEventSlugs, getSupabaseTrendOverview } from "./supabase";
 
 function shouldUseSupabase() {
   const mode = process.env.CONTENT_SOURCE;
@@ -14,7 +14,12 @@ function shouldUseSupabase() {
 }
 
 export const getLatestBriefing = cache(async () => shouldUseSupabase() ? getLatestSupabaseBriefing() : getLatestArchiveBriefing());
-export const getEvent = cache(async (slug: string) => shouldUseSupabase() ? getSupabaseEvent(slug) : getArchiveEvent(slug));
-export async function getEventSlugs() { return shouldUseSupabase() ? [] : getArchiveEventSlugs(); }
+export const getEventRoute = cache(async (slug: string) => {
+  if (shouldUseSupabase()) return getSupabaseEventRoute(slug);
+  const event = await getArchiveEvent(slug);
+  return event ? { kind: "event" as const, event } : null;
+});
+export async function getEventSlugs() { return shouldUseSupabase() ? getSupabaseEventSlugs() : getArchiveEventSlugs(); }
+export const getTrendOverview = cache(async (window: 7 | 30) => shouldUseSupabase() ? getSupabaseTrendOverview(window) : getArchiveTrendOverview(window));
 
-export type { BriefingDto, EventDto, OpportunityDto, ResourceDto, SourceDto, TrendSignalDto } from "./types";
+export type { BriefingDto, EventDto, EventRouteDto, OpportunityDto, ResourceDto, SourceDto, TrendMetricDto, TrendOverviewDto, TrendSignalDto } from "./types";

@@ -2,11 +2,7 @@ import "server-only";
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import type {
-  BriefingDto,
-  EventDto,
-  SourceDto,
-} from "./types";
+import type { BriefingDto, EventDto, SourceDto, TrendMetricDto, TrendOverviewDto } from "./types";
 
 type RecordValue = Record<string, unknown>;
 
@@ -233,4 +229,28 @@ export async function getArchiveEventSlugs() {
     for (const event of mapPacket(await readPacket(file)).events) result.add(event.slug);
   }
   return [...result];
+}
+
+function metric(rows: { date: string; labels: string[] }[], midpoint: string): TrendMetricDto[] {
+  const totals = new Map<string, { previous: number; recent: number }>();
+  for (const row of rows) for (const label of new Set(row.labels)) {
+    const value = totals.get(label) ?? { previous: 0, recent: 0 };
+    if (row.date >= midpoint) value.recent += 1; else value.previous += 1;
+    totals.set(label, value);
+  }
+  return [...totals.entries()].map(([label, value]) => ({ label, count: value.previous + value.recent, change: value.recent - value.previous })).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label)).slice(0, 12);
+}
+
+export async function getArchiveTrendOverview(window: 7 | 30): Promise<TrendOverviewDto | null> {
+  const files = await listPackets();
+  if (!files.length) return null;
+  const briefings = await Promise.all(files.map(async (file) => mapPacket(await readPacket(file))));
+  const to = briefings.at(-1)!.dateKst;
+  const fromDate = new Date(`${to}T00:00:00Z`); fromDate.setUTCDate(fromDate.getUTCDate() - window + 1);
+  const from = fromDate.toISOString().slice(0, 10);
+  const midpointDate = new Date(fromDate); midpointDate.setUTCDate(midpointDate.getUTCDate() + Math.floor(window / 2));
+  const midpoint = midpointDate.toISOString().slice(0, 10);
+  const selected = briefings.filter((briefing) => briefing.dateKst >= from && briefing.dateKst <= to);
+  const rows = selected.flatMap((briefing) => briefing.events.map((event) => ({ date: briefing.dateKst, topics: event.topics, entities: event.entities })));
+  return { window, from, to, topics: metric(rows.map((row) => ({ date: row.date, labels: row.topics })), midpoint), entities: metric(rows.map((row) => ({ date: row.date, labels: row.entities })), midpoint), signals: selected.flatMap((briefing) => briefing.trends).slice(-12).reverse() };
 }

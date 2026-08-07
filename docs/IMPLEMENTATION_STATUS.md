@@ -1,8 +1,8 @@
 # AI Daily Intelligence Web V1 Implementation Status
 
 > 마지막 갱신: 2026-08-08 (Asia/Seoul)
-> 현재 단계: Phase D-E — Web foundation, Today, Event Detail
-> 전체 상태: 구현 진행 중
+> 현재 단계: Phase I — integration, security review, final QA 완료
+> 전체 상태: V1 코드 구현 및 로컬 검증 완료, 운영 외부 설정 대기
 > 구현 권한: 승인된 V1 범위 내 자율 구현
 
 ## 1. 현재 목표
@@ -27,9 +27,9 @@
 | Phase A: Web workspace/scaffold | 완료 | pnpm workspace, Next.js 16.3, TypeScript, Tailwind CSS 4 기반 생성; typecheck/lint/build 통과 |
 | Phase A: Supabase migration/RLS | 완료 | schema, identity registry, 원자적 import RPC, 최소 권한 RLS/GRANT, 정적 계약 테스트 및 독립 보안 gate 통과 |
 | Phase B-C: Git-to-Supabase sync | 완료 | full archive effective registry, importer CLI, ancestry/CAS, URL taxonomy, 14 tests, workflow와 독립 gate 통과 |
-| Today/News Detail | 진행 중 | Server Component read model과 공개 UI 구현 |
-| Opportunities/Trends | 시작 안 함 | 공개 read model 후 진행 |
-| Auth/Saved/반응 기능 | 시작 안 함 | RLS 검증 후 진행 |
+| Today/News Detail | 완료 | 공개 UI, Event 날짜 정렬·merge redirect·전체 Source 처리 완료 |
+| Opportunities/Trends | 완료 | 공개 목록과 7/30일 Topic·Entity·Signal 집계 완료 |
+| Auth/Saved/반응 기능 | 완료 | 선택적 Google OAuth, reaction/bookmark/follow와 Saved 완료 |
 | Vercel 배포 | 외부 설정 필요 | 구현·검토 후 프로젝트/secret 설정 시 사용자 작업 필요 |
 
 ## 3. 완료된 문서
@@ -185,3 +185,17 @@
 - 검증: Web typecheck, ESLint, Next.js production build 통과; archive에서 Today 1개와 Event 3개 정적 생성
 - 진행 중: Phase F-G — Opportunities, Trends, Saved, Google OAuth, reaction/bookmark/follow
 - 대기: 실제 Supabase/PostgreSQL runtime RLS 통합 검증과 Google OAuth/Vercel 운영 설정은 외부 환경 필요
+
+## 13. 2026-08-08 Phase F-I 완료 기록
+
+- 상태: `V1 코드 구현 및 로컬 release gate 완료`
+- 완료: Opportunities 목록·상세 정보, 7/30일 Topic/Entity 변화와 Signal
+- 완료: 선택적 Google OAuth PKCE route, same-origin return path 검증, session refresh Proxy
+- 완료: reaction like/dislike/interest, bookmark, Topic Follow client와 Saved 개인 DAL
+- 완료: sitemap, robots, dynamic metadata, 404, mobile/desktop text-first responsive UI
+- 검증 완료: OAuth return path와 Event occurrence/source/merge route Web 단위 테스트 15개 통과
+- 검증 완료: 브라우저에서 Today, Event Detail, Opportunities, Trends, Saved, 개인 기능→로그인 복귀 확인; 390px 가로 overflow 및 console runtime error 없음
+- 검증 완료: `pnpm test`, `pnpm lint`, `pnpm typecheck`, `pnpm build` 통과
+- 외부 설정 필요: Supabase project migration, Google provider/consent/callback, Vercel public env, 실제 역할별 RLS integration test
+- 독립 보안 리뷰: 최종 `READY`. 공개 route 비강제 로그인, Web service-role 미사용, 사용자별 RLS 경계, PKCE/open redirect 방어, Git 정본 비변경을 확인했다. 1차 지적의 occurrence 정렬·merge redirect·전체 Source 집계와 return-path 문서 계약을 수정한 뒤 재검토를 통과했다.
+- 남은 gate: preview Supabase에서 migration, 역할별 RLS, account deletion cascade와 실제 Google OAuth callback을 통합 검증한다.

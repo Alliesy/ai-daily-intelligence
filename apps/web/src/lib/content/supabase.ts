@@ -1,7 +1,8 @@
 import "server-only";
 
 import { createClient } from "@supabase/supabase-js";
-import type { BriefingDto, EventDto, SourceDto } from "./types";
+import type { BriefingDto, EventDto, EventRouteDto, SourceDto, TrendMetricDto, TrendOverviewDto } from "./types";
+import { mergeRedirectSlug, selectLatestOccurrence, selectLatestSourceOccurrences } from "./selection";
 
 type Row = Record<string, unknown>;
 
@@ -19,19 +20,35 @@ function asRows(value: unknown): Row[] {
 function str(value: unknown, fallback = "") { return typeof value === "string" ? value : fallback; }
 function num(value: unknown, fallback = 0) { return typeof value === "number" ? value : fallback; }
 
-async function hydrateEvents(briefingId: string, occurrenceRows: Row[]): Promise<EventDto[]> {
+async function hydrateEvents(briefingId: string, occurrenceRows: Row[], sourceScope: "briefing" | "event" = "briefing"): Promise<EventDto[]> {
   const client = publicClient();
   const eventIds = occurrenceRows.map((row) => str(row.event_id));
   if (!eventIds.length) return [];
+  let sourceQuery = client.from("event_source_occurrences")
+    .select("event_id,source_id,briefing_id,verification_status,is_primary,display_order,sources(id,title,publisher,source_type,authority,published_at,thumbnail_url,source_urls(normalized_url,is_current_canonical))")
+    .in("event_id", eventIds);
+  if (sourceScope === "briefing") sourceQuery = sourceQuery.eq("briefing_id", briefingId);
   const [{ data: events, error: eventError }, { data: sourceOccurrences, error: sourceError }] = await Promise.all([
     client.from("events").select("id,slug,title_original,title_ko,one_line_summary_ko,importance,hero_image_url,hero_image_attribution,event_analysis(*),event_topics(topics(name_ko)),event_entities(entities(canonical_name,display_name_ko))").in("id", eventIds),
-    client.from("event_source_occurrences").select("event_id,source_id,verification_status,is_primary,display_order,sources(id,title,publisher,source_type,authority,published_at,thumbnail_url,source_urls(normalized_url,is_current_canonical))").eq("briefing_id", briefingId).order("display_order"),
+    sourceQuery,
   ]);
   if (eventError) throw eventError;
   if (sourceError) throw sourceError;
+  let sourceRows = asRows(sourceOccurrences);
+  if (sourceScope === "event" && sourceRows.length) {
+    const briefingIds = [...new Set(sourceRows.map((row) => str(row.briefing_id)).filter(Boolean))];
+    const { data: sourceBriefings, error: sourceBriefingError } = await client.from("daily_briefings")
+      .select("id,date_kst,source_revision").in("id", briefingIds);
+    if (sourceBriefingError) throw sourceBriefingError;
+    const briefingById = new Map(asRows(sourceBriefings).map((row) => [str(row.id), row]));
+    sourceRows = sourceRows.map((row) => ({ ...row, daily_briefings: briefingById.get(str(row.briefing_id)) ?? {} }));
+  }
   const byId = new Map(asRows(events).map((row) => [str(row.id), row]));
   const sourceByEvent = new Map<string, SourceDto[]>();
-  for (const occurrence of asRows(sourceOccurrences)) {
+  const selectedSourceOccurrences = sourceScope === "event"
+    ? selectLatestSourceOccurrences(sourceRows)
+    : sourceRows.sort((a, b) => num(a.display_order) - num(b.display_order));
+  for (const occurrence of selectedSourceOccurrences) {
     const source = (occurrence.sources ?? {}) as Row;
     const urls = asRows(source.source_urls);
     const canonical = urls.find((url) => url.is_current_canonical === true) ?? urls[0];
@@ -60,7 +77,8 @@ async function hydrateEvents(briefingId: string, occurrenceRows: Row[]): Promise
       whyItMatters: str(selected.why_it_matters), outlook: str(selected.outlook), businessOpportunity: str(selected.business_opportunity) || null,
       topics: asRows(event.event_topics).map((link) => str((link.topics as Row | undefined)?.name_ko)).filter(Boolean),
       entities: asRows(event.event_entities).map((link) => { const entity = link.entities as Row | undefined; return str(entity?.display_name_ko, str(entity?.canonical_name)); }).filter(Boolean),
-      heroImageUrl: str(event.hero_image_url) || null, heroImageAttribution: str(event.hero_image_attribution) || null,
+      heroImageUrl: str(occurrence.hero_image_url, str(event.hero_image_url)) || null,
+      heroImageAttribution: str(occurrence.hero_image_attribution, str(event.hero_image_attribution)) || null,
       sources: sourceByEvent.get(str(event.id)) ?? [],
     } satisfies EventDto];
   });
@@ -91,14 +109,65 @@ export async function getLatestSupabaseBriefing(): Promise<BriefingDto | null> {
   };
 }
 
-export async function getSupabaseEvent(slug: string): Promise<EventDto | null> {
+export async function getSupabaseEventRoute(slug: string): Promise<EventRouteDto | null> {
   const client = publicClient();
-  const { data: event, error } = await client.from("events").select("id").eq("slug", slug).maybeSingle();
+  const { data: event, error } = await client.from("events").select("id,merged_into_event_id").eq("slug", slug).maybeSingle();
   if (error) throw error;
   if (!event) return null;
-  const { data: occurrence, error: occurrenceError } = await client.from("daily_briefing_events").select("*").eq("event_id", event.id).order("source_revision", { ascending: false, nullsFirst: false }).limit(1).maybeSingle();
+  if (event.merged_into_event_id) {
+    const { data: target, error: targetError } = await client.from("events").select("id,slug").eq("id", event.merged_into_event_id).maybeSingle();
+    if (targetError) throw targetError;
+    const targetSlug = mergeRedirectSlug(event as Row, target as Row | null);
+    return targetSlug ? { kind: "redirect", slug: targetSlug } : null;
+  }
+  const { data: occurrences, error: occurrenceError } = await client.from("daily_briefing_events")
+    .select("*,daily_briefings!inner(date_kst,source_revision)").eq("event_id", event.id);
   if (occurrenceError) throw occurrenceError;
+  const occurrence = selectLatestOccurrence(asRows(occurrences));
   if (!occurrence) return null;
-  return (await hydrateEvents(str(occurrence.briefing_id), [occurrence as Row]))[0] ?? null;
+  const hydrated = (await hydrateEvents(str(occurrence.briefing_id), [occurrence], "event"))[0] ?? null;
+  return hydrated ? { kind: "event", event: hydrated } : null;
 }
 
+export async function getSupabaseEventSlugs() {
+  const { data, error } = await publicClient().from("events").select("slug").eq("publication_state", "published").order("last_seen_date", { ascending: false });
+  if (error) throw error;
+  return (data ?? []).map((row) => row.slug as string);
+}
+
+function trendMetrics(rows: { date: string; labels: string[] }[], midpoint: string): TrendMetricDto[] {
+  const values = new Map<string, { previous: number; recent: number }>();
+  for (const row of rows) for (const label of new Set(row.labels)) {
+    const value = values.get(label) ?? { previous: 0, recent: 0 };
+    if (row.date >= midpoint) value.recent += 1; else value.previous += 1;
+    values.set(label, value);
+  }
+  return [...values.entries()].map(([label, value]) => ({ label, count: value.previous + value.recent, change: value.recent - value.previous })).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label)).slice(0, 12);
+}
+
+export async function getSupabaseTrendOverview(window: 7 | 30): Promise<TrendOverviewDto | null> {
+  const client = publicClient();
+  const { data: latest, error: latestError } = await client.from("daily_briefings").select("date_kst").order("date_kst", { ascending: false }).limit(1).maybeSingle();
+  if (latestError) throw latestError;
+  if (!latest) return null;
+  const to = str(latest.date_kst);
+  const fromDate = new Date(`${to}T00:00:00Z`); fromDate.setUTCDate(fromDate.getUTCDate() - window + 1);
+  const from = fromDate.toISOString().slice(0, 10);
+  const midpointDate = new Date(fromDate); midpointDate.setUTCDate(midpointDate.getUTCDate() + Math.floor(window / 2));
+  const midpoint = midpointDate.toISOString().slice(0, 10);
+  const { data: briefings, error: briefingError } = await client.from("daily_briefings").select("id,date_kst").gte("date_kst", from).lte("date_kst", to);
+  if (briefingError) throw briefingError;
+  const dateById = new Map(asRows(briefings).map((row) => [str(row.id), str(row.date_kst)]));
+  const ids = [...dateById.keys()];
+  if (!ids.length) return { window, from, to, topics: [], entities: [], signals: [] };
+  const [{ data: occurrences, error: occurrenceError }, { data: signals, error: signalError }] = await Promise.all([
+    client.from("daily_briefing_events").select("briefing_id,events(event_topics(topics(name_ko)),event_entities(entities(canonical_name,display_name_ko)))").in("briefing_id", ids),
+    client.from("trend_signals").select("id,briefing_id,label,summary,mood,source_url,display_order").in("briefing_id", ids).order("display_order"),
+  ]);
+  if (occurrenceError || signalError) throw occurrenceError ?? signalError;
+  const rows = asRows(occurrences).map((occurrence) => {
+    const event = occurrence.events as Row;
+    return { date: dateById.get(str(occurrence.briefing_id)) ?? from, topics: asRows(event.event_topics).map((link) => str((link.topics as Row)?.name_ko)).filter(Boolean), entities: asRows(event.event_entities).map((link) => { const entity = link.entities as Row; return str(entity?.display_name_ko, str(entity?.canonical_name)); }).filter(Boolean) };
+  });
+  return { window, from, to, topics: trendMetrics(rows.map((row) => ({ date: row.date, labels: row.topics })), midpoint), entities: trendMetrics(rows.map((row) => ({ date: row.date, labels: row.entities })), midpoint), signals: asRows(signals).reverse().slice(0, 12).map((row) => ({ id: str(row.id), label: str(row.label), summary: str(row.summary), mood: str(row.mood) || null, sourceUrl: str(row.source_url) || null })) };
+}

@@ -19,7 +19,7 @@
 | Source taxonomy | authority required인데 불확실한 안전 fallback 부재 | `authority=unknown`, `type=other`, `verification=unverified`, mapping provenance/version | 해소 |
 | Git watermark | commit count를 권위 순서로 사용하여 history rewrite와 race 판정이 불완전 | cursor SHA→incoming SHA ancestry, `expected_cursor_sha` CAS, divergence 중단 | 해소 |
 | Supabase 보안 | `PUBLIC EXECUTE`, definer view, SSR/service client 혼용 위험을 충분히 명시하지 않음 | service-role 전용 RPC façade, private 운영 table, 명시적 revoke/GRANT, security-invoker view, 전용 service client | 해소 |
-| 로그인 | relative `next` 검증만으로 encoding/backslash 우회 여지 | PKCE, exact production callback, signed state/cookie, strict route allowlist와 `/` fallback | 해소 |
+| 로그인 | relative `next` 검증만으로 encoding/backslash 우회 여지 | Supabase-managed PKCE state, exact production callback, strict same-origin path 검증과 `/` fallback | 해소 |
 | 데이터 복구 | content truncate가 Event FK를 가진 사용자 데이터 보존 요구와 충돌 | 신규 DB backfill과 운영 staging reconcile 분리, stable UUID upsert, user/auth delete 권한 제외 | 해소 |
 | 다중 날짜 | Event current row와 Event×Source row가 과거 표시·검증 상태를 덮어씀 | Briefing×Event, Briefing×Event×Source, Briefing×Opportunity occurrence snapshot | 해소 |
 
@@ -81,8 +81,8 @@ Supabase는 exposed schema table에 RLS를 요구하며 service key는 RLS를 �
 
 - Supabase PKCE code exchange를 사용한다.
 - production callback은 exact allowlist를 사용하고 wildcard는 preview에만 제한한다. [Supabase Redirect URL 공식 문서](https://supabase.com/docs/guides/auth/redirect-urls), [PKCE 공식 문서](https://supabase.com/docs/guides/auth/sessions/pkce-flow)
-- return path는 서명된 짧은 수명의 cookie/state로 전달한다.
-- 단일 `/` 시작 route만 허용하고 `//`, 역슬래시, scheme/host, 제어문자, 중복·다중 encoding을 거부한다.
+- Supabase가 PKCE state/code verifier를 관리한다. 애플리케이션 `next`는 권한이나 mutation을 담지 않는 상대 경로로 제한하고 callback에서 다시 검증한다.
+- 반복 decoding 뒤 단일 `/` 시작 route만 허용하고 `//`, 역슬래시, scheme/host, 제어문자와 decoding 상한 초과를 거부한다.
 - 검증 실패는 `/`로 fallback하며 OAuth 전 mutation은 자동 재실행하지 않는다.
 
 ## 6. 데이터 복구

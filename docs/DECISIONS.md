@@ -2,6 +2,28 @@
 
 ## 2026-08-08 구현 결정
 
+### D-041 — 선택적 Google OAuth는 PKCE callback과 검증된 return path만 사용
+
+- 상태: `confirmed`
+- 결정: 공개 route는 Proxy에서 차단하지 않는다. 개인 기능 실행 시 `/login?next=...`로 이동하고 Supabase Google OAuth PKCE callback이 code를 교환한 뒤 검증된 상대 경로로만 복귀한다.
+- 근거: 최초 진입 login gate를 없애면서 open redirect와 클라이언트 session 신뢰 문제를 방지한다.
+- 보안 규칙: `next`는 반복 decoding 뒤 `/`로 시작하고 `//`, backslash, 제어 문자, encoding 상한 초과가 없어야 한다. unsigned `next`는 로컬 탐색 위치만 담고 권한·mutation replay에 쓰지 않으며 실패하면 `/`로 fallback한다.
+- 영향: V1 provider는 Google 하나이며 OAuth credential·consent screen·정확한 callback allowlist는 운영 설정 gate다.
+
+### D-042 — 개인 mutation은 사용자 JWT와 RLS를 유일한 쓰기 경계로 사용
+
+- 상태: `confirmed`
+- 결정: reaction, bookmark, follow는 Supabase browser client가 현재 사용자의 JWT로 직접 변경한다. 모든 row에 `user_id`를 명시하되 DB RLS의 `auth.uid() = user_id`가 타 사용자 접근을 거부한다.
+- 근거: 별도 privileged API 없이 V1의 작은 mutation surface를 구현하고 service-role 노출 가능성을 제거한다.
+- 영향: UI의 로그인 여부는 편의 기능일 뿐이며 실제 권한 검사는 RLS다. Saved server DAL도 `auth.getUser()` 후 본인 row만 조회한다.
+
+### D-043 — Trends는 최신 Briefing 날짜를 기준으로 7/30일 occurrence를 비교
+
+- 상태: `confirmed`
+- 결정: Topic/Entity 빈도는 서버 현재 시각이 아니라 최신 공개 Briefing의 `date_kst`를 종료일로 삼고 기간 전·후반 Event occurrence 수의 차이를 표시한다.
+- 근거: archive가 지연되거나 재구축되어도 같은 Git snapshot은 같은 trend 결과를 내야 한다.
+- 한계: 빈도 변화는 중요도·사실 신뢰도를 뜻하지 않으며 구조화 Entity가 없는 legacy archive에서는 빈 상태를 명시한다.
+
 ### D-038 — 웹 공개 조회는 server-only DAL과 최소 DTO를 사용
 
 - 상태: `confirmed`
@@ -415,12 +437,22 @@
 ### D-032 — OAuth PKCE와 엄격한 return path 검증
 
 - 상태: `confirmed`
-- 결정: Google OAuth callback은 PKCE와 exact production callback allowlist를 사용하고, 서명된 return state의 same-origin route만 허용한다.
+- 결정: Google OAuth callback은 Supabase가 관리하는 PKCE state/code verifier와 exact production callback allowlist를 사용한다. 애플리케이션 `next`는 권한이나 mutation을 담지 않는 same-origin 상대 경로로 제한하고 callback에서 다시 검증한다.
 - 근거: 선택 로그인 UX를 유지하면서 open redirect와 action replay를 막아야 한다.
-- 고려한 대안: 임의 relative `next`, client storage만으로 복귀 상태 관리
+- 고려한 대안: 임의 relative `next`, 별도 애플리케이션 서명 state/cookie, client storage만으로 복귀 상태 관리
 - 이유: 외부 URL, protocol-relative, backslash와 encoding 우회를 일관되게 거부한다.
 - 영향: 실패 시 `/`로 안전하게 복귀하고 OAuth 전 mutation은 자동 실행하지 않는다.
 - 재검토 조건: 추가 provider 또는 native app callback이 승인될 때
+
+### D-044 — Event Detail의 날짜·merge·Source 이력 조회 규칙
+
+- 상태: `confirmed`
+- 결정: Event Detail은 `daily_briefings.date_kst DESC`를 우선하고 같은 날짜에서만 accepted `source_revision DESC`를 tie-breaker로 사용한다. 검토된 merge Event route는 canonical target으로 permanent redirect하며, Source는 Event 전체 occurrence를 합쳐 Source별 최신 날짜의 verification을 표시한다.
+- 근거: 과거 날짜 correction, merge 전 bookmark, 여러 날짜에 걸친 Source 보강이 Event 중심 상세의 최신 의미와 근거 접근성을 훼손하면 안 된다.
+- 고려한 대안: 전역 revision 정렬, merge row 직접 렌더링, 선택 Briefing Source만 표시
+- 이유: 날짜별 Analysis를 보존하면서 최신 표시와 전체 근거를 결정적으로 유지한다.
+- 영향: Today는 Briefing 범위 Source를 유지하고 Event Detail만 누적 Source를 조회한다. 다중 날짜·과거 correction·merge 회귀 테스트를 유지한다.
+- 재검토 조건: Source verification history 자체를 사용자에게 시계열로 공개할 때
 
 ### D-033 — pnpm workspace와 Next.js 16 기준선
 
