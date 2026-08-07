@@ -104,8 +104,8 @@ def validate(packet: dict) -> tuple[list[str], list[str]]:
 
     bookmark_types = {item.get("type") for item in packet["worth_reading"]}
     expected = {"Paper", "GitHub", "YouTube", "Blog"}
-    if bookmark_types != expected:
-        warnings.append("worth_reading should contain Paper, GitHub, YouTube, and Blog once each")
+    if len(packet["worth_reading"]) != 4 or bookmark_types != expected:
+        errors.append("worth_reading must contain Paper, GitHub, YouTube, and Blog exactly once each")
     return errors, warnings
 
 
