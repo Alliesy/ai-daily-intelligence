@@ -15,7 +15,7 @@
     "tools": {"type": "array", "maxItems": 4, "items": {"$ref": "#/$defs/tool"}},
     "community": {"type": "array", "maxItems": 5, "items": {"$ref": "#/$defs/community"}},
     "skill_of_the_day": {"$ref": "#/$defs/skill"},
-    "worth_reading": {"type": "array", "items": {"$ref": "#/$defs/bookmark"}},
+    "worth_reading": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"$ref": "#/$defs/bookmark"}, "allOf": [{"contains": {"properties": {"type": {"const": "Paper"}}, "required": ["type"]}}, {"contains": {"properties": {"type": {"const": "GitHub"}}, "required": ["type"]}}, {"contains": {"properties": {"type": {"const": "YouTube"}}, "required": ["type"]}}, {"contains": {"properties": {"type": {"const": "Blog"}}, "required": ["type"]}}]},
     "todays_insight": {"type": "string", "minLength": 10},
     "build_candidate": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/candidate"}]}
   },

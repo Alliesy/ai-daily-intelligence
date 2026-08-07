@@ -20,6 +20,7 @@ AI Researcher → Opportunity Finder → Git Publisher → Notion Latest Publish
 - 문제, 고객, 기존 해결법, 경쟁사, 차별점, 2주 MVP, 난이도, 수익화, 반증 조건을 포함합니다.
 - 구축 후보는 하루 최대 1개입니다. 점수 4.3/5 이상, 별 5개, Very High, 독립 근거 2개 이상(공식 1개 포함), 4~8주 MVP 가능, 미해결 법률·보안·유료 의존성 게이트 없음 조건을 모두 만족해야 합니다.
 - 후보가 있어도 `owner_action_required=true`, `status="waiting_for_owner"`로 기록만 하고 종료합니다.
+- Worth Reading은 반드시 `Paper`, `GitHub`, `YouTube`, `Blog`를 정확히 1개씩 포함합니다. 네 유형 중 하나라도 검증 가능한 항목이 없으면 `complete`로 게시하지 말고 누락 유형을 경고한 뒤 자료를 더 조사합니다.
 
 ## 3. Git 게시 — 정본
 
@@ -28,9 +29,11 @@ GitHub 플러그인으로 `Alliesy/ai-daily-intelligence`의 `main`을 읽고 �
 1. `schema/daily.schema.json`과 최신 저장 규칙을 먼저 읽습니다.
 2. KST 날짜가 `YYYY-MM-DD`라면 `data/daily/YYYY/YYYY-MM-DD.json`을 생성하거나 갱신합니다.
 3. 같은 날짜 파일이 있으면 기존 검증된 항목을 보존하면서 새 근거만 보강합니다. 동일 사건 키와 정규화 URL을 중복 생성하지 않습니다.
-4. `reports/YYYY/YYYY-MM-DD.md`, `LATEST.md`, `publish/notion-latest.md`, `latest.json`을 동일 데이터에서 갱신합니다.
-5. JSON과 Markdown의 뉴스 제목·개수·구축 후보 상태가 일치하는지 확인한 뒤 하나의 커밋으로 저장합니다. 커밋 메시지는 `daily: YYYY-MM-DD intelligence`입니다.
-6. Git 저장이 실패하면 Notion을 갱신하지 말고 실패를 보고합니다.
+4. `reports/YYYY/YYYY-MM-DD.md`, `LATEST.md`, `publish/notion-latest.md`를 동일 데이터에서 갱신합니다.
+5. `latest.json`은 전체 패킷이 아니라 `date_kst`, `data_path`, `report_path`, `status` 네 필드만 가진 포인터로 유지합니다. 전체 패킷은 날짜별 JSON에만 저장합니다.
+6. 게시 전 뉴스 3~5개, 사업 아이디어 0~3개, Worth Reading 네 유형, 중복 사건·URL, 후보 승인 게이트, `latest.json` 포인터 구조를 자체 검증합니다. 하나라도 실패하면 Git/Notion을 완료로 게시하지 않습니다.
+7. JSON과 Markdown의 뉴스 제목·개수·구축 후보 상태가 일치하는지 확인한 뒤 하나의 커밋으로 저장합니다. 커밋 메시지는 `daily: YYYY-MM-DD intelligence`입니다.
+8. Git 저장이 실패하면 Notion을 갱신하지 말고 실패를 보고합니다.
 
 ## 4. Notion 게시 — 읽기 전용 화면
 

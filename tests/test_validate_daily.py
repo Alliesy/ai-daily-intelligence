@@ -61,6 +61,13 @@ class ValidationTests(unittest.TestCase):
         errors, _ = MODULE.validate(value)
         self.assertTrue(any("3 to 5" in error for error in errors))
 
+    def test_missing_reading_type_fails(self):
+        value = packet()
+        value["worth_reading"] = value["worth_reading"][:3]
+        value["worth_reading"][0]["type"] = "Blog"
+        errors, _ = MODULE.validate(value)
+        self.assertTrue(any("exactly once" in error for error in errors))
+
 
 if __name__ == "__main__":
     unittest.main()
