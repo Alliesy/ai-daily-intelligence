@@ -174,3 +174,14 @@
 2. Today와 Event Detail을 text-first 반응형 Server Component로 구현한다.
 3. Source CTA, authority/verification badge, partial briefing 안내와 이미지 없는 fallback을 검증한다.
 4. 실제 Supabase runtime을 사용할 수 있게 되면 migration, 역할별 RLS와 account deletion cascade SQL 검증을 실행한다.
+
+## 12. 2026-08-08 Phase D-E 완료 기록
+
+- 상태: `완료`
+- 완료: Next.js 공개 Server Component DAL, Supabase public projection adapter, Git archive preview adapter
+- 완료: Today의 Today's Insight, 핵심 Event, Opportunity Radar, Trending Signals, Tools/Open Source/Papers
+- 완료: Event Detail의 S/A/B, FACT/INTERPRETATION/SIGNAL/SPECULATION, 중요성·전망·사업 기회, 상단 원문 CTA, 전체 Source와 YouTube thumbnail
+- 완료: 로그인 강제 없는 반응형 header와 선택적 로그인 진입점
+- 검증: Web typecheck, ESLint, Next.js production build 통과; archive에서 Today 1개와 Event 3개 정적 생성
+- 진행 중: Phase F-G — Opportunities, Trends, Saved, Google OAuth, reaction/bookmark/follow
+- 대기: 실제 Supabase/PostgreSQL runtime RLS 통합 검증과 Google OAuth/Vercel 운영 설정은 외부 환경 필요

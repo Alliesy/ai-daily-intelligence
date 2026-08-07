@@ -1,69 +1,16 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ExternalLink, Lightbulb, Radar, Sparkles } from "lucide-react";
+import { EventCard } from "@/components/event-card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { getLatestBriefing } from "@/lib/content";
 
-export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+function koreanDate(value: string) {
+  return new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "long", day: "numeric", weekday: "long", timeZone: "Asia/Seoul" }).format(new Date(`${value}T00:00:00+09:00`));
+}
+
+export default async function TodayPage() {
+  const briefing = await getLatestBriefing();
+  if (!briefing) return <main className="mx-auto min-h-[60vh] max-w-7xl px-4 py-24 sm:px-6 lg:px-8"><h1 className="text-3xl font-black">아직 공개된 브리핑이 없습니다.</h1></main>;
+  return <main><section className="border-b border-slate-200 bg-white"><div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8"><div className="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.14em] text-sky-700"><Sparkles className="size-4" aria-hidden />Today · {koreanDate(briefing.dateKst)}</div><div className="mt-6 grid gap-8 lg:grid-cols-[1fr_18rem] lg:items-end"><div><p className="mb-3 text-sm font-bold text-slate-500">TODAY&apos;S INSIGHT</p><h1 className="max-w-4xl text-balance text-3xl font-black leading-tight tracking-[-0.035em] sm:text-5xl">{briefing.todaysInsight}</h1></div><p className="border-l-2 border-sky-500 pl-4 text-sm leading-6 text-slate-600">AI가 만든 요약이 아니라, 출처와 검증 상태를 함께 읽는 사건 중심 브리핑입니다.</p></div>{briefing.status === "partial" && <div role="status" className="mt-8 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">일부 항목의 수집 또는 검증이 진행 중인 partial briefing입니다. 확인된 내용은 먼저 공개합니다.</div>}</div></section><div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:px-8"><section aria-labelledby="top-news"><div className="mb-2 flex items-center justify-between"><div><p className="section-kicker">THE BRIEF</p><h2 id="top-news" className="section-title">오늘의 핵심 뉴스</h2></div><Badge>{briefing.events.length} EVENTS</Badge></div>{briefing.events.slice(0, 5).map((event, index) => <EventCard key={event.id} event={event} rank={index + 1} />)}</section><aside className="space-y-8"><section className="rounded-3xl bg-slate-950 p-6 text-white"><Radar className="size-6 text-sky-400" aria-hidden /><p className="mt-6 text-xs font-bold tracking-[0.14em] text-sky-300">OPPORTUNITY RADAR</p><h2 className="mt-2 text-2xl font-black">실행 가능한 사업 기회</h2><div className="mt-6 space-y-5">{briefing.opportunities.slice(0, 3).map((idea) => <article key={idea.id} className="border-t border-white/15 pt-5 first:border-0 first:pt-0"><div className="flex justify-between gap-3"><h3 className="font-bold">{idea.name}</h3><span className="text-xs font-bold text-sky-300">{idea.score.toFixed(1)}</span></div><p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-300">{idea.problem}</p></article>)}</div><Button variant="accent" className="mt-6 w-full" asChild><Link href="/opportunities">전체 기회 보기<ArrowRight aria-hidden /></Link></Button></section><section className="rounded-3xl border border-slate-200 bg-white p-6"><p className="section-kicker"><Lightbulb className="mr-2 inline size-4" aria-hidden />TRENDING SIGNALS</p><div className="mt-4 space-y-5">{briefing.trends.slice(0, 4).map((trend) => <article key={trend.id} className="border-t border-slate-100 pt-4 first:border-0 first:pt-0"><div className="flex items-center justify-between gap-3"><h3 className="text-sm font-bold">{trend.label}</h3>{trend.mood && <span className="text-[11px] text-slate-500">{trend.mood}</span>}</div><p className="mt-2 text-sm leading-6 text-slate-600">{trend.summary}</p></article>)}</div><Link href="/trends" className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-sky-700">7일·30일 흐름 보기<ArrowRight className="size-4" aria-hidden /></Link></section></aside></div><section className="border-t border-slate-200 bg-white"><div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"><p className="section-kicker">TOOLS · OPEN SOURCE · PAPERS</p><h2 className="section-title">더 깊게 볼 자료</h2><div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 md:grid-cols-2 lg:grid-cols-3">{briefing.resources.map((resource) => <a key={resource.id} href={resource.url} target="_blank" rel="noopener noreferrer" className="group bg-white p-6 hover:bg-sky-50"><Badge>{resource.type}</Badge><h3 className="mt-4 font-extrabold leading-6 group-hover:text-sky-700">{resource.title}</h3><p className="mt-3 text-sm leading-6 text-slate-600">{resource.whyRelevant}</p><ExternalLink className="mt-5 size-4 text-slate-400" aria-hidden /></a>)}</div></div></section></main>;
 }

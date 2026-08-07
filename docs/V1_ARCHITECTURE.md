@@ -1,5 +1,13 @@
 # AI Daily Intelligence Web V1 Architecture
 
+## 구현 반영: 공개 Web read path (2026-08-08)
+
+공개 페이지는 `Server Component → server-only content DAL → Supabase public RLS projection` 경로를 사용한다. DAL은 화면 전용 최소 DTO를 반환하며 service-role credential을 참조하지 않는다. 자격 증명이 없는 개발·CI에서는 Git daily archive adapter가 같은 DTO를 생성해 Today/Event Detail build와 archive 복구 가능성을 검증한다.
+
+`CONTENT_SOURCE=supabase`는 Supabase URL과 publishable/anon key가 모두 있을 때만 동작한다. 설정 쌍이 불완전하면 자동 fallback하지 않고 오류로 중단한다. archive mode는 preview/build fallback이고 운영의 조회 대상은 Supabase projection이다.
+
+Today와 Event Detail은 text-first Server Component로 구현한다. 이미지가 없으면 이미지 영역을 렌더링하지 않는다. YouTube는 검증 가능한 video ID가 있는 Source에 한해 원본 thumbnail card를 표시한다.
+
 > 상태: 구현 전 최종 기술 검토 READY — 구현 지시 대기
 > 작성일: 2026-08-07 (Asia/Seoul)
 > 관련 문서: [CURRENT_ARCHITECTURE.md](CURRENT_ARCHITECTURE.md), [DB_SCHEMA.md](DB_SCHEMA.md), [DECISIONS.md](DECISIONS.md), [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md)

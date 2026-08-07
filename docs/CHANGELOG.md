@@ -4,6 +4,14 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 
 ## 2026-08-08
 
+### Web 공개 화면
+
+- server-only Supabase/public archive DAL과 화면 전용 DTO 추가
+- 로그인 gate 없는 반응형 header 및 Today 화면 구현
+- Event 중심 상세 화면, 상단 원문 CTA, 분석 4단계, 전체 Source badge·YouTube thumbnail 구현
+- shadcn/ui 최소 primitive와 Supabase SSR/client dependency 추가
+- Web typecheck, ESLint, production build와 archive 정적 페이지 생성을 검증
+
 ### 추가
 
 - pnpm workspace와 `apps/web` Next.js 16.3 애플리케이션 기반

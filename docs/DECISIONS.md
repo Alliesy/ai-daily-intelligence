@@ -1,5 +1,32 @@
 # AI Daily Intelligence Decision Log
 
+## 2026-08-08 구현 결정
+
+### D-038 — 웹 공개 조회는 server-only DAL과 최소 DTO를 사용
+
+- 상태: `confirmed`
+- 결정: 공개 콘텐츠 조회는 `apps/web/src/lib/content`의 Server Component 전용 DAL을 통해서만 수행하고 화면에는 최소 DTO만 전달한다. 웹 런타임에는 publishable/anon key만 허용하며 service-role key를 사용하지 않는다.
+- 근거: Supabase RLS를 공개 조회 경계로 유지하고 DB row와 내부 projection 필드를 Client Component에 그대로 노출하지 않기 위해서다.
+- 대안: 각 페이지에서 직접 Supabase query, service-role 기반 SSR query
+- 제외 이유: query·권한 규칙이 분산되고 service-role 노출 또는 RLS 우회 위험이 커진다.
+- 영향: 이후 Auth/개인 기능도 브라우저 세션 client와 privileged importer를 별도 모듈로 유지한다.
+
+### D-039 — Supabase projection과 Git archive preview가 동일 DTO를 공유
+
+- 상태: `confirmed`
+- 결정: `CONTENT_SOURCE=supabase`에서는 공개 Supabase projection을 읽고, 자격 증명이 없는 로컬·CI에서는 Git daily archive adapter가 동일 DTO를 만든다. 환경 변수 쌍이 불완전하거나 명시적 Supabase mode에서 누락되면 fail-closed한다.
+- 근거: Git 정본에서 복구 가능한지 지속 검증하면서 외부 credential 없이도 build·UI 개발을 재현할 수 있다.
+- 대안: 모든 환경에서 Supabase 필수, archive JSON을 Client에서 직접 import
+- 제외 이유: 전자는 로컬/CI를 외부 상태에 결합하고 후자는 원본 구조를 UI에 결합하며 불필요한 데이터를 브라우저에 보낸다.
+- 영향: archive mode는 preview/build fallback이며 production 운영 조회의 기본 목표는 Supabase다. legacy 영어 콘텐츠는 원문 fallback한다.
+
+### D-040 — shadcn/ui는 최소 dependency와 소유 가능한 컴포넌트로 도입
+
+- 상태: `confirmed`
+- 결정: `@radix-ui/react-slot`, `class-variance-authority`, `clsx`, `tailwind-merge`, `lucide-react`로 `components/ui`의 최소 primitive부터 도입한다. Supabase 공개 조회·SSR Auth를 위해 `@supabase/ssr`, `@supabase/supabase-js`를 추가한다.
+- 근거: V1에 필요한 접근 가능한 primitive와 variant 조합만 유지해 UI 의존성과 생성 코드를 최소화한다.
+- 영향: 미사용 미래 컴포넌트는 미리 추가하지 않는다.
+
 > 작성일: 2026-08-07 (Asia/Seoul)
 > 목적: 중요한 제품·기술 결정을 근거, 대안, 영향과 함께 지속적으로 기록한다.
 
