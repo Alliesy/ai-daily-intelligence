@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alliesy/ai-daily-intelligence/schema/daily.schema.json",
+  "title": "AI Daily Intelligence Daily Packet",
+  "type": "object",
+  "required": ["schema_version", "date_kst", "generated_at", "status", "news", "business_ideas", "tools", "community", "skill_of_the_day", "worth_reading", "todays_insight", "build_candidate"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "date_kst": {"type": "string", "format": "date"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["complete", "partial"]},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "news": {"type": "array", "minItems": 3, "maxItems": 5, "items": {"$ref": "#/$defs/news"}},
+    "business_ideas": {"type": "array", "maxItems": 3, "items": {"$ref": "#/$defs/idea"}},
+    "tools": {"type": "array", "maxItems": 4, "items": {"$ref": "#/$defs/tool"}},
+    "community": {"type": "array", "maxItems": 5, "items": {"$ref": "#/$defs/community"}},
+    "skill_of_the_day": {"$ref": "#/$defs/skill"},
+    "worth_reading": {"type": "array", "items": {"$ref": "#/$defs/bookmark"}},
+    "todays_insight": {"type": "string", "minLength": 10},
+    "build_candidate": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/candidate"}]}
+  },
+  "$defs": {
+    "source": {"type": "object", "required": ["title", "url", "publisher", "published_at", "tier"], "properties": {"title": {"type": "string"}, "url": {"type": "string", "format": "uri"}, "publisher": {"type": "string"}, "published_at": {"type": "string"}, "tier": {"enum": ["A", "B", "C"]}}},
+    "news": {"type": "object", "required": ["event_key", "title", "importance", "one_line_summary", "impact", "original_url", "key_quote", "quote_translation", "summary", "why_it_matters", "industry_mood", "outlook", "business_opportunity", "tags", "sources"], "properties": {"event_key": {"type": "string"}, "title": {"type": "string"}, "importance": {"enum": ["S", "A", "B"]}, "one_line_summary": {"type": "string"}, "impact": {"type": "string"}, "original_url": {"type": "string", "format": "uri"}, "key_quote": {"type": "string"}, "quote_translation": {"type": "string"}, "summary": {"type": "string"}, "why_it_matters": {"type": "string"}, "industry_mood": {"type": "object"}, "outlook": {"type": "string"}, "business_opportunity": {"type": "string"}, "tags": {"type": "array", "items": {"type": "string"}}, "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}}}},
+    "idea": {"type": "object", "required": ["name", "score", "stars", "potential", "difficulty", "customer", "problem", "competitors", "differentiation", "mvp_2_weeks", "monetization", "falsification"], "properties": {"name": {"type": "string"}, "score": {"type": "number", "minimum": 0, "maximum": 5}, "stars": {"type": "integer", "minimum": 1, "maximum": 5}, "potential": {"enum": ["Low", "Medium", "High", "Very High"]}, "difficulty": {"type": "string"}, "customer": {"type": "string"}, "problem": {"type": "string"}, "competitors": {"type": "array", "items": {"type": "string"}}, "differentiation": {"type": "string"}, "mvp_2_weeks": {"type": "string"}, "monetization": {"type": "string"}, "falsification": {"type": "string"}}},
+    "tool": {"type": "object", "required": ["name", "type", "url", "stars", "why_trending", "worth_trying"], "properties": {"name": {"type": "string"}, "type": {"type": "string"}, "url": {"type": "string", "format": "uri"}, "stars": {"type": "integer", "minimum": 1, "maximum": 5}, "why_trending": {"type": "string"}, "worth_trying": {"type": "string"}}},
+    "community": {"type": "object", "required": ["platform", "mood", "one_line_summary", "url"], "properties": {"platform": {"enum": ["Hacker News", "Reddit", "X", "Product Hunt", "GitHub", "Other"]}, "mood": {"type": "string"}, "one_line_summary": {"type": "string"}, "url": {"type": "string", "format": "uri"}}},
+    "skill": {"type": "object", "required": ["name", "when_to_use", "practical_example", "prompt_example"], "properties": {"name": {"type": "string"}, "when_to_use": {"type": "string"}, "practical_example": {"type": "string"}, "prompt_example": {"type": "string"}}},
+    "bookmark": {"type": "object", "required": ["type", "title", "url", "why_read"], "properties": {"type": {"enum": ["Paper", "GitHub", "YouTube", "Blog"]}, "title": {"type": "string"}, "url": {"type": "string", "format": "uri"}, "why_read": {"type": "string"}}},
+    "candidate": {"type": "object", "required": ["idea_name", "score", "owner_action_required", "status", "evidence_urls"], "properties": {"idea_name": {"type": "string"}, "score": {"type": "number", "minimum": 4.3, "maximum": 5}, "owner_action_required": {"const": true}, "status": {"const": "waiting_for_owner"}, "evidence_urls": {"type": "array", "minItems": 2, "items": {"type": "string", "format": "uri"}}}}
+  }
+}
