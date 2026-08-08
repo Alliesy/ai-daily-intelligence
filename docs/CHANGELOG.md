@@ -4,6 +4,16 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 
 ## 2026-08-08
 
+### Vercel Preview 배포
+
+- Hobby 범위의 Preview 전용 Vercel 프로젝트 `ai-daily-intelligence-preview` 생성
+- `apps/web` monorepo Root Directory와 Preview Supabase 공개 연결 환경 변수 설정
+- `agent/web-v1` 체크아웃을 Preview로 배포하고 공개 Today 페이지 및 Event projection 렌더링 확인
+- PostgREST Source 조회를 composite FK 경로(`event_source_occurrences → event_sources → sources`)에 맞게 수정
+- Supabase Auth exact redirect allowlist에 Preview `/auth/callback` 추가
+- Google OAuth는 Client credential 설정 전 `WAITING_FOR_USER` 유지
+- Production Vercel, Production Supabase, GitHub main은 변경하지 않음
+
 ### Preview Supabase 통합 검증
 
 - Free/nano, AWS Seoul 전용 프로젝트 `ai-daily-intelligence-preview` 생성 및 V1 migration 적용

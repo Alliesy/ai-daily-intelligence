@@ -219,10 +219,23 @@
 
 - 상태: `WAITING_FOR_USER`
 - Supabase Preview `Site URL`: `http://localhost:3000`
-- Supabase Preview exact redirect allowlist: `http://localhost:3000/auth/callback`
+- Supabase Preview exact redirect allowlist: `http://localhost:3000/auth/callback`, `https://ai-daily-intelligence-preview-gn3buyh18-syparks-projects.vercel.app/auth/callback`
 - Google OAuth client가 등록해야 할 Supabase callback: `https://obqlzsnoavoxlqjrhsnl.supabase.co/auth/v1/callback`
 - Google provider: Disabled. Preview 전용 Google OAuth Client ID와 Client Secret이 아직 없음
 - 유지된 보안 계약: PKCE code exchange, exact local callback allowlist, same-origin return-path 검증, 공개 route 비강제 로그인
 - 사용자 작업: Google Auth Platform에서 Preview용 Web application OAuth client를 만들고 최소 identity scope만 설정한 뒤 Client ID/Secret을 Supabase Preview Google provider에 입력
 - 실제 로그인 통합 테스트는 provider credential 설정 후 가능
 - Production Supabase, Vercel Production, main은 변경하지 않음
+
+## 16. 2026-08-08 Vercel Preview 배포
+
+- 상태: `PASS`
+- Vercel 프로젝트: `ai-daily-intelligence-preview`, Hobby 범위
+- Preview URL: `https://ai-daily-intelligence-preview-gn3buyh18-syparks-projects.vercel.app`
+- 배포 소스: 로컬 `agent/web-v1` 체크아웃. Git 자동 배포 연결과 Production 승격은 수행하지 않음
+- 프로젝트 Root Directory: `apps/web`
+- Preview 전용 환경 변수: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`, `NEXT_PUBLIC_SITE_URL` 설정 완료
+- QA 수정: PostgREST가 직접 연결할 수 없던 `event_source_occurrences → sources` 조회를 승인된 composite FK 경로인 `event_source_occurrences → event_sources → sources`로 교정
+- 검증: 전체 test 29개, lint, typecheck, Supabase 연동 production build PASS; 실제 Preview Today 공개 페이지와 3개 Event 렌더링 확인
+- Google OAuth: `WAITING_FOR_USER` 유지. Google provider 활성화나 Client ID/Secret 입력은 수행하지 않음
+- Production Vercel, Production Supabase, GitHub main은 변경하지 않음

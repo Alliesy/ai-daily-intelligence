@@ -522,6 +522,16 @@
 - 검증: Preview의 schema contract와 역할 기반 RLS/cascade 통합 테스트에서 직접 개인 테이블 write privilege 부재를 확인했다.
 - 영향: importer 변경은 항상 RPC 계약과 migration을 함께 갱신해야 하며 일반 Supabase service client로 public table을 직접 쓰는 구현은 금지한다.
 
+### D-047 — 최초 Vercel 검증은 Git 자동 연결 없는 Preview 전용 프로젝트로 수행
+
+- 상태: `confirmed`
+- 결정: Vercel Hobby의 별도 프로젝트 `ai-daily-intelligence-preview`를 만들고 Root Directory를 `apps/web`로 지정한다. 최초 검증은 로컬 `agent/web-v1` 체크아웃을 `preview` target으로만 배포하며 Git 자동 배포와 Production 승격은 연결하지 않는다.
+- 근거: Git 저장소 연결 과정에서 `main`의 첫 배포가 Production으로 생성되는 위험을 피하면서, 승인된 작업 브랜치와 Preview Supabase 조합을 먼저 검증해야 한다.
+- 고려한 대안: GitHub 저장소를 즉시 연결해 `main`을 Production branch로 사용, 기존 Vercel 프로젝트에 병합, Preview를 Production domain으로 승격
+- 이유: Preview와 Production의 변경 경계를 명시적으로 유지하고 사용자의 별도 승인 전에는 main 및 Production 상태에 영향을 주지 않는다.
+- 영향: Preview 환경 변수는 Vercel의 `preview` target에만 저장한다. 후속 자동 배포가 필요하면 main merge·Production 배포와 분리된 Git integration 정책을 별도로 승인받아 설정한다.
+- 재검토 조건: Preview 검증 완료 후 사용자가 Git 자동 배포 또는 Production 승격을 승인할 때
+
 ## 미결정 사항
 
 다음 항목은 아직 결정되지 않았다.

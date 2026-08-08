@@ -25,7 +25,7 @@ async function hydrateEvents(briefingId: string, occurrenceRows: Row[], sourceSc
   const eventIds = occurrenceRows.map((row) => str(row.event_id));
   if (!eventIds.length) return [];
   let sourceQuery = client.from("event_source_occurrences")
-    .select("event_id,source_id,briefing_id,verification_status,is_primary,display_order,sources(id,title,publisher,source_type,authority,published_at,thumbnail_url,source_urls(normalized_url,is_current_canonical))")
+    .select("event_id,source_id,briefing_id,verification_status,is_primary,display_order,event_sources!inner(sources(id,title,publisher,source_type,authority,published_at,thumbnail_url,source_urls(normalized_url,is_current_canonical)))")
     .in("event_id", eventIds);
   if (sourceScope === "briefing") sourceQuery = sourceQuery.eq("briefing_id", briefingId);
   const [{ data: events, error: eventError }, { data: sourceOccurrences, error: sourceError }] = await Promise.all([
@@ -49,7 +49,8 @@ async function hydrateEvents(briefingId: string, occurrenceRows: Row[], sourceSc
     ? selectLatestSourceOccurrences(sourceRows)
     : sourceRows.sort((a, b) => num(a.display_order) - num(b.display_order));
   for (const occurrence of selectedSourceOccurrences) {
-    const source = (occurrence.sources ?? {}) as Row;
+    const eventSource = (occurrence.event_sources ?? {}) as Row;
+    const source = (eventSource.sources ?? {}) as Row;
     const urls = asRows(source.source_urls);
     const canonical = urls.find((url) => url.is_current_canonical === true) ?? urls[0];
     const mapped: SourceDto = {
