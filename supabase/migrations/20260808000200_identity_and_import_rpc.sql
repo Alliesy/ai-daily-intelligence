@@ -543,7 +543,7 @@ begin
       event_key, event_id, status, first_seen_date, last_seen_date, source_commit_sha, reason
     ) values (
       news_item ->> 'event_key', event_uuid,
-      case when news_item ->> 'event_key' = (select canonical_key from public.events where id = event_uuid)
+      case when news_item ->> 'event_key' = (select canonical_event_key from public.events where id = event_uuid)
         then 'canonical'::public.event_key_status else 'alias'::public.event_key_status end,
       packet_date, packet_date, p_source_commit_sha, 'Observed in canonical daily archive.'
     )

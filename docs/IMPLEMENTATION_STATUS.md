@@ -199,3 +199,18 @@
 - 외부 설정 필요: Supabase project migration, Google provider/consent/callback, Vercel public env, 실제 역할별 RLS integration test
 - 독립 보안 리뷰: 최종 `READY`. 공개 route 비강제 로그인, Web service-role 미사용, 사용자별 RLS 경계, PKCE/open redirect 방어, Git 정본 비변경을 확인했다. 1차 지적의 occurrence 정렬·merge redirect·전체 Source 집계와 return-path 문서 계약을 수정한 뒤 재검토를 통과했다.
 - 남은 gate: preview Supabase에서 migration, 역할별 RLS, account deletion cascade와 실제 Google OAuth callback을 통합 검증한다.
+
+## 14. 2026-08-08 Preview Supabase 통합 검증
+
+- 상태: `PASS`
+- Preview 프로젝트: `ai-daily-intelligence-preview` (`obqlzsnoavoxlqjrhsnl`), Free/nano, AWS Seoul (`ap-northeast-2`)
+- 적용 완료: V1 migration 2개, service-role 직접 테이블 권한 차단 교정, importer RPC 컬럼명 교정
+- import 완료: 원격 `agent/web-v1` commit `c53899930ce086579ad85b407ec6d7a8eab3fde5`를 Preview 검증 watermark로 사용해 2026-08-07 archive 1건 backfill
+- projection 결과: Briefing 1, Event 3, Source 6, Analysis 3, Opportunity 2, Resource 5, Signal 2
+- 멱등성: 동일 commit backfill 재실행은 `same_sha`로 skip
+- DB 검증: `schema_contract.sql` PASS, `rls_integration.sql` PASS
+- RLS 범위: anon published read/draft 차단, 사용자 A/B profile·reaction·bookmark·follow 격리, 교차 insert/update/delete 차단, service-role 개인 테이블 직접 쓰기 차단, `auth.users` 삭제 cascade
+- 정리: fixture transaction rollback 확인, 검증용 secret key와 로컬 임시 credential 파일 삭제, legacy HS256 JWT key 폐기 확인
+- 로컬 gate: `pnpm test` 29개 PASS, `pnpm lint` PASS, `pnpm typecheck` PASS, `pnpm build` PASS
+- 남은 외부 설정: Google OAuth Preview provider/consent/callback, Vercel Preview 연결과 환경 변수, 향후 자동 sync용 GitHub Preview environment secret
+- Production Supabase, Production Vercel, GitHub main은 변경하지 않음

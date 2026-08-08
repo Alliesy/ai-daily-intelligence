@@ -23,13 +23,23 @@ begin
 
   if has_function_privilege('anon', 'public.import_daily_packet(text,jsonb,text,text,bigint,text,text,text)', 'EXECUTE')
      or has_function_privilege('authenticated', 'public.import_daily_packet(text,jsonb,text,text,bigint,text,text,text)', 'EXECUTE')
-     or has_function_privilege('PUBLIC', 'public.import_daily_packet(text,jsonb,text,text,bigint,text,text,text)', 'EXECUTE') then
+     or exists (
+       select 1 from pg_proc p
+       cross join lateral aclexplode(coalesce(p.proacl, acldefault('f', p.proowner))) acl
+       where p.oid = 'public.import_daily_packet(text,jsonb,text,text,bigint,text,text,text)'::regprocedure
+         and acl.grantee = 0 and acl.privilege_type = 'EXECUTE'
+     ) then
     raise exception 'import_daily_packet is executable by an unprivileged role';
   end if;
 
   if has_function_privilege('anon', 'public.apply_identity_registry(jsonb,jsonb,text,text,text,text)', 'EXECUTE')
      or has_function_privilege('authenticated', 'public.apply_identity_registry(jsonb,jsonb,text,text,text,text)', 'EXECUTE')
-     or has_function_privilege('PUBLIC', 'public.apply_identity_registry(jsonb,jsonb,text,text,text,text)', 'EXECUTE') then
+     or exists (
+       select 1 from pg_proc p
+       cross join lateral aclexplode(coalesce(p.proacl, acldefault('f', p.proowner))) acl
+       where p.oid = 'public.apply_identity_registry(jsonb,jsonb,text,text,text,text)'::regprocedure
+         and acl.grantee = 0 and acl.privilege_type = 'EXECUTE'
+     ) then
     raise exception 'apply_identity_registry is executable by an unprivileged role';
   end if;
 
@@ -39,13 +49,23 @@ begin
 
   if has_function_privilege('anon', 'public.get_sync_cursor(text)', 'EXECUTE')
      or has_function_privilege('authenticated', 'public.get_sync_cursor(text)', 'EXECUTE')
-     or has_function_privilege('PUBLIC', 'public.get_sync_cursor(text)', 'EXECUTE') then
+     or exists (
+       select 1 from pg_proc p
+       cross join lateral aclexplode(coalesce(p.proacl, acldefault('f', p.proowner))) acl
+       where p.oid = 'public.get_sync_cursor(text)'::regprocedure
+         and acl.grantee = 0 and acl.privilege_type = 'EXECUTE'
+     ) then
     raise exception 'get_sync_cursor is executable by an unprivileged role';
   end if;
 
   if has_function_privilege('anon', 'public.get_identity_registry_state()', 'EXECUTE')
      or has_function_privilege('authenticated', 'public.get_identity_registry_state()', 'EXECUTE')
-     or has_function_privilege('PUBLIC', 'public.get_identity_registry_state()', 'EXECUTE') then
+     or exists (
+       select 1 from pg_proc p
+       cross join lateral aclexplode(coalesce(p.proacl, acldefault('f', p.proowner))) acl
+       where p.oid = 'public.get_identity_registry_state()'::regprocedure
+         and acl.grantee = 0 and acl.privilege_type = 'EXECUTE'
+     ) then
     raise exception 'get_identity_registry_state is executable by an unprivileged role';
   end if;
 

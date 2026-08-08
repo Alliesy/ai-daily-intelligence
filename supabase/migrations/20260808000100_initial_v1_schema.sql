@@ -569,7 +569,7 @@ alter table public.reactions enable row level security;
 alter table public.bookmarks enable row level security;
 alter table public.follows enable row level security;
 
-revoke all on all tables in schema public from public, anon, authenticated;
+revoke all on all tables in schema public from public, anon, authenticated, service_role;
 grant usage on schema public to anon, authenticated, service_role;
 grant select on public.daily_briefings, public.events, public.event_analysis,
   public.sources, public.source_urls, public.event_sources, public.event_source_occurrences,
@@ -736,7 +736,7 @@ create policy follows_own_insert on public.follows for insert to authenticated
 create policy follows_own_delete on public.follows for delete to authenticated
   using ((select auth.uid()) = user_id);
 
-alter default privileges in schema public revoke all on tables from public, anon, authenticated;
+alter default privileges in schema public revoke all on tables from public, anon, authenticated, service_role;
 alter default privileges in schema public revoke execute on functions from public, anon, authenticated;
 alter default privileges in schema private revoke all on tables from public, anon, authenticated;
 alter default privileges in schema private revoke execute on functions from public, anon, authenticated;

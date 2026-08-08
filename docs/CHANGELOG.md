@@ -4,6 +4,17 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 
 ## 2026-08-08
 
+### Preview Supabase 통합 검증
+
+- Free/nano, AWS Seoul 전용 프로젝트 `ai-daily-intelligence-preview` 생성 및 V1 migration 적용
+- service-role의 public table 직접 권한을 제거하고 atomic import RPC 경계를 실제 DB에서 검증
+- importer RPC의 `events.canonical_event_key` 컬럼 참조 오류 수정
+- Git archive backfill 성공 및 동일 SHA 재실행 `same_sha` skip 확인
+- anon 공개 조회, 사용자별 reaction/bookmark/follow 격리, 교차 쓰기 차단, account deletion cascade 통합 테스트 추가 및 PASS
+- schema contract의 PUBLIC 함수 권한 검사를 PostgreSQL ACL 기반으로 교정
+- 검증용 secret 및 fixture 정리, legacy HS256 JWT key 폐기 확인
+- 전체 test, lint, typecheck, production build PASS
+
 ### Web 공개 화면
 
 - server-only Supabase/public archive DAL과 화면 전용 DTO 추가

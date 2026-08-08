@@ -776,3 +776,16 @@ Event key alias/merge와 Source URL alias/canonical override는 Supabase에서�
 - `supabase/tests/schema_contract.sql`: migration 적용 후 수행하는 RLS/권한 검증문
 
 Phase A migration은 기존 daily schema를 변경하지 않는다. service-role guard는 PostgREST `request.jwt.claims`와 직접 DB 세션의 `session_user`를 구분해 처리하되 anon/authenticated/PUBLIC의 RPC 실행 권한과 service-role의 public table 직접 write를 허용하지 않는다. identity registry는 이전 identity를 생략할 수 없는 complete append-preserving snapshot이며, `private.identity_registry_state` checksum을 import transaction 안에서 확인해 registry 적용과 packet import 사이의 경쟁을 fail-closed로 처리한다. merge target은 registry 내부에 존재하는 단일 단계 target만 허용하고, target Event가 projection에 존재하면 기존 Event를 archived redirect row로 갱신한다. 실제 PostgreSQL 실행 및 역할별 RLS 검증은 로컬 또는 preview Supabase runtime을 준비한 뒤 필수 gate로 수행한다.
+
+## 14. Preview runtime 검증 결과 — 2026-08-08
+
+전용 Free Preview 프로젝트 `ai-daily-intelligence-preview`에 두 migration을 적용하고 실제 PostgreSQL 역할로 계약을 검증했다.
+
+- `service_role`은 public content 및 personal table에 직접 table privilege를 갖지 않는다. 권한 있는 content import는 execute 권한이 제한된 `SECURITY DEFINER` atomic RPC만 통과한다.
+- `PUBLIC` 함수 execute 검증은 존재하지 않는 role 이름 조회 대신 `aclexplode(proacl)`의 grantee `0`으로 PUBLIC ACL을 검사한다.
+- `import_daily_packet`의 Event canonical key 비교는 실제 컬럼 `events.canonical_event_key`를 사용한다.
+- `supabase/tests/rls_integration.sql`은 fixture를 transaction 안에서 만들고 anon/authenticated 역할과 JWT claim을 전환해 공개 조회, 개인 데이터 격리, 교차 insert/update/delete 거부와 account deletion cascade를 검증한 뒤 rollback한다.
+- Preview projection count는 Briefing 1, Event 3, Source 6, Analysis 3, Opportunity 2, Resource 5, Signal 2였다.
+
+이 검증은 Preview 전용이며 Production migration 적용을 승인하지 않는다.
+현재 migration은 Production 적용 전 기준선이므로 신규 환경은 두 파일을 처음부터 적용한다. 이미 별도로 migration을 적용한 환경이 생기면 파일 재실행 대신 번호가 증가한 corrective migration으로 같은 교정을 전달한다.

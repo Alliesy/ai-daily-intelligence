@@ -505,6 +505,23 @@
 - 영향: namespace, normalization version과 semantic effective identity가 checksum/CAS 입력이다. `generated_from_commit` 같은 provenance는 별도 watermark로 저장해 내용 checksum에서 제외한다. Key rename·merge는 추측하지 않으며 별도 explicit registry correction으로 같은 UUID에 연결한다.
 - 재검토 조건: upstream daily schema가 immutable Event/Source UUID를 직접 발급할 때
 
+### D-045 — Preview 검증은 격리 프로젝트와 원격 작업 브랜치 watermark를 사용
+
+- 상태: `confirmed`
+- 결정: Preview 통합 검증은 별도 Free 프로젝트 `ai-daily-intelligence-preview`에서만 수행한다. importer와 identity registry가 아직 main에 없으므로 원격 `agent/web-v1` commit `c53899930ce086579ad85b407ec6d7a8eab3fde5`를 Preview 전용 watermark로 사용한다.
+- 근거: 해당 commit의 `data/daily/**`는 `origin/main`과 동일하지만 V1 importer와 `data/identity/**`를 함께 재현할 수 있다.
+- 안전 경계: 이 선택은 Preview bootstrap 검증에만 적용한다. main merge 방식으로 commit identity가 달라지면 Production 전에 새 authoritative main SHA에서 content projection을 rebuild/reconcile한다.
+- credential: 검증용 secret은 일시 생성하고 importer 및 멱등성 검증 후 삭제한다. 장기 sync credential은 GitHub Preview environment에 사용자가 별도로 설정한다.
+- 영향: Production Supabase, Vercel, main에는 변경이 없으며 Preview 결과를 Production watermark로 승격하지 않는다.
+
+### D-046 — service-role도 직접 테이블 접근 없이 atomic import RPC만 사용
+
+- 상태: `confirmed`
+- 결정: public schema의 table 및 default table privilege를 `service_role`에서도 revoke한다. content importer에는 `apply_identity_registry`와 `import_daily_packet` RPC execute만 허용한다.
+- 근거: service-role이 개인 또는 content table을 직접 변경할 수 있으면 atomic CAS, identity 검증과 사용자 데이터 격리 경계를 우회할 수 있다.
+- 검증: Preview의 schema contract와 역할 기반 RLS/cascade 통합 테스트에서 직접 개인 테이블 write privilege 부재를 확인했다.
+- 영향: importer 변경은 항상 RPC 계약과 migration을 함께 갱신해야 하며 일반 Supabase service client로 public table을 직접 쓰는 구현은 금지한다.
+
 ## 미결정 사항
 
 다음 항목은 아직 결정되지 않았다.
