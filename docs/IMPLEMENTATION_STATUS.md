@@ -214,3 +214,15 @@
 - 로컬 gate: `pnpm test` 29개 PASS, `pnpm lint` PASS, `pnpm typecheck` PASS, `pnpm build` PASS
 - 남은 외부 설정: Google OAuth Preview provider/consent/callback, Vercel Preview 연결과 환경 변수, 향후 자동 sync용 GitHub Preview environment secret
 - Production Supabase, Production Vercel, GitHub main은 변경하지 않음
+
+## 15. 2026-08-08 Preview Google OAuth 설정
+
+- 상태: `WAITING_FOR_USER`
+- Supabase Preview `Site URL`: `http://localhost:3000`
+- Supabase Preview exact redirect allowlist: `http://localhost:3000/auth/callback`
+- Google OAuth client가 등록해야 할 Supabase callback: `https://obqlzsnoavoxlqjrhsnl.supabase.co/auth/v1/callback`
+- Google provider: Disabled. Preview 전용 Google OAuth Client ID와 Client Secret이 아직 없음
+- 유지된 보안 계약: PKCE code exchange, exact local callback allowlist, same-origin return-path 검증, 공개 route 비강제 로그인
+- 사용자 작업: Google Auth Platform에서 Preview용 Web application OAuth client를 만들고 최소 identity scope만 설정한 뒤 Client ID/Secret을 Supabase Preview Google provider에 입력
+- 실제 로그인 통합 테스트는 provider credential 설정 후 가능
+- Production Supabase, Vercel Production, main은 변경하지 않음

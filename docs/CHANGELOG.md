@@ -15,6 +15,13 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 - 검증용 secret 및 fixture 정리, legacy HS256 JWT key 폐기 확인
 - 전체 test, lint, typecheck, production build PASS
 
+### Preview Google OAuth 준비
+
+- Preview Auth Site URL을 `http://localhost:3000`으로 확인
+- exact redirect allowlist에 `http://localhost:3000/auth/callback` 추가
+- Google OAuth provider가 Preview Client ID/Secret 부재로 Disabled 상태임을 확인
+- Google Cloud 사용자 설정 완료 전 상태를 `WAITING_FOR_USER`로 기록
+
 ### Web 공개 화면
 
 - server-only Supabase/public archive DAL과 화면 전용 DTO 추가
