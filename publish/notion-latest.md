@@ -1,252 +1,268 @@
-# AI Daily Intelligence — 2026-08-13
+# AI Daily Intelligence — 2026-08-14
 
 > 상태: complete · 기준: KST · GitHub가 유일한 기록 정본입니다.
 
 ## 오늘의 인사이트
 
-AI 확산의 병목이 모델 접근에서 운영 검증으로 이동한다. 기업은 에이전트 깊이, 개발팀은 CI, 창작자는 데이터 사용 동의를 관리해야 한다.
+모델 시장은 지능 하나가 아니라 업무 완결률, 초당 속도, 시간대 가격과 변경 통제로 분화되고 있다. 이제 비교 단위는 토큰이 아니라 성공한 업무 1건이다.
 
 ## Top News
 
-### 1. OpenAI says enterprise agent use is widening an 8.3× frontier gap — 91/100
+### 1. Google launches Gemini 3.7 Flash for coding and agents at half the original 3.6 Flash price — 94/100
 
 **한줄요약**  
-OpenAI가 1천만 건 이상 기업 메시지를 분석해 상위 10% 활용 기업의 사용자당 출력 토큰이 일반 기업의 8.3배이며 Codex가 기업 출력의 64%를 차지한다고 보고했다.
+Google이 코딩·에이전트용 Gemini 3.7 Flash를 출시하고 연말까지 입력 0.75달러·출력 3.75달러/100만 토큰의 도입 가격을 적용했다.
 
 **원문 핵심문장 / 번역**  
-“Frontier firms generated 8.3× as many output tokens per active user as typical firms.”  
-“선도 기업은 일반 기업보다 활성 사용자당 8.3배 많은 출력 토큰을 생성했다.”
+“Gemini 3.7 Flash, our most intelligent workhorse model yet for coding and agents.”  
+“Gemini 3.7 Flash는 코딩과 에이전트를 위한 가장 지능적인 실무형 모델이다.”
 
 **원문 요약**  
-- **FACT:** 8월 12일 공개된 Enterprise Signals에서 선도 기업과 일반 기업의 출력 격차는 1월 2.6배에서 8.3배로 확대됐다. 6월 Codex는 기업 고객의 Codex+ChatGPT 출력 중 64%를 차지했다. 주간 Plugins 사용은 21% 대 9%, Skills는 19% 대 3%였다.
-- **INTERPRETATION:** 좌석 수보다 에이전트가 실제 업무를 얼마나 깊게 실행하는지가 도입 격차를 만든다.
-- **SIGNAL:** 플러그인·스킬·코딩 에이전트가 기업 AI 사용의 중심으로 이동한다.
-- **SPECULATION:** 한국 기업도 사용량이 아닌 완료·검토·재작업·비용 지표를 요구하게 될 수 있다.
-- **한계:** 공급자 자체 행정 데이터이며 OpenAI도 토큰이 가치의 불완전한 대리변수라고 명시했다.
+- **FACT:** Google은 8월 13일 최대 100만 토큰 입력·6만4천 토큰 출력과 LOW·MEDIUM·HIGH thinking을 지원하는 Gemini 3.7 Flash를 공개했다. Google 모델 카드 기준 FrontierCode 43.6%, DeepSWE 65.3%, AutomationBench 30.4%다. 연말까지 가격은 입력 0.75달러·출력 3.75달러/100만 토큰이며 2027년부터 두 배다. Reuters가 출시를 독립 확인했다.
+- **INTERPRETATION:** 빠른 모델이 저가 호출을 넘어 코딩·업무 에이전트의 기본 실행 계층으로 올라온다.
+- **SIGNAL:** 모델 선택은 토큰 단가보다 완료율·재시도·지연을 포함해야 한다.
+- **SPECULATION:** 한국 팀에 업무별 실제 비용을 비교하는 자동 라우팅·예산 도구 수요가 커질 수 있다.
 
 **왜 중요한가**  
-생성량을 KPI로 쓰면 비용을 가치로 오인할 수 있다. 업무 완료·사람 개입·재작업·오류를 함께 계측해야 한다.
+한국 개발팀은 도입 가격만 보고 고정하기보다 연말 종료 조건과 업무별 토큰 사용량·완료율을 함께 측정해야 한다.
 
 **업계 분위기**  
-에이전트 실행 확대에는 낙관적이지만 자체 데이터와 대리변수의 한계를 구분하려는 분위기다.
+벤치마크와 절반 가격에는 호응이 크지만 출력 토큰 증가와 도입 가격 만료를 반영한 과업당 비용 논의가 활발하다.
 
 **앞으로의 전망 — AI 추론**  
-기업용 AI 대시보드는 로그인·메시지 수에서 작업 완결률, 사람 개입, 검토 지연과 비용 대비 결과로 이동할 가능성이 높다.
+에이전트 플랫폼은 하나의 기본 모델보다 난이도·지연·예산에 따라 Flash와 프런티어 모델을 섞는 정책 라우팅을 기본 기능으로 제공할 가능성이 높다.
 
 **사업 기회**  
-메시지 원문 없이 에이전트 로그를 완료·검토·재작업·비용 지표로 바꾸는 한국형 워크플로 벤치마크.
+공개 가격표와 실제 업무 표본으로 모델별 완료 1건당 비용과 재시도 위험을 계산하는 한국어 비용 레이더.
 
 **관련 태그**  
-OpenAI · Enterprise Signals · Codex · agents · productivity · measurement
+Google · Gemini-3.7-Flash · coding-agent · pricing · model-routing · API
 
-출처: [OpenAI 발표](https://openai.com/index/how-enterprises-put-ai-to-work/) · [Enterprise Signals](https://openai.com/signals/enterprise-data/) · [연구 문서](https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf)
+출처: [Google 발표 · 2026-08-13](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/) · [Google DeepMind 모델 카드 · 2026-08-13](https://deepmind.google/models/model-cards/gemini-3-7-flash/) · [Reuters · 2026-08-13](https://www.reuters.com/business/google-unveils-gemini-37-flash-ai-model-coding-agent-workflows-2026-08-13/)
 
-### 2. Twitch enables Amazon generative-AI training on creator content by default, with an opt-out — 90/100
+### 2. OpenAI previews GPT-5.6 Sol Ultrafast at up to 750 tokens per second — 92/100
 
 **한줄요약**  
-Twitch가 스트림·VOD·클립·채팅 등 채널 콘텐츠의 Amazon 생성형 AI 학습을 기본 허용하고 크리에이터가 설정에서 향후 학습을 거부할 수 있게 했다.
+OpenAI와 Cerebras가 GPT-5.6 Sol을 표준 처리보다 최대 14배 빠른 750 출력 토큰/초로 제공하는 API 전용 Ultrafast 제한 프리뷰를 공개했다.
 
 **원문 핵심문장 / 번역**  
-“We've added a setting that lets you opt out of having your channel content used to train generative AI content models across Amazon.”  
-“채널 콘텐츠가 Amazon 전반의 생성형 AI 모델 학습에 사용되는 것을 거부할 수 있는 설정을 추가했다.”
+“Ultrafast generates up to 750 output tokens per second.”  
+“Ultrafast는 초당 최대 750개의 출력 토큰을 생성한다.”
 
 **원문 요약**  
-- **FACT:** Twitch Support는 8월 12일 옵트아웃 설정을 공지했다. TechCrunch와 The Verge는 스트림, VOD, 클립, 채팅, 채널 이미지·텍스트가 대상이고 기본값이 활성화돼 있다고 보도했다.
-- **INTERPRETATION:** 크리에이터 데이터 통제는 약관 동의를 넘어 플랫폼 설정과 증거를 관리하는 운영 문제가 된다.
-- **SIGNAL:** 기본값, 적용 범위, 철회 효력과 변경 이력을 기록하려는 수요가 커진다.
-- **SPECULATION:** 다중 플랫폼 크리에이터를 위한 설정 감시·증거 보관 서비스가 성립할 수 있다.
-- **한계:** 과거 학습 여부와 소급 삭제·철회 절차는 공개되지 않았다.
+- **FACT:** OpenAI는 8월 13일 Cerebras 기반 GPT-5.6 Sol Ultrafast를 일부 API 고객에게 공개했다. 공급자 발표 수치는 표준 처리 대비 최대 14배, 초당 최대 750 출력 토큰이다. OpenAI는 장애 대응·금융·보안·고객지원·상거래·대화형 연구를 예로 들었다. Cerebras는 동일 지능을 주장했고 TechCrunch가 제한 프리뷰를 확인했다. 가격과 확대 일정은 미공개다.
+- **INTERPRETATION:** 모델 지능 외에 응답 지연이 별도의 유료 성능 계층이 된다.
+- **SIGNAL:** 실시간 에이전트는 모델보다 전체 도구 호출·데이터 조회·검토 지연이 새 병목이 된다.
+- **SPECULATION:** 한국 팀을 위한 지연 예산과 고속 호출 ROI 시험 서비스가 생길 수 있다.
 
 **왜 중요한가**  
-한국 스트리머와 MCN은 설정 상태, 확인일, 적용 범위를 기록해야 향후 정책 변경이나 분쟁 때 근거를 남길 수 있다.
+단순 tok/s보다 업무 종료까지 걸린 시간과 고속 호출의 추가 비용을 측정해야 실제 장애 대응·상담 가치를 판단할 수 있다.
 
 **업계 분위기**  
-옵트아웃 제공은 환영하지만 기본 허용과 과거 사용 여부, 채팅 권한 구조에는 비판적이다.
+속도에는 강한 반응이지만 미공개 가격, 공급자 자체 품질 비교와 도구 호출 병목을 지적한다.
 
 **앞으로의 전망 — AI 추론**  
-플랫폼별 AI 학습 설정은 늘겠지만 범위와 효력이 달라 크리에이터의 지속적인 확인 부담이 커질 수 있다.
+프런티어 API도 클라우드 인스턴스처럼 Standard·Fast·Ultrafast를 작업별 SLA와 요금으로 선택하는 계층형 시장이 될 가능성이 높다.
 
 **사업 기회**  
-플랫폼별 AI 학습 설정과 정책 버전, 변경 증거, 재확인 알림을 묶는 크리에이터 권리 모니터.
+같은 업무를 표준·고속 모델에서 반복해 전체 완료시간, 품질, 도구 지연과 비용을 비교하는 latency ROI 벤치마크.
 
 **관련 태그**  
-Twitch · Amazon · creator rights · AI training · opt-out · data governance
+OpenAI · GPT-5.6-Sol · Cerebras · Ultrafast · inference · latency
 
-출처: [Twitch Support](https://x.com/TwitchSupport/status/2087572924450455558) · [TechCrunch](https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/) · [The Verge](https://www.theverge.com/tech/979112/twitch-streamers-can-now-opt-out-from-training-amazons-ai)
+출처: [OpenAI 발표 · 2026-08-13](https://openai.com/index/previewing-ultrafast/) · [Cerebras 발표 · 2026-08-13](https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai) · [TechCrunch · 2026-08-13](https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/)
 
-### 3. Google makes proactive, cross-app Gemini Intelligence the center of Pixel 11 — 88/100
+### 3. DeepSeek releases V4 Pro and shifts its API to peak/off-peak pricing — 90/100
 
 **한줄요약**  
-Google이 Pixel 11 제품군을 공개하고 Gemini Intelligence의 40개 이상 앱 다단계 작업, 능동형 지원과 Tensor G6 기반 기능을 핵심 가치로 내세웠다.
+DeepSeek가 에이전트 성능을 강화한 V4-Pro-0813을 공개하고 8월 17일 KST부터 Pro·Flash API에 피크/비피크 요금을 적용한다.
 
 **원문 핵심문장 / 번역**  
-“These phones are designed for Gemini Intelligence to deliver time-saving, personal help.”  
-“이 휴대전화는 Gemini Intelligence가 시간을 절약하는 개인화된 도움을 제공하도록 설계됐다.”
+“We will adopt peak/off-peak pricing, with off-peak prices set at half of the peak-hour prices.”  
+“피크·비피크 요금을 도입하며 비피크 가격은 피크의 절반으로 설정한다.”
 
 **원문 요약**  
-- **FACT:** Google은 8월 12일 Pixel 11, 11 Pro, 11 Pro XL, Pro Fold를 공개했다. Tensor G6·최신 Gemini Nano와 40개 이상 앱 다단계 작업을 전면에 뒀고, 기본 모델은 899달러부터 사전 주문해 8월 20일 판매한다.
-- **INTERPRETATION:** 모바일 OS가 앱 실행기에서 사용자의 의도를 대신 조율하는 에이전트 계층으로 이동한다.
-- **SIGNAL:** 앱 연결 권한, 실행 전 확인, 취소·복구와 로컬/클라우드 경계가 구매 기준이 된다.
-- **SPECULATION:** 기기·지역·계정별 가용성과 개인정보 경로를 검증하는 안내 도구 수요가 생길 수 있다.
-- **한계:** 성능·배터리·내구성은 출시 당일 제조사 주장이고 국가·언어별 가용성 검증이 부족하다.
+- **FACT:** DeepSeek는 8월 13일 V4-Pro-0813을 API·앱·웹에 출시했다. 새 요금은 8월 17일 01:00 KST부터 적용된다. 피크 시간은 KST 10~13시·15~19시이며 Pro 출력은 비피크 1.98달러, 피크 3.96달러/100만 토큰, Flash 출력은 0.66달러·1.32달러다. Reuters는 출시와 기존 대비 항목별 50~1100% 가격 상승을 보도했다.
+- **INTERPRETATION:** 초저가 API는 고정 단가 상품이 아니라 수요 시간대에 따라 변하는 컴퓨트 서비스가 된다.
+- **SIGNAL:** 예약 가능 배치 작업과 공급자 전환 정책이 직접적인 원가 절감 수단이 된다.
+- **SPECULATION:** KST 시간대별 실행 계획과 가격 변경 증거를 제공하는 경량 비용 운영 도구가 필요해질 수 있다.
 
 **왜 중요한가**  
-한국 개발사와 소비자는 모델 수치보다 앱 연결 범위, 한국어 지원, 실행 승인과 오류 복구를 실제 기기에서 확인해야 한다.
+한국 기준 피크가 업무시간과 겹친다. 기존 예산 계산과 SLA를 즉시 다시 검토해야 한다.
 
 **업계 분위기**  
-능동형 다중 앱 실행에는 기대가 높지만 구형 기기 제외, 지역 제한과 프라이버시 경계에는 회의적이다.
+V4 Pro 성능에는 기대가 있지만 캐시·출력 가격의 큰 상승과 업무시간 피크 요금에는 반발이 크다.
 
 **앞으로의 전망 — AI 추론**  
-스마트폰은 칩 수치보다 여러 앱에서 업무를 안전하게 완결하는 비율로 평가될 가능성이 높다.
+API 고객은 야간 배치, 캐시, 모델 대체 경로와 가격 변경 알림을 배포 설정의 일부로 관리하게 될 가능성이 높다.
 
 **사업 기회**  
-안드로이드 AI 기능의 기기·OS·지역·언어·계정·구독별 가용성과 권한 경로를 점검하는 진단 도구.
+공식 가격표 변경을 감지하고 KST 실행 시간·캐시율·모델별 월 비용을 시뮬레이션하는 AI API 가격 레이더.
 
 **관련 태그**  
-Google · Pixel 11 · Gemini Intelligence · Android · on-device AI · agents
+DeepSeek · V4-Pro · API-pricing · peak-pricing · agent-model · cost-operations
 
-출처: [Google 공식 발표](https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/) · [기능 안내](https://blog.google/products-and-platforms/devices/pixel/pixel-11-features/) · [TechCrunch](https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/) · [The Verge](https://www.theverge.com/tech/977561/made-by-google-2026-pixel-11-news)
+출처: [DeepSeek 변경 로그 · 2026-08-13](https://api-docs.deepseek.com/updates/) · [DeepSeek 가격표 · 2026-08-13](https://api-docs.deepseek.com/quick_start/pricing/) · [Reuters 출시 보도 · 2026-08-13](https://www.reuters.com/world/china/deepseek-releases-official-v4-pro-model-it-steps-up-expansion-2026-08-13/) · [Reuters 가격 보도 · 2026-08-13](https://www.reuters.com/world/china/deepseek-raises-api-pricing-its-v4-models-2026-08-13/)
 
-### 4. Blacksmith raises $45M as AI-generated code turns CI and validation into the bottleneck — 87/100
+### 4. CodeRabbit raises $143M and expands code review into Agentic Change Management — 88/100
 
 **한줄요약**  
-Blacksmith가 Peak XV 주도 4,500만 달러 시리즈 B를 발표하며 AI 코드 생성으로 늘어난 PR을 검증·병합하는 CI 플랫폼을 확장한다.
+CodeRabbit가 15억 달러 기업가치로 1억4,300만 달러를 조달하고 사람·에이전트가 만든 변경의 의도·위험·검증·배포 후 상태를 관리하는 제품군을 발표했다.
 
 **원문 핵심문장 / 번역**  
-“With AI codegen tools, developers are writing more code than ever.”  
-“AI 코드 생성 도구로 개발자들은 어느 때보다 많은 코드를 작성하고 있다.”
+“AI code review only solves part of the problem.”  
+“AI 코드 리뷰는 문제의 일부만 해결한다.”
 
 **원문 요약**  
-- **FACT:** Blacksmith는 4,500만 달러 조달과 5억5천만 달러 기업가치를 발표했다. 회사는 6천 개 이상 고객과 연초 이후 매주 5~10% CI 작업 증가를 주장한다. TechCrunch와 Economic Times가 거래 규모를 확인했다.
-- **INTERPRETATION:** AI 코딩 경제성은 생성량보다 테스트 비용, 큐 지연, 실패·재작업을 통제하는 능력에서 결정된다.
-- **SIGNAL:** 위험 기반 검증과 에이전트별 비용 귀속이 새 운영 계층이 된다.
-- **SPECULATION:** 소규모 팀도 CI 비용과 에이전트 PR 위험을 함께 관리하는 경량 도구에 비용을 낼 수 있다.
-- **한계:** 고객·CI 증가 수치는 회사 주장이고 라운드는 3월 종료됐지만 8월 12일 발표됐다.
+- **FACT:** CodeRabbit는 8월 12일 Atomico·Smash Capital 공동 주도 1억4,300만 달러 시리즈 C와 15억 달러 기업가치를 발표했다. Agentic Change Management는 사람·에이전트 변경을 검증하고 주의를 배분하며 의도·영향을 설명하고 병합 후 코드 건강을 감시하는 통제 계층이다. Reuters는 조달액·기업가치와 회사가 밝힌 주 200만 건 이상 리뷰·1만7천 고객, 오픈소스 지원 1천만 달러 계획을 보도했다.
+- **INTERPRETATION:** 코드 생성이 풍부해질수록 희소 자원은 검토자의 판단과 변경 맥락이 된다.
+- **SIGNAL:** 에이전트 PR에 작성 의도, 영향 범위, 증거와 배포 후 관찰을 연결해야 한다.
+- **SPECULATION:** 한국 소규모 팀은 기존 GitHub 위에 얹는 가벼운 변경 증거 패킷을 원할 수 있다.
 
 **왜 중요한가**  
-PR 증가가 곧 생산성은 아니다. 변경 위험, CI 비용, 검토시간과 장애를 함께 측정해야 한다.
+AI PR을 많이 만드는 것보다 검토할 가치가 있는 변경을 골라 의도·테스트·리스크를 빠르게 복구하는 능력이 개발 속도를 결정한다.
 
 **업계 분위기**  
-검증 병목에는 공감하지만 회사 성장률과 비용 절감 효과는 독립 검증을 요구한다.
+독립 검증 계층에는 공감하지만 새 제품군의 실제 범위와 성과 수치는 검증을 기다린다.
 
 **앞으로의 전망 — AI 추론**  
-저장소가 작성 주체, 변경 위험과 테스트 비용을 기준으로 검증 경로와 병합 권한을 자동 분기할 가능성이 높다.
+PR은 코드 diff만이 아니라 요청 의도, 에이전트 기록, 테스트 근거, 승인과 배포 후 이상 징후를 포함하는 변경 패킷으로 진화할 가능성이 높다.
 
 **사업 기회**  
-에이전트별 PR·CI 비용, 큐 시간, 실패·재실행과 변경 위험을 묶어 예산·검증 정책을 추천하는 도구.
+GitHub PR에서 요구사항-변경-테스트-사람 승인-배포 결과를 한 장으로 묶는 한국어 변경 증거 레이어.
 
 **관련 태그**  
-Blacksmith · CI · AI coding · code validation · GitHub Actions · funding
+CodeRabbit · AI-code-review · agentic-SDLC · change-management · funding · governance
 
-출처: [Blacksmith 공식 발표](https://www.blacksmith.sh/blog/announcing-blacksmiths-series-b-led-by-peak-xv-partners) · [TechCrunch](https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/) · [Economic Times](https://m.economictimes.com/tech/funding/ai-code-testing-platform-blacksmith-raises-45-million-led-by-peak-xv-valued-at-550-million/articleshow/133187342.cms)
+출처: [CodeRabbit 발표 · 2026-08-12](https://www.coderabbit.ai/newsroom/coderabbit-series-c-agentic-change-management) · [제품 블로그 · 2026-08-12](https://www.coderabbit.ai/blog/introducing-agentic-change-management) · [Reuters · 2026-08-12](https://www.reuters.com/technology/ai-code-review-platform-coderabbit-valued-15-billion-latest-funding-round-2026-08-12/)
 
-### 5. Thrive Holdings raises over $2B at a $12B valuation to embed AI in service businesses — 85/100
+### 5. X publishes more of its Phoenix ranking stack and adds account visibility diagnostics — 86/100
 
 **한줄요약**  
-Thrive Holdings가 120억 달러 기업가치로 20억 달러 이상을 조달해 회계·IT 서비스 기업을 소유·운영하며 AI를 워크플로에 직접 심는 전략을 확대한다.
+X가 For You 피드의 Phoenix 학습·서빙, 라벨·필터·점수 코드를 확대 공개하고 계정·게시물 가시성 라벨 통계를 JSON으로 받는 Under the Hood 도구를 시험한다.
 
 **원문 핵심문장 / 번역**  
-“Today, we're announcing over $2 billion in new capital at a $12 billion valuation.”  
-“오늘 우리는 120억 달러 기업가치로 20억 달러 이상의 신규 자본을 발표한다.”
+“Phoenix reads the viewer's recent engagement history and predicts each action on a post.”  
+“Phoenix는 최근 참여 이력을 읽고 게시물에 취할 각 행동을 예측한다.”
 
 **원문 요약**  
-- **FACT:** Thrive Holdings는 8월 12일 20억 달러 이상 신규 자본, 총 30억 달러 이상 조달과 70개 이상 회계·IT 서비스 사업체 운영을 발표했다. TechCrunch와 거래 자문사 Kirkland가 조달을 확인했다.
-- **INTERPRETATION:** AI 상용화가 도구 구독에서 서비스 기업의 소유권·운영 통제·데이터 피드백을 결합하는 구조로 확장된다.
-- **SIGNAL:** 규제가 강하고 반복 업무가 많은 전문 서비스가 수직 AI의 주요 시험장이 된다.
-- **SPECULATION:** 한국에서는 인수보다 특정 업무의 품질·증거·책임 경계를 표준화하는 소규모 도입 서비스가 먼저 열릴 수 있다.
-- **한계:** 사업별 생산성·수익성 KPI는 공개되지 않았다.
+- **FACT:** xAI의 x-algorithm 저장소는 Phoenix 학습·서빙, 합성 데이터, SimClusters, 콘텐츠 라벨·가시성 필터와 점수 가중치를 공개했다. 추천 순위는 좋아요·답글·공유·체류·차단·신고 등의 예측 확률에 가중치를 적용하고 다양성·신규 작성자 보정을 거친다. X는 최근 한 달의 계정·게시물 라벨 통계를 JSON으로 내보내는 Under the Hood 파일럿도 시작했다. TechCrunch는 코드 확대와 Grok 기반 위반 예측 일부가 제외됐다는 점을 보도했다.
+- **INTERPRETATION:** 플랫폼 설명가능성이 정책 문구에서 사용자별 영향 증거로 이동한다.
+- **SIGNAL:** 크리에이터는 도달률 변화 원인을 추측보다 라벨·필터·코드 버전으로 진단할 수 있다.
+- **SPECULATION:** 공개 코드와 사용자 JSON을 결합한 독립 가시성 분석 도구가 가능해질 수 있다.
 
 **왜 중요한가**  
-한국 소규모 전문 서비스 팀은 범용 챗봇보다 업무 결과, 책임과 검토를 포함한 수직 워크플로를 제품화해야 한다.
+한국 크리에이터와 브랜드는 단순 노출 통계보다 어떤 라벨·필터·점수 변화가 도달에 영향을 줬는지 근거를 남길 수 있다.
 
 **업계 분위기**  
-대규모 자본과 소유·운영 모델에는 낙관적이지만 실제 마진·품질 개선 KPI를 요구한다.
+실행 코드와 JSON 내보내기는 환영하지만 비공개 모델, 실제 운영값 일치와 파일럿 제한을 지적한다.
 
 **앞으로의 전망 — AI 추론**  
-전문 서비스 AI는 사용량보다 처리시간, 오류, 감사 증거와 고객 유지율 개선으로 평가될 가능성이 높다.
+대형 플랫폼은 규제·사용자 신뢰 압력에 따라 추천 코드, 변경 로그와 계정별 영향 내보내기를 묶은 투명성 표면을 확대할 수 있다.
 
 **사업 기회**  
-전문 서비스의 한 업무를 AI로 전환할 때 입력·승인·검토·증거·책임경계를 설계하는 워크플로 패키지.
+공개 추천 코드와 계정 JSON을 읽어 가시성 변화, 라벨과 검증 가능한 개선 실험을 설명하는 크리에이터 분석 도구.
 
 **관련 태그**  
-Thrive Holdings · OpenAI · professional services · vertical AI · funding · operations
+X · Phoenix · recommendation-system · algorithm-transparency · creator-analytics · open-source
 
-출처: [Thrive Holdings 공식 발표](https://www.thriveholdings.com/thrive-holdings-fundraise) · [TechCrunch](https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/) · [Kirkland](https://www.kirkland.com/news/press-release/2026/08/kirkland-advises-thrive-holdings-on-%242-billion-fundraise)
+출처: [xAI 공식 GitHub · 2026-08-13](https://github.com/xai-org/x-algorithm) · [TechCrunch · 2026-08-13](https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/)
 
 ## Business Ideas
 
-### Agent Workflow Depth Benchmark — 4.2/5 · ★★★★☆ · High
+### AI API Price Change Radar — 4.4/5 · ★★★★★ · Very High
 
-- **문제:** 토큰·메시지 증가는 보이지만 완료 업무, 검토시간, 재작업과 품질 개선을 연결하지 못한다.
-- **고객:** 에이전트·코딩 AI를 도입한 한국 20~200인 기업과 이를 진단하는 1~3인 팀.
-- **기존 해결법:** 공급자 사용량 대시보드, Copilot Analytics, 설문·BI.
-- **경쟁사:** OpenAI Enterprise Signals, Microsoft Copilot Analytics, Worklytics.
-- **차별점:** 메시지 원문 없이 실행 로그와 결과 표본으로 업무별 완료·개입·재작업·비용을 비교.
-- **2주 MVP:** CSV/JSON 업로드, 세 업무 템플릿, 다섯 지표와 주간 보고서.
+- **문제:** 도입 가격 만료, 시간대 요금, 캐시 단가와 고속 계층 출시가 흩어져 있어 월 원가와 마진이 예고 없이 바뀐다.
+- **고객:** 여러 LLM API를 쓰거나 도입 검토 중인 한국 1~20인 AI SaaS·자동화 팀과 프리랜서 개발자.
+- **기존 해결법:** 공급자 가격 페이지 수동 확인, Helicone·Portkey·LiteLLM 비용 로그, 스프레드시트.
+- **경쟁사:** Helicone, Portkey, LiteLLM, CloudZero.
+- **차별점:** 공식 가격표의 변경 증거를 보존하고 KST 시간대·캐시율·완료율·재시도를 반영한 시나리오와 대체 모델 경보를 제공.
+- **2주 MVP:** Google·OpenAI·DeepSeek·Anthropic 가격 페이지 스냅샷, 구조화 diff, KST 피크 변환, 사용량 CSV 기반 월 비용 시뮬레이터와 웹 알림.
 - **난이도:** Medium.
-- **수익화:** 진단 프로젝트 + 월간 벤치마크 구독.
-- **반증 조건:** 10곳 중 3곳 미만만 원문 없는 로그 제공과 유료 파일럿에 동의하면 보류.
+- **수익화:** 개인 무료 변경 알림 + 팀별 가격 시뮬레이션 구독 + 컨설팅용 화이트라벨.
+- **반증 조건:** 15개 팀 중 5개 미만이 최근 3개월간 가격 변경을 놓쳤거나 월 2만원 이상 지불 의향을 보이면 후보에서 제외.
 
-### Creator AI Training Rights Monitor — 4.1/5 · ★★★★☆ · High
+### Agentic Change Evidence Ledger — 4.2/5 · ★★★★☆ · High
 
-- **문제:** 플랫폼별 학습 기본값, 범위, 철회 효력과 메뉴 위치가 달라 확인·증거 보관이 어렵다.
-- **고객:** 한국 스트리머, 크리에이터와 소형 MCN.
-- **기존 해결법:** 수동 설정 확인, 약관 알림, 스크린샷 폴더.
-- **경쟁사:** Termly, TermsFeed, Visualping, 수작업 MCN 운영.
-- **차별점:** 플랫폼별 설정 범위·확인일·정책 버전·증거 캡처를 한국어로 통합.
-- **2주 MVP:** 3개 플랫폼 체크리스트, 스크린샷, 정책 URL 해시, 변경 알림, PDF 증거.
+- **문제:** 큰 에이전트 PR의 요청 의도, 변경 범위, 테스트 근거와 배포 결과가 분리되어 리뷰어가 맥락을 다시 구성한다.
+- **고객:** 코딩 에이전트와 GitHub PR을 쓰는 한국 2~30인 개발팀.
+- **기존 해결법:** PR 템플릿, CodeRabbit, GitHub checks, 배포 모니터링.
+- **경쟁사:** CodeRabbit, Graphite, LinearB, GitHub Copilot code review.
+- **차별점:** 코드를 생성하지 않고 요구사항-커밋-테스트-승인-배포 관찰 링크를 한국어 증거 패킷으로 연결.
+- **2주 MVP:** GitHub 읽기 전용 앱 또는 내보내기 파일, PR별 의도·영향·검증 체크리스트, 테스트 링크와 배포 후 확인 상태.
 - **난이도:** Medium.
-- **수익화:** 크리에이터 월 구독 + MCN 워크스페이스.
-- **반증 조건:** 15명 중 5명 미만이 설정을 바꾸거나 월 1만원 이상 지불 의향이면 중단.
+- **수익화:** 저장소당 월 구독 + 감사·회고용 내보내기.
+- **반증 조건:** 10개 팀 중 3개 미만이 PR당 맥락 복구에 15분 이상 쓰거나 읽기 전용 파일럿에 동의하면 보류.
 
-### AI PR Validation Budget Guard — 4.2/5 · ★★★★☆ · High
+### Creator Feed Visibility Explainer — 4.0/5 · ★★★★☆ · High
 
-- **문제:** 에이전트 PR 증가로 CI 비용·큐·재실행이 늘지만 작성 주체와 위험별 비용 귀속이 어렵다.
-- **고객:** GitHub Actions와 코딩 에이전트를 쓰는 한국 1~10인 개발팀.
-- **기존 해결법:** Actions 사용량, Blacksmith·Buildkite 대시보드, 수동 필터.
-- **경쟁사:** Blacksmith, Buildkite, Depot, GitHub Actions Usage Metrics.
-- **차별점:** 읽기 전용 분석으로 에이전트별 비용·실패·재실행과 변경 위험을 연결.
-- **2주 MVP:** Actions 내보내기와 PR 메타데이터, 주체 태깅, 비용·큐·실패 대시보드, 정책 시뮬레이션.
+- **문제:** 노출 하락이 콘텐츠, 라벨, 필터, 팔로워 구성 또는 알고리즘 변경 때문인지 구분하기 어렵다.
+- **고객:** X를 쓰는 한국 크리에이터, 브랜드 마케터와 소형 에이전시.
+- **기존 해결법:** X Analytics, 수동 A/B 게시, 소셜 분석 SaaS와 추측성 알고리즘 글.
+- **경쟁사:** Hypefury, Buffer, Sprout Social, Typefully.
+- **차별점:** X가 내보낸 계정 JSON과 공개 코드 버전을 연결해 가능한 원인과 반증 가능한 게시 실험을 제시.
+- **2주 MVP:** 사용자 업로드 JSON 파서, 라벨·가시성 변화 타임라인, 공개 저장소 버전 매핑, 3개 검증 실험 제안.
 - **난이도:** Medium.
-- **수익화:** 저장소당 월 구독 + 비용 절감 리포트.
-- **반증 조건:** 8개 팀 중 3개 미만만 월 CI 비용을 추적하거나 15% 절감 목표가 있으면 보류.
+- **수익화:** 계정당 월 구독 + 에이전시 다계정 리포트.
+- **반증 조건:** Under the Hood가 한국 계정에 8주 내 확대되지 않거나 15명 중 5명 미만이 JSON을 제공하면 보류.
 
 ## 구축 판단
 
-오늘은 4.3/5 이상, ★★★★★, Very High, 공식 포함 독립 근거 2개 이상, 4~8주 MVP, 법률·보안·유료 의존성 게이트 해소 조건을 모두 만족한 후보가 없습니다.
+**후보: AI API Price Change Radar**
+
+- 종합점수: 4.4/5
+- Stars: ★★★★★
+- Potential: Very High
+- 독립 근거: Google DeepMind 가격·모델 카드, DeepSeek 공식 가격표, OpenAI 공식 Ultrafast 발표, Reuters 가격 보도
+- 팀·기간: 1~3인 팀이 4~8주 MVP 가능
+- 법률 게이트: 없음 — 공개 가격·변경 정보만 수집하고 법률 판단을 제공하지 않음
+- 보안 게이트: 없음 — MVP는 API 키·프롬프트·고객 원문을 수집하지 않음
+- 유료 의존성 게이트: 없음 — 공개 페이지와 사용량 CSV로 구현 가능하며 유료 API가 필수 아님
+- Stage: Validate
+- owner_action_required: true
+- status: waiting_for_owner
+
+**AI Architect 상태: 사용자 지시 대기**
 
 ## AI Tools
 
-- [OpenAI Enterprise Signals](https://openai.com/signals/enterprise-data/) — 사용량을 결과 지표와 함께 볼 때 유용.
-- [Twitch generative AI training setting](https://x.com/TwitchSupport/status/2087572924450455558) — 설정 상태와 확인일을 증거로 보관.
-- [Gemini Intelligence on Pixel 11](https://blog.google/products-and-platforms/devices/pixel/pixel-11-features/) — 언어·앱·권한·취소 흐름을 실제 기기에서 시험.
-- [Blacksmith](https://www.blacksmith.sh/) — 대표 저장소에서 큐·캐시·재실행·비용을 비교.
+- [Gemini 3.7 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash) — 대표 업무 20건에서 완료율·토큰·재시도·지연을 기존 모델과 비교.
+- [GPT-5.6 Sol Ultrafast](https://openai.com/index/previewing-ultrafast/) — 가격 공개 후 실시간 업무에서 전체 완료시간과 추가비용을 측정.
+- [DeepSeek V4-Pro-0813](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813) — KST 비피크 배치에서 표본 품질과 비용을 평가.
+- [X For You Feed Algorithm](https://github.com/xai-org/x-algorithm) — 공개 가중치와 계정 JSON을 실제 노출 변화와 대조.
 
 ## Community
 
-- [Twitch: current opt-out reaction](https://www.reddit.com/r/Twitch/comments/1vmkq7j/twitch_is_training_gen_ai_on_your_streams_now/) — 기본 허용과 과거 사용 여부에 비판적.
-- [Twitch: training discussion](https://www.reddit.com/r/Twitch/comments/1vd0e8s/how_do_you_feel_about_ai_training_on_twitch/) — 옵트아웃 기본 방식에 불신.
-- [Android: Pixel support discussion](https://www.reddit.com/r/Android/comments/1tg3wtx/google_promised_7_years_of_support_for_the_pixel/) — 구형 기기와 기능 배분에 비판적.
-- [Pixel community launch discussion](https://www.reddit.com/r/pixel_phones/comments/1vckr2l/are_you_excited_for_pixel_11_series/) — 가격·배터리·실사용 가치를 관망.
+- [Hacker News — Gemini 3.7 Flash](https://news.ycombinator.com/item?id=49289112) — 성능·절반 가격에는 호응하지만 출력 토큰과 가격 만료를 반영한 과업당 비용을 비교.
+- [Hacker News — Ultrafast](https://news.ycombinator.com/item?id=49289844) — 속도를 반기면서도 가격, 단일 과업 지연, 품질 동일성과 도구 병목을 요구.
+- [Reddit — DeepSeek V4 Pro](https://www.reddit.com/r/LocalLLaMA/comments/1vn9it4/deepseekaideepseekv4pro0813_hugging_face/) — 에이전트 벤치마크 상승에 관심을 보이며 실제 성능 검증을 질문.
+- [Reddit — DeepSeek pricing](https://www.reddit.com/r/DeepSeek/comments/1vn81do/deepseek_just_massively_increased_their_api/) — 캐시·피크 요금 상승에 반발하며 대체 모델과 비피크 실행을 비교.
+- [Hacker News — Mistral OCR 4.1](https://news.ycombinator.com/item?id=49288889) — 구조·속도에는 관심이 있지만 가격, 로컬 처리와 경쟁 OCR 정확도를 비교.
 
 ## Skill of the Day
 
-**Proxy-to-outcome metric mapping**
+**Effective cost per completed task**
 
-공급자가 토큰, 사용자, PR, CI 작업 증가를 성과처럼 제시할 때 사용한다. 8.3배 토큰과 4배 PR을 생산성으로 간주하지 않고 완료 업무, 검토시간, 재작업, 사고와 단위 비용으로 다시 연결한다.
+모델 공급자가 토큰 단가, 속도 또는 벤치마크를 각각 강조해 실제 업무 경제성을 바로 비교하기 어려울 때 사용한다. 입출력 토큰 단가에 재시도, 완료율, 도구 호출비, 사람 검토시간과 피크 시간대를 더해 성공한 업무 1건당 비용을 계산한다.
 
-프롬프트: “이 발표의 사용량 대리변수와 실제 성과를 분리하고 각 대리변수를 완료율·검토시간·재작업·사고·비용으로 검증할 측정표를 만들어줘.”
+프롬프트: “이 모델 후보들의 가격·완료율·평균 토큰·재시도·지연·사람 검토시간을 사용해 성공 업무 1건당 비용을 계산하고 민감도 분석을 만들어줘.”
 
 ## Worth Reading
 
-- **Paper:** [How Organizations Use ChatGPT](https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf)
-- **GitHub:** [ChatGPT agent for sales meeting preparation](https://github.com/openai/openai-cookbook/blob/main/articles/chatgpt-agents-sales-meeting-prep.md)
-- **YouTube:** [Google Pixel 11 Pro | Meet 11](https://www.youtube.com/watch?v=GNuXueQ1BYc)
-- **Blog:** [Announcing Blacksmith's Series B](https://www.blacksmith.sh/blog/announcing-blacksmiths-series-b-led-by-peak-xv-partners)
+- **Paper:** [Simulator Collapse in Multi-Agent RL](https://arxiv.org/abs/2608.12253)
+- **GitHub:** [xai-org/x-algorithm](https://github.com/xai-org/x-algorithm)
+- **YouTube:** [Introducing Mistral OCR 4](https://www.youtube.com/watch?v=bEt4wczgGR8)
+- **Blog:** [The builder's guide to GPT-5.6](https://openai.com/index/builders-guide-to-gpt-5-6/)
 
 ## 누락 출처와 검증 한계
 
-- OpenAI Enterprise Signals의 핵심 수치는 공급자 자체 데이터이며 독립 원자료가 없다.
-- Twitch가 과거 학습 여부와 소급 삭제·철회 절차를 공개하지 않았다.
-- Pixel 11은 출시 당일이라 독립 장기 성능·배터리 시험이 없다.
-- Blacksmith와 Thrive Holdings의 운영 성과 수치는 독립 감사되지 않았다.
+- Gemini 3.7 Flash 성능 비교는 공급자 중심이며 실제 한국어 업무 완결률은 독립 검증되지 않았다.
+- GPT-5.6 Sol Ultrafast의 14배·750 tok/s와 품질 유지 수치는 OpenAI·Cerebras 발표 중심이고 가격·일반 출시 일정은 공개되지 않았다.
+- DeepSeek V4-Pro-0813 벤치마크는 회사 발표 중심이며 새 요금은 2026-08-17 01:00 KST부터 적용될 예정이라 실제 청구 검증 전이다.
+- CodeRabbit의 주 200만 건 리뷰·1만7천 고객 수치는 회사 주장이고 새 제품군의 출시 범위는 제한적으로 공개됐다.
+- X 공개 저장소는 큰 범위를 포함하지만 Grok 기반 일부 규칙과 실제 운영 파라미터의 완전한 일치 여부는 외부 검증이 어렵다.
+
+## 게시 상태
+
+- 부분 실패: 없음
+- AI Architect · project-pm · 구현 · 코드 작성 · 배포: 실행하지 않음

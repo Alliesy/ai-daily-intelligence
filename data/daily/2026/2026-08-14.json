@@ -1,0 +1,215 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-08-14",
+  "generated_at": "2026-08-14T07:02:54+09:00",
+  "status": "complete",
+  "warnings": [
+    "Gemini 3.7 Flash의 성능 비교는 Google 모델 카드와 공급자·파트너 평가가 중심이며 실제 한국어 업무 완결률은 독립 검증되지 않았다.",
+    "GPT-5.6 Sol Ultrafast의 14배·750 tok/s와 품질 유지 수치는 OpenAI·Cerebras 발표 및 Cerebras 자체 평가이고 가격·일반 출시 일정은 공개되지 않았다.",
+    "DeepSeek V4-Pro-0813의 벤치마크는 회사 발표가 중심이며 새 요금은 2026-08-17 01:00 KST부터 적용될 예정이라 실제 청구 검증 전이다.",
+    "CodeRabbit의 200만 건 주간 리뷰·1만7천 고객 수치는 회사 주장이고 Agentic Change Management의 제품별 출시 범위는 제한적으로 공개됐다.",
+    "X의 공개 저장소는 추천·라벨 시스템의 큰 범위를 포함하지만 Grok 기반 일부 규칙과 실제 운영 파라미터의 완전한 일치 여부는 외부에서 검증하기 어렵다."
+  ],
+  "news": [
+    {
+      "event_key": "2026-08-google-gemini-3-7-flash-launch",
+      "title": "Google launches Gemini 3.7 Flash for coding and agents at half the original 3.6 Flash price",
+      "importance": "S",
+      "selection_score": 94,
+      "score_breakdown": {"confidence": 29, "impact": 24, "utility": 20, "recency": 15, "community": 6},
+      "one_line_summary": "Google이 코딩·에이전트용 Gemini 3.7 Flash를 출시하고 연말까지 입력 0.75달러·출력 3.75달러/100만 토큰의 도입 가격을 적용했다.",
+      "impact": "고성능 에이전트 모델의 경쟁이 최고 점수보다 업무 완결률·지연·실패 반복과 실제 과업비용을 함께 최적화하는 방향으로 이동한다.",
+      "original_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+      "key_quote": "Gemini 3.7 Flash, our most intelligent workhorse model yet for coding and agents.",
+      "quote_translation": "Gemini 3.7 Flash는 코딩과 에이전트를 위한 가장 지능적인 실무형 모델이다.",
+      "summary": "FACT: Google은 8월 13일 Gemini 3.7 Flash를 공개했다. 모델은 최대 100만 토큰 입력과 6만4천 토큰 출력을 지원하며 LOW·MEDIUM·HIGH thinking을 제공한다. Google 모델 카드 기준 FrontierCode 43.6%, DeepSWE 65.3%, AutomationBench 30.4%로 3.6 Flash보다 상승했다. 연말까지 가격은 입력 0.75달러·출력 3.75달러/100만 토큰이고 2027년부터 두 배가 된다. Gemini API, AI Studio, Enterprise, Antigravity와 Spark에 배포됐으며 Reuters가 출시를 독립 확인했다. INTERPRETATION: 빠른 모델이 단순 저가 호출이 아니라 코딩·업무 에이전트의 기본 실행 계층으로 올라온다. SIGNAL: 모델 선택은 토큰 단가보다 완료율·재시도·지연을 포함해야 한다. SPECULATION: 한국 팀에 업무별 실제 비용을 비교하는 자동 라우팅·예산 도구 수요가 커질 수 있다.",
+      "why_it_matters": "한국 개발팀은 도입 가격만 보고 고정하기보다 연말 종료 조건과 업무별 토큰 사용량·완료율을 함께 측정해야 한다.",
+      "industry_mood": {"sentiment": "price-performance-excited / token-efficiency-cautious", "signal": "벤치마크와 절반 가격에는 호응이 크지만 더 많은 출력 토큰과 도입 가격 만료를 반영한 과업당 비용 논의가 활발함"},
+      "outlook": "AI 추론: 에이전트 플랫폼은 하나의 기본 모델보다 난이도·지연·예산에 따라 Flash·frontier 모델을 섞는 정책 라우팅을 기본 기능으로 제공할 가능성이 높다.",
+      "business_opportunity": "공개 가격표와 실제 업무 표본으로 모델별 완료 1건당 비용과 재시도 위험을 계산하는 한국어 비용 레이더.",
+      "tags": ["Google", "Gemini-3.7-Flash", "coding-agent", "pricing", "model-routing", "API"],
+      "sources": [
+        {"title": "Introducing Gemini 3.7 Flash", "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/", "publisher": "Google", "published_at": "2026-08-13", "tier": "A"},
+        {"title": "Gemini 3.7 Flash Model Card", "url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/", "publisher": "Google DeepMind", "published_at": "2026-08-13", "tier": "A"},
+        {"title": "Google unveils Gemini 3.7 Flash", "url": "https://www.reuters.com/business/google-unveils-gemini-37-flash-ai-model-coding-agent-workflows-2026-08-13/", "publisher": "Reuters", "published_at": "2026-08-13", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-openai-cerebras-gpt-5-6-sol-ultrafast",
+      "title": "OpenAI previews GPT-5.6 Sol Ultrafast at up to 750 tokens per second",
+      "importance": "S",
+      "selection_score": 92,
+      "score_breakdown": {"confidence": 29, "impact": 24, "utility": 19, "recency": 15, "community": 5},
+      "one_line_summary": "OpenAI와 Cerebras가 GPT-5.6 Sol을 표준 처리보다 최대 14배 빠른 750 출력 토큰/초로 제공하는 API 전용 Ultrafast 제한 프리뷰를 공개했다.",
+      "impact": "프런티어 모델이 실시간 음성·장애 대응·금융 조사처럼 지연이 업무 가치에 직접 연결되는 동기식 작업에 들어갈 수 있는 기반을 넓힌다.",
+      "original_url": "https://openai.com/index/previewing-ultrafast/",
+      "key_quote": "Ultrafast generates up to 750 output tokens per second.",
+      "quote_translation": "Ultrafast는 초당 최대 750개의 출력 토큰을 생성한다.",
+      "summary": "FACT: OpenAI는 8월 13일 Cerebras 기반 GPT-5.6 Sol Ultrafast를 일부 API 고객에게 공개했다. 공급자 발표 수치는 표준 처리 대비 최대 14배, 초당 최대 750 출력 토큰이다. OpenAI는 장애 대응·금융·보안·고객지원·상거래·대화형 연구를 예로 들었고, 판단과 배포 책임은 사람에게 남는다고 밝혔다. Cerebras는 동일 지능과 자체 HLE·GDP-Val 속도 평가를 주장했고 TechCrunch가 제한 프리뷰를 확인했다. 가격과 확대 일정은 미공개다. INTERPRETATION: 모델 지능 외에 응답 지연이 별도의 유료 성능 계층이 된다. SIGNAL: 실시간 에이전트는 모델보다 전체 도구 호출·데이터 조회·검토 지연이 새 병목이 된다. SPECULATION: 한국 팀을 위한 지연 예산과 고속 호출 ROI 시험 서비스가 생길 수 있다.",
+      "why_it_matters": "단순 tok/s보다 업무 종료까지 걸린 시간과 고속 호출의 추가 비용을 측정해야 실제 장애 대응·상담 가치를 판단할 수 있다.",
+      "industry_mood": {"sentiment": "latency-impressed / pricing-skeptical", "signal": "속도에는 강한 반응이지만 미공개 가격, 공급자 자체 품질 비교와 도구 호출 병목을 지적함"},
+      "outlook": "AI 추론: 프런티어 API도 클라우드 인스턴스처럼 Standard·Fast·Ultrafast를 작업별 SLA와 요금으로 선택하는 계층형 시장이 될 가능성이 높다.",
+      "business_opportunity": "같은 업무를 표준·고속 모델에서 반복해 전체 완료시간, 품질, 도구 지연과 비용을 비교하는 latency ROI 벤치마크.",
+      "tags": ["OpenAI", "GPT-5.6-Sol", "Cerebras", "Ultrafast", "inference", "latency"],
+      "sources": [
+        {"title": "Previewing Ultrafast mode", "url": "https://openai.com/index/previewing-ultrafast/", "publisher": "OpenAI", "published_at": "2026-08-13", "tier": "A"},
+        {"title": "Accelerating GPT-5.6 Sol Ultrafast", "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai", "publisher": "Cerebras", "published_at": "2026-08-13", "tier": "A"},
+        {"title": "OpenAI introduces Ultrafast", "url": "https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/", "publisher": "TechCrunch", "published_at": "2026-08-13", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-deepseek-v4-pro-0813-peak-pricing",
+      "title": "DeepSeek releases V4 Pro and shifts its API to peak/off-peak pricing",
+      "importance": "S",
+      "selection_score": 90,
+      "score_breakdown": {"confidence": 29, "impact": 23, "utility": 20, "recency": 15, "community": 3},
+      "one_line_summary": "DeepSeek가 에이전트 성능을 강화한 V4-Pro-0813을 공개하고 8월 17일 KST부터 Pro·Flash API에 피크/비피크 요금을 적용한다.",
+      "impact": "저가 모델을 전제로 한 서비스도 공급자 가격과 시간대에 따라 원가가 크게 바뀔 수 있어 다중 모델·비동기 실행·가격 변경 감시가 운영 요건이 된다.",
+      "original_url": "https://api-docs.deepseek.com/updates/",
+      "key_quote": "We will adopt peak/off-peak pricing, with off-peak prices set at half of the peak-hour prices.",
+      "quote_translation": "피크·비피크 요금을 도입하며 비피크 가격은 피크의 절반으로 설정한다.",
+      "summary": "FACT: DeepSeek는 8월 13일 V4-Pro-0813을 API·앱·웹에 출시하고 에이전트 능력 향상을 주장했다. 새 요금은 8월 16일 16:00 UTC부터 적용된다. 피크 시간은 01:00~04:00·06:00~10:00 UTC이며 Pro 출력은 비피크 1.98달러, 피크 3.96달러/100만 토큰, Flash 출력은 0.66달러·1.32달러다. Reuters는 모델 출시와 가격이 기존 대비 항목별 50~1100% 오른다고 보도했다. INTERPRETATION: 초저가 API는 고정 단가 상품이 아니라 수요 시간대에 따라 변하는 컴퓨트 서비스가 된다. SIGNAL: 예약 가능 배치 작업과 공급자 전환 정책이 직접적인 원가 절감 수단이 된다. SPECULATION: KST 시간대별 실행 계획과 가격 변경 증거를 제공하는 경량 비용 운영 도구가 필요해질 수 있다.",
+      "why_it_matters": "한국 기준 피크는 10~13시와 15~19시라 업무시간과 겹친다. 기존 예산 계산과 SLA를 즉시 다시 검토해야 한다.",
+      "industry_mood": {"sentiment": "capability-curious / price-shocked", "signal": "V4 Pro 성능에는 기대가 있지만 캐시·출력 가격의 큰 상승과 업무시간 피크 요금에 반발이 큼"},
+      "outlook": "AI 추론: API 고객은 야간 배치, 캐시, 모델 대체 경로와 가격 변경 알림을 배포 설정의 일부로 관리하게 될 가능성이 높다.",
+      "business_opportunity": "공식 가격표 변경을 감지하고 KST 실행 시간·캐시율·모델별 월 비용을 시뮬레이션하는 AI API 가격 레이더.",
+      "tags": ["DeepSeek", "V4-Pro", "API-pricing", "peak-pricing", "agent-model", "cost-operations"],
+      "sources": [
+        {"title": "DeepSeek API Change Log", "url": "https://api-docs.deepseek.com/updates/", "publisher": "DeepSeek", "published_at": "2026-08-13", "tier": "A"},
+        {"title": "DeepSeek Models & Pricing", "url": "https://api-docs.deepseek.com/quick_start/pricing/", "publisher": "DeepSeek", "published_at": "2026-08-13", "tier": "A"},
+        {"title": "DeepSeek releases official V4 Pro", "url": "https://www.reuters.com/world/china/deepseek-releases-official-v4-pro-model-it-steps-up-expansion-2026-08-13/", "publisher": "Reuters", "published_at": "2026-08-13", "tier": "B"},
+        {"title": "DeepSeek raises API pricing", "url": "https://www.reuters.com/world/china/deepseek-raises-api-pricing-its-v4-models-2026-08-13/", "publisher": "Reuters", "published_at": "2026-08-13", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-coderabbit-series-c-agentic-change-management",
+      "title": "CodeRabbit raises $143M and expands code review into Agentic Change Management",
+      "importance": "A",
+      "selection_score": 88,
+      "score_breakdown": {"confidence": 29, "impact": 22, "utility": 19, "recency": 14, "community": 4},
+      "one_line_summary": "CodeRabbit가 15억 달러 기업가치로 1억4,300만 달러를 조달하고 사람·에이전트가 만든 변경의 의도·위험·검증·배포 후 상태를 관리하는 제품군을 발표했다.",
+      "impact": "AI 코딩의 병목이 PR 생성에서 변경 의도 설명, 검토 우선순위, 독립 검증과 병합 후 위험 관리로 이동한다는 시장 신호다.",
+      "original_url": "https://www.coderabbit.ai/newsroom/coderabbit-series-c-agentic-change-management",
+      "key_quote": "AI code review only solves part of the problem.",
+      "quote_translation": "AI 코드 리뷰는 문제의 일부만 해결한다.",
+      "summary": "FACT: CodeRabbit는 8월 12일 Atomico·Smash Capital 공동 주도 1억4,300만 달러 시리즈 C와 15억 달러 기업가치를 발표했다. Agentic Change Management는 사람·에이전트 변경을 검증하고 주의를 배분하며 의도·영향을 설명하고 병합 후 코드 건강을 감시하는 통제 계층으로 제시됐다. Reuters는 조달액, 기업가치, 주 200만 건 이상 리뷰·1만7천 고객이라는 회사 수치와 오픈소스 지원 1천만 달러 계획을 독립 보도했다. INTERPRETATION: 코드 생성이 풍부해질수록 희소 자원은 검토자의 판단과 변경 맥락이 된다. SIGNAL: 에이전트 PR에 작성 의도, 영향 범위, 증거와 배포 후 관찰을 연결해야 한다. SPECULATION: 한국 소규모 팀은 기존 GitHub 위에 얹는 가벼운 변경 증거 패킷을 원할 수 있다.",
+      "why_it_matters": "AI PR을 많이 만드는 것보다 검토할 가치가 있는 변경을 골라 의도·테스트·리스크를 빠르게 복구하는 능력이 개발 속도를 결정한다.",
+      "industry_mood": {"sentiment": "validation-bullish / platform-cautious", "signal": "독립 검증 계층에는 공감하지만 새 제품군의 실제 범위와 성과 수치는 검증을 기다림"},
+      "outlook": "AI 추론: PR은 코드 diff만이 아니라 요청 의도, 에이전트 기록, 테스트 근거, 승인과 배포 후 이상 징후를 포함하는 변경 패킷으로 진화할 가능성이 높다.",
+      "business_opportunity": "GitHub PR에서 요구사항-변경-테스트-사람 승인-배포 결과를 한 장으로 묶는 한국어 변경 증거 레이어.",
+      "tags": ["CodeRabbit", "AI-code-review", "agentic-SDLC", "change-management", "funding", "governance"],
+      "sources": [
+        {"title": "CodeRabbit Series C and Agentic Change Management", "url": "https://www.coderabbit.ai/newsroom/coderabbit-series-c-agentic-change-management", "publisher": "CodeRabbit", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "Introducing Agentic Change Management", "url": "https://www.coderabbit.ai/blog/introducing-agentic-change-management", "publisher": "CodeRabbit", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "AI code review platform CodeRabbit valued at $1.5 billion", "url": "https://www.reuters.com/technology/ai-code-review-platform-coderabbit-valued-15-billion-latest-funding-round-2026-08-12/", "publisher": "Reuters", "published_at": "2026-08-12", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-x-ranking-algorithm-under-the-hood-transparency",
+      "title": "X publishes more of its Phoenix ranking stack and adds account visibility diagnostics",
+      "importance": "A",
+      "selection_score": 86,
+      "score_breakdown": {"confidence": 28, "impact": 21, "utility": 19, "recency": 15, "community": 3},
+      "one_line_summary": "X가 For You 피드의 Phoenix 학습·서빙, 라벨·필터·점수 코드를 확대 공개하고 계정·게시물 가시성 라벨 통계를 JSON으로 받는 Under the Hood 도구를 시험한다.",
+      "impact": "추천 시스템 투명성이 설명 문서에서 실행 가능한 코드와 사용자별 영향 데이터로 이동해 크리에이터·감사자·연구자의 검증 가능성을 높인다.",
+      "original_url": "https://github.com/xai-org/x-algorithm",
+      "key_quote": "Phoenix reads the viewer's recent engagement history and predicts each action on a post.",
+      "quote_translation": "Phoenix는 최근 참여 이력을 읽고 게시물에 취할 각 행동을 예측한다.",
+      "summary": "FACT: xAI의 x-algorithm 저장소는 Phoenix 학습·서빙, 합성 데이터, SimClusters, 콘텐츠 라벨·가시성 필터와 점수 가중치를 공개했다. 추천 순위는 좋아요·답글·공유·체류·차단·신고 등의 예측 확률에 가중치를 적용하고 다양성·신규 작성자 보정을 거친다. X는 최근 한 달의 계정·게시물 라벨 통계를 JSON으로 내보내는 Under the Hood 파일럿도 시작했다. TechCrunch는 코드 확대와 테스트 조건을 보도했지만 Grok 기반 위반 예측 일부는 악용 방지를 이유로 제외됐다고 전했다. INTERPRETATION: 플랫폼 설명가능성이 정책 문구에서 사용자별 영향 증거로 이동한다. SIGNAL: 크리에이터는 도달률 변화 원인을 추측보다 라벨·필터·코드 버전으로 진단할 수 있다. SPECULATION: 공개 코드와 사용자 JSON을 결합한 독립 가시성 분석 도구가 가능해질 수 있다.",
+      "why_it_matters": "한국 크리에이터와 브랜드는 단순 노출 통계보다 어떤 라벨·필터·점수 변화가 도달에 영향을 줬는지 근거를 남길 수 있다.",
+      "industry_mood": {"sentiment": "transparency-positive / completeness-skeptical", "signal": "실행 코드와 JSON 내보내기는 환영하지만 비공개 모델, 실제 운영값 일치와 파일럿 제한을 지적함"},
+      "outlook": "AI 추론: 대형 플랫폼은 규제·사용자 신뢰 압력에 따라 추천 코드, 변경 로그와 계정별 영향 내보내기를 묶은 투명성 표면을 확대할 수 있다.",
+      "business_opportunity": "공개 추천 코드와 계정 JSON을 읽어 가시성 변화, 라벨과 검증 가능한 개선 실험을 설명하는 크리에이터 분석 도구.",
+      "tags": ["X", "Phoenix", "recommendation-system", "algorithm-transparency", "creator-analytics", "open-source"],
+      "sources": [
+        {"title": "X For You Feed Algorithm", "url": "https://github.com/xai-org/x-algorithm", "publisher": "xAI", "published_at": "2026-08-13", "tier": "A"},
+        {"title": "X open sources its ranking algorithm", "url": "https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/", "publisher": "TechCrunch", "published_at": "2026-08-13", "tier": "B"}
+      ]
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "AI API Price Change Radar",
+      "score": 4.4,
+      "stars": 5,
+      "potential": "Very High",
+      "difficulty": "Medium",
+      "customer": "여러 LLM API를 쓰거나 도입 검토 중인 한국 1~20인 AI SaaS·자동화 팀과 프리랜서 개발자",
+      "problem": "도입 가격 만료, 시간대 요금, 캐시 단가와 고속 계층 출시가 흩어져 있어 월 원가와 마진이 예고 없이 바뀐다.",
+      "existing_solution": "공급자 가격 페이지 수동 확인, Helicone·Portkey·LiteLLM 비용 로그, 스프레드시트",
+      "competitors": ["Helicone", "Portkey", "LiteLLM", "CloudZero"],
+      "differentiation": "공개 공식 가격표의 변경 증거를 보존하고 KST 시간대·캐시율·완료율·재시도를 반영한 시나리오와 대체 모델 경보를 제공한다.",
+      "mvp_2_weeks": "Google·OpenAI·DeepSeek·Anthropic 4개 가격 페이지 스냅샷, 구조화 diff, KST 피크 변환, 사용량 CSV 기반 월 비용 시뮬레이터와 이메일 없는 웹 알림.",
+      "monetization": "개인 무료 변경 알림 + 팀별 가격 시뮬레이션 구독 + 컨설팅용 화이트라벨",
+      "falsification": "15개 팀 중 5개 미만이 지난 3개월간 가격 변경을 놓쳤거나 월 2만원 이상 지불 의향을 보이면 후보에서 제외한다."
+    },
+    {
+      "name": "Agentic Change Evidence Ledger",
+      "score": 4.2,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Medium",
+      "customer": "코딩 에이전트와 GitHub PR을 쓰는 한국 2~30인 개발팀",
+      "problem": "큰 에이전트 PR의 요청 의도, 변경 범위, 테스트 근거와 배포 결과가 분리되어 리뷰어가 맥락을 다시 구성한다.",
+      "existing_solution": "PR 템플릿, CodeRabbit, GitHub checks, 배포 모니터링",
+      "competitors": ["CodeRabbit", "Graphite", "LinearB", "GitHub Copilot code review"],
+      "differentiation": "코드를 생성하지 않고 요구사항-커밋-테스트-승인-배포 관찰 링크를 한국어 증거 패킷으로 연결한다.",
+      "mvp_2_weeks": "GitHub 읽기 전용 앱 또는 내보내기 파일, PR별 의도·영향·검증 체크리스트, 테스트 링크와 배포 후 확인 상태.",
+      "monetization": "저장소당 월 구독 + 감사·회고용 내보내기",
+      "falsification": "10개 팀 중 3개 미만이 PR당 맥락 복구에 15분 이상 쓰거나 읽기 전용 파일럿에 동의하면 보류한다."
+    },
+    {
+      "name": "Creator Feed Visibility Explainer",
+      "score": 4.0,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Medium",
+      "customer": "X를 쓰는 한국 크리에이터, 브랜드 마케터와 소형 에이전시",
+      "problem": "노출 하락이 콘텐츠, 라벨, 필터, 팔로워 구성 또는 알고리즘 변경 때문인지 구분하기 어렵다.",
+      "existing_solution": "X Analytics, 수동 A/B 게시, 소셜 분석 SaaS와 추측성 알고리즘 글",
+      "competitors": ["Hypefury", "Buffer", "Sprout Social", "Typefully"],
+      "differentiation": "X가 내보낸 계정 JSON과 공개 코드 버전을 연결해 가능한 원인과 반증 가능한 게시 실험을 제시한다.",
+      "mvp_2_weeks": "사용자 업로드 JSON 파서, 라벨·가시성 변화 타임라인, 공개 저장소 버전 매핑, 3개 검증 실험 제안.",
+      "monetization": "계정당 월 구독 + 에이전시 다계정 리포트",
+      "falsification": "Under the Hood가 한국 계정에 8주 내 확대되지 않거나 15명 중 5명 미만이 JSON을 제공하면 보류한다."
+    }
+  ],
+  "tools": [
+    {"name": "Gemini 3.7 Flash", "type": "Coding and agent model", "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash", "stars": 5, "why_trending": "코딩·에이전트 성능을 높이고 연말까지 절반 도입 가격을 적용", "worth_trying": "대표 업무 20건에서 완료율·토큰·재시도·지연을 기존 모델과 비교"},
+    {"name": "GPT-5.6 Sol Ultrafast", "type": "High-speed frontier inference tier", "url": "https://openai.com/index/previewing-ultrafast/", "stars": 5, "why_trending": "Cerebras 기반 최대 750 출력 tok/s 제한 프리뷰", "worth_trying": "가격 공개 후 실시간 장애 대응·상담 업무에서 전체 완료시간과 추가비용을 측정"},
+    {"name": "DeepSeek V4-Pro-0813", "type": "Agent model and API", "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813", "stars": 4, "why_trending": "공식 V4 Pro 출시와 피크/비피크 요금 동시 도입", "worth_trying": "KST 비피크 배치에서 표본 업무 품질과 비용을 평가하고 대체 경로를 준비"},
+    {"name": "X For You Feed Algorithm", "type": "Open recommendation stack", "url": "https://github.com/xai-org/x-algorithm", "stars": 4, "why_trending": "Phoenix 학습·서빙, 필터·라벨·점수와 사용자 영향 JSON을 확대 공개", "worth_trying": "공개 가중치와 계정 JSON을 실제 노출 변화와 대조하되 미공개 구성요소를 분리"}
+  ],
+  "community": [
+    {"platform": "Hacker News", "mood": "performance-impressed / token-aware", "one_line_summary": "Gemini 3.7 Flash의 점수·절반 가격에는 호응하지만 출력 토큰 증가와 도입 가격 만료를 반영한 과업당 비용을 비교한다.", "url": "https://news.ycombinator.com/item?id=49289112"},
+    {"platform": "Hacker News", "mood": "speed-amazed / price-demanding", "one_line_summary": "Ultrafast의 750 tok/s를 반기면서도 가격, 단일 과업 지연, 품질 동일성과 도구 호출 병목을 요구한다.", "url": "https://news.ycombinator.com/item?id=49289844"},
+    {"platform": "Reddit", "mood": "launch-curious / benchmark-comparing", "one_line_summary": "DeepSeek V4 Pro의 에이전트 벤치마크 상승을 주목하면서 GPT-5.6 누락과 실제 성능 검증을 묻는다.", "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vn9it4/deepseekaideepseekv4pro0813_hugging_face/"},
+    {"platform": "Reddit", "mood": "price-shocked / routing-minded", "one_line_summary": "DeepSeek 캐시·피크 요금 상승 폭에 반발하며 Kimi 등 대체 모델과 비피크 실행을 비교한다.", "url": "https://www.reddit.com/r/DeepSeek/comments/1vn81do/deepseek_just_massively_increased_their_api/"},
+    {"platform": "Hacker News", "mood": "document-AI-curious / vendor-skeptical", "one_line_summary": "Mistral OCR 4.1의 구조·속도에는 관심이 있지만 가격 상승, 로컬 처리와 경쟁 OCR 정확도를 비교한다.", "url": "https://news.ycombinator.com/item?id=49288889"}
+  ],
+  "skill_of_the_day": {
+    "name": "Effective cost per completed task",
+    "when_to_use": "모델 공급자가 토큰 단가, 속도 또는 벤치마크를 각각 강조해 실제 업무 경제성을 바로 비교하기 어려울 때.",
+    "practical_example": "입출력 토큰 단가에 재시도 횟수, 완료율, 도구 호출비, 사람 검토시간과 피크 시간대를 더해 성공한 업무 1건당 비용을 계산한다.",
+    "prompt_example": "이 모델 후보들의 가격·완료율·평균 토큰·재시도·지연·사람 검토시간을 사용해 성공 업무 1건당 비용을 계산하고 민감도 분석을 만들어줘."
+  },
+  "worth_reading": [
+    {"type": "Paper", "title": "Simulator Collapse in Multi-Agent RL", "url": "https://arxiv.org/abs/2608.12253", "why_read": "한 LLM 사용자 시뮬레이터에 과적합한 에이전트가 실제 사용자에게 일반화하지 못하는 평가 함정을 설명한다."},
+    {"type": "GitHub", "title": "xai-org/x-algorithm", "url": "https://github.com/xai-org/x-algorithm", "why_read": "Phoenix 추천·검색·라벨·필터·점수의 실제 코드와 시스템 구조를 직접 확인할 수 있다."},
+    {"type": "YouTube", "title": "Introducing Mistral OCR 4", "url": "https://www.youtube.com/watch?v=bEt4wczgGR8", "why_read": "문서 OCR이 평면 텍스트에서 bounding box·구조·신뢰도 기반 데이터로 이동하는 방식을 공식 데모로 확인한다."},
+    {"type": "Blog", "title": "The builder's guide to GPT-5.6", "url": "https://openai.com/index/builders-guide-to-gpt-5-6/", "why_read": "작은 모델 선택, reasoning 연속성, compaction, programmatic tool calling과 캐시를 실제 에이전트 비용으로 연결한다."}
+  ],
+  "todays_insight": "모델 시장은 지능 하나가 아니라 업무 완결률, 초당 속도, 시간대 가격과 변경 통제로 분화되고 있다. 이제 비교 단위는 토큰이 아니라 성공한 업무 1건이다.",
+  "build_candidate": {
+    "idea_name": "AI API Price Change Radar",
+    "score": 4.4,
+    "owner_action_required": true,
+    "status": "waiting_for_owner",
+    "evidence_urls": [
+      "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+      "https://api-docs.deepseek.com/quick_start/pricing/",
+      "https://openai.com/index/previewing-ultrafast/",
+      "https://www.reuters.com/world/china/deepseek-raises-api-pricing-its-v4-models-2026-08-13/"
+    ]
+  }
+}
