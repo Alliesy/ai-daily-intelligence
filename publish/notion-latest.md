@@ -1,223 +1,183 @@
-# AI Daily Intelligence — 2026-08-14
+# AI Daily Intelligence — 2026-08-15
 
-> 상태: complete · 기준: KST · GitHub가 유일한 기록 정본입니다.
+> 정본 데이터: [GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-15.md) · [Daily JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-15.json)
 
-## 오늘의 인사이트
+## 오늘의 한 문장
 
-모델 시장은 지능 하나가 아니라 업무 완결률, 초당 속도, 시간대 가격과 변경 통제로 분화되고 있다. 이제 비교 단위는 토큰이 아니라 성공한 업무 1건이다.
+오픈웨이트 경쟁의 핵심이 단순 공개 여부에서 공개 시점, 라이선스·계보, 안전성 평가와 공급망 증거를 함께 관리하는 릴리스 운영으로 이동하고 있다.
 
 ## Top News
 
-### 1. Google, 코딩·에이전트용 Gemini 3.7 Flash 출시…초기 가격 절반 — 94/100
+### 1. Z.ai, GLM-5.3 공개를 보안 평가 뒤로 미루고 사이버 기능에 신뢰 접근 도입 — 95/100
 
-**한줄요약**  
-Google이 코딩·에이전트용 Gemini 3.7 Flash를 출시하고 연말까지 입력 0.75달러·출력 3.75달러/100만 토큰의 도입 가격을 적용했다.
+**한줄요약**
 
-**원문 핵심문장 / 번역**  
-“Gemini 3.7 Flash, our most intelligent workhorse model yet for coding and agents.”  
-“Gemini 3.7 Flash는 코딩과 에이전트를 위한 가장 지능적인 실무형 모델이다.”
+Z.ai가 동일한 GLM-5.2 기반 모델을 후학습만 확장해 코딩·사이버 성능을 높인 GLM-5.3을 발표하고, 가중치는 약 2주 안전성 평가 후 공개하기로 했다.
 
-**원문 요약**  
-- **FACT:** Google은 8월 13일 최대 100만 토큰 입력·6만4천 토큰 출력과 LOW·MEDIUM·HIGH thinking을 지원하는 Gemini 3.7 Flash를 공개했다. Google 모델 카드 기준 FrontierCode 43.6%, DeepSWE 65.3%, AutomationBench 30.4%다. 연말까지 가격은 입력 0.75달러·출력 3.75달러/100만 토큰이며 2027년부터 두 배다. Reuters가 출시를 독립 확인했다.
-- **INTERPRETATION:** 빠른 모델이 저가 호출을 넘어 코딩·업무 에이전트의 기본 실행 계층으로 올라온다.
-- **SIGNAL:** 모델 선택은 토큰 단가보다 완료율·재시도·지연을 포함해야 한다.
-- **SPECULATION:** 한국 팀에 업무별 실제 비용을 비교하는 자동 라우팅·예산 도구 수요가 커질 수 있다.
+**원문 핵심문장 / 번역**
 
-**왜 중요한가**  
-한국 개발팀은 도입 가격만 보고 고정하기보다 연말 종료 조건과 업무별 토큰 사용량·완료율을 함께 측정해야 한다.
+“Scaling post-training is all we did for GLM-5.3.”  
+“GLM-5.3에서는 후학습 확장만 수행했다.”
 
-**업계 분위기**  
-벤치마크와 절반 가격에는 호응이 크지만 출력 토큰 증가와 도입 가격 만료를 반영한 과업당 비용 논의가 활발하다.
+**원문 요약**
 
-**앞으로의 전망 — AI 추론**  
-에이전트 플랫폼은 하나의 기본 모델보다 난이도·지연·예산에 따라 Flash와 프런티어 모델을 섞는 정책 라우팅을 기본 기능으로 제공할 가능성이 높다.
+- **FACT:** Z.ai는 8월 14일 GLM-5.3을 발표했다. 회사는 GLM-5.2와 같은 기반 모델에 더 길고 다양한 후학습 환경을 적용해 내부 Code Bench가 50% 향상됐다고 주장했다. Reuters가 확인한 회사 수치로 CyberGym 84.5%, ExploitBench 54.4%였고 Mythos 5는 각각 83.8%, 78.0%였다. 수치는 독립 검증되지 않았다. 가중치는 약 2주 뒤 공개하고 민감한 사이버 기능은 검증 사용자에게 제공할 계획이다.
+- **INTERPRETATION:** 후학습 환경이 모델 세대 교체 없이 실전 능력을 크게 바꾸는 핵심 자산이 됐다.
+- **SIGNAL:** 오픈웨이트 출시에도 사전 평가, 공개 지연, 취약점 제보와 기능별 접근 정책이 필요하다.
+- **SPECULATION:** 모델 도입자는 라이선스뿐 아니라 공개 단계·안전성 증거·접근 정책의 변화를 지속 추적하게 될 수 있다.
 
-**사업 기회**  
-공개 가격표와 실제 업무 표본으로 모델별 완료 1건당 비용과 재시도 위험을 계산하는 한국어 비용 레이더.
+**왜 중요한가**
 
-**관련 태그**  
-Google · Gemini-3.7-Flash · coding-agent · pricing · model-routing · API
+한국 개발팀은 벤치마크 순위보다 실제 가중치 공개 여부, 라이선스, 보안 평가, 민감 기능 제한과 업무 표본 결과를 분리해 확인해야 한다.
 
-출처: [Google 발표 · 2026-08-13](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/) · [Google DeepMind 모델 카드 · 2026-08-13](https://deepmind.google/models/model-cards/gemini-3-7-flash/) · [Reuters · 2026-08-13](https://www.reuters.com/business/google-unveils-gemini-37-flash-ai-model-coding-agent-workflows-2026-08-13/)
+**업계 분위기**
 
-### 2. OpenAI, 초당 최대 750토큰의 GPT-5.6 Sol Ultrafast 프리뷰 공개 — 92/100
+후학습 성능 상승과 개방성에는 호응하지만 미공개 가중치, 독립 재현 부족, 공개 후 안전장치 유지 가능성을 우려한다.
 
-**한줄요약**  
-OpenAI와 Cerebras가 GPT-5.6 Sol을 표준 처리보다 최대 14배 빠른 750 출력 토큰/초로 제공하는 API 전용 Ultrafast 제한 프리뷰를 공개했다.
+**앞으로의 전망 — AI 추론**
 
-**원문 핵심문장 / 번역**  
-“Ultrafast generates up to 750 output tokens per second.”  
-“Ultrafast는 초당 최대 750개의 출력 토큰을 생성한다.”
+오픈웨이트 모델 출시는 모델 카드 하나가 아니라 사전 파트너 접근, 평가 결과, 가중치·라이선스 공개, 취약점 대응을 단계별로 공개하는 릴리스 프로세스로 정착할 가능성이 높다.
 
-**원문 요약**  
-- **FACT:** OpenAI는 8월 13일 Cerebras 기반 GPT-5.6 Sol Ultrafast를 일부 API 고객에게 공개했다. 공급자 발표 수치는 표준 처리 대비 최대 14배, 초당 최대 750 출력 토큰이다. OpenAI는 장애 대응·금융·보안·고객지원·상거래·대화형 연구를 예로 들었다. Cerebras는 동일 지능을 주장했고 TechCrunch가 제한 프리뷰를 확인했다. 가격과 확대 일정은 미공개다.
-- **INTERPRETATION:** 모델 지능 외에 응답 지연이 별도의 유료 성능 계층이 된다.
-- **SIGNAL:** 실시간 에이전트는 모델보다 전체 도구 호출·데이터 조회·검토 지연이 새 병목이 된다.
-- **SPECULATION:** 한국 팀을 위한 지연 예산과 고속 호출 ROI 시험 서비스가 생길 수 있다.
+**사업 기회**
 
-**왜 중요한가**  
-단순 tok/s보다 업무 종료까지 걸린 시간과 고속 호출의 추가 비용을 측정해야 실제 장애 대응·상담 가치를 판단할 수 있다.
+오픈웨이트 모델의 공개 단계, 라이선스, 평가·보안 증거, 취약점 채널과 조직별 승인 상태를 한 장으로 관리하는 도입 증거 패킷.
 
-**업계 분위기**  
-속도에는 강한 반응이지만 미공개 가격, 공급자 자체 품질 비교와 도구 호출 병목을 지적한다.
+**관련 태그**
 
-**앞으로의 전망 — AI 추론**  
-프런티어 API도 클라우드 인스턴스처럼 Standard·Fast·Ultrafast를 작업별 SLA와 요금으로 선택하는 계층형 시장이 될 가능성이 높다.
+Z.ai · GLM-5.3 · open-weights · post-training · cybersecurity · trusted-access
 
-**사업 기회**  
-같은 업무를 표준·고속 모델에서 반복해 전체 완료시간, 품질, 도구 지연과 비용을 비교하는 latency ROI 벤치마크.
+출처: [Z.ai 공식 발표 · 2026-08-14](https://z.ai/blog/glm-5.3) · [Z.ai 공식 파트너 안내 · 2026-08-14](https://x.com/Zai_org/status/2088132978698256725) · [Reuters · 2026-08-14](https://www.reuters.com/technology/chinas-zai-says-new-model-nears-anthropics-mythos-5-cyber-defence-tests-2026-08-14/)
 
-**관련 태그**  
-OpenAI · GPT-5.6-Sol · Cerebras · Ultrafast · inference · latency
+### 2. 미 상원의원, 미국 오픈웨이트 AI 육성 인센티브와 중국 모델 의존 축소를 제안 — 89/100
 
-출처: [OpenAI 발표 · 2026-08-13](https://openai.com/index/previewing-ultrafast/) · [Cerebras 발표 · 2026-08-13](https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai) · [TechCrunch · 2026-08-13](https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/)
+**한줄요약**
 
-### 3. DeepSeek, V4 Pro 출시…API에 피크·비피크 요금제 도입 — 90/100
+Jim Banks 상원의원이 미국 오픈웨이트 모델 생태계의 인센티브, 중국 모델 의존 축소와 반도체 수출통제 효과를 검토하고 60일 내 브리핑할 것을 행정부에 요청했다.
 
-**한줄요약**  
-DeepSeek가 에이전트 성능을 강화한 V4-Pro-0813을 공개하고 8월 17일 KST부터 Pro·Flash API에 피크/비피크 요금을 적용한다.
+**원문 핵심문장 / 번역**
 
-**원문 핵심문장 / 번역**  
-“We will adopt peak/off-peak pricing, with off-peak prices set at half of the peak-hour prices.”  
-“피크·비피크 요금을 도입하며 비피크 가격은 피크의 절반으로 설정한다.”
+“Open models can generate broad economic benefits by lowering barriers to entry, reducing development costs, strengthening competition, and enabling downstream innovation.”  
+“오픈 모델은 진입장벽과 개발비를 낮추고 경쟁과 후속 혁신을 강화해 폭넓은 경제적 이익을 만들 수 있다.”
 
-**원문 요약**  
-- **FACT:** DeepSeek는 8월 13일 V4-Pro-0813을 API·앱·웹에 출시했다. 새 요금은 8월 17일 01:00 KST부터 적용된다. 피크 시간은 KST 10~13시·15~19시이며 Pro 출력은 비피크 1.98달러, 피크 3.96달러/100만 토큰, Flash 출력은 0.66달러·1.32달러다. Reuters는 출시와 기존 대비 항목별 50~1100% 가격 상승을 보도했다.
-- **INTERPRETATION:** 초저가 API는 고정 단가 상품이 아니라 수요 시간대에 따라 변하는 컴퓨트 서비스가 된다.
-- **SIGNAL:** 예약 가능 배치 작업과 공급자 전환 정책이 직접적인 원가 절감 수단이 된다.
-- **SPECULATION:** KST 시간대별 실행 계획과 가격 변경 증거를 제공하는 경량 비용 운영 도구가 필요해질 수 있다.
+**원문 요약**
 
-**왜 중요한가**  
-한국 기준 피크가 업무시간과 겹친다. 기존 예산 계산과 SLA를 즉시 다시 검토해야 한다.
+- **FACT:** Jim Banks 상원의원은 8월 14일 CEA 의장에게 미국 오픈웨이트 AI 생태계를 강화할 인센티브와 정책 도구를 검토하라고 요청했다. 중국산 모델 의존, 불법 칩 취득, 수출통제 회피와 대규모 증류를 함께 다뤘고 60일 내 실무 브리핑을 요구했다. Reuters가 서한과 업계의 찬반을 독립 보도했다. 이는 법안이나 확정 정책이 아니다.
+- **INTERPRETATION:** 모델 개방성은 혁신·비용·안보·공급망을 동시에 평가하는 정책 자산이 됐다.
+- **SIGNAL:** 기업 조달에서도 모델 원산지, 가중치·라이선스, 학습 출처와 칩 공급망에 대한 증거 요구가 늘어난다.
+- **SPECULATION:** 한국 기업의 공공·대기업 납품에서도 오픈모델 사용 현황과 파생 모델 계보를 설명하는 문서가 요구될 수 있다.
 
-**업계 분위기**  
-V4 Pro 성능에는 기대가 있지만 캐시·출력 가격의 큰 상승과 업무시간 피크 요금에는 반발이 크다.
+**왜 중요한가**
 
-**앞으로의 전망 — AI 추론**  
-API 고객은 야간 배치, 캐시, 모델 대체 경로와 가격 변경 알림을 배포 설정의 일부로 관리하게 될 가능성이 높다.
+한국의 소규모 AI 제품팀도 모델 성능과 가격 외에 공급자·원산지·라이선스·파생 계보·수출통제 영향을 고객에게 설명할 준비가 필요하다.
 
-**사업 기회**  
-공식 가격표 변경을 감지하고 KST 실행 시간·캐시율·모델별 월 비용을 시뮬레이션하는 AI API 가격 레이더.
+**업계 분위기**
 
-**관련 태그**  
-DeepSeek · V4-Pro · API-pricing · peak-pricing · agent-model · cost-operations
+스타트업 경쟁과 비용 절감에는 우호적이지만 중국 의존, 악용·추적성, 공개 후 통제 한계를 둘러싼 갈등이 커지고 있다.
 
-출처: [DeepSeek 변경 로그 · 2026-08-13](https://api-docs.deepseek.com/updates/) · [DeepSeek 가격표 · 2026-08-13](https://api-docs.deepseek.com/quick_start/pricing/) · [Reuters 출시 보도 · 2026-08-13](https://www.reuters.com/world/china/deepseek-releases-official-v4-pro-model-it-steps-up-expansion-2026-08-13/) · [Reuters 가격 보도 · 2026-08-13](https://www.reuters.com/world/china/deepseek-raises-api-pricing-its-v4-models-2026-08-13/)
+**앞으로의 전망 — AI 추론**
 
-### 4. CodeRabbit, 1억4,300만 달러 투자 유치…Agentic Change Management로 확장 — 88/100
+정부·대기업 조달 문서는 오픈/폐쇄 구분을 넘어 모델 계보, 라이선스, 데이터·칩 공급망, 안전성 평가와 업데이트 책임을 함께 요구할 가능성이 높다.
 
-**한줄요약**  
-CodeRabbit가 15억 달러 기업가치로 1억4,300만 달러를 조달하고 사람·에이전트가 만든 변경의 의도·위험·검증·배포 후 상태를 관리하는 제품군을 발표했다.
+**사업 기회**
 
-**원문 핵심문장 / 번역**  
-“AI code review only solves part of the problem.”  
-“AI 코드 리뷰는 문제의 일부만 해결한다.”
+사용 모델과 파생 계보, 라이선스·출처·안전성·공급망 증거를 자동 수집해 고객용 도입 패킷으로 내보내는 경량 서비스.
 
-**원문 요약**  
-- **FACT:** CodeRabbit는 8월 12일 Atomico·Smash Capital 공동 주도 1억4,300만 달러 시리즈 C와 15억 달러 기업가치를 발표했다. Agentic Change Management는 사람·에이전트 변경을 검증하고 주의를 배분하며 의도·영향을 설명하고 병합 후 코드 건강을 감시하는 통제 계층이다. Reuters는 조달액·기업가치와 회사가 밝힌 주 200만 건 이상 리뷰·1만7천 고객, 오픈소스 지원 1천만 달러 계획을 보도했다.
-- **INTERPRETATION:** 코드 생성이 풍부해질수록 희소 자원은 검토자의 판단과 변경 맥락이 된다.
-- **SIGNAL:** 에이전트 PR에 작성 의도, 영향 범위, 증거와 배포 후 관찰을 연결해야 한다.
-- **SPECULATION:** 한국 소규모 팀은 기존 GitHub 위에 얹는 가벼운 변경 증거 패킷을 원할 수 있다.
+**관련 태그**
 
-**왜 중요한가**  
-AI PR을 많이 만드는 것보다 검토할 가치가 있는 변경을 골라 의도·테스트·리스크를 빠르게 복구하는 능력이 개발 속도를 결정한다.
+open-weight · US-policy · AI-governance · supply-chain · model-provenance · procurement
 
-**업계 분위기**  
-독립 검증 계층에는 공감하지만 새 제품군의 실제 범위와 성과 수치는 검증을 기다린다.
+출처: [Jim Banks 상원의원 공식 발표 · 2026-08-14](https://www.banks.senate.gov/news/press-releases/sen-banks-calls-for-u-s-open-source-ai-leadership-to-counter-china/) · [Reuters · 2026-08-14](https://www.reuters.com/business/republican-senator-urges-trump-back-us-open-weight-ai-models-amid-industry-debate-2026-08-14/) · [Microsoft 공개서한 · 2026-07-24](https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/)
 
-**앞으로의 전망 — AI 추론**  
-PR은 코드 diff만이 아니라 요청 의도, 에이전트 기록, 테스트 근거, 승인과 배포 후 이상 징후를 포함하는 변경 패킷으로 진화할 가능성이 높다.
+### 3. SMIC, AI 수요로 2분기 매출 30억 달러를 넘기고 부족 공정 가격 인상 — 87/100
 
-**사업 기회**  
-GitHub PR에서 요구사항-변경-테스트-사람 승인-배포 결과를 한 장으로 묶는 한국어 변경 증거 레이어.
+**한줄요약**
 
-**관련 태그**  
-CodeRabbit · AI-code-review · agentic-SDLC · change-management · funding · governance
+SMIC가 2분기 매출 30억560만 달러와 93.7% 가동률을 기록하고 AI발 공급 부족으로 수요가 높은 웨이퍼 공정 가격을 올렸다고 밝혔다.
 
-출처: [CodeRabbit 발표 · 2026-08-12](https://www.coderabbit.ai/newsroom/coderabbit-series-c-agentic-change-management) · [제품 블로그 · 2026-08-12](https://www.coderabbit.ai/blog/introducing-agentic-change-management) · [Reuters · 2026-08-12](https://www.reuters.com/technology/ai-code-review-platform-coderabbit-valued-15-billion-latest-funding-round-2026-08-12/)
+**원문 핵심문장 / 번역**
 
-### 5. X, Phoenix 추천 스택 추가 공개…계정 가시성 진단 도입 — 86/100
+“The industrial momentum and spillover effects generated by AI will persist.”  
+“AI가 만든 산업 동력과 파급 효과는 지속될 것이다.”
 
-**한줄요약**  
-X가 For You 피드의 Phoenix 학습·서빙, 라벨·필터·점수 코드를 확대 공개하고 계정·게시물 가시성 라벨 통계를 JSON으로 받는 Under the Hood 도구를 시험한다.
+**원문 요약**
 
-**원문 핵심문장 / 번역**  
-“Phoenix reads the viewer's recent engagement history and predicts each action on a post.”  
-“Phoenix는 최근 참여 이력을 읽고 게시물에 취할 각 행동을 예측한다.”
+- **FACT:** SMIC는 8월 13일 2분기 매출 30억560만 달러, 총이익 7억6060만 달러, 매출총이익률 25.3%를 발표했다. 8월 14일 실적 설명에서 수요가 높은 공정 가격을 올렸다고 밝혔다. Reuters에 따르면 웨이퍼 출하는 전분기 대비 14%, 평균판매가격은 5.7% 상승했고 가동률은 93.7%였다. 회사는 3분기 매출 2~4% 증가를 예상한다.
+- **INTERPRETATION:** AI 투자가 첨단 GPU만이 아니라 전력·네트워크·주변 칩과 성숙 공정의 가격에도 영향을 준다.
+- **SIGNAL:** 하드웨어 제품팀은 칩 종류별 리드타임과 가격 변화를 별도 추적해야 한다.
+- **SPECULATION:** 한국 중소 제조·IoT 팀에 BOM별 AI발 원가 충격과 대체 부품을 조기에 알리는 서비스가 유용할 수 있다.
 
-**원문 요약**  
-- **FACT:** xAI의 x-algorithm 저장소는 Phoenix 학습·서빙, 합성 데이터, SimClusters, 콘텐츠 라벨·가시성 필터와 점수 가중치를 공개했다. 추천 순위는 좋아요·답글·공유·체류·차단·신고 등의 예측 확률에 가중치를 적용하고 다양성·신규 작성자 보정을 거친다. X는 최근 한 달의 계정·게시물 라벨 통계를 JSON으로 내보내는 Under the Hood 파일럿도 시작했다. TechCrunch는 코드 확대와 Grok 기반 위반 예측 일부가 제외됐다는 점을 보도했다.
-- **INTERPRETATION:** 플랫폼 설명가능성이 정책 문구에서 사용자별 영향 증거로 이동한다.
-- **SIGNAL:** 크리에이터는 도달률 변화 원인을 추측보다 라벨·필터·코드 버전으로 진단할 수 있다.
-- **SPECULATION:** 공개 코드와 사용자 JSON을 결합한 독립 가시성 분석 도구가 가능해질 수 있다.
+**왜 중요한가**
 
-**왜 중요한가**  
-한국 크리에이터와 브랜드는 단순 노출 통계보다 어떤 라벨·필터·점수 변화가 도달에 영향을 줬는지 근거를 남길 수 있다.
+AI와 무관해 보이는 전자제품도 주변 반도체 부족과 가격 상승 영향을 받을 수 있어 BOM·재고·대체품 계획을 더 일찍 조정해야 한다.
 
-**업계 분위기**  
-실행 코드와 JSON 내보내기는 환영하지만 비공개 모델, 실제 운영값 일치와 파일럿 제한을 지적한다.
+**업계 분위기**
 
-**앞으로의 전망 — AI 추론**  
-대형 플랫폼은 규제·사용자 신뢰 압력에 따라 추천 코드, 변경 로그와 계정별 영향 내보내기를 묶은 투명성 표면을 확대할 수 있다.
+매출과 가동률에는 낙관적이지만 AI가 성숙 공정과 일반 전자제품 원가까지 밀어 올릴 가능성을 경계한다.
 
-**사업 기회**  
-공개 추천 코드와 계정 JSON을 읽어 가시성 변화, 라벨과 검증 가능한 개선 실험을 설명하는 크리에이터 분석 도구.
+**앞으로의 전망 — AI 추론**
 
-**관련 태그**  
-X · Phoenix · recommendation-system · algorithm-transparency · creator-analytics · open-source
+AI 데이터센터 투자가 지속되면 첨단 가속기와 HBM뿐 아니라 전력관리·네트워크·아날로그·저장장치 공정의 공급 부족이 번갈아 나타날 수 있다.
 
-출처: [xAI 공식 GitHub · 2026-08-13](https://github.com/xai-org/x-algorithm) · [TechCrunch · 2026-08-13](https://techcrunch.com/2026/08/13/x-open-sources-its-ranking-algorithm-letting-users-see-if-theyve-been-shadowbanned/)
+**사업 기회**
+
+전자제품 BOM과 공개 실적·가격·리드타임 데이터를 연결해 부품별 공급 위험과 대체품 검토 시점을 알려주는 조기경보 도구.
+
+**관련 태그**
+
+SMIC · semiconductor · AI-demand · foundry · pricing · supply-chain
+
+출처: [SMIC/HKEX 공식 실적 · 2026-08-13](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0813/2026081300353.pdf) · [Reuters · 2026-08-14](https://www.reuters.com/world/china/chinese-chipmaker-smic-increases-prices-strong-ai-demand-2026-08-14/) · [The Wall Street Journal · 2026-08-13](https://www.wsj.com/business/earnings/smic-posts-earnings-beat-as-mature-node-orders-surge-444e75f7)
 
 ## Business Ideas
 
-### AI API Price Change Radar — 4.4/5 · ★★★★★ · Very High
+### Open-Weight Adoption Evidence Pack — 4.3/5 · ★★★★★ · Very High
 
-- **문제:** 도입 가격 만료, 시간대 요금, 캐시 단가와 고속 계층 출시가 흩어져 있어 월 원가와 마진이 예고 없이 바뀐다.
-- **고객:** 여러 LLM API를 쓰거나 도입 검토 중인 한국 1~20인 AI SaaS·자동화 팀과 프리랜서 개발자.
-- **기존 해결법:** 공급자 가격 페이지 수동 확인, Helicone·Portkey·LiteLLM 비용 로그, 스프레드시트.
-- **경쟁사:** Helicone, Portkey, LiteLLM, CloudZero.
-- **차별점:** 공식 가격표의 변경 증거를 보존하고 KST 시간대·캐시율·완료율·재시도를 반영한 시나리오와 대체 모델 경보를 제공.
-- **2주 MVP:** Google·OpenAI·DeepSeek·Anthropic 가격 페이지 스냅샷, 구조화 diff, KST 피크 변환, 사용량 CSV 기반 월 비용 시뮬레이터와 웹 알림.
+- **문제:** 모델 가중치 공개일, 라이선스, 파생 계보, 평가, 민감 기능 제한과 공급자 정책이 흩어져 고객·감사 대응 자료를 반복 작성한다.
+- **고객:** 오픈웨이트 모델을 제품·사내 업무에 쓰는 한국 1~50인 AI SaaS 팀과 SI·보안 컨설턴트.
+- **기존 해결법:** 모델 카드·GitHub·Hugging Face 수동 확인, 스프레드시트, 범용 GRC·SBOM 도구.
+- **경쟁사:** Fiddler AI, Credo AI, ModelOp, Hugging Face model cards.
+- **차별점:** 코드나 프롬프트를 수집하지 않고 공개 증거 URL과 해시로 모델 버전·계보·라이선스·평가·접근 상태를 한국어 한 장 패킷으로 만든다.
+- **2주 MVP:** 10개 모델 레지스트리, GitHub·Hugging Face·공식 블로그 스냅샷, 라이선스·가중치 공개·평가·접근 상태 체크리스트와 PDF/Markdown 내보내기.
 - **난이도:** Medium.
-- **수익화:** 개인 무료 변경 알림 + 팀별 가격 시뮬레이션 구독 + 컨설팅용 화이트라벨.
-- **반증 조건:** 15개 팀 중 5개 미만이 최근 3개월간 가격 변경을 놓쳤거나 월 2만원 이상 지불 의향을 보이면 후보에서 제외.
+- **수익화:** 무료 단일 모델 카드 + 팀별 증거 이력·고객 제출 패킷 구독 + 컨설턴트 화이트라벨.
+- **반증 조건:** 12개 팀 중 4개 미만이 고객·감사 요청 때문에 월 1회 이상 모델 증거를 다시 만들거나 월 3만원 이상 지불 의향을 보이면 보류한다.
 
-### Agentic Change Evidence Ledger — 4.2/5 · ★★★★☆ · High
+### Post-Training Benchmark Cost Comparator — 4.1/5 · ★★★★☆ · High
 
-- **문제:** 큰 에이전트 PR의 요청 의도, 변경 범위, 테스트 근거와 배포 결과가 분리되어 리뷰어가 맥락을 다시 구성한다.
-- **고객:** 코딩 에이전트와 GitHub PR을 쓰는 한국 2~30인 개발팀.
-- **기존 해결법:** PR 템플릿, CodeRabbit, GitHub checks, 배포 모니터링.
-- **경쟁사:** CodeRabbit, Graphite, LinearB, GitHub Copilot code review.
-- **차별점:** 코드를 생성하지 않고 요구사항-커밋-테스트-승인-배포 관찰 링크를 한국어 증거 패킷으로 연결.
-- **2주 MVP:** GitHub 읽기 전용 앱 또는 내보내기 파일, PR별 의도·영향·검증 체크리스트, 테스트 링크와 배포 후 확인 상태.
-- **난이도:** Medium.
-- **수익화:** 저장소당 월 구독 + 감사·회고용 내보내기.
-- **반증 조건:** 10개 팀 중 3개 미만이 PR당 맥락 복구에 15분 이상 쓰거나 읽기 전용 파일럿에 동의하면 보류.
+- **문제:** 공급자 벤치마크는 하네스·토큰 예산·도구·재시도 조건이 달라 실제 업무 비용과 품질을 비교하기 어렵다.
+- **고객:** 코딩 에이전트 모델을 비교하는 한국 개발팀과 AI 도구 판매자.
+- **기존 해결법:** 벤치마크 리더보드, 수동 파일럿, LangSmith·Braintrust 평가.
+- **경쟁사:** Artificial Analysis, OpenRouter, Braintrust, LangSmith.
+- **차별점:** 같은 저장소 업무 표본에서 모델별 완료율, 출력량, 재시도, 사람 검토와 성공 1건당 비용을 재현 가능한 설정으로 기록한다.
+- **2주 MVP:** 5개 공개 저장소의 20개 비파괴 과제, 모델별 실행 설정 입력, 결과·비용 CSV, 실패 유형과 재현 보고서.
+- **난이도:** Medium-High.
+- **수익화:** 벤치마크 리포트 판매 + 팀별 비공개 평가 프로젝트.
+- **반증 조건:** 8개 팀 중 3개 미만이 공급자 점수와 내부 결과 차이를 경험했거나 평가 예산을 배정하면 중단한다.
 
-### Creator Feed Visibility Explainer — 4.0/5 · ★★★★☆ · High
+### AI Chip Cost Spillover Monitor — 3.9/5 · ★★★★☆ · High
 
-- **문제:** 노출 하락이 콘텐츠, 라벨, 필터, 팔로워 구성 또는 알고리즘 변경 때문인지 구분하기 어렵다.
-- **고객:** X를 쓰는 한국 크리에이터, 브랜드 마케터와 소형 에이전시.
-- **기존 해결법:** X Analytics, 수동 A/B 게시, 소셜 분석 SaaS와 추측성 알고리즘 글.
-- **경쟁사:** Hypefury, Buffer, Sprout Social, Typefully.
-- **차별점:** X가 내보낸 계정 JSON과 공개 코드 버전을 연결해 가능한 원인과 반증 가능한 게시 실험을 제시.
-- **2주 MVP:** 사용자 업로드 JSON 파서, 라벨·가시성 변화 타임라인, 공개 저장소 버전 매핑, 3개 검증 실험 제안.
-- **난이도:** Medium.
-- **수익화:** 계정당 월 구독 + 에이전시 다계정 리포트.
-- **반증 조건:** Under the Hood가 한국 계정에 8주 내 확대되지 않거나 15명 중 5명 미만이 JSON을 제공하면 보류.
+- **문제:** AI 수요가 주변·성숙 공정의 가격과 리드타임에 미치는 영향을 BOM 단위로 조기에 파악하기 어렵다.
+- **고객:** 소형 전자제품·IoT·로봇 제품을 만드는 한국 5~100인 제조팀과 구매 대행사.
+- **기존 해결법:** 유통사 견적, ERP 재고, 구매 담당자 네트워크, 범용 부품 검색.
+- **경쟁사:** Octopart, SiliconExpert, DigiKey, Mouser.
+- **차별점:** 파운드리 실적·가동률·가격 발언과 사용자 BOM을 연결해 직접 AI칩이 아닌 부품의 간접 공급 위험까지 설명한다.
+- **2주 MVP:** CSV BOM 업로드, 5개 공정·부품군 매핑, 공개 실적·유통가격 변동 타임라인, 대체품 검토 알림.
+- **난이도:** High.
+- **수익화:** BOM 수·공급사 수 기준 월 구독 + 조달 리스크 리포트.
+- **반증 조건:** 10개 제조팀 중 3개 미만이 최근 1년 부품 가격·리드타임 급등을 겪었거나 BOM 공유 파일럿에 동의하면 보류한다.
 
 ## 구축 판단
 
-**후보: AI API Price Change Radar**
+**후보: Open-Weight Adoption Evidence Pack**
 
-- 종합점수: 4.4/5
+- 종합점수: 4.3/5
 - Stars: ★★★★★
 - Potential: Very High
-- 독립 근거: Google DeepMind 가격·모델 카드, DeepSeek 공식 가격표, OpenAI 공식 Ultrafast 발표, Reuters 가격 보도
+- 독립 근거: [Z.ai 공식 발표](https://z.ai/blog/glm-5.3), [Jim Banks 상원의원 공식 발표](https://www.banks.senate.gov/news/press-releases/sen-banks-calls-for-u-s-open-source-ai-leadership-to-counter-china/), [RAND 분석](https://www.rand.org/pubs/perspectives/PEA4886-1.html), [Reuters 독립 보도](https://www.reuters.com/technology/chinas-zai-says-new-model-nears-anthropics-mythos-5-cyber-defence-tests-2026-08-14/)
 - 팀·기간: 1~3인 팀이 4~8주 MVP 가능
-- 법률 게이트: 없음 — 공개 가격·변경 정보만 수집하고 법률 판단을 제공하지 않음
-- 보안 게이트: 없음 — MVP는 API 키·프롬프트·고객 원문을 수집하지 않음
-- 유료 의존성 게이트: 없음 — 공개 페이지와 사용량 CSV로 구현 가능하며 유료 API가 필수 아님
+- 법률 게이트: 없음 — 공개 메타데이터 증거를 정리하며 법률 판단을 제공하지 않음
+- 보안 게이트: 없음 — 코드·프롬프트·자격증명을 수집하지 않음
+- 유료 의존성 게이트: 없음 — 공개 출처와 로컬 업로드만으로 MVP 가능
 - Stage: Validate
 - owner_action_required: true
 - status: waiting_for_owner
@@ -226,41 +186,38 @@ X · Phoenix · recommendation-system · algorithm-transparency · creator-analy
 
 ## AI Tools
 
-- [Gemini 3.7 Flash](https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash) — 대표 업무 20건에서 완료율·토큰·재시도·지연을 기존 모델과 비교.
-- [GPT-5.6 Sol Ultrafast](https://openai.com/index/previewing-ultrafast/) — 가격 공개 후 실시간 업무에서 전체 완료시간과 추가비용을 측정.
-- [DeepSeek V4-Pro-0813](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813) — KST 비피크 배치에서 표본 품질과 비용을 평가.
-- [X For You Feed Algorithm](https://github.com/xai-org/x-algorithm) — 공개 가중치와 계정 JSON을 실제 노출 변화와 대조.
+- [GLM-5.3](https://z.ai/blog/glm-5.3) — 가중치·라이선스 공개 전에는 비민감 코딩 표본에서 API 품질만 평가하고 보안 업무는 승인 범위를 확인.
+- [Z.ai Security Disclosure Ledger](https://cvd.z.ai/) — 민감 취약점은 조직 정책과 관할 위험을 검토한 뒤 최소 정보로 제출하고 패치 상태를 별도 기록.
+- [Open-Weight Proportional Evaluation](https://www.rand.org/pubs/perspectives/PEA4886-1.html) — 모델 위험, 수정 가능성, 확산성에 따라 평가 범위와 공개 증거를 체크리스트로 변환.
 
 ## Community
 
-- [Hacker News — Gemini 3.7 Flash](https://news.ycombinator.com/item?id=49289112) — 성능·절반 가격에는 호응하지만 출력 토큰과 가격 만료를 반영한 과업당 비용을 비교.
-- [Hacker News — Ultrafast](https://news.ycombinator.com/item?id=49289844) — 속도를 반기면서도 가격, 단일 과업 지연, 품질 동일성과 도구 병목을 요구.
-- [Reddit — DeepSeek V4 Pro](https://www.reddit.com/r/LocalLLaMA/comments/1vn9it4/deepseekaideepseekv4pro0813_hugging_face/) — 에이전트 벤치마크 상승에 관심을 보이며 실제 성능 검증을 질문.
-- [Reddit — DeepSeek pricing](https://www.reddit.com/r/DeepSeek/comments/1vn81do/deepseek_just_massively_increased_their_api/) — 캐시·피크 요금 상승에 반발하며 대체 모델과 비피크 실행을 비교.
-- [Hacker News — Mistral OCR 4.1](https://news.ycombinator.com/item?id=49288889) — 구조·속도에는 관심이 있지만 가격, 로컬 처리와 경쟁 OCR 정확도를 비교.
+- [Hacker News — GLM-5.3](https://news.ycombinator.com/item?id=49294997) — 동일 기반 모델의 후학습 상승을 높이 평가하면서도 실제 저장소 재현, 토큰 예산과 공개 후 공격 체인 위험을 질문.
+- [Reddit — GLM-5.3 release](https://www.reddit.com/r/accelerate/comments/1vnyksu/glm_53_released/) — 빠른 모델 주기와 성능에는 기대하지만 실제 가중치 공개일과 로컬 요구사항을 대기.
+- [Reddit — OpenCode availability](https://www.reddit.com/r/opencodeCLI/comments/1vnzmty/glm53_is_already_on_opencode_go_plan/) — 빠른 제공은 환영하지만 신규 모델 한도, 요금 표시와 Flash 사용 비중에는 혼란.
+- [Reddit — open-weight letter](https://www.reddit.com/r/LocalLLM/comments/1vbx1hd/235_companies_and_organizations_have_signed_the/) — 오픈웨이트 경쟁과 선택권을 지지하면서도 중국 모델, 증류, 책임과 안전 규칙에는 이견.
 
 ## Skill of the Day
 
-**Effective cost per completed task**
+**Open-weight release gate matrix**
 
-모델 공급자가 토큰 단가, 속도 또는 벤치마크를 각각 강조해 실제 업무 경제성을 바로 비교하기 어려울 때 사용한다. 입출력 토큰 단가에 재시도, 완료율, 도구 호출비, 사람 검토시간과 피크 시간대를 더해 성공한 업무 1건당 비용을 계산한다.
+오픈웨이트라고 발표됐지만 API만 열렸거나 가중치·라이선스·안전성 자료가 나중에 공개되는 모델을 평가할 때 사용한다. 발표, 제한 파트너, API, 가중치, 라이선스, 독립 평가, 취약점 채널을 단계별로 나눠 미확인을 승인으로 오인하지 않는다.
 
-프롬프트: “이 모델 후보들의 가격·완료율·평균 토큰·재시도·지연·사람 검토시간을 사용해 성공 업무 1건당 비용을 계산하고 민감도 분석을 만들어줘.”
+프롬프트: “이 모델의 공개 상태를 발표·API·가중치·라이선스·독립 평가·민감 기능·취약점 대응으로 분해하고, 확인 URL과 미확인 항목 및 도입 중단 조건을 표로 만들어줘.”
 
 ## Worth Reading
 
-- **Paper:** [Simulator Collapse in Multi-Agent RL](https://arxiv.org/abs/2608.12253)
-- **GitHub:** [xai-org/x-algorithm](https://github.com/xai-org/x-algorithm)
-- **YouTube:** [Introducing Mistral OCR 4](https://www.youtube.com/watch?v=bEt4wczgGR8)
-- **Blog:** [The builder's guide to GPT-5.6](https://openai.com/index/builders-guide-to-gpt-5-6/)
+- **Paper:** [A governance horizon for ethical-use constraints in open-weight AI models](https://arxiv.org/abs/2605.24383)
+- **GitHub:** [zai-org/GLM-5](https://github.com/zai-org/GLM-5)
+- **YouTube:** [Big Tech Makes the Case for Open-Weight AI](https://www.youtube.com/watch?v=Fi03JCNG2U0)
+- **Blog:** [GLM-5.3: Frontier Coding with Emergent Cyber Capabilities](https://z.ai/blog/glm-5.3)
 
 ## 누락 출처와 검증 한계
 
-- Gemini 3.7 Flash 성능 비교는 공급자 중심이며 실제 한국어 업무 완결률은 독립 검증되지 않았다.
-- GPT-5.6 Sol Ultrafast의 14배·750 tok/s와 품질 유지 수치는 OpenAI·Cerebras 발표 중심이고 가격·일반 출시 일정은 공개되지 않았다.
-- DeepSeek V4-Pro-0813 벤치마크는 회사 발표 중심이며 새 요금은 2026-08-17 01:00 KST부터 적용될 예정이라 실제 청구 검증 전이다.
-- CodeRabbit의 주 200만 건 리뷰·1만7천 고객 수치는 회사 주장이고 새 제품군의 출시 범위는 제한적으로 공개됐다.
-- X 공개 저장소는 큰 범위를 포함하지만 Grok 기반 일부 규칙과 실제 운영 파라미터의 완전한 일치 여부는 외부 검증이 어렵다.
+- GLM-5.3 벤치마크는 Z.ai가 공개한 수치이며 독립 재현 전이다. 모델 가중치·최종 라이선스·안전성 평가 결과는 약 2주 뒤 공개 예정이라 아직 확인할 수 없다.
+- 미국 오픈웨이트 AI 육성안은 Jim Banks 상원의원의 정책 제안이며 행정부의 채택 여부, 인센티브 방식과 시행 일정은 정해지지 않았다.
+- SMIC 가격 인상은 회사 실적 발표와 경영진 발언으로 확인됐지만 공정·고객별 실제 계약 가격과 AI 수요의 정확한 구성은 공개되지 않았다.
+- Apple의 중국 전용 자체 모델과 미국의 대중국 AI 연합 초안은 Reuters 단독 보도 외 공식 확인이 없어 Top 뉴스에서 제외했다.
 
 ## 게시 상태
 
