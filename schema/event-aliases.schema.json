@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alliesy/ai-daily-intelligence/schema/event-aliases.schema.json",
+  "title": "AI Daily Intelligence Event Identity Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "namespace_uuid", "generated_from_commit", "events"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": "1.0"},
+    "namespace_uuid": {"type": "string", "format": "uuid"},
+    "generated_from_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "events": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/event"}
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_uid", "identity_seed", "canonical_key", "aliases", "merged_into_event_uid", "reason", "first_seen_date"],
+      "properties": {
+        "event_uid": {"type": "string", "format": "uuid"},
+        "identity_seed": {"type": "string", "minLength": 1},
+        "canonical_key": {"type": "string", "minLength": 1},
+        "aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "merged_into_event_uid": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string", "format": "uuid"}
+          ]
+        },
+        "reason": {"type": "string", "minLength": 1},
+        "first_seen_date": {"type": "string", "format": "date"}
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../../schema/event-aliases.schema.json",
+  "schema_version": "1.0",
+  "namespace_uuid": "da11a1ce-2026-5eed-8b37-6db4bde33f3a",
+  "generated_from_commit": "bf0b6706c56d467029f6a0531230c8800ceb7fd6",
+  "events": [
+    {
+      "event_uid": "8d56d9d2-8ac9-5487-8856-6fff0458c66f",
+      "identity_seed": "2026-08-google-ai-leadership-discovery-loop",
+      "canonical_key": "2026-08-google-ai-leadership-discovery-loop",
+      "aliases": [],
+      "merged_into_event_uid": null,
+      "reason": "Deterministic UUIDv5 bootstrap from the first canonical archive packet.",
+      "first_seen_date": "2026-08-07"
+    },
+    {
+      "event_uid": "917d1a28-7300-577a-974e-3f2ccd486cc1",
+      "identity_seed": "2026-08-meta-muse-spark-cyber-test-breach",
+      "canonical_key": "2026-08-meta-muse-spark-cyber-test-breach",
+      "aliases": [],
+      "merged_into_event_uid": null,
+      "reason": "Deterministic UUIDv5 bootstrap from the first canonical archive packet.",
+      "first_seen_date": "2026-08-07"
+    },
+    {
+      "event_uid": "5c35ff90-2eff-5e31-b89b-418c1facc793",
+      "identity_seed": "2026-08-eu-ai-act-article-50-enforcement",
+      "canonical_key": "2026-08-eu-ai-act-article-50-enforcement",
+      "aliases": [],
+      "merged_into_event_uid": null,
+      "reason": "Deterministic UUIDv5 bootstrap from the first canonical archive packet.",
+      "first_seen_date": "2026-08-07"
+    }
+  ]
+}

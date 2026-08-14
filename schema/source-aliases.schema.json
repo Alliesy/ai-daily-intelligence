@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Alliesy/ai-daily-intelligence/schema/source-aliases.schema.json",
+  "title": "AI Daily Intelligence Source Identity Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "namespace_uuid", "normalization_version", "generated_from_commit", "sources"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": "1.0"},
+    "namespace_uuid": {"type": "string", "format": "uuid"},
+    "normalization_version": {"type": "string", "minLength": 1},
+    "generated_from_commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "sources": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/source"}
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_uid", "identity_seed", "canonical_url", "aliases", "provider", "external_id", "merged_into_source_uid", "reason"],
+      "properties": {
+        "source_uid": {"type": "string", "format": "uuid"},
+        "identity_seed": {"type": "string", "minLength": 1},
+        "canonical_url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+        "aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "format": "uri", "pattern": "^https?://"}
+        },
+        "provider": {"type": ["string", "null"]},
+        "external_id": {"type": ["string", "null"]},
+        "merged_into_source_uid": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string", "format": "uuid"}
+          ]
+        },
+        "reason": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}
