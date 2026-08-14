@@ -31,6 +31,13 @@ Secret 값은 Git, 문서, Action log, 대화에 기록하지 않는다. Environ
 
 ## 최초 연결
 
+현재 Vercel project는 Git 연결 상태에서 `main` push를 Production-target deployment로 해석한다. main에는 `apps/web`이 없으므로 최근 daily commit은 배포 실패로 끝났지만, sync PR merge 전 owner가 다음 중 하나를 결정해야 한다.
+
+- 권장: Vercel에서 Production branch 자동 배포를 비활성화하거나 별도 승인 branch로 변경한다.
+- 대안: 이번 main merge가 실패한 Production-target attempt를 한 번 더 생성하는 것을 명시적으로 수용한다.
+
+이 결정 전에는 sync PR을 merge하지 않는다. Preview Supabase나 GitHub secret 설정만으로 Vercel 정책을 변경하지 않는다.
+
 1. 위 environment와 secret을 먼저 설정한다.
 2. sync infrastructure PR을 **squash가 아닌 merge commit**으로 `main`에 merge한다. 이 PR의 history bridge parent는 기존 Preview watermark 계보를 보존한다.
 3. merge push가 `packages/importer/**`와 workflow path를 포함하므로 `backfill`이 자동 실행된다.

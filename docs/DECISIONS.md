@@ -584,7 +584,7 @@
 - 근거: 현재 Preview watermark와 main은 공통 조상 이후 diverged하며 importer는 이를 의도적으로 거부한다.
 - 고려한 대안: content projection과 cursor 삭제 후 rebuild, ancestry 검증 우회 flag, 새 Supabase project 생성, Web 앱 전체를 main에 merge
 - 이유: DB나 사용자 데이터를 삭제하지 않고 importer의 기존 ancestry/CAS 검증을 약화하지 않으며, main tree에 Web 앱을 포함하거나 Production 배포하지 않는다.
-- 영향: history bridge parent를 잃는 squash/rebase merge는 금지한다. merge 전 CI에서 proposed merge snapshot 전체를 dry-run하고, merge 뒤 첫 backfill이 8월 7일 기존 packet과 8월 8~14일 archive를 reconcile하는지 확인한다.
+- 영향: history bridge parent를 잃는 squash/rebase merge는 금지한다. merge 전 CI에서 proposed merge snapshot 전체를 dry-run하고, merge 뒤 첫 backfill이 8월 7일 기존 packet과 8월 8~14일 archive를 reconcile하는지 확인한다. 현재 Vercel Git integration은 main push를 Production-target attempt로 만들므로 owner가 배포 정책을 차단하거나 해당 실패 attempt를 명시적으로 수용하기 전에는 merge하지 않는다.
 - 재검토 조건: Preview content projection을 main authoritative SHA에서 새로 rebuild해 기존 watermark가 제거될 때
 
 ## 미결정 사항

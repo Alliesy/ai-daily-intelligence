@@ -284,4 +284,5 @@
 - 최초 동작: environment secret 설정 후 sync PR merge가 전체 archive backfill을 자동 시작
 - 계보 복구: DB reset 대신 기존 Preview watermark를 보존하는 non-squash history bridge merge 사용
 - 사용자 작업: GitHub `preview` Environment에 `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` 추가
+- Owner gate: Vercel main Production-target 자동 시도를 비활성화/변경하거나 이번 실패 attempt를 명시적으로 수용
 - 미수행: main merge, Production Supabase/Vercel 변경, Cloud Scheduled Task prompt 변경
