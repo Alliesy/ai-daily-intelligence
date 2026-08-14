@@ -6,6 +6,14 @@
 
 AI Researcher → Opportunity Finder → Git Publisher → Notion Latest Publisher 순서로 실행합니다. GitHub 저장소 `Alliesy/ai-daily-intelligence`가 유일한 기록 정본입니다. Notion은 최종 열람용 최신 페이지 한 장만 갱신합니다. AI Architect, project-pm, 구현, 배포는 절대 자동 실행하지 않습니다.
 
+## 사용자 표시 언어
+
+- 새로 생성하는 JSON·Markdown·Notion의 사용자 표시용 콘텐츠는 한국어를 기본으로 합니다.
+- 뉴스 제목, 한줄 요약, FACT / INTERPRETATION / SIGNAL / SPECULATION, 중요성·전망, 사업 아이디어와 커뮤니티 요약을 한국어로 작성합니다.
+- 기업명, 제품명, 모델명, 기술명과 코드 식별자는 필요한 경우 원문 표기를 유지합니다.
+- Source의 원문 제목과 인용문은 증거 추적을 위해 원문을 유지할 수 있습니다.
+- 신규 Daily 뉴스의 사용자 표시용 `title`을 영어로만 작성하지 않습니다. legacy 데이터는 일괄 번역하지 않습니다.
+
 ## 1. 조사
 
 - KST 실행 시각 기준 직전 24시간 신규 발표와 최근 7일 중요 후속 변화를 조사합니다.

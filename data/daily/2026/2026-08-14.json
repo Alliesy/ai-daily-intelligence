@@ -13,7 +13,7 @@
   "news": [
     {
       "event_key": "2026-08-google-gemini-3-7-flash-launch",
-      "title": "Google launches Gemini 3.7 Flash for coding and agents at half the original 3.6 Flash price",
+      "title": "Google, 코딩·에이전트용 Gemini 3.7 Flash 출시…초기 가격 절반",
       "importance": "S",
       "selection_score": 94,
       "score_breakdown": {"confidence": 29, "impact": 24, "utility": 20, "recency": 15, "community": 6},
@@ -36,7 +36,7 @@
     },
     {
       "event_key": "2026-08-openai-cerebras-gpt-5-6-sol-ultrafast",
-      "title": "OpenAI previews GPT-5.6 Sol Ultrafast at up to 750 tokens per second",
+      "title": "OpenAI, 초당 최대 750토큰의 GPT-5.6 Sol Ultrafast 프리뷰 공개",
       "importance": "S",
       "selection_score": 92,
       "score_breakdown": {"confidence": 29, "impact": 24, "utility": 19, "recency": 15, "community": 5},
@@ -59,7 +59,7 @@
     },
     {
       "event_key": "2026-08-deepseek-v4-pro-0813-peak-pricing",
-      "title": "DeepSeek releases V4 Pro and shifts its API to peak/off-peak pricing",
+      "title": "DeepSeek, V4 Pro 출시…API에 피크·비피크 요금제 도입",
       "importance": "S",
       "selection_score": 90,
       "score_breakdown": {"confidence": 29, "impact": 23, "utility": 20, "recency": 15, "community": 3},
@@ -83,7 +83,7 @@
     },
     {
       "event_key": "2026-08-coderabbit-series-c-agentic-change-management",
-      "title": "CodeRabbit raises $143M and expands code review into Agentic Change Management",
+      "title": "CodeRabbit, 1억4,300만 달러 투자 유치…Agentic Change Management로 확장",
       "importance": "A",
       "selection_score": 88,
       "score_breakdown": {"confidence": 29, "impact": 22, "utility": 19, "recency": 14, "community": 4},
@@ -106,7 +106,7 @@
     },
     {
       "event_key": "2026-08-x-ranking-algorithm-under-the-hood-transparency",
-      "title": "X publishes more of its Phoenix ranking stack and adds account visibility diagnostics",
+      "title": "X, Phoenix 추천 스택 추가 공개…계정 가시성 진단 도입",
       "importance": "A",
       "selection_score": 86,
       "score_breakdown": {"confidence": 28, "impact": 21, "utility": 19, "recency": 15, "community": 3},
