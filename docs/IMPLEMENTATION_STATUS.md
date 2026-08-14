@@ -274,15 +274,19 @@
 - 대기: Google OAuth provider credential 설정 후 실제 Google 로그인 callback 통합 검증
 - 외부 설정: Google OAuth 실제 로그인은 기존 `WAITING_FOR_USER` 유지
 
-## 19. 2026-08-14 Cloud daily → Preview DB 연결 준비
+## 19. 2026-08-14 Cloud daily → Preview DB 연결 활성화
 
-- 상태: `코드 준비 중 / 외부 secret 설정 대기`
+- 상태: `완료 / 자동 동기화 활성`
 - 연결 경계: Cloud Scheduled Task는 Git main과 Notion만 갱신하고 DB credential을 받지 않음
 - sync 경계: main push → GitHub Actions → atomic importer RPC → Preview Supabase content projection
 - 보호: workflow job을 GitHub `preview` Environment에 고정하고 Preview ref가 다르면 write 전 실패
 - 범위: Web 애플리케이션 코드는 main 대상 sync PR에서 제외
-- 최초 동작: environment secret 설정 후 sync PR merge가 전체 archive backfill을 자동 시작
+- 최초 동작: PR #3을 merge commit으로 병합한 뒤 전체 archive backfill 성공
 - 계보 복구: DB reset 대신 기존 Preview watermark를 보존하는 non-squash history bridge merge 사용
-- 사용자 작업: GitHub `preview` Environment에 `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` 추가
-- Owner gate: Vercel main Production-target 자동 시도를 비활성화/변경하거나 이번 실패 attempt를 명시적으로 수용
-- 미수행: main merge, Production Supabase/Vercel 변경, Cloud Scheduled Task prompt 변경
+- GitHub 환경: `preview` Environment에 Preview 전용 URL과 service-role secret 등록 완료
+- Vercel gate: owner가 main Production-target 자동 시도를 분리한 뒤 병합 승인
+- 병합: `d72dce67f261909a83e8800ed56784b6673c9e17` (`Merge pull request #3`)
+- 실동작 검증: GitHub Actions run `31784020636` 성공, 2026-08-07~2026-08-14 브리핑 8건 모두 `applied/succeeded`
+- cursor: Preview projection이 merge commit `d72dce67f261909a83e8800ed56784b6673c9e17`까지 반영
+- 다음 동작: 이후 Cloud Scheduled Task가 main에 새 daily JSON을 push하면 동일 workflow가 증분 동기화
+- 보존: Production Supabase, Cloud Scheduled Task prompt, Notion Publisher는 변경하지 않음
