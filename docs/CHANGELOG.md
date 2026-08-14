@@ -14,6 +14,7 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 - Desktop 6-card 분석과 mobile accordion 구현
 - Source를 한국어 taxonomy·authority·verification label의 compact list로 변경하고 많은 자료에서만 filter 표시
 - Git archive, daily schema, Supabase schema/RLS, OAuth 보안 계약은 변경하지 않음
+- 검증된 `agent/web-v1` 커밋을 Vercel Preview에만 재배포하고 desktop/mobile 핵심 화면을 live 검증
 
 ## 2026-08-08
 

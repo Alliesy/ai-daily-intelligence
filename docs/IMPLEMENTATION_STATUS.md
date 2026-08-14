@@ -242,7 +242,7 @@
 
 ## 17. 2026-08-14 승인 목업 기반 UI/UX 개선
 
-- 상태: `구현·검증 완료, Vercel Preview 재배포 대기`
+- 상태: `구현·검증·Vercel Preview 재배포 완료`
 - 디자인 정본: `docs/UI_DESIGN_SPEC.md` 생성
 - 완료: 전역 newsroom typography와 compact header, 한국어 navigation label
 - 완료: News Detail 최종 콘텐츠 순서, 원문 상세 disclosure, Desktop 분석 card grid, mobile accordion, compact Opportunity/Source list
@@ -252,4 +252,7 @@
 - 로컬 확인: Desktop·Tablet·390px의 Today, News Detail, Opportunities, Trends, Saved에서 가로 overflow 없음. 원문 접기/펼치기, mobile analysis accordion, 개인 기능의 선택적 로그인 안내와 현재 Event 유지 확인
 - 품질 gate: Supabase foundation contract, importer test 14개, Web test 21개, lint, typecheck, production build 통과
 - 독립 검토 수정: legacy 누적 분석 정규화를 `FACT:`로 시작하고 네 label이 정확히 한 번 canonical 순서로 존재하는 알려진 형식에만 한정. fact 외 field는 누적 FACT에서 계산한 suffix와 전체 문자열이 정확히 일치할 때만 정리하고 그 외 structured value는 보존
-- 남은 gate: commit/push와 Vercel Preview 재배포. Google OAuth 실제 로그인은 기존대로 owner credential 대기
+- 독립 검토: 데이터 보존 우선 수정 후 최종 `READY`
+- Preview: `https://ai-daily-intelligence-preview-gohilzj20-syparks-projects.vercel.app`에서 Today와 mobile News Detail, Supabase projection, 원문 disclosure, accordion, 선택적 로그인 안내 확인
+- 배포 보안: 배포용 1시간 임시 Vercel token과 임시 전달 파일은 배포 직후 폐기·삭제
+- 남은 외부 gate: Google OAuth 실제 로그인은 기존대로 owner credential 대기. Production 승격과 main merge는 수행하지 않음
