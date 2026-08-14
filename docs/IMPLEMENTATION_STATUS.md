@@ -276,10 +276,12 @@
 
 ## 20. 2026-08-14 최신 Supabase projection 실시간 반영
 
-- 상태: `구현 및 로컬 검증 완료 / Vercel Preview 배포 확인 대기`
+- 상태: `구현·검증·Vercel Preview 배포 완료`
 - 발견: Preview Supabase는 2026-08-14까지 동기화됐지만 공개 페이지가 빌드 시점의 2026-08-07 데이터를 정적으로 유지
 - 수정: Today, News Detail, Opportunities, Trends를 요청 시 동적 렌더링하도록 명시
 - 회귀 방지: 네 공개 콘텐츠 route의 dynamic 정책을 검사하는 Web test 4개 추가
 - 검증: importer 14개 + Web 25개 test PASS, lint PASS, typecheck PASS, production build PASS
 - build 증거: `/`, `/events/[slug]`, `/opportunities`, `/trends`가 모두 dynamic server-rendered route로 출력
+- Preview: `https://ai-daily-intelligence-preview-git-agent-web-v1-syparks-projects.vercel.app`
+- live 검증: 2026-08-14 briefing, Event 5건, Source 15건, 07:02 업데이트 표시 및 console warning/error 없음
 - 보존: Supabase schema/RLS, importer, Git archive, AI Researcher, daily schema, OAuth 보안 정책 변경 없음
