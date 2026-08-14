@@ -259,7 +259,7 @@
 
 ## 18. 2026-08-14 Today 페이지 최종 목업 적용
 
-- 상태: `로컬 구현·검증 완료 / Preview 배포 대기`
+- 상태: `구현·검증·Vercel Preview 배포 완료`
 - 완료: Today 상단 인사이트와 실제 briefing metric 4개, lead Event와 compact secondary Event hierarchy
 - 완료: 사업 기회 레이더, 트렌딩 시그널, URL 중복 제거 도구·오픈소스·논문 3열 dashboard
 - 완료: Today lead Event의 좋아요·싫어요·관심·저장·공유 action과 개인 기능 요청 시 선택적 로그인 복귀
@@ -269,5 +269,7 @@
 - 브라우저 QA: 공개 Today 직접 진입, 개인 action → `/login?next=%2F`, external resource, console error 없음
 - 검증: importer 14개 + Web 21개 test PASS, lint PASS, typecheck PASS, production build PASS
 - 보존: Supabase migration/RLS, importer, Git archive, AI Researcher, daily schema, PKCE/open redirect를 변경하지 않음
-- 대기: `agent/web-v1` commit/push 후 Vercel Preview 자동 배포와 실제 URL 확인
+- Preview: `https://ai-daily-intelligence-preview-git-agent-web-v1-syparks-projects.vercel.app` (`agent/web-v1` branch alias)
+- 배포 확인: Vercel Preview `Ready`, 실제 Supabase projection의 Event 3개 렌더링, 390px overflow 0, console error 0
+- 대기: Google OAuth provider credential 설정 후 실제 Google 로그인 callback 통합 검증
 - 외부 설정: Google OAuth 실제 로그인은 기존 `WAITING_FOR_USER` 유지
