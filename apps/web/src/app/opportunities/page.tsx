@@ -2,6 +2,8 @@ import { CheckCircle2, FlaskConical, Gauge, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { getLatestBriefing } from "@/lib/content";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = { title: "사업 기회", description: "AI 변화에서 발견한 근거 기반 사업 기회" };
 
 export default async function OpportunitiesPage() {

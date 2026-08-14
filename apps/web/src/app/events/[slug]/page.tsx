@@ -12,6 +12,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { getEventRoute, getEventSlugs } from "@/lib/content";
 
+export const dynamic = "force-dynamic";
+
 type Props = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() { return (await getEventSlugs()).map((slug) => ({ slug })); }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

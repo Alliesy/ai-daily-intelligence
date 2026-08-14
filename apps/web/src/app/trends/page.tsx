@@ -3,6 +3,8 @@ import { ArrowDownRight, ArrowUpRight, Minus, Radio } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { getTrendOverview, type TrendMetricDto } from "@/lib/content";
 
+export const dynamic = "force-dynamic";
+
 type Props = { searchParams: Promise<{ window?: string | string[] }> };
 export const metadata = { title: "트렌드", description: "최근 7일·30일 AI Topic과 Entity 변화" };
 

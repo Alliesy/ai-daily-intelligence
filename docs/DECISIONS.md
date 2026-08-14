@@ -565,6 +565,17 @@
 - 영향: 현재 Preview는 Event 3, Signal 2, Opportunity 2, Resource 5와 Source 6을 표시하고 legacy 영어는 원문 fallback한다. 이미지 없는 lead story는 text-first full-width card로 정상 렌더링한다. 향후 신뢰할 수 있는 전일 집계와 time series가 projection 계약에 추가되면 증감·sparkline을 활성화할 수 있다.
 - 재검토 조건: 일별 aggregate와 반응 집계의 공개 계약이 승인될 때
 
+### D-053 — 공개 콘텐츠 라우트는 요청 시 최신 projection을 조회
+
+- 날짜: 2026-08-14
+- 상태: `confirmed`
+- 결정: Today, News Detail, Opportunities, Trends는 `force-dynamic`으로 렌더링해 각 요청에서 Preview Supabase의 최신 published projection을 조회한다. Saved의 기존 동적 렌더링 정책은 유지한다.
+- 근거: Git main → Preview Supabase backfill은 2026-08-14까지 성공했지만 기존 Vercel Preview는 빌드 시 정적으로 생성된 2026-08-07 briefing을 계속 표시했다.
+- 고려한 대안: 매일 Vercel 재배포, 시간 기반 ISR, 수동 revalidation webhook
+- 이유: Git 정본 동기화와 웹 배포를 다시 결합하지 않으면서 daily correction과 새 briefing을 즉시 공개하는 가장 작은 V1 수정이다.
+- 영향: 공개 조회 요청마다 Supabase read가 발생한다. React request cache는 동일 요청 안의 중복 조회만 제거하며 RLS와 공개 projection 경계는 바뀌지 않는다.
+- 재검토 조건: 트래픽·비용 측정 후 CDN cache 또는 tag 기반 on-demand revalidation이 필요해질 때
+
 ## 미결정 사항
 
 다음 항목은 아직 결정되지 않았다.

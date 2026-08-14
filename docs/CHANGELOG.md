@@ -4,6 +4,13 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 
 ## 2026-08-14
 
+### 최신 Supabase briefing의 Preview 즉시 반영
+
+- Today, News Detail, Opportunities, Trends의 빌드 시점 데이터 고정을 해제
+- Git main에서 Preview Supabase로 동기화된 새 briefing과 correction을 Vercel 재빌드 없이 요청 시 조회
+- 공개 projection RLS, 사용자 데이터, Auth, AI Researcher와 daily schema는 변경하지 않음
+- 동적 rendering 회귀 테스트 4개와 production route classification 검증 추가
+
 ### 승인 목업 기반 UI/UX 개선
 
 - 전역 header, typography, spacing, radius를 고밀도 newsroom 스타일로 조정

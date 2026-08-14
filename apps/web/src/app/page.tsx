@@ -17,6 +17,8 @@ import { getLatestBriefing } from "@/lib/content";
 import type { EventDto, ResourceDto } from "@/lib/content";
 import type { Importance } from "@/lib/content/types";
 
+export const dynamic = "force-dynamic";
+
 const importanceStyle: Record<Importance, string> = {
   S: "border-rose-200 bg-rose-50 text-rose-700",
   A: "border-amber-200 bg-amber-50 text-amber-700",
