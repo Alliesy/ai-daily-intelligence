@@ -3,6 +3,7 @@ import "server-only";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import type { BriefingDto, EventDto, SourceDto, TrendMetricDto, TrendOverviewDto } from "./types";
+import { buildOriginalContent, normalizeAnalysisFields, parseLabeledAnalysis } from "./presentation";
 
 type RecordValue = Record<string, unknown>;
 
@@ -56,21 +57,6 @@ function records(value: unknown): RecordValue[] {
 
 function strings(value: unknown): string[] {
   return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : [];
-}
-
-function parseAnalysis(summary: string) {
-  const labels = ["FACT", "INTERPRETATION", "SIGNAL", "SPECULATION"] as const;
-  const result: Partial<Record<(typeof labels)[number], string>> = {};
-  for (let index = 0; index < labels.length; index += 1) {
-    const label = labels[index]!;
-    const next = labels[index + 1];
-    const pattern = next
-      ? new RegExp(`${label}:\\s*([\\s\\S]*?)(?=${next}:)`, "i")
-      : new RegExp(`${label}:\\s*([\\s\\S]*)$`, "i");
-    const match = summary.match(pattern);
-    if (match?.[1]?.trim()) result[label] = match[1].trim();
-  }
-  return result;
 }
 
 function youtubeId(url: string) {
@@ -141,7 +127,8 @@ function mapSource(source: RecordValue, originalUrl: string, index: number): Sou
 
 function mapEvent(item: RecordValue): EventDto {
   const summaryRaw = text(item.summary);
-  const analysis = parseAnalysis(summaryRaw);
+  const parsed = parseLabeledAnalysis(summaryRaw);
+  const analysis = normalizeAnalysisFields({ fact: parsed.fact ?? (summaryRaw || null), interpretation: parsed.interpretation ?? null, signal: parsed.signal ?? null, speculation: parsed.speculation ?? null });
   const originalUrl = text(item.original_url);
   const sources = records(item.sources).map((source, index) => mapSource(source, originalUrl, index));
   return {
@@ -151,13 +138,14 @@ function mapEvent(item: RecordValue): EventDto {
     oneLineSummary: text(item.one_line_summary),
     importance: ["S", "A", "B"].includes(text(item.importance)) ? (item.importance as "S" | "A" | "B") : "B",
     impact: text(item.impact),
-    fact: analysis.FACT ?? (summaryRaw || null),
-    interpretation: analysis.INTERPRETATION ?? null,
-    signal: analysis.SIGNAL ?? null,
-    speculation: analysis.SPECULATION ?? null,
+    fact: analysis.fact,
+    interpretation: analysis.interpretation,
+    signal: analysis.signal,
+    speculation: analysis.speculation,
     whyItMatters: text(item.why_it_matters),
     outlook: text(item.outlook),
     businessOpportunity: text(item.business_opportunity) || null,
+    originalContent: buildOriginalContent(text(item.one_line_summary), analysis.fact),
     topics: strings(item.tags),
     entities: [],
     heroImageUrl: null,

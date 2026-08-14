@@ -239,3 +239,17 @@
 - 검증: 전체 test 29개, lint, typecheck, Supabase 연동 production build PASS; 실제 Preview Today 공개 페이지와 3개 Event 렌더링 확인
 - Google OAuth: `WAITING_FOR_USER` 유지. Google provider 활성화나 Client ID/Secret 입력은 수행하지 않음
 - Production Vercel, Production Supabase, GitHub main은 변경하지 않음
+
+## 17. 2026-08-14 승인 목업 기반 UI/UX 개선
+
+- 상태: `구현·검증 완료, Vercel Preview 재배포 대기`
+- 디자인 정본: `docs/UI_DESIGN_SPEC.md` 생성
+- 완료: 전역 newsroom typography와 compact header, 한국어 navigation label
+- 완료: News Detail 최종 콘텐츠 순서, 원문 상세 disclosure, Desktop 분석 card grid, mobile accordion, compact Opportunity/Source list
+- 완료: Today, Opportunities, Trends, Saved의 정보 밀도와 card 사용 조정
+- 데이터 처리: DB/schema 변경 없이 기존 summary와 정규화된 FACT로 rights-safe detailed summary 구성; legacy 영어는 fallback
+- 보존: Git archive, AI Researcher, daily schema, RLS, PKCE/open redirect, 사용자 격리 변경 없음
+- 로컬 확인: Desktop·Tablet·390px의 Today, News Detail, Opportunities, Trends, Saved에서 가로 overflow 없음. 원문 접기/펼치기, mobile analysis accordion, 개인 기능의 선택적 로그인 안내와 현재 Event 유지 확인
+- 품질 gate: Supabase foundation contract, importer test 14개, Web test 21개, lint, typecheck, production build 통과
+- 독립 검토 수정: legacy 누적 분석 정규화를 `FACT:`로 시작하고 네 label이 정확히 한 번 canonical 순서로 존재하는 알려진 형식에만 한정. fact 외 field는 누적 FACT에서 계산한 suffix와 전체 문자열이 정확히 일치할 때만 정리하고 그 외 structured value는 보존
+- 남은 gate: commit/push와 Vercel Preview 재배포. Google OAuth 실제 로그인은 기존대로 owner credential 대기

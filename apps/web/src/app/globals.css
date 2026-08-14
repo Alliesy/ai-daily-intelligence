@@ -2,7 +2,8 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
+  --editorial-blue: #155eef;
 }
 
 @theme inline {
@@ -19,9 +20,16 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+::selection { background: #dbeafe; color: #172554; }
+
 button, a { -webkit-tap-highlight-color: transparent; }
 
 @layer components {
-  .section-kicker { @apply text-xs font-black tracking-[0.14em] text-sky-700; }
-  .section-title { @apply mt-2 text-2xl font-black tracking-tight text-slate-950 sm:text-3xl; }
+  .section-kicker { @apply text-[11px] font-black tracking-[0.12em] text-blue-700; }
+  .section-title { @apply mt-1.5 text-xl font-black tracking-[-0.02em] text-slate-950 sm:text-2xl; }
+  .detail-section { @apply scroll-mt-20; }
+  .detail-heading { @apply flex flex-wrap items-center gap-2 text-slate-950; }
+  .detail-heading > span:first-child { @apply text-base font-black; }
+  .detail-heading > h2 { @apply text-lg font-black tracking-[-0.015em] sm:text-xl; }
+  .content-mode { @apply rounded bg-blue-50 px-2 py-1 text-[10px] font-bold text-blue-700; }
 }

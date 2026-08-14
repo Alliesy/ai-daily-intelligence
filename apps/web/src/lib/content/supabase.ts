@@ -3,6 +3,7 @@ import "server-only";
 import { createClient } from "@supabase/supabase-js";
 import type { BriefingDto, EventDto, EventRouteDto, SourceDto, TrendMetricDto, TrendOverviewDto } from "./types";
 import { mergeRedirectSlug, selectLatestOccurrence, selectLatestSourceOccurrences } from "./selection";
+import { buildOriginalContent, normalizeAnalysisFields } from "./presentation";
 
 type Row = Record<string, unknown>;
 
@@ -69,13 +70,17 @@ async function hydrateEvents(briefingId: string, occurrenceRows: Row[], sourceSc
     if (!event) return [];
     const analyses = asRows(event.event_analysis).sort((a, b) => str(b.analysis_date).localeCompare(str(a.analysis_date)));
     const selected = analyses.find((analysis) => analysis.id === occurrence.analysis_id) ?? analyses.find((analysis) => analysis.is_current === true) ?? analyses[0] ?? {};
+    const analysis = normalizeAnalysisFields({ fact: str(selected.fact) || null, interpretation: str(selected.interpretation) || null, signal: str(selected.signal) || null, speculation: str(selected.speculation) || null });
+    const title = str(occurrence.title_ko, str(event.title_ko, str(occurrence.title_original, str(event.title_original))));
+    const oneLineSummary = str(occurrence.one_line_summary_ko, str(event.one_line_summary_ko));
     return [{
-      id: str(event.id), slug: str(event.slug), title: str(occurrence.title_ko, str(event.title_ko, str(occurrence.title_original, str(event.title_original)))),
-      oneLineSummary: str(occurrence.one_line_summary_ko, str(event.one_line_summary_ko)),
+      id: str(event.id), slug: str(event.slug), title,
+      oneLineSummary,
       importance: str(occurrence.importance, str(event.importance, "B")) as EventDto["importance"],
-      impact: str(selected.impact), fact: str(selected.fact) || null, interpretation: str(selected.interpretation) || null,
-      signal: str(selected.signal) || null, speculation: str(selected.speculation) || null,
+      impact: str(selected.impact), fact: analysis.fact, interpretation: analysis.interpretation,
+      signal: analysis.signal, speculation: analysis.speculation,
       whyItMatters: str(selected.why_it_matters), outlook: str(selected.outlook), businessOpportunity: str(selected.business_opportunity) || null,
+      originalContent: buildOriginalContent(oneLineSummary, analysis.fact),
       topics: asRows(event.event_topics).map((link) => str((link.topics as Row | undefined)?.name_ko)).filter(Boolean),
       entities: asRows(event.event_entities).map((link) => { const entity = link.entities as Row | undefined; return str(entity?.display_name_ko, str(entity?.canonical_name)); }).filter(Boolean),
       heroImageUrl: str(occurrence.hero_image_url, str(event.hero_image_url)) || null,

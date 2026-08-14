@@ -532,6 +532,28 @@
 - 영향: Preview 환경 변수는 Vercel의 `preview` target에만 저장한다. 후속 자동 배포가 필요하면 main merge·Production 배포와 분리된 Git integration 정책을 별도로 승인받아 설정한다.
 - 재검토 조건: Preview 검증 완료 후 사용자가 Git 자동 배포 또는 Production 승격을 승인할 때
 
+### D-048 — 원문 상세 V1은 기존 검증 필드의 presentation projection으로 제공
+
+- 날짜: 2026-08-14
+- 상태: `confirmed`
+- 결정: `원문 기반 상세 내용`은 현재 `one_line_summary`와 정규화된 FACT만 사용해 `detailed_summary` presentation DTO로 구성한다. 외부 기사 전문이나 전체 번역을 저장하지 않고 근거 데이터가 없으면 `unavailable`로 표시한다. 이번 변경에서는 DB migration을 추가하지 않는다.
+- 근거: 기존 Git archive와 Supabase projection에는 권리 상태가 확인된 전문/번역 필드가 없지만 사건 개요와 확인된 사실은 이미 분리 가능한 형태로 존재한다.
+- 고려한 대안: UI에서 AI로 즉석 번역·확장, 빈 DB column 선추가, 외부 기사 전문 저장
+- 이유: 내용을 만들어내거나 저작권 상태를 추정하지 않으면서 승인 목업의 읽기 흐름을 제공하고 V1 과설계를 피한다.
+- 영향: legacy 영어는 원문 fallback으로 표시된다. 향후 upstream이 content mode, rights status, localized content와 provenance를 제공하는 계약이 승인되면 persistent model을 재검토한다.
+- 재검토 조건: AI Researcher 출력 계약에 검증된 상세 콘텐츠와 권리 metadata가 추가될 때
+
+### D-049 — legacy 분석 정규화는 명시적으로 확인된 누적 형식에만 적용
+
+- 날짜: 2026-08-14
+- 상태: `confirmed`
+- 결정: presentation 단계의 분석 정규화는 FACT field가 `FACT:`로 시작하고 FACT → INTERPRETATION → SIGNAL → SPECULATION label이 각각 정확히 한 번 canonical 순서로 존재할 때만 수행한다. fact 외 기존 structured field는 누적 FACT에서 계산한 canonical suffix와 전체 문자열이 정확히 일치할 때만 정리하고, 그 밖의 값은 보존한다.
+- 근거: label substring만으로 legacy row를 추정하면 정상 분석 문장이나 더 최신인 structured field를 오래된 누적 문자열로 덮을 수 있다.
+- 고려한 대안: 두 개 이상의 label만 발견하면 모든 field 덮어쓰기, DB correction migration, 정규화 제거
+- 이유: 현재 확인된 legacy 표시 결함은 고치면서 Supabase 정본과 Git fallback의 정상 구조화 값을 presentation layer가 훼손하지 않게 한다.
+- 영향: partial·out-of-order·repeated label과 label을 언급하는 일반 문장은 자동 수정하지 않는다. 해당 데이터는 upstream correction 대상이며 UI가 임의로 재해석하지 않는다.
+- 재검토 조건: importer가 누적형 analysis를 더 이상 생성하지 않으며 archive correction이 완료될 때
+
 ## 미결정 사항
 
 다음 항목은 아직 결정되지 않았다.

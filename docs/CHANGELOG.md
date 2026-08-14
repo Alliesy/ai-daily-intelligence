@@ -2,6 +2,19 @@
 
 AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 기록한다. Git daily archive와 AI Researcher 자동화 변경은 별도로 명시한다.
 
+## 2026-08-14
+
+### 승인 목업 기반 UI/UX 개선
+
+- 전역 header, typography, spacing, radius를 고밀도 newsroom 스타일로 조정
+- Today, 사업 기회, 트렌드, 저장됨의 큰 Hero와 과도한 card 사용 축소
+- News Detail 순서를 Header → Action → 원문 상세 → AI 분석 → 사업 기회 → 관련 자료로 재구성
+- 원문 기반 상세 요약의 기본 접힘, gradient preview, 자세히 보기/접기 구현
+- 명시적으로 확인된 legacy 누적 FACT 형식만 presentation 단계에서 정규화하고 정상 structured field는 보존
+- Desktop 6-card 분석과 mobile accordion 구현
+- Source를 한국어 taxonomy·authority·verification label의 compact list로 변경하고 많은 자료에서만 filter 표시
+- Git archive, daily schema, Supabase schema/RLS, OAuth 보안 계약은 변경하지 않음
+
 ## 2026-08-08
 
 ### Vercel Preview 배포

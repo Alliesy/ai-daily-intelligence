@@ -26,6 +26,12 @@ export interface SourceDto {
   isPrimary: boolean;
 }
 
+export interface OriginalContentDto {
+  mode: "translation" | "detailed_summary" | "unavailable";
+  label: string;
+  sections: { title: string; body: string }[];
+}
+
 export interface EventDto {
   id: string;
   slug: string;
@@ -40,6 +46,7 @@ export interface EventDto {
   whyItMatters: string;
   outlook: string;
   businessOpportunity: string | null;
+  originalContent: OriginalContentDto;
   topics: string[];
   entities: string[];
   heroImageUrl: string | null;

@@ -1,5 +1,11 @@
 # AI Daily Intelligence Web V1 Database Schema
 
+## 2026-08-14 원문 상세 UI 검토 결과
+
+이번 UI 개선에서는 DB schema를 변경하지 않는다. `원문 기반 상세 요약`은 기존 occurrence의 `one_line_summary_ko`와 선택된 `event_analysis.fact`를 읽기 전용 presentation DTO로 구성한다. 일반 언론의 권리 상태를 추정하거나 전문을 저장하지 않으며 데이터가 없으면 `unavailable`로 렌더링한다.
+
+향후 AI Researcher가 권리 근거와 별도의 상세 콘텐츠를 생성하는 계약이 승인될 때에만 `content_mode`, `content_rights_status`, localized content/excerpt와 provenance 필드를 migration으로 재검토한다. 그 전에는 UI 편의를 위한 빈 persistent column을 추가하지 않는다.
+
 > 상태: 구현 전 최종 기술 검토 READY — 구현 지시 대기
 > 작성일: 2026-08-07 (Asia/Seoul)
 > 대상: Supabase PostgreSQL

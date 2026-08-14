@@ -1,5 +1,11 @@
 # AI Daily Intelligence Web V1 Architecture
 
+## UI 구현 반영: 승인 목업 기반 newsroom 밀도 개선 (2026-08-14)
+
+UI 디자인 정본은 `docs/UI_DESIGN_SPEC.md`다. News Detail의 콘텐츠 순서를 Event Header → 사용자 Action → 원문 기반 상세 내용 → AI 인텔리전스 분석 → 사업 기회 → 관련 자료로 고정했다. Desktop 분석은 6개 compact card, mobile은 accordion이며 Source는 우측 column이 아닌 하단 compact list다.
+
+원문 기반 상세 내용은 현재 archive·projection이 보유한 `one_line_summary`와 정규화된 FACT만 사용해 `원문 기반 상세 요약`으로 구성한다. 전문 재게시 권한을 추정하지 않고 콘텐츠가 없으면 미확보 상태를 표시한다. Git archive, AI Researcher, Supabase RLS와 OAuth 경계는 변경하지 않는다.
+
 ## 구현 반영: 공개 Web read path (2026-08-08)
 
 ## 구현 반영: Auth와 개인 기능 (2026-08-08)
