@@ -24,6 +24,8 @@ body {
 
 button, a { -webkit-tap-highlight-color: transparent; }
 
+summary::-webkit-details-marker { display: none; }
+
 @layer components {
   .section-kicker { @apply text-[11px] font-black tracking-[0.12em] text-blue-700; }
   .section-title { @apply mt-1.5 text-xl font-black tracking-[-0.02em] text-slate-950 sm:text-2xl; }
@@ -32,4 +34,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .detail-heading > span:first-child { @apply text-base font-black; }
   .detail-heading > h2 { @apply text-lg font-black tracking-[-0.015em] sm:text-xl; }
   .content-mode { @apply rounded bg-blue-50 px-2 py-1 text-[10px] font-bold text-blue-700; }
+  .mobile-nav-item { @apply flex min-w-0 flex-col items-center justify-center gap-1 text-[10px] font-semibold text-slate-500 transition hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600; }
+  .mobile-nav-item > svg { @apply size-[19px]; }
+  .mobile-nav-item.is-active { @apply text-blue-700; }
 }

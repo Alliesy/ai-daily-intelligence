@@ -159,3 +159,30 @@ Mobile-first 한 열 구조에서 `md` 분석 2열, `lg` 분석 3열과 Today �
 5. interaction·overflow·console 확인
 6. test, lint, typecheck, build
 7. Preview 재배포 후 실제 URL 확인
+
+## Today Page — 2026-08-14 승인 목업
+
+Today는 마케팅 Hero가 아니라 `오늘의 인사이트 → 핵심 Event → 기회·신호·자료`를 한 화면에서 훑는 newsroom dashboard다.
+
+### Desktop
+
+- 전역 폭은 최대 1320px이며, header와 본문 축을 맞춘다.
+- 상단은 인사이트 설명과 실제 당일 집계 4개를 나란히 둔다. 전일 데이터가 없으면 증감 수치를 만들지 않는다.
+- 핵심 뉴스는 briefing 순서와 importance를 보존한다. 첫 Event를 lead story로, 나머지 최대 4개를 compact secondary list로 표시한다.
+- 검증 가능한 대표 이미지가 있을 때만 lead/secondary 이미지 영역을 렌더링하며, 이미지가 없으면 텍스트 column이 전체 폭을 사용한다.
+- 하단은 사업 기회 레이더, 트렌딩 시그널, 도구/오픈소스/논문을 3열로 배치한다. 실제 시계열이 없는 signal에는 sparkline이나 상승률을 만들지 않는다.
+- 전역 검색 기능이 V1 범위에 없으므로 header 검색 모양의 진입점은 검색 결과를 가장 가까이 대체하는 `핵심 뉴스` section 이동으로 명확한 accessible name을 제공한다.
+
+### Mobile
+
+- 인사이트는 연한 blue/slate 정보 카드로 압축하고 4개 metric panel은 숨긴다.
+- lead Event 다음에 secondary Event를 한 열로 쌓고, 개인 action은 5등분 icon toolbar로 제공한다.
+- 고정 하단 navigation은 오늘, 뉴스, 트렌드, 저장됨, 로그인/로그아웃을 제공한다. body에 동일 높이의 하단 여백을 둬 콘텐츠를 가리지 않는다.
+- 로그인하지 않은 사용자의 뉴스 열람을 방해하지 않으며, 개인 action을 누를 때만 `/login?next=/`로 이동한다.
+
+### Data Rules
+
+- metric은 현재 briefing의 Event, Trend Signal, Opportunity, URL 기준 중복 제거 Resource 개수만 사용한다.
+- Source 수는 현재 Event에 연결된 실제 Source 합계다.
+- 점수, 반응 수, 전일 대비, 대표 이미지, 검증 완료 수가 projection에 없으면 표시하거나 추정하지 않는다.
+- legacy 영어 제목·요약은 승인된 fallback 정책에 따라 그대로 표시한다.

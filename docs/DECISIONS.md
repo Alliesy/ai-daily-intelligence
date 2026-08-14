@@ -554,6 +554,17 @@
 - 영향: partial·out-of-order·repeated label과 label을 언급하는 일반 문장은 자동 수정하지 않는다. 해당 데이터는 upstream correction 대상이며 UI가 임의로 재해석하지 않는다.
 - 재검토 조건: importer가 누적형 analysis를 더 이상 생성하지 않으며 archive correction이 완료될 때
 
+### D-050 — Today dashboard는 실제 당일 projection만 표시
+
+- 날짜: 2026-08-14
+- 상태: `confirmed`
+- 결정: Today의 metric, lead story, secondary story, opportunity, signal, resource는 최신 published briefing의 실제 projection만 사용한다. 전일 대비, 검증 완료 수, 반응 집계, 상승률, sparkline과 대표 이미지는 해당 데이터가 있을 때만 표시한다. Resource는 URL 기준으로 표시 중복만 제거한다.
+- 근거: 승인 목업은 정보 위계의 기준이지 예시 수치를 복제하는 데이터 소스가 아니다.
+- 고려한 대안: 목업 예시 수치 고정, 배열 순서와 무관한 임의 lead 선정, placeholder 이미지, 요약에서 상승률 추정
+- 이유: Git 정본과 Supabase projection의 의미를 보존하고 사용자에게 존재하지 않는 추세·검증·반응 신호를 제공하지 않는다.
+- 영향: 현재 Preview는 Event 3, Signal 2, Opportunity 2, Resource 5와 Source 6을 표시하고 legacy 영어는 원문 fallback한다. 이미지 없는 lead story는 text-first full-width card로 정상 렌더링한다. 향후 신뢰할 수 있는 전일 집계와 time series가 projection 계약에 추가되면 증감·sparkline을 활성화할 수 있다.
+- 재검토 조건: 일별 aggregate와 반응 집계의 공개 계약이 승인될 때
+
 ## 미결정 사항
 
 다음 항목은 아직 결정되지 않았다.

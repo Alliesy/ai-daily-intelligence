@@ -80,6 +80,14 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 
 - `AUTOMATION_PROMPT.md`, `schema/daily.schema.json`, `data/daily/**`, 기존 Python validator/renderer와 Git 정본 구조는 변경하지 않았다.
 
+## 2026-08-14 — Today newsroom dashboard 개선
+
+- 승인된 desktop/mobile Today 목업을 기준으로 인사이트, 실제 당일 metric, lead/secondary Event hierarchy를 구현했다.
+- Opportunity, Trend Signal, Resource를 compact 3열 dashboard로 재구성하고 mobile에서는 한 열 흐름을 유지했다.
+- Today lead Event에 기존 RLS 기반 reaction/bookmark와 공유 action을 연결했다.
+- 모바일 하단 navigation과 desktop 뉴스 section 진입점을 추가하고 선택적 로그인 정책을 유지했다.
+- 목업의 예시 수치·대표 이미지·상승률은 복제하지 않았으며 Git archive, daily schema, importer, migration, RLS는 변경하지 않았다.
+
 ### 검증
 
 - Web TypeScript typecheck, ESLint, production build 통과

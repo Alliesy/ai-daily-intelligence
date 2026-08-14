@@ -256,3 +256,18 @@
 - Preview: `https://ai-daily-intelligence-preview-gohilzj20-syparks-projects.vercel.app`에서 Today와 mobile News Detail, Supabase projection, 원문 disclosure, accordion, 선택적 로그인 안내 확인
 - 배포 보안: 배포용 1시간 임시 Vercel token과 임시 전달 파일은 배포 직후 폐기·삭제
 - 남은 외부 gate: Google OAuth 실제 로그인은 기존대로 owner credential 대기. Production 승격과 main merge는 수행하지 않음
+
+## 18. 2026-08-14 Today 페이지 최종 목업 적용
+
+- 상태: `로컬 구현·검증 완료 / Preview 배포 대기`
+- 완료: Today 상단 인사이트와 실제 briefing metric 4개, lead Event와 compact secondary Event hierarchy
+- 완료: 사업 기회 레이더, 트렌딩 시그널, URL 중복 제거 도구·오픈소스·논문 3열 dashboard
+- 완료: Today lead Event의 좋아요·싫어요·관심·저장·공유 action과 개인 기능 요청 시 선택적 로그인 복귀
+- 완료: desktop newsroom header의 뉴스 진입점과 mobile header/menu, 5항목 fixed bottom navigation
+- 데이터 원칙: 목업 예시 수치·이미지·상승률을 복제하지 않고 Preview의 Event 3, Source 6, Signal 2, Opportunity 2, Resource 5만 표시
+- 반응형 QA: 1440px, 820px, 390px에서 가로 overflow 없음. 390px 하단 navigation이 footer와 콘텐츠를 가리지 않음
+- 브라우저 QA: 공개 Today 직접 진입, 개인 action → `/login?next=%2F`, external resource, console error 없음
+- 검증: importer 14개 + Web 21개 test PASS, lint PASS, typecheck PASS, production build PASS
+- 보존: Supabase migration/RLS, importer, Git archive, AI Researcher, daily schema, PKCE/open redirect를 변경하지 않음
+- 대기: `agent/web-v1` commit/push 후 Vercel Preview 자동 배포와 실제 URL 확인
+- 외부 설정: Google OAuth 실제 로그인은 기존 `WAITING_FOR_USER` 유지
