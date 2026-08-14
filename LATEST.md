@@ -8,7 +8,7 @@
 
 ## Top News
 
-### 1. Google launches Gemini 3.7 Flash for coding and agents at half the original 3.6 Flash price — 94/100
+### 1. Google, 코딩·에이전트용 Gemini 3.7 Flash 출시…초기 가격 절반 — 94/100
 
 **한줄요약**  
 Google이 코딩·에이전트용 Gemini 3.7 Flash를 출시하고 연말까지 입력 0.75달러·출력 3.75달러/100만 토큰의 도입 가격을 적용했다.
@@ -40,7 +40,7 @@ Google · Gemini-3.7-Flash · coding-agent · pricing · model-routing · API
 
 출처: [Google 발표 · 2026-08-13](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/) · [Google DeepMind 모델 카드 · 2026-08-13](https://deepmind.google/models/model-cards/gemini-3-7-flash/) · [Reuters · 2026-08-13](https://www.reuters.com/business/google-unveils-gemini-37-flash-ai-model-coding-agent-workflows-2026-08-13/)
 
-### 2. OpenAI previews GPT-5.6 Sol Ultrafast at up to 750 tokens per second — 92/100
+### 2. OpenAI, 초당 최대 750토큰의 GPT-5.6 Sol Ultrafast 프리뷰 공개 — 92/100
 
 **한줄요약**  
 OpenAI와 Cerebras가 GPT-5.6 Sol을 표준 처리보다 최대 14배 빠른 750 출력 토큰/초로 제공하는 API 전용 Ultrafast 제한 프리뷰를 공개했다.
@@ -72,7 +72,7 @@ OpenAI · GPT-5.6-Sol · Cerebras · Ultrafast · inference · latency
 
 출처: [OpenAI 발표 · 2026-08-13](https://openai.com/index/previewing-ultrafast/) · [Cerebras 발표 · 2026-08-13](https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai) · [TechCrunch · 2026-08-13](https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/)
 
-### 3. DeepSeek releases V4 Pro and shifts its API to peak/off-peak pricing — 90/100
+### 3. DeepSeek, V4 Pro 출시…API에 피크·비피크 요금제 도입 — 90/100
 
 **한줄요약**  
 DeepSeek가 에이전트 성능을 강화한 V4-Pro-0813을 공개하고 8월 17일 KST부터 Pro·Flash API에 피크/비피크 요금을 적용한다.
@@ -104,7 +104,7 @@ DeepSeek · V4-Pro · API-pricing · peak-pricing · agent-model · cost-operati
 
 출처: [DeepSeek 변경 로그 · 2026-08-13](https://api-docs.deepseek.com/updates/) · [DeepSeek 가격표 · 2026-08-13](https://api-docs.deepseek.com/quick_start/pricing/) · [Reuters 출시 보도 · 2026-08-13](https://www.reuters.com/world/china/deepseek-releases-official-v4-pro-model-it-steps-up-expansion-2026-08-13/) · [Reuters 가격 보도 · 2026-08-13](https://www.reuters.com/world/china/deepseek-raises-api-pricing-its-v4-models-2026-08-13/)
 
-### 4. CodeRabbit raises $143M and expands code review into Agentic Change Management — 88/100
+### 4. CodeRabbit, 1억4,300만 달러 투자 유치…Agentic Change Management로 확장 — 88/100
 
 **한줄요약**  
 CodeRabbit가 15억 달러 기업가치로 1억4,300만 달러를 조달하고 사람·에이전트가 만든 변경의 의도·위험·검증·배포 후 상태를 관리하는 제품군을 발표했다.
@@ -136,7 +136,7 @@ CodeRabbit · AI-code-review · agentic-SDLC · change-management · funding · 
 
 출처: [CodeRabbit 발표 · 2026-08-12](https://www.coderabbit.ai/newsroom/coderabbit-series-c-agentic-change-management) · [제품 블로그 · 2026-08-12](https://www.coderabbit.ai/blog/introducing-agentic-change-management) · [Reuters · 2026-08-12](https://www.reuters.com/technology/ai-code-review-platform-coderabbit-valued-15-billion-latest-funding-round-2026-08-12/)
 
-### 5. X publishes more of its Phoenix ranking stack and adds account visibility diagnostics — 86/100
+### 5. X, Phoenix 추천 스택 추가 공개…계정 가시성 진단 도입 — 86/100
 
 **한줄요약**  
 X가 For You 피드의 Phoenix 학습·서빙, 라벨·필터·점수 코드를 확대 공개하고 계정·게시물 가시성 라벨 통계를 JSON으로 받는 Under the Hood 도구를 시험한다.
