@@ -4,6 +4,14 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 
 ## 2026-08-14
 
+### Cloud daily archive → Preview Supabase 자동 동기화 활성화
+
+- Cloud Scheduled Task의 Git/Notion 책임은 유지하고 DB credential을 전달하지 않는 비동기 projection 경계 추가
+- GitHub `main` push를 Preview 전용 importer에 연결하고 승인된 project ref가 아니면 write 전 실패하도록 제한
+- 기존 Preview watermark의 계보를 보존하는 merge commit으로 PR #3 병합
+- 2026-08-07~2026-08-14 전체 archive 8건 backfill 및 importer/RLS 계약 검증 성공
+- Production Supabase, AI Researcher, Opportunity Finder, Git Publisher, Notion Publisher는 변경하지 않음
+
 ### 승인 목업 기반 UI/UX 개선
 
 - 전역 header, typography, spacing, radius를 고밀도 newsroom 스타일로 조정
