@@ -1,266 +1,251 @@
-# AI Daily Intelligence — 2026-08-16
+# AI Daily Intelligence — 2026-08-17
 
-> 정본 데이터: [GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-16.md) · [Daily JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-16.json)
+> 정본 데이터: [GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-17.md) · [Daily JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-17.json)
 
 ## 오늘의 한 문장
 
-AI 선택의 중심이 ‘가장 최신 모델’에서 공개 증거, 실제 배포 가능성, 위험 변화와 반복 사용을 함께 확인하는 운영 준비도로 이동하고 있다.
+에이전트 경쟁의 다음 기준은 기능 수가 아니라 업데이트를 되돌릴 수 있는가, 비밀정보의 목적지를 제한할 수 있는가, 비용과 감사 범위를 측정할 수 있는가다.
 
 ## Top News
 
-### 1. Anthropic, 고위험 오정렬 평가를 ‘낮음’으로 상향하고 내부 Model 2는 비공개 유지 — 94/100
+### 1. Hermes Agent, 397개 PR을 묶은 v0.20.2 안정화 릴리스 공개 — 88/100
 
 **한줄요약**
 
-Anthropic이 8월 위험 보고서에서 고위험 상황의 오정렬 위험을 ‘매우 낮음’에서 ‘낮음’으로 올리고, 더 강한 내부 Model 2는 외부 공개 계획이 없다고 밝혔다.
+Nous Research가 v0.20.1 이후 약 397개 PR과 967개 커밋을 묶어 데스크톱·MCP·게이트웨이·cron·인증·설치 안정성을 보강한 Hermes Agent v0.20.2를 배포했다.
 
 **원문 핵심문장 / 번역**
 
-“Overall risk assessment: Low (an increase from our previous assessment of ‘very low’).”  
-“전체 위험 평가는 낮음이며, 이전의 ‘매우 낮음’에서 상향됐다.”
+“This tag rolls up the ~397 PRs merged since v0.20.1 into a stable tagged release for downstream consumers.”  
+“v0.20.1 이후 병합된 약 397개 PR을 다운스트림 사용자를 위한 안정 태그로 묶었다.”
 
 **원문 요약**
 
-- **FACT:** Anthropic은 8월 위험 보고서에서 Mythos 5와 미공개 Model 2를 내부 코딩·데이터 생성·에이전트 업무에 많이 사용한다고 밝혔다. 고위험 상황 오정렬 위험은 최근 사이버 평가 사고와 불확실성을 반영해 ‘매우 낮음’에서 ‘낮음’으로 올렸다. Claude가 생산 코드베이스에 병합되는 코드의 대다수를 작성하며 내부 AI R&D가 유의미하게 빨라졌지만 아직 2배는 아니라고 평가했다. Model 2는 외부 공개 계획이 없다. Axios가 보고서 핵심을 독립 보도했다.
-- **INTERPRETATION:** 모델 능력 평가가 포화될수록 조직은 내부 배포와 사고·완화 통제를 포함한 운영 증거로 출시 결정을 설명해야 한다.
-- **SIGNAL:** 기업도 모델 버전, 사용 범위, 위험 추정 변화와 완화 상태를 함께 기록해야 한다.
-- **SPECULATION:** 프런티어 모델 조달에서 분기별 위험 보고서 diff와 미확인 항목을 요구하는 절차가 표준화될 수 있다.
+- **FACT:** Nous Research는 8월 16일 Hermes Agent v0.20.2를 공개했다. v0.20.1 이후 약 967개 커밋, 1,279개 파일, 397개 PR을 묶었으며 멀티 게이트웨이 연결, MCP 상태 점검, Windows 업데이트 탐지, 모델 라우팅 유지, cron 강화, 프로필 범위 인증과 Linux·Windows 설치 안정성을 포함한다. 상세 큐레이션 노트는 v0.21.0에서 제공할 예정이다.
+- **INTERPRETATION:** 변경량이 큰 에이전트 프레임워크에서는 최신 커밋보다 재현 가능한 안정 태그와 회귀검증 범위가 더 중요한 도입 기준이 된다.
+- **SIGNAL:** 팀은 에이전트 업데이트 전에 설정·자격증명·cron·MCP·복구 경로를 버전별로 검사해야 한다.
+- **SPECULATION:** 에이전트 프레임워크별 릴리스 위험을 요약하는 업그레이드 승인 패킷 수요가 생길 수 있다.
 
 **왜 중요한가**
 
-한국 팀도 모델 카드 한 장보다 공급자의 위험 추정 변화, 평가 한계, 내부 사고와 접근 통제를 추적해야 장기 의존 위험을 판단할 수 있다.
+개인이나 1~3인 팀도 에이전트를 상시 실행한다면 업데이트 한 번이 예약 작업, 인증과 연결 도구 전체에 영향을 줄 수 있어 변경량과 복구 절차를 함께 봐야 한다.
 
 **업계 분위기**
 
-186쪽 위험 보고서 공개는 환영하지만 평가 포화, 내부 모델 비공개와 회사 자체 위험 판정에 대한 독립 검증 부족을 우려한다.
+안정 태그와 Windows·MCP·cron 보강은 환영하지만 사흘 만의 대규모 변경량과 v0.21.0까지 미뤄진 완전한 릴리스 노트를 경계한다.
 
 **앞으로의 전망 — AI 추론**
 
-AI 추론: 프런티어 모델 공급자는 출시별 시스템 카드와 별도로 조직 전체의 위험·사고·내부 사용을 주기적으로 공개하고, 고객은 이를 버전별 도입 승인 근거로 보존하게 될 가능성이 높다.
+AI 추론: 오픈소스 에이전트 프로젝트는 기능 속도와 별개로 장기지원 태그, 자동 마이그레이션 검사와 구성 백업·복구 증거를 강화할 가능성이 높다.
 
 **사업 기회**
 
-공급자 위험 보고서와 시스템 카드를 버전별로 비교해 위험 추정, 사고, 완화 조치와 미확인 항목을 고객용 변경 패킷으로 만드는 모니터.
+GitHub 릴리스와 구성 스키마를 비교해 변경 영향, 테스트 체크리스트와 롤백 순서를 한 장으로 만드는 에이전트 업그레이드 위험 요약기.
 
 **관련 태그**
 
-Anthropic · Model-2 · risk-report · misalignment · automated-R&D · model-governance
+Hermes-Agent · Nous-Research · MCP · cron · release-engineering · agent-operations
 
-출처: [Anthropic · 2026-08-14](https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf) · [Axios · 2026-08-14](https://www.axios.com/2026/08/14/anthropic-model-2-ai-risk)
+출처: [Nous Research GitHub · 2026-08-16](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16)
 
-### 2. Qwen, Apache 2.0 기반 27B 멀티모달 오픈웨이트 Qwen3.8-27B 공개 — 93/100
+### 2. OpenClaw, 비밀정보의 HTTPS 목적지를 고정하는 fail-closed 반출 통제 도입 — 87/100
 
 **한줄요약**
 
-Qwen이 이미지·영상 이해, 26만 토큰 기본 문맥과 최대 100만 토큰 확장을 지원하는 27B 밀집형 Qwen3.8-27B 가중치를 Apache 2.0으로 공개했다.
+OpenClaw 2026.8.1-beta.2가 저장된 각 비밀값을 허용된 HTTPS 호스트에만 치환하도록 제한하고, 미등록 목적지에서는 평문 반출 전에 실패하도록 바꿨다.
 
 **원문 핵심문장 / 번역**
 
-“Qwen3.8-27B brings these advances to a compact, deployment-friendly dense model.”  
-“Qwen3.8-27B는 이러한 향상을 배포 친화적인 소형 밀집 모델로 제공한다.”
+“Secret egress substitution fails closed until each secret has at least one exact allowed host.”  
+“각 비밀값에 정확한 허용 호스트가 지정될 때까지 비밀정보 치환은 차단된다.”
 
 **원문 요약**
 
-- **FACT:** Qwen은 8월 14일 Qwen3.8-27B 모델 가중치와 설정을 Hugging Face에 공개했다. 라이선스는 Apache 2.0이며 27B 밀집형 언어모델과 비전 인코더, 이미지·영상 이해, 사고 모드 제어를 제공한다. 기본 문맥은 262,144토큰이고 YaRN으로 최대 100만 토큰까지 확장할 수 있다. Qwen 보고 수치는 Terminal Bench 2.1 73.0, SWE-bench Pro 61.7, OSWorld-Verified 84.3이다. Unsloth와 LM Studio 커뮤니티 양자화가 하루 안에 등장했지만 독립 품질 재현은 초기다.
-- **INTERPRETATION:** 오픈모델 경쟁에서 20~30B급은 개인 하드웨어와 실무 에이전트 사이의 핵심 배포 구간이 됐다.
-- **SIGNAL:** 모델 선택은 공개 점수보다 VRAM, 양자화, 문맥 길이와 실제 저장소 업무의 성공률로 검증해야 한다.
-- **SPECULATION:** 한국어 로컬 업무용 모델 카드와 하드웨어별 실행성 비교 수요가 커질 수 있다.
+- **FACT:** OpenClaw는 8월 15일 2026.8.1-beta.2를 공개했다. 공유 비밀 저장소의 각 항목에 정확한 HTTPS 목적지 호스트를 연결하고, 등록되지 않은 목적지에서는 평문 치환 전에 실패한다. CLI·Gateway RPC·Control UI에 동일 정책을 적용하며 임의 실행형 플러그인에는 명시적 강제 설치 경고도 추가했다. 공식 보안 문서는 OpenClaw가 적대적 다중 사용자 경계가 아니며 강한 격리에는 별도 게이트웨이·OS 사용자·호스트가 필요하다고 명시한다.
+- **INTERPRETATION:** 에이전트 보안은 키를 숨기는 것에서 키가 어디로 나갈 수 있는지를 제한하는 방향으로 이동한다.
+- **SIGNAL:** 자격증명마다 목적지 허용 목록과 실패 모드를 테스트해야 한다.
+- **SPECULATION:** 여러 에이전트 런타임의 비밀정보 목적지 정책을 정적 검사하는 도구가 독립 제품군으로 발전할 수 있다.
 
 **왜 중요한가**
 
-클라우드 API 비용이나 데이터 반출이 부담인 한국 소형 팀이 상용 친화 라이선스 모델을 로컬에서 시험할 수 있지만, 긴 문맥과 멀티모달 사용 시 메모리·속도 검증이 필수다.
+외부 API와 MCP를 많이 연결하는 소형 팀은 프롬프트 지시만으로 자격증명이 다른 호스트로 전송되지 않도록 목적지 기반 방어를 추가할 수 있다.
 
 **업계 분위기**
 
-27B급 성능과 Apache 2.0에는 강하게 호응하지만 16GB VRAM 한계, 느린 프리필, 긴 사고 출력과 공급자 벤치마크 편향을 지적한다.
+fail-closed 목적지 제한에는 긍정적이지만 프리릴리스이며 브라우저·하위 에이전트·외부 하네스까지 자동 보호되는 것은 아니라는 점을 강조한다.
 
 **앞으로의 전망 — AI 추론**
 
-AI 추론: 중형 오픈웨이트 모델은 단일 성능표보다 하드웨어별 양자화·처리량·긴 문맥 안정성과 도구 하네스 호환성을 묶어 배포 단위로 평가받게 될 가능성이 높다.
+AI 추론: 에이전트 플랫폼은 비밀값별 호스트·도구·세션 허용 범위와 사용 감사 로그를 기본 정책으로 제공하고, 조달 체크리스트도 이를 요구하게 될 가능성이 높다.
 
 **사업 기회**
 
-공식 모델 카드와 커뮤니티 실행 결과를 결합해 GPU·RAM별 권장 양자화, 실제 처리량, 라이선스와 업무 표본 결과를 한 장으로 만드는 로컬 모델 준비도 카드.
+에이전트 설정에서 비밀값별 목적지, 와일드카드, 외부 하네스 우회와 실패 동작을 검사해 수정 가능한 정책 파일을 만드는 비밀정보 반출 정책 검사기.
 
 **관련 태그**
 
-Qwen · Qwen3.8-27B · open-weights · Apache-2.0 · multimodal · local-AI
+OpenClaw · secret-egress · fail-closed · agent-security · credentials · plugins
 
-출처: [Qwen · 2026-08-14](https://huggingface.co/Qwen/Qwen3.8-27B) · [Unsloth · 2026-08-15](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF) · [Hacker News · 2026-08-15](https://news.ycombinator.com/item?id=49299605)
+출처: [OpenClaw GitHub · 2026-08-15](https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2) · [OpenClaw Secrets](https://docs.openclaw.ai/cli/secrets) · [OpenClaw Security](https://docs.openclaw.ai/gateway/security)
 
-### 3. Hugging Face, 오픈모델 296만 개와 다운로드·관심의 큰 괴리를 데이터로 공개 — 90/100
+### 3. NVIDIA, 30B 중 3B만 활성화하는 에이전트용 Nemotron 3.5 Lightning 공개 — 86/100
 
 **한줄요약**
 
-Hugging Face가 2026년 공개 모델 저장소가 243만 개에서 296만 개로 늘었지만 1.5%가 다운로드의 99.2%를 차지하고 최신 관심과 실제 채택은 거의 겹치지 않는다고 분석했다.
+NVIDIA가 Mamba-2·MoE·Attention을 섞어 총 30B 중 3B 파라미터만 활성화하고 최대 100만 토큰 문맥과 여러 추측 디코딩 방식을 제공하는 Nemotron 3.5 Lightning을 공개했다.
 
 **원문 핵심문장 / 번역**
 
-“Exactly one repository appears in both lists.”  
-“다운로드 상위 25개와 좋아요 상위 25개에 동시에 든 저장소는 단 하나다.”
+“The model has 3B active parameters and 30B parameters in total.”  
+“이 모델은 총 300억 개 가운데 30억 개 파라미터를 활성화한다.”
 
 **원문 요약**
 
-- **FACT:** Hugging Face는 8월 14일 1~8월 Hub 데이터를 분석한 보고서를 공개했다. 공개 모델 저장소는 243만에서 296만 개로 늘었지만 85.6%는 평생 다운로드 200회 미만이고 1.5%가 전체 다운로드의 99.2%를 차지했다. 올해 다운로드 상위 25개와 좋아요 상위 25개에 동시에 든 저장소는 하나뿐이다. 공식 GGUF 저장소 선언은 464% 늘었다. 별도 agent-usage 데이터는 7월 Hub의 식별된 에이전트 요청 중 Claude Code 44.4%, Codex 20.8%를 기록했지만 전체 시장 점유율이 아니다.
-- **INTERPRETATION:** 관심은 신모델에, 실제 의존은 오래되고 안정된 소형 모델과 배포 형식에 축적된다.
-- **SIGNAL:** 제품팀은 출시 화제성과 운영 채택 지표를 별도 점수로 관리해야 한다.
-- **SPECULATION:** 모델 도입 의사결정에 다운로드 지속성, 배포 포맷, 하드웨어와 에이전트 트래픽을 결합한 증거 서비스가 생길 수 있다.
+- **FACT:** NVIDIA는 8월 11일 Nemotron 3.5 Lightning 30B-A3B의 BF16·NVFP4·기본 체크포인트와 MTP·DSpark·DFlash 보조 체크포인트를 공개했다. 모델은 Mamba-2, MoE와 일부 Attention 층을 섞고 총 30B 중 3B를 활성화한다. 공식 카드는 최대 100만 토큰 문맥, 상업적 사용 가능, 장시간 자율 에이전트와 로컬 추론을 주요 용도로 제시한다. 독립 테스트에서는 16GB 환경의 속도와 256K 기억은 긍정적이지만 복잡한 코딩·창작 결과는 불완전하다는 사례가 나왔다.
+- **INTERPRETATION:** 에이전트용 모델 평가는 정답률뿐 아니라 활성 파라미터, 문맥 유지, 초당 토큰과 수정 횟수를 함께 봐야 한다.
+- **SIGNAL:** 중형 MoE 모델이 반복 실행용 저비용 워커 후보로 늘고 있다.
+- **SPECULATION:** 강한 계획 모델과 빠른 실행 모델을 나누는 개인용 다중 모델 라우팅이 보편화될 수 있다.
 
 **왜 중요한가**
 
-한국 소형 팀은 최신 모델을 따라가기보다 자기 환경에서 유지되는 배포 포맷과 실제 사용량을 기준으로 후보를 좁혀야 전환 비용을 줄일 수 있다.
+한국 개인 개발자도 16~24GB급 환경에서 긴 문맥 에이전트 워커를 시험할 선택지가 늘지만, 한국어·복잡 코딩과 라이선스 조건을 직접 검증해야 한다.
 
 **업계 분위기**
 
-공개 원자료에는 호응하지만 다운로드가 실제 사용자 수나 품질을 뜻하지 않고 User-Agent 기반 에이전트 통계에도 누락·자기신고 편향이 있음을 강조한다.
+3B 활성 구조와 16GB 실행 가능성에는 호응하지만 복잡한 코딩 품질, NVIDIA 중심 하네스와 OpenMDW 라이선스 해석을 확인하려 한다.
 
 **앞으로의 전망 — AI 추론**
 
-AI 추론: 오픈모델 플랫폼은 좋아요·다운로드 외에 검증된 실행 환경, 양자화 서명, 유지보수 상태와 업무별 사용을 묶은 채택 지표를 강화할 가능성이 높다.
+AI 추론: 장시간 에이전트는 하나의 대형 모델보다 계획·검토 모델과 저비용 실행 워커를 역할별로 조합하고, 처리량과 실패 복구 비용을 기준으로 라우팅할 가능성이 높다.
 
 **사업 기회**
 
-모델의 출시 관심, 실제 다운로드 지속성, 라이선스·배포 포맷·하드웨어 검증을 분리해 팀별 후보 목록을 만드는 채택 신호 대시보드.
+사용자 GPU·RAM과 업무별 호출 패턴을 입력하면 활성 파라미터·문맥·처리량과 실패 비용을 계산해 계획/실행 모델 조합을 비교하는 로컬 에이전트 용량표.
 
 **관련 태그**
 
-Hugging-Face · open-models · adoption · downloads · quantization · agent-usage
+NVIDIA · Nemotron-3.5-Lightning · MoE · Mamba-2 · speculative-decoding · local-agent
 
-출처: [Hugging Face · 2026-08-14](https://huggingface.co/blog/state-of-open-models-summer-2026) · [Hugging Face GitHub · 2026-08-14](https://github.com/huggingface/blog/blob/main/state-of-open-models-summer-2026.md) · [Hugging Face · 2026-08-03](https://huggingface.co/datasets/huggingface/agent-usage)
+출처: [NVIDIA · 2026-08-11](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4) · [TNG Technology Consulting · 2026-08-12](https://huggingface.co/blog/tngtech/making-nvidia-nemotron-35-lightning-see) · [Reddit · 2026-08-16](https://www.reddit.com/r/AIProgrammingHardware/comments/1vo2w5a/nvidia_nemotron_35_lightning_30b_a3b_tested_16gb/)
 
-### 4. OpenAI, ChatGPT 프로젝트 메모리 전환·대화형 퀴즈와 Linux 앱 글로벌 프리뷰 확대 — 86/100
+### 4. Anthropic, 로컬 Cowork·Claude Code 세션 원문을 Compliance API에 추가 — 84/100
 
 **한줄요약**
 
-OpenAI가 대화형 퀴즈, 기존 프로젝트의 메모리 모드 전환, Free·Go의 Think와 Ubuntu·Debian·Fedora용 ChatGPT·Codex Linux 앱 글로벌 프리뷰를 발표했다.
+Anthropic이 Enterprise 조직을 대상으로 사용자 기기에서 실행된 Cowork·Claude Code 세션 목록, 메타데이터와 메시지 원문을 조회하는 Compliance API를 베타로 제공한다.
 
 **원문 핵심문장 / 번역**
 
-“Use ChatGPT and Codex on Linux.”  
-“Linux에서 ChatGPT와 Codex를 사용할 수 있다.”
+“The Compliance API now returns transcripts of Cowork and Claude Code sessions started on your users’ machines.”  
+“Compliance API가 사용자 기기에서 시작된 Cowork와 Claude Code 세션 원문을 반환한다.”
 
 **원문 요약**
 
-- **FACT:** OpenAI는 8월 14일 모든 소비자·Edu 요금제에 대화형 퀴즈를 추가하고, 조건을 충족하는 비공유 프로젝트에서 새 프로젝트를 만들지 않고 기본·프로젝트 전용 메모리를 전환할 수 있게 했다. Free·Go 사용자는 웹에서 Think를 선택할 수 있다. Linux 데스크톱 앱은 Ubuntu 24.04/26.04, Debian 13, Fedora 43/44에서 글로벌 공개 프리뷰로 제공되며 내장 브라우저와 Chrome 제어를 지원하지만 다른 데스크톱 앱 제어는 아직 지원하지 않는다. 공식 다운로드 페이지가 Linux 제공을 확인한다.
-- **INTERPRETATION:** AI 작업공간의 차별점이 모델뿐 아니라 기억 범위, 학습 상호작용과 로컬 실행 표면으로 이동한다.
-- **SIGNAL:** 팀은 프로젝트별 기억 격리와 브라우저 권한을 명시적으로 점검해야 한다.
-- **SPECULATION:** 기억 설정·연결 도구·브라우저 권한을 프로젝트별 정책으로 검사하는 보조 도구가 필요해질 수 있다.
+- **FACT:** Anthropic은 8월 11일 Claude Enterprise용 Compliance API에 로컬 Cowork·Claude Code 세션을 추가했다. 조직 세션 목록, 개별 세션 메타데이터와 메시지를 기존 Compliance Access Key의 `read:compliance_user_data` 범위로 조회할 수 있다. 8월 3일 추가된 웹·모바일 Cowork 원격 세션 조회에 이어 로컬 실행까지 감사 범위를 확장한 것이다.
+- **INTERPRETATION:** AI 에이전트 도입에서 로컬 실행은 더 이상 감사 밖의 사각지대로 간주되기 어렵다.
+- **SIGNAL:** 조직은 수집 범위, 접근자, 보존기간, 삭제와 직원 고지 정책을 도입 전에 정해야 한다.
+- **SPECULATION:** 원문 전체를 저장하지 않고 정책 위반 근거만 최소 수집하는 프라이버시 보존형 감사 계층이 필요해질 수 있다.
 
 **왜 중요한가**
 
-한국 개발자와 개인 사용자는 Linux에서도 동일한 ChatGPT·Codex 작업공간을 쓰고 프로젝트 기억 범위를 바꿀 수 있지만, 프리뷰의 브라우저 권한과 지원 범위를 확인해야 한다.
+회사 코드와 업무 맥락을 다루는 에이전트는 사고 조사 가능성을 높이는 동시에 직원·고객 데이터의 과잉 수집 위험도 키우므로 기술 설정과 운영 정책을 함께 설계해야 한다.
 
 **업계 분위기**
 
-Linux 정식 제공과 메모리 전환을 반기지만 배포판 제한, 프리뷰 안정성, 브라우저 자동화 권한과 다른 앱 제어 부재를 확인하려는 분위기다.
+감사 가능성은 환영하지만 세션 원문 접근 권한, 보존 범위와 직원 감시에 대한 명확한 정책이 없으면 도입 위험이 크다는 분위기다.
 
 **앞으로의 전망 — AI 추론**
 
-AI 추론: 데스크톱 AI 앱은 운영체제별 기능 격차를 줄이고 프로젝트 메모리, 브라우저·파일·연결도구 권한을 하나의 정책 표면으로 제공하게 될 가능성이 높다.
+AI 추론: 기업용 에이전트 플랫폼은 세션 감사 API, 데이터 지역, 추론 전 승인과 보존 정책을 하나의 관리면으로 통합할 가능성이 높다.
 
 **사업 기회**
 
-프로젝트별 메모리·브라우저·연결 도구 권한과 데이터 경계를 사용자가 이해하기 쉬운 체크리스트로 점검하는 개인용 AI 워크스페이스 감사 도구.
+조직의 에이전트 세션 수집 범위·보존기간·권한을 시각화하고 원문 대신 최소 증거만 남기도록 정책 초안을 생성하는 감사 설정 점검기.
 
 **관련 태그**
 
-OpenAI · ChatGPT · Codex · Linux · project-memory · study-tools
+Anthropic · Claude-Code · Cowork · Compliance-API · audit · privacy
 
-출처: [OpenAI · 2026-08-14](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) · [OpenAI · 2026-08-14](https://chatgpt.com/download/)
+출처: [Anthropic · 2026-08-11](https://platform.claude.com/docs/en/release-notes/overview) · [Compliance content data](https://platform.claude.com/docs/en/manage-claude/compliance-content-data)
 
 ## Business Ideas
 
-### Local Open-Model Readiness Card — 4.3/5 · ★★★★★ · Very High
+### Agent Release Upgrade Risk Digest — 4.1/5 · ★★★★☆ · High
 
-- **문제:** 모델 카드의 파라미터·문맥·점수와 실제 GPU·RAM·양자화별 속도·메모리·품질이 달라 설치 전에 실행 가능성과 비용을 판단하기 어렵다.
-- **고객:** 로컬·사내 환경에서 오픈웨이트 모델을 시험하는 한국 1~30인 AI 제품팀, 개발자와 보안 민감 조직
-- **기존 해결법:** Hugging Face 카드, Reddit·Hacker News 후기, Unsloth·LM Studio 양자화 페이지, 수동 스프레드시트
+- **문제:** 수백 개 PR이 짧은 기간에 묶여 나오면 설정·인증·예약 작업·플러그인에 미치는 영향과 필수 회귀시험을 빠르게 파악하기 어렵다.
+- **고객:** 오픈소스 에이전트·MCP 도구를 상시 운영하는 한국 1~30인 개발팀과 자동화 컨설턴트
+- **기존 해결법:** GitHub 릴리스 노트 수동 읽기, Dependabot, 테스트 체크리스트와 수동 백업
+- **경쟁사:** Renovate, Dependabot, Release Alert, Changesets
+- **차별점:** 버전 차이를 기능 목록이 아니라 구성 키, 자격증명, cron, MCP 연결과 롤백 가능성 기준으로 분류해 한국어 승인 패킷으로 만든다.
+- **2주 MVP:** OpenClaw·Hermes Agent 2개 저장소의 릴리스·diff 수집, 영향 경로 분류, 15개 회귀시험과 백업·롤백 Markdown 생성.
+- **난이도:** Medium
+- **수익화:** 저장소 수 기준 월 구독 + 컨설턴트용 고객별 승인 보고서
+- **반증 조건:** 10개 팀 중 3개 미만이 월 1회 이상 에이전트 업데이트를 보류하거나 릴리스 검토에 30분 이상 쓰면 중단한다.
+
+### Secret-Egress Policy Checker — 4.2/5 · ★★★★☆ · High
+
+- **문제:** 비밀값을 안전하게 저장해도 에이전트·플러그인·외부 하네스가 허용되지 않은 목적지로 전송할 수 있는지 구성만 보고 판단하기 어렵다.
+- **고객:** API 키와 MCP 자격증명을 사용하는 한국 개인 자동화 개발자, 소형 SaaS팀과 보안 담당자
+- **기존 해결법:** Vault·1Password, 클라우드 Secret Manager, 방화벽·프록시, 수동 설정 리뷰
+- **경쟁사:** HashiCorp Vault, Infisical, Doppler, OPA
+- **차별점:** 비밀값 자체를 읽지 않고 에이전트 구성의 목적지 허용 목록, 우회 경로와 fail-open 동작만 정적 검사한다.
+- **2주 MVP:** OpenClaw 구성 파일 로컬 검사, 비밀값별 허용 호스트 표, 위험한 와일드카드·외부 하네스 경고, 수정 패치 미리보기와 Markdown 보고서.
+- **난이도:** Medium
+- **수익화:** 개인용 무료 CLI + 팀 정책·CI 검사 구독
+- **반증 조건:** 15명 중 5명 미만이 에이전트 자격증명 목적지를 문서화하거나 CI 차단 규칙을 원하면 보류한다.
+
+### Local Agent Model Capacity Sheet — 4.1/5 · ★★★★☆ · High
+
+- **문제:** 활성 파라미터·양자화·문맥 길이와 실제 처리량·실패 수정 비용을 함께 비교할 수 없어 모델 선택이 반복 시행착오가 된다.
+- **고객:** 16~48GB GPU·통합 메모리에서 로컬 에이전트를 운영하려는 한국 개인 개발자와 1~3인 팀
+- **기존 해결법:** 모델 카드, 커뮤니티 벤치마크, LM Studio·Ollama 모델 목록과 수동 스프레드시트
 - **경쟁사:** Hugging Face, OpenRouter, Artificial Analysis, llm-bench.io
-- **차별점:** 공식 라이선스·가중치·문맥과 검증 가능한 하드웨어 실행 결과를 분리하고, 한국 사용자의 GPU·RAM·업무 표본에 맞춘 권장 양자화와 중단 조건을 한 장으로 제공한다.
-- **2주 MVP:** Qwen·Gemma·Muse·GLM 12개 모델의 공식 카드 수집, GPU/RAM 입력, 커뮤니티 실행 링크, 예상 메모리·권장 양자화, 10개 비파괴 업무 표본과 Markdown 내보내기.
+- **차별점:** 계획 모델과 실행 워커를 분리해 장시간 에이전트 한 작업의 메모리, 토큰·시간 비용과 재시도 비용을 하드웨어별로 계산한다.
+- **2주 MVP:** Nemotron·Qwen·Muse 8개 모델, GPU/RAM 입력, 문맥·양자화별 예상 메모리, 세 가지 에이전트 업무의 처리량·수정 횟수 기록과 CSV 내보내기.
 - **난이도:** Medium
-- **수익화:** 개인 무료 카드 + 팀별 사내 모델 후보·벤치 결과 이력 구독 + 컨설턴트용 보고서 내보내기
-- **반증 조건:** 15명 중 5명 미만이 모델 설치 전 하드웨어 적합성 확인에 30분 이상 쓰거나 월 2만원 이상 지불 의향을 보이면 후보에서 제외한다.
-
-### Frontier Risk Report Diff Monitor — 4.2/5 · ★★★★☆ · High
-
-- **문제:** 수백 쪽 위험 보고서와 시스템 카드에서 위험 추정, 사고, 완화 조치와 미확인 항목의 변화를 매번 수동으로 찾아야 한다.
-- **고객:** 프런티어 AI API를 도입한 한국 SaaS·보안·감사팀과 AI 컨설턴트
-- **기존 해결법:** 공급자 블로그·PDF 수동 비교, 범용 규제 뉴스레터, GRC 도구
-- **경쟁사:** Credo AI, Holistic AI, ModelOp, IAPP AI Governance Center
-- **차별점:** 법률 판단 대신 원문 문장·페이지·발표일과 위험 등급 변경을 버전 diff로 보존하고 고객 모델 목록과 연결한다.
-- **2주 MVP:** OpenAI·Anthropic·Google 20개 시스템 카드/PDF 수집, 섹션 diff, 위험도·사고·완화 변경 추출, 원문 페이지 링크와 한국어 변경 요약.
-- **난이도:** Medium
-- **수익화:** 모델 수 기준 팀 구독 + 감사 증거 패킷 내보내기
-- **반증 조건:** 10개 팀 중 3개 미만이 분기별 모델 문서 검토 의무가 있거나 변경 알림 파일럿에 동의하면 보류한다.
-
-### Agent Ecosystem Adoption Signal — 4/5 · ★★★★☆ · High
-
-- **문제:** 좋아요·별·홍보 자료가 실제 반복 사용과 달라 어떤 도구가 운영에 정착했는지 판단하기 어렵다.
-- **고객:** 코딩 에이전트 도입을 검토하는 한국 개발팀과 AI 도구 리셀러·컨설턴트
-- **기존 해결법:** GitHub stars, 다운로드 수, Similarweb, Stack Overflow 설문과 커뮤니티 검색
-- **경쟁사:** StackShare, State of JS, GitHub Octoverse, Exploding Topics
-- **차별점:** Hub 요청·패키지·저장소 활동을 출처별 한계와 함께 표시하고 한국 팀의 실제 사용 설문으로 보정한다.
-- **2주 MVP:** Hugging Face agent-usage·GitHub release·패키지 다운로드 10개 도구 수집, 출처 편향 라벨, 월별 추세와 팀 설문 CSV 결합.
-- **난이도:** Medium
-- **수익화:** 월간 리포트 구독 + 도구사 경쟁 분석
-- **반증 조건:** 20개 팀 중 6개 미만이 최근 6개월 내 에이전트 도구를 교체했거나 채택 데이터에 비용을 지불할 의향이 없으면 중단한다.
+- **수익화:** 무료 개인 계산표 + 팀 벤치 이력·공유 구독
+- **반증 조건:** 10명의 로컬 AI 사용자 중 4명 미만이 모델 선택에 1시간 이상 쓰거나 계획/실행 모델을 분리할 의향이 없으면 중단한다.
 
 ## 구축 판단
 
-**후보: Local Open-Model Readiness Card**
-
-- 종합점수: 4.3/5
-- Stars: ★★★★★
-- Potential: Very High
-- 독립 근거: [근거 1](https://huggingface.co/Qwen/Qwen3.8-27B), [근거 2](https://huggingface.co/blog/state-of-open-models-summer-2026), [근거 3](https://news.ycombinator.com/item?id=49299605), [근거 4](https://huggingface.co/unsloth/Qwen3.8-27B-GGUF)
-- 팀·기간: 1~3인 팀이 4~8주 MVP 가능
-- 법률 게이트: 없음 — 공개 라이선스·모델 카드·실행 증거를 정리하며 법률 판단을 제공하지 않음
-- 보안 게이트: 없음 — 코드·프롬프트·자격증명을 수집하지 않는 로컬 표본으로 시작 가능
-- 유료 의존성 게이트: 없음 — 공개 출처와 사용자가 제공한 하드웨어·실행 결과만으로 MVP 가능
-- Stage: Validate
-- owner_action_required: true
-- status: waiting_for_owner
-
-**AI Architect 상태: 사용자 지시 대기**
+오늘은 조건을 모두 만족하는 구축 후보가 없다. 최고 점수는 Secret-Egress Policy Checker의 4.2/5이며, 보안 도구의 오탐·누락 책임과 외부 하네스 우회 범위를 먼저 검증해야 한다.
 
 ## AI Tools
 
-- [Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B) — 16GB VRAM에서는 낮은 양자화부터 시작하고 대표 코딩·문서 표본에서 처리량, 메모리와 반복 출력 문제를 기록한다.
-- [Hermes Agent v0.20.1](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.13) — 기존 설치를 복제한 테스트 환경에서 업데이트하고 도구 권한·게이트웨이·복구 동작을 먼저 회귀검증한다.
-- [ChatGPT for Linux](https://chatgpt.com/download/) — 별도 테스트 계정과 비민감 프로젝트에서 메모리 범위, 브라우저 권한, 파일 접근과 복귀 경로를 확인한다.
+- [Hermes Agent v0.20.2](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16) — 구성 백업 후 MCP 상태, 모델 라우팅, 예약 작업과 인증을 복제 환경에서 회귀시험한다.
+- [OpenClaw 2026.8.1-beta.2](https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2) — 비민감 테스트 키로 허용·비허용 호스트 전송을 검증하고 외부 하네스·브라우저 경로는 별도 격리한다.
+- [NVIDIA Nemotron 3.5 Lightning 30B-A3B](https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4) — 16~24GB 환경에서 한국어, 복잡 코딩, 256K 기억과 수정 횟수를 Qwen 계열과 비교한다.
 
 ## Community
 
-- [Hacker News](https://news.ycombinator.com/item?id=49299605) — Qwen3.8-27B가 개인 비공개 추론 과제를 통과했다는 평가와 함께 긴 사고 출력, 느린 프리필과 문맥 VRAM 사용량을 지적한다.
-- [Hacker News](https://news.ycombinator.com/item?id=49299647) — Opus급 공급자 점수에 놀라면서도 실제 로컬 하네스와 업무 표본으로 검증해야 한다는 반응이 우세하다.
-- [Reddit](https://www.reddit.com/r/LocalLLM/comments/1vokoir/qwen3827b4bit_on_apple_m5_max_305_toks_llmbenchio/) — M5 Max 4비트에서 30.5 tok/s 사례를 공유하면서 사고 예산을 제한하지 않으면 토큰을 과소비한다고 경고한다.
-- [Reddit](https://www.reddit.com/r/LocalLLaMA/comments/1vozxbp/alibaba_ai_models_hit_3_billion_downloads_passing/) — Hugging Face 보고서의 중국 오픈모델 규모와 다운로드 수를 반기면서 다운로드가 실제 사용자 수인지 논쟁한다.
+- [GitHub](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16) — Hermes Agent의 안정 태그와 운영 보강을 반기면서도 완전한 큐레이션 노트가 v0.21.0으로 미뤄진 점을 확인하려 한다.
+- [Reddit](https://www.reddit.com/r/AI_Agents/comments/1r3u98p/openclaw_security_is_worse_than_i_expected_and_im/) — 도구형 에이전트에는 컨테이너 격리, 기본 차단형 외부 통신과 런타임 자격증명 주입이 필요하다는 반응이 이어진다.
+- [Reddit](https://www.reddit.com/r/AIProgrammingHardware/comments/1vo2w5a/nvidia_nemotron_35_lightning_30b_a3b_tested_16gb/) — Nemotron은 16GB 환경의 속도와 256K 기억은 좋지만 복잡한 코딩·창작은 반복 수정이 필요하다는 테스트가 공유됐다.
+- [Reddit](https://www.reddit.com/r/LocalLLaMA/comments/1vlh9fg/nvidianvidianemotron35lightning30ba3bbf16_hugging/) — MTP·DSpark의 속도 이점을 기대하면서도 이전 Nemotron 대비 개선 폭과 Lightning 명칭의 실질 차이를 따져본다.
 
 ## Skill of the Day
 
-**Evidence-weighted release readiness**
+**Fail-closed secret egress review**
 
-새 모델이 공개됐지만 공급자 벤치마크, 커뮤니티 양자화와 실제 하드웨어 결과의 신뢰 수준이 서로 다를 때. 공식 가중치·라이선스·기본 문맥을 확인한 뒤 공급자 점수, 독립 실행 결과, 미확인 장기 안정성을 별도 열로 나눠 도입·시험·보류를 결정한다.
+에이전트가 API 키·MCP 토큰을 사용하고 여러 플러그인, 브라우저나 외부 하네스에 네트워크 접근을 위임할 때 사용한다. 비밀값은 보지 않고 각 자격증명의 정확한 목적지 호스트, 미등록 목적지 실패 여부, 하위 프로세스·브라우저 우회와 감사 로그를 점검한다.
 
-프롬프트: “이 모델의 공식 가중치·라이선스·문맥·하네스와 독립 실행 근거를 분리하고, 내 GPU/RAM에서 시험할 최소 양자화·업무 표본·중단 조건을 표로 만들어줘.”
+프롬프트: “이 에이전트 구성에서 비밀값별 허용 목적지, fail-open 경로, 외부 하네스·브라우저 우회와 검증 테스트를 표로 만들고 값 자체는 절대 출력하지 마.”
 
 ## Worth Reading
 
-- **Paper:** [Getting the Parameters Right: A Difficulty-Graded Benchmark and Probe-Guided Training for LLM Tool Calls](https://arxiv.org/abs/2608.03071) — 실제 클라우드 네트워크 API 기반 ParamBench에서 도구 선택보다 파라미터 정확성이 에이전트 실패의 핵심임을 보여준다.
-- **GitHub:** [NousResearch/hermes-agent v0.20.1](https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.13) — 대규모 변경을 안정 태그로 묶는 오픈소스 에이전트 릴리스의 범위와 업데이트 기준을 확인할 수 있다.
-- **YouTube:** [Qwen-3.8-27B Released: Everything You Need to Know](https://www.youtube.com/watch?v=Fvg8659WQDg) — 공식 카드의 아키텍처·문맥·벤치마크를 빠르게 훑고 직접 검증할 항목을 정리하는 데 유용하다.
-- **Blog:** [State of Open Models: Summer 2026 Observations](https://huggingface.co/blog/state-of-open-models-summer-2026) — 296만 개 모델 저장소의 관심·다운로드·라이선스·양자화·에이전트 사용 데이터를 원자료와 함께 살펴볼 수 있다.
+- **Paper:** [AgentSLABench: Evaluating Agentic Systems Under Resource Constraints](https://arxiv.org/abs/2608.00805) — 에이전트 정확도와 함께 지연, 비용, 컴퓨트, 메모리와 네트워크 사용을 선언된 예산 안에서 평가한다.
+- **GitHub:** [OpenClaw 2026.8.1-beta.2](https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2) — 비밀정보 목적지 통제, 플러그인 출처, 백업·복구와 프로필 격리를 한 릴리스에서 어떻게 다루는지 볼 수 있다.
+- **YouTube:** [NVIDIA Nemotron 3.5 Lightning 30B A3B tested — 16GB Local LLM setup](https://www.youtube.com/watch?v=zdtuyAPOYwQ) — 공식 벤치마크와 별개로 16GB 환경의 긴 문맥, 속도와 복잡 코딩 실패를 빠르게 비교할 수 있다.
+- **Blog:** [Exploring NVIDIA Nemotron 3.5 Lightning: Making it see with little resources](https://huggingface.co/blog/tngtech/making-nvidia-nemotron-35-lightning-see) — 독립 호스팅 업체가 모델을 시험하고 제한된 자원으로 비전 기능을 붙인 과정을 확인할 수 있다.
 
 ## 누락 출처와 검증 한계
 
-- Anthropic의 위험도와 내부 생산성 평가는 회사 자체 평가이며 독립 감사 자료가 없고, Model 2는 외부 공개 계획이 없는 내부 모델이라 성능을 재현할 수 없다.
-- Qwen3.8-27B 벤치마크 대부분은 Qwen이 구성한 하네스 또는 사내 평가를 포함하며 장기 문맥·로컬 성능은 하드웨어와 양자화 방식에 따라 크게 달라진다.
-- Hugging Face 통계는 Hub와 huggingface_hub 라이브러리에서 식별된 트래픽만 측정하며 전체 모델·에이전트 시장 점유율을 뜻하지 않는다.
-- Anthropic IPO 매출 전망과 Nvidia의 SB Energy 투자 협상은 공식 확인 없이 Reuters 및 원보도에 의존해 Top 뉴스에서 제외했다.
+- 직전 24시간에 선별 기준을 넘긴 신규 발표는 Hermes Agent v0.20.2 한 건뿐이어서 최근 7일의 검증된 미사용 공식 발표 세 건을 포함했다.
+- OpenClaw 2026.8.1-beta.2는 프리릴리스이며 목적지 제한이 전체 네트워크 격리나 적대적 다중 사용자 보안을 보장하지 않는다.
+- NVIDIA 벤치마크 대부분은 공급자 측 결과이며 한국어와 소비자 하드웨어 성능은 제한적으로만 검증됐다.
+- Anthropic Compliance API는 Enterprise 베타이며 개인정보·직원 고지·보존기간에 관한 독립 법률 검증은 포함하지 않았다.
 
 ## 게시 상태
 
 - 부분 실패: 없음
 - AI Architect · project-pm · 구현 · 코드 작성 · 배포: 실행하지 않음
-
