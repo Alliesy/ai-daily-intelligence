@@ -1,211 +1,211 @@
-# AI Daily Intelligence · 2026-08-23
+# AI Daily Intelligence · 2026-08-24
 
-> 상태: **Complete** · 조사 기준: 2026-08-23 07:02 KST · 신규 발표 24시간 + 중요 후속 변화 7일
+> 상태: **Complete** · 조사 기준: 2026-08-24 07:00 KST · 신규 발표 24시간 + 중요 후속 변화 7일
 
 ## 오늘의 인사이트
 
-오늘의 공통 신호는 AI 인프라가 더 싸지는 직선 경로가 아니라는 점이다. NVIDIA 서버와 삼성 파운드리의 가격 압력, Cerebras·Velaura의 전력효율 경쟁, OpenAI의 요청별 데이터 경로와 Unsloth의 로컬 운영 확장은 모두 모델 점수 밖의 **비용·전력·데이터 위치·운영 복잡성**이 제품 선택을 결정한다는 뜻이다. 실무에서는 최대 성능보다 실제 견적, 지원 조건, 독립 재현과 실패 경로를 먼저 기록해야 한다.
+오늘의 공통 신호는 AI 가치가 모델 점수보다 **자본·유통·운영 수명주기**에서 더 크게 움직인다는 점이다. 알리바바는 주주 희석을 감수해 AI 자본을 조달하고, Hugging Face는 오픈모델 유통망 자체가 인수 대상으로 평가받는다. 동시에 FreeToken은 보유 하드웨어의 활용 범위를 넓히고, 한국의 미래대응기금은 반도체 호황을 AI 재원으로 전환하며, Vertex의 모델 종료는 운영 부채를 현실화한다. 소형 팀의 실행 원칙은 새 모델을 좇는 것보다 공급망 백업, 모델 종료 카나리, 공식 예산·공고 상태와 실제 단위경제를 기록하는 것이다.
 
 ## Top News
 
-### 1. NVIDIA AI 서버 가격 15% 이상 인상 통보, 메모리 병목이 랙 원가로 전이
+### 1. 알리바바, AI 전액 투입 조건으로 102억달러 규모 신주 배치 추진
 
 **한줄요약**  
-NVIDIA의 주요 고객이 Vera Rubin·Grace Blackwell 서버의 2027년 출하 가격을 15% 이상 올린다는 통보를 받았다는 보도가 나왔고, 삼성 파운드리도 AI 수요로 일부 공정 가격을 최대 15% 인상했다.
+알리바바가 HK$800억 규모 신주 배치를 제안하고 순조달액 100%를 칩·인프라·모델을 포함한 풀스택 AI 역량에 쓰겠다고 밝혔다.
 
 **원문 핵심문장 / 번역**  
-> “prices of servers containing its AI chips will rise by more than 15% in many cases”  
-> “AI 칩이 들어간 서버 가격이 많은 경우 15% 넘게 오를 예정이다.”
+> “Alibaba intends to use 100% of the net proceeds ... to invest in its full stack AI capabilities”  
+> “알리바바는 순조달액의 100%를 풀스택 AI 역량에 투자할 계획이다.”
 
 **원문 요약**  
-FACT: Reuters는 Bloomberg를 인용해 NVIDIA 주요 고객이 Vera Rubin·Grace Blackwell 기반 서버의 2027년 초 출하 가격을 15% 넘게 올린다는 안내를 받았다고 보도했다. NVIDIA는 공식 논평하지 않았다. 별도 Reuters 보도에서는 삼성전자가 AI 수요와 선단공정 공급 제약을 배경으로 일부 4·5·8나노 파운드리 가격을 최대 15% 인상했다.  
-INTERPRETATION: 가속기 자체뿐 아니라 HBM·DRAM·파운드리·서버 부품의 병목이 랙 가격과 클라우드 단가에 전이되는 국면이다.  
-SIGNAL: 2027년 GPU 구매·임대 계약은 칩 세대만이 아니라 메모리 구성, 견적 유효기간, 가격 연동 조항을 봐야 한다.  
-SPECULATION: 공급이 빠르게 늘지 않으면 추론 단가 하락의 일부가 하드웨어 원가 상승으로 상쇄될 수 있으나 실제 클라우드 가격 반영폭은 아직 모른다.
+FACT: 알리바바는 8월 23일 비미국 투자자를 대상으로 총 HK$800억(약 102억달러) 규모의 신주 배치를 제안했고, 순조달액 전액을 AI 인프라를 포함한 풀스택 AI에 쓰겠다고 공식 발표했다. Reuters가 7억1천만주, 주당 HK$112.70, 직전 종가 대비 3.6% 할인 조건을 보도했으며 거래는 아직 완료 전이다.  
+INTERPRETATION: AI 인프라 경쟁이 이익 재투자를 넘어 주주 희석을 감수하는 자본조달 경쟁으로 확대됐다.  
+SIGNAL: 투자자는 클라우드 성장률과 함께 발행주식 증가, 잉여현금흐름, AI 투자 회수기간을 같이 봐야 한다.  
+SPECULATION: 수요가 유지되면 조달금은 Qwen·클라우드·자체 칩의 수직통합을 가속할 수 있지만, 세부 배분과 실제 수익률은 공개되지 않았다.
 
 **왜 중요한가**  
-한국의 소형 AI 팀과 투자자는 모델 API 가격만 보지 말고 GPU 임대료·메모리·클라우드 약정의 재가격 시점을 함께 관리해야 한다.
+한국 투자자와 AI 사업자는 중국 클라우드의 가격·모델 경쟁력이 커질 가능성과 기존 주주의 희석·현금흐름 압박을 동시에 평가해야 한다.
 
 **업계 분위기**  
-Demand-strong / margin-cautious. AI 수요의 강도는 확인되지만 구매자는 2027년 예산과 공급자 마진이 메모리 가격에 좌우되는 점을 경계한다.
+Capital-aggressive / dilution-cautious. AI 수요와 국부펀드 참여 보도는 강하지만, 순이익 급감 뒤의 대규모 신주 발행이 장기 수익성으로 이어질지 경계한다.
 
 **앞으로의 전망 — AI 추론**  
-단기에는 서버 OEM과 클라우드가 전액을 즉시 전가하기보다 장기약정·구성별 할인으로 흡수하겠지만, 메모리 병목이 지속되면 신규 계약과 고메모리 인스턴스부터 가격이 오를 가능성이 높다.
+단기에는 알리바바의 컴퓨트 확보와 가격 경쟁 여력이 커질 수 있으나, 다음 분기부터는 AI 클라우드 매출 증가가 자본비용과 희석을 얼마나 상쇄하는지가 핵심 지표가 될 가능성이 높다.
 
 **사업 기회**  
-견적서의 GPU 세대, 메모리 구성, 유효기간과 갱신 가격을 비교하는 소형 팀용 GPU Quote Change Board.
+상장 AI 기업의 증자·채권·CAPEX와 매출 회수기간을 한 화면에서 비교하는 비개인화 Capital-to-AI Tracker.
 
 **관련 태그**  
-`NVIDIA` `Vera-Rubin` `Grace-Blackwell` `AI-server` `memory` `pricing` `Samsung-foundry`
+`Alibaba` `Qwen` `equity-placement` `AI-capex` `cloud` `investment` `dilution`
 
-**평가** S · 91/100 — 신뢰도 26 · 영향도 25 · 활용도 20 · 최신성 15 · 커뮤니티 5  
-**출처** [Reuters · 2026-08-22](https://www.reuters.com/business/nvidia-customers-notified-about-ai-related-price-hikes-above-15-bloomberg-news-2026-08-22/) · [Reuters: Samsung foundry · 2026-08-19](https://www.reuters.com/business/autos-transportation/samsung-hikes-chipmaking-prices-by-up-15-demand-spike-sources-say-2026-08-19/)
+**평가** S · 93/100 — 신뢰도 29 · 영향도 25 · 활용도 19 · 최신성 15 · 커뮤니티 5  
+**출처** [Alibaba Group · 2026-08-23](https://www.alibabagroup.com/en-US/document-2028246284372017152) · [Reuters · 2026-08-23](https://www.reuters.com/business/retail-consumer/alibaba-proposes-hong-kong-share-placement-worth-10-billion-2026-08-23/) · [Financial Times · 2026-08-23](https://www.ft.com/content/e4ab027e-ed41-48b7-89ac-8250d3054ae6)
 
 ---
 
-### 2. Cerebras, WSE-3 Turbo 3개를 묶은 CS-4 추론 랙 공개
+### 2. Hugging Face, 130억달러 이상 가치의 매각 가능성 타진 보도
 
 **한줄요약**  
-Cerebras가 750 PFLOPS, 129.6PB/s 메모리 대역폭과 모듈형 Nexus 구조를 내세운 CS-4를 공개하고 3분기 출하를 예고했다.
+Hugging Face가 은행과 함께 잠재 인수자의 관심을 확인하며 130억달러 이상 가치의 매각 가능성을 검토 중이라는 보도가 나왔다.
 
 **원문 핵심문장 / 번역**  
-> “CS-4 delivers up to 30x faster AI inference than GPUs”  
-> “CS-4는 GPU보다 최대 30배 빠른 AI 추론을 제공한다.”
+> “The startup has been working with a bank to evaluate bidders' interest, and no deal has been reached yet”  
+> “회사는 은행과 인수 관심을 평가 중이며 아직 거래는 성사되지 않았다.”
 
 **원문 요약**  
-FACT: Cerebras는 CS-4가 WSE-3 Turbo 3개, 750 PFLOPS AI 연산, 7.2Tb/s I/O, 129.6PB/s 메모리 대역폭을 갖춘 첫 Nexus 랙이며 2026년 3분기 출하한다고 밝혔다. Reuters는 TSMC 5나노 제조, 부품 수 50% 감소와 2027년 600MW 공급 목표를 독립 보도했다.  
-INTERPRETATION: 경쟁 축이 칩 단품에서 전력·I/O·배포 시간을 함께 설계한 랙 단위로 이동한다.  
-SIGNAL: 고객이 확인할 핵심은 최대 토큰 속도보다 동일 모델·정확도·동시 사용자·전력 조건에서의 지속 처리량과 공급 규모다.  
-SPECULATION: 대형 에이전트가 낮은 지연에 실제 비용 프리미엄을 지불하면 웨이퍼스케일 추론이 틈새를 넘어설 수 있지만, 공급량과 소프트웨어 호환성이 관건이다.
+FACT: Business Insider는 복수의 익명 소식통을 인용해 Hugging Face가 은행과 잠재 인수자의 관심을 타진 중이며 130억달러 이상 가치가 거론된다고 보도했다. Reuters가 이를 재보도했지만 Hugging Face는 즉시 답하지 않았고 합의된 거래도 없다. 2023년 마지막 공개 기업가치는 45억달러였다.  
+INTERPRETATION: 모델 자체보다 배포·데이터·개발자 유통망이 전략적 자산으로 재평가되는 흐름이다.  
+SIGNAL: 기업 사용자는 Hub·Inference·datasets 의존도와 대체 경로, 모델 아티팩트 백업을 점검할 필요가 있다.  
+SPECULATION: 매각이 성사되면 인수자에 따라 중립성·가격·접근정책이 달라질 수 있으나 현재는 상대방과 조건 모두 미확인이다.
 
 **왜 중요한가**  
-한국 개발팀은 당장 장비를 살 필요 없이 Cerebras API나 공개 시험에서 기존 GPU 대비 지연·가격·품질을 같은 프롬프트 세트로 비교할 수 있다.
+한국의 오픈모델 팀은 Hugging Face를 단순 다운로드 사이트가 아니라 핵심 공급망으로 보고 모델·데이터·Spaces의 내보내기와 미러링 가능성을 확인해야 한다.
 
 **업계 분위기**  
-Speed-excited / benchmark-cautious. 응답속도 개선은 환영하지만 최대 30배 수치의 조건과 실제 동시 사용자 비용에 대한 독립 검증을 요구한다.
+Platform-premium / neutrality-anxious. 개발자 플랫폼 가치 상승에는 동의하지만 오픈 생태계의 핵심 허브가 특정 대기업에 종속될 가능성을 우려한다.
 
 **앞으로의 전망 — AI 추론**  
-2026~2027년에는 GPU 대체 여부보다 초저지연 코딩·음성·에이전트 작업에서 추가 비용을 정당화하는지 먼저 검증될 가능성이 높다.
+당장 서비스 변화보다 매각설의 공식 확인 여부가 먼저다. 협상이 현실화되면 가격보다 모델 저장소 중립성, 기업 데이터 거버넌스와 경쟁사 접근 정책이 심사의 핵심이 될 가능성이 높다.
 
 **사업 기회**  
-같은 모델과 품질 기준으로 GPU·Cerebras API의 지연, 처리량, 실패율과 1천 요청당 비용을 비교하는 짧은 독립 벤치마크 리포트.
+Hugging Face 조직의 모델·데이터·설정과 라이선스 메타데이터를 정기 내보내는 소형 팀용 Hub Backup Check.
 
 **관련 태그**  
-`Cerebras` `CS-4` `WSE-3-Turbo` `Nexus` `inference` `AI-hardware`
+`Hugging-Face` `M&A` `open-models` `developer-platform` `vendor-risk` `AI-infrastructure`
 
-**평가** S · 90/100 — 신뢰도 28 · 영향도 24 · 활용도 18 · 최신성 14 · 커뮤니티 6  
-**출처** [Cerebras · 2026-08-18](https://www.cerebras.ai/blog/introducing-cerebras-cs-4) · [Reuters · 2026-08-19](https://www.reuters.com/technology/cerebras-launches-new-server-chip-system-designed-speed-ai-chatbots-2026-08-19/) · [HPCwire · 2026-08-19](https://www.hpcwire.com/off-the-wire/cerebras-introduces-cs-4-with-750-pflops-of-ai-compute/)
+**평가** S · 87/100 — 신뢰도 23 · 영향도 24 · 활용도 18 · 최신성 15 · 커뮤니티 7  
+**출처** [Business Insider · 2026-08-23](https://www.businessinsider.com/hugging-face-could-be-acquired-13-billion-2026-8) · [Reuters · 2026-08-23](https://www.reuters.com/business/hugging-face-exploring-sale-valuing-it-13-billion-business-insider-says-2026-08-23/) · [Reuters: 2023 valuation](https://www.reuters.com/technology/ai-startup-hugging-face-valued-45-bln-latest-round-funding-2023-08-24/)
 
 ---
 
-### 3. OpenAI API, Global 프로젝트에서 요청별 미국·EU 지역 처리 선택 지원
+### 3. FreeToken, 로컬 CPU·GPU를 함께 쓰는 오픈 MoE 추론 엔진 공개
 
 **한줄요약**  
-OpenAI가 별도 지역 프로젝트를 만들지 않고 Global 프로젝트의 API 키와 us·eu 도메인 접두사로 개별 요청의 처리 지역을 선택할 수 있게 했다.
+UC Berkeley·UT Austin 연구진이 이기종 로컬 하드웨어에서 대형 MoE를 구동하는 Apache-2.0 FreeToken을 논문·코드·PyPI로 공개했다.
 
 **원문 핵심문장 / 번역**  
-> “select regional processing for an individual request by using a prefixed domain”  
-> “도메인 접두사를 사용해 개별 요청의 지역 처리를 선택할 수 있다.”
+> “FreeToken continuously maps computation and model state onto the resources actually available”  
+> “FreeToken은 연산과 모델 상태를 실제 사용 가능한 자원에 지속적으로 배치한다.”
 
 **원문 요약**  
-FACT: OpenAI는 8월 21일 Global geography 프로젝트의 API 키를 유지한 채 `us.api.openai.com` 또는 `eu.api.openai.com`을 요청별로 선택할 수 있다고 발표했다. 문서는 미국·EU가 지역 처리를 지원하고 비미국 지역은 MAM 또는 ZDR 승인과 Modified Retention 계약이 필요하며, 2026년 3월 5일 이후 출시된 적격 모델에는 10% 가산이 붙는다고 명시한다.  
-INTERPRETATION: 데이터 경로가 프로젝트 단위 고정에서 요청 단위 정책으로 세분화됐다.  
-SIGNAL: 애플리케이션은 사용자 지역, 엔드포인트·모델 지원, background·Realtime 제한과 외부 MCP의 별도 정책을 코드·로그에서 검증해야 한다.  
-SPECULATION: 다지역 SaaS는 단일 코드베이스에서 고객별 처리 정책을 쉽게 나눌 수 있지만 규정 준수 증거와 계약 검토 수요는 오히려 늘 수 있다.
+FACT: 8월 17일 공개된 논문과 GitHub 저장소는 FreeToken이 CPU·GPU·호스트 메모리·PCIe 대역폭을 동적으로 사용하며 20개 이상 MoE 모델을 지원한다고 설명한다. 코드는 Apache-2.0이고 PyPI v0.1.2와 Windows·Linux 앱이 제공된다. MarkTechPost의 8월 23일 점검은 논문 수치 계산과 라이선스를 확인했지만 주요 처리량 주장은 아직 독립 재현이 없고, 753B 구동에는 192~512GB 호스트 메모리가 필요하다고 지적했다.  
+INTERPRETATION: 로컬 추론의 병목이 GPU VRAM 단독 용량에서 전체 시스템 대역폭 관리로 이동한다.  
+SIGNAL: 소형 팀은 자신이 보유한 하드웨어에서 동일 모델·정밀도·프롬프트로 TTFT, 처리량, 전력과 메모리를 재측정해야 한다.  
+SPECULATION: 결과가 재현되면 사내 코드·문서용 에이전트의 클라우드 비용과 데이터 반출을 줄일 수 있지만 다중 사용자 운영성은 미확인이다.
 
 **왜 중요한가**  
-한국 SaaS 팀은 EU 고객용 별도 배포를 줄일 가능성이 있지만, 지역 접두사만으로 GDPR·보안 요구가 충족된다고 표시하면 안 된다.
+한국 개인 개발자와 1~3인 팀이 이미 가진 GPU로 더 큰 오픈모델을 시험할 선택지가 생겼지만, 장비 구매 전에 실제 RAM·드라이버·전력 조건을 확인해야 한다.
 
 **업계 분위기**  
-Compliance-positive / eligibility-cautious. 운영 유연성은 좋아졌지만 승인 절차, 10% 가산과 지원되지 않는 기능 때문에 실제 적용 전 체크리스트가 필요하다.
+Local-first / benchmark-cautious. 초기 사용자는 16GB VRAM 실험 결과에 기대를 보이지만 정밀도 차이, 큰 호스트 RAM과 자체 벤치마크를 경계한다.
 
 **앞으로의 전망 — AI 추론**  
-모델 공급자는 성능·가격뿐 아니라 요청별 데이터 경로를 API 기능으로 경쟁하고, 고객은 지역 라우팅을 관측 가능성과 감사 로그로 검증하려 할 가능성이 높다.
+향후 1~2개월은 지원 모델 확대보다 설치 성공률, 재현 벤치마크, 긴 에이전트 세션과 동시 요청 안정성이 채택 속도를 결정할 가능성이 높다.
 
 **사업 기회**  
-OpenAI 요청의 의도 지역, 실제 base URL, 모델·엔드포인트 지원과 제한을 검사해 근거 링크가 있는 결과표를 내는 AI API Region Smoke Test.
+사용자의 하드웨어 사양과 모델을 받아 설치 가능성·예상 RAM·검증용 프롬프트를 출력하는 Local MoE Readiness Check.
 
 **관련 태그**  
-`OpenAI` `API` `data-residency` `regional-processing` `EU` `compliance`
+`FreeToken` `MoE` `local-AI` `edge-inference` `open-source` `GPU` `CPU-offload`
 
-**평가** A · 88/100 — 신뢰도 30 · 영향도 22 · 활용도 20 · 최신성 14 · 커뮤니티 2  
-**출처** [OpenAI API Changelog · 2026-08-21](https://developers.openai.com/api/docs/changelog) · [OpenAI Data Controls · 2026-08-21](https://developers.openai.com/api/docs/guides/your-data)
+**평가** A · 86/100 — 신뢰도 27 · 영향도 20 · 활용도 20 · 최신성 12 · 커뮤니티 7  
+**출처** [arXiv · 2026-08-17](https://arxiv.org/abs/2608.16157) · [GitHub](https://github.com/FlashML-org/FreeToken) · [MarkTechPost Reality Check · 2026-08-23](https://www.marktechpost.com/2026/08/23/meet-freetoken-an-edge-native-moe-serving-engine-that-runs-753b-glm-5-2-on-a-single-workstation-gpu/)
 
 ---
 
-### 4. Unsloth Desktop beta, 자동 압축·LAN 접근·Intel XPU 추가
+### 4. 한국 미래대응기금 구체화, 프런티어 AI·3대 메가프로젝트를 성장동력 계정에 포함
 
 **한줄요약**  
-Unsloth v0.1.801-beta가 긴 대화 자동 압축, 기본 비활성 LAN 원격 접근, 사용자 `llama.cpp` 빌드와 Intel XPU 지원을 묶어 공개했다.
+정부가 반도체 호황의 추가세수를 적립해 프런티어 AI, 반도체·피지컬 AI·AI 데이터센터와 인재에 투자하는 미래대응기금안을 구체화했다.
 
 **원문 핵심문장 / 번역**  
-> “Long local chats can continue past the context limit”  
-> “로컬 긴 대화가 컨텍스트 한도를 넘어 계속될 수 있다.”
+> “성장동력 분야는 프런티어급 AI와 3대 메가프로젝트 인프라 ... 7대 SEED 기술에 투자한다”  
+> “The growth account will invest in frontier AI, three megaproject infrastructures and seven SEED technologies.”
 
 **원문 요약**  
-FACT: Unsloth는 8월 20일 200개 넘는 PR을 합친 v0.1.801-beta를 공개했다. 자동 압축은 오래된 턴을 활성 컨텍스트에서 빼고 검색 가능한 보관소에 유지하며, LAN 접근은 기본 비활성이고 관리자 비밀번호 변경을 요구한다. 사용자 `llama.cpp` 빌드, Responses API structured output, Intel XPU도 추가됐다.  
-INTERPRETATION: 로컬 AI 도구가 단순 채팅 UI에서 장기 상태·네트워크 접근·API 제공을 갖춘 개인용 서버로 확장된다.  
-SIGNAL: 실제 평가는 압축 전후 사실 회상, 도구 호출 안정성, 네트워크 노출과 GPU·CPU 메모리 사용량을 봐야 한다.  
-SPECULATION: 안정화되면 소규모 팀의 사내 문서·반복 작업을 저비용 로컬 환경에서 시험하는 선택지가 늘 수 있다.
+FACT: 기획예산처는 8월 21일 미래대응기금을 청년·성장동력·지방·교육인재 4개 분야에 투자하고, 성장동력 분야에 프런티어 AI와 반도체·피지컬 AI·AI 데이터센터 인프라를 포함한다고 밝혔다. 재원은 10년 평균 추세를 웃도는 내국세, 초과세수, 세계잉여금 잔여재원과 운용수익이며 9월 초 2027년 예산안과 함께 법안을 제출할 계획이다. Reuters도 같은 계획을 확인했지만 공식 기금 규모는 제시되지 않았다고 보도했다.  
+INTERPRETATION: 일회성 보조사업이 아니라 호황 세수를 미래 기술과 경기 대응에 연결하는 재정 플랫폼 구상이다.  
+SIGNAL: 국내 팀은 헤드라인 규모보다 법안 통과, 계정별 배분, 공고 자격과 집행기관을 추적해야 한다.  
+SPECULATION: 법안이 통과되면 2027년부터 AI 인프라·인재 사업이 늘 수 있지만 국회 심사와 세수 변동으로 일정·규모가 달라질 수 있다.
 
 **왜 중요한가**  
-한국 개인 개발자는 클라우드 사용량 없이 로컬 장기 대화와 API를 시험할 수 있지만, 민감 문서 투입 전 LAN 비활성·비밀번호·방화벽과 백업을 먼저 확인해야 한다.
+한국의 소형 AI 팀에는 투자 대상이 구체화되는 초기 신호지만, 아직 신청 가능한 지원금이 아니므로 예산·법안·공고의 세 단계를 분리해야 한다.
 
 **업계 분위기**  
-Local-first / beta-cautious. 기능 확장은 반기지만 설치·하드웨어 호환성, 자동 압축 회상과 원격 접근 보안에 대한 실사용 검증을 기다린다.
+Policy-positive / execution-cautious. 장기 재원 마련은 반기지만 100조원 이상이라는 언론 추정, 교육재정 개편과 실제 민간 접근성은 확정되지 않았다는 경계가 크다.
 
 **앞으로의 전망 — AI 추론**  
-로컬 AI 앱은 모델 다운로드 도구를 넘어 장기 메모리, 샌드박스·도구 호출, 팀 내 접근을 묶은 소형 운영 플랫폼으로 경쟁할 가능성이 높다.
+9월 예산안·패키지 법안에서 계정 구조와 첫 집행사업이 공개되면 기업·대학·지역 프로젝트의 우선순위가 선명해질 가능성이 높다.
 
 **사업 기회**  
-팀별 하드웨어에서 자동 압축 전후 회상률과 응답시간을 20개 질문으로 비교하는 Local Long-Chat Test Pack.
+정부 원문만 수집해 법안→예산→공고 상태와 소형팀 자격을 구분하는 Korean AI Fund Calendar.
 
 **관련 태그**  
-`Unsloth` `local-AI` `auto-compaction` `LAN` `llama.cpp` `Intel-XPU` `beta`
+`Korea` `Future-Response-Fund` `AI-policy` `semiconductor` `physical-AI` `AI-data-center` `public-funding`
 
-**평가** A · 85/100 — 신뢰도 29 · 영향도 18 · 활용도 20 · 최신성 14 · 커뮤니티 4  
-**출처** [GitHub Release · 2026-08-20](https://github.com/unslothai/unsloth/releases/tag/v0.1.801-beta) · [Unsloth Changelog · 2026-08-20](https://unsloth.ai/docs/new/changelog)
+**평가** A · 85/100 — 신뢰도 29 · 영향도 23 · 활용도 18 · 최신성 11 · 커뮤니티 4  
+**출처** [대한민국 정책브리핑·기획예산처 · 2026-08-21](https://www.korea.kr/news/policyNewsView.do?newsId=148970426) · [Reuters · 2026-08-21](https://www.reuters.com/world/asia-pacific/south-korea-plans-chip-windfall-fund-back-youth-ai-investment-2026-08-21/)
 
 ---
 
-### 5. Velaura AI, 저전력 AI 실리콘에 1억1천만달러 조달
+### 5. Google Vertex AI, Claude 3 Haiku 지원 종료일 도래
 
 **한줄요약**  
-Velaura AI가 Titan Core 저전력 칩 IP와 소프트웨어 상용화를 위해 1억1천만달러 Series A를 조달해 10억달러 넘는 기업가치를 인정받았다.
+Google Cloud가 예고한 대로 8월 23일 Vertex AI의 Claude 3 Haiku 지원을 종료해 기존 호출은 Haiku 4.5 등으로 마이그레이션해야 한다.
 
 **원문 핵심문장 / 번역**  
-> “it has raised $110 million in Series A financing”  
-> “Series A에서 1억1천만달러를 조달했다.”
+> “Claude 3 Haiku on Google Cloud ... will be shut down on August 23, 2026”  
+> “Google Cloud의 Claude 3 Haiku는 2026년 8월 23일 종료된다.”
 
 **원문 요약**  
-FACT: Velaura AI는 8월 18일 Seligman Ventures 주도의 1억1천만달러 Series A와 10억달러 초과 기업가치를 발표했다. Reuters가 금액과 투자자를 독립 확인했다. 회사는 Titan Core가 AI 가속기 수학 연산의 전력당 성능을 2~4배 높이고 기초 기술이 3천만개 넘는 ASIC에 배치됐다고 주장한다.  
-INTERPRETATION: 자본은 범용 GPU 경쟁보다 전력과 열을 낮추는 칩 IP·설계 플랫폼에도 큰 옵션 가치를 부여한다.  
-SIGNAL: 다음 검증점은 비공개 협력보다 고객명이 붙은 양산 칩, 동일 공정·워크로드의 전력당 성능과 매출이다.  
-SPECULATION: 전력 접속 지연이 지속되면 저전력 IP가 데이터센터와 로봇 양쪽에서 설계 채택을 받을 수 있으나 긴 반도체 상용화 주기가 남아 있다.
+FACT: Google Cloud의 파트너 모델 폐기 문서는 Claude 3 Haiku를 2월 23일 deprecated로 전환했고 8월 23일 종료한다고 명시한다. LangChain의 Vertex 통합 문서도 같은 날짜와 Haiku 4.5 모델 ID를 안내한다. Anthropic 자체 API에서는 이 모델이 이미 4월 20일 종료됐으므로 이번 변화는 Vertex 경로에 해당한다.  
+INTERPRETATION: 멀티클라우드에서 같은 모델명도 공급자별 종료일이 달라 단일 폐기 일정표가 필요하다.  
+SIGNAL: 고정 모델 ID, 폴백, 출력 스키마, 비용과 지연을 회귀 테스트해야 한다.  
+SPECULATION: 관리형 AI 플랫폼의 모델 교체 주기가 짧아질수록 자동 만료 탐지와 카나리 테스트가 소형 팀에도 기본 운영 항목이 될 수 있다.
 
 **왜 중요한가**  
-한국 반도체·로봇 생태계에는 완제품보다 저전력 IP, 검증, 패키징·열관리와 소프트웨어 공동설계에 자금이 붙는다는 시장 신호다.
+Vertex AI를 쓰는 한국 개발팀은 장애가 난 뒤 바꾸기보다 모델 목록과 10~20개 대표 요청으로 대체 모델의 형식·비용 차이를 확인해야 한다.
 
 **업계 분위기**  
-Power-efficiency-bullish / commercialization-cautious. 투자자는 전력 효율을 핵심 병목으로 보지만 2~4배 수치와 하이퍼스케일러 협력이 실제 양산으로 이어지는지 확인하려 한다.
+Migration-routine / outage-alert. 6개월 예고는 충분했다는 시각과 오래된 모델 ID가 배치·내부 도구에 남아 있을 수 있다는 운영 우려가 공존한다.
 
 **앞으로의 전망 — AI 추론**  
-12~24개월 안에 투자 스토리는 기업가치보다 첫 고객 칩의 tape-out, 수율, 소프트웨어 통합과 전력 절감 실측으로 재평가될 가능성이 높다.
+공급자별 모델 종료가 누적되면서 관측 도구는 API 오류뿐 아니라 폐기 예정일, 대체 모델과 회귀 결과를 함께 보여주는 방향으로 확장될 가능성이 높다.
 
 **사업 기회**  
-공개 공정·전력·고객·양산 증거만 추적하는 한국어 AI Chip Evidence Card.
+공식 폐기 문서와 실제 테스트 호출을 결합해 모델 만료 30·14·7일 전에 알리는 Model Sunset Canary.
 
 **관련 태그**  
-`Velaura` `funding` `AI-chip` `power-efficiency` `Titan-Core` `physical-AI`
+`Google-Cloud` `Vertex-AI` `Anthropic` `Claude-3-Haiku` `deprecation` `migration` `operations`
 
-**평가** A · 83/100 — 신뢰도 27 · 영향도 21 · 활용도 15 · 최신성 13 · 커뮤니티 7  
-**출처** [Velaura AI · 2026-08-18](https://velaura.ai/velaura-ai-raises-110-million-series-a-to-advance-the-next-generation-of-ultra-low-power-ai-compute-infrastructure/) · [Reuters · 2026-08-18](https://www.reuters.com/legal/transactional/chip-designer-velaura-ai-valued-more-than-1-billion-after-funding-round-2026-08-18/)
+**평가** A · 82/100 — 신뢰도 30 · 영향도 18 · 활용도 20 · 최신성 10 · 커뮤니티 4  
+**출처** [Google Cloud partner deprecations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models) · [Vertex AI release notes](https://docs.cloud.google.com/vertex-ai/docs/release-notes) · [LangChain integration docs](https://docs.langchain.com/oss/python/integrations/chat/google_anthropic_vertex)
 
 ## Opportunity Finder
 
-### AI API Region Smoke Test — 4.1/5 · ★★★★☆ · High
+### Model Sunset Canary — 4.2/5 · ★★★★☆ · High
 
-- **문제:** 지역 접두사만 바꾸면 되는 것처럼 보이지만 프로젝트 자격, MAM·ZDR, 모델·엔드포인트와 background·Realtime 제한 때문에 잘못된 데이터 경로를 배포하기 쉽다.
-- **고객:** EU·미국 고객을 함께 받는 한국 1~3인 AI SaaS·외주 개발팀.
-- **기존 해결법:** OpenAI 공식 문서, 자체 통합 테스트, 클라우드·법무 체크리스트와 수동 로그 검토.
-- **경쟁사:** OpenAI documentation, Datadog, Sentry, custom middleware.
-- **차별점:** 법률 준수를 판정하지 않고 테스트 요청의 base URL, 응답, 모델·기능 지원과 공식 제한 링크를 한 장의 기술 증거표로 남긴다.
-- **2주 MVP:** Global 프로젝트 키를 사용자가 직접 보관한 상태에서 US·EU 테스트 엔드포인트 6개를 호출하고 성공·실패, 제한, 10% 가산 여부와 공식 문서 링크를 로컬 HTML로 출력하는 CLI.
+- **문제:** 공급자마다 폐기 문서와 종료일이 달라 오래된 모델 ID가 배치·내부 도구에 남고, 종료 당일에야 오류를 발견하기 쉽다.
+- **고객:** OpenAI·Anthropic·Google·AWS 모델을 2개 이상 쓰는 한국 1~3인 SaaS·외주 개발팀.
+- **기존 해결법:** 공식 변경 로그, 이메일 공지, 수동 캘린더, Sentry·Datadog 오류 알림과 자체 통합 테스트.
+- **경쟁사:** Portkey, Helicone, Datadog, provider changelogs, custom cron tests.
+- **차별점:** 전체 LLM 관측 플랫폼이 아니라 사용자가 등록한 모델 ID의 공식 종료 근거, 대체 모델과 10개 카나리 요청의 형식·비용 차이만 한 장에 보여준다.
+- **2주 MVP:** 공식 폐기 URL 5개를 수동 승인 목록으로 유지하고 모델 ID·종료일을 읽어 30·14·7일 알림과 사용자가 실행하는 샘플 호출 결과를 로컬 HTML로 출력한다.
 - **난이도:** Low-Medium.
-- **수익화:** 오픈소스 단일 점검 + 팀용 월 2만~5만원 정기 회귀 테스트·변경 알림.
-- **반증 조건:** EU 고객이 있는 한국 소형팀 12곳 중 4곳 미만이 지역 처리 구성을 직접 운영하거나 점검에 월 30분 이상 쓴다면 중단한다. 법률 판단을 요구하는 비율이 절반을 넘으면 제품이 아니라 파트너 체크리스트로 제한한다.
+- **수익화:** 무료 5개 모델 + 팀 월 1만~4만원 알림·회귀 이력.
+- **반증 조건:** 한국 소형 AI 팀 15곳 중 5곳 미만이 지난 6개월간 모델 교체 장애 또는 1시간 이상 수동 점검을 경험했다면 중단한다. 공급자 이메일만으로 누락 없이 해결되면 오픈 체크리스트로 축소한다.
 
-### GPU Quote Change Board — 3.8/5 · ★★★★☆ · Medium
+### Korean AI Fund Calendar — 3.9/5 · ★★★★☆ · Medium
 
-- **문제:** 메모리 구성과 견적 유효기간이 다른 서버·클라우드 제안을 받아 가격 인상과 세대 차이를 같은 기준으로 비교하기 어렵다.
-- **고객:** 연 1~4회 GPU 워크스테이션·서버·클라우드 약정을 비교하는 한국 스타트업과 연구실.
-- **기존 해결법:** 벤더 PDF·이메일 견적, 엑셀, 조달 대행사와 클라우드 가격 계산기.
-- **경쟁사:** Excel, cloud pricing calculators, IT procurement resellers.
-- **차별점:** 가격 예측 없이 사용자가 받은 견적만 정규화해 GPU 세대, HBM·RAM, 임대기간, 유효기간과 갱신 조항의 전후 차이를 보여준다.
-- **2주 MVP:** 견적 PDF·CSV에서 10개 필드를 수동 확인해 입력하고 동일 구성 환산 월비용, 만료일과 변경률을 보여주는 로컬 우선 웹 시트.
+- **문제:** 정책 발표, 법안, 예산안과 실제 신청 가능한 공고가 섞여 있어 아직 지원할 수 없는 계획을 기회로 오인하거나 마감 공고를 놓친다.
+- **고객:** 정부 AI 지원사업을 찾는 한국 개인사업자·초기 스타트업·지역 연구팀.
+- **기존 해결법:** 기업마당, K-Startup, NTIS, 부처 뉴스레터, 지원사업 대행사와 엑셀 캘린더.
+- **경쟁사:** 기업마당, K-Startup, NTIS, 비즈봇, 정부지원사업 컨설팅.
+- **차별점:** AI·반도체·피지컬 AI만 다루고 모든 항목을 정책→법안→예산→공고→마감 상태로 나누며 공식 원문과 소형팀 자격의 확인 여부를 표시한다.
+- **2주 MVP:** korea.kr·기업마당·K-Startup의 공개 URL을 매일 수동 검토해 30개 항목의 상태, 지역, 기업연령, 자부담, 마감일을 제공하는 읽기 전용 웹 캘린더.
 - **난이도:** Low.
-- **수익화:** 무료 5개 견적 + 비교 보고서 건당 3만~10만원 또는 팀 월 구독.
-- **반증 조건:** 구매 담당 15명 중 5명 미만이 비교에 건당 1시간 이상 쓰거나 견적 형식 차이로 자동 추출 정확도가 90% 미만이면 자동화 대신 템플릿 판매로 축소한다.
+- **수익화:** 무료 주간 목록 + 지역·기업조건 저장과 마감 알림 월 5천~2만원.
+- **반증 조건:** 대상 팀 20곳 중 6곳 미만이 월 1회 이상 지원사업을 찾거나, 공식 사이트 알림만으로 90% 이상 요구가 해결되면 중단한다. 자격 판정 책임을 요구하면 정보 제공 범위로 제한한다.
 
 ## 구축 판단
 
@@ -213,40 +213,40 @@ Power-efficiency-bullish / commercialization-cautious. 투자자는 전력 효�
 
 ## AI Tools
 
-- **[Unsloth Desktop v0.1.801-beta](https://github.com/unslothai/unsloth/releases/tag/v0.1.801-beta)** — 자동 압축, LAN 접근, 사용자 `llama.cpp` 빌드와 Intel XPU 지원을 추가했다. 민감하지 않은 샘플로 압축 전후 회상만 시험하고 LAN은 비활성으로 둔다.
-- **[OpenAI Data Controls Guide](https://developers.openai.com/api/docs/guides/your-data)** — 요청별 US·EU 처리와 자격·기능 제한을 공식 표로 확인한다.
-- **[Cerebras CS-4](https://www.cerebras.ai/blog/introducing-cerebras-cs-4)** — WSE-3 Turbo 3개와 모듈형 Nexus 랙의 구조·성능 주장을 원문에서 본다.
+- **[FreeToken v0.1.2](https://github.com/FlashML-org/FreeToken)** — CPU·GPU·호스트 메모리·PCIe를 동적으로 묶어 대형 MoE를 로컬에서 구동한다. 새 장비 구매 없이 작은 지원 모델로 설치, TTFT, 처리량, RAM과 전력만 측정한다.
+- **[Google Cloud Partner Model Deprecations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models)** — 공급자별 관리형 모델 종료일과 대체 경로를 확인하는 공식 기준이다.
 
 ## Community Pulse
 
-- **Reddit r/sysadmin · budget-alert / vendor-skeptical:** 서버 구매자는 메모리·스토리지 견적이 몇 달 사이 크게 달라졌다고 공유하며 판매자의 긴급 구매 압박과 실제 구성 차이를 분리하려 한다. [토론](https://www.reddit.com/r/sysadmin/comments/1thp0ok/server_prices_2026/)
-- **GitHub · feature-positive / beta-cautious:** Unsloth 사용자는 자동 압축과 LAN 접근을 반기지만 beta 설치, GPU 호환성과 회상 품질을 직접 확인하려는 분위기다. [릴리스](https://github.com/unslothai/unsloth/releases/tag/v0.1.801-beta)
-- **Reddit r/LocalLLaMA · local-first / security-aware:** Unsloth Desktop의 통합 기능을 주목하면서 LAN 접근 문제와 컨텍스트·하드웨어 설정을 실사용 기준으로 본다. [토론](https://www.reddit.com/r/LocalLLaMA/comments/1vlj87v/introducing_unsloth_desktop_app/)
-- **OpenAI Developer Community · residency-demand / setup-friction:** 지역 처리를 규제 대응에 유용하게 보지만 승인, 지원 모델·지역과 별도 엔드포인트 설정이 실제 도입 장벽이라는 반응이다. [토론](https://community.openai.com/t/how-do-i-select-a-region-for-openai-data-processing/1299757)
+- **Reddit r/LocalLLaMA · performance-excited / reproducibility-curious:** FreeToken 초기 사용자는 16GB VRAM에서 20GB급 모델을 구동한 수치를 공유하면서도 하드웨어 표기와 정밀도 조건을 서로 검증한다. [토론](https://www.reddit.com/r/LocalLLaMA/comments/1vv6v00/freetokens_project_is_impressive/)
+- **LinkedIn · hands-on-positive / hardware-checking:** 개발자가 RTX 3080·32GB RAM 환경의 FreeToken 처리량을 공개했고 다른 사용자는 GPU 메모리 사양부터 재확인하며 재현 조건을 따진다. [실험](https://www.linkedin.com/posts/ezimuel_i-just-tested-freetoken-on-my-linux-laptop-activity-7496484693639360513-ZzXD)
+- **Reddit r/LocalLLaMA · scale-impressed / quality-skeptical:** Hugging Face의 300만 모델 돌파에는 생태계 규모를 인정하면서도 원본 모델보다 파인튜닝 중복이 대부분이라는 반응이 나온다. [토론](https://www.reddit.com/r/LocalLLaMA/comments/1vrnckt/hugging_face_just_surpassed_3_million_models_on/)
+- **X · local-first / cost-optimistic:** FreeToken이 GPU·CPU·RAM을 함께 활용해 로컬 AI 비용 구조를 바꿀 수 있다는 기대와 직접 시험하겠다는 반응이 확산됐다. [게시물](https://x.com/mark_k/status/2091202223090938177)
 
 ## Skill of the Day
 
-### 공급자 주장과 구매 증거 분리
+### 모델 종료 카나리 테스트
 
-- **언제:** AI 서버 가격, 성능 배수, 전력효율과 투자 발표를 실제 구매·투자 판단에 반영하기 전.
-- **실전 예시:** 공식 발표의 최대 성능, Reuters의 출하·가격 사실, 미확인 고객 견적과 독립 벤치마크 누락을 각각 FACT·CLAIM·UNKNOWN으로 나눈다.
-- **프롬프트:** “이 발표와 독립 보도를 읽고 수치를 FACT, VENDOR CLAIM, INFERENCE, UNKNOWN으로 분류해. 같은 모델·배치·품질·전력 조건이 없는 성능 비교는 검증됨으로 표시하지 말고, 다음 확인 날짜와 원문 URL을 남겨.”
+- **언제:** AI 공급자가 모델 폐기 또는 대체 모델을 공지했을 때 운영 장애 전에 영향 범위를 확인할 때.
+- **실전 예시:** 프로덕션의 모델 ID를 검색하고 대표 입력 10개를 기존·대체 모델에 보내 상태코드, JSON 스키마, 지연, 토큰과 비용 차이를 표로 남긴다.
+- **프롬프트:** “이 공식 폐기 문서와 내 모델 목록을 비교해 30일 내 종료 모델만 찾아줘. 대체 모델별로 대표 요청 10개 카나리 계획, 성공 기준, 롤백 조건을 작성하고 법률·품질 보장은 추정하지 마.”
 
 ## Worth Reading
 
-- **Paper:** [Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning](https://arxiv.org/abs/2604.07345) — H100의 학습·미세조정·추론 전력을 0.1초 단위로 측정하고 시설 전력 모델로 확장한 공개 방법과 데이터셋을 확인한다.
-- **GitHub:** [Unsloth v0.1.801-beta release](https://github.com/unslothai/unsloth/releases/tag/v0.1.801-beta) — 자동 압축, LAN 접근, `llama.cpp`·Intel XPU와 API 변경을 원 릴리스에서 보고 beta 제한을 확인한다.
-- **YouTube:** [How Much of Local Fine-Tuning Does It Actually Simplify?](https://www.youtube.com/watch?v=6C37je9MoSw) — Unsloth Desktop의 데이터 준비·학습 흐름을 독립 시연으로 보되 설치·성능 벤치마크를 하지 않았다는 한계를 함께 확인한다.
-- **Blog:** [Introducing Cerebras CS-4: The Fastest AI Gets Faster](https://www.cerebras.ai/blog/introducing-cerebras-cs-4) — CS-4의 WSE-3 Turbo, Nexus 랙, 지연·대역폭과 최대 성능 주장의 정확한 조건을 원문에서 확인한다.
+- **Paper:** [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](https://arxiv.org/abs/2608.16157) — 로컬 MoE 추론에서 prefill·expert cache·CPU/GPU 분배를 어떻게 함께 설계했는지 원 논문과 실험 조건을 확인한다.
+- **GitHub:** [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) — Apache-2.0 라이선스, 지원 모델, 설치 조건과 실제 구현을 보고 논문의 20개 이상 지원 주장을 대조한다.
+- **YouTube:** [New Local AI Engine Everyone Will Be Using in 2027? (FreeToken)](https://www.youtube.com/watch?v=Mlo16hrA5wQ) — 캐시·대역폭 개념을 시각적으로 빠르게 이해하되 독립 성능 재현이 아니라 해설 영상이라는 한계를 둔다.
+- **Blog:** [Meet FreeToken: Reality Check](https://www.marktechpost.com/2026/08/23/meet-freetoken-an-edge-native-moe-serving-engine-that-runs-753b-glm-5-2-on-a-single-workstation-gpu/) — 논문 수치의 계산, 정밀도 비교, 192~512GB 호스트 RAM과 독립 재현 부재를 분리해 과장 가능성을 점검한다.
 
-## 확인 필요 / 출처 한계
+## 확인되지 않은 부분
 
-- NVIDIA의 공식 가격 확인, 고객·메모리 구성별 최종 견적과 클라우드 단가 전가 폭.
-- CS-4의 동일 모델·배치·정확도·동시 사용자·전력 조건 독립 벤치마크와 실제 3분기 출하량.
-- OpenAI 지역 처리의 고객별 자격, 10% 가산 청구와 지원 엔드포인트 변경 이력; 이는 법률 준수 판정이 아니다.
-- Unsloth 자동 압축의 장기 사실 회상률, LAN 보안 감사와 beta 안정성.
-- Velaura의 고객명, 첫 양산 칩, 동일 공정에서의 2~4배 전력효율 재현과 매출.
+- 알리바바 신주 배치의 최종 완료·세부 AI 투자 배분과 실제 회수율.
+- Hugging Face 매각 협상의 회사 공식 확인, 잠재 인수자·조건·성사 여부.
+- FreeToken 주요 성능 수치의 폭넓은 독립 재현과 다중 사용자 안정성.
+- 미래대응기금의 국회 통과, 공식 총규모·계정별 배분과 첫 신청 공고.
+- Vertex AI의 종료 후 실제 오류 양상과 기존 고객별 예외 유예 여부.
 
----
+## 정본
 
-GitHub `main`이 기록 정본이며, 이 문서는 최신 브리핑 열람용이다.
+- [GitHub 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-24.md)
+- [구조화 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-24.json)
