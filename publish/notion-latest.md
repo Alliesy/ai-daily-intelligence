@@ -1,252 +1,203 @@
-# AI Daily Intelligence · 2026-08-24
+# AI Daily Intelligence · 2026-08-25
 
-> 상태: **Complete** · 조사 기준: 2026-08-24 07:00 KST · 신규 발표 24시간 + 중요 후속 변화 7일
+> 조사 기준: 2026-08-24 07:00~2026-08-25 07:00 KST 신규 발표, 최근 7일 중요 후속 변화. 공식 문서·정부 발표·법원 기록을 우선했고, 혐의와 소송 주장은 판결 사실과 분리했습니다.
 
-## 오늘의 인사이트
+## 오늘의 결론
 
-오늘의 공통 신호는 AI 가치가 모델 점수보다 **자본·유통·운영 수명주기**에서 더 크게 움직인다는 점이다. 알리바바는 주주 희석을 감수해 AI 자본을 조달하고, Hugging Face는 오픈모델 유통망 자체가 인수 대상으로 평가받는다. 동시에 FreeToken은 보유 하드웨어의 활용 범위를 넓히고, 한국의 미래대응기금은 반도체 호황을 AI 재원으로 전환하며, Vertex의 모델 종료는 운영 부채를 현실화한다. 소형 팀의 실행 원칙은 새 모델을 좇는 것보다 공급망 백업, 모델 종료 카나리, 공식 예산·공고 상태와 실제 단위경제를 기록하는 것이다.
+AI의 병목이 모델 능력만이 아니라 데이터 권리와 접근 상태, 거래 증빙으로 이동하고 있습니다. Wan3.0은 제작 범위를 넓혔지만 preview·지역·가중치 공개를 따로 봐야 합니다. 영국과 우크라이나는 희소한 실전 데이터를 국가 자산으로 교환하고, 대만 기소는 AI 서버의 최종사용자 증빙을 집행 대상으로 끌어올렸습니다. wikiHow 소송은 구조화된 실용 지식의 대체시장 주장까지 확장합니다.
 
 ## Top News
 
-### 1. 알리바바, AI 전액 투입 조건으로 102억달러 규모 신주 배치 추진
+### 1. 알리바바, Wan3.0 고속형 Prime API 공개 · 92/100 · S
 
 **한줄요약**  
-알리바바가 HK$800억 규모 신주 배치를 제안하고 순조달액 100%를 칩·인프라·모델을 포함한 풀스택 AI 역량에 쓰겠다고 밝혔다.
+알리바바 클라우드가 최대 30초·1080P 멀티모달 영상을 지원하는 Wan3.0-Video-Prime 문서를 공개해 8월 초 베타의 제품화를 확장했습니다.
 
 **원문 핵심문장 / 번역**  
-> “Alibaba intends to use 100% of the net proceeds ... to invest in its full stack AI capabilities”  
-> “알리바바는 순조달액의 100%를 풀스택 AI 역량에 투자할 계획이다.”
+“Wan3.0-Video-Prime在保持高质量视频生成能力的同时大幅提升生成速度”  
+“Wan3.0-Video-Prime은 고품질 영상 생성 능력을 유지하면서 생성 속도를 크게 높입니다.”
 
 **원문 요약**  
-FACT: 알리바바는 8월 23일 비미국 투자자를 대상으로 총 HK$800억(약 102억달러) 규모의 신주 배치를 제안했고, 순조달액 전액을 AI 인프라를 포함한 풀스택 AI에 쓰겠다고 공식 발표했다. Reuters가 7억1천만주, 주당 HK$112.70, 직전 종가 대비 3.6% 할인 조건을 보도했으며 거래는 아직 완료 전이다.  
-INTERPRETATION: AI 인프라 경쟁이 이익 재투자를 넘어 주주 희석을 감수하는 자본조달 경쟁으로 확대됐다.  
-SIGNAL: 투자자는 클라우드 성장률과 함께 발행주식 증가, 잉여현금흐름, AI 투자 회수기간을 같이 봐야 한다.  
-SPECULATION: 수요가 유지되면 조달금은 Qwen·클라우드·자체 칩의 수직통합을 가속할 수 있지만, 세부 배분과 실제 수익률은 공개되지 않았다.
+- FACT: 8월 24일 갱신된 공식 문서는 텍스트·이미지·비디오·오디오·파일·링크 입력과 480P·720P·1080P, 최대 30초·30fps 출력을 명시합니다. 기본 Wan3.0 API는 현재 preview로 표시됩니다.
+- INTERPRETATION: 8월 6일 공개 베타 이후 범용 모델과 고속형을 분리해 상용 API 표면을 넓히는 단계입니다.
+- SIGNAL: API 접근 가능, GA, 오픈웨이트, 독립 벤치마크를 모두 ‘출시’로 묶으면 안 됩니다.
+- SPECULATION: 처리 속도와 비용이 안정되면 상품 설명서·PPT를 짧은 광고로 바꾸는 배치 제작이 늘 수 있습니다.
 
 **왜 중요한가**  
-한국 투자자와 AI 사업자는 중국 클라우드의 가격·모델 경쟁력이 커질 가능성과 기존 주주의 희석·현금흐름 압박을 동시에 평가해야 한다.
+한국의 소형 콘텐츠·커머스 팀은 촬영 전 시안과 상품 영상을 자동화할 수 있지만 브랜드 자산 권리와 재생성 비용을 먼저 통제해야 합니다.
 
 **업계 분위기**  
-Capital-aggressive / dilution-cautious. AI 수요와 국부펀드 참여 보도는 강하지만, 순이익 급감 뒤의 대규모 신주 발행이 장기 수익성으로 이어질지 경계한다.
+`workflow-excited / release-state-cautious` — 30초·문서 입력·고속형에는 기대가 크지만 계정·지역·결제 절차와 오픈웨이트 부재를 구분합니다.
 
 **앞으로의 전망 — AI 추론**  
-단기에는 알리바바의 컴퓨트 확보와 가격 경쟁 여력이 커질 수 있으나, 다음 분기부터는 AI 클라우드 매출 증가가 자본비용과 희석을 얼마나 상쇄하는지가 핵심 지표가 될 가능성이 높다.
+경쟁은 데모 품질보다 API 성공률, 초당 비용, 참조 일관성, 지역 가용성과 상업 이용 조건을 포함한 운영 지표로 이동할 가능성이 높습니다.
 
 **사업 기회**  
-상장 AI 기업의 증자·채권·CAPEX와 매출 회수기간을 한 화면에서 비교하는 비개인화 Capital-to-AI Tracker.
+입력 자산의 해상도·권리·샷 구성을 먼저 검사해 재생성 낭비를 줄이는 `AI Video Shot Preflight`.
 
 **관련 태그**  
-`Alibaba` `Qwen` `equity-placement` `AI-capex` `cloud` `investment` `dilution`
+Alibaba · Wan3.0 · AI-video · multimodal · API · creator-tools
 
-**평가** S · 93/100 — 신뢰도 29 · 영향도 25 · 활용도 19 · 최신성 15 · 커뮤니티 5  
-**출처** [Alibaba Group · 2026-08-23](https://www.alibabagroup.com/en-US/document-2028246284372017152) · [Reuters · 2026-08-23](https://www.reuters.com/business/retail-consumer/alibaba-proposes-hong-kong-share-placement-worth-10-billion-2026-08-23/) · [Financial Times · 2026-08-23](https://www.ft.com/content/e4ab027e-ed41-48b7-89ac-8250d3054ae6)
+출처: [Alibaba Cloud Prime 문서](https://help.aliyun.com/zh/model-studio/wan3-0-video-prime) · [기본 API 문서](https://help.aliyun.com/en/model-studio/wan3-video-generation-api-reference) · [Reuters](https://www.reuters.com/business/retail-consumer/alibaba-launches-wan30-ai-video-model-after-10-billion-share-sale-2026-08-24/)
 
----
-
-### 2. Hugging Face, 130억달러 이상 가치의 매각 가능성 타진 보도
+### 2. 영국·우크라이나, 전장 데이터 기반 AI 방위 파트너십 체결 · 86/100 · S
 
 **한줄요약**  
-Hugging Face가 은행과 함께 잠재 인수자의 관심을 확인하며 130억달러 이상 가치의 매각 가능성을 검토 중이라는 보도가 나왔다.
+영국이 우크라이나 Avengers AI Labs에 접근하는 첫 국제 파트너가 되어 방위·보안 AI와 저전력 칩 공동 연구를 추진합니다.
 
 **원문 핵심문장 / 번역**  
-> “The startup has been working with a bank to evaluate bidders' interest, and no deal has been reached yet”  
-> “회사는 은행과 인수 관심을 평가 중이며 아직 거래는 성사되지 않았다.”
+“UK set to become the first international partner to access Ukraine’s Avengers AI Labs”  
+“영국은 우크라이나 Avengers AI Labs에 접근하는 첫 국제 파트너가 됩니다.”
 
 **원문 요약**  
-FACT: Business Insider는 복수의 익명 소식통을 인용해 Hugging Face가 은행과 잠재 인수자의 관심을 타진 중이며 130억달러 이상 가치가 거론된다고 보도했다. Reuters가 이를 재보도했지만 Hugging Face는 즉시 답하지 않았고 합의된 거래도 없다. 2023년 마지막 공개 기업가치는 45억달러였다.  
-INTERPRETATION: 모델 자체보다 배포·데이터·개발자 유통망이 전략적 자산으로 재평가되는 흐름이다.  
-SIGNAL: 기업 사용자는 Hub·Inference·datasets 의존도와 대체 경로, 모델 아티팩트 백업을 점검할 필요가 있다.  
-SPECULATION: 매각이 성사되면 인수자에 따라 중립성·가격·접근정책이 달라질 수 있으나 현재는 상대방과 조건 모두 미확인이다.
+- FACT: 영국 정부와 Reuters는 8월 24일 파트너십 체결, 광섬유 센서, 저전력 AI 칩과 자율 시스템 공동 프로젝트를 발표했습니다. 우크라이나 측 수치인 월 10만개 이상 드론 피드·약 70% 표적 식별은 외부 재현되지 않았습니다.
+- INTERPRETATION: 희소한 실전 운용 데이터가 국가 간 AI 역량 교환의 핵심 자산이 되고 있습니다.
+- SIGNAL: 정확도보다 데이터 출처, 접근권한, 감사, 오탐 책임과 수출통제가 채택의 전제입니다.
+- SPECULATION: 성과가 확인되면 시설 보호·로보틱스로 확장될 수 있지만 민간 적용 범위는 미공개입니다.
 
 **왜 중요한가**  
-한국의 오픈모델 팀은 Hugging Face를 단순 다운로드 사이트가 아니라 핵심 공급망으로 보고 모델·데이터·Spaces의 내보내기와 미러링 가능성을 확인해야 한다.
+방산·보안 AI 데이터 협력의 방향을 보여주지만 법률·보안·인권 검토 없이는 소형 팀의 사업 기회로 전환하면 안 됩니다.
 
 **업계 분위기**  
-Platform-premium / neutrality-anxious. 개발자 플랫폼 가치 상승에는 동의하지만 오픈 생태계의 핵심 허브가 특정 대기업에 종속될 가능성을 우려한다.
+`strategic-urgent / governance-concerned` — 실전 데이터의 가치와 동맹 협력을 높게 평가하면서 표적 식별·시설 감시 데이터의 접근 통제를 우려합니다.
 
 **앞으로의 전망 — AI 추론**  
-당장 서비스 변화보다 매각설의 공식 확인 여부가 먼저다. 협상이 현실화되면 가격보다 모델 저장소 중립성, 기업 데이터 거버넌스와 경쟁사 접근 정책이 심사의 핵심이 될 가능성이 높다.
+단기 성과는 모델 발표보다 공동 데이터 거버넌스, 파일럿 결과와 외부 감사 체계 공개 여부로 판단될 가능성이 높습니다.
 
 **사업 기회**  
-Hugging Face 조직의 모델·데이터·설정과 라이선스 메타데이터를 정기 내보내는 소형 팀용 Hub Backup Check.
+자동화 아이디어로 전환하지 않았습니다. 군사·감시·수출통제와 개인정보 게이트가 해결되지 않았습니다.
 
 **관련 태그**  
-`Hugging-Face` `M&A` `open-models` `developer-platform` `vendor-risk` `AI-infrastructure`
+UK · Ukraine · defence-AI · battlefield-data · dual-use · governance
 
-**평가** S · 87/100 — 신뢰도 23 · 영향도 24 · 활용도 18 · 최신성 15 · 커뮤니티 7  
-**출처** [Business Insider · 2026-08-23](https://www.businessinsider.com/hugging-face-could-be-acquired-13-billion-2026-8) · [Reuters · 2026-08-23](https://www.reuters.com/business/hugging-face-exploring-sale-valuing-it-13-billion-business-insider-says-2026-08-23/) · [Reuters: 2023 valuation](https://www.reuters.com/technology/ai-startup-hugging-face-valued-45-bln-latest-round-funding-2023-08-24/)
+출처: [영국 정부](https://www.gov.uk/government/news/new-partnership-set-to-see-the-uk-and-ukraine-develop-battle-winning-technology-as-britain-secures-access-to-ukraines-avengers-ai-labs) · [Reuters](https://www.reuters.com/business/aerospace-defense/uk-ukraine-sign-ai-defence-partnership-linked-battlefield-technology-2026-08-24/) · [The Guardian](https://www.theguardian.com/politics/2026/aug/24/uk-to-use-ukraine-battlefield-data-to-train-ai-to-protect-sensitive-sites)
 
----
-
-### 3. FreeToken, 로컬 CPU·GPU를 함께 쓰는 오픈 MoE 추론 엔진 공개
+### 3. 대만 검찰, 중국향 AI 서버 불법 수출 혐의 9명 기소 · 85/100 · S
 
 **한줄요약**  
-UC Berkeley·UT Austin 연구진이 이기종 로컬 하드웨어에서 대형 MoE를 구동하는 Apache-2.0 FreeToken을 논문·코드·PyPI로 공개했다.
+대만 검찰이 제한 대상 NVIDIA 칩 탑재 서버 130대의 서류를 조작해 74대를 중국으로 보낸 혐의로 9명을 기소했습니다.
 
 **원문 핵심문장 / 번역**  
-> “FreeToken continuously maps computation and model state onto the resources actually available”  
-> “FreeToken은 연산과 모델 상태를 실제 사용 가능한 자원에 지속적으로 배치한다.”
+“Taiwan prosecutors said on Monday they had indicted nine people”  
+“대만 검찰은 월요일 9명을 기소했다고 밝혔습니다.”
 
 **원문 요약**  
-FACT: 8월 17일 공개된 논문과 GitHub 저장소는 FreeToken이 CPU·GPU·호스트 메모리·PCIe 대역폭을 동적으로 사용하며 20개 이상 MoE 모델을 지원한다고 설명한다. 코드는 Apache-2.0이고 PyPI v0.1.2와 Windows·Linux 앱이 제공된다. MarkTechPost의 8월 23일 점검은 논문 수치 계산과 라이선스를 확인했지만 주요 처리량 주장은 아직 독립 재현이 없고, 753B 구동에는 192~512GB 호스트 메모리가 필요하다고 지적했다.  
-INTERPRETATION: 로컬 추론의 병목이 GPU VRAM 단독 용량에서 전체 시스템 대역폭 관리로 이동한다.  
-SIGNAL: 소형 팀은 자신이 보유한 하드웨어에서 동일 모델·정밀도·프롬프트로 TTFT, 처리량, 전력과 메모리를 재측정해야 한다.  
-SPECULATION: 결과가 재현되면 사내 코드·문서용 에이전트의 클라우드 비용과 데이터 반출을 줄일 수 있지만 다중 사용자 운영성은 미확인이다.
+- FACT: Reuters와 AP는 지룽지검이 NVIDIA·Super Micro 관련 직원 등을 포함한 9명을 배임·문서위조 등 혐의로 기소했다고 보도했습니다. 74대 반출·56대 세관 차단은 검찰 주장이며 유죄 판결이 아닙니다.
+- INTERPRETATION: 수출통제 병목이 칩 제조사에서 최종사용자 확인, 유통사, 물류와 내부 승인 증빙으로 이동했습니다.
+- SIGNAL: 서버 구매·재판매 기업은 목적지·최종사용자·라이선스·승인 로그를 단일 거래 파일로 보존해야 합니다.
+- SPECULATION: 우회 경로 단속 강화가 아시아 AI 서버의 납기와 규정준수 비용을 높일 수 있습니다.
 
 **왜 중요한가**  
-한국 개인 개발자와 1~3인 팀이 이미 가진 GPU로 더 큰 오픈모델을 시험할 선택지가 생겼지만, 장비 구매 전에 실제 RAM·드라이버·전력 조건을 확인해야 한다.
+한국 서버 유통·클라우드 사업자는 제재 리스트 확인만으로 충분하지 않고 최종사용자 증빙과 내부 승인 기록까지 점검해야 합니다.
 
 **업계 분위기**  
-Local-first / benchmark-cautious. 초기 사용자는 16GB VRAM 실험 결과에 기대를 보이지만 정밀도 차이, 큰 호스트 RAM과 자체 벤치마크를 경계한다.
+`enforcement-hardening / legal-fact-cautious` — 단속 강화 신호로 받아들이되 피고인의 유죄와 회사 책임은 확정되지 않았다고 구분합니다.
 
 **앞으로의 전망 — AI 추론**  
-향후 1~2개월은 지원 모델 확대보다 설치 성공률, 재현 벤치마크, 긴 에이전트 세션과 동시 요청 안정성이 채택 속도를 결정할 가능성이 높다.
+집행은 칩 SKU보다 거래 당사자, 배송 경로와 최종사용자 증빙을 연결하는 감사로 세밀해질 가능성이 높습니다.
 
 **사업 기회**  
-사용자의 하드웨어 사양과 모델을 받아 설치 가능성·예상 RAM·검증용 프롬프트를 출력하는 Local MoE Readiness Check.
+증빙 누락 검사 도구는 가능하지만 관할별 법률 자문 의존성 때문에 오늘의 아이디어로 선정하지 않았습니다.
 
 **관련 태그**  
-`FreeToken` `MoE` `local-AI` `edge-inference` `open-source` `GPU` `CPU-offload`
+Taiwan · NVIDIA · Super-Micro · AI-servers · export-controls · supply-chain
 
-**평가** A · 86/100 — 신뢰도 27 · 영향도 20 · 활용도 20 · 최신성 12 · 커뮤니티 7  
-**출처** [arXiv · 2026-08-17](https://arxiv.org/abs/2608.16157) · [GitHub](https://github.com/FlashML-org/FreeToken) · [MarkTechPost Reality Check · 2026-08-23](https://www.marktechpost.com/2026/08/23/meet-freetoken-an-edge-native-moe-serving-engine-that-runs-753b-glm-5-2-on-a-single-workstation-gpu/)
+출처: [Reuters](https://www.reuters.com/world/asia-pacific/taiwan-indicts-9-over-alleged-illegal-export-ai-servers-china-2026-08-24/) · [AP](https://apnews.com/article/511e9ae69d517c49f19512d45b1a8b0c) · [5월 수사 보도](https://www.reuters.com/legal/government/taiwan-investigates-three-alleged-illegal-export-high-end-ai-servers-2026-05-21/)
 
----
-
-### 4. 한국 미래대응기금 구체화, 프런티어 AI·3대 메가프로젝트를 성장동력 계정에 포함
+### 4. wikiHow, 1,200여 저작권 침해 주장으로 OpenAI 제소 · 85/100 · A
 
 **한줄요약**  
-정부가 반도체 호황의 추가세수를 적립해 프런티어 AI, 반도체·피지컬 AI·AI 데이터센터와 인재에 투자하는 미래대응기금안을 구체화했다.
+wikiHow가 1만1천개 이상 기사 무단 학습·출력 재현을 주장하며 OpenAI를 뉴욕 남부연방법원에 제소했습니다.
 
 **원문 핵심문장 / 번역**  
-> “성장동력 분야는 프런티어급 AI와 3대 메가프로젝트 인프라 ... 7대 SEED 기술에 투자한다”  
-> “The growth account will invest in frontier AI, three megaproject infrastructures and seven SEED technologies.”
+“Those models now produce competing how-to content on the same subjects”  
+“그 모델들은 이제 동일 주제의 경쟁하는 사용법 콘텐츠를 생성합니다.”
 
 **원문 요약**  
-FACT: 기획예산처는 8월 21일 미래대응기금을 청년·성장동력·지방·교육인재 4개 분야에 투자하고, 성장동력 분야에 프런티어 AI와 반도체·피지컬 AI·AI 데이터센터 인프라를 포함한다고 밝혔다. 재원은 10년 평균 추세를 웃도는 내국세, 초과세수, 세계잉여금 잔여재원과 운용수익이며 9월 초 2027년 예산안과 함께 법안을 제출할 계획이다. Reuters도 같은 계획을 확인했지만 공식 기금 규모는 제시되지 않았다고 보도했다.  
-INTERPRETATION: 일회성 보조사업이 아니라 호황 세수를 미래 기술과 경기 대응에 연결하는 재정 플랫폼 구상이다.  
-SIGNAL: 국내 팀은 헤드라인 규모보다 법안 통과, 계정별 배분, 공고 자격과 집행기관을 추적해야 한다.  
-SPECULATION: 법안이 통과되면 2027년부터 AI 인프라·인재 사업이 늘 수 있지만 국회 심사와 세수 변동으로 일정·규모가 달라질 수 있다.
+- FACT: 사건번호 1:26-cv-07171은 8월 21일 제기됐습니다. Reuters는 소장이 1만1천개 이상 기사와 1,200여 등록 저작권 침해를 주장한다고 보도했습니다. OpenAI는 공개 데이터와 공정이용에 근거한다고 답했습니다.
+- INTERPRETATION: 학습 입력뿐 아니라 동일 주제 답변이 원문 시장을 대체한다는 출력·사업 피해 논리가 결합됐습니다.
+- SIGNAL: 콘텐츠 사업자는 원문 버전, 접근 로그, 라이선스, 모델 출력 비교와 매출 영향을 시간순으로 보존할 필요가 있습니다.
+- SPECULATION: 대체시장 논리의 인정 범위가 RAG·요약·사용법 생성 서비스의 계약과 출처 표시에 영향을 줄 수 있습니다.
 
 **왜 중요한가**  
-한국의 소형 AI 팀에는 투자 대상이 구체화되는 초기 신호지만, 아직 신청 가능한 지원금이 아니므로 예산·법안·공고의 세 단계를 분리해야 한다.
+한국 콘텐츠·AI 팀은 결론을 예단하지 말고 수집 데이터 권리와 출력 유사성, 삭제·옵트아웃 요청 처리 기록을 초기부터 남겨야 합니다.
 
 **업계 분위기**  
-Policy-positive / execution-cautious. 장기 재원 마련은 반기지만 100조원 이상이라는 언론 추정, 교육재정 개편과 실제 민간 접근성은 확정되지 않았다는 경계가 크다.
+`publisher-defensive / doctrine-unsettled` — 콘텐츠 제작 비용과 대체시장 피해에 대한 공감은 크지만 공정이용 기준은 사건별 판단이 필요합니다.
 
 **앞으로의 전망 — AI 추론**  
-9월 예산안·패키지 법안에서 계정 구조와 첫 집행사업이 공개되면 기업·대학·지역 프로젝트의 우선순위가 선명해질 가능성이 높다.
+단기에는 답변서와 병합·이송 여부가 쟁점이고, 판결 전에도 데이터 출처·삭제 요청·출력 회귀 테스트 증빙 요구가 늘 가능성이 높습니다.
 
 **사업 기회**  
-정부 원문만 수집해 법안→예산→공고 상태와 소형팀 자격을 구분하는 Korean AI Fund Calendar.
+원문 버전과 모델 출력 비교를 보존하는 Evidence Log는 가능하지만 기존 콘텐츠 출처 관리 아이디어와 중복되어 선정하지 않았습니다.
 
 **관련 태그**  
-`Korea` `Future-Response-Fund` `AI-policy` `semiconductor` `physical-AI` `AI-data-center` `public-funding`
+wikiHow · OpenAI · copyright · AI-training · content · fair-use
 
-**평가** A · 85/100 — 신뢰도 29 · 영향도 23 · 활용도 18 · 최신성 11 · 커뮤니티 4  
-**출처** [대한민국 정책브리핑·기획예산처 · 2026-08-21](https://www.korea.kr/news/policyNewsView.do?newsId=148970426) · [Reuters · 2026-08-21](https://www.reuters.com/world/asia-pacific/south-korea-plans-chip-windfall-fund-back-youth-ai-investment-2026-08-21/)
-
----
-
-### 5. Google Vertex AI, Claude 3 Haiku 지원 종료일 도래
-
-**한줄요약**  
-Google Cloud가 예고한 대로 8월 23일 Vertex AI의 Claude 3 Haiku 지원을 종료해 기존 호출은 Haiku 4.5 등으로 마이그레이션해야 한다.
-
-**원문 핵심문장 / 번역**  
-> “Claude 3 Haiku on Google Cloud ... will be shut down on August 23, 2026”  
-> “Google Cloud의 Claude 3 Haiku는 2026년 8월 23일 종료된다.”
-
-**원문 요약**  
-FACT: Google Cloud의 파트너 모델 폐기 문서는 Claude 3 Haiku를 2월 23일 deprecated로 전환했고 8월 23일 종료한다고 명시한다. LangChain의 Vertex 통합 문서도 같은 날짜와 Haiku 4.5 모델 ID를 안내한다. Anthropic 자체 API에서는 이 모델이 이미 4월 20일 종료됐으므로 이번 변화는 Vertex 경로에 해당한다.  
-INTERPRETATION: 멀티클라우드에서 같은 모델명도 공급자별 종료일이 달라 단일 폐기 일정표가 필요하다.  
-SIGNAL: 고정 모델 ID, 폴백, 출력 스키마, 비용과 지연을 회귀 테스트해야 한다.  
-SPECULATION: 관리형 AI 플랫폼의 모델 교체 주기가 짧아질수록 자동 만료 탐지와 카나리 테스트가 소형 팀에도 기본 운영 항목이 될 수 있다.
-
-**왜 중요한가**  
-Vertex AI를 쓰는 한국 개발팀은 장애가 난 뒤 바꾸기보다 모델 목록과 10~20개 대표 요청으로 대체 모델의 형식·비용 차이를 확인해야 한다.
-
-**업계 분위기**  
-Migration-routine / outage-alert. 6개월 예고는 충분했다는 시각과 오래된 모델 ID가 배치·내부 도구에 남아 있을 수 있다는 운영 우려가 공존한다.
-
-**앞으로의 전망 — AI 추론**  
-공급자별 모델 종료가 누적되면서 관측 도구는 API 오류뿐 아니라 폐기 예정일, 대체 모델과 회귀 결과를 함께 보여주는 방향으로 확장될 가능성이 높다.
-
-**사업 기회**  
-공식 폐기 문서와 실제 테스트 호출을 결합해 모델 만료 30·14·7일 전에 알리는 Model Sunset Canary.
-
-**관련 태그**  
-`Google-Cloud` `Vertex-AI` `Anthropic` `Claude-3-Haiku` `deprecation` `migration` `operations`
-
-**평가** A · 82/100 — 신뢰도 30 · 영향도 18 · 활용도 20 · 최신성 10 · 커뮤니티 4  
-**출처** [Google Cloud partner deprecations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models) · [Vertex AI release notes](https://docs.cloud.google.com/vertex-ai/docs/release-notes) · [LangChain integration docs](https://docs.langchain.com/oss/python/integrations/chat/google_anthropic_vertex)
+출처: [법원 사건 기록](https://www.pacermonitor.com/public/case/66393904/wikiHow%2C_Inc_v_OpenAI%2C_Inc_et_al) · [Reuters](https://www.reuters.com/legal/legalindustry/wikihow-sues-openai-copyright-infringement-over-ai-training-2026-08-24/) · [소송 추적 해설](https://chatgptiseatingtheworld.com/2026/08/22/wikihow-sues-openai-for-copyright-infringement/)
 
 ## Opportunity Finder
 
-### Model Sunset Canary — 4.2/5 · ★★★★☆ · High
+### AI Video Shot Preflight · 4.1/5 · ★★★★☆ · High
 
-- **문제:** 공급자마다 폐기 문서와 종료일이 달라 오래된 모델 ID가 배치·내부 도구에 남고, 종료 당일에야 오류를 발견하기 쉽다.
-- **고객:** OpenAI·Anthropic·Google·AWS 모델을 2개 이상 쓰는 한국 1~3인 SaaS·외주 개발팀.
-- **기존 해결법:** 공식 변경 로그, 이메일 공지, 수동 캘린더, Sentry·Datadog 오류 알림과 자체 통합 테스트.
-- **경쟁사:** Portkey, Helicone, Datadog, provider changelogs, custom cron tests.
-- **차별점:** 전체 LLM 관측 플랫폼이 아니라 사용자가 등록한 모델 ID의 공식 종료 근거, 대체 모델과 10개 카나리 요청의 형식·비용 차이만 한 장에 보여준다.
-- **2주 MVP:** 공식 폐기 URL 5개를 수동 승인 목록으로 유지하고 모델 ID·종료일을 읽어 30·14·7일 알림과 사용자가 실행하는 샘플 호출 결과를 로컬 HTML로 출력한다.
-- **난이도:** Low-Medium.
-- **수익화:** 무료 5개 모델 + 팀 월 1만~4만원 알림·회귀 이력.
-- **반증 조건:** 한국 소형 AI 팀 15곳 중 5곳 미만이 지난 6개월간 모델 교체 장애 또는 1시간 이상 수동 점검을 경험했다면 중단한다. 공급자 이메일만으로 누락 없이 해결되면 오픈 체크리스트로 축소한다.
+- 문제: 비율, 자산 권리, 참조 수, 장면 길이와 브랜드 문구를 사전 확인하지 않아 실패 렌더와 재생성 비용이 쌓입니다.
+- 고객: 상품 이미지·PPT·URL로 짧은 영상을 만드는 한국 1~3인 셀러와 대행사.
+- 기존 해결법: Canva·CapCut 스토리보드, 엑셀 체크리스트, 수동 검수.
+- 경쟁사: Canva, CapCut, Adobe Express, 모델별 playground.
+- 차별점: 영상을 생성하지 않고 12개 입력 규칙과 6개 이하 샷 구성을 검사해 API 요청 초안만 만듭니다.
+- 2주 MVP: 입력 폼, 규칙 검사, 15·30초 타임라인, 누락 경고, JSON 요청 미리보기.
+- 난이도: Low-Medium.
+- 수익화: 무료 프로젝트 3개 + 월 1만~3만원 팀 템플릿·이력.
+- 반증 조건: 15곳 중 5곳 미만이 월 3회 이상 재생성하거나 사전 검사로 실패 렌더가 20% 이상 줄지 않으면 중단.
 
-### Korean AI Fund Calendar — 3.9/5 · ★★★★☆ · Medium
+### AI Model Release State Card · 3.9/5 · ★★★★☆ · Medium
 
-- **문제:** 정책 발표, 법안, 예산안과 실제 신청 가능한 공고가 섞여 있어 아직 지원할 수 없는 계획을 기회로 오인하거나 마감 공고를 놓친다.
-- **고객:** 정부 AI 지원사업을 찾는 한국 개인사업자·초기 스타트업·지역 연구팀.
-- **기존 해결법:** 기업마당, K-Startup, NTIS, 부처 뉴스레터, 지원사업 대행사와 엑셀 캘린더.
-- **경쟁사:** 기업마당, K-Startup, NTIS, 비즈봇, 정부지원사업 컨설팅.
-- **차별점:** AI·반도체·피지컬 AI만 다루고 모든 항목을 정책→법안→예산→공고→마감 상태로 나누며 공식 원문과 소형팀 자격의 확인 여부를 표시한다.
-- **2주 MVP:** korea.kr·기업마당·K-Startup의 공개 URL을 매일 수동 검토해 30개 항목의 상태, 지역, 기업연령, 자부담, 마감일을 제공하는 읽기 전용 웹 캘린더.
-- **난이도:** Low.
-- **수익화:** 무료 주간 목록 + 지역·기업조건 저장과 마감 알림 월 5천~2만원.
-- **반증 조건:** 대상 팀 20곳 중 6곳 미만이 월 1회 이상 지원사업을 찾거나, 공식 사이트 알림만으로 90% 이상 요구가 해결되면 중단한다. 자격 판정 책임을 요구하면 정보 제공 범위로 제한한다.
+- 문제: 발표, 초대, preview, GA, API와 오픈웨이트를 모두 ‘출시’라고 불러 접근 가능성·라이선스를 오판합니다.
+- 고객: 신규 모델을 제품에 붙이는 한국 개인 개발자·소형 SaaS 팀.
+- 기존 해결법: 공급자 변경 로그, 모델 디렉터리, 커뮤니티 글, 내부 스프레드시트.
+- 경쟁사: Artificial Analysis, OpenRouter, Hugging Face, provider changelog.
+- 차별점: 성능 순위 없이 공식 URL 기준으로 발표일·상태·지역·가격·API·가중치·라이선스를 7칸으로 분리합니다.
+- 2주 MVP: 20개 모델의 수동 승인 카드, 공식 문서 diff, 출처 날짜 표시.
+- 난이도: Low.
+- 수익화: 공개 카드 무료 + 월 1만~4만원 변경 알림·CSV.
+- 반증 조건: 20곳 중 6곳 미만이 최근 3개월 상태를 오해했거나 공식 문서 한 곳만으로 90% 해결되면 중단.
 
 ## 구축 판단
 
-오늘은 4.3/5, ★★★★★, Very High, 공식 포함 독립 근거 2개, 4~8주 MVP 가능, 미해결 법률·보안·유료 의존성 없음 조건을 모두 충족한 후보가 없다. **자동 설계·구현은 실행하지 않았다.**
+구축 후보 없음. 두 아이디어 모두 실용적이지만 종합점수 4.3/5, ★★★★★, Very High 조건을 충족하지 않았습니다. AI Architect·구현·배포는 실행하지 않았습니다.
 
-## AI Tools
+## Tools
 
-- **[FreeToken v0.1.2](https://github.com/FlashML-org/FreeToken)** — CPU·GPU·호스트 메모리·PCIe를 동적으로 묶어 대형 MoE를 로컬에서 구동한다. 새 장비 구매 없이 작은 지원 모델로 설치, TTFT, 처리량, RAM과 전력만 측정한다.
-- **[Google Cloud Partner Model Deprecations](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/deprecations/partner-models)** — 공급자별 관리형 모델 종료일과 대체 경로를 확인하는 공식 기준이다.
+- [Wan3.0-Video-Prime API](https://help.aliyun.com/zh/model-studio/wan3-0-video-prime) — 대표 상품 3개로 15초 720P만 시험해 성공률·대기시간·승인 결과당 비용을 기록할 가치가 있습니다.
+- [AI Copyright Case Tracker](https://chatgptiseatingtheworld.com/ai-copyright-case-tracker/) — 사건번호를 찾는 보조 색인으로만 쓰고 PACER·CourtListener·당사자 문서로 재확인해야 합니다.
 
 ## Community Pulse
 
-- **Reddit r/LocalLLaMA · performance-excited / reproducibility-curious:** FreeToken 초기 사용자는 16GB VRAM에서 20GB급 모델을 구동한 수치를 공유하면서도 하드웨어 표기와 정밀도 조건을 서로 검증한다. [토론](https://www.reddit.com/r/LocalLLaMA/comments/1vv6v00/freetokens_project_is_impressive/)
-- **LinkedIn · hands-on-positive / hardware-checking:** 개발자가 RTX 3080·32GB RAM 환경의 FreeToken 처리량을 공개했고 다른 사용자는 GPU 메모리 사양부터 재확인하며 재현 조건을 따진다. [실험](https://www.linkedin.com/posts/ezimuel_i-just-tested-freetoken-on-my-linux-laptop-activity-7496484693639360513-ZzXD)
-- **Reddit r/LocalLLaMA · scale-impressed / quality-skeptical:** Hugging Face의 300만 모델 돌파에는 생태계 규모를 인정하면서도 원본 모델보다 파인튜닝 중복이 대부분이라는 반응이 나온다. [토론](https://www.reddit.com/r/LocalLLaMA/comments/1vrnckt/hugging_face_just_surpassed_3_million_models_on/)
-- **X · local-first / cost-optimistic:** FreeToken이 GPU·CPU·RAM을 함께 활용해 로컬 AI 비용 구조를 바꿀 수 있다는 기대와 직접 시험하겠다는 반응이 확산됐다. [게시물](https://x.com/mark_k/status/2091202223090938177)
+- [Reddit r/comfyui: API 접근 경험](https://www.reddit.com/r/comfyui/comments/1vm2rek/wan_30_just_dropped_heres_how_i_got_at_the_api/) — 통합 관심은 높지만 계정·결제·지역 설정이 실제 마찰입니다.
+- [Reddit r/comfyui: 30초 데모 반응](https://www.reddit.com/r/comfyui/comments/1vfmcty/wan_30_just_announced_and_coming_soon_native_30/) — 데모에는 감탄하면서 현실감과 대표성을 의심합니다.
+- [GitHub Wan2.2 Issue #181](https://github.com/Wan-Video/Wan2.2/issues/181) — API 접근과 오픈웨이트 공개를 같은 출시로 보지 않습니다.
+- [AI Copyright Case Tracker: wikiHow 사건](https://chatgptiseatingtheworld.com/2026/08/22/wikihow-sues-openai-for-copyright-infringement/) — 청구를 입력·출력·대리책임·CMI 제거로 나눠 추적합니다.
 
 ## Skill of the Day
 
-### 모델 종료 카나리 테스트
+**AI 모델 출시 상태 분리 검증** — 공식 자료를 `발표 / preview / GA / API 지역 / 가격 / 오픈웨이트 / 라이선스`로 나누고 없는 근거는 미확인으로 남깁니다.
 
-- **언제:** AI 공급자가 모델 폐기 또는 대체 모델을 공지했을 때 운영 장애 전에 영향 범위를 확인할 때.
-- **실전 예시:** 프로덕션의 모델 ID를 검색하고 대표 입력 10개를 기존·대체 모델에 보내 상태코드, JSON 스키마, 지연, 토큰과 비용 차이를 표로 남긴다.
-- **프롬프트:** “이 공식 폐기 문서와 내 모델 목록을 비교해 30일 내 종료 모델만 찾아줘. 대체 모델별로 대표 요청 10개 카나리 계획, 성공 기준, 롤백 조건을 작성하고 법률·품질 보장은 추정하지 마.”
+실전 프롬프트: “이 모델의 공식 발표와 문서를 읽고 발표, preview, GA, API 지역, 가격, 오픈웨이트, 라이선스를 각각 FACT로 표기해줘. 없는 근거는 추정하지 말고 미확인으로 남겨줘.”
 
 ## Worth Reading
 
-- **Paper:** [FreeToken: Efficient Edge-Native MoE Serving with Bandwidth-Adaptive Execution](https://arxiv.org/abs/2608.16157) — 로컬 MoE 추론에서 prefill·expert cache·CPU/GPU 분배를 어떻게 함께 설계했는지 원 논문과 실험 조건을 확인한다.
-- **GitHub:** [FlashML-org/FreeToken](https://github.com/FlashML-org/FreeToken) — Apache-2.0 라이선스, 지원 모델, 설치 조건과 실제 구현을 보고 논문의 20개 이상 지원 주장을 대조한다.
-- **YouTube:** [New Local AI Engine Everyone Will Be Using in 2027? (FreeToken)](https://www.youtube.com/watch?v=Mlo16hrA5wQ) — 캐시·대역폭 개념을 시각적으로 빠르게 이해하되 독립 성능 재현이 아니라 해설 영상이라는 한계를 둔다.
-- **Blog:** [Meet FreeToken: Reality Check](https://www.marktechpost.com/2026/08/23/meet-freetoken-an-edge-native-moe-serving-engine-that-runs-753b-glm-5-2-on-a-single-workstation-gpu/) — 논문 수치의 계산, 정밀도 비교, 192~512GB 호스트 RAM과 독립 재현 부재를 분리해 과장 가능성을 점검한다.
+- Paper — [Wan: Open and Advanced Large-Scale Video Generative Models](https://arxiv.org/abs/2503.20314)
+- GitHub — [Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2)
+- YouTube — [Alibaba WAN: AI That Writes, Speaks, and Designs Ads](https://www.youtube.com/watch?v=B6xw_k5zeBY)
+- Blog — [The Next Phase of Enterprise Video Generation](https://runway.com/news/company-news%2Fthe-next-phase-of-enterprise-video-generation)
 
 ## 확인되지 않은 부분
 
-- 알리바바 신주 배치의 최종 완료·세부 AI 투자 배분과 실제 회수율.
-- Hugging Face 매각 협상의 회사 공식 확인, 잠재 인수자·조건·성사 여부.
-- FreeToken 주요 성능 수치의 폭넓은 독립 재현과 다중 사용자 안정성.
-- 미래대응기금의 국회 통과, 공식 총규모·계정별 배분과 첫 신청 공고.
-- Vertex AI의 종료 후 실제 오류 양상과 기존 고객별 예외 유예 여부.
+- Wan3.0 Prime의 독립 품질·속도·비용 벤치마크와 오픈웨이트·최종 라이선스.
+- 영국·우크라이나 데이터셋의 외부 감사, 개인정보·인권 통제와 70% 표적 식별 수치의 독립 검증.
+- 대만 검찰 보도자료의 영문 원문 URL, 피고인별 사실인정과 최종 판결.
+- wikiHow 소송의 OpenAI 정식 답변서, 증거개시 결과와 법원의 공정이용·대체시장 판단.
 
-## 정본
+---
 
-- [GitHub 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-24.md)
-- [구조화 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-24.json)
+[GitHub 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-25.md) · [원본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-25.json)
