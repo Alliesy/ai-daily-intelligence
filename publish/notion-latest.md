@@ -1,203 +1,209 @@
-# AI Daily Intelligence · 2026-08-25
+# AI Daily Intelligence · 2026-08-26
 
-> 조사 기준: 2026-08-24 07:00~2026-08-25 07:00 KST 신규 발표, 최근 7일 중요 후속 변화. 공식 문서·정부 발표·법원 기록을 우선했고, 혐의와 소송 주장은 판결 사실과 분리했습니다.
+> 조사 기준: 2026-08-25 07:00~2026-08-26 07:00 KST 신규 발표와 최근 7일 중요 후속 변화. 공식 문서·거래소 공시를 우선했고 공급자 벤치마크는 독립 재현과 분리했습니다.
+
+[GitHub 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-26.md) · [원본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-26.json)
 
 ## 오늘의 결론
 
-AI의 병목이 모델 능력만이 아니라 데이터 권리와 접근 상태, 거래 증빙으로 이동하고 있습니다. Wan3.0은 제작 범위를 넓혔지만 preview·지역·가중치 공개를 따로 봐야 합니다. 영국과 우크라이나는 희소한 실전 데이터를 국가 자산으로 교환하고, 대만 기소는 AI 서버의 최종사용자 증빙을 집행 대상으로 끌어올렸습니다. wikiHow 소송은 구조화된 실용 지식의 대체시장 주장까지 확장합니다.
+AI 경쟁이 모델 답변 품질에서 운영 스택의 통제로 확장됐습니다. OpenAI는 칩·서빙과 관리자 변경을 직접 묶고, Google은 법률·금융의 권한·출처·감사를 수직형 에이전트에 넣었습니다. Enflame IPO는 이 경쟁에 필요한 반도체 자본이 공개시장으로 이동하는 흐름을 보여줍니다. 한국의 작은 팀은 칩이나 범용 에이전트를 새로 만들기보다 벤치마크 조건과 계정 변경 증빙처럼 공급자 사이에서 사라지는 운영 기록을 좁고 읽기 전용으로 다루는 편이 현실적입니다.
 
 ## Top News
 
-### 1. 알리바바, Wan3.0 고속형 Prime API 공개 · 92/100 · S
+### 1. OpenAI, Jalapeño 첫 추론 벤치마크 공개 · 95/100 · S
 
-**한줄요약**  
-알리바바 클라우드가 최대 30초·1080P 멀티모달 영상을 지원하는 Wan3.0-Video-Prime 문서를 공개해 8월 초 베타의 제품화를 확장했습니다.
+**한줄요약**
+OpenAI가 자체 추론 칩 Jalapeño가 세 공개 모델에서 비교 시스템보다 와트당 1.5~1.9배 많은 작업과 1.7~3.6배 낮은 종단 지연을 기록했다고 밝혔습니다.
 
-**원문 핵심문장 / 번역**  
-“Wan3.0-Video-Prime在保持高质量视频生成能力的同时大幅提升生成速度”  
-“Wan3.0-Video-Prime은 고품질 영상 생성 능력을 유지하면서 생성 속도를 크게 높입니다.”
+**원문 핵심문장 / 번역**
+“Jalapeño delivered 1.5 to 1.9 times more AI work per watt at peak throughput”
+“Jalapeño는 최대 처리량에서 와트당 1.5~1.9배 더 많은 AI 작업을 수행했습니다.”
 
-**원문 요약**  
-- FACT: 8월 24일 갱신된 공식 문서는 텍스트·이미지·비디오·오디오·파일·링크 입력과 480P·720P·1080P, 최대 30초·30fps 출력을 명시합니다. 기본 Wan3.0 API는 현재 preview로 표시됩니다.
-- INTERPRETATION: 8월 6일 공개 베타 이후 범용 모델과 고속형을 분리해 상용 API 표면을 넓히는 단계입니다.
-- SIGNAL: API 접근 가능, GA, 오픈웨이트, 독립 벤치마크를 모두 ‘출시’로 묶으면 안 됩니다.
-- SPECULATION: 처리 속도와 비용이 안정되면 상품 설명서·PPT를 짧은 광고로 바꾸는 배치 제작이 늘 수 있습니다.
+**원문 요약**
 
-**왜 중요한가**  
-한국의 소형 콘텐츠·커머스 팀은 촬영 전 시안과 상품 영상을 자동화할 수 있지만 브랜드 자산 권리와 재생성 비용을 먼저 통제해야 합니다.
+- FACT: OpenAI는 8월 25일 SemiAnalysis의 공개 InferenceX 방법으로 GPT-OSS 120B, DeepSeek R1 670B, Kimi K2.5 1T에서 Jalapeño를 비교했다고 발표했습니다. 공급자 측 결과는 와트당 작업량 1.5~1.9배, 종단 지연 1.7~3.6배 개선입니다.
+- FACT: 칩 정격은 700W이고 측정 지속전력은 550W 이하라고 했습니다. The Verge와 Axios는 추론 전용, 2026년 말 소량 배치, 2027년 증산 계획이며 외부 판매 계획은 없다고 보도했습니다.
+- INTERPRETATION: OpenAI는 모델·서빙 소프트웨어·칩을 함께 최적화해 추론 원가와 사용자 지연을 직접 통제하려 합니다.
+- SIGNAL: 칩 비교는 토큰/초 하나가 아니라 동일 모델·정밀도·지연 목표·시스템 전력 조건을 맞춰야 합니다.
+- SPECULATION: 양산과 수율이 계획대로라면 초고속 에이전트 기능의 마진이 개선될 수 있지만 실제 서비스 가격 인하로 이어질지는 미확인입니다.
 
-**업계 분위기**  
-`workflow-excited / release-state-cautious` — 30초·문서 입력·고속형에는 기대가 크지만 계정·지역·결제 절차와 오픈웨이트 부재를 구분합니다.
+**왜 중요한가**
+한국 AI SaaS 팀은 특정 칩의 승패보다 공급자가 추론 비용 절감을 API 가격·지연·가용성으로 얼마나 이전하는지 추적해야 합니다.
 
-**앞으로의 전망 — AI 추론**  
-경쟁은 데모 품질보다 API 성공률, 초당 비용, 참조 일관성, 지역 가용성과 상업 이용 조건을 포함한 운영 지표로 이동할 가능성이 높습니다.
+**업계 분위기**
+`performance-impressed / reproduction-cautious` — 에너지 효율과 저지연 동시 개선에는 관심이 높지만 비교 기준·양산 수율·실서비스 비용을 독립적으로 확인해야 한다는 경계가 강합니다.
 
-**사업 기회**  
-입력 자산의 해상도·권리·샷 구성을 먼저 검사해 재생성 낭비를 줄이는 `AI Video Shot Preflight`.
+**앞으로의 전망 — AI 추론**
+2027년 관전 지표는 칩 출하량보다 OpenAI 트래픽 중 Jalapeño가 맡는 비중, 모델별 최적화 시간과 고객 체감 지연·가격 변화가 될 가능성이 높습니다.
 
-**관련 태그**  
-Alibaba · Wan3.0 · AI-video · multimodal · API · creator-tools
+**사업 기회**
+공개 벤치마크를 동일 지연 목표와 전력 조건으로 정규화해 읽는 `Inference Evidence Card`.
 
-출처: [Alibaba Cloud Prime 문서](https://help.aliyun.com/zh/model-studio/wan3-0-video-prime) · [기본 API 문서](https://help.aliyun.com/en/model-studio/wan3-video-generation-api-reference) · [Reuters](https://www.reuters.com/business/retail-consumer/alibaba-launches-wan30-ai-video-model-after-10-billion-share-sale-2026-08-24/)
+**관련 태그**
+OpenAI · Jalapeño · AI-chip · inference · InferenceX · energy-efficiency · NVIDIA
 
-### 2. 영국·우크라이나, 전장 데이터 기반 AI 방위 파트너십 체결 · 86/100 · S
+출처: [OpenAI](https://openai.com/index/jalapeno-first-results/) · [The Verge](https://www.theverge.com/ai-artificial-intelligence/984290/openai-jalapeno-ai-chip-benchmarks) · [Axios](https://www.axios.com/2026/08/25/openai-says-its-jalapeno-chip-offers-spicy-performance)
 
-**한줄요약**  
-영국이 우크라이나 Avengers AI Labs에 접근하는 첫 국제 파트너가 되어 방위·보안 AI와 저전력 칩 공동 연구를 추진합니다.
+### 2. Google, 법률·금융용 Gemini Enterprise 수직 에이전트 공개 · 90/100 · S
 
-**원문 핵심문장 / 번역**  
-“UK set to become the first international partner to access Ukraine’s Avengers AI Labs”  
-“영국은 우크라이나 Avengers AI Labs에 접근하는 첫 국제 파트너가 됩니다.”
+**한줄요약**
+Google Cloud가 법률과 금융서비스용 Gemini Enterprise를 preview로 공개하고 권한을 상속하는 MCP 연결, 전문 스킬과 감사 가능한 에이전트를 묶었습니다.
 
-**원문 요약**  
-- FACT: 영국 정부와 Reuters는 8월 24일 파트너십 체결, 광섬유 센서, 저전력 AI 칩과 자율 시스템 공동 프로젝트를 발표했습니다. 우크라이나 측 수치인 월 10만개 이상 드론 피드·약 70% 표적 식별은 외부 재현되지 않았습니다.
-- INTERPRETATION: 희소한 실전 운용 데이터가 국가 간 AI 역량 교환의 핵심 자산이 되고 있습니다.
-- SIGNAL: 정확도보다 데이터 출처, 접근권한, 감사, 오탐 책임과 수출통제가 채택의 전제입니다.
-- SPECULATION: 성과가 확인되면 시설 보호·로보틱스로 확장될 수 있지만 민간 적용 범위는 미공개입니다.
+**원문 핵심문장 / 번역**
+“General-purpose AI, however capable, does not meet that standard on its own.”
+“범용 AI는 아무리 유능해도 그 기준을 단독으로 충족하지 못합니다.”
 
-**왜 중요한가**  
-방산·보안 AI 데이터 협력의 방향을 보여주지만 법률·보안·인권 검토 없이는 소형 팀의 사업 기회로 전환하면 안 됩니다.
+**원문 요약**
 
-**업계 분위기**  
-`strategic-urgent / governance-concerned` — 실전 데이터의 가치와 동맹 협력을 높게 평가하면서 표적 식별·시설 감시 데이터의 접근 통제를 우려합니다.
+- FACT: 법률판은 계약 검토, 규제 스캔, DSAR, 연구·초안 스킬과 iManage·NetDocuments·Everlaw·Thomson Reuters·Harvey 등으로 이어지는 MCP 연결을 제시했습니다.
+- FACT: 금융판은 50개 이상 기반 스킬을 가진 Financial Research agent, 신뢰도·방법론·데이터 스냅샷·정밀 출처와 A2A API를 명시했습니다. 두 제품 모두 기존 권한을 상속하고 고객 데이터를 모델 학습에 쓰지 않는다고 설명합니다.
+- INTERPRETATION: 모델 성능보다 워크플로, 데이터 권한과 감사 가능성을 패키징하는 수직화 전략입니다.
+- SIGNAL: preview와 실제 생산 도입, 공급자 보안 주장과 독립 감사, 미국 법률·금융 데이터와 한국 규제 적합성을 구분해야 합니다.
+- SPECULATION: 대형 전문서비스 조직은 단일 모델보다 기존 DMS·시장데이터·승인체계를 보존하는 통합 플랫폼을 우선할 가능성이 높습니다.
 
-**앞으로의 전망 — AI 추론**  
-단기 성과는 모델 발표보다 공동 데이터 거버넌스, 파일럿 결과와 외부 감사 체계 공개 여부로 판단될 가능성이 높습니다.
+**왜 중요한가**
+한국 소형 팀은 법률 판단을 자동화하기보다 조직의 기존 권한과 출처를 보존하는 좁은 검토·증빙 기능에서 기회를 찾아야 합니다.
 
-**사업 기회**  
-자동화 아이디어로 전환하지 않았습니다. 군사·감시·수출통제와 개인정보 게이트가 해결되지 않았습니다.
+**업계 분위기**
+`verticalization-accelerating / governance-demanding` — 전문 업무에 맞춘 스킬과 연결에는 기대가 크지만 preview 제품의 정확도·보안·책임 범위를 실제 파일럿으로 확인해야 한다는 분위기입니다.
 
-**관련 태그**  
-UK · Ukraine · defence-AI · battlefield-data · dual-use · governance
+**앞으로의 전망 — AI 추론**
+의료·생명과학 등 다음 수직 제품에서도 모델명보다 권한 상속, 근거 추적, 사람 승인과 기존 시스템 연결이 핵심 구매 기준이 될 가능성이 높습니다.
 
-출처: [영국 정부](https://www.gov.uk/government/news/new-partnership-set-to-see-the-uk-and-ukraine-develop-battle-winning-technology-as-britain-secures-access-to-ukraines-avengers-ai-labs) · [Reuters](https://www.reuters.com/business/aerospace-defense/uk-ukraine-sign-ai-defence-partnership-linked-battlefield-technology-2026-08-24/) · [The Guardian](https://www.theguardian.com/politics/2026/aug/24/uk-to-use-ukraine-battlefield-data-to-train-ai-to-protect-sensitive-sites)
+**사업 기회**
+한국 규제산업 팀이 공급자 preview를 평가할 때 쓰는 권한·출처·감사 체크 카드.
 
-### 3. 대만 검찰, 중국향 AI 서버 불법 수출 혐의 9명 기소 · 85/100 · S
+**관련 태그**
+Google Cloud · Gemini Enterprise · legal-AI · financial-AI · MCP · governance · agents
 
-**한줄요약**  
-대만 검찰이 제한 대상 NVIDIA 칩 탑재 서버 130대의 서류를 조작해 74대를 중국으로 보낸 혐의로 9명을 기소했습니다.
+출처: [Google Cloud Legal](https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-legal/) · [Google Cloud Financial Services](https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-for-financial-services/) · [Reuters](https://www.reuters.com/business/google-expands-gemini-ai-platform-law-firms-lawyers-2026-08-25/)
 
-**원문 핵심문장 / 번역**  
-“Taiwan prosecutors said on Monday they had indicted nine people”  
-“대만 검찰은 월요일 9명을 기소했다고 밝혔습니다.”
+### 3. OpenAI, ChatGPT Work·Codex용 Admin 플러그인 출시 · 88/100 · A
 
-**원문 요약**  
-- FACT: Reuters와 AP는 지룽지검이 NVIDIA·Super Micro 관련 직원 등을 포함한 9명을 배임·문서위조 등 혐의로 기소했다고 보도했습니다. 74대 반출·56대 세관 차단은 검찰 주장이며 유죄 판결이 아닙니다.
-- INTERPRETATION: 수출통제 병목이 칩 제조사에서 최종사용자 확인, 유통사, 물류와 내부 승인 증빙으로 이동했습니다.
-- SIGNAL: 서버 구매·재판매 기업은 목적지·최종사용자·라이선스·승인 로그를 단일 거래 파일로 보존해야 합니다.
-- SPECULATION: 우회 경로 단속 강화가 아시아 AI 서버의 납기와 규정준수 비용을 높일 수 있습니다.
+**한줄요약**
+OpenAI가 사용량·구성원·권한·한도·지출 요청을 대화에서 조회하고 승인된 범위에서 변경하는 Admin 플러그인을 공개했습니다.
 
-**왜 중요한가**  
-한국 서버 유통·클라우드 사업자는 제재 리스트 확인만으로 충분하지 않고 최종사용자 증빙과 내부 승인 기록까지 점검해야 합니다.
+**원문 핵심문장 / 번역**
+“The Admin plugin works within each user’s existing role and permissions”
+“Admin 플러그인은 각 사용자의 기존 역할과 권한 범위에서 작동합니다.”
 
-**업계 분위기**  
-`enforcement-hardening / legal-fact-cautious` — 단속 강화 신호로 받아들이되 피고인의 유죄와 회사 책임은 확정되지 않았다고 구분합니다.
+**원문 요약**
 
-**앞으로의 전망 — AI 추론**  
-집행은 칩 SKU보다 거래 당사자, 배송 경로와 최종사용자 증빙을 연결하는 감사로 세밀해질 가능성이 높습니다.
+- FACT: 공식 설명에는 활동·크레딧 조회, 구성원·그룹 변경, 유효 권한 진단, 모델 접근, 사용 한도와 지출 요청 승인·거절이 포함됩니다.
+- FACT: Slack·Microsoft Teams로 승인 요청을 보내고 조건 충족 시 접근을 자동 허용하는 반복 흐름도 제시했습니다. 각 변경은 기존 역할·정책을 따르고 더 넓은 권한을 새로 부여하지 않는다고 밝혔습니다.
+- INTERPRETATION: Admin Console의 읽기·쓰기를 대화형 도구로 노출해 IT 운영의 첫 화면을 바꾸는 제품입니다.
+- SIGNAL: 자연어 요청보다 실행 전 diff, 영향 범위, 승인자, 감사 로그와 롤백 경로가 더 중요합니다.
+- SPECULATION: 공급자별 관리 API가 열리면 여러 AI 업무공간을 한 번에 관리하려는 수요가 생길 수 있지만 현재 지원 범위와 가격은 미공개입니다.
 
-**사업 기회**  
-증빙 누락 검사 도구는 가능하지만 관할별 법률 자문 의존성 때문에 오늘의 아이디어로 선정하지 않았습니다.
+**왜 중요한가**
+한국 소형 조직도 계정 추가·삭제와 지출 승인 기록을 대화로 처리할 수 있지만 자동 변경보다 예외와 승인 증빙을 남기는 설계가 우선입니다.
 
-**관련 태그**  
-Taiwan · NVIDIA · Super-Micro · AI-servers · export-controls · supply-chain
+**업계 분위기**
+`ops-convenience-positive / privilege-cautious` — 반복 관리 작업 절감에는 긍정적이지만 잘못된 자연어 요청이 광범위한 권한 변경으로 이어지지 않도록 승인과 감사가 필요하다는 경계가 있습니다.
 
-출처: [Reuters](https://www.reuters.com/world/asia-pacific/taiwan-indicts-9-over-alleged-illegal-export-ai-servers-china-2026-08-24/) · [AP](https://apnews.com/article/511e9ae69d517c49f19512d45b1a8b0c) · [5월 수사 보도](https://www.reuters.com/legal/government/taiwan-investigates-three-alleged-illegal-export-high-end-ai-servers-2026-05-21/)
+**앞으로의 전망 — AI 추론**
+관리자 에이전트는 읽기 전용 분석부터 시작해 소수의 되돌릴 수 있는 변경, 고위험 작업의 사람 승인 순으로 범위를 넓힐 가능성이 높습니다.
 
-### 4. wikiHow, 1,200여 저작권 침해 주장으로 OpenAI 제소 · 85/100 · A
+**사업 기회**
+여러 AI 서비스의 변경 전후 상태와 승인 근거만 보존하는 `AI Seat Change Ledger`.
 
-**한줄요약**  
-wikiHow가 1만1천개 이상 기사 무단 학습·출력 재현을 주장하며 OpenAI를 뉴욕 남부연방법원에 제소했습니다.
+**관련 태그**
+OpenAI · ChatGPT Work · Codex · admin · plugins · IT-operations · governance
 
-**원문 핵심문장 / 번역**  
-“Those models now produce competing how-to content on the same subjects”  
-“그 모델들은 이제 동일 주제의 경쟁하는 사용법 콘텐츠를 생성합니다.”
+출처: [OpenAI 발표](https://openai.com/index/introducing-admin-plugin/) · [OpenAI News](https://openai.com/news/)
 
-**원문 요약**  
-- FACT: 사건번호 1:26-cv-07171은 8월 21일 제기됐습니다. Reuters는 소장이 1만1천개 이상 기사와 1,200여 등록 저작권 침해를 주장한다고 보도했습니다. OpenAI는 공개 데이터와 공정이용에 근거한다고 답했습니다.
-- INTERPRETATION: 학습 입력뿐 아니라 동일 주제 답변이 원문 시장을 대체한다는 출력·사업 피해 논리가 결합됐습니다.
-- SIGNAL: 콘텐츠 사업자는 원문 버전, 접근 로그, 라이선스, 모델 출력 비교와 매출 영향을 시간순으로 보존할 필요가 있습니다.
-- SPECULATION: 대체시장 논리의 인정 범위가 RAG·요약·사용법 생성 서비스의 계약과 출처 표시에 영향을 줄 수 있습니다.
+### 4. Tencent 투자 Enflame, 60억위안 STAR Market IPO 청약 일정 확정 · 85/100 · A
 
-**왜 중요한가**  
-한국 콘텐츠·AI 팀은 결론을 예단하지 말고 수집 데이터 권리와 출력 유사성, 삭제·옵트아웃 요청 처리 기록을 초기부터 남겨야 합니다.
+**한줄요약**
+중국 AI 칩 업체 Enflame이 9월 2일 청약을 받아 60억위안을 조달하고 5·6세대 칩과 하드웨어·소프트웨어 통합에 투자할 계획입니다.
 
-**업계 분위기**  
-`publisher-defensive / doctrine-unsettled` — 콘텐츠 제작 비용과 대체시장 피해에 대한 공감은 크지만 공정이용 기준은 사건별 판단이 필요합니다.
+**원문 핵심문장 / 번역**
+“will open share subscriptions on September 2 for its 6 billion yuan IPO”
+“60억위안 규모 IPO의 청약을 9월 2일 시작합니다.”
 
-**앞으로의 전망 — AI 추론**  
-단기에는 답변서와 병합·이송 여부가 쟁점이고, 판결 전에도 데이터 출처·삭제 요청·출력 회귀 테스트 증빙 요구가 늘 가능성이 높습니다.
+**원문 요약**
 
-**사업 기회**  
-원문 버전과 모델 출력 비교를 보존하는 Evidence Log는 가능하지만 기존 콘텐츠 출처 관리 아이디어와 중복되어 선정하지 않았습니다.
+- FACT: 상하이증권거래소는 8월 25일 燧原科技(Enflame) IPO 투자설명서를 게시했습니다. Reuters는 9월 2일 청약, 4,304만주 신주 발행, 확대 자본의 10%, 60억위안 조달 계획을 전했습니다.
+- FACT: 자금은 5·6세대 AI 칩과 하드웨어·소프트웨어 협업 프로젝트에 배정될 예정입니다. Tencent가 투자한 Enflame은 중국의 네 주요 GPU 신생기업 중 하나로 분류됩니다.
+- INTERPRETATION: 정책 지원과 공개시장 유동성이 중국 AI 칩 개발비를 뒷받침하는 단계입니다.
+- SIGNAL: 조달액과 기술 로드맵만으로 사업성을 판단하지 말고 가격, 손실, 고객 집중, 양산·소프트웨어 생태계를 따로 확인해야 합니다.
+- SPECULATION: 상장 후 높은 기대가 선반영되면 동종 AI·로봇주처럼 큰 변동성이 나타날 수 있습니다.
 
-**관련 태그**  
-wikiHow · OpenAI · copyright · AI-training · content · fair-use
+**왜 중요한가**
+투자자는 중국 AI 칩 자립 테마의 자금 흐름을 볼 수 있지만 청약 전 최종 가격과 핵심 고객 의존도·손익·현금소진을 투자설명서에서 확인해야 합니다.
 
-출처: [법원 사건 기록](https://www.pacermonitor.com/public/case/66393904/wikiHow%2C_Inc_v_OpenAI%2C_Inc_et_al) · [Reuters](https://www.reuters.com/legal/legalindustry/wikihow-sues-openai-copyright-infringement-over-ai-training-2026-08-24/) · [소송 추적 해설](https://chatgptiseatingtheworld.com/2026/08/22/wikihow-sues-openai-for-copyright-infringement/)
+**업계 분위기**
+`policy-backed / valuation-wary` — AI 반도체 자립과 대형 조달에는 관심이 높지만 Unitree 급등 후 약 45% 조정 사례 때문에 기술주 IPO의 밸류에이션 경계가 커졌습니다.
+
+**앞으로의 전망 — AI 추론**
+청약 경쟁률보다 상장 후 첫 두 분기의 매출 고객 구성, 연구개발 현금소진과 5세대 칩 양산 일정이 지속 가능한 가치의 핵심 지표가 될 가능성이 높습니다.
+
+**사업 기회**
+구축 아이디어로 전환하지 않았습니다. 투자판단·중국 규제·유료 시장데이터 의존 게이트가 남아 있습니다.
+
+**관련 태그**
+Enflame · Tencent · China · AI-chip · IPO · STAR Market · investing
+
+출처: [상하이증권거래소](https://www.sse.com.cn/disclosure/listedinfo/announcement/index.shtml?productId=688801) · [Reuters](https://www.reuters.com/world/asia-pacific/ai-chipmaker-enflame-sets-subscription-date-near-900-million-shanghai-ipo-2026-08-25/)
 
 ## Opportunity Finder
 
-### AI Video Shot Preflight · 4.1/5 · ★★★★☆ · High
+### AI Seat Change Ledger · 4.1/5 · ★★★★☆ · High
 
-- 문제: 비율, 자산 권리, 참조 수, 장면 길이와 브랜드 문구를 사전 확인하지 않아 실패 렌더와 재생성 비용이 쌓입니다.
-- 고객: 상품 이미지·PPT·URL로 짧은 영상을 만드는 한국 1~3인 셀러와 대행사.
-- 기존 해결법: Canva·CapCut 스토리보드, 엑셀 체크리스트, 수동 검수.
-- 경쟁사: Canva, CapCut, Adobe Express, 모델별 playground.
-- 차별점: 영상을 생성하지 않고 12개 입력 규칙과 6개 이하 샷 구성을 검사해 API 요청 초안만 만듭니다.
-- 2주 MVP: 입력 폼, 규칙 검사, 15·30초 타임라인, 누락 경고, JSON 요청 미리보기.
+- 문제: 입·퇴사, 모델 접근과 지출 한도 변경이 메신저·콘솔·이메일에 흩어져 누가 무엇을 승인하고 실제 상태가 어떻게 바뀌었는지 찾기 어렵습니다.
+- 고객: ChatGPT·Claude·Gemini 계정을 함께 쓰는 한국 10~100인 조직의 운영 담당자와 1인 IT 관리자.
+- 기존 해결법: 각 공급자 Admin Console, 티켓 시스템, Slack 승인, 스프레드시트와 월말 수동 대조.
+- 경쟁사: OpenAI Admin plugin, Okta, BetterCloud, Torii, 수동 스프레드시트.
+- 차별점: 계정 변경을 직접 실행하지 않고 요청·승인자·변경 전후 스크린샷 또는 CSV·확인 시각만 한 장의 append-only 기록으로 남기는 두 기능에 집중합니다.
+- 2주 MVP: 이메일·Slack 요청 붙여넣기, 승인 링크, 공급자별 CSV 전후 비교, 변경 증빙 PDF 내보내기. 자동 계정 변경은 제외합니다.
 - 난이도: Low-Medium.
-- 수익화: 무료 프로젝트 3개 + 월 1만~3만원 팀 템플릿·이력.
-- 반증 조건: 15곳 중 5곳 미만이 월 3회 이상 재생성하거나 사전 검사로 실패 렌더가 20% 이상 줄지 않으면 중단.
+- 수익화: 관리자 1명 무료 + 월 4만~12만원 조직별 변경 이력·90일 보관.
+- 반증 조건: 운영 담당자 15곳 중 5곳 미만이 월 10건 이상 AI 계정 변경을 처리하거나, 4곳 미만이 감사·퇴사 확인에 30분 이상 쓴다면 중단합니다.
 
-### AI Model Release State Card · 3.9/5 · ★★★★☆ · Medium
+### Inference Evidence Card · 4.0/5 · ★★★★☆ · High
 
-- 문제: 발표, 초대, preview, GA, API와 오픈웨이트를 모두 ‘출시’라고 불러 접근 가능성·라이선스를 오판합니다.
-- 고객: 신규 모델을 제품에 붙이는 한국 개인 개발자·소형 SaaS 팀.
-- 기존 해결법: 공급자 변경 로그, 모델 디렉터리, 커뮤니티 글, 내부 스프레드시트.
-- 경쟁사: Artificial Analysis, OpenRouter, Hugging Face, provider changelog.
-- 차별점: 성능 순위 없이 공식 URL 기준으로 발표일·상태·지역·가격·API·가중치·라이선스를 7칸으로 분리합니다.
-- 2주 MVP: 20개 모델의 수동 승인 카드, 공식 문서 diff, 출처 날짜 표시.
-- 난이도: Low.
-- 수익화: 공개 카드 무료 + 월 1만~4만원 변경 알림·CSV.
-- 반증 조건: 20곳 중 6곳 미만이 최근 3개월 상태를 오해했거나 공식 문서 한 곳만으로 90% 해결되면 중단.
+- 문제: 칩·서빙 벤치마크가 서로 다른 모델, 정밀도, 지연 목표와 전력 기준을 써서 ‘몇 배 빠르다’는 수치를 실제 비용 판단에 그대로 쓰기 어렵습니다.
+- 고객: GPU·API 공급자를 비교해야 하지만 전담 인프라 엔지니어가 없는 한국 1~3인 AI SaaS 팀.
+- 기존 해결법: InferenceX·Artificial Analysis 대시보드, 공급자 블로그, 자체 부하 테스트와 스프레드시트.
+- 경쟁사: InferenceX, Artificial Analysis, MLPerf Inference, 공급자 계산기.
+- 차별점: 새 벤치마크를 만들지 않고 공식·공개 결과의 모델, 정밀도, 입력·출력 길이, 지연 목표, 시스템 전력, 독립 재현 여부를 6칸 카드로 정규화합니다.
+- 2주 MVP: 공개 결과 20개를 수동 승인하고 조건이 다른 비교에는 빨간 경고를 표시하며, 월 예상 토큰을 넣으면 공급자 가격표 기준 범위만 계산합니다.
+- 난이도: Medium.
+- 수익화: 공개 카드 무료 + 월 2만~8만원 변경 알림·CSV·팀 메모.
+- 반증 조건: AI 팀 15곳 중 6곳 미만이 최근 벤치마크 조건을 잘못 비교했거나, 3곳 미만이 카드로 공급자 후보를 줄이는 데 30분 이상 절약하면 중단합니다.
 
 ## 구축 판단
 
-구축 후보 없음. 두 아이디어 모두 실용적이지만 종합점수 4.3/5, ★★★★★, Very High 조건을 충족하지 않았습니다. AI Architect·구현·배포는 실행하지 않았습니다.
+구축 후보 없음. 두 아이디어 모두 실용 범위를 좁혔지만 종합점수 4.3/5, ★★★★★, Very High 조건을 충족하지 않았습니다. AI Architect·구현·배포는 실행하지 않았습니다.
 
 ## Tools
 
-- [Wan3.0-Video-Prime API](https://help.aliyun.com/zh/model-studio/wan3-0-video-prime) — 대표 상품 3개로 15초 720P만 시험해 성공률·대기시간·승인 결과당 비용을 기록할 가치가 있습니다.
-- [AI Copyright Case Tracker](https://chatgptiseatingtheworld.com/ai-copyright-case-tracker/) — 사건번호를 찾는 보조 색인으로만 쓰고 PACER·CourtListener·당사자 문서로 재확인해야 합니다.
+- [InferenceX](https://inferencex.semianalysis.com/) — 원하는 모델 한 개를 골라 토큰/사용자, 처리량/kW와 지연을 함께 보고 같은 조건의 시스템만 비교합니다.
+- [OpenAI Admin plugin](https://openai.com/index/introducing-admin-plugin/) — 읽기 전용 사용량 요약부터 시작하고 한 명의 테스트 그룹에서 되돌릴 수 있는 한도 변경만 승인 후 시험합니다.
+- [Gemini Enterprise for Legal](https://cloud.google.com/ai/legal) — 비밀정보가 없는 NDA 10건으로 인용 정확도·권한 격리·사람 승인 흐름을 측정하고 법률 판단에는 사용하지 않습니다.
 
 ## Community Pulse
 
-- [Reddit r/comfyui: API 접근 경험](https://www.reddit.com/r/comfyui/comments/1vm2rek/wan_30_just_dropped_heres_how_i_got_at_the_api/) — 통합 관심은 높지만 계정·결제·지역 설정이 실제 마찰입니다.
-- [Reddit r/comfyui: 30초 데모 반응](https://www.reddit.com/r/comfyui/comments/1vfmcty/wan_30_just_announced_and_coming_soon_native_30/) — 데모에는 감탄하면서 현실감과 대표성을 의심합니다.
-- [GitHub Wan2.2 Issue #181](https://github.com/Wan-Video/Wan2.2/issues/181) — API 접근과 오픈웨이트 공개를 같은 출시로 보지 않습니다.
-- [AI Copyright Case Tracker: wikiHow 사건](https://chatgptiseatingtheworld.com/2026/08/22/wikihow-sues-openai-for-copyright-infringement/) — 청구를 입력·출력·대리책임·CMI 제거로 나눠 추적합니다.
+- [Reddit r/AMD_Stock](https://www.reddit.com/r/AMD_Stock/comments/1vxp5s7/daily_discussion_tuesday_20260825/) — Jalapeño의 NVIDIA 대비 주장에 반응하면서 공급자 자체 시험과 실제 양산 비중을 구분하려 합니다.
+- [Reddit r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1ufboj0/openai_set_to_release_their_own_inference_chip/) — OpenAI 전용 칩이 클라우드 최적화를 가속해도 NVIDIA·AMD·로컬 생태계를 단번에 대체하기는 어렵다고 봅니다.
+- [GitHub InferenceX](https://github.com/SemiAnalysisAI/InferenceX) — 결과를 GitHub Actions 워크플로와 로그로 연결해 단일 공급자 그래프보다 재현 조건을 먼저 보게 합니다.
 
 ## Skill of the Day
 
-**AI 모델 출시 상태 분리 검증** — 공식 자료를 `발표 / preview / GA / API 지역 / 가격 / 오픈웨이트 / 라이선스`로 나누고 없는 근거는 미확인으로 남깁니다.
+**추론 벤치마크 조건 정규화** — 새 칩이나 API가 몇 배 빠르거나 효율적이라는 발표를 실제 서비스 비용·지연 판단에 반영하기 전에 모델, 정밀도, 입력·출력 길이, 동시성, 지연 목표, 전력 기준, 측정 주체를 맞춥니다.
 
-실전 프롬프트: “이 모델의 공식 발표와 문서를 읽고 발표, preview, GA, API 지역, 가격, 오픈웨이트, 라이선스를 각각 FACT로 표기해줘. 없는 근거는 추정하지 말고 미확인으로 남겨줘.”
+실전 프롬프트: “이 벤치마크의 모델, 정밀도, 입력·출력 길이, 동시성, 지연 목표, 전력 기준, 측정 주체, 공개 로그를 추출해줘. 조건이 다른 수치는 배수 비교하지 말고 미확인으로 표시해줘.”
 
 ## Worth Reading
 
-- Paper — [Wan: Open and Advanced Large-Scale Video Generative Models](https://arxiv.org/abs/2503.20314)
-- GitHub — [Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2)
-- YouTube — [Alibaba WAN: AI That Writes, Speaks, and Designs Ads](https://www.youtube.com/watch?v=B6xw_k5zeBY)
-- Blog — [The Next Phase of Enterprise Video Generation](https://runway.com/news/company-news%2Fthe-next-phase-of-enterprise-video-generation)
+- Paper — [Characterizing LLM Inference Energy-Performance Tradeoffs under Workload Heterogeneity](https://arxiv.org/abs/2501.08219)
+- GitHub — [SemiAnalysisAI/InferenceX](https://github.com/SemiAnalysisAI/InferenceX)
+- YouTube — [InferenceX: Continuous OSS Inference Benchmarking](https://www.youtube.com/watch?v=P0l7CHl5HfA)
+- Blog — [InferenceMAX: Open Source Inference Benchmarking](https://newsletter.semianalysis.com/p/inferencemax-open-source-inference)
 
 ## 확인되지 않은 부분
 
-- Wan3.0 Prime의 독립 품질·속도·비용 벤치마크와 오픈웨이트·최종 라이선스.
-- 영국·우크라이나 데이터셋의 외부 감사, 개인정보·인권 통제와 70% 표적 식별 수치의 독립 검증.
-- 대만 검찰 보도자료의 영문 원문 URL, 피고인별 사실인정과 최종 판결.
-- wikiHow 소송의 OpenAI 정식 답변서, 증거개시 결과와 법원의 공정이용·대체시장 판단.
-
----
-
-[GitHub 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-25.md) · [원본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-25.json)
+- Jalapeño 결과의 독립 재현, 양산 수율·출하량과 OpenAI 실서비스 트래픽 비중.
+- Gemini Enterprise 수직 제품의 한국 가용성·가격, preview 정확도·보안의 독립 평가.
+- OpenAI Admin 플러그인의 지원 관리 작업 전체 목록, 가격, 독립 보안 검토와 실제 감사 로그 보존 정책.
+- Enflame의 최종 공모가·상장일, 고객 집중도 최신 수치와 5·6세대 칩 양산 성과.
