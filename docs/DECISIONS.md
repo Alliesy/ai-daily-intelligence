@@ -55,6 +55,39 @@
 - 검증: 2026-08-07~26 전체 20개 packet importer dry-run과 Preview backfill이 통과했다.
 - 안전 경계: Preview backfill을 위해 작업 브랜치 watermark를 일시 허용했지만 성공 직후 workflow를 다시 `main` 전용으로 복원했다. Production과 main은 변경하지 않았다.
 
+### D-062 — Researcher V1.2는 일반 사용자 Gate 뒤에만 Today Event를 노출한다
+
+- 날짜: 2026-08-26
+- 상태: `proposed` — owner 승인 대기
+- 결정: Researcher는 직전 24시간과 최근 7일에서 분야별 후보 Event를 넓게 수집하고 기존 5요소를 평가한다. Today 노출은 변화 명확성, 사용자 관련성, 실제 변화, 설명 가치의 General User Gate를 모두 통과한 Event 최대 3건으로 제한한다. 강한 Event가 2건이면 2건만 노출한다.
+- 근거: 최근 7일 결과는 출처와 사실 밀도는 높지만 기술·투자 숫자와 소형 AI 팀 관점이 일반 직장인용 Morning Paper에 과도하게 노출됐다.
+- 고려한 대안: 기존 3~5개를 모두 Top News로 유지, 카테고리별 강제 1건 할당
+- 이유: 저장량과 노출량을 분리하면서 약한 뉴스를 다양성이나 최소 개수 때문에 올리지 않는다.
+- 영향: 기존 Daily archive는 수정하지 않는다. 승인 전에는 예약 작업, Production prompt, renderer와 schema를 변경하지 않는다.
+- 재검토 조건: `docs/RESEARCHER_V1_2.md`의 3일 Dry Run과 사용자용 샘플을 owner가 승인할 때
+
+### D-063 — 한국 기사는 localization 근거이며 재인용은 독립 근거로 중복 계산하지 않는다
+
+- 날짜: 2026-08-26
+- 상태: `proposed` — owner 승인 대기
+- 결정: Event는 공식·Primary Source, 해외 독립 보도, 한국어 기사 순으로 조사한다. 한국 기사는 국내 가용성·가격·영향과 자연스러운 용어를 확인하는 localization 근거로 사용하며, 보도자료나 Reuters를 재인용한 기사는 같은 evidence group으로 묶는다.
+- 근거: URL 수를 곧 독립 근거 수로 세면 동일 원문을 번역한 기사 여러 건이 검증 강도를 부풀린다.
+- 고려한 대안: 모든 한국 기사 URL을 독립 Source로 계산, 한국 기사가 없는 해외 Event 제외
+- 이유: 공식 사실 기준과 한국 독자 맥락을 함께 지키되 Source 계보를 투명하게 보존한다.
+- 영향: Source group 숫자는 explicit authority와 evidence group으로만 계산한다. 한국 기사를 찾지 못하면 0으로 기록하고 중요한 Event를 자동 제외하지 않는다.
+- 재검토 조건: 검토된 국내 Source taxonomy와 원출처 lineage 자동화가 승인될 때
+
+### D-064 — V1.2는 우선 기존 Morning Paper additive contract를 사용한다
+
+- 날짜: 2026-08-26
+- 상태: `proposed` — owner 승인 대기
+- 결정: 단기 V1.2는 `schema_version: 1.0`의 optional `morning_paper.top_event_keys`로 Today 0~3건을 선택한다. 루트 `news` 3~5건은 기존 archive·validator 호환을 위해 유지하고, 후보 전체 research ledger와 reader/localization presentation 필드는 별도 승인 후 additive 확장을 검토한다.
+- 근거: 현재 `news.minItems=3`은 “강한 뉴스가 2건이면 2건만 노출”과 충돌하지만 `morning_paper.top_event_keys`는 최대 3건이며 최소 개수 제한이 없다.
+- 고려한 대안: 즉시 schema 2.0 전환, `news.minItems` 즉시 완화, 기존 archive correction
+- 이유: Production 승인 전 breaking change와 archive 수정을 피하면서 저장 Event와 Today 노출을 분리할 수 있다.
+- 영향: 승인 후 renderer와 validator가 `top_event_keys`를 실제 노출 정본으로 사용하도록 별도 변경해야 한다.
+- 재검토 조건: 후보 전체 보존, General User Gate와 한국 localization metadata를 정본에 구조화할 때
+
 ## 2026-08-08 구현 결정
 
 ### D-041 — 선택적 Google OAuth는 PKCE callback과 검증된 return path만 사용
