@@ -2,6 +2,16 @@
 
 ## 2026-08-26 V1.1 결정
 
+### D-062 — Today 방문자 통계는 Vercel의 일일 unique만 공개한다
+
+- 상태: `confirmed`
+- 결정: Vercel Web Analytics의 cookie-free 일일 hash와 bot filtering으로 KST 당일 순 방문자를 집계하고 Today Insight metadata에 표시한다. 정확한 누적 순 방문자는 제공하지 않고 UI에 `누적 미집계`로 명시한다. Supabase visitor table과 공개 write RPC는 만들지 않는다.
+- 근거: Vercel의 visitor hash는 매일 폐기되어 날짜 간 동일 사용자를 연결할 수 없다. 일별 unique 합계를 누적 unique처럼 표시하면 중복 방문자를 반복 계산해 제품 신뢰를 훼손한다. 자체 익명 write endpoint는 credential 없는 공격자가 신규 identity를 반복 생성해 집계와 DB 저장량을 오염시킬 수 있다.
+- 고려한 대안: first-party cookie hash를 Supabase에 저장, 일별 unique 합계 표시, 신규 유료 analytics 도입
+- 이유: 기존 무료 인프라를 사용하면서 IP 등 불필요한 개인정보를 장기 저장하지 않고, 공개 write surface 없이 오늘 수치의 신뢰성과 콘텐츠 가용성을 분리한다.
+- 영향: `@vercel/analytics`를 공식 수집 dependency로 추가한다. Web server만 Vercel read token을 사용하며 aggregate 응답을 60초 cache한다. token/project 설정 또는 Analytics가 준비되지 않으면 `오늘 집계 준비 중`으로 표시한다. 누적 unique가 필요하면 별도 consent·identity 정책과 비용을 다시 승인받아야 한다.
+- 재검토 조건: privacy-preserving cross-day unique를 신뢰성 있게 제공하는 기존 인프라 기능이 생기거나 owner가 별도 consent 기반 집계를 승인할 때
+
 ### D-054 — 저장량과 Today 노출량을 분리한다
 
 - 상태: `confirmed`

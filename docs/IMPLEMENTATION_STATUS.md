@@ -10,6 +10,7 @@
 | Today Morning Paper | 완료 | Insight/Evidence/Top 0~3/Opportunity 0~1 shared renderer |
 | Archive 및 Daily route | 완료 | `/archive`, 월 이동 calendar, keyword search, `/daily/[date]` snapshot |
 | Navigation/반응형 | 완료 | desktop 6개 메뉴, mobile 5개 bottom nav, editorial typography |
+| Today 방문자 metadata | 코드·로컬 검증 완료 / 외부 설정 대기 | Vercel 일일 순 방문자 read-only 집계, 누적 미집계 명시, Footer/KPI 미사용 |
 | AI Researcher/Opportunity prompt | 완료 | Cross-Event Signal, Problem Scout, 현실성 Gate 계약 반영. 외부 Cloud Scheduled Task prompt 동기화는 main 승인 이후 별도 운영 작업 |
 | 로컬 검증 | 완료 | Supabase foundation, importer 17개, Web 34개, lint, typecheck, production build 및 1440/1024/768/390px browser QA PASS |
 | Preview DB/배포 | 완료 | additive migration, schema contract, RLS/격리/cascade, 전체 backfill PASS. Today와 Archive에서 2026-08-26 최신 projection 확인 |
@@ -311,3 +312,16 @@ V1.1 Preview: `https://ai-daily-intelligence-preview-o2dnw4cs1-syparks-projects.
 - Preview: `https://ai-daily-intelligence-preview-git-agent-web-v1-syparks-projects.vercel.app`
 - live 검증: 2026-08-14 briefing, Event 5건, Source 15건, 07:02 업데이트 표시 및 console warning/error 없음
 - 보존: Supabase schema/RLS, importer, Git archive, AI Researcher, daily schema, OAuth 보안 정책 변경 없음
+
+## 21. 2026-08-26 Today Insight 방문자 metadata
+
+- 상태: `코드 구현·로컬 검증·독립 검토 완료 / Vercel 외부 설정 대기`
+- 배치: Desktop `이 인사이트의 근거` 내부, Mobile Insight 직하단 compact metadata. Footer와 별도 KPI card에는 표시하지 않음
+- 집계: `@vercel/analytics`의 cookie-free 일일 hash와 bot filtering을 사용하며 Web server의 read-only endpoint가 KST 당일 visitor aggregate만 조회
+- 정확성: Vercel 일일 hash로는 cross-day unique를 만들 수 없어 `누적 미집계`로 표시하고 임의 숫자를 만들지 않음
+- 보안: Supabase visitor table/migration/public write RPC를 추가하지 않음. Vercel read token은 server-only이며 응답에 포함하지 않고 aggregate를 짧게 cache
+- 장애 격리: credential/API 미설정 또는 오류 시 `오늘 집계 준비 중`으로 degrade하고 Today 콘텐츠는 정상 제공
+- 외부 설정 필요: Vercel Web Analytics 활성화, `VERCEL_ANALYTICS_READ_TOKEN`, `VERCEL_ANALYTICS_PROJECT_ID`, 팀 소유 시 `VERCEL_ANALYTICS_TEAM_ID`
+- 품질 gate: Supabase foundation, importer 17개, Web 39개 test PASS; lint, typecheck, production build PASS
+- 독립 검토: 공개 write/DB 오염 경로, token 비노출, 누적값 null 강제, archive 비표시를 확인하고 최종 `READY`
+- 실환경 대기: Preview Analytics 활성화 후 실제 `{ data: { visitors } }` 응답과 Today 표시를 1회 smoke test
