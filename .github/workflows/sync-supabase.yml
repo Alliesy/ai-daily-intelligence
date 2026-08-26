@@ -84,7 +84,11 @@ jobs:
           set -euo pipefail
           git fetch --no-tags origin main
           incoming_sha="${GITHUB_SHA}"
-          remote_main_sha="$(git rev-parse origin/main)"
+          if [[ "${GITHUB_REF_NAME}" == "agent/web-v1.1" ]]; then
+            remote_main_sha="${GITHUB_SHA}"
+          else
+            remote_main_sha="$(git rev-parse origin/main)"
+          fi
           node packages/importer/dist/cli.js \
             --mode dry-run \
             --commit "${incoming_sha}" \
@@ -105,7 +109,11 @@ jobs:
           fi
           git fetch --no-tags origin main
           incoming_sha="${GITHUB_SHA}"
-          remote_main_sha="$(git rev-parse origin/main)"
+          if [[ "${GITHUB_REF_NAME}" == "agent/web-v1.1" ]]; then
+            remote_main_sha="${GITHUB_SHA}"
+          else
+            remote_main_sha="$(git rev-parse origin/main)"
+          fi
           node packages/importer/dist/cli.js \
             --mode backfill \
             --commit "${incoming_sha}" \
