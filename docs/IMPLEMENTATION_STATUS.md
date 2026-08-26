@@ -12,13 +12,15 @@
 | Navigation/반응형 | 완료 | desktop 6개 메뉴, mobile 5개 bottom nav, editorial typography |
 | AI Researcher/Opportunity prompt | 완료 | Cross-Event Signal, Problem Scout, 현실성 Gate 계약 반영. 외부 Cloud Scheduled Task prompt 동기화는 main 승인 이후 별도 운영 작업 |
 | 로컬 검증 | 완료 | Supabase foundation, importer 17개, Web 34개, lint, typecheck, production build 및 1440/1024/768/390px browser QA PASS |
-| Preview DB/배포 | 진행 중 | additive migration, schema contract, RLS/격리/cascade PASS. 전체 backfill은 보류하고 branch push 및 Vercel Preview 검증 진행 |
+| Preview DB/배포 | UI 완료·backfill 보류 | additive migration, schema contract, RLS/격리/cascade PASS. `agent/web-v1.1` Vercel Preview Ready 및 desktop/mobile live 확인. 전체 backfill은 정본 correction 결정 전 보류 |
 
 설계 변경은 모두 backward-compatible additive이며 기존 AI Researcher 게시 순서, Git 정본, 사용자 RLS/OAuth 정책, Event Detail을 변경하지 않는다.
 
 알려진 기존 차단 이슈: 2026-08-22의 `potential=Medium-High`, 2026-08-24~25의 `schema_version=1.0.0`, 2026-08-22~25 일부 자유형 community platform 값은 기존 schema 계약과 불일치한다. Importer는 commit snapshot 전체를 먼저 검증하므로 이 상태에서는 2026-08-26까지의 Preview 전체 backfill을 안전하게 완료할 수 없다. V1.1에서 검증 기준을 완화하거나 Git 정본을 임의 수정하지 않았으며, main correction 또는 명시적인 versioned compatibility 정책에 대한 owner 결정이 필요하다. 이 문제는 additive migration 및 기존 Preview content 조회에는 영향을 주지 않는다.
 
 과거 Morning Paper는 occurrence에 저장된 표시 필드만 노출한다. Topic·Entity 기반 Archive 검색은 현재 index를 사용하므로 당시 taxonomy 자체를 재현하는 기능은 후속 additive snapshot 후보이며, 과거 카드에는 current-derived publisher/time/topic label을 표시하지 않는다.
+
+V1.1 Preview: `https://ai-daily-intelligence-preview-o2dnw4cs1-syparks-projects.vercel.app`. Vercel Deployment Protection 때문에 익명 HTTP 요청은 로그인 화면으로 전환되지만, 연결된 Preview 세션에서 Today·Archive·invalid month fallback·390px 무가로스크롤을 확인했다. 공개 사용자 리뷰가 필요하면 Production 변경 없이 Preview deployment protection 정책을 별도로 조정해야 한다. Google OAuth 실제 로그인은 기존 `WAITING_FOR_USER`를 유지한다.
 
 > 마지막 갱신: 2026-08-08 (Asia/Seoul)
 > 현재 단계: Phase I — integration, security review, final QA 완료

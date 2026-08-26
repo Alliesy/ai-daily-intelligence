@@ -15,6 +15,8 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 - AI Researcher prompt에 Event clustering/Cross-Event Signal을, Opportunity Finder 앞에 Problem Scout와 엄격한 Today eligibility를 반영
 - Preview Supabase에 V1.1 additive migration을 적용하고 schema contract, RLS 사용자 격리, service-role 경계와 account deletion cascade를 검증
 - 전체 archive backfill 전 정본 계약 불일치(2026-08-22~25)를 발견해 검증 기준 완화 없이 import를 보류
+- `agent/web-v1.1`을 Vercel Preview로 배포하고 Today, Archive, invalid month fallback, 390px 반응형을 live 검증
+- 독립 리뷰에서 발견한 불가능한 archive month(`2026-99`) 입력을 최신 브리핑 월로 안전하게 fallback하도록 수정
 
 ## 2026-08-14
 
