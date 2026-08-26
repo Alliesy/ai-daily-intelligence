@@ -2,7 +2,7 @@ name: Sync Supabase content projection
 
 on:
   push:
-    branches: [main]
+    branches: [main, agent/web-v1.1]
     paths:
       - "data/daily/**"
       - "data/identity/**"
