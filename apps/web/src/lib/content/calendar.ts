@@ -1,7 +1,13 @@
 export type CalendarCell = { day: number; dateKst: string; hasBriefing: boolean };
 
+export function isValidArchiveMonth(value: string) {
+  if (!/^\d{4}-\d{2}$/.test(value)) return false;
+  const month = Number(value.slice(5, 7));
+  return month >= 1 && month <= 12;
+}
+
 export function buildCalendarGrid(month: string, briefingDates: string[]) {
-  if (!/^\d{4}-\d{2}$/.test(month)) return { leadingBlanks: 0, cells: [] as CalendarCell[] };
+  if (!isValidArchiveMonth(month)) return { leadingBlanks: 0, cells: [] as CalendarCell[] };
   const year = Number(month.slice(0, 4));
   const monthNumber = Number(month.slice(5, 7));
   const first = new Date(Date.UTC(year, monthNumber - 1, 1));
@@ -18,7 +24,7 @@ export function buildCalendarGrid(month: string, briefingDates: string[]) {
 }
 
 export function shiftArchiveMonth(month: string, delta: number) {
-  if (!/^\d{4}-\d{2}$/.test(month)) return "";
+  if (!isValidArchiveMonth(month)) return "";
   const year = Number(month.slice(0, 4));
   const monthIndex = Number(month.slice(5, 7)) - 1;
   const shifted = new Date(Date.UTC(year, monthIndex + delta, 1));

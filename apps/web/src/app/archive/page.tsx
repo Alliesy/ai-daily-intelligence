@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays, ChevronLeft, ChevronRight, Search } from "lucide-react";
 import { getBriefingSummaries, searchBriefings } from "@/lib/content";
-import { buildCalendarGrid, shiftArchiveMonth } from "@/lib/content/calendar";
+import { buildCalendarGrid, isValidArchiveMonth, shiftArchiveMonth } from "@/lib/content/calendar";
 
 export const dynamic = "force-dynamic";
 
@@ -15,7 +15,7 @@ export default async function ArchivePage({ searchParams }: { searchParams: Prom
   const all = await getBriefingSummaries();
   const visibleSummaries = q || showAll === "1" ? summaries : summaries.slice(0, 8);
   const latest = all[0];
-  const selectedMonth = /^\d{4}-\d{2}$/.test(month ?? "") ? month! : latest?.dateKst.slice(0, 7);
+  const selectedMonth = isValidArchiveMonth(month ?? "") ? month! : latest?.dateKst.slice(0, 7);
   const monthDate = selectedMonth ? new Date(`${selectedMonth}-01T00:00:00+09:00`) : null;
   const monthLabel = monthDate ? new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "long", timeZone: "Asia/Seoul" }).format(monthDate) : "브리핑";
   const calendar = selectedMonth ? buildCalendarGrid(selectedMonth, all.map((item) => item.dateKst)) : { leadingBlanks: 0, cells: [] };

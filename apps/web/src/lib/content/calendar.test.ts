@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { buildCalendarGrid, isValidDateKst, shiftArchiveMonth } from "./calendar";
+import { buildCalendarGrid, isValidArchiveMonth, isValidDateKst, shiftArchiveMonth } from "./calendar";
 
 describe("Archive calendar", () => {
   test("maps only existing briefing dates to selectable cells", () => {
@@ -12,6 +12,10 @@ describe("Archive calendar", () => {
 
   test("fails closed for an invalid month", () => {
     expect(buildCalendarGrid("2026-8", ["2026-08-07"]).cells).toEqual([]);
+    expect(buildCalendarGrid("2026-99", ["2026-08-07"]).cells).toEqual([]);
+    expect(isValidArchiveMonth("2026-00")).toBe(false);
+    expect(isValidArchiveMonth("2026-12")).toBe(true);
+    expect(shiftArchiveMonth("2026-99", 1)).toBe("");
   });
 
   test("moves months with UTC-safe year boundaries", () => {
