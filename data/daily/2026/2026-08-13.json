@@ -1,0 +1,204 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-08-13",
+  "generated_at": "2026-08-13T07:00:51+09:00",
+  "status": "complete",
+  "warnings": [
+    "OpenAI Enterprise Signals는 1천만 건 이상 메시지를 집계·비식별화한 자체 행정 데이터이며, 출력 토큰은 고객 가치의 불완전한 대리변수다.",
+    "Twitch의 생성형 AI 학습 설정은 향후 학습에 대한 옵트아웃이며 이미 사용된 콘텐츠 범위와 모델별 삭제·철회 절차는 공개되지 않았다.",
+    "Pixel 11의 Tensor G6 성능, 배터리, AI 기능은 출시 당일 제조사 주장이고 독립 장기 시험과 국가·언어·기기별 가용성 검증이 부족하다.",
+    "Blacksmith의 고객 수와 CI 증가율은 회사 수치이며, 4배 PR 증가는 단일 고객 사례다. 투자 라운드는 3월에 종료됐지만 8월 12일 발표됐다.",
+    "Thrive Holdings의 70개 이상 사업체와 제품 효과는 회사 발표이며 사업별 생산성·수익성 변화는 공개되지 않았다."
+  ],
+  "news": [
+    {
+      "event_key": "2026-08-openai-enterprise-signals-frontier-gap",
+      "title": "OpenAI says enterprise agent use is widening an 8.3× frontier gap",
+      "importance": "S",
+      "selection_score": 91,
+      "score_breakdown": {"confidence": 27, "impact": 23, "utility": 20, "recency": 15, "community": 6},
+      "one_line_summary": "OpenAI가 1천만 건 이상 기업 메시지를 분석해 상위 10% 활용 기업의 사용자당 출력 토큰이 일반 기업의 8.3배이며 Codex가 기업 출력의 64%를 차지한다고 보고했다.",
+      "impact": "기업 AI 경쟁의 기준이 좌석 수에서 에이전트가 실제 워크플로를 얼마나 깊게 실행하는지로 이동하고 있음을 보여준다.",
+      "original_url": "https://openai.com/index/how-enterprises-put-ai-to-work/",
+      "key_quote": "Frontier firms generated 8.3× as many output tokens per active user as typical firms.",
+      "quote_translation": "선도 기업은 일반 기업보다 활성 사용자당 8.3배 많은 출력 토큰을 생성했다.",
+      "summary": "FACT: OpenAI는 2026년 8월 12일 Enterprise Signals와 연구 문서를 공개했다. 상위 10% 활용 기업의 활성 사용자당 출력은 일반 기업의 8.3배로 1월 2.6배에서 확대됐고, 6월 기업 고객의 Codex와 ChatGPT 합산 출력 중 Codex가 64%를 차지했다. 주간 Plugins 사용은 선도 기업 21% 대 일반 기업 9%, Skills는 19% 대 3%였다. 데이터는 1천만 건 이상 메시지를 집계·비식별화하고 자동 분류했으며 사람이 메시지를 검토하지 않았다. OpenAI는 토큰을 가치의 불완전한 대리변수라고 명시한다. INTERPRETATION: 도입률보다 워크플로 깊이와 실행 결과가 생산성 격차를 만든다. SIGNAL: 플러그인·스킬·코딩 에이전트가 기업 사용량의 중심으로 이동한다. SPECULATION: 한국 중소기업은 좌석 활용률보다 완료 작업, 재작업, 검토시간과 사고율을 측정하는 운영 지표가 필요해질 수 있다.",
+      "why_it_matters": "한국 조직이 생성량만 KPI로 쓰면 비용을 가치로 오인할 수 있으므로, 업무 완료·검토·재작업·오류를 함께 측정해야 한다.",
+      "industry_mood": {"sentiment": "agent-optimistic / metric-cautious", "signal": "에이전트 실행 확대에는 강한 관심이 있지만 공급자 자체 데이터와 토큰 대리변수의 한계를 구분하려는 분위기"},
+      "outlook": "AI 추론: 기업용 AI 대시보드는 로그인·메시지 수에서 작업 완결률, 사람 개입, 검토 지연과 비용 대비 결과로 빠르게 이동할 가능성이 높다.",
+      "business_opportunity": "메시지 원문을 수집하지 않고 에이전트 실행 로그를 완료·검토·재작업·비용 지표로 바꾸는 한국형 워크플로 벤치마크.",
+      "tags": ["OpenAI", "Enterprise-Signals", "Codex", "agents", "productivity", "measurement"],
+      "sources": [
+        {"title": "How enterprises put AI to work", "url": "https://openai.com/index/how-enterprises-put-ai-to-work/", "publisher": "OpenAI", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "Enterprise Signals: From assistance to execution", "url": "https://openai.com/signals/enterprise-data/", "publisher": "OpenAI", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "How Organizations Use ChatGPT", "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf", "publisher": "OpenAI", "published_at": "2026-08-12", "tier": "A"}
+      ]
+    },
+    {
+      "event_key": "2026-08-twitch-amazon-generative-ai-training-opt-out",
+      "title": "Twitch enables Amazon generative-AI training on creator content by default, with an opt-out",
+      "importance": "S",
+      "selection_score": 90,
+      "score_breakdown": {"confidence": 29, "impact": 23, "utility": 20, "recency": 15, "community": 3},
+      "one_line_summary": "Twitch가 스트림·VOD·클립·채팅 등 채널 콘텐츠의 Amazon 생성형 AI 학습을 기본 허용하고 크리에이터가 설정에서 향후 학습을 거부할 수 있게 했다.",
+      "impact": "플랫폼 콘텐츠의 AI 학습 권한이 약관 속 추상 조항에서 크리에이터가 확인·변경해야 하는 운영 설정으로 바뀌었다.",
+      "original_url": "https://x.com/TwitchSupport/status/2087572924450455558",
+      "key_quote": "We've added a setting that lets you opt out of having your channel content used to train generative AI content models across Amazon.",
+      "quote_translation": "채널 콘텐츠가 Amazon 전반의 생성형 AI 모델 학습에 사용되는 것을 거부할 수 있는 설정을 추가했다.",
+      "summary": "FACT: Twitch Support는 8월 12일 채널 콘텐츠의 Amazon 생성형 AI 학습을 거부하는 설정을 추가했다고 공지했다. TechCrunch와 The Verge는 스트림, VOD, 클립, 채팅, 채널 이미지·텍스트가 대상이며 설정이 기본 활성화돼 있다고 독립 보도했다. 옵트아웃은 미래 학습을 막지만 추천·검색·안전·운영 기능의 AI 사용은 계속될 수 있다. 다른 채널에서 작성한 채팅은 해당 채널 운영자의 설정을 따른다. Twitch는 콘텐츠가 이미 학습에 사용됐는지와 소급 삭제 범위를 명확히 밝히지 않았다. INTERPRETATION: 크리에이터의 데이터 통제는 한 번의 약관 동의가 아니라 플랫폼별 설정과 증거를 지속 관리하는 문제가 된다. SIGNAL: 기본값, 적용 범위, 철회 효력과 변경 이력을 기록하는 요구가 커진다. SPECULATION: 다중 플랫폼 크리에이터를 위한 설정 감시와 증거 보관 서비스가 유료 운영 도구가 될 수 있다.",
+      "why_it_matters": "한국 스트리머와 MCN은 채널별 설정을 직접 확인하고 캡처·확인일·적용 범위를 기록해야 향후 분쟁이나 정책 변경 때 근거를 남길 수 있다.",
+      "industry_mood": {"sentiment": "control-welcoming / default-critical", "signal": "옵트아웃 제공은 환영하지만 기본 허용, 과거 사용 여부와 채팅 권한 구조에 대한 비판이 강함"},
+      "outlook": "AI 추론: 대형 플랫폼은 AI 학습 기본값과 철회 UI를 늘리겠지만, 크리에이터는 플랫폼별로 다른 범위와 효력을 추적해야 할 가능성이 높다.",
+      "business_opportunity": "플랫폼별 AI 학습 설정을 확인하고 변경 증거·정책 버전·재확인 알림을 묶는 크리에이터 권리 모니터.",
+      "tags": ["Twitch", "Amazon", "creator-rights", "AI-training", "opt-out", "data-governance"],
+      "sources": [
+        {"title": "Twitch Support: generative AI training opt-out", "url": "https://x.com/TwitchSupport/status/2087572924450455558", "publisher": "Twitch", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "Amazon will train on Twitch streamers' content by default unless they opt out", "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/", "publisher": "TechCrunch", "published_at": "2026-08-12", "tier": "B"},
+        {"title": "Twitch streamers can now opt out from training Amazon's AI", "url": "https://www.theverge.com/tech/979112/twitch-streamers-can-now-opt-out-from-training-amazons-ai", "publisher": "The Verge", "published_at": "2026-08-12", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-google-pixel-11-gemini-intelligence",
+      "title": "Google makes proactive, cross-app Gemini Intelligence the center of Pixel 11",
+      "importance": "S",
+      "selection_score": 88,
+      "score_breakdown": {"confidence": 29, "impact": 22, "utility": 19, "recency": 15, "community": 3},
+      "one_line_summary": "Google이 Pixel 11 제품군을 공개하고 Gemini Intelligence의 40개 이상 앱 다단계 작업, 능동형 지원과 Tensor G6 기반 온디바이스 기능을 핵심 가치로 내세웠다.",
+      "impact": "스마트폰 AI 경쟁이 앱 안의 보조 기능에서 기기·앱을 가로질러 먼저 제안하고 실행하는 개인 에이전트로 이동한다.",
+      "original_url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/",
+      "key_quote": "These phones are designed for Gemini Intelligence to deliver time-saving, personal help.",
+      "quote_translation": "이 휴대전화는 Gemini Intelligence가 시간을 절약하는 개인화된 도움을 제공하도록 설계됐다.",
+      "summary": "FACT: Google은 8월 12일 Pixel 11, 11 Pro, 11 Pro XL과 Pro Fold를 공개했다. Pixel 11 시리즈는 Tensor G6와 최신 Gemini Nano를 탑재하고 40개 이상 앱에서 다단계 작업을 지원하는 Gemini Intelligence를 전면에 둔다. Pixel 11은 899달러부터 사전 주문, 8월 20일 판매 예정이며 7년 OS·보안·Pixel Drop 업데이트를 제공한다. TechCrunch, The Verge, Wired가 제품군과 AI 중심 전략을 독립 보도했다. 제조사 성능·배터리·내구성 수치는 출시 당일 독립 시험이 부족하고 기능 가용성은 지역·언어·기기·계정에 따라 달라질 수 있다. INTERPRETATION: 모바일 운영체제가 앱 실행기가 아니라 사용자 의도를 대신 조율하는 에이전트 계층이 된다. SIGNAL: 앱 연결 권한, 실행 전 확인, 취소·복구와 로컬/클라우드 데이터 경계가 구매 기준으로 부상한다. SPECULATION: 한국 사용자는 기기·지역·계정별 기능 가용성과 개인정보 경로를 검증하는 안내 도구를 필요로 할 수 있다.",
+      "why_it_matters": "한국 개발사와 소비자는 단순 모델 성능보다 앱 연결 범위, 지원 언어, 실행 승인과 오류 복구를 실제 기기에서 확인해야 한다.",
+      "industry_mood": {"sentiment": "proactive-AI-curious / eligibility-skeptical", "signal": "능동형 다중 앱 실행에는 기대가 높지만 구형 기기 제외, 지역 제한과 프라이버시 경계에 질문이 집중됨"},
+      "outlook": "AI 추론: 스마트폰 경쟁은 카메라·칩 수치뿐 아니라 사용자의 맥락을 안전하게 읽고 여러 앱에서 업무를 완결하는 비율로 평가될 가능성이 높다.",
+      "business_opportunity": "안드로이드 AI 기능의 기기·OS·지역·언어·계정·구독별 사용 가능 여부와 권한 경로를 자동 점검하는 진단 도구.",
+      "tags": ["Google", "Pixel-11", "Gemini-Intelligence", "Android", "on-device-AI", "agents"],
+      "sources": [
+        {"title": "The Pixel 11 series: Your most personal Pixel yet", "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/", "publisher": "Google", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "7 can't-miss updates from our Pixel 11 launch", "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-11-features/", "publisher": "Google", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "Google unveils Pixel 11 lineup and Gemini features", "url": "https://techcrunch.com/2026/08/12/google-unveils-pixel-11-lineup-new-airtag-rival-and-gemini-features-at-made-by-google-2026/", "publisher": "TechCrunch", "published_at": "2026-08-12", "tier": "B"},
+        {"title": "Made by Google 2026: all the news", "url": "https://www.theverge.com/tech/977561/made-by-google-2026-pixel-11-news", "publisher": "The Verge", "published_at": "2026-08-12", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-blacksmith-series-b-ai-code-validation",
+      "title": "Blacksmith raises $45M as AI-generated code turns CI and validation into the bottleneck",
+      "importance": "A",
+      "selection_score": 87,
+      "score_breakdown": {"confidence": 29, "impact": 22, "utility": 18, "recency": 15, "community": 3},
+      "one_line_summary": "Blacksmith가 Peak XV 주도 4,500만 달러 시리즈 B를 발표하며 AI 코드 생성으로 늘어난 PR을 검증·병합하는 CI 플랫폼을 확장한다.",
+      "impact": "코드 생성 속도가 사람과 CI의 검토 능력을 앞지르면서 개발 생산성 병목이 작성에서 검증·비용·병합 안정성으로 이동한다.",
+      "original_url": "https://www.blacksmith.sh/blog/announcing-blacksmiths-series-b-led-by-peak-xv-partners",
+      "key_quote": "With AI codegen tools, developers are writing more code than ever.",
+      "quote_translation": "AI 코드 생성 도구로 개발자들은 어느 때보다 많은 코드를 작성하고 있다.",
+      "summary": "FACT: Blacksmith는 8월 12일 Peak XV Partners 주도, GV와 Y Combinator가 참여한 4,500만 달러 시리즈 B와 5억5천만 달러 기업가치를 발표했다. 회사는 6천 개 이상 기업을 지원하며 연초 이후 CI 작업이 매주 5~10% 늘었다고 주장한다. 한 고객 사례는 Claude Code 도입 후 PR이 4배로 증가하고 CI 사고가 주 단위로 생겼다고 밝혔다. TechCrunch와 Economic Times가 조달 규모와 기업가치를 독립 확인했다. 라운드는 3월 종료됐고 운영 수치는 독립 감사되지 않았다. INTERPRETATION: AI 코딩의 경제성은 생성된 코드량보다 테스트 비용, 큐 지연, 실패·재작업을 통제하는 능력에서 결정된다. SIGNAL: CI 우선순위와 위험 기반 검증, 에이전트별 비용 귀속이 새 운영 계층이 된다. SPECULATION: 소규모 팀도 GitHub Actions 지출과 에이전트 PR 위험을 동시에 관리하는 경량 도구에 비용을 낼 수 있다.",
+      "why_it_matters": "한국의 1~3인 AI 개발팀은 PR 증가가 곧 생산성이 아니므로 변경 위험, CI 비용, 검토시간과 장애를 함께 계측해야 한다.",
+      "industry_mood": {"sentiment": "validation-urgent / vendor-claim-cautious", "signal": "AI 코드량 증가와 CI 병목에는 공감하지만 회사 성장률·고객 수치와 비용 절감 효과는 검증을 요구함"},
+      "outlook": "AI 추론: 저장소는 사람/에이전트 작성 여부, 변경 위험과 테스트 비용을 기준으로 검증 경로를 자동 분기하고 병합 권한을 제한할 가능성이 높다.",
+      "business_opportunity": "에이전트별 PR·CI 비용, 큐 시간, 실패·재실행과 변경 위험을 묶어 예산·검증 정책을 추천하는 GitHub 보조 도구.",
+      "tags": ["Blacksmith", "CI", "AI-coding", "code-validation", "GitHub-Actions", "funding"],
+      "sources": [
+        {"title": "Announcing Blacksmith's Series B", "url": "https://www.blacksmith.sh/blog/announcing-blacksmiths-series-b-led-by-peak-xv-partners", "publisher": "Blacksmith", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "Blacksmith's valuation jumps 10x to $550M", "url": "https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/", "publisher": "TechCrunch", "published_at": "2026-08-12", "tier": "B"},
+        {"title": "AI code testing platform Blacksmith raises $45 million", "url": "https://m.economictimes.com/tech/funding/ai-code-testing-platform-blacksmith-raises-45-million-led-by-peak-xv-valued-at-550-million/articleshow/133187342.cms", "publisher": "The Economic Times", "published_at": "2026-08-12", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-thrive-holdings-two-billion-service-ai",
+      "title": "Thrive Holdings raises over $2B at a $12B valuation to embed AI in service businesses",
+      "importance": "A",
+      "selection_score": 85,
+      "score_breakdown": {"confidence": 28, "impact": 23, "utility": 16, "recency": 15, "community": 3},
+      "one_line_summary": "Thrive Holdings가 120억 달러 기업가치로 20억 달러 이상을 조달해 회계·IT 서비스 기업을 소유·운영하며 AI를 워크플로에 직접 심는 전략을 확대한다.",
+      "impact": "AI 상용화 모델이 소프트웨어 판매를 넘어 서비스 기업을 인수하고 운영 과정을 재설계해 경제적 성과를 직접 회수하는 구조로 확장된다.",
+      "original_url": "https://www.thriveholdings.com/thrive-holdings-fundraise",
+      "key_quote": "Today, we're announcing over $2 billion in new capital at a $12 billion valuation.",
+      "quote_translation": "오늘 우리는 120억 달러 기업가치로 20억 달러 이상의 신규 자본을 발표한다.",
+      "summary": "FACT: Thrive Holdings는 8월 12일 D1, Altimeter, SoftBank 등을 포함한 기관 투자자에게서 20억 달러 이상을 조달해 기업가치 120억 달러를 인정받았다고 발표했다. 회사는 설립 이후 총 30억 달러 이상을 모았고 70개 이상 회계·IT 서비스 사업체를 운영한다고 밝혔다. TechCrunch가 조달과 OpenAI 지원 구조를 독립 보도했고, Kirkland & Ellis가 거래 자문 사실을 확인했다. 사업별 생산성·수익성 KPI는 공개되지 않았다. INTERPRETATION: 서비스업 AI 도입은 도구 구독보다 소유권·운영 통제·데이터 피드백을 결합하는 방향으로 간다. SIGNAL: 규제가 강하고 반복 업무가 많은 전문 서비스가 AI 운영 모델의 주요 시험장이 된다. SPECULATION: 한국에서는 인수보다 특정 업무 단위의 증거·품질·책임 경계를 표준화하는 소규모 도입 서비스가 먼저 열릴 수 있다.",
+      "why_it_matters": "한국의 소규모 전문 서비스 팀은 범용 챗봇보다 업무 결과·책임·검토를 포함한 수직 워크플로를 제품화해야 경쟁력을 만들 수 있다.",
+      "industry_mood": {"sentiment": "capital-bullish / KPI-demanding", "signal": "대규모 자본과 소유·운영 모델에는 관심이 높지만 실제 사업별 마진·품질 개선 데이터가 필요하다는 분위기"},
+      "outlook": "AI 추론: 회계·IT·규제 서비스의 가치평가는 에이전트 사용량보다 처리시간, 오류, 감사 증거와 고객 유지율 개선으로 이동할 가능성이 높다.",
+      "business_opportunity": "한국 전문 서비스팀이 한 업무를 AI로 전환할 때 입력·승인·검토·증거·책임경계를 설계하는 워크플로 패키지.",
+      "tags": ["Thrive-Holdings", "OpenAI", "professional-services", "vertical-AI", "funding", "operations"],
+      "sources": [
+        {"title": "Thrive Holdings raises over $2 billion", "url": "https://www.thriveholdings.com/thrive-holdings-fundraise", "publisher": "Thrive Holdings", "published_at": "2026-08-12", "tier": "A"},
+        {"title": "OpenAI-backed Thrive Holdings raises $2B", "url": "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/", "publisher": "TechCrunch", "published_at": "2026-08-12", "tier": "B"},
+        {"title": "Kirkland Advises Thrive Holdings on $2 Billion Fundraise", "url": "https://www.kirkland.com/news/press-release/2026/08/kirkland-advises-thrive-holdings-on-%242-billion-fundraise", "publisher": "Kirkland & Ellis", "published_at": "2026-08-12", "tier": "B"}
+      ]
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "Agent Workflow Depth Benchmark",
+      "score": 4.2,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Medium",
+      "customer": "에이전트·코딩 AI를 도입한 한국 20~200인 기업과 이를 진단하는 1~3인 컨설팅 팀",
+      "problem": "사용자·토큰·메시지 증가는 보이지만 완료 업무, 검토시간, 재작업과 품질 개선을 연결하지 못한다.",
+      "existing_solution": "공급자 사용량 대시보드, Microsoft Copilot Analytics, 수작업 설문과 BI",
+      "competitors": ["OpenAI Enterprise Signals", "Microsoft Copilot Analytics", "Worklytics"],
+      "differentiation": "메시지 원문을 모으지 않고 실행 로그와 결과 표본만으로 한국 업무별 완료·개입·재작업·비용을 비교한다.",
+      "mvp_2_weeks": "CSV/JSON 로그 업로드, 세 업무 템플릿, 완료율·사람 개입·검토시간·재작업·비용의 다섯 지표와 주간 보고서.",
+      "monetization": "진단 프로젝트 + 월간 벤치마크 구독",
+      "falsification": "10개 잠재 고객 중 3곳 미만이 원문 없는 로그 제공과 4주 유료 파일럿에 동의하면 보류한다."
+    },
+    {
+      "name": "Creator AI Training Rights Monitor",
+      "score": 4.1,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Medium",
+      "customer": "Twitch·YouTube·SNS를 함께 운영하는 한국 스트리머, 크리에이터와 소형 MCN",
+      "problem": "플랫폼마다 AI 학습 기본값, 적용 콘텐츠, 철회 효력과 메뉴 위치가 달라 지속 확인과 증거 보관이 어렵다.",
+      "existing_solution": "플랫폼 설정 수동 확인, 약관 알림 서비스, 스크린샷 폴더",
+      "competitors": ["Termly", "TermsFeed", "Visualping", "수작업 MCN 운영"],
+      "differentiation": "한국어로 플랫폼별 설정 범위·확인일·정책 버전·증거 캡처를 한 장에 묶고 재확인 주기를 제공한다.",
+      "mvp_2_weeks": "Twitch 포함 3개 플랫폼 체크리스트, 사용자 업로드 스크린샷, 정책 URL 해시, 변경 알림과 PDF 증거 내보내기.",
+      "monetization": "크리에이터 월 구독 + MCN 워크스페이스",
+      "falsification": "크리에이터 15명 중 5명 미만이 직접 설정을 바꾸거나 월 1만원 이상 지불 의향을 보이면 중단한다."
+    },
+    {
+      "name": "AI PR Validation Budget Guard",
+      "score": 4.2,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Medium",
+      "customer": "GitHub Actions와 코딩 에이전트를 쓰는 한국 1~10인 개발팀",
+      "problem": "에이전트 PR 증가로 CI 비용·큐·실패 재실행이 늘지만 작성 주체와 변경 위험별로 비용을 귀속하고 제한하기 어렵다.",
+      "existing_solution": "GitHub Actions 사용량, Blacksmith·Buildkite 대시보드, 수동 워크플로 필터",
+      "competitors": ["Blacksmith", "Buildkite", "Depot", "GitHub Actions Usage Metrics"],
+      "differentiation": "저장소를 변경하지 않는 읽기 전용 분석으로 에이전트별 비용·실패·재실행과 변경 위험을 연결해 예산 정책을 추천한다.",
+      "mvp_2_weeks": "GitHub Actions 내보내기와 PR 메타데이터 입력, 주체 태깅, 비용·큐·실패 대시보드, 세 가지 정책 시뮬레이션.",
+      "monetization": "저장소당 월 구독 + 비용 절감 리포트",
+      "falsification": "8개 팀 중 3개 미만이 월 CI 비용을 추적하거나 15% 절감 목표를 갖고 있으면 보류한다."
+    }
+  ],
+  "tools": [
+    {"name": "OpenAI Enterprise Signals", "type": "Enterprise AI usage benchmark", "url": "https://openai.com/signals/enterprise-data/", "stars": 4, "why_trending": "기업 에이전트·Plugins·Skills 사용 깊이를 월별로 집계", "worth_trying": "토큰 수치를 완료 업무·검토·재작업 지표와 함께 비교"},
+    {"name": "Twitch generative AI training setting", "type": "Creator data control", "url": "https://x.com/TwitchSupport/status/2087572924450455558", "stars": 4, "why_trending": "Amazon 생성형 AI 학습에 대한 채널 단위 옵트아웃 제공", "worth_trying": "설정 상태와 확인일을 캡처하고 향후 정책 변경을 재확인"},
+    {"name": "Gemini Intelligence on Pixel 11", "type": "Cross-app mobile agent", "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-11-features/", "stars": 4, "why_trending": "40개 이상 앱의 다단계 작업과 능동형 도움을 스마트폰 핵심 기능으로 제시", "worth_trying": "지원 언어·앱·계정별 권한과 취소·복구 흐름을 실제 기기에서 시험"},
+    {"name": "Blacksmith", "type": "Cloud CI and code validation", "url": "https://www.blacksmith.sh/", "stars": 4, "why_trending": "AI 코드량 증가로 부상한 CI 검증 병목과 비용을 공략", "worth_trying": "대표 저장소 한 곳에서 큐·캐시·재실행·비용을 기존 Actions와 비교"}
+  ],
+  "community": [
+    {"platform": "Reddit", "mood": "control-seeking / default-critical", "one_line_summary": "Twitch의 설정 추가보다 기본 학습 허용, 기존 콘텐츠 사용 여부와 채팅 권한 구조를 문제 삼는 반응이 강하다.", "url": "https://www.reddit.com/r/Twitch/comments/1vmkq7j/twitch_is_training_gen_ai_on_your_streams_now/"},
+    {"platform": "Reddit", "mood": "rights-wary / opt-out-skeptical", "one_line_summary": "크리에이터들은 AI 학습 자체보다 플랫폼이 옵트인 대신 옵트아웃을 기본으로 삼는 방식에 불신을 보인다.", "url": "https://www.reddit.com/r/Twitch/comments/1vd0e8s/how_do_you_feel_about_ai_training_on_twitch/"},
+    {"platform": "Reddit", "mood": "feature-excited / device-fragmentation-critical", "one_line_summary": "Pixel 11 AI 기능에는 관심이 높지만 이전 Pixel 지원과 타 제조사 기기 대비 기능 배분의 일관성을 묻는다.", "url": "https://www.reddit.com/r/Android/comments/1tg3wtx/google_promised_7_years_of_support_for_the_pixel/"},
+    {"platform": "Reddit", "mood": "launch-curious / upgrade-cautious", "one_line_summary": "Pixel 사용자들은 Gemini Intelligence와 카메라를 주목하면서 가격, 배터리와 실제 업그레이드 가치를 기다린다.", "url": "https://www.reddit.com/r/pixel_phones/comments/1vckr2l/are_you_excited_for_pixel_11_series/"}
+  ],
+  "skill_of_the_day": {
+    "name": "Proxy-to-outcome metric mapping",
+    "when_to_use": "공급자가 토큰, 사용자, PR, CI 작업 증가를 성과처럼 제시하지만 실제 사업 결과가 분리돼 있을 때.",
+    "practical_example": "8.3배 토큰과 4배 PR을 그대로 생산성으로 보지 않고 완료 업무, 사람 검토시간, 재작업, 사고, 단위 비용으로 다시 연결한다.",
+    "prompt_example": "이 발표의 사용량 대리변수와 실제 성과를 분리하고 각 대리변수를 완료율·검토시간·재작업·사고·비용으로 검증할 측정표를 만들어줘."
+  },
+  "worth_reading": [
+    {"type": "Paper", "title": "How Organizations Use ChatGPT", "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf", "why_read": "기업 AI 활용 격차의 표본, 분류 방법, 지표와 토큰 대리변수의 한계를 원문에서 확인할 수 있다."},
+    {"type": "GitHub", "title": "ChatGPT agent for sales meeting preparation", "url": "https://github.com/openai/openai-cookbook/blob/main/articles/chatgpt-agents-sales-meeting-prep.md", "why_read": "기업 에이전트를 단순 대화가 아니라 외부 정보와 결과물을 연결하는 워크플로로 설계한 구체적 예시다."},
+    {"type": "YouTube", "title": "Google Pixel 11 Pro | Meet 11", "url": "https://www.youtube.com/watch?v=GNuXueQ1BYc", "why_read": "Google의 공식 Pixel 11 공개 영상에서 Gemini Intelligence를 제품 가치로 배치한 방식을 직접 볼 수 있다."},
+    {"type": "Blog", "title": "Announcing Blacksmith's Series B", "url": "https://www.blacksmith.sh/blog/announcing-blacksmiths-series-b-led-by-peak-xv-partners", "why_read": "AI 코드 생성이 CI 작업·검증 병목에 미친 영향을 회사 수치와 제품 전략으로 확인할 수 있다."}
+  ],
+  "todays_insight": "AI 확산의 병목이 모델 접근에서 운영 검증으로 이동한다. 기업은 에이전트 깊이, 개발팀은 CI, 창작자는 데이터 사용 동의를 관리해야 한다.",
+  "build_candidate": null
+}

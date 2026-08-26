@@ -1,5 +1,52 @@
 # AI Daily Intelligence Decision Log
 
+## 2026-08-26 V1.1 결정
+
+### D-054 — 저장량과 Today 노출량을 분리한다
+
+- 상태: `confirmed`
+- 결정: Researcher는 넓게 수집하고 Git/projection에 보존하지만 Today는 Cross-Event Insight, Top Event 최대 3건, eligible Opportunity 최대 1건만 보여준다.
+- 근거: 서비스 가치는 수집량이 아니라 사용자의 판단 시간을 줄이는 데 있다.
+- 영향: Trend·Resource·전체 Event·추가 Opportunity는 전용 페이지와 archive에서 유지한다.
+
+### D-055 — Morning Paper contract는 schema 1.0의 optional additive field다
+
+- 상태: `confirmed`
+- 결정: `morning_paper`, Source taxonomy/evidence group, Problem Evidence와 realism gate를 optional로 추가하고 기존 archive를 수정하지 않는다.
+- 근거: Git 정본과 legacy rebuild를 깨지 않으면서 미래 실행 결과부터 더 정확한 snapshot을 만들 수 있다.
+- 재검토 조건: 필드를 required로 승격하거나 schema version을 올려야 할 때 owner 승인을 받는다.
+
+### D-056 — Insight 숫자는 explicit 관계만 센다
+
+- 상태: `confirmed`
+- 결정: Event는 key로 중복 제거하고 공식 Source는 explicit `official`, 독립 근거는 explicit `independent + evidence_group`만 센다. 결측 taxonomy는 추정하지 않는다.
+- 근거: 재인용과 불확실한 자동 분류가 근거 다양성을 부풀리는 것을 방지한다.
+
+### D-057 — Opportunity는 Problem Evidence와 9개 Gate를 모두 통과해야 Today에 나온다
+
+- 상태: `confirmed`
+- 결정: Customer, Pain, Existing Solution, Technology Change, Buildability, MVP, Customer Access, Replacement Risk, Dependency를 모두 pass한 occurrence만 `today_eligible=true`로 저장하며 Briefing당 최대 1개다.
+- 영향: Opportunity 0개는 정상 결과다. 기존 아이디어와 build-candidate 기록은 삭제하지 않는다.
+
+### D-058 — 과거 Briefing의 표시 콘텐츠는 occurrence snapshot으로 렌더링한다
+
+- 상태: `confirmed`
+- 결정: `/daily/[date]`는 해당 Briefing occurrence의 Event 제목·요약·중요도·이미지, 선택된 Analysis, Source 구성/검증, Opportunity 평가와 V1.1 선정 snapshot을 사용한다. occurrence snapshot이 없는 current Source publisher/time 및 Topic·Entity label은 과거 카드에서 표시하지 않는다.
+- 근거: archive는 당시 판단의 기록이어야 하며 correction 이력과 current projection을 혼동하면 안 된다.
+- 한계: `/archive`의 Topic·Entity keyword는 현재 검색 index다. 당시 taxonomy 검색이 필요해지면 별도 additive occurrence label snapshot을 검토한다.
+
+### D-059 — 외부 webfont 없이 한국어 editorial font stack을 사용한다
+
+- 상태: `confirmed`
+- 결정: 명조 heading은 Noto Serif KR/Nanum Myeongjo/AppleMyungjo/Georgia fallback, 나머지는 기존 Pretendard/system sans를 사용한다.
+- 근거: 새 dependency·외부 요청 없이 목업의 대비와 로딩 안정성을 확보한다.
+
+### D-060 — 공개 Problem Evidence는 비식별 최소 정보만 저장한다
+
+- 상태: `confirmed`
+- 결정: 접근 가능한 공개 게시물의 URL과 문제 확인에 필요한 최소 요약만 저장하고 사용자명·핸들·실명·연락처·민감정보, private/gated community 내용은 수집하지 않는다.
+- 근거: `daily_briefing_opportunities.problem_evidence`는 공개 RLS projection이므로 원문 사용자의 개인정보를 복제하면 안 된다.
+
 ## 2026-08-08 구현 결정
 
 ### D-041 — 선택적 Google OAuth는 PKCE callback과 검증된 return path만 사용

@@ -1,0 +1,218 @@
+{
+  "schema_version": "1.0.0",
+  "date_kst": "2026-08-25",
+  "generated_at": "2026-08-25T07:01:01+09:00",
+  "status": "complete",
+  "news": [
+    {
+      "event_key": "2026-08-alibaba-wan3-prime-api-release",
+      "title": "알리바바, Wan3.0 고속형 Prime API 공개",
+      "importance": "S",
+      "one_line_summary": "알리바바 클라우드가 최대 30초·1080P 멀티모달 영상을 지원하는 Wan3.0-Video-Prime 문서를 공개해 8월 초 베타의 제품화를 확장했다.",
+      "impact": "문서·웹페이지까지 영상 입력 흐름에 넣고 속도형 API를 제공하면서 소형 제작팀의 자동화 범위가 넓어졌지만, 오픈웨이트 출시와 독립 품질 평가는 별개다.",
+      "original_url": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime",
+      "key_quote": "Wan3.0-Video-Prime在保持高质量视频生成能力的同时大幅提升生成速度",
+      "quote_translation": "Wan3.0-Video-Prime은 고품질 영상 생성 능력을 유지하면서 생성 속도를 크게 높인다.",
+      "summary": "FACT: 알리바바 클라우드는 8월 24일 갱신된 공식 문서에서 Wan3.0-Video-Prime이 텍스트·이미지·비디오·오디오·파일·링크 입력과 480P·720P·1080P, 최대 30초·30fps 출력을 지원한다고 밝혔다. 기본 Wan3.0 API 문서는 현재 preview라고 표시하며, Reuters는 같은 날 Wan3.0 출시를 보도했다. INTERPRETATION: 8월 6일 공개 베타 이후 범용 모델과 고속형을 분리해 상용 API 표면을 넓히는 단계다. SIGNAL: API 접근 가능, GA, 오픈웨이트, 독립 벤치마크를 한 단어인 '출시'로 묶으면 안 된다. SPECULATION: 처리 속도와 비용이 안정되면 상품 설명서·PPT를 짧은 광고로 바꾸는 배치 제작이 늘 수 있으나 실제 지연·실패율·가격 경쟁력은 재측정이 필요하다.",
+      "why_it_matters": "한국의 1~3인 콘텐츠·커머스 팀은 촬영 전 시안과 짧은 상품 영상을 자동화할 수 있지만, 브랜드 자산 권리와 재생성 비용을 먼저 통제해야 한다.",
+      "industry_mood": {
+        "label": "workflow-excited / release-state-cautious",
+        "summary": "30초·문서 입력·고속형에는 기대가 크지만, 커뮤니티는 클라우드 계정·지역·결제 절차와 Wan3.0 오픈웨이트 부재를 구분한다."
+      },
+      "outlook": "AI 추론: 향후 경쟁은 데모 품질보다 API 성공률, 초당 비용, 참조 일관성, 지역 가용성과 상업 이용 조건을 포함한 운영 지표로 이동할 가능성이 높다.",
+      "business_opportunity": "상품 이미지·문구·권리 체크와 샷 구성을 먼저 검증해 재생성 낭비를 줄이는 AI Video Shot Preflight.",
+      "tags": ["Alibaba", "Wan3.0", "AI-video", "multimodal", "API", "creator-tools", "cloud"],
+      "score": {"total": 92, "confidence": 29, "impact": 21, "utility": 20, "recency": 15, "community": 7},
+      "sources": [
+        {"title": "wan3.0-video-prime 모델 정보", "url": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime", "publisher": "Alibaba Cloud", "published_at": "2026-08-24", "tier": "A"},
+        {"title": "Wan3.0 Video Generation API Reference", "url": "https://help.aliyun.com/en/model-studio/wan3-video-generation-api-reference", "publisher": "Alibaba Cloud", "published_at": "2026-08-06", "tier": "A"},
+        {"title": "Alibaba launches Wan3.0 AI video model after $10 billion share sale", "url": "https://www.reuters.com/business/retail-consumer/alibaba-launches-wan30-ai-video-model-after-10-billion-share-sale-2026-08-24/", "publisher": "Reuters", "published_at": "2026-08-24", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-uk-ukraine-avengers-ai-partnership",
+      "title": "영국·우크라이나, 전장 데이터 기반 AI 방위 파트너십 체결",
+      "importance": "S",
+      "one_line_summary": "영국이 우크라이나 Avengers AI Labs에 접근하는 첫 국제 파트너가 되어 방위·보안 AI와 저전력 칩 공동 연구를 추진한다.",
+      "impact": "실전 센서·드론 데이터가 동맹국 연구 생태계로 이동하면서 군사 AI의 데이터 우위, 개인정보·표적화 책임과 이중용도 통제가 동시에 커진다.",
+      "original_url": "https://www.gov.uk/government/news/new-partnership-set-to-see-the-uk-and-ukraine-develop-battle-winning-technology-as-britain-secures-access-to-ukraines-avengers-ai-labs",
+      "key_quote": "UK set to become the first international partner to access Ukraine’s Avengers AI Labs",
+      "quote_translation": "영국은 우크라이나 Avengers AI Labs에 접근하는 첫 국제 파트너가 된다.",
+      "summary": "FACT: 영국 정부는 8월 24일 우크라이나와 AI 파트너십을 체결하고 Avengers AI Labs 데이터 플랫폼에 접근하는 첫 국제 파트너가 된다고 발표했다. 공식 발표와 Reuters는 광섬유 센서, 저전력 AI 칩과 자율 시스템 관련 공동 프로젝트를 명시했다. Reuters는 우크라이나 측 수치로 월 10만개 이상 드론 영상 피드를 분석하고 적 표적 약 70%를 실시간 식별한다고 전했다. INTERPRETATION: 민간 데이터셋보다 희소한 실전 운용 데이터가 국가 간 AI 역량 교환의 핵심 자산이 되고 있다. SIGNAL: 군사·핵심시설용 AI에서는 정확도보다 데이터 출처, 접근권한, 감사, 오탐 책임과 수출통제가 채택의 전제다. SPECULATION: 파트너십이 성과를 내면 방위 외 시설 보호·로보틱스로 확장될 수 있으나 외부 검증과 민간 적용 범위는 공개되지 않았다.",
+      "why_it_matters": "한국 기업에는 방산·보안 AI 데이터 협력의 방향을 보여주지만, 자동화가 직접 사업 기회라는 뜻은 아니며 법률·보안·인권 검토 없이는 참여하면 안 된다.",
+      "industry_mood": {
+        "label": "strategic-urgent / governance-concerned",
+        "summary": "실전 데이터의 가치와 동맹 협력을 높게 평가하는 한편, 표적 식별·시설 감시 데이터의 접근 통제와 민간 확장에 대한 우려가 크다."
+      },
+      "outlook": "AI 추론: 단기 성과는 모델 발표보다 공동 데이터 거버넌스, 세 곳의 영국 기업 파일럿 결과와 외부 감사 체계 공개 여부로 판단될 가능성이 높다.",
+      "business_opportunity": "자동화 아이디어로 전환하지 않음. 군사·감시·수출통제와 개인정보 게이트가 해결되지 않았다.",
+      "tags": ["UK", "Ukraine", "defence-AI", "Avengers-AI-Labs", "battlefield-data", "dual-use", "governance"],
+      "score": {"total": 86, "confidence": 29, "impact": 25, "utility": 12, "recency": 15, "community": 5},
+      "sources": [
+        {"title": "New partnership set to see the UK and Ukraine develop battle winning technology", "url": "https://www.gov.uk/government/news/new-partnership-set-to-see-the-uk-and-ukraine-develop-battle-winning-technology-as-britain-secures-access-to-ukraines-avengers-ai-labs", "publisher": "UK Government", "published_at": "2026-08-24", "tier": "A"},
+        {"title": "UK, Ukraine sign AI defence partnership linked to battlefield technology", "url": "https://www.reuters.com/business/aerospace-defense/uk-ukraine-sign-ai-defence-partnership-linked-battlefield-technology-2026-08-24/", "publisher": "Reuters", "published_at": "2026-08-24", "tier": "B"},
+        {"title": "UK to use Ukraine battlefield data to train AI to protect sensitive sites", "url": "https://www.theguardian.com/politics/2026/aug/24/uk-to-use-ukraine-battlefield-data-to-train-ai-to-protect-sensitive-sites", "publisher": "The Guardian", "published_at": "2026-08-24", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-taiwan-ai-server-export-indictments",
+      "title": "대만 검찰, 중국향 AI 서버 불법 수출 혐의 9명 기소",
+      "importance": "S",
+      "one_line_summary": "대만 검찰이 제한 대상 NVIDIA 칩 탑재 서버 130대의 서류를 조작해 74대를 중국으로 보낸 혐의로 9명을 기소했다.",
+      "impact": "AI 칩 수출통제가 제조사 정책을 넘어 유통 서류·중개 경로·직원 내부통제까지 형사 리스크와 공급망 비용을 높이고 있다.",
+      "original_url": "https://www.reuters.com/world/asia-pacific/taiwan-indicts-9-over-alleged-illegal-export-ai-servers-china-2026-08-24/",
+      "key_quote": "Taiwan prosecutors said on Monday they had indicted nine people",
+      "quote_translation": "대만 검찰은 월요일 9명을 기소했다고 밝혔다.",
+      "summary": "FACT: Reuters와 AP는 8월 24일 대만 지룽지검이 NVIDIA·Super Micro 관련 직원 등을 포함한 9명을 배임·문서위조 등 혐의로 기소했다고 보도했다. 검찰 주장에 따르면 130대 중 74대가 중국 또는 인도네시아·일본·홍콩 경유로 반출됐고 56대는 세관이 막았다. 이는 유죄 판결이 아니라 공소 제기 단계다. INTERPRETATION: 하드웨어 수출통제의 실제 병목이 칩 제조사뿐 아니라 최종사용자 확인, 유통사, 물류와 내부 승인 증빙으로 이동했다. SIGNAL: 서버 구매·재판매 기업은 목적지·최종사용자·라이선스·승인 로그를 단일 거래 파일로 보존해야 한다. SPECULATION: 우회 경로 단속이 강화되면 아시아 AI 서버의 납기와 규정준수 비용이 올라갈 수 있지만, 기업별 책임과 형량은 재판에서 결정된다.",
+      "why_it_matters": "한국의 서버 유통·클라우드 사업자는 해외 판매 시 제재 리스트 확인만으로 충분하지 않고 최종사용자 증빙과 내부 승인 기록까지 점검해야 한다.",
+      "industry_mood": {
+        "label": "enforcement-hardening / legal-fact-cautious",
+        "summary": "AI 칩 우회 수출 단속 강화 신호로 받아들이지만, 피고인의 유죄와 회사 차원의 책임은 아직 확정되지 않았다는 구분이 필요하다."
+      },
+      "outlook": "AI 추론: 수출통제 집행은 모델명·칩 SKU보다 거래 당사자, 배송 경로와 최종사용자 증빙을 연결하는 감사로 세밀해질 가능성이 높다.",
+      "business_opportunity": "법률 판정 도구가 아닌 거래별 증빙 누락을 표시하는 Export Evidence Packet은 가능하지만, 관할별 법률 자문 의존성 때문에 오늘의 아이디어로 선정하지 않았다.",
+      "tags": ["Taiwan", "NVIDIA", "Super-Micro", "AI-servers", "export-controls", "supply-chain", "indictment"],
+      "score": {"total": 85, "confidence": 27, "impact": 24, "utility": 15, "recency": 15, "community": 4},
+      "sources": [
+        {"title": "Taiwan issues indictments over alleged illegal export of AI servers to China", "url": "https://www.reuters.com/world/asia-pacific/taiwan-indicts-9-over-alleged-illegal-export-ai-servers-china-2026-08-24/", "publisher": "Reuters", "published_at": "2026-08-24", "tier": "B"},
+        {"title": "Taiwan charges 9 over illegal AI server exports to China", "url": "https://apnews.com/article/511e9ae69d517c49f19512d45b1a8b0c", "publisher": "Associated Press", "published_at": "2026-08-24", "tier": "B"},
+        {"title": "Taiwan investigates three for alleged illegal export of high-end AI servers", "url": "https://www.reuters.com/legal/government/taiwan-investigates-three-alleged-illegal-export-high-end-ai-servers-2026-05-21/", "publisher": "Reuters", "published_at": "2026-05-21", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-wikihow-openai-copyright-lawsuit",
+      "title": "wikiHow, 1,200여 저작권 침해 주장으로 OpenAI 제소",
+      "importance": "A",
+      "one_line_summary": "wikiHow가 1만1천개 이상 기사 무단 학습·출력 재현을 주장하며 OpenAI를 뉴욕 남부연방법원에 제소했다.",
+      "impact": "AI 학습 분쟁이 책·뉴스를 넘어 구조화된 실용 지식과 검색 대체 매출 피해 주장으로 확대됐다.",
+      "original_url": "https://www.pacermonitor.com/public/case/66393904/wikiHow%2C_Inc_v_OpenAI%2C_Inc_et_al",
+      "key_quote": "Those models now produce competing how-to content on the same subjects",
+      "quote_translation": "그 모델들은 이제 동일 주제의 경쟁하는 사용법 콘텐츠를 생성한다.",
+      "summary": "FACT: wikiHow는 8월 21일 미국 뉴욕 남부연방법원에 OpenAI를 상대로 사건번호 1:26-cv-07171을 제기했다. Reuters는 8월 24일 소장이 1만1천개 이상 기사 복제와 1,200여 등록 저작권 침해를 주장하며 손해배상과 금지명령을 구한다고 보도했다. OpenAI 대변인은 공개 데이터와 공정이용에 근거해 학습한다고 답했다. 이는 원고 주장과 피고의 초기 입장이지 판결이 아니다. INTERPRETATION: 원고는 학습 입력뿐 아니라 동일 주제 답변이 원문 시장을 대체한다는 출력·사업 피해 논리를 함께 밀고 있다. SIGNAL: 콘텐츠 사업자는 원문 버전, 접근 로그, 라이선스, 모델 출력 비교와 매출 영향을 시간순으로 보존할 필요가 있다. SPECULATION: 법원이 대체시장 논리를 얼마나 인정하는지에 따라 RAG·요약·사용법 생성 서비스의 계약과 출처 표시에 영향을 줄 수 있다.",
+      "why_it_matters": "한국 콘텐츠·AI 팀은 소송 결론을 예단하지 말고, 수집 데이터의 권리와 출력 유사성, 삭제·옵트아웃 요청 처리 기록을 제품 초기부터 남겨야 한다.",
+      "industry_mood": {
+        "label": "publisher-defensive / doctrine-unsettled",
+        "summary": "콘텐츠 제작 비용과 대체시장 피해에 대한 공감이 크지만, 학습의 공정이용과 개별 출력 책임 기준은 여전히 사건별 판단이 필요하다."
+      },
+      "outlook": "AI 추론: 단기에는 답변서와 병합·이송 여부가 쟁점이고, 실무적으로는 판결 전에도 데이터 출처·삭제 요청·출력 회귀 테스트를 증빙하는 요구가 늘 가능성이 높다.",
+      "business_opportunity": "법률 결론을 내리지 않고 원문 버전과 모델 출력 비교를 보존하는 Evidence Log는 가능하지만 기존 콘텐츠 출처 관리 아이디어와 중복되어 선정하지 않았다.",
+      "tags": ["wikiHow", "OpenAI", "copyright", "AI-training", "content", "fair-use", "litigation"],
+      "score": {"total": 85, "confidence": 29, "impact": 21, "utility": 14, "recency": 15, "community": 6},
+      "sources": [
+        {"title": "wikiHow, Inc. v. OpenAI, Inc. et al, No. 1:26-cv-07171", "url": "https://www.pacermonitor.com/public/case/66393904/wikiHow%2C_Inc_v_OpenAI%2C_Inc_et_al", "publisher": "U.S. District Court docket via PacerMonitor", "published_at": "2026-08-21", "tier": "A"},
+        {"title": "WikiHow sues OpenAI for copyright infringement over AI training", "url": "https://www.reuters.com/legal/legalindustry/wikihow-sues-openai-copyright-infringement-over-ai-training-2026-08-24/", "publisher": "Reuters", "published_at": "2026-08-24", "tier": "B"},
+        {"title": "wikiHow sues OpenAI for copyright infringement", "url": "https://chatgptiseatingtheworld.com/2026/08/22/wikihow-sues-openai-for-copyright-infringement/", "publisher": "Chat GPT Is Eating the World", "published_at": "2026-08-22", "tier": "B"}
+      ]
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "AI Video Shot Preflight",
+      "score": 4.1,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Low-Medium",
+      "customer": "상품 이미지·PPT·URL로 짧은 영상을 반복 제작하는 한국 1~3인 커머스 셀러와 소형 대행사",
+      "problem": "생성 전에 세로·가로 비율, 자산 권리, 참조 이미지 수, 장면 길이와 브랜드 문구를 확인하지 않아 실패한 렌더와 재생성 비용이 쌓인다.",
+      "existing_solution": "Canva·CapCut 스토리보드, 엑셀 체크리스트, 영상 모델별 프롬프트 템플릿과 제작자 수동 검수",
+      "competitors": ["Canva", "CapCut", "Adobe Express", "video model playgrounds", "manual storyboard templates"],
+      "differentiation": "영상을 직접 생성하지 않고 입력 자산의 해상도·비율·길이·권리 확인과 6개 이하 샷 구성을 검사해 Wan3.0 등 모델별 API 요청 초안만 만든다.",
+      "mvp_2_weeks": "이미지·문구·타깃 비율을 받는 폼, 12개 규칙 검사, 15·30초 샷 타임라인, 누락 경고와 JSON 요청 미리보기를 로컬 웹앱으로 만든다.",
+      "monetization": "무료 프로젝트 3개 + 월 1만~3만원 팀 템플릿·검수 이력",
+      "falsification": "커머스·대행사 15곳 중 5곳 미만이 월 3회 이상 재생성하거나, 사전 검사로 실패 렌더가 20% 이상 줄지 않으면 중단한다."
+    },
+    {
+      "name": "AI Model Release State Card",
+      "score": 3.9,
+      "stars": 4,
+      "potential": "Medium",
+      "difficulty": "Low",
+      "customer": "신규 모델을 실제 제품에 붙이는 한국 개인 개발자·소형 AI SaaS 팀",
+      "problem": "발표, 비공개 초대, preview, GA, API 제공과 오픈웨이트를 모두 '출시'라고 부르면서 접근 가능성·지역·라이선스를 잘못 판단한다.",
+      "existing_solution": "공식 변경 로그, 모델 디렉터리, 벤더 블로그, 커뮤니티 글과 팀 내부 스프레드시트",
+      "competitors": ["Artificial Analysis", "OpenRouter model pages", "Hugging Face", "provider changelogs", "manual spreadsheets"],
+      "differentiation": "성능 순위 대신 공식 URL을 근거로 발표일·접근 상태·지역·가격·API·가중치·라이선스를 7칸 카드로 분리하고 확인되지 않은 칸은 비워 둔다.",
+      "mvp_2_weeks": "주요 공급자 20개 모델을 수동 승인해 카드와 변경 이력을 제공하고, 공식 문서가 바뀌면 diff와 출처 날짜를 표시하는 읽기 전용 페이지를 만든다.",
+      "monetization": "공개 카드 무료 + 팀 월 1만~4만원 변경 알림·CSV 내보내기",
+      "falsification": "소형 팀 20곳 중 6곳 미만이 지난 3개월간 출시 상태를 오해했거나, 공식 문서 한 곳만으로 90% 이상 판단 가능하면 중단한다."
+    }
+  ],
+  "tools": [
+    {
+      "name": "Wan3.0-Video-Prime API",
+      "type": "Multimodal video generation API",
+      "url": "https://help.aliyun.com/zh/model-studio/wan3-0-video-prime",
+      "stars": 4,
+      "why_trending": "8월 24일 공식 문서가 공개된 고속형으로 텍스트·이미지·영상·오디오·파일·링크에서 최대 30초 영상을 만든다.",
+      "worth_trying": "대표 상품 3개로 15초 720P만 시험해 성공률, 대기시간, 재생성 횟수와 승인된 결과당 비용을 기록한다."
+    },
+    {
+      "name": "AI Copyright Case Tracker",
+      "type": "Litigation evidence index",
+      "url": "https://chatgptiseatingtheworld.com/ai-copyright-case-tracker/",
+      "stars": 3,
+      "why_trending": "wikiHow 사건까지 늘어난 미국 AI 저작권 소송의 청구와 사건번호를 원문 단위로 찾는 보조 색인이다.",
+      "worth_trying": "법률 결론으로 쓰지 말고 사건번호를 찾은 뒤 PACER·CourtListener와 당사자 문서로 다시 확인한다."
+    }
+  ],
+  "community": [
+    {
+      "platform": "Reddit r/comfyui",
+      "mood": "integration-curious / setup-frustrated",
+      "one_line_summary": "Wan3.0 베타를 소형 파이프라인에서 쓰려는 개발자는 알리바바 클라우드 계정·결제·지역 설정을 실제 마찰로 지적한다.",
+      "url": "https://www.reddit.com/r/comfyui/comments/1vm2rek/wan_30_just_dropped_heres_how_i_got_at_the_api/"
+    },
+    {
+      "platform": "Reddit r/comfyui",
+      "mood": "demo-impressed / realism-skeptical",
+      "one_line_summary": "30초·1080P·오디오 데모에는 관심이 크지만 장면의 현실감과 홍보 샘플의 대표성을 가볍게 비판하는 반응이 섞인다.",
+      "url": "https://www.reddit.com/r/comfyui/comments/1vfmcty/wan_30_just_announced_and_coming_soon_native_30/"
+    },
+    {
+      "platform": "GitHub Wan2.2 Issues",
+      "mood": "open-weight-demanding / vendor-skeptical",
+      "one_line_summary": "Wan 사용자는 최신 세대의 오픈웨이트 여부를 계속 요구하며 API 접근과 오픈소스 공개를 같은 출시로 취급하지 않는다.",
+      "url": "https://github.com/Wan-Video/Wan2.2/issues/181"
+    },
+    {
+      "platform": "AI Copyright Case Tracker",
+      "mood": "publisher-defensive / case-by-case",
+      "one_line_summary": "법률 추적 커뮤니티는 wikiHow 사건을 학습 입력·출력·대리책임·CMI 제거 청구로 나누며 기존 소송과의 차이를 추적한다.",
+      "url": "https://chatgptiseatingtheworld.com/2026/08/22/wikihow-sues-openai-for-copyright-infringement/"
+    }
+  ],
+  "skill_of_the_day": {
+    "name": "AI 모델 출시 상태 분리 검증",
+    "when_to_use": "새 모델이 '출시됐다'는 기사를 봤지만 실제 계정에서 API를 쓸 수 있는지, 가중치와 라이선스가 공개됐는지 판단할 때",
+    "practical_example": "Wan3.0을 발표·preview·지역별 API·가격·GA·오픈웨이트·독립 벤치마크 7칸으로 나누고 공식 문서가 없는 칸은 미확인으로 남긴다.",
+    "prompt_example": "이 모델의 공식 발표와 문서를 읽고 발표, preview, GA, API 지역, 가격, 오픈웨이트, 라이선스를 각각 FACT로 표기해줘. 없는 근거는 추정하지 말고 미확인으로 남겨줘."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+      "url": "https://arxiv.org/abs/2503.20314",
+      "why_read": "Wan 계열의 기반 아키텍처와 평가 방법을 확인하되 Wan3.0 Prime의 독립 벤치마크로 오인하지 않는다."
+    },
+    {
+      "type": "GitHub",
+      "title": "Wan-Video/Wan2.2",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "why_read": "현재 공식 오픈웨이트 계열의 Apache-2.0 코드·가중치·실행 조건을 보고 Wan3.0 API와 공개 범위를 비교한다."
+    },
+    {
+      "type": "YouTube",
+      "title": "Alibaba WAN: AI That Writes, Speaks, and Designs Ads",
+      "url": "https://www.youtube.com/watch?v=B6xw_k5zeBY",
+      "why_read": "브랜드 광고 제작 흐름을 시각적으로 파악하되 공급자 데모이므로 실패 사례와 비용은 별도로 시험한다."
+    },
+    {
+      "type": "Blog",
+      "title": "The Next Phase of Enterprise Video Generation",
+      "url": "https://runway.com/news/company-news%2Fthe-next-phase-of-enterprise-video-generation",
+      "why_read": "경쟁 공급자가 제시한 엔터프라이즈 도입·비용·소유권 논점을 비교해 Wan 발표를 단일 벤더 관점에서 벗어나 읽는다."
+    }
+  ],
+  "todays_insight": "오늘의 공통 신호는 AI의 병목이 모델 능력만이 아니라 데이터 권리와 접근 상태, 거래 증빙으로 이동한다는 점이다. Wan3.0은 입력과 제작 범위를 넓혔지만 preview·지역·가중치 공개는 따로 봐야 한다. 영국과 우크라이나는 희소한 실전 데이터를 국가 자산으로 교환하고, 대만 기소는 AI 서버의 최종사용자 증빙을 집행 대상으로 끌어올렸다. wikiHow 소송은 구조화된 실용 지식의 대체시장 주장까지 확장한다. 소형 팀은 새 기능을 붙이기 전에 출시 상태 카드, 자산 권리, 거래·출력 로그를 최소 운영 문서로 남기는 편이 안전하다.",
+  "build_candidate": null
+}

@@ -189,7 +189,9 @@ async function selectPacketPaths(options: RunImporterOptions): Promise<string[]>
   if (options.packetPaths !== undefined && options.packetPaths.length > 0) {
     return [...new Set(options.packetPaths)].sort();
   }
-  if (options.mode === "backfill") return listArchivePaths(options.git, options.commitSha);
+  if (options.mode === "backfill" || options.mode === "dry-run") {
+    return listArchivePaths(options.git, options.commitSha);
+  }
   const changed = await changedProjectionPaths(options.git, options.commitSha);
   return changed.identityChanged ? listArchivePaths(options.git, options.commitSha) : changed.packets;
 }

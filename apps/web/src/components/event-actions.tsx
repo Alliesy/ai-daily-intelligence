@@ -8,7 +8,7 @@ import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { cn } from "@/lib/utils";
 
 type Sentiment = "like" | "dislike" | null;
-type ActionView = "detail" | "compact";
+type ActionView = "detail" | "compact" | "bookmark";
 
 const configured = Boolean(
   process.env.NEXT_PUBLIC_SUPABASE_URL &&
@@ -98,20 +98,22 @@ export function EventActions({
     }
   }
 
-  const compact = view === "compact";
-  const actions = [
+  const compact = view === "compact" || view === "bookmark";
+  const allActions = [
     { label: "좋아요", icon: ThumbsUp, active: sentiment === "like", run: () => writeReaction(sentiment === "like" ? null : "like", interested) },
     { label: "싫어요", icon: ThumbsDown, active: sentiment === "dislike", run: () => writeReaction(sentiment === "dislike" ? null : "dislike", interested) },
     { label: "관심", icon: Heart, active: interested, run: () => writeReaction(sentiment, !interested) },
     { label: "저장", icon: Bookmark, active: bookmarked, run: toggleBookmark },
     { label: "공유", icon: Share2, active: false, run: share },
   ];
+  const actions = view === "bookmark" ? allActions.filter((action) => action.label === "저장") : allActions;
 
   return (
     <div>
       <div className={cn(
-        "grid grid-cols-5 divide-x divide-slate-200 overflow-hidden border border-slate-200 bg-white",
-        compact ? "rounded-md" : "rounded-lg",
+        "grid divide-x divide-slate-200 overflow-hidden bg-white",
+        view === "bookmark" ? "grid-cols-1 border-0" : "grid-cols-5 border border-slate-200",
+        compact && view !== "bookmark" ? "rounded-md" : view === "detail" ? "rounded-lg" : "",
       )}>
         {actions.map(({ label, icon: Icon, active, run }) => (
           <Button

@@ -2,6 +2,20 @@
 
 AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 기록한다. Git daily archive와 AI Researcher 자동화 변경은 별도로 명시한다.
 
+## 2026-08-26
+
+### V1.1 Daily Intelligence Morning Paper
+
+- Today를 KPI dashboard에서 Cross-Event Insight, 실제 Evidence, Top Event 최대 3건, Opportunity 최대 1건의 editorial Morning Paper로 개편
+- 전체 Event·Source·Trend·Resource·Opportunity 데이터와 기존 Event Detail을 보존
+- `/archive` 날짜/키워드 검색과 월 calendar, `/daily/[date]` 과거 snapshot renderer, `/resources` 전용 화면 추가
+- desktop/mobile navigation을 오늘·아카이브 중심으로 개편하고 명조+산세리프 조합, warm neutral, divider 중심 시각 시스템 적용
+- optional `morning_paper`, Source taxonomy/evidence group, Problem Evidence와 9개 Opportunity realism gate를 schema 1.0에 additive 추가
+- Supabase occurrence snapshot과 service-role import wrapper를 추가하고 기존 public read RLS와 사용자 데이터 경계 유지
+- AI Researcher prompt에 Event clustering/Cross-Event Signal을, Opportunity Finder 앞에 Problem Scout와 엄격한 Today eligibility를 반영
+- Preview Supabase에 V1.1 additive migration을 적용하고 schema contract, RLS 사용자 격리, service-role 경계와 account deletion cascade를 검증
+- 전체 archive backfill 전 정본 계약 불일치(2026-08-22~25)를 발견해 검증 기준 완화 없이 import를 보류
+
 ## 2026-08-14
 
 ### 최신 Supabase briefing의 Preview 즉시 반영

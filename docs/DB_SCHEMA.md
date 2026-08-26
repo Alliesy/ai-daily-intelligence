@@ -1,5 +1,22 @@
 # AI Daily Intelligence Web V1 Database Schema
 
+## V1.1 additive projection (2026-08-26)
+
+Migration `20260826000100_v11_morning_paper_projection.sql`은 기존 row와 RLS를 유지하며 nullable snapshot만 추가한다.
+
+| Table | Additive fields | Rule |
+|---|---|---|
+| `daily_briefings` | `insight_headline`, `insight_summary`, `insight_method` | 세 필드는 함께 null이거나 method가 `cross_event_signal_v1`인 완전한 snapshot |
+| `daily_briefing_events` | `insight_evidence_order`, `top_event_order` | Briefing 안에서 unique; Top은 0..2 |
+| `event_source_occurrences` | `source_type_snapshot`, `authority_snapshot`, `evidence_group` | 분류와 독립 근거군을 날짜별 보존; group은 추론하지 않음 |
+| `daily_briefing_opportunities` | `problem_evidence`, `realism_gates`, `today_eligible`, `eligibility_method` | Today eligible은 Briefing당 최대 1개이며 9개 Gate와 근거가 모두 pass |
+
+기존 public import RPC signature는 유지하되 확립된 V1 core를 private 함수로 이동하고 service-role 전용 wrapper가 additive 계약 검증과 snapshot 저장을 같은 transaction에서 수행한다. `anon`, `authenticated`, `service_role`은 private core를 직접 실행할 수 없다. 새 public table이나 public RLS policy는 추가하지 않는다.
+
+Legacy packet의 새 필드는 모두 null이며 기존 projection을 재구축할 수 있다. 사용자 reaction/bookmark/follow table은 migration과 콘텐츠 rebuild의 대상이 아니다.
+
+`problem_evidence`는 공개 Opportunity projection과 함께 anon 조회될 수 있으므로 공개 원문 URL과 비식별 최소 요약만 저장한다. 사용자명·핸들·실명·연락처·민감정보와 gated/private community 내용은 저장하지 않는다.
+
 ## 2026-08-14 원문 상세 UI 검토 결과
 
 이번 UI 개선에서는 DB schema를 변경하지 않는다. `원문 기반 상세 요약`은 기존 occurrence의 `one_line_summary_ko`와 선택된 `event_analysis.fact`를 읽기 전용 presentation DTO로 구성한다. 일반 언론의 권리 상태를 추정하거나 전문을 저장하지 않으며 데이터가 없으면 `unavailable`로 렌더링한다.

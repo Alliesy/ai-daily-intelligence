@@ -1,8 +1,8 @@
 import "server-only";
 
 import { cache } from "react";
-import { getArchiveEvent, getArchiveEventSlugs, getArchiveTrendOverview, getLatestArchiveBriefing } from "./archive";
-import { getLatestSupabaseBriefing, getSupabaseEventRoute, getSupabaseEventSlugs, getSupabaseTrendOverview } from "./supabase";
+import { getArchiveBriefingByDate, getArchiveBriefingSummaries, getArchiveEvent, getArchiveEventSlugs, getArchiveTrendOverview, getLatestArchiveBriefing, searchArchiveBriefings } from "./archive";
+import { getLatestSupabaseBriefing, getSupabaseBriefingByDate, getSupabaseBriefingSummaries, getSupabaseEventRoute, getSupabaseEventSlugs, getSupabaseTrendOverview, searchSupabaseBriefings } from "./supabase";
 
 function shouldUseSupabase() {
   const mode = process.env.CONTENT_SOURCE;
@@ -14,6 +14,9 @@ function shouldUseSupabase() {
 }
 
 export const getLatestBriefing = cache(async () => shouldUseSupabase() ? getLatestSupabaseBriefing() : getLatestArchiveBriefing());
+export const getBriefingByDate = cache(async (dateKst: string) => shouldUseSupabase() ? getSupabaseBriefingByDate(dateKst) : getArchiveBriefingByDate(dateKst));
+export const getBriefingSummaries = cache(async () => shouldUseSupabase() ? getSupabaseBriefingSummaries() : getArchiveBriefingSummaries());
+export const searchBriefings = cache(async (query: string) => shouldUseSupabase() ? searchSupabaseBriefings(query) : searchArchiveBriefings(query));
 export const getEventRoute = cache(async (slug: string) => {
   if (shouldUseSupabase()) return getSupabaseEventRoute(slug);
   const event = await getArchiveEvent(slug);
@@ -22,4 +25,4 @@ export const getEventRoute = cache(async (slug: string) => {
 export async function getEventSlugs() { return shouldUseSupabase() ? getSupabaseEventSlugs() : getArchiveEventSlugs(); }
 export const getTrendOverview = cache(async (window: 7 | 30) => shouldUseSupabase() ? getSupabaseTrendOverview(window) : getArchiveTrendOverview(window));
 
-export type { BriefingDto, EventDto, EventRouteDto, OpportunityDto, OriginalContentDto, ResourceDto, SourceDto, TrendMetricDto, TrendOverviewDto, TrendSignalDto } from "./types";
+export type { BriefingDto, BriefingSummaryDto, EventDto, EventRouteDto, MorningPaperDto, OpportunityDto, OriginalContentDto, ResourceDto, SourceDto, TrendMetricDto, TrendOverviewDto, TrendSignalDto } from "./types";

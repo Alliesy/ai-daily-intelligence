@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ko" className="h-full antialiased"><body className="min-h-full bg-[#f8fafc] pb-[66px] text-slate-950 md:pb-0"><SiteHeader />{children}<footer className="border-t border-slate-200 bg-white"><div className="mx-auto max-w-[1320px] px-4 py-6 text-[11px] leading-5 text-slate-500 sm:px-6 lg:px-8">AI Daily Intelligence · Git archive를 정본으로 유지하는 공개 AI 인텔리전스 서비스</div></footer></body></html>;
+  return <html lang="ko" className="h-full antialiased"><body className="min-h-full bg-[#fdfcf9] pb-[66px] text-stone-950 md:pb-0"><SiteHeader />{children}<footer className="border-t border-stone-200 bg-[#fdfcf9]"><div className="mx-auto max-w-[1240px] px-5 py-6 text-[11px] leading-5 text-stone-500 sm:px-8 lg:px-10">AI Daily Intelligence · Git archive를 정본으로 유지하는 공개 AI 인텔리전스 서비스</div></footer></body></html>;
 }

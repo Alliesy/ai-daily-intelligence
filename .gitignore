@@ -2,15 +2,15 @@ __pycache__/
 *.py[cod]
 .validation-deps/
 
-# Web workspace
+# Node workspace and local Preview artifacts
 node_modules/
 .next/
 out/
 .vercel/
 coverage/
 *.tsbuildinfo
+next-env.d.ts
 .next-dev*.log
 .env
 .env.*
 !.env.example
-!apps/web/.env.example

@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import type { IdentityRegistries, JsonValue } from "./types.js";
 
-export const MAPPER_VERSION = "daily-projection-v1";
+export const MAPPER_VERSION = "daily-projection-v1.1";
 
 export function canonicalJson(value: JsonValue): string {
   if (value === null || typeof value !== "object") {

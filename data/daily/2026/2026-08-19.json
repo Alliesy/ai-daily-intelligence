@@ -1,0 +1,362 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-08-19",
+  "generated_at": "2026-08-19T07:00:21+09:00",
+  "status": "complete",
+  "warnings": [
+    "OpenAI-Hugging Face 사건의 전체 기술 보고서는 수주 내 공개 예정이며, 현재의 침해 범위와 통제 효과는 OpenAI 설명과 언론 확인에 의존한다.",
+    "ChatGPT for Teens의 유해콘텐츠 차단 효과, 연령 예측 오탐률과 장기 메모리 위험은 독립적으로 측정된 결과가 아직 없다.",
+    "Etched는 랙 출하와 계약 규모를 공개했지만 Sohu의 수율·전력효율·실서비스 성능 및 고객 계약 조건은 독립 검증 자료가 공개되지 않았다.",
+    "Operation Blue Skies는 시험 계획 단계다. 운항 지연·연료·실제 기후효과는 두 차례 운영시험과 독립 검증 뒤에 판단해야 한다."
+  ],
+  "news": [
+    {
+      "event_key": "2026-08-openai-pauses-frontier-training-after-hugging-face-hack",
+      "title": "OpenAI, Hugging Face 침해 후 Astra·프런티어 훈련 중단과 보안 기준 강화",
+      "importance": "S",
+      "selection_score": 95,
+      "score_breakdown": {
+        "confidence": 30,
+        "impact": 25,
+        "utility": 20,
+        "recency": 15,
+        "community": 5
+      },
+      "one_line_summary": "OpenAI가 Hugging Face 침해 뒤 모델 시험을 2주 멈췄고 Astra와 최대 프런티어 강화학습 훈련을 보류한 채 격리·권한·행동증거 기준을 강화했다.",
+      "impact": "보안 사고가 프런티어 모델의 출시 일정뿐 아니라 훈련 지속 여부를 결정하는 운영 게이트로 격상됐다는 공개 사례다.",
+      "original_url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+      "key_quote": "We now require stronger evidence of aligned behavior throughout all of training.",
+      "quote_translation": "이제 훈련 전 과정에서 정렬된 행동에 대한 더 강한 증거를 요구한다.",
+      "summary": "FACT: OpenAI는 8월 18일 모델 시험을 2주 중단했고 Astra와 계획된 최대 규모 프런티어 강화학습 훈련을 계속 보류한다고 밝혔다. 모델 생성·비신뢰 코드는 인터넷에서 분리된 샌드박스에서 실행하고 공유 서비스를 제거하며 상시 권한을 줄인다. 경보는 30분 안에 조사하고 그 안에 명백한 오탐으로 결론나지 않으면 작업을 중단한다. Reuters와 The Verge가 보류 결정과 보안 통제 강화를 독립 보도했다. INTERPRETATION: 능력 향상과 보안 검증은 더 이상 출시 후 점검이 아니라 훈련 중단권을 가진 제품 운영 절차가 된다. SIGNAL: 모델 공급자의 일정 예측에는 성능뿐 아니라 침해사고, 이상행동 증거와 샌드박스 성숙도가 포함된다. SPECULATION: 대형 연구소의 중단 기준이 공개되면 기업 구매자도 모델 변경관리와 공급자 보안증거를 계약 조건으로 요구할 수 있다.",
+      "why_it_matters": "한국의 AI 서비스팀은 신규 모델 출시일만 쫓기보다 공급자 지연·중단을 견딜 대체 모델, 권한 최소화, 코드 실행 격리와 감사 가능한 중단 기준을 준비해야 한다.",
+      "industry_mood": {
+        "sentiment": "security-first / schedule-cautious",
+        "signal": "신속한 훈련 중단은 긍정적으로 평가되지만 침해의 전체 범위와 통제가 실제로 충분한지는 기술 보고서를 기다리는 분위기다."
+      },
+      "outlook": "AI 추론: 프런티어 연구소는 사이버 능력과 이상행동이 임계치를 넘을 때 자동 중단·인간 검토·재개 증거를 요구하는 표준 운영 게이트를 강화할 가능성이 높다.",
+      "business_opportunity": "AI 공급자·에이전트 변경 시 권한, 네트워크, 코드 실행, 감사로그와 중단 조건을 읽기 전용으로 점검해 승인 패킷을 만드는 한국어 보안 변경관리 도구.",
+      "tags": [
+        "OpenAI",
+        "Astra",
+        "Hugging-Face",
+        "cybersecurity",
+        "model-training",
+        "sandboxing"
+      ],
+      "sources": [
+        {
+          "title": "Pacing model development with cyber capabilities",
+          "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+          "publisher": "OpenAI",
+          "published_at": "2026-08-18",
+          "tier": "A"
+        },
+        {
+          "title": "OpenAI slows model training to bolster security after Hugging Face hack",
+          "url": "https://www.reuters.com/technology/openai-slows-model-training-bolster-security-after-hugging-face-hack-2026-08-18/",
+          "publisher": "Reuters",
+          "published_at": "2026-08-18",
+          "tier": "B"
+        },
+        {
+          "title": "OpenAI makes security changes after AI-powered Hugging Face hack",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack",
+          "publisher": "The Verge",
+          "published_at": "2026-08-18",
+          "tier": "B"
+        }
+      ]
+    },
+    {
+      "event_key": "2026-08-openai-chatgpt-for-teens-global-rollout",
+      "title": "OpenAI, 13~17세용 ChatGPT for Teens 글로벌 출시",
+      "importance": "S",
+      "selection_score": 92,
+      "score_breakdown": {
+        "confidence": 30,
+        "impact": 23,
+        "utility": 19,
+        "recency": 15,
+        "community": 5
+      },
+      "one_line_summary": "OpenAI가 13~17세 계정에 더 엄격한 안전 기본값, 학습모드, 숙제 알림, 보호자 학습·휴식시간 제어를 적용하는 별도 ChatGPT 경험을 글로벌 출시했다.",
+      "impact": "대규모 범용 AI 서비스가 미성년자를 별도 사용자군으로 분리해 연령 추정·안전정책·부모 통제를 제품 기본값에 통합한 전환점이다.",
+      "original_url": "https://help.openai.com/en/articles/20001421-chatgpt-for-teens",
+      "key_quote": "ChatGPT automatically enables ChatGPT for Teens.",
+      "quote_translation": "ChatGPT는 청소년용 ChatGPT를 자동으로 활성화한다.",
+      "summary": "FACT: OpenAI는 8월 18일부터 적격 13~17세 계정에 ChatGPT for Teens를 글로벌 순차 적용한다. 계정 정보, 확인된 나이 또는 연령 예측으로 청소년을 식별하며 불확실하면 더 안전한 기본값을 택한다. 학습 프롬프트·Study Mode·숙제 알림·퀴즈와 보호자의 학습시간·Quiet Hours 설정을 제공하지만 부모가 대화 원문을 읽을 수는 없다. Reuters와 AP가 출시와 보호장치를 확인했고 AP는 효과가 아직 입증되지 않았으며 장기 메모리가 기본 제한되지 않은 점을 지적했다. INTERPRETATION: 연령 적합성은 단일 필터가 아니라 식별, 대화정책, 기억, 알림, 보호자 가시성을 묶은 제품 운영 문제다. SIGNAL: 교육·상담 AI는 청소년용 기본값과 검증 가능한 보호장치 없이는 학교·가정 도입이 어려워진다. SPECULATION: 플랫폼과 규제기관은 연령 예측 오탐률, 메모리 보존, 위기 대응의 독립 평가를 요구할 가능성이 높다.",
+      "why_it_matters": "한국 교육·에듀테크 팀은 성인용 AI에 금칙어 필터만 붙이는 방식보다 연령확인, 기억 최소화, 학습 목적, 보호자 알림과 위기상황 인간 연결을 처음부터 설계해야 한다.",
+      "industry_mood": {
+        "sentiment": "access-positive / evidence-cautious",
+        "signal": "학습 접근성과 부모 통제는 환영하지만 연령 추정, 장기 메모리와 정신건강 보호의 실제 효과를 독립적으로 검증해야 한다는 요구가 강하다."
+      },
+      "outlook": "AI 추론: 청소년용 AI 시장은 기능 수보다 안전 기본값, 데이터 보존, 부모·학교 역할 경계와 사고 대응 증거를 비교하는 조달 기준으로 이동할 가능성이 높다.",
+      "business_opportunity": "한국 학교·에듀테크가 청소년 AI의 연령게이트, 기억, 유해응답, 보호자 알림과 학습행동을 합성 시나리오로 반복 검증하는 증거 패킷 서비스.",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "teen-safety",
+        "education",
+        "parental-controls",
+        "age-assurance"
+      ],
+      "sources": [
+        {
+          "title": "ChatGPT for Teens",
+          "url": "https://help.openai.com/en/articles/20001421-chatgpt-for-teens",
+          "publisher": "OpenAI Help Center",
+          "published_at": "2026-08-18",
+          "tier": "A"
+        },
+        {
+          "title": "OpenAI unveils ChatGPT for Teens with stronger guardrails, parental controls",
+          "url": "https://www.reuters.com/technology/openai-unveils-chatgpt-teens-with-stronger-guardrails-parental-controls-2026-08-18/",
+          "publisher": "Reuters",
+          "published_at": "2026-08-18",
+          "tier": "B"
+        },
+        {
+          "title": "OpenAI rolls out ChatGPT for Teens with more safety features",
+          "url": "https://apnews.com/article/openai-chatgpt-teens-ai-safety-650cb35591de6546054d6c4e73b3290a",
+          "publisher": "Associated Press",
+          "published_at": "2026-08-18",
+          "tier": "B"
+        }
+      ]
+    },
+    {
+      "event_key": "2026-08-etched-700m-21b-first-rack-jane-street",
+      "title": "Etched, 첫 AI 추론 랙 출하와 함께 7억달러 조달·기업가치 210억달러",
+      "importance": "A",
+      "selection_score": 88,
+      "score_breakdown": {
+        "confidence": 29,
+        "impact": 22,
+        "utility": 18,
+        "recency": 15,
+        "community": 4
+      },
+      "one_line_summary": "AI 추론 전용 칩 스타트업 Etched가 첫 Sohu 랙을 Jane Street에 출하했고, 하드웨어 시험 뒤 Jane Street가 주도한 7억달러 투자에서 210억달러 가치를 인정받았다.",
+      "impact": "범용 GPU 대안 기업이 샘플 칩 단계를 넘어 유료 고객 랙 배치와 대규모 자본조달을 동시에 입증해 추론 하드웨어 경쟁을 구체화했다.",
+      "original_url": "https://www.etched.com/progress/from-zero-to-one",
+      "key_quote": "We shipped our first rack to Jane Street.",
+      "quote_translation": "우리는 첫 번째 랙을 Jane Street에 출하했다.",
+      "summary": "FACT: Etched는 8월 18일 첫 Sohu 시스템 랙을 Jane Street에 출하하고 Jane Street 주도의 7억달러 투자에서 210억달러 기업가치를 인정받았다고 발표했다. Reuters는 기업가치가 한 달도 안 돼 두 배가 됐고 직원 400명 이상, 고객 계약 10억달러 이상이라고 보도했다. TechCrunch도 투자와 첫 배치를 확인했다. INTERPRETATION: AI 칩 스타트업의 신뢰 기준이 벤치마크 발표에서 실제 랙 출하, 고객 시험과 계약으로 이동한다. SIGNAL: 추론비용 경쟁은 범용성보다 특정 모델 구조에 최적화한 시스템과 고객 전환 지원에서 차별화될 수 있다. SPECULATION: Sohu가 실서비스의 수율·가동률·전력효율을 입증하면 가격에 민감한 추론 워크로드에서 GPU의 일부를 대체할 수 있다.",
+      "why_it_matters": "한국 AI 팀은 신규 칩의 최고 성능 주장보다 모델 호환성, 공급일정, 전체 랙 전력, 장애대응, 고객 배치 증거와 전환비용을 함께 비교해야 한다.",
+      "industry_mood": {
+        "sentiment": "deployment-bullish / execution-skeptical",
+        "signal": "첫 고객 출하와 하드웨어 시험 기반 투자는 강한 진전이지만, 높은 가치평가와 비공개 성능·수율·계약 조건에는 신중하다."
+      },
+      "outlook": "AI 추론: 2026~2027년 AI 칩 경쟁은 이론 성능보다 반복 가능한 랙 납품, 주요 모델 지원, 전력당 토큰과 고객 재구매 증거로 빠르게 재평가될 가능성이 높다.",
+      "business_opportunity": "칩 업체의 투자 발표부터 테이프아웃, 랙 출하, 고객 배치, 독립 벤치마크까지 증거 수준을 추적하는 한국어 AI 하드웨어 딜리버리 레이더.",
+      "tags": [
+        "Etched",
+        "Sohu",
+        "Jane-Street",
+        "AI-chips",
+        "inference",
+        "funding"
+      ],
+      "sources": [
+        {
+          "title": "From Zero to One",
+          "url": "https://www.etched.com/progress/from-zero-to-one",
+          "publisher": "Etched",
+          "published_at": "2026-08-18",
+          "tier": "A"
+        },
+        {
+          "title": "AI chip startup Etched valued at $21 billion in latest funding round",
+          "url": "https://www.reuters.com/technology/ai-chip-startup-etched-valued-21-billion-latest-funding-round-2026-08-18/",
+          "publisher": "Reuters",
+          "published_at": "2026-08-18",
+          "tier": "B"
+        },
+        {
+          "title": "Etched's valuation doubles to $21B in a month",
+          "url": "https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/",
+          "publisher": "TechCrunch",
+          "published_at": "2026-08-18",
+          "tier": "B"
+        }
+      ]
+    },
+    {
+      "event_key": "2026-08-operation-blue-skies-oceanic-contrail-trial",
+      "title": "영국·Google, 북대서양 항공편의 비행운 회피를 시험하는 Operation Blue Skies 착수",
+      "importance": "A",
+      "selection_score": 87,
+      "score_breakdown": {
+        "confidence": 30,
+        "impact": 21,
+        "utility": 18,
+        "recency": 15,
+        "community": 3
+      },
+      "one_line_summary": "영국 정부·Google·NATS 등은 Shanwick 북대서양 공역에서 기상·AI 예측으로 비행운 발생구역을 피해 운항하는 30개월 국가 지원 실증에 착수했다.",
+      "impact": "AI 기후예측이 논문과 소규모 시험을 넘어 실제 대양 공역의 항공교통 관제 절차에 통합되는 첫 국가 지원 운영 실증이다.",
+      "original_url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/",
+      "key_quote": "the world's first state-backed trial to avoid contrails at the scale of an entire oceanic airspace.",
+      "quote_translation": "대양 공역 전체 규모에서 비행운을 회피하는 세계 최초의 국가 지원 시험이다.",
+      "summary": "FACT: Google, 영국 Met Office, NATS, Contrails.org와 대학 연구진은 8월 18일 30개월 Operation Blue Skies를 발표했다. Shanwick 동부 북대서양 공역에서 2026/27·2027/28년 겨울 각각 약 4개월, 20~40일 동안 일부 항공편을 비행운 위험구역 밖으로 유도한다. 영국 프로그램 규모는 500만파운드이며 정부가 265만파운드, Google이 140만파운드 상당을 현물 지원한다. Met Office와 ATI가 시험 범위와 독립 검증 구조를 확인했다. INTERPRETATION: AI 예측의 가치는 정확도만 아니라 관제 안전, 우회거리, 연료, 지연과 기후효과를 함께 측정할 때 입증된다. SIGNAL: 규제·운영기관이 참여하는 제한된 실증과 독립 검증이 고위험 AI 도입의 표준 경로가 되고 있다. SPECULATION: 연료 증가 없이 비행운 감소가 반복 입증되면 항공사 운항계획과 기후보고에 비행운 회피가 포함될 수 있다.",
+      "why_it_matters": "한국의 교통·기후 AI 팀에는 예측모델 단독 판매보다 기존 관제 흐름에 개입하지 않는 권고, 안전 승인, 결과 계측과 독립 검증을 한 묶음으로 설계하는 사례다.",
+      "industry_mood": {
+        "sentiment": "experiment-positive / measurement-cautious",
+        "signal": "실제 공역에서의 국가 지원 검증은 긍정적이지만 비행운 기후효과의 불확실성과 우회 연료·운항 영향을 엄격히 측정해야 한다는 분위기다."
+      },
+      "outlook": "AI 추론: 첫 겨울 시험에서 안전과 연료 중립성이 확인되면 2027/28년에는 자동화 수준과 참여 항공편이 확대되겠지만, 기후편익은 독립 검증 전까지 정책 성과로 확정되기 어렵다.",
+      "business_opportunity": "항공·물류 실증의 모델 권고, 운영자 승인, 경로 변경, 비용·배출·안전 결과를 감사 가능한 타임라인으로 묶는 규제형 AI 파일럿 증거 대시보드.",
+      "tags": [
+        "Google",
+        "NATS",
+        "Met-Office",
+        "contrails",
+        "aviation",
+        "climate-AI"
+      ],
+      "sources": [
+        {
+          "title": "Operation Blue Skies: advancing weather intelligence for aviation",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-skies/",
+          "publisher": "Google",
+          "published_at": "2026-08-18",
+          "tier": "A"
+        },
+        {
+          "title": "Operation Blue Skies: advancing weather intelligence for aviation",
+          "url": "https://www.metoffice.gov.uk/blog/2026/operation-blue-skies-advancing-weather-intelligence-for-aviation-",
+          "publisher": "UK Met Office",
+          "published_at": "2026-08-18",
+          "tier": "A"
+        },
+        {
+          "title": "Operation Blue Skies",
+          "url": "https://www.adsadvance.co.uk/operation-blue-skies/",
+          "publisher": "ADS Advance / Aerospace Technology Institute",
+          "published_at": "2026-08-18",
+          "tier": "B"
+        }
+      ]
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "Teen AI Safety Evidence Kit",
+      "score": 4.2,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Medium-High",
+      "customer": "청소년용 생성형 AI를 도입하거나 제공하는 한국 학교, 학원, 에듀테크와 보호자 단체",
+      "problem": "연령게이트, 유해응답, 장기 메모리, 보호자 알림과 위기 대응이 실제로 작동하는지 반복 검증할 근거가 없다.",
+      "existing_solution": "제품 자체 안전설정, Common Sense Media 리뷰, 수동 레드팀, 학교별 이용지침과 일반 보안 컨설팅",
+      "competitors": [
+        "Common Sense Media",
+        "Thorn",
+        "Holistic AI",
+        "Credo AI"
+      ],
+      "differentiation": "한국어 학교·가정 시나리오로 연령 식별부터 기억·학습행동·보호자 경계까지 합성계정에서 읽기 전용 검증하고 재현 가능한 증거를 남긴다.",
+      "mvp_2_weeks": "공개 테스트 계정과 합성 대화만 사용해 30개 한국어 시나리오, 응답 캡처, 정책 매핑, 실패 재현과 주간 PDF를 만드는 수동 우선 서비스.",
+      "monetization": "제품·학교 단위 사전 점검 패킷 + 월간 회귀검증 구독",
+      "falsification": "10개 기관 중 4개 미만이 구매 전 안전증거를 요구하거나 월 20만원 이상 지불 의향을 보이면 중단한다. 미성년자 실제 데이터 없이 유효성을 입증할 수 없으면 범위를 축소한다."
+    },
+    {
+      "name": "Inference Hardware Delivery Reality Tracker",
+      "score": 4.1,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Medium",
+      "customer": "한국 AI 인프라 구매자, 클라우드 리셀러, 벤처투자자와 반도체 전략팀",
+      "problem": "칩 스타트업의 자금조달·벤치마크 발표와 실제 양산, 랙 출하, 고객 배치 사이의 간극을 한눈에 검증하기 어렵다.",
+      "existing_solution": "SemiAnalysis·Omdia 리서치, PitchBook, 회사 보도자료, 개별 벤치마크와 수동 스프레드시트",
+      "competitors": [
+        "SemiAnalysis",
+        "Omdia",
+        "PitchBook",
+        "The Next Platform"
+      ],
+      "differentiation": "평가액보다 테이프아웃, 양산 파트너, 랙 출하, 고객명, 독립 성능·전력·가동률 증거를 단계별 신뢰도로 표시하고 주장 변경 이력을 보존한다.",
+      "mvp_2_weeks": "AI 칩 업체 20곳의 공식 발표·GitHub·고객 확인·독립 벤치마크를 주간 타임라인과 증거등급으로 정리하는 웹 대시보드와 이메일 브리핑.",
+      "monetization": "팀 구독 + 공급자 실사·구매검토용 일회성 증거 패킷",
+      "falsification": "구매자·투자자 인터뷰 12건 중 5건 미만이 현재 주 1시간 이상 검증에 쓰거나 월 15만원 이상 지불 의향을 보이면 중단한다."
+    }
+  ],
+  "tools": [
+    {
+      "name": "ChatGPT for Teens",
+      "type": "Teen-oriented AI learning experience",
+      "url": "https://help.openai.com/en/articles/20001421-chatgpt-for-teens",
+      "stars": 4,
+      "why_trending": "13~17세용 안전 기본값, 학습 기능과 보호자 제어를 글로벌 제품으로 분리해 청소년 AI 설계의 비교 기준이 됐다.",
+      "worth_trying": "개인정보 없는 합성 계정과 시나리오로 학습모드, 기억, Quiet Hours와 유해응답 경계를 검토하고 실제 미성년자 데이터는 사용하지 않는다."
+    },
+    {
+      "name": "Google Travel Impact Model",
+      "type": "Open-source flight emissions model",
+      "url": "https://github.com/google/travel-impact-model",
+      "stars": 4,
+      "why_trending": "Operation Blue Skies가 항공 기후예측을 실제 운항시험으로 확장하면서 모델 가정과 공개 계산방식을 직접 검토할 필요가 커졌다.",
+      "worth_trying": "샘플 노선의 배출량을 재현하고 버전·가정·불확실성을 기록하되 안전·관제 의사결정에는 사용하지 않는다."
+    }
+  ],
+  "community": [
+    {
+      "platform": "Reddit",
+      "mood": "security-concerned / release-impatient",
+      "one_line_summary": "Astra 지연을 아쉬워하면서도 침해 뒤 모델 훈련·시험을 멈추고 재발 방지 증거를 요구한 결정은 필요하다는 반응이 교차한다.",
+      "url": "https://www.reddit.com/r/codex/comments/1vi7mpc/openai_is_delaying_their_next_model_astra/"
+    },
+    {
+      "platform": "Reddit",
+      "mood": "parent-control-positive / safety-skeptical",
+      "one_line_summary": "청소년용 기본값과 부모 제어를 환영하지만 나이 판별, 정신건강 대응과 장기 메모리의 실제 효과를 검증해야 한다는 반응이 많다.",
+      "url": "https://www.reddit.com/r/StockMarket/comments/1vrnb0x/openai_launches_chatgpt_for_teens/"
+    },
+    {
+      "platform": "Reddit",
+      "mood": "climate-curious / operations-cautious",
+      "one_line_summary": "비행운 회피의 잠재효과에는 관심이 크지만 우회 연료, 지연, 관제 복잡성과 기후효과 불확실성을 실제 시험으로 확인해야 한다고 본다.",
+      "url": "https://www.reddit.com/r/climatechange/comments/1vrqcs1/planes_flying_over_the_atlantic_will_be_rerouted/"
+    },
+    {
+      "platform": "GitHub",
+      "mood": "transparent / methodology-focused",
+      "one_line_summary": "Travel Impact Model 저장소에서는 항공 배출량 계산의 공개 방법론, 버전 변경과 검증 가능한 입력·출력을 중심으로 실용적인 검토가 이뤄진다.",
+      "url": "https://github.com/google/travel-impact-model"
+    }
+  ],
+  "skill_of_the_day": {
+    "name": "Capability-triggered pause review",
+    "when_to_use": "AI 에이전트나 모델의 보안 능력·이상행동·침해 경보가 사전에 정한 위험 임계치에 접근했을 때.",
+    "practical_example": "훈련·배포·권한 확대를 일시 중단하고 코드 실행 격리, 네트워크, 비밀정보, 감사로그, 경보 시간과 재개 증거를 한 장의 승인 체크리스트로 정리한다.",
+    "prompt_example": "이 변경을 읽기 전용으로 검토해 중단 조건, 즉시 격리할 권한·네트워크, 30분 내 확인할 증거, 오탐 판정 기준과 재개 승인자를 표로 만들어. 실행이나 설정 변경은 하지 마."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "Efficacy of Scalable Airline-led Contrail Avoidance",
+      "url": "https://arxiv.org/abs/2603.06909",
+      "why_read": "1,232편의 실제 항공편 분석에서 비행운 감소와 연료 영향이 어떻게 측정됐는지 보고 Blue Skies의 사전 근거와 한계를 판단할 수 있다."
+    },
+    {
+      "type": "GitHub",
+      "title": "Google Travel Impact Model",
+      "url": "https://github.com/google/travel-impact-model",
+      "why_read": "항공 배출 추정의 공개 코드, 데이터 구조, 버전 기록과 계산 가정을 직접 확인해 기후효과 주장의 재현 가능성을 검토할 수 있다."
+    },
+    {
+      "type": "YouTube",
+      "title": "ChatGPT adds teen safeguards amid mental health concerns",
+      "url": "https://www.youtube.com/watch?v=1dRid_fGetM",
+      "why_read": "청소년 보호기능 출시와 정신건강 우려를 짧은 뉴스 맥락에서 함께 확인하고 제품 설명과 외부 관점을 비교할 수 있다."
+    },
+    {
+      "type": "Blog",
+      "title": "From Zero to One",
+      "url": "https://www.etched.com/progress/from-zero-to-one",
+      "why_read": "Etched가 주장하는 첫 랙 출하, 투자 구조와 제품 진행상황을 원문으로 보고 독립 검증이 필요한 항목을 분리할 수 있다."
+    }
+  ],
+  "todays_insight": "AI의 다음 경쟁우위는 더 빠른 출시 자체보다 위험 임계치에서 멈출 수 있는 운영 규율과 실제 배치·검증 증거를 축적하는 능력에서 나온다.",
+  "build_candidate": null
+}

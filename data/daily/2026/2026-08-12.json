@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-08-12",
+  "generated_at": "2026-08-12T07:04:00+09:00",
+  "status": "complete",
+  "warnings": [
+    "GPT-5.6-Cyber의 95% 수치는 OpenAI의 내부 Advanced Cybersecurity Completion Rate로, 실제 안전성·취약점 발견 효과를 독립 검증한 결과가 아니다.",
+    "Claude의 제타함수 결과는 논문과 sorry-free Lean 저장소가 공개됐지만 광범위한 동료평가는 진행 중이며 사용 모델도 아직 공개되지 않았다.",
+    "Claude 워터마크의 제3자 탐지 도구와 오탐·편집·번역 내구성 세부치는 아직 공개되지 않았고 C2PA 메타데이터는 변환 과정에서 제거될 수 있다.",
+    "River AI의 기업가치가 공개되지 않았고 15~20분 RL 실행 및 2~4배 비용 효율은 회사 주장으로 독립 재현되지 않았다.",
+    "ChatGPT Linux 앱은 프리뷰이며 패키지 서명·자동 업데이트·장기 지원 정책을 설명하는 Linux 전용 공식 문서는 찾지 못했다."
+  ],
+  "news": [
+    {
+      "event_key": "2026-08-openai-gpt-5-6-cyber-daybreak-blue-red",
+      "title": "OpenAI launches GPT-5.6-Cyber and splits Daybreak into Blue and Red access tiers",
+      "importance": "S",
+      "selection_score": 94,
+      "score_breakdown": {"confidence": 29, "impact": 24, "utility": 20, "recency": 15, "community": 6},
+      "one_line_summary": "OpenAI가 방어 작업용 Daybreak Blue와 고위험 승인 연구용 Red를 분리하고, 내부 평가에서 민감한 고급 사이버 요청의 95%를 완료한 GPT-5.6-Cyber를 Red에 배치했다.",
+      "impact": "고성능 사이버 AI가 일반 공개 대신 신원·목적·감사 통제를 포함한 신뢰 접근 계층으로 제품화되면서 모델 성능과 접근 거버넌스가 하나의 구매 단위가 된다.",
+      "original_url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+      "key_quote": "GPT‑5.6‑Cyber completes 95.0% of these requests, compared with just 1.5% for GPT‑5.6 Sol.",
+      "quote_translation": "GPT-5.6-Cyber는 이 요청의 95.0%를 완료했으며 GPT-5.6 Sol은 1.5%였다.",
+      "summary": "FACT: OpenAI는 Daybreak를 Blue와 Red로 나누고 Red에 GPT-5.6-Cyber를 제공한다. Blue는 승인된 방어 작업에 GPT-5.6 Sol을, Red는 취약점 연구·익스플로잇 검증·보안 시험에 목적 훈련 모델을 제공한다. OpenAI 내부 평가는 GPT-5.6-Cyber가 인증 우회·권한 상승·익스플로잇 체인 요청의 95.0%를 완료했다고 보고했으며, 일반 Sol은 1.5%, Blue는 2.0%, GPT-5.5-Cyber는 57.3%였다. 파트너 프로그램은 고객이 아니라 승인된 제공자에게 모델 접근을 유지하고 범위·로깅·모니터링·사람 감독을 요구한다. TechCrunch와 Axios가 모델 출시와 제한 접근 구조를 독립 보도했다. INTERPRETATION: 고위험 능력은 모델 API보다 승인·감사·사고대응을 묶은 운영체계로 판매되기 시작했다. SIGNAL: 보안 AI 도입 계약에서 작업 권한, 로그 보존, 사용 목적과 즉시 차단 절차가 성능만큼 중요해진다. SPECULATION: 한국 보안팀에도 승인된 과업만 모델에 전달하고 증거를 남기는 중간 통제 계층 수요가 생길 수 있다.",
+      "why_it_matters": "한국의 소규모 보안팀은 강한 모델을 직접 보유하기보다 승인된 파트너와 통제된 워크플로를 통해 접근할 가능성이 높아, 모델 선택보다 권한·증거·책임경계를 먼저 설계해야 한다.",
+      "industry_mood": {"sentiment": "capability-impressed / access-cautious", "signal": "95% 완료율과 제로데이 역량에는 관심이 크지만 내부 평가와 높은 이중용도 위험 때문에 제한 접근이 타당하다는 분위기"},
+      "outlook": "AI 추론: 사이버 특화 모델은 일반 SaaS 좌석보다 신원확인, 작업 승인, 실시간 감시, 결과 검토가 결합된 관리형 접근으로 확산될 가능성이 높다.",
+      "business_opportunity": "승인 티켓·자산 범위·모델 호출·사람 검토·증거 로그를 하나의 실행 기록으로 묶는 보안 AI 워크플로 게이트웨이.",
+      "tags": ["OpenAI", "GPT-5.6-Cyber", "Daybreak", "cybersecurity", "trusted-access", "governance"],
+      "sources": [
+        {"title": "Expanding Daybreak as the Cyber Defense Window Narrows", "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/", "publisher": "OpenAI", "published_at": "2026-08-10", "tier": "A"},
+        {"title": "Putting frontier cyber models in more trusted hands", "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/", "publisher": "OpenAI", "published_at": "2026-08-10", "tier": "A"},
+        {"title": "As AI-led attacks multiply, OpenAI launches a new cyber model", "url": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/", "publisher": "TechCrunch", "published_at": "2026-08-10", "tier": "B"},
+        {"title": "OpenAI's powerful hacking model comes with strict restrictions", "url": "https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders", "publisher": "Axios", "published_at": "2026-08-10", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-anthropic-claude-riemann-zeta-two-thirds-lean",
+      "title": "Anthropic releases a Claude-authored proof raising the verified zeta-zero lower bound to 67.2%",
+      "importance": "S",
+      "selection_score": 92,
+      "score_breakdown": {"confidence": 28, "impact": 25, "utility": 18, "recency": 15, "community": 6},
+      "one_line_summary": "Anthropic가 미공개 연구용 Claude가 리만 제타함수 임계선 위 영점의 무조건적 하한을 41.6%에서 67.2%로 높인 논문과 sorry-free Lean 증명을 공개했다.",
+      "impact": "AI 수학 주장에 사람이 읽는 논문뿐 아니라 컴파일 가능한 형식 증명을 함께 배포한 사례로, 연구 성과의 평가 단위가 답변에서 재현 가능한 증거 묶음으로 이동한다.",
+      "original_url": "https://www.anthropic.com/research/riemann-zeta",
+      "key_quote": "It has increased this bound from 41.6% to 67.2%.",
+      "quote_translation": "이 하한을 41.6%에서 67.2%로 높였다.",
+      "summary": "FACT: Anthropic는 미공개 연구용 Claude가 리만 가설 자체를 풀지는 못했지만, 임계선 위에 있는 영점의 알려진 무조건적 비율을 41.6%에서 67.2%로 높였다고 발표했다. 논문은 2/3 이상을 증명하고 최적화값 0.6725를 제시한다. Anthropic 수학자 두 명과 Brian Conrey·Dan Goldston이 검토했으며, 공개 GitHub 저장소에는 Lean 4로 작성된 sorry-free 형식화와 표준 공리 점검 방법이 있다. TechCrunch가 결과와 리만 가설 미해결이라는 범위를 독립 보도했다. 다만 광범위한 동료평가는 아직 완료되지 않았다. INTERPRETATION: 프런티어 모델의 과학적 가치는 생성된 주장보다 검증 가능한 산출물과 인간 검토 과정으로 판단해야 한다. SIGNAL: 논문·코드·정리 명세·빌드 환경을 동시에 공개하는 artifact-first 연구 관행이 강화된다. SPECULATION: AI 연구 결과를 독립 재현하고 증거 사슬을 요약하는 전문 서비스가 소규모 연구팀에 유용할 수 있다.",
+      "why_it_matters": "한국 연구팀과 기술 실사자는 ‘AI가 발견했다’는 헤드라인보다 정리의 정확한 범위, 선행연구, 형식 증명, 재현 환경과 사람 검토 상태를 함께 확인해야 한다.",
+      "industry_mood": {"sentiment": "astonished / peer-review-cautious", "signal": "큰 수학적 도약과 Lean 산출물에는 강한 기대가 있지만 모델 미공개와 제한된 외부 검토를 분명히 구분하는 분위기"},
+      "outlook": "AI 추론: 고난도 과학 발표에서 논문 PDF만 공개하는 것으로는 부족해지고, 고정된 코드·형식 증명·테스트·전문가 검토 기록이 신뢰의 기본 단위가 될 가능성이 높다.",
+      "business_opportunity": "AI 생성 연구 주장의 정리 범위, 선행연구, 코드/증명 재현, 독립 검토 상태를 한 장의 검증 패킷으로 만드는 서비스.",
+      "tags": ["Anthropic", "Claude", "Riemann-zeta", "mathematics", "Lean", "formal-verification"],
+      "sources": [
+        {"title": "Learning more about Claude's mathematical capabilities", "url": "https://www.anthropic.com/research/riemann-zeta", "publisher": "Anthropic", "published_at": "2026-08-10", "tier": "A"},
+        {"title": "More Than Two Thirds of the Zeros of the Riemann Zeta Function Lie on the Critical Line", "url": "https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf", "publisher": "Anthropic", "published_at": "2026-08-10", "tier": "A"},
+        {"title": "anthropics/zeta-23-lean", "url": "https://github.com/anthropics/zeta-23-lean", "publisher": "Anthropic", "published_at": "2026-08-10", "tier": "A"},
+        {"title": "An unreleased Anthropic model made progress on one of math's biggest unsolved problems", "url": "https://techcrunch.com/2026/08/11/an-unreleased-anthropic-model-made-progress-on-one-of-maths-biggest-unsolved-problems/", "publisher": "TechCrunch", "published_at": "2026-08-11", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-anthropic-claude-watermark-c2pa",
+      "title": "Anthropic commits Claude outputs to invisible text watermarks and signed C2PA provenance",
+      "importance": "S",
+      "selection_score": 90,
+      "score_breakdown": {"confidence": 29, "impact": 22, "utility": 20, "recency": 15, "community": 4},
+      "one_line_summary": "Anthropic가 새 Claude 모델의 텍스트에 비가시 워터마크를, 지원 파일에 서명된 C2PA 출처 메타데이터를 넣고 전 세계 제품·API·클라우드 경로로 확대하겠다고 밝혔다.",
+      "impact": "AI 생성물 표시는 화면 배지에서 모델 출력과 파일 자체에 내장되는 기계 판독 가능한 증거로 이동해 게시·교육·기업 감사 워크플로에 직접 영향을 준다.",
+      "original_url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "key_quote": "Generated text will carry embedded watermarks, and generated files will include digitally signed provenance metadata where supported.",
+      "quote_translation": "생성 텍스트에는 내장 워터마크가, 지원되는 생성 파일에는 디지털 서명된 출처 메타데이터가 포함된다.",
+      "summary": "FACT: Anthropic 지원 문서는 2026년 8월 2일 이후 EU에서 출시되는 새 Claude 모델이 출시 시점부터 기계 판독 표시를 지원한다고 설명한다. 텍스트에는 보이지 않는 워터마크를, 지원 파일에는 서명된 C2PA 출처 메타데이터를 넣는다. 범위는 Claude, API, Claude Code, Cowork, Tag와 AWS·Google Cloud·Microsoft Foundry 경로를 포함하며 적용 지역은 전 세계다. 기존 모델 지원과 탐지 메커니즘은 준비 중이다. The Verge와 TechCrunch가 발표를 독립 보도했고, The Verge는 심한 편집과 메타데이터 제거 한계를 지적했다. C2PA는 공개 표준 사양을 제공한다. INTERPRETATION: 생성물 투명성은 공급자 약관이 아니라 후속 시스템이 검사할 수 있는 데이터 계층으로 이동한다. SIGNAL: 조직은 생성 여부뿐 아니라 편집·번역·내보내기 뒤 표시 보존 여부를 시험해야 한다. SPECULATION: 한국 콘텐츠·교육·마케팅팀을 위한 워터마크/C2PA 보존성 QA가 짧은 주기의 유료 검증 서비스가 될 수 있다.",
+      "why_it_matters": "표시가 전 세계 API와 업무도구까지 적용되면 한국 조직도 AI 보조 편집, 파일 변환, SNS 업로드 과정에서 provenance가 유지되는지와 오탐 대응 절차를 준비해야 한다.",
+      "industry_mood": {"sentiment": "transparency-positive / robustness-skeptical", "signal": "출처 표시 원칙에는 동의가 많지만 편집 내구성, 오탐, 코드 출력과 제거 가능성에 대한 질문이 집중됨"},
+      "outlook": "AI 추론: 플랫폼은 AI 표식을 단순 탐지 점수보다 서명 검증, 변환 이력, 사용 정책과 결합하고 조직은 채널별 보존성 시험을 정기 감사 항목으로 만들 가능성이 높다.",
+      "business_opportunity": "Claude/API/문서도구/SNS 변환 경로별로 텍스트 워터마크와 C2PA 서명이 유지되는지 검증하고 증거 로그를 내보내는 한국어 QA 키트.",
+      "tags": ["Anthropic", "Claude", "watermark", "C2PA", "provenance", "EU-AI-Act"],
+      "sources": [
+        {"title": "How Claude marks AI-generated content", "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content", "publisher": "Anthropic", "published_at": "2026-08-10", "tier": "A"},
+        {"title": "C2PA Technical Specification 2.4", "url": "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html", "publisher": "C2PA", "published_at": "2026", "tier": "A"},
+        {"title": "Claude will apply invisible watermarks to AI text and images", "url": "https://www.theverge.com/ai-artificial-intelligence/977823/anthropic-claude-ai-watermarks-c2pa-text-images", "publisher": "The Verge", "published_at": "2026-08-11", "tier": "B"},
+        {"title": "Anthropic says it will watermark text generated by its AI models", "url": "https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/", "publisher": "TechCrunch", "published_at": "2026-08-11", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-river-ai-1-1b-seed-series-a",
+      "title": "River AI raises $1.1B to build customizable, user-owned open-weight models",
+      "importance": "A",
+      "selection_score": 88,
+      "score_breakdown": {"confidence": 29, "impact": 24, "utility": 16, "recency": 15, "community": 4},
+      "one_line_summary": "xAI 공동창업자 Igor Babuschkin의 River AI가 General Catalyst·AMP PBC 주도와 NVIDIA·AMD Ventures 참여로 시드·시리즈A 합계 11억 달러를 조달했다.",
+      "impact": "초기 단계에서 이례적인 자본이 사용자 데이터로 훈련·튜닝하고 가중치를 소유하는 모델 인프라에 배치되면서 폐쇄형 API와 맞서는 개인화·소유권 경쟁이 커진다.",
+      "original_url": "https://river.ai/series-seed-series-a-funding",
+      "key_quote": "AI should be open, freely available, and affordable.",
+      "quote_translation": "AI는 개방적이고 자유롭게 이용 가능하며 저렴해야 한다.",
+      "summary": "FACT: River AI는 시드와 시리즈A를 합쳐 11억 달러를 조달했다고 발표했다. General Catalyst와 AMP PBC가 주도했고 NVIDIA, AMD Ventures, Y Combinator, Temasek이 참여했다. 회사는 개발자와 기업이 자체 데이터로 모델을 훈련·튜닝하고 가중치를 소유하게 하겠다고 밝혔다. Reuters와 TechCrunch가 조달액·주요 투자자·맞춤형 모델 방향을 독립 확인했다. 기업가치는 공개되지 않았으며 API의 15~20분 RL 실행과 2~4배 비용 효율은 회사 주장이다. INTERPRETATION: AI 경쟁은 범용 API뿐 아니라 고객이 모델 산출물과 가중치를 얼마나 통제하는지로 확장된다. SIGNAL: 데이터 주권·모델 이전성·훈련 기록이 엔터프라이즈 구매 기준으로 부상한다. SPECULATION: 한국 팀은 맞춤 모델 도입 전에 데이터 권리와 반출·재훈련·종료 조건을 표준화한 준비도 검토를 필요로 할 수 있다.",
+      "why_it_matters": "대규모 자본이 고객 소유 모델을 밀면 한국 기업은 단기 성능만 아니라 데이터·가중치 소유권, 재현성, 공급자 변경 비용을 계약 단계에서 비교해야 한다.",
+      "industry_mood": {"sentiment": "capital-amazed / proof-demanding", "signal": "11억 달러 초기 조달에는 놀라움이 크지만 기업가치와 제품 성숙도, 비용 주장 검증을 기다리는 분위기"},
+      "outlook": "AI 추론: 폐쇄형 API와 고객 소유 가중치 사이에 관리형 튜닝·평가·배포 서비스가 늘고, 이전 가능성과 데이터 통제 수준이 가격 비교표의 핵심 항목이 될 수 있다.",
+      "business_opportunity": "맞춤 모델 계약의 데이터 권리, 가중치 소유, 재현 가능한 훈련 기록, 이전·종료 조건을 검토하는 한국어 준비도 패키지.",
+      "tags": ["River-AI", "funding", "open-weight", "custom-model", "model-ownership", "infrastructure"],
+      "sources": [
+        {"title": "River AI Raises $1.1B Across Seed and Series A", "url": "https://river.ai/series-seed-series-a-funding", "publisher": "River AI", "published_at": "2026-08-11", "tier": "A"},
+        {"title": "xAI co-founder's startup River AI raises $1.1 billion to expand custom AI tools", "url": "https://www.reuters.com/technology/xai-co-founders-startup-river-ai-raises-11-billion-expand-custom-ai-tools-2026-08-11/", "publisher": "Reuters", "published_at": "2026-08-11", "tier": "B"},
+        {"title": "General Catalyst leads $1.1B round into 2-month-old River AI", "url": "https://techcrunch.com/2026/08/11/general-catalyst-leads-1-1b-round-into-2-month-old-river-ai/", "publisher": "TechCrunch", "published_at": "2026-08-11", "tier": "B"}
+      ]
+    },
+    {
+      "event_key": "2026-08-openai-chatgpt-linux-desktop-preview",
+      "title": "OpenAI brings ChatGPT, Work and Codex to Linux in preview",
+      "importance": "A",
+      "selection_score": 84,
+      "score_breakdown": {"confidence": 28, "impact": 19, "utility": 20, "recency": 15, "community": 2},
+      "one_line_summary": "OpenAI가 Ubuntu·Debian·Fedora의 x64와 ARM64를 지원하는 ChatGPT Linux 데스크톱 앱 프리뷰를 공개해 ChatGPT, Work, Codex와 프로젝트·브라우저 워크플로를 제공한다.",
+      "impact": "개발자 비중이 높은 Linux 환경에 공식 데스크톱 클라이언트가 들어오면서 로컬 프로젝트·파일·브라우저와 AI 작업 공간을 연결하는 배포 범위가 넓어진다.",
+      "original_url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
+      "key_quote": "ChatGPT desktop app for Linux is now available in preview.",
+      "quote_translation": "Linux용 ChatGPT 데스크톱 앱을 이제 프리뷰로 사용할 수 있다.",
+      "summary": "FACT: OpenAI 공식 커뮤니티 발표는 Linux용 ChatGPT 데스크톱 앱 프리뷰가 ChatGPT, Work, Codex를 지원한다고 밝혔다. 지원 대상은 Ubuntu 24.04·26.04, Debian 13, Fedora 43·44이며 x64와 ARM64용 .deb/.rpm 패키지가 제공된다. 앱은 프로젝트·파일·브라우저 워크플로와 Codex를 데스크톱에 연결한다. TechCrunch가 전 세계 프리뷰와 지원 배포판을 독립 보도했다. 다만 Linux 전용 패키지 서명, 자동 업데이트, 장기 지원 정책 문서는 확인하지 못했다. INTERPRETATION: AI 코딩과 지식 작업 도구가 브라우저 탭에서 운영체제 수준 작업 공간으로 확장된다. SIGNAL: 기업 배포에서는 기능보다 패키지 출처·업데이트·권한·데이터 경계 검증이 먼저 필요하다. SPECULATION: Linux 중심 개발팀을 위한 사내 배포·정책 템플릿 수요가 생길 수 있다.",
+      "why_it_matters": "한국 스타트업과 개발팀은 Linux 워크스테이션에서도 동일한 AI 업무 흐름을 쓸 수 있지만 프리뷰 단계이므로 패키지 무결성, 업데이트와 파일 접근 권한을 격리해 시험해야 한다.",
+      "industry_mood": {"sentiment": "long-awaited / preview-cautious", "signal": "Linux 지원 자체는 환영받지만 배포판 범위와 운영 정책 문서가 더 필요하다는 반응"},
+      "outlook": "AI 추론: 공식 Linux 클라이언트가 안정화되면 개발 조직의 프로젝트·터미널·브라우저·문서 작업을 하나의 정책 관리면에 묶으려는 수요가 커질 수 있다.",
+      "business_opportunity": "Linux AI 데스크톱 앱의 패키지 검증, 권한 프로필, 업데이트 링과 데이터 반출 정책을 제공하는 팀 배포 템플릿.",
+      "tags": ["OpenAI", "ChatGPT", "Codex", "Linux", "desktop", "preview"],
+      "sources": [
+        {"title": "Codex in ChatGPT desktop app for Linux is now in preview", "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027", "publisher": "OpenAI Community", "published_at": "2026-08-11", "tier": "A"},
+        {"title": "OpenAI launches ChatGPT desktop app for Linux", "url": "https://techcrunch.com/2026/08/11/openai-launches-chatgpt-desktop-app-for-linux/", "publisher": "TechCrunch", "published_at": "2026-08-11", "tier": "B"}
+      ]
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "AI Content Provenance QA Kit",
+      "score": 4.4,
+      "stars": 5,
+      "potential": "Very High",
+      "difficulty": "Medium",
+      "customer": "Claude·생성형 AI를 쓰는 한국 출판사, 교육 플랫폼, 마케팅 에이전시, 엔터프라이즈 AI 관리팀",
+      "problem": "텍스트 워터마크와 C2PA 서명이 편집·번역·문서 변환·SNS 업로드 뒤에도 유지되는지, 오탐이 생겼을 때 무엇을 증거로 남길지 알기 어렵다.",
+      "existing_solution": "C2PA Verify·Content Credentials 검사, 공급자 지원 문서, 수작업 샘플 확인",
+      "competitors": ["Content Credentials Verify", "C2PA Verify", "Truepic", "Adobe Content Authenticity Initiative"],
+      "differentiation": "한국어 텍스트와 국내 문서·게시 채널을 대상으로 생성→편집→번역→내보내기 경로별 표시 보존율과 서명 유효성을 재현 가능한 증거 로그로 제공한다.",
+      "mvp_2_weeks": "Claude/API 출력 4종과 DOCX·PDF·PNG·JPG·SVG, 번역·요약·복사붙여넣기·SNS 업로드 등 6개 변환을 조합한 테스트 매트릭스, C2PA 검증과 결과 리포트.",
+      "monetization": "워크플로당 유료 QA 리포트 + 월간 회귀검증 구독 + 기업용 정책 체크리스트",
+      "falsification": "잠재 고객 12곳 중 4곳 미만이 현재 provenance 검증 책임자를 정했거나 3개월 내 유료 파일럿 의향을 보이면 중단한다."
+    },
+    {
+      "name": "Formal AI Research Reproducibility Desk",
+      "score": 4.1,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Medium–High",
+      "customer": "AI 연구 성과를 실사하는 한국 대학 연구실, 투자사 기술팀, R&D 전략팀, 전문 미디어",
+      "problem": "AI가 만든 논문 발표에서 정리의 정확한 범위, 선행연구, 코드·형식 증명, 빌드 재현과 사람 검토 상태가 흩어져 있다.",
+      "existing_solution": "동료평가, Papers with Code, 독립 블로그, 저장소 README와 수작업 재현",
+      "competitors": ["Papers with Code", "Artifact Evaluation committees", "Replicate", "전문 연구 컨설팅"],
+      "differentiation": "논문 주장-정리 명세-코드/Lean 커밋-빌드 환경-외부 검토를 하나의 한국어 evidence graph와 재현 체크섬으로 묶는다.",
+      "mvp_2_weeks": "제타함수 사례 포함 3개 발표의 원문 해시, 의존성 고정, 빌드 로그, 정리 범위 비교, 미확인 질문과 검토 상태를 담은 패킷.",
+      "monetization": "발표별 검증 브리프 + 기관 구독 + 기술 실사 프로젝트",
+      "falsification": "연구·투자 담당자 10명 중 3명 미만이 발표당 2시간 이상 검증하거나 외부 브리프 비용을 지불할 의향이 있으면 보류한다."
+    },
+    {
+      "name": "Authorized Cyber AI Workflow Gateway",
+      "score": 4.2,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "High",
+      "customer": "승인된 취약점 연구·침투시험에 고성능 AI를 쓰려는 한국 보안 컨설팅사와 엔터프라이즈 보안팀",
+      "problem": "고위험 모델 호출의 자산 소유권, 승인 범위, 사람 검토, 로그와 즉시 차단을 기존 티켓·SIEM만으로 일관되게 증명하기 어렵다.",
+      "existing_solution": "보안 티켓, PAM, SIEM, 수동 승인, 공급자별 신뢰 접근 프로그램",
+      "competitors": ["ServiceNow", "CyberArk", "Splunk", "OpenAI Daybreak partner controls"],
+      "differentiation": "승인 티켓과 대상 자산 증명, 호출 전 정책, 실행 중 모니터링, 결과 검토와 증거 내보내기를 모델 공급자와 독립된 흐름으로 연결한다.",
+      "mvp_2_weeks": "모의 환경에서 자산 허가서, 시간 제한 토큰, 모델 호출 프록시, 사람 승인, 변경 불가 이벤트 로그와 종료 보고서 프로토타입.",
+      "monetization": "보안팀 좌석·실행량 SaaS + 감사 증거 패키지",
+      "falsification": "승인된 모델 접근 파트너를 확보하지 못하거나 보안책임자 8명 중 3명 미만이 기존 통제로 부족하다고 답하면 중단한다."
+    }
+  ],
+  "tools": [
+    {"name": "OpenAI Daybreak", "type": "Trusted-access cyber AI program", "url": "https://openai.com/daybreak/", "stars": 5, "why_trending": "Blue·Red 접근 계층과 GPT-5.6-Cyber를 통해 고위험 능력과 운영 통제를 함께 제품화", "worth_trying": "승인 가능한 방어 과업, 로그 보존과 사람 검토 요건을 먼저 문서화한 뒤 접근 적합성을 평가"},
+    {"name": "zeta-23-lean", "type": "Lean 4 formal proof artifact", "url": "https://github.com/anthropics/zeta-23-lean", "stars": 5, "why_trending": "Claude의 67.2% 제타함수 하한 결과를 sorry-free Lean 저장소로 공개", "worth_trying": "고정 커밋과 Lean 도구체인으로 빌드하고 #print axioms 결과와 정리 명세를 논문과 대조"},
+    {"name": "C2PA Technical Specification", "type": "Content provenance standard", "url": "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html", "stars": 5, "why_trending": "Claude가 지원 파일의 서명된 provenance에 C2PA를 채택", "worth_trying": "샘플 파일을 편집·변환·재업로드한 뒤 서명과 assertion 보존 여부를 검증"},
+    {"name": "ChatGPT desktop app for Linux", "type": "AI desktop workspace preview", "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027", "stars": 4, "why_trending": "ChatGPT, Work, Codex를 주요 Linux 배포판과 x64·ARM64에 제공", "worth_trying": "격리된 프리뷰 장비에서 패키지 출처, 파일 권한, 업데이트와 브라우저 경계를 확인"}
+  ],
+  "community": [
+    {"platform": "Hacker News", "mood": "impressed / scope-correcting", "one_line_summary": "Claude의 67.2% 도약을 주목하면서도 리만 가설 자체의 해결이 아니라 무조건적 하한 개선이라는 범위를 구분한다.", "url": "https://news.ycombinator.com/item?id=49247362"},
+    {"platform": "Reddit", "mood": "excited / verification-seeking", "one_line_summary": "수학 성과의 큰 폭에 놀라는 반응과 논문·Lean 증명·독립 동료평가 상태를 확인하려는 반응이 함께 나타난다.", "url": "https://www.reddit.com/r/singularity/comments/1vkrt46/claude_increased_the_lower_bound_for_the_fraction/"},
+    {"platform": "Reddit", "mood": "transparency-positive / removal-skeptical", "one_line_summary": "Claude 워터마크를 투명성 진전으로 보는 의견과 편집·코드·오탐·제거 가능성을 묻는 의견이 강하게 갈린다.", "url": "https://www.reddit.com/r/artificial/comments/1vlag0q/claude_now_embeds_an_invisible_watermark_into/"},
+    {"platform": "Reddit", "mood": "capability-curious / dual-use-wary", "one_line_summary": "GPT-5.6-Cyber의 95% 완료율에는 관심이 크지만 제한 접근과 실제 제로데이 능력의 위험을 함께 논의한다.", "url": "https://www.reddit.com/r/singularity/comments/1vkrtyo/openai_introducing_new_ways_to_unlock_advanced/"},
+    {"platform": "Reddit", "mood": "welcoming / packaging-curious", "one_line_summary": "Linux 데스크톱 프리뷰를 반기면서 지원 배포판, 패키지 방식과 기존 브라우저 워크플로 대비 장점을 확인하려 한다.", "url": "https://www.reddit.com/r/singularity/comments/1vlq75e/chatgpt_desktop_with_wider_support_now_in_preview/"}
+  ],
+  "skill_of_the_day": {
+    "name": "Artifact-first AI claim verification",
+    "when_to_use": "AI가 새로운 연구·성능 기록을 만들었다는 발표가 나왔고 헤드라인보다 재현 가능한 증거가 중요한 때.",
+    "practical_example": "논문 PDF 해시, 저장소 커밋, Lean 버전과 의존성을 고정해 빌드하고 정리 명세·공리 목록·외부 검토 상태를 발표문과 대조한다.",
+    "prompt_example": "이 AI 연구 주장을 FACT와 미확인 항목으로 나누고 논문·코드·형식 증명·재현 명령·독립 검토를 연결한 evidence checklist를 만들어줘."
+  },
+  "worth_reading": [
+    {"type": "Paper", "title": "More Than Two Thirds of the Zeros of the Riemann Zeta Function Lie on the Critical Line", "url": "https://www-cdn.anthropic.com/564f962e60643842f5fcb4a17c9dbc8f608f1c37.pdf", "why_read": "Claude가 실제로 증명한 범위, 0.6725 최적화와 한계를 원문 수식으로 확인할 수 있다."},
+    {"type": "GitHub", "title": "anthropics/zeta-23-lean", "url": "https://github.com/anthropics/zeta-23-lean", "why_read": "논문의 핵심 정리를 Lean 4로 재현하고 sorry-free 여부와 사용 공리를 직접 점검할 수 있다."},
+    {"type": "YouTube", "title": "xAI Co-Founder Igor Babuschkin Unpacks the Future of Model Ownership", "url": "https://www.youtube.com/watch?v=0aBTpoCX_A8", "why_read": "River AI 창업자가 맞춤 모델, 가중치 소유와 개인 AI 방향을 직접 설명하는 대화를 들을 수 있다."},
+    {"type": "Blog", "title": "River AI Raises $1.1B Across Seed and Series A", "url": "https://river.ai/series-seed-series-a-funding", "why_read": "조달 구조, 투자자와 회사가 주장하는 개방형·사용자 소유 모델 전략을 공식 원문에서 확인할 수 있다."}
+  ],
+  "todays_insight": "AI 신뢰 경쟁이 접근 통제(Daybreak), 출처 표시(워터마크·C2PA), 형식 검증(Lean)처럼 모델의 답변 이후에도 남는 증거와 통제 계층으로 이동하고 있다.",
+  "build_candidate": {
+    "idea_name": "AI Content Provenance QA Kit",
+    "score": 4.4,
+    "owner_action_required": true,
+    "status": "waiting_for_owner",
+    "evidence_urls": [
+      "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
+      "https://www.theverge.com/ai-artificial-intelligence/977823/anthropic-claude-ai-watermarks-c2pa-text-images",
+      "https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html"
+    ]
+  }
+}

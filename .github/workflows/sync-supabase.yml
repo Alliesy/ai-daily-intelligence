@@ -32,6 +32,8 @@ jobs:
   validate-and-sync:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    environment:
+      name: preview
     env:
       SYNC_MODE: ${{ github.event_name == 'push' && 'backfill' || inputs.mode }}
     steps:
@@ -96,6 +98,10 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           set -euo pipefail
+          if [[ "${SUPABASE_URL%/}" != "https://obqlzsnoavoxlqjrhsnl.supabase.co" ]]; then
+            echo "::error::SUPABASE_URL must target the approved Preview project."
+            exit 1
+          fi
           git fetch --no-tags origin main
           incoming_sha="${GITHUB_SHA}"
           remote_main_sha="$(git rev-parse origin/main)"

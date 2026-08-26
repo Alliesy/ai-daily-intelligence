@@ -24,6 +24,7 @@ export interface SourceDto {
   publishedAt: string | null;
   thumbnailUrl: string | null;
   isPrimary: boolean;
+  evidenceGroup: string | null;
 }
 
 export interface OriginalContentDto {
@@ -34,6 +35,7 @@ export interface OriginalContentDto {
 
 export interface EventDto {
   id: string;
+  eventKey: string;
   slug: string;
   title: string;
   oneLineSummary: string;
@@ -71,6 +73,19 @@ export interface OpportunityDto {
   difficulty: string;
   monetization: string;
   falsification: string;
+  problemEvidence: Array<{ url: string; sourceType: string; summary: string; evidenceGroup: string | null }>;
+  realismGates: Record<string, { status: "pass" | "fail" | "unknown"; evidence: string }>;
+  todayEligible: boolean;
+  eligibilityMethod: string | null;
+  isBuildCandidate: boolean;
+}
+
+export interface MorningPaperDto {
+  insightHeadline: string;
+  insightSummary: string;
+  insightMethod: string | null;
+  evidenceEventKeys: string[];
+  topEventKeys: string[];
 }
 
 export interface ResourceDto {
@@ -95,11 +110,24 @@ export interface BriefingDto {
   generatedAt: string;
   status: "complete" | "partial";
   todaysInsight: string;
+  morningPaper: MorningPaperDto | null;
   warnings: string[];
   events: EventDto[];
   opportunities: OpportunityDto[];
   resources: ResourceDto[];
   trends: TrendSignalDto[];
+}
+
+export interface BriefingSummaryDto {
+  dateKst: string;
+  status: "complete" | "partial";
+  headline: string;
+  eventCount: number;
+  sourceCount: number;
+  officialSourceCount: number;
+  titles: string[];
+  topics: string[];
+  entities: string[];
 }
 
 export interface TrendMetricDto { label: string; count: number; change: number; }

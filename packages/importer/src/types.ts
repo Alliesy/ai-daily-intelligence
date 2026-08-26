@@ -46,6 +46,47 @@ export interface DailySource extends JsonObject {
   tier: "A" | "B" | "C";
 }
 
+export type SourceType =
+  | "official_blog" | "article" | "youtube" | "x" | "github" | "paper"
+  | "documentation" | "reddit" | "hackernews" | "other";
+export type SourceAuthority = "official" | "primary" | "independent" | "analysis" | "community" | "unknown";
+export type VerificationStatus = "verified" | "corroborated" | "unverified" | "disputed";
+
+export interface MorningPaper extends JsonObject {
+  insight_headline: string;
+  insight_summary: string;
+  insight_method: "cross_event_signal_v1";
+  evidence_event_keys: string[];
+  top_event_keys: string[];
+}
+
+export interface GateResult extends JsonObject {
+  status: "pass" | "fail" | "unknown";
+  evidence: string;
+}
+
+export interface RealismGates extends JsonObject {
+  customer: GateResult;
+  pain: GateResult;
+  existing_solution: GateResult;
+  technology_change: GateResult;
+  buildability: GateResult;
+  mvp: GateResult;
+  customer_access: GateResult;
+  replacement_risk: GateResult;
+  dependency: GateResult;
+}
+
+export interface ProblemEvidence extends JsonObject {
+  url: string;
+  source_type: SourceType;
+  summary: string;
+}
+
+export interface DailyIdea extends JsonObject {
+  name: string;
+}
+
 export interface DailyNews extends JsonObject {
   event_key: string;
   original_url: string;
@@ -58,7 +99,7 @@ export interface DailyPacket extends JsonObject {
   generated_at: string;
   status: "complete" | "partial";
   news: DailyNews[];
-  business_ideas: JsonObject[];
+  business_ideas: DailyIdea[];
   tools: JsonObject[];
   community: JsonObject[];
   worth_reading: JsonObject[];

@@ -76,6 +76,7 @@ for (const news of packet.news) {
 const migrations = [
   await readFile(join(root, "supabase/migrations/20260808000100_initial_v1_schema.sql"), "utf8"),
   await readFile(join(root, "supabase/migrations/20260808000200_identity_and_import_rpc.sql"), "utf8"),
+  await readFile(join(root, "supabase/migrations/20260826000100_v11_morning_paper_projection.sql"), "utf8"),
 ].join("\n");
 
 for (const table of [
@@ -107,6 +108,15 @@ assert.match(
 assert.match(migrations, /stable_value := 'topic-' \|\| substring\(/, "non-ASCII topics need a stable slug fallback");
 assert.match(migrations, /revoke all on function public\.import_daily_packet[\s\S]*from public, anon, authenticated;/i);
 assert.match(migrations, /grant execute on function public\.import_daily_packet[\s\S]*to service_role;/i);
+assert.match(migrations, /alter function public\.import_daily_packet\([\s\S]*set schema private;/i);
+assert.match(migrations, /rename to import_daily_packet_core;/i);
+assert.match(migrations, /revoke all on function private\.import_daily_packet_core[\s\S]*service_role;/i);
+assert.match(migrations, /add column insight_headline text/);
+assert.match(migrations, /add column insight_evidence_order integer/);
+assert.match(migrations, /add column source_type_snapshot public\.source_type/);
+assert.match(migrations, /add column problem_evidence jsonb/);
+assert.match(migrations, /daily_briefing_opportunities_one_today_eligible_uidx/);
+assert.match(migrations, /at most one Opportunity may be eligible for Today/i);
 assert.match(migrations, /revoke all on function public\.get_sync_cursor\(text\)[\s\S]*from public, anon, authenticated;/i);
 assert.match(migrations, /grant execute on function public\.get_sync_cursor\(text\)[\s\S]*to service_role;/i);
 assert.match(migrations, /revoke all on function public\.get_identity_registry_state\(\)[\s\S]*from public, anon, authenticated;/i);

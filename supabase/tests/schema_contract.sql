@@ -3,9 +3,9 @@
 
 do $$
 declare
-  table_name text;
+  target_table text;
 begin
-  foreach table_name in array array[
+  foreach target_table in array array[
     'daily_briefings', 'events', 'event_keys', 'event_analysis', 'sources',
     'source_urls', 'event_sources', 'event_source_occurrences', 'topics',
     'event_topics', 'entities', 'event_entities', 'daily_briefing_events',
@@ -15,9 +15,9 @@ begin
   ] loop
     if not exists (
       select 1 from pg_class c join pg_namespace n on n.oid = c.relnamespace
-      where n.nspname = 'public' and c.relname = table_name and c.relrowsecurity
+      where n.nspname = 'public' and c.relname = target_table and c.relrowsecurity
     ) then
-      raise exception 'RLS is not enabled on public.%', table_name;
+      raise exception 'RLS is not enabled on public.%', target_table;
     end if;
   end loop;
 
@@ -45,6 +45,66 @@ begin
 
   if not has_function_privilege('service_role', 'public.import_daily_packet(text,jsonb,text,text,bigint,text,text,text)', 'EXECUTE') then
     raise exception 'service_role cannot execute import_daily_packet';
+  end if;
+
+  if has_function_privilege(
+    'service_role',
+    'private.import_daily_packet_core(text,jsonb,text,text,bigint,text,text,text)',
+    'EXECUTE'
+  ) then
+    raise exception 'service_role can bypass the V1.1 import wrapper';
+  end if;
+
+  if not exists (
+    select 1
+    from information_schema.columns
+    where table_schema = 'public' and table_name = 'daily_briefings'
+      and column_name in ('insight_headline', 'insight_summary', 'insight_method')
+    group by table_schema, table_name
+    having count(*) = 3
+  ) then
+    raise exception 'Morning Paper briefing snapshot columns are incomplete';
+  end if;
+
+  if not exists (
+    select 1
+    from information_schema.columns
+    where table_schema = 'public' and table_name = 'daily_briefing_events'
+      and column_name in ('insight_evidence_order', 'top_event_order')
+    group by table_schema, table_name
+    having count(*) = 2
+  ) then
+    raise exception 'Morning Paper Event snapshot columns are incomplete';
+  end if;
+
+  if not exists (
+    select 1
+    from information_schema.columns
+    where table_schema = 'public' and table_name = 'event_source_occurrences'
+      and column_name in ('source_type_snapshot', 'authority_snapshot', 'evidence_group')
+    group by table_schema, table_name
+    having count(*) = 3
+  ) then
+    raise exception 'Source occurrence taxonomy snapshots are incomplete';
+  end if;
+
+  if not exists (
+    select 1
+    from information_schema.columns
+    where table_schema = 'public' and table_name = 'daily_briefing_opportunities'
+      and column_name in ('problem_evidence', 'realism_gates', 'today_eligible', 'eligibility_method')
+    group by table_schema, table_name
+    having count(*) = 4
+  ) then
+    raise exception 'Opportunity evidence snapshots are incomplete';
+  end if;
+
+  if not exists (
+    select 1 from pg_indexes
+    where schemaname = 'public'
+      and indexname = 'daily_briefing_opportunities_one_today_eligible_uidx'
+  ) then
+    raise exception 'Today Opportunity 0/1 uniqueness gate is missing';
   end if;
 
   if has_function_privilege('anon', 'public.get_sync_cursor(text)', 'EXECUTE')
