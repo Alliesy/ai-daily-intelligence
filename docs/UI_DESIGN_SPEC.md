@@ -1,7 +1,26 @@
 # AI Daily Intelligence V1 UI Design Spec
 
-> 상태: 승인 목업 기반 V1 디자인 정본
-> 기준일: 2026-08-14 (Asia/Seoul)
+## V1.1 공식 메인 디자인 — Morning Paper (2026-08-26)
+
+2026-08-26 승인 목업을 Today와 Archive의 최신 시각 정본으로 사용한다. 아래의 기존 `AI Newsroom + Intelligence Dashboard` 규칙은 News Detail과 전용 목록 페이지에만 유효하며, KPI·3열 dashboard·다수 카드 중심 Today는 deprecated다.
+
+Today의 목적은 1~3분 안에 가장 중요한 변화를 이해시키는 것이다. 노출 순서는 날짜 → Cross-Event Insight → 실제 관계에서 계산한 근거 → 꼭 볼 Event 최대 3건 → 현실성 Gate를 통과한 Opportunity 최대 1건이다. Trend, Resource, 전체 Event와 추가 Opportunity 데이터는 삭제하지 않고 전용 페이지에 둔다.
+
+- 시각 언어: Morning Paper, editorial, research letter, intelligence briefing
+- 명조: Insight headline, Event headline, 주요 section과 Opportunity 제목
+- 산세리프: navigation, metadata, 본문 설명, Source, label, 상태, action
+- 명조 stack: `Noto Serif KR` → `Nanum Myeongjo` → `AppleMyungjo` → `Georgia` → generic serif
+- 산세리프 stack: Pretendard 계열 → Apple/Windows system sans-serif
+- 선택 이유: 설치된 한국어 명조를 우선해 목업의 editorial 대비를 만들고, 외부 font 요청이나 새 dependency 없이 빠르고 개인정보 친화적으로 fallback한다. 배포 환경에 한국어 명조가 없으면 serif fallback을 허용하며 향후 self-hosted subset을 별도 성능 검토한다.
+- 색과 형태: warm white, stone neutral, 1px divider, 낮은 radius. 불필요한 badge·icon·gradient·dashboard card를 사용하지 않는다.
+- Desktop: 최대 1240px, Insight와 Evidence 2열, Top Event 3열
+- Tablet: Insight 1열, Top Event 3열 또는 가용 폭에 맞춘 1열
+- Mobile 390px: Insight가 첫 viewport의 주인공이며 Evidence와 Event는 한 열로 쌓인다. Bottom nav는 오늘·아카이브·트렌드·저장됨·더보기다.
+
+Archive는 검색, 월 이동, 실제 Briefing 날짜만 활성화된 keyboard-focusable calendar, 최근 Briefing 목록으로 구성한다. `/daily/[date]`는 Today와 동일 renderer를 사용하되 해당 날짜 occurrence snapshot만 사용한다.
+
+> 상태: 승인 목업 기반 V1 디자인 정본  
+> 기준일: 2026-08-14 (Asia/Seoul)  
 > 적용 범위: Today, News Detail, Opportunities, Trends, Saved
 
 ## Product Visual Identity

@@ -1,5 +1,15 @@
 # AI Daily Intelligence Web V1 Architecture
 
+## V1.1 Morning Paper 및 Archive 확장 (2026-08-26)
+
+V1.1의 공개 읽기 흐름은 `Git Daily JSON → service-role importer → Supabase occurrence snapshot → server-only DAL → MorningPaper renderer`다. `/`는 최신 Briefing, `/daily/[date]`는 지정 날짜 Briefing을 같은 renderer에 전달한다. 과거 화면은 occurrence의 제목·요약·중요도·이미지·Analysis·Source 구성/검증·Opportunity 평가와 V1.1 선정 순서를 사용한다. 현재 projection에서만 존재하는 Source publisher/time과 Topic·Entity label은 과거 카드에서 숨겨 current state가 당시 표시를 바꾸지 않게 한다. `/archive` 검색의 Topic·Entity는 현재 검색 index이며 당시 taxonomy snapshot이라는 의미는 아니다. 공개 route와 선택적 Google OAuth 경계는 변하지 않는다.
+
+Today는 저장량과 노출량을 분리한다. 전체 Event·Source·Opportunity·Trend·Resource는 Git과 projection에 보존하되, 화면에는 명시적 `morning_paper.top_event_keys` 또는 보수적 S/A fallback 최대 3개만 표시한다. Insight evidence는 명시적 Event key를 우선하며 공식 Source는 explicit authority, 독립 근거는 explicit evidence group만 집계한다. Legacy packet에는 기존 `todays_insight` fallback을 사용하고 분류되지 않은 독립 근거 수를 추정하지 않는다.
+
+Opportunity는 `Signal → Problem Evidence → 9개 realism gate`를 통과한 `today_eligible` occurrence 최대 1건만 Today에 노출한다. Gate snapshot이 없는 legacy build candidate는 Today에 노출하지 않는다. Today에 보이지 않는 아이디어는 `/opportunities`에서 유지한다.
+
+신규 daily contract는 optional additive라 `schema_version: 1.0`과 기존 archive를 유지한다. 날짜별 Insight, 선정 순서, Source taxonomy/evidence group, Problem Evidence와 gate 결과는 occurrence snapshot에 저장해 후속 correction이나 current Event가 과거 Morning Paper를 덮어쓰지 않는다. AI Researcher가 쓰는 기존 Git/Notion 게시 순서와 Git 정본 원칙은 유지한다.
+
 ## UI 구현 반영: 승인 목업 기반 newsroom 밀도 개선 (2026-08-14)
 
 UI 디자인 정본은 `docs/UI_DESIGN_SPEC.md`다. News Detail의 콘텐츠 순서를 Event Header → 사용자 Action → 원문 기반 상세 내용 → AI 인텔리전스 분석 → 사업 기회 → 관련 자료로 고정했다. Desktop 분석은 6개 compact card, mobile은 accordion이며 Source는 우측 column이 아닌 하단 compact list다.

@@ -1,0 +1,16 @@
+import { CheckCircle2, FlaskConical, Gauge, Target } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { getLatestBriefing } from "@/lib/content";
+
+export const dynamic = "force-dynamic";
+
+export const metadata = { title: "사업 기회", description: "AI 변화에서 발견한 근거 기반 사업 기회" };
+
+export default async function OpportunitiesPage() {
+  const briefing = await getLatestBriefing();
+  const opportunities = briefing?.opportunities ?? [];
+  return <main><header className="border-b border-slate-200 bg-white"><div className="mx-auto max-w-6xl px-4 py-9 sm:px-6 lg:px-8"><p className="section-kicker">OPPORTUNITY RADAR</p><h1 className="mt-2 text-[1.8rem] font-black tracking-[-0.03em] sm:text-[2.15rem]">작은 팀이 검증할 사업 기회</h1><p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">화제성보다 고객 문제, 차별화, 2주 MVP와 반증 조건을 함께 봅니다.</p></div></header><div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8"><div className="divide-y divide-slate-200 overflow-hidden rounded-lg border border-slate-200 bg-white">{opportunities.map((idea, index) => <article id={`opportunity-${index + 1}`} key={idea.id} className="scroll-mt-20 p-5 sm:p-6"><div className="flex flex-wrap items-start justify-between gap-4"><div><div className="flex flex-wrap gap-1.5"><Badge>{idea.potential} POTENTIAL</Badge><Badge>{idea.difficulty} DIFFICULTY</Badge></div><h2 className="mt-3 text-xl font-black tracking-[-0.02em] sm:text-2xl">{idea.name}</h2></div><div className="min-w-20 rounded-md bg-violet-50 px-4 py-2 text-center text-violet-800"><span className="text-xl font-black">{idea.score.toFixed(1)}</span><span className="text-xs font-bold"> / 5</span><span className="block text-[9px] font-bold tracking-wide text-violet-500">기회 점수</span></div></div><div className="mt-5 grid gap-px overflow-hidden rounded-md border border-slate-200 bg-slate-200 sm:grid-cols-2 lg:grid-cols-4"><Info icon={Target} title="대상 고객" text={idea.customer} /><Info icon={Gauge} title="핵심 문제" text={idea.problem} /><Info icon={CheckCircle2} title="차별화" text={idea.differentiation} /><Info icon={FlaskConical} title="2주 MVP" text={idea.mvp} /></div><div className="mt-3 grid gap-4 bg-slate-50 px-4 py-3 sm:grid-cols-2"><div><h3 className="text-xs font-black">수익화</h3><p className="mt-1 text-xs leading-5 text-slate-600">{idea.monetization}</p></div><div><h3 className="text-xs font-black text-rose-700">반증 조건</h3><p className="mt-1 text-xs leading-5 text-slate-600">{idea.falsification}</p></div></div></article>)}</div>{!opportunities.length && <p className="rounded-lg border border-slate-200 bg-white p-8 text-slate-600">공개된 사업 기회가 없습니다.</p>}</div></main>;
+}
+function Info({ icon: Icon, title, text }: { icon: typeof Target; title: string; text: string }) {
+  return <div className="bg-white p-4"><div className="flex items-center gap-2"><Icon className="size-4 text-blue-600" aria-hidden /><h3 className="text-xs font-black">{title}</h3></div><p className="mt-2 text-xs leading-5 text-slate-600">{text}</p></div>;
+}

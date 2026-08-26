@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  --editorial-blue: #155eef;
+  --editorial-serif: "Noto Serif KR", "Nanum Myeongjo", "AppleMyungjo", Georgia, serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --font-serif: var(--editorial-serif);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: #dbeafe; color: #172554; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+summary::-webkit-details-marker { display: none; }
+
+@layer components {
+  .section-kicker { @apply text-[11px] font-black tracking-[0.12em] text-blue-700; }
+  .section-title { @apply mt-1.5 text-xl font-black tracking-[-0.02em] text-slate-950 sm:text-2xl; }
+  .detail-section { @apply scroll-mt-20; }
+  .detail-heading { @apply flex flex-wrap items-center gap-2 text-slate-950; }
+  .detail-heading > span:first-child { @apply text-base font-black; }
+  .detail-heading > h2 { @apply text-lg font-black tracking-[-0.015em] sm:text-xl; }
+  .content-mode { @apply rounded bg-blue-50 px-2 py-1 text-[10px] font-bold text-blue-700; }
+  .mobile-nav-item { @apply flex min-w-0 flex-col items-center justify-center gap-1 text-[10px] font-semibold text-slate-500 transition hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-600; }
+  .mobile-nav-item > svg { @apply size-[19px]; }
+  .mobile-nav-item.is-active { @apply text-blue-700; }
+  .morning-event-card { @apply flex min-w-0 flex-col border-b border-stone-300 px-0 py-6 md:border-b-0 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0 md:last:pr-0; }
+}

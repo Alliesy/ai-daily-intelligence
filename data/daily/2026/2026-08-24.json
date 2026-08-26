@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0",
   "date_kst": "2026-08-24",
   "generated_at": "2026-08-24T07:00:57+09:00",
   "status": "complete",
@@ -181,19 +181,19 @@
   ],
   "community": [
     {
-      "platform": "Reddit r/LocalLLaMA",
+      "platform": "Reddit",
       "mood": "performance-excited / reproducibility-curious",
       "one_line_summary": "FreeToken 초기 사용자는 16GB VRAM에서 20GB급 모델을 구동한 수치를 공유하면서도 하드웨어 표기와 정밀도 조건을 서로 검증한다.",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vv6v00/freetokens_project_is_impressive/"
     },
     {
-      "platform": "LinkedIn",
+      "platform": "Other",
       "mood": "hands-on-positive / hardware-checking",
       "one_line_summary": "개발자가 RTX 3080·32GB RAM 환경의 FreeToken 처리량을 공개했고 다른 사용자는 GPU 메모리 사양부터 재확인하며 재현 조건을 따진다.",
       "url": "https://www.linkedin.com/posts/ezimuel_i-just-tested-freetoken-on-my-linux-laptop-activity-7496484693639360513-ZzXD"
     },
     {
-      "platform": "Reddit r/LocalLLaMA",
+      "platform": "Reddit",
       "mood": "scale-impressed / quality-skeptical",
       "one_line_summary": "Hugging Face의 300만 모델 돌파에는 생태계 규모를 인정하면서도 원본 모델보다 파인튜닝 중복이 대부분이라는 반응이 나온다.",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vrnckt/hugging_face_just_surpassed_3_million_models_on/"

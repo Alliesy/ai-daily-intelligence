@@ -7,7 +7,7 @@ import { buildEffectiveRegistries, uuidV5 } from "./effective-registry.js";
 import { classifyRevision } from "./git.js";
 import { runImporter } from "./importer.js";
 import { projectDailyPacket } from "./projection.js";
-import type { GitRunner, GitRunResult, RpcClient, RpcResult } from "./types.js";
+import type { GitRunner, GitRunResult, RealismGates, RpcClient, RpcResult } from "./types.js";
 import { normalizeUrl } from "./url-normalization.js";
 import {
   createValidators,
@@ -80,7 +80,7 @@ test("validates the real archive and produces conservative projection source fie
   assert.equal(source.raw_url, packet.news[0]!.sources[0]!.url);
   assert.equal(source.source_type, "article");
   assert.equal(source.authority, "independent");
-  assert.equal(source.taxonomy_rule_version, "source-taxonomy-v1");
+  assert.equal(source.taxonomy_rule_version, "source-taxonomy-v1.1");
   assert.equal(source.verification_status, "unverified");
   const official = projection.news[1]!.sources[0]!;
   assert.equal(official.source_type, "official_blog");
@@ -88,6 +88,107 @@ test("validates the real archive and produces conservative projection source fie
   assert.equal(official.verification_status, "unverified");
   assert.ok(registryChecksum(registries).match(/^[0-9a-f]{64}$/));
   assert.ok(validators.daily(packet));
+});
+
+test("keeps legacy packets valid and projects the additive Morning Paper contract", async () => {
+  const { validators, registries, packet } = await loadRealFixtures();
+  assert.ok(validators.daily(packet), "legacy schema_version 1.0 packet must remain valid");
+
+  const next = structuredClone(packet);
+  const eventKeys = next.news.slice(0, 3).map((event) => event.event_key);
+  next.morning_paper = {
+    insight_headline: "여러 사건에서 에이전트 운영 통제가 제품 경쟁력으로 부상했다.",
+    insight_summary: "서로 다른 기업의 발표가 실행 권한과 안전한 운영이라는 공통 방향을 보였다.",
+    insight_method: "cross_event_signal_v1",
+    evidence_event_keys: eventKeys,
+    top_event_keys: eventKeys,
+  };
+  const source = next.news[0]!.sources[0]!;
+  source.source_type = "article";
+  source.authority = "analysis";
+  source.verification_status = "corroborated";
+  source.evidence_group = "agent-control-reporting";
+  const idea = next.business_ideas[0]!;
+  idea.problem_evidence = [{
+    url: "https://news.ycombinator.com/item?id=1",
+    source_type: "hackernews",
+    summary: "운영자가 에이전트 권한을 수동으로 추적하는 반복 문제를 설명했다.",
+    evidence_group: "agent-access-audit",
+  }];
+  idea.realism_gates = passingRealismGates();
+  idea.today_eligible = true;
+  idea.eligibility_method = "opportunity_gate_v1";
+
+  assert.ok(validators.daily(next));
+  const projection = projectDailyPacket(next, registries);
+  const projectedSource = projection.news[0]!.sources[0]!;
+  assert.equal(projectedSource.source_type, "article");
+  assert.equal(projectedSource.authority, "analysis");
+  assert.equal(projectedSource.verification_status, "corroborated");
+  assert.equal(projectedSource.evidence_group, "agent-control-reporting");
+});
+
+test("uses explicit taxonomy only as a complete pair and never infers an evidence group", async () => {
+  const { registries, packet } = await loadRealFixtures();
+  const partial = structuredClone(packet);
+  partial.news[0]!.sources[0]!.source_type = "reddit";
+  const fallback = projectDailyPacket(partial, registries).news[0]!.sources[0]!;
+  assert.equal(fallback.source_type, "article");
+  assert.equal(fallback.authority, "independent");
+  assert.equal(fallback.taxonomy_mapping_status, "confirmed");
+  assert.equal(fallback.evidence_group, undefined);
+
+  const unknown = structuredClone(packet);
+  unknown.news[0]!.sources[0]!.url = "https://unclassified.example/research/1";
+  unknown.news[0]!.original_url = "https://unclassified.example/research/1";
+  const unknownSource = projectDailyPacket(unknown, registries).news[0]!.sources[0]!;
+  assert.equal(unknownSource.source_type, "other");
+  assert.equal(unknownSource.authority, "unknown");
+  assert.equal(unknownSource.taxonomy_mapping_status, "unknown");
+  assert.equal(unknownSource.evidence_group, undefined);
+});
+
+test("rejects invalid Morning Paper cross-references and Opportunity eligibility", async () => {
+  const { validators, registries, packet } = await loadRealFixtures();
+  const invalidKey = structuredClone(packet);
+  invalidKey.morning_paper = {
+    insight_headline: "교차 사건 신호",
+    insight_summary: "복수의 사건에서 공통으로 관찰된 변화다.",
+    insight_method: "cross_event_signal_v1",
+    evidence_event_keys: ["not-in-this-packet"],
+    top_event_keys: [],
+  };
+  assert.ok(validators.daily(invalidKey), "cross-reference validity is a runtime contract");
+  assert.throws(() => projectDailyPacket(invalidKey, registries), /outside this packet/);
+
+  const twoEligible = structuredClone(packet);
+  for (const idea of twoEligible.business_ideas.slice(0, 2)) {
+    idea.problem_evidence = [{
+      url: "https://www.reddit.com/r/example/comments/1/problem/",
+      source_type: "reddit",
+      summary: "반복 문제 근거",
+    }];
+    idea.realism_gates = passingRealismGates();
+    idea.today_eligible = true;
+    idea.eligibility_method = "opportunity_gate_v1";
+  }
+  assert.equal(validators.daily(twoEligible), false);
+  assert.throws(() => projectDailyPacket(twoEligible, registries), /At most one/);
+
+  const failedGate = structuredClone(packet);
+  const idea = failedGate.business_ideas[0]!;
+  idea.problem_evidence = [{
+    url: "https://www.reddit.com/r/example/comments/1/problem/",
+    source_type: "reddit",
+    summary: "반복 문제 근거",
+  }];
+  const gates = passingRealismGates();
+  gates.dependency.status = "unknown";
+  idea.realism_gates = gates;
+  idea.today_eligible = true;
+  idea.eligibility_method = "opportunity_gate_v1";
+  assert.equal(validators.daily(failedGate), false);
+  assert.throws(() => projectDailyPacket(failedGate, registries), /all nine realism gates/);
 });
 
 test("rejects packets with missing Event or Source identities", async () => {
@@ -371,4 +472,19 @@ class StatefulRpc implements RpcClient {
 
 function result(code: number, stderr = ""): GitRunResult {
   return { code, stdout: "", stderr };
+}
+
+function passingRealismGates(): RealismGates {
+  const pass = (evidence: string) => ({ status: "pass" as const, evidence });
+  return {
+    customer: pass("명확한 고객군"),
+    pain: pass("반복 불편 근거"),
+    existing_solution: pass("현재 수작업 대안"),
+    technology_change: pass("최근 기술 변화"),
+    buildability: pass("1~3명 구현 가능"),
+    mvp: pass("2주 검증 가능"),
+    customer_access: pass("고객 10명 접근 가능"),
+    replacement_risk: pass("범용 프롬프트로 대체되지 않음"),
+    dependency: pass("고가·특수 의존성 없음"),
+  };
 }

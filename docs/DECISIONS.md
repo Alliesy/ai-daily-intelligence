@@ -1,5 +1,60 @@
 # AI Daily Intelligence Decision Log
 
+## 2026-08-26 V1.1 결정
+
+### D-054 — 저장량과 Today 노출량을 분리한다
+
+- 상태: `confirmed`
+- 결정: Researcher는 넓게 수집하고 Git/projection에 보존하지만 Today는 Cross-Event Insight, Top Event 최대 3건, eligible Opportunity 최대 1건만 보여준다.
+- 근거: 서비스 가치는 수집량이 아니라 사용자의 판단 시간을 줄이는 데 있다.
+- 영향: Trend·Resource·전체 Event·추가 Opportunity는 전용 페이지와 archive에서 유지한다.
+
+### D-055 — Morning Paper contract는 schema 1.0의 optional additive field다
+
+- 상태: `confirmed`
+- 결정: `morning_paper`, Source taxonomy/evidence group, Problem Evidence와 realism gate를 optional로 추가하고 기존 archive를 수정하지 않는다.
+- 근거: Git 정본과 legacy rebuild를 깨지 않으면서 미래 실행 결과부터 더 정확한 snapshot을 만들 수 있다.
+- 재검토 조건: 필드를 required로 승격하거나 schema version을 올려야 할 때 owner 승인을 받는다.
+
+### D-056 — Insight 숫자는 explicit 관계만 센다
+
+- 상태: `confirmed`
+- 결정: Event는 key로 중복 제거하고 공식 Source는 explicit `official`, 독립 근거는 explicit `independent + evidence_group`만 센다. 결측 taxonomy는 추정하지 않는다.
+- 근거: 재인용과 불확실한 자동 분류가 근거 다양성을 부풀리는 것을 방지한다.
+
+### D-057 — Opportunity는 Problem Evidence와 9개 Gate를 모두 통과해야 Today에 나온다
+
+- 상태: `confirmed`
+- 결정: Customer, Pain, Existing Solution, Technology Change, Buildability, MVP, Customer Access, Replacement Risk, Dependency를 모두 pass한 occurrence만 `today_eligible=true`로 저장하며 Briefing당 최대 1개다.
+- 영향: Opportunity 0개는 정상 결과다. 기존 아이디어와 build-candidate 기록은 삭제하지 않는다.
+
+### D-058 — 과거 Briefing의 표시 콘텐츠는 occurrence snapshot으로 렌더링한다
+
+- 상태: `confirmed`
+- 결정: `/daily/[date]`는 해당 Briefing occurrence의 Event 제목·요약·중요도·이미지, 선택된 Analysis, Source 구성/검증, Opportunity 평가와 V1.1 선정 snapshot을 사용한다. occurrence snapshot이 없는 current Source publisher/time 및 Topic·Entity label은 과거 카드에서 표시하지 않는다.
+- 근거: archive는 당시 판단의 기록이어야 하며 correction 이력과 current projection을 혼동하면 안 된다.
+- 한계: `/archive`의 Topic·Entity keyword는 현재 검색 index다. 당시 taxonomy 검색이 필요해지면 별도 additive occurrence label snapshot을 검토한다.
+
+### D-059 — 외부 webfont 없이 한국어 editorial font stack을 사용한다
+
+- 상태: `confirmed`
+- 결정: 명조 heading은 Noto Serif KR/Nanum Myeongjo/AppleMyungjo/Georgia fallback, 나머지는 기존 Pretendard/system sans를 사용한다.
+- 근거: 새 dependency·외부 요청 없이 목업의 대비와 로딩 안정성을 확보한다.
+
+### D-060 — 공개 Problem Evidence는 비식별 최소 정보만 저장한다
+
+- 상태: `confirmed`
+- 결정: 접근 가능한 공개 게시물의 URL과 문제 확인에 필요한 최소 요약만 저장하고 사용자명·핸들·실명·연락처·민감정보, private/gated community 내용은 수집하지 않는다.
+- 근거: `daily_briefing_opportunities.problem_evidence`는 공개 RLS projection이므로 원문 사용자의 개인정보를 복제하면 안 된다.
+
+### D-061 — Legacy packet correction은 의미를 보존한 canonical taxonomy 정규화로 처리한다
+
+- 상태: `confirmed`
+- 결정: 2026-08-22의 `potential=Medium-High`는 동일 점수대 관례에 따라 `Medium`으로, 세부 Reddit·GitHub platform은 URL과 요약을 보존한 채 `Reddit`·`GitHub`로, 지원 enum에 없는 커뮤니티는 `Other`로 정규화한다. 2026-08-24~25의 `schema_version=1.0.0`은 운영 계약인 `1.0`으로 바로잡는다.
+- 근거: schema 검증을 완화하지 않고도 원문 URL·요약·사건 내용을 잃지 않으며, 전체 Git archive를 단일 1.0 계약으로 재구축할 수 있다.
+- 검증: 2026-08-07~26 전체 20개 packet importer dry-run과 Preview backfill이 통과했다.
+- 안전 경계: Preview backfill을 위해 작업 브랜치 watermark를 일시 허용했지만 성공 직후 workflow를 다시 `main` 전용으로 복원했다. Production과 main은 변경하지 않았다.
+
 ## 2026-08-08 구현 결정
 
 ### D-041 — 선택적 Google OAuth는 PKCE callback과 검증된 return path만 사용
@@ -565,27 +620,16 @@
 - 영향: 현재 Preview는 Event 3, Signal 2, Opportunity 2, Resource 5와 Source 6을 표시하고 legacy 영어는 원문 fallback한다. 이미지 없는 lead story는 text-first full-width card로 정상 렌더링한다. 향후 신뢰할 수 있는 전일 집계와 time series가 projection 계약에 추가되면 증감·sparkline을 활성화할 수 있다.
 - 재검토 조건: 일별 aggregate와 반응 집계의 공개 계약이 승인될 때
 
-### D-051 — Cloud daily는 DB를 직접 호출하지 않고 main push가 Preview sync를 시작
+### D-053 — 공개 콘텐츠 라우트는 요청 시 최신 projection을 조회
 
 - 날짜: 2026-08-14
 - 상태: `confirmed`
-- 결정: Cloud Scheduled Task는 기존 Researcher → Opportunity Finder → Git Publisher → Notion Latest 순서를 유지한다. Supabase content projection은 main push 뒤 별도 GitHub Actions가 갱신하며 `preview` Environment secret만 사용한다. Workflow는 승인된 Preview ref `obqlzsnoavoxlqjrhsnl`이 아니면 write 전에 실패한다.
-- 근거: Cloud task에 service-role credential을 주입하면 수집·게시 책임과 DB 운영 권한이 결합되고 Git 정본 이전에 DB가 변경될 수 있다.
-- 고려한 대안: Cloud task가 Supabase를 직접 호출, Notion에서 DB로 복사, Vercel 요청 시 Git JSON 직접 적재
-- 이유: Git 실패가 모든 후속 projection을 차단하는 기존 계약을 보존하고, DB 장애가 Research/Notion 기록을 훼손하지 않게 한다.
-- 영향: sync infrastructure가 main에 존재하고 GitHub `preview` Environment에 두 secret이 설정돼야 한다. Environment target 검증 때문에 이 workflow로 Production Supabase를 갱신할 수 없다.
-- 재검토 조건: Production projection 승격 절차와 별도 protected environment가 승인될 때
-
-### D-052 — Preview 최초 연결은 비파괴 Git history bridge로 watermark 계보를 연결
-
-- 날짜: 2026-08-14
-- 상태: `confirmed`
-- 결정: sync PR의 파일 트리는 Web 앱을 제외한 최소 importer 구성을 유지하되, 기존 Preview bootstrap watermark `c53899930ce086579ad85b407ec6d7a8eab3fde5`가 현재 main merge commit의 ancestor가 되도록 Web 작업 브랜치를 `ours` strategy history parent로 연결한다. 최종 PR은 squash/rebase가 아닌 merge commit으로 병합한다.
-- 근거: 현재 Preview watermark와 main은 공통 조상 이후 diverged하며 importer는 이를 의도적으로 거부한다.
-- 고려한 대안: content projection과 cursor 삭제 후 rebuild, ancestry 검증 우회 flag, 새 Supabase project 생성, Web 앱 전체를 main에 merge
-- 이유: DB나 사용자 데이터를 삭제하지 않고 importer의 기존 ancestry/CAS 검증을 약화하지 않으며, main tree에 Web 앱을 포함하거나 Production 배포하지 않는다.
-- 영향: history bridge parent를 잃는 squash/rebase merge는 금지한다. merge 전 CI에서 proposed merge snapshot 전체를 dry-run하고, merge 뒤 첫 backfill이 8월 7일 기존 packet과 8월 8~14일 archive를 reconcile하는지 확인한다. 현재 Vercel Git integration은 main push를 Production-target attempt로 만들므로 owner가 배포 정책을 차단하거나 해당 실패 attempt를 명시적으로 수용하기 전에는 merge하지 않는다.
-- 재검토 조건: Preview content projection을 main authoritative SHA에서 새로 rebuild해 기존 watermark가 제거될 때
+- 결정: Today, News Detail, Opportunities, Trends는 `force-dynamic`으로 렌더링해 각 요청에서 Preview Supabase의 최신 published projection을 조회한다. Saved의 기존 동적 렌더링 정책은 유지한다.
+- 근거: Git main → Preview Supabase backfill은 2026-08-14까지 성공했지만 기존 Vercel Preview는 빌드 시 정적으로 생성된 2026-08-07 briefing을 계속 표시했다.
+- 고려한 대안: 매일 Vercel 재배포, 시간 기반 ISR, 수동 revalidation webhook
+- 이유: Git 정본 동기화와 웹 배포를 다시 결합하지 않으면서 daily correction과 새 briefing을 즉시 공개하는 가장 작은 V1 수정이다.
+- 영향: 공개 조회 요청마다 Supabase read가 발생한다. React request cache는 동일 요청 안의 중복 조회만 제거하며 RLS와 공개 projection 경계는 바뀌지 않는다.
+- 재검토 조건: 트래픽·비용 측정 후 CDN cache 또는 tag 기반 on-demand revalidation이 필요해질 때
 
 ## 미결정 사항
 

@@ -2,22 +2,36 @@
 
 AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 기록한다. Git daily archive와 AI Researcher 자동화 변경은 별도로 명시한다.
 
+## 2026-08-26
+
+### V1.1 Daily Intelligence Morning Paper
+
+- Today를 KPI dashboard에서 Cross-Event Insight, 실제 Evidence, Top Event 최대 3건, Opportunity 최대 1건의 editorial Morning Paper로 개편
+- 전체 Event·Source·Trend·Resource·Opportunity 데이터와 기존 Event Detail을 보존
+- `/archive` 날짜/키워드 검색과 월 calendar, `/daily/[date]` 과거 snapshot renderer, `/resources` 전용 화면 추가
+- desktop/mobile navigation을 오늘·아카이브 중심으로 개편하고 명조+산세리프 조합, warm neutral, divider 중심 시각 시스템 적용
+- optional `morning_paper`, Source taxonomy/evidence group, Problem Evidence와 9개 Opportunity realism gate를 schema 1.0에 additive 추가
+- Supabase occurrence snapshot과 service-role import wrapper를 추가하고 기존 public read RLS와 사용자 데이터 경계 유지
+- AI Researcher prompt에 Event clustering/Cross-Event Signal을, Opportunity Finder 앞에 Problem Scout와 엄격한 Today eligibility를 반영
+- Preview Supabase에 V1.1 additive migration을 적용하고 schema contract, RLS 사용자 격리, service-role 경계와 account deletion cascade를 검증
+- 전체 archive backfill 전 정본 계약 불일치(2026-08-22~25)를 발견해 검증 기준 완화 없이 import를 보류
+- `agent/web-v1.1`을 Vercel Preview로 배포하고 Today, Archive, invalid month fallback, 390px 반응형을 live 검증
+- 독립 리뷰에서 발견한 불가능한 archive month(`2026-99`) 입력을 최신 브리핑 월로 안전하게 fallback하도록 수정
+- owner 승인에 따라 2026-08-22~25 legacy packet의 schema version, potential, community platform taxonomy를 의미 보존 방식으로 correction
+- 전체 20개 packet dry-run과 Preview Supabase backfill을 통과하고 Today·Archive의 2026-08-26 최신 projection을 확인
+- Preview branch용 임시 sync trigger/watermark 허용을 backfill 직후 제거해 workflow secret 경계를 다시 `main` 전용으로 복원
+- Web V1.1 전체 변경과 분리된 canonical correction-only PR [#6](https://github.com/Alliesy/ai-daily-intelligence/pull/6)을 생성하고 main merge는 보류
+- PR #6 canonical validation 3개 PASS 확인; 기존 Vercel main 연결에서 발생한 배포 실패는 Production 설정을 변경하지 않고 release gate로 기록
+- PR #6 canonical validation 3개 PASS 확인; 기존 Vercel main 연결에서 발생한 배포 실패는 Production 설정을 변경하지 않고 release gate로 기록
+
 ## 2026-08-14
 
-### 신규 Daily 콘텐츠 한국어 제목 정책 적용
+### 최신 Supabase briefing의 Preview 즉시 반영
 
-- 2026-08-14 핵심 Event 5개의 사용자 표시 제목을 한국어로 correction
-- Git JSON, 날짜별 report, Latest와 Notion projection의 제목 일치 유지
-- 향후 AI Researcher가 신규 사용자 표시 문구를 한국어로 생성하도록 자동화 프롬프트 보강
-- 기업명·제품명·모델명과 Source 원문 제목·인용문은 필요한 경우 원문 유지
-
-### Cloud daily archive → Preview Supabase 자동 동기화 활성화
-
-- Cloud Scheduled Task의 Git/Notion 책임은 유지하고 DB credential을 전달하지 않는 비동기 projection 경계 추가
-- GitHub `main` push를 Preview 전용 importer에 연결하고 승인된 project ref가 아니면 write 전 실패하도록 제한
-- 기존 Preview watermark의 계보를 보존하는 merge commit으로 PR #3 병합
-- 2026-08-07~2026-08-14 전체 archive 8건 backfill 및 importer/RLS 계약 검증 성공
-- Production Supabase, AI Researcher, Opportunity Finder, Git Publisher, Notion Publisher는 변경하지 않음
+- Today, News Detail, Opportunities, Trends의 빌드 시점 데이터 고정을 해제
+- Git main에서 Preview Supabase로 동기화된 새 briefing과 correction을 Vercel 재빌드 없이 요청 시 조회
+- 공개 projection RLS, 사용자 데이터, Auth, AI Researcher와 daily schema는 변경하지 않음
+- 동적 rendering 회귀 테스트 4개와 production route classification 검증 추가
 
 ### 승인 목업 기반 UI/UX 개선
 

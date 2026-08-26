@@ -1,5 +1,31 @@
 # AI Daily Intelligence Web V1 Implementation Status
 
+## V1.1 Morning Paper 진행 상태 — 2026-08-26
+
+| 영역 | 상태 | 결과 |
+|---|---|---|
+| 최신 main archive 통합 | 완료 | `agent/web-v1.1`에 2026-08-26까지 비파괴 history bridge 및 daily/report 동기화 |
+| Additive Git contract | 완료 | optional Morning Paper, Source taxonomy, Problem Evidence, 9 Gate; schema 1.0/legacy 유지 |
+| Supabase migration/importer | 완료 | 날짜별 snapshot, service-role wrapper, 17 importer tests; Preview additive migration 및 2026-08-07~26 전체 archive backfill 완료 |
+| Today Morning Paper | 완료 | Insight/Evidence/Top 0~3/Opportunity 0~1 shared renderer |
+| Archive 및 Daily route | 완료 | `/archive`, 월 이동 calendar, keyword search, `/daily/[date]` snapshot |
+| Navigation/반응형 | 완료 | desktop 6개 메뉴, mobile 5개 bottom nav, editorial typography |
+| AI Researcher/Opportunity prompt | 완료 | Cross-Event Signal, Problem Scout, 현실성 Gate 계약 반영. 외부 Cloud Scheduled Task prompt 동기화는 main 승인 이후 별도 운영 작업 |
+| 로컬 검증 | 완료 | Supabase foundation, importer 17개, Web 34개, lint, typecheck, production build 및 1440/1024/768/390px browser QA PASS |
+| Preview DB/배포 | 완료 | additive migration, schema contract, RLS/격리/cascade, 전체 backfill PASS. Today와 Archive에서 2026-08-26 최신 projection 확인 |
+
+설계 변경은 모두 backward-compatible additive이며 기존 AI Researcher 게시 순서, Git 정본, 사용자 RLS/OAuth 정책, Event Detail을 변경하지 않는다.
+
+기존 차단 이슈는 owner 승인 후 `agent/web-v1.1`에서 최소 correction했다. 2026-08-22~25의 schema version, potential, community platform taxonomy만 정규화했고 URL·요약·Event·Source 내용은 보존했다. 전체 archive dry-run과 GitHub Actions Preview backfill run `32929594618`이 통과했으며, 작업 브랜치에 일시 추가한 sync trigger/watermark 허용은 성공 직후 제거해 현재 workflow는 다시 `main` 전용이다. GitHub `main` 정본 반영용 correction-only PR은 [#6](https://github.com/Alliesy/ai-daily-intelligence/pull/6)으로 분리했으며, main merge와 Production 변경은 수행하지 않았다.
+
+PR #6 상태: canonical validator 관련 `validate` check 3개는 모두 PASS하고 merge conflict도 없다. Vercel check는 `main` 기반 correction-only 브랜치에 Web 앱 경로가 없어 실패했으며, 이는 기존 Vercel main 연결 경계다. Production 설정 변경 또는 실패 check 우회는 승인 범위가 아니므로 PR은 open 상태로 유지한다.
+
+PR #6 상태: canonical validator 관련 `validate` check 3개는 모두 PASS하고 merge conflict도 없다. Vercel check는 `main` 기반 correction-only 브랜치에 Web 앱 경로가 없어 실패했으며, 이는 기존 Vercel main 연결 경계다. Production 설정 변경 또는 실패 check 우회는 승인 범위가 아니므로 PR은 open 상태로 유지한다.
+
+과거 Morning Paper는 occurrence에 저장된 표시 필드만 노출한다. Topic·Entity 기반 Archive 검색은 현재 index를 사용하므로 당시 taxonomy 자체를 재현하는 기능은 후속 additive snapshot 후보이며, 과거 카드에는 current-derived publisher/time/topic label을 표시하지 않는다.
+
+V1.1 Preview: `https://ai-daily-intelligence-preview-o2dnw4cs1-syparks-projects.vercel.app`. Vercel Deployment Protection 때문에 익명 HTTP 요청은 로그인 화면으로 전환되지만, 연결된 Preview 세션에서 Today·Archive·invalid month fallback·390px 무가로스크롤을 확인했다. 공개 사용자 리뷰가 필요하면 Production 변경 없이 Preview deployment protection 정책을 별도로 조정해야 한다. Google OAuth 실제 로그인은 기존 `WAITING_FOR_USER`를 유지한다.
+
 > 마지막 갱신: 2026-08-08 (Asia/Seoul)
 > 현재 단계: Phase I — integration, security review, final QA 완료
 > 전체 상태: V1 코드 구현 및 로컬 검증 완료, 운영 외부 설정 대기
@@ -274,28 +300,14 @@
 - 대기: Google OAuth provider credential 설정 후 실제 Google 로그인 callback 통합 검증
 - 외부 설정: Google OAuth 실제 로그인은 기존 `WAITING_FOR_USER` 유지
 
-## 19. 2026-08-14 Cloud daily → Preview DB 연결 활성화
+## 20. 2026-08-14 최신 Supabase projection 실시간 반영
 
-- 상태: `완료 / 자동 동기화 활성`
-- 연결 경계: Cloud Scheduled Task는 Git main과 Notion만 갱신하고 DB credential을 받지 않음
-- sync 경계: main push → GitHub Actions → atomic importer RPC → Preview Supabase content projection
-- 보호: workflow job을 GitHub `preview` Environment에 고정하고 Preview ref가 다르면 write 전 실패
-- 범위: Web 애플리케이션 코드는 main 대상 sync PR에서 제외
-- 최초 동작: PR #3을 merge commit으로 병합한 뒤 전체 archive backfill 성공
-- 계보 복구: DB reset 대신 기존 Preview watermark를 보존하는 non-squash history bridge merge 사용
-- GitHub 환경: `preview` Environment에 Preview 전용 URL과 service-role secret 등록 완료
-- Vercel gate: owner가 main Production-target 자동 시도를 분리한 뒤 병합 승인
-- 병합: `d72dce67f261909a83e8800ed56784b6673c9e17` (`Merge pull request #3`)
-- 실동작 검증: GitHub Actions run `31784020636` 성공, 2026-08-07~2026-08-14 브리핑 8건 모두 `applied/succeeded`
-- cursor: Preview projection이 merge commit `d72dce67f261909a83e8800ed56784b6673c9e17`까지 반영
-- 다음 동작: 이후 Cloud Scheduled Task가 main에 새 daily JSON을 push하면 동일 workflow가 증분 동기화
-- 보존: Production Supabase, Cloud Scheduled Task의 조사·게시 단계, Notion Publisher는 변경하지 않음
-
-## 21. 2026-08-14 신규 콘텐츠 한국어 제목 정책 적용
-
-- 상태: `correction 구현 및 로컬 일관성 검증 완료`
-- 근거 결정: D-020의 신규 사용자 표시 콘텐츠 한국어 기본 원칙
-- correction: 2026-08-14 뉴스 Event 제목 5개를 고유명사를 보존한 한국어 제목으로 갱신
-- 파생 문서: 날짜별 report, `LATEST.md`, `publish/notion-latest.md`의 Top 뉴스 제목을 Git JSON과 동일하게 갱신
-- 재발 방지: `AUTOMATION_PROMPT.md`에 신규 title·요약·분석·기회·커뮤니티 표시 문구의 한국어 기본 규칙 명시
-- 보존: Source 원문 제목과 인용문, URL, event_key, 사실·점수·출처, schema와 자동화 단계는 변경하지 않음
+- 상태: `구현·검증·Vercel Preview 배포 완료`
+- 발견: Preview Supabase는 2026-08-14까지 동기화됐지만 공개 페이지가 빌드 시점의 2026-08-07 데이터를 정적으로 유지
+- 수정: Today, News Detail, Opportunities, Trends를 요청 시 동적 렌더링하도록 명시
+- 회귀 방지: 네 공개 콘텐츠 route의 dynamic 정책을 검사하는 Web test 4개 추가
+- 검증: importer 14개 + Web 25개 test PASS, lint PASS, typecheck PASS, production build PASS
+- build 증거: `/`, `/events/[slug]`, `/opportunities`, `/trends`가 모두 dynamic server-rendered route로 출력
+- Preview: `https://ai-daily-intelligence-preview-git-agent-web-v1-syparks-projects.vercel.app`
+- live 검증: 2026-08-14 briefing, Event 5건, Source 15건, 07:02 업데이트 표시 및 console warning/error 없음
+- 보존: Supabase schema/RLS, importer, Git archive, AI Researcher, daily schema, OAuth 보안 정책 변경 없음
