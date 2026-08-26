@@ -1,18 +1,22 @@
 # AI Daily Intelligence Current Architecture
 
-> 기준: GitHub `main` commit `bf0b6706c56d467029f6a0531230c8800ceb7fd6`
-> 조사일: 2026-08-07 (Asia/Seoul)
+> 기준: Web V1.1 릴리스 브랜치 `agent/web-v1.1` commit `95d4421015fbc9d11a8359ec76e8aec76a8fe889`
+> 갱신일: 2026-08-26 (Asia/Seoul)
 > 문서 목적: 현재 운영 중인 수집·분석·게시 구조와 향후 웹서비스가 지켜야 할 호환성 경계를 기록한다.
 
 ## 1. 현재 프로젝트 구조
 
-현재 저장소는 애플리케이션 서버가 아니라, AI Intelligence 일일 데이터를 Git에 영구 보존하고 사람이 읽는 뷰를 생성·게시하는 데이터 파이프라인 저장소다.
+현재 저장소는 Git 정본 데이터 파이프라인과 이를 소비하는 Web 서비스가 한 저장소 안에서 논리적으로 분리된 monorepo다. AI Researcher가 만드는 일일 JSON과 보고서는 계속 기록 정본이며, Next.js 앱과 Supabase는 이 정본을 읽는 서비스 계층이다.
 
 ```text
 ai-daily-intelligence/
 ├─ .github/
 │  └─ workflows/
-│     └─ validate.yml
+│     ├─ validate.yml
+│     ├─ validate-importer.yml
+│     └─ sync-supabase.yml
+├─ apps/
+│  └─ web/                  # Next.js 16 App Router 웹서비스
 ├─ data/
 │  └─ daily/
 │     ├─ README.md
@@ -20,11 +24,16 @@ ai-daily-intelligence/
 │        └─ YYYY-MM-DD.json
 ├─ publish/
 │  └─ notion-latest.md
+├─ packages/
+│  └─ importer/             # Git archive → Supabase projection
 ├─ reports/
 │  └─ YYYY/
 │     └─ YYYY-MM-DD.md
 ├─ schema/
 │  └─ daily.schema.json
+├─ supabase/
+│  ├─ migrations/           # additive content/user schema, RPC, RLS
+│  └─ tests/                # foundation/RLS integration contracts
 ├─ scripts/
 │  ├─ render_daily.py
 │  └─ validate_daily.py
@@ -32,14 +41,16 @@ ai-daily-intelligence/
 │  └─ test_validate_daily.py
 ├─ .gitignore
 ├─ AUTOMATION_PROMPT.md
+├─ package.json
+├─ pnpm-workspace.yaml
 ├─ latest.json
 ├─ LATEST.md
 └─ README.md
 ```
 
-현재 `main`에는 `data/daily/2026/2026-08-07.json` 한 건이 저장되어 있다. 이 패킷에는 뉴스 3개, 사업 아이디어 2개, 도구 2개, 커뮤니티 신호 2개, Worth Reading 4개가 있으며 구축 후보는 없다.
+현재 archive에는 2026-08-07부터 2026-08-26까지 20개의 일일 패킷이 있으며 전체가 기존 daily schema 및 validator를 통과한다. Web V1.1은 Next.js, TypeScript, Tailwind CSS, Supabase SSR client로 구현되어 있고 Vercel Preview에서 검증됐다. Supabase Preview는 Git archive의 content projection을 보유하며, 사용자 전용 데이터는 별도 RLS 정책으로 격리된다.
 
-Next.js, TypeScript, Supabase, Tailwind CSS 또는 Vercel 설정은 아직 저장소에 존재하지 않는다.
+기존 AI Researcher → Opportunity Finder → Git Publisher → Notion Latest Publisher 경로는 Web 빌드나 Supabase 가용성에 의존하지 않는다. `main` 반영 후 실행되는 `sync-supabase.yml`은 정본 게시 이후의 독립 소비 단계이며 실패해도 Git/Notion 정본을 되돌리지 않는다.
 
 ## 2. 기존 AI Researcher 자동화 흐름
 
@@ -185,6 +196,11 @@ Notion과 향후 Supabase는 Git 정본을 소비하는 projection이어야 한�
 | `scripts/render_daily.py` | JSON에서 reports, LATEST, Notion 본문, pointer 생성 | 파생 파일 생성기 |
 | `tests/test_validate_daily.py` | 중복, 최소 뉴스 수, 후보 승인 게이트, Worth Reading 완전성 테스트 | 회귀 방지 |
 | `.github/workflows/validate.yml` | PR 및 관련 push에서 테스트와 전체 JSON 검증 실행 | CI 보호 장치 |
+| `.github/workflows/validate-importer.yml` | importer 단위·계약 테스트 실행 | projection 회귀 방지 |
+| `.github/workflows/sync-supabase.yml` | `main` 정본 commit 이후 Supabase projection 동기화 | 독립 소비 pipeline |
+| `packages/importer/` | archive 검증, identity registry, Git watermark/CAS 기반 projection | 재구축 가능한 content importer |
+| `supabase/migrations/` | Event 중심 content schema, 사용자 기능, RPC와 RLS | additive DB 계약 |
+| `apps/web/` | 공개 Morning Paper/Archive와 선택적 로그인 사용자 기능 | Vercel 배포 애플리케이션 |
 | `README.md` | 저장소 운영 원칙, 구조, 로컬 검증 안내 | 사용자 문서 |
 
 `reports/YYYY/YYYY-MM-DD.md`와 `LATEST.md`는 렌더러가 같은 전체 Markdown 내용을 각각 날짜 경로와 고정 최신 경로에 기록한다. `publish/notion-latest.md`는 Notion 표시 형식에 맞춘 별도 projection이다.
