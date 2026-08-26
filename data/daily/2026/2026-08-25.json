@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0",
   "date_kst": "2026-08-25",
   "generated_at": "2026-08-25T07:01:01+09:00",
   "status": "complete",
@@ -157,25 +157,25 @@
   ],
   "community": [
     {
-      "platform": "Reddit r/comfyui",
+      "platform": "Reddit",
       "mood": "integration-curious / setup-frustrated",
       "one_line_summary": "Wan3.0 베타를 소형 파이프라인에서 쓰려는 개발자는 알리바바 클라우드 계정·결제·지역 설정을 실제 마찰로 지적한다.",
       "url": "https://www.reddit.com/r/comfyui/comments/1vm2rek/wan_30_just_dropped_heres_how_i_got_at_the_api/"
     },
     {
-      "platform": "Reddit r/comfyui",
+      "platform": "Reddit",
       "mood": "demo-impressed / realism-skeptical",
       "one_line_summary": "30초·1080P·오디오 데모에는 관심이 크지만 장면의 현실감과 홍보 샘플의 대표성을 가볍게 비판하는 반응이 섞인다.",
       "url": "https://www.reddit.com/r/comfyui/comments/1vfmcty/wan_30_just_announced_and_coming_soon_native_30/"
     },
     {
-      "platform": "GitHub Wan2.2 Issues",
+      "platform": "GitHub",
       "mood": "open-weight-demanding / vendor-skeptical",
       "one_line_summary": "Wan 사용자는 최신 세대의 오픈웨이트 여부를 계속 요구하며 API 접근과 오픈소스 공개를 같은 출시로 취급하지 않는다.",
       "url": "https://github.com/Wan-Video/Wan2.2/issues/181"
     },
     {
-      "platform": "AI Copyright Case Tracker",
+      "platform": "Other",
       "mood": "publisher-defensive / case-by-case",
       "one_line_summary": "법률 추적 커뮤니티는 wikiHow 사건을 학습 입력·출력·대리책임·CMI 제거 청구로 나누며 기존 소송과의 차이를 추적한다.",
       "url": "https://chatgptiseatingtheworld.com/2026/08/22/wikihow-sues-openai-for-copyright-infringement/"

@@ -312,7 +312,7 @@
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vlj87v/introducing_unsloth_desktop_app/"
     },
     {
-      "platform": "OpenAI Developer Community",
+      "platform": "Other",
       "mood": "residency-demand / setup-friction",
       "one_line_summary": "개발자는 지역 처리를 규제 대응에 유용하게 보지만 승인, 지원 모델·지역과 별도 엔드포인트 설정이 실제 도입 장벽이라고 지적해 왔다.",
       "url": "https://community.openai.com/t/how-do-i-select-a-region-for-openai-data-processing/1299757"

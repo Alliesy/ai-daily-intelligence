@@ -123,7 +123,7 @@
       "name": "AI Capex Credit Watch",
       "score": 3.9,
       "stars": 4,
-      "potential": "Medium-High",
+      "potential": "Medium",
       "difficulty": "Medium",
       "customer": "미국 빅테크·AI 인프라주를 보는 한국 개인투자자와 소형 리서치 뉴스레터",
       "problem": "AI CAPEX가 채권, 리스, 구매약정과 프로젝트금융으로 흩어져 기업의 실제 자본부담과 잉여현금흐름 위험을 비교하기 어렵다.",
@@ -155,25 +155,25 @@
   ],
   "community": [
     {
-      "platform": "OpenAI Developer Community",
+      "platform": "Other",
       "mood": "savings-positive / limits-cautious",
       "one_line_summary": "개발자는 Sol API·크레딧 가격 인하를 반기지만 구독 한도는 그대로이고 3개월 뒤 가격을 알 수 없어 장기 예산에는 보수적으로 반영한다.",
       "url": "https://community.openai.com/t/20-price-reduction-for-gpt-5-6-sol-api-codex-credits-and-chatgpt-work/1391726"
     },
     {
-      "platform": "Reddit r/Bard",
+      "platform": "Reddit",
       "mood": "ecosystem-impressed / metric-skeptical",
       "one_line_summary": "Gemma 10억 다운로드를 생태계 확장 신호로 보면서도 자동 재다운로드와 여러 채널을 합친 누적값을 고유 사용자로 오해하지 말자는 반응이 나온다.",
       "url": "https://www.reddit.com/r/Bard/comments/1vtyoh2/gemma_models_surpass_1_billion_downloads_awesome/"
     },
     {
-      "platform": "Reddit r/stocks",
+      "platform": "Reddit",
       "mood": "capex-bullish / leverage-alert",
       "one_line_summary": "하이퍼스케일러의 채권 조달을 성장 인프라로 보는 시각과 AI 수익화가 늦으면 FCF·밸류에이션 압박이 커진다는 시각이 맞선다.",
       "url": "https://www.reddit.com/r/stocks/comments/1uqvv6s/amazon_just_tapped_the_bond_market_for_25_billion/"
     },
     {
-      "platform": "Reddit r/LocalLLaMA",
+      "platform": "Reddit",
       "mood": "local-model-positive / runtime-pragmatic",
       "one_line_summary": "Gemma 4 사용자는 모델 점수보다 실제 메모리 적합성, 양자화와 LM Studio·Ollama 등 런타임 호환성을 더 중요한 채택 기준으로 본다.",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1scucfg/gemma_4_26b_is_the_perfect_all_around_local_model/"
