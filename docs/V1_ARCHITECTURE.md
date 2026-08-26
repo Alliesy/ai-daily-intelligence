@@ -151,6 +151,10 @@ Newsio 스타일의 정보 중심 홈이다.
 
 데스크톱은 핵심 Event를 주 열에, Opportunity와 Trend를 보조 열에 배치한다. 모바일은 위 순서로 한 열에 쌓는다. 이미지는 검증된 이미지가 있을 때만 제한적으로 사용하고, 이미지가 없어도 정보 구조가 유지되어야 한다.
 
+방문자 통계는 Footer나 별도 KPI card가 아니라 Today 상단 Insight metadata에만 둔다. 데스크톱은 `이 인사이트의 근거` 안에서 Event·독립 Source·공식 Source와 약한 구분선 아래에 오늘 순 방문자, 누적 집계 지원 상태와 업데이트 시각을 표시한다. 모바일은 Insight 바로 아래에서 `근거 n건 · 출처 n곳`, `오늘 n · 누적 미집계 · 업데이트 시각`의 compact 2줄 metadata로 표시한다. 통계의 크기·색 대비는 headline과 근거 정보보다 낮게 유지한다.
+
+V1.1은 기존 Vercel Web Analytics의 cookie-free 일일 hash와 bot filtering을 사용한다. 공식 수집 component가 page load와 client navigation을 수집하고, Web server의 read-only endpoint가 server-only token으로 KST 당일 방문자 aggregate만 조회한다. token은 browser bundle·Git·응답에 포함하지 않으며 응답은 짧게 cache한다. Vercel hash는 날짜마다 폐기되어 cross-day person identity를 제공하지 않으므로 정확한 누적 순 방문자는 계산하거나 임의 표시하지 않고 `누적 미집계`로 명시한다. 조회 credential 또는 Analytics가 준비되지 않았을 때는 `오늘 집계 준비 중`으로 degrade하며 Today 콘텐츠 렌더링은 차단하지 않는다. Supabase content/user schema에는 방문 추적 table이나 공개 write RPC를 추가하지 않는다.
+
 `partial` Briefing도 공개할 수 있다. 이 경우 날짜와 상태 영역에 작은 `일부 수집·검증 진행 중` badge 또는 callout을 표시하고 `warnings`를 확인할 수 있게 한다. 경고는 사실을 숨기지 않되 핵심 콘텐츠를 덮는 modal이나 full-screen alert로 표시하지 않는다.
 
 Event card는 다음을 표시한다.

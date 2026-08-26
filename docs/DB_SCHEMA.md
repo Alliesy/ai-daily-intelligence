@@ -812,3 +812,11 @@ Phase A migration은 기존 daily schema를 변경하지 않는다. service-role
 
 이 검증은 Preview 전용이며 Production migration 적용을 승인하지 않는다.
 현재 migration은 Production 적용 전 기준선이므로 신규 환경은 두 파일을 처음부터 적용한다. 이미 별도로 migration을 적용한 환경이 생기면 파일 재실행 대신 번호가 증가한 corrective migration으로 같은 교정을 전달한다.
+
+## 15. 방문자 통계와 DB 경계 — 2026-08-26
+
+- 방문자 통계는 Supabase content projection 및 사용자 DB의 책임이 아니다.
+- V1.1에서는 방문자 table, cookie hash, 공개 aggregate/write RPC, migration을 추가하지 않는다.
+- Today UI는 Vercel Web Analytics의 KST 당일 aggregate를 server-only read endpoint를 통해 조회한다.
+- Vercel의 일일 hash는 날짜 간 동일 방문자를 연결하지 않으므로 누적 순 방문자 값은 DB에 저장하거나 합산하지 않는다.
+- 콘텐츠 rebuild와 account deletion cascade는 방문자 통계 기능의 영향을 받지 않는다.

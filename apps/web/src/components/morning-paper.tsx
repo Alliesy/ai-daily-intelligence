@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { ArrowRight, Building2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { EventActions } from "@/components/event-actions";
+import { VisitorMetadata } from "@/components/visitor-metadata";
 import { buildMorningPaper } from "@/lib/content/morning-paper";
 import type { BriefingDto, EventDto } from "@/lib/content";
 
@@ -66,15 +67,24 @@ export function MorningPaper({ briefing, isArchive = false }: { briefing: Briefi
             <p className="text-xs font-medium tracking-[0.02em] text-stone-600">{koreanDate(briefing.dateKst)}</p>
             <h1 id="morning-headline" className="mt-5 max-w-[820px] text-balance font-serif text-[2.15rem] font-semibold leading-[1.32] tracking-[-0.04em] sm:text-[3rem] lg:text-[3.45rem]">{paper.headline}</h1>
             {paper.summary && <p className="mt-6 max-w-3xl text-[15px] leading-7 text-stone-600 sm:text-base">{paper.summary}</p>}
+            {!isArchive && <div aria-label="인사이트 근거와 방문자 통계" className="mt-6 border-t border-stone-200 pt-3 lg:hidden">
+              <p className="text-[11px] font-medium text-stone-600">근거 {paper.evidence.eventCount}건 · 출처 {evidenceSourceCount}곳</p>
+              <div className="flex flex-wrap items-center gap-x-2">
+                <VisitorMetadata compact />
+                {time && <span className="mt-1.5 text-[11px] text-stone-500">· {time} 업데이트</span>}
+              </div>
+            </div>}
           </div>
-          <aside aria-label="인사이트 근거" className="self-end border-l border-stone-300 pl-6">
+          <aside aria-label="인사이트 근거" className="hidden self-end border-l border-stone-300 pl-6 lg:block">
             <p className="text-xs font-semibold text-stone-800">이 인사이트의 근거</p>
             <dl className="mt-5 space-y-4 text-sm">
               <div className="flex items-center justify-between gap-4"><dt className="flex items-center gap-2 text-stone-600"><FileText className="size-4" />근거 Event</dt><dd className="font-semibold">{paper.evidence.eventCount}건</dd></div>
               <div className="flex items-center justify-between gap-4"><dt className="flex items-center gap-2 text-stone-600"><Globe2 className="size-4" />독립 근거군</dt><dd className="font-semibold">{paper.evidence.hasIndependentClassification ? `${paper.evidence.independentSourceCount}개` : "분류 전"}</dd></div>
               <div className="flex items-center justify-between gap-4"><dt className="flex items-center gap-2 text-stone-600"><Building2 className="size-4" />공식 출처</dt><dd className="font-semibold">{paper.evidence.officialSourceCount}개</dd></div>
             </dl>
-            <p className="mt-6 text-[11px] text-stone-500">전체 연결 출처 {evidenceSourceCount}개{time ? ` · ${time} KST` : ""}</p>
+            <p className="mt-6 text-[11px] text-stone-500">전체 연결 출처 {evidenceSourceCount}개</p>
+            {!isArchive && <VisitorMetadata />}
+            {time && <p className="mt-4 text-[11px] text-stone-500">업데이트 {time} KST</p>}
           </aside>
         </section>
         {briefing.status === "partial" && <p role="status" className="mt-5 border-l-2 border-amber-500 bg-amber-50 px-4 py-3 text-xs leading-5 text-amber-900">일부 자료는 수집 또는 검증 중입니다. 확인된 내용부터 공개합니다.</p>}
