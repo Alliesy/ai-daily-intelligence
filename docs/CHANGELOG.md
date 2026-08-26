@@ -21,6 +21,8 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 - 전체 20개 packet dry-run과 Preview Supabase backfill을 통과하고 Today·Archive의 2026-08-26 최신 projection을 확인
 - Preview branch용 임시 sync trigger/watermark 허용을 backfill 직후 제거해 workflow secret 경계를 다시 `main` 전용으로 복원
 - Web V1.1 전체 변경과 분리된 canonical correction-only PR [#6](https://github.com/Alliesy/ai-daily-intelligence/pull/6)을 생성하고 main merge는 보류
+- PR #6 canonical validation 3개 PASS 확인; 기존 Vercel main 연결에서 발생한 배포 실패는 Production 설정을 변경하지 않고 release gate로 기록
+- PR #6 canonical validation 3개 PASS 확인; 기존 Vercel main 연결에서 발생한 배포 실패는 Production 설정을 변경하지 않고 release gate로 기록
 
 ## 2026-08-14
 
