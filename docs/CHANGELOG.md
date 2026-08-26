@@ -17,6 +17,9 @@ AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 
 - 전체 archive backfill 전 정본 계약 불일치(2026-08-22~25)를 발견해 검증 기준 완화 없이 import를 보류
 - `agent/web-v1.1`을 Vercel Preview로 배포하고 Today, Archive, invalid month fallback, 390px 반응형을 live 검증
 - 독립 리뷰에서 발견한 불가능한 archive month(`2026-99`) 입력을 최신 브리핑 월로 안전하게 fallback하도록 수정
+- owner 승인에 따라 2026-08-22~25 legacy packet의 schema version, potential, community platform taxonomy를 의미 보존 방식으로 correction
+- 전체 20개 packet dry-run과 Preview Supabase backfill을 통과하고 Today·Archive의 2026-08-26 최신 projection을 확인
+- Preview branch용 임시 sync trigger/watermark 허용을 backfill 직후 제거해 workflow secret 경계를 다시 `main` 전용으로 복원
 
 ## 2026-08-14
 

@@ -6,17 +6,17 @@
 |---|---|---|
 | 최신 main archive 통합 | 완료 | `agent/web-v1.1`에 2026-08-26까지 비파괴 history bridge 및 daily/report 동기화 |
 | Additive Git contract | 완료 | optional Morning Paper, Source taxonomy, Problem Evidence, 9 Gate; schema 1.0/legacy 유지 |
-| Supabase migration/importer | 부분 완료 | 날짜별 snapshot, service-role wrapper, 17 importer tests; Preview additive migration 적용 완료. 전체 archive backfill은 기존 정본 불일치 때문에 보류 |
+| Supabase migration/importer | 완료 | 날짜별 snapshot, service-role wrapper, 17 importer tests; Preview additive migration 및 2026-08-07~26 전체 archive backfill 완료 |
 | Today Morning Paper | 완료 | Insight/Evidence/Top 0~3/Opportunity 0~1 shared renderer |
 | Archive 및 Daily route | 완료 | `/archive`, 월 이동 calendar, keyword search, `/daily/[date]` snapshot |
 | Navigation/반응형 | 완료 | desktop 6개 메뉴, mobile 5개 bottom nav, editorial typography |
 | AI Researcher/Opportunity prompt | 완료 | Cross-Event Signal, Problem Scout, 현실성 Gate 계약 반영. 외부 Cloud Scheduled Task prompt 동기화는 main 승인 이후 별도 운영 작업 |
 | 로컬 검증 | 완료 | Supabase foundation, importer 17개, Web 34개, lint, typecheck, production build 및 1440/1024/768/390px browser QA PASS |
-| Preview DB/배포 | UI 완료·backfill 보류 | additive migration, schema contract, RLS/격리/cascade PASS. `agent/web-v1.1` Vercel Preview Ready 및 desktop/mobile live 확인. 전체 backfill은 정본 correction 결정 전 보류 |
+| Preview DB/배포 | 완료 | additive migration, schema contract, RLS/격리/cascade, 전체 backfill PASS. Today와 Archive에서 2026-08-26 최신 projection 확인 |
 
 설계 변경은 모두 backward-compatible additive이며 기존 AI Researcher 게시 순서, Git 정본, 사용자 RLS/OAuth 정책, Event Detail을 변경하지 않는다.
 
-알려진 기존 차단 이슈: 2026-08-22의 `potential=Medium-High`, 2026-08-24~25의 `schema_version=1.0.0`, 2026-08-22~25 일부 자유형 community platform 값은 기존 schema 계약과 불일치한다. Importer는 commit snapshot 전체를 먼저 검증하므로 이 상태에서는 2026-08-26까지의 Preview 전체 backfill을 안전하게 완료할 수 없다. V1.1에서 검증 기준을 완화하거나 Git 정본을 임의 수정하지 않았으며, main correction 또는 명시적인 versioned compatibility 정책에 대한 owner 결정이 필요하다. 이 문제는 additive migration 및 기존 Preview content 조회에는 영향을 주지 않는다.
+기존 차단 이슈는 owner 승인 후 `agent/web-v1.1`에서 최소 correction했다. 2026-08-22~25의 schema version, potential, community platform taxonomy만 정규화했고 URL·요약·Event·Source 내용은 보존했다. 전체 archive dry-run과 GitHub Actions Preview backfill run `32929594618`이 통과했으며, 작업 브랜치에 일시 추가한 sync trigger/watermark 허용은 성공 직후 제거해 현재 workflow는 다시 `main` 전용이다. GitHub `main` 정본 반영은 별도 correction-only PR/merge 단계로 남아 있다.
 
 과거 Morning Paper는 occurrence에 저장된 표시 필드만 노출한다. Topic·Entity 기반 Archive 검색은 현재 index를 사용하므로 당시 taxonomy 자체를 재현하는 기능은 후속 additive snapshot 후보이며, 과거 카드에는 current-derived publisher/time/topic label을 표시하지 않는다.
 

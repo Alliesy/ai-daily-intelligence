@@ -47,6 +47,14 @@
 - 결정: 접근 가능한 공개 게시물의 URL과 문제 확인에 필요한 최소 요약만 저장하고 사용자명·핸들·실명·연락처·민감정보, private/gated community 내용은 수집하지 않는다.
 - 근거: `daily_briefing_opportunities.problem_evidence`는 공개 RLS projection이므로 원문 사용자의 개인정보를 복제하면 안 된다.
 
+### D-061 — Legacy packet correction은 의미를 보존한 canonical taxonomy 정규화로 처리한다
+
+- 상태: `confirmed`
+- 결정: 2026-08-22의 `potential=Medium-High`는 동일 점수대 관례에 따라 `Medium`으로, 세부 Reddit·GitHub platform은 URL과 요약을 보존한 채 `Reddit`·`GitHub`로, 지원 enum에 없는 커뮤니티는 `Other`로 정규화한다. 2026-08-24~25의 `schema_version=1.0.0`은 운영 계약인 `1.0`으로 바로잡는다.
+- 근거: schema 검증을 완화하지 않고도 원문 URL·요약·사건 내용을 잃지 않으며, 전체 Git archive를 단일 1.0 계약으로 재구축할 수 있다.
+- 검증: 2026-08-07~26 전체 20개 packet importer dry-run과 Preview backfill이 통과했다.
+- 안전 경계: Preview backfill을 위해 작업 브랜치 watermark를 일시 허용했지만 성공 직후 workflow를 다시 `main` 전용으로 복원했다. Production과 main은 변경하지 않았다.
+
 ## 2026-08-08 구현 결정
 
 ### D-041 — 선택적 Google OAuth는 PKCE callback과 검증된 return path만 사용

@@ -2,13 +2,12 @@ name: Sync Supabase content projection
 
 on:
   push:
-    branches: [main, agent/web-v1.1]
+    branches: [main]
     paths:
       - "data/daily/**"
       - "data/identity/**"
       - "schema/**"
       - "packages/importer/**"
-      - ".github/workflows/sync-supabase.yml"
   workflow_dispatch:
     inputs:
       mode:
@@ -84,11 +83,7 @@ jobs:
           set -euo pipefail
           git fetch --no-tags origin main
           incoming_sha="${GITHUB_SHA}"
-          if [[ "${GITHUB_REF_NAME}" == "agent/web-v1.1" ]]; then
-            remote_main_sha="${GITHUB_SHA}"
-          else
-            remote_main_sha="$(git rev-parse origin/main)"
-          fi
+          remote_main_sha="$(git rev-parse origin/main)"
           node packages/importer/dist/cli.js \
             --mode dry-run \
             --commit "${incoming_sha}" \
@@ -109,11 +104,7 @@ jobs:
           fi
           git fetch --no-tags origin main
           incoming_sha="${GITHUB_SHA}"
-          if [[ "${GITHUB_REF_NAME}" == "agent/web-v1.1" ]]; then
-            remote_main_sha="${GITHUB_SHA}"
-          else
-            remote_main_sha="$(git rev-parse origin/main)"
-          fi
+          remote_main_sha="$(git rev-parse origin/main)"
           node packages/importer/dist/cli.js \
             --mode backfill \
             --commit "${incoming_sha}" \
