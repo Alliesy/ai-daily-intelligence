@@ -16,7 +16,7 @@
 
 설계 변경은 모두 backward-compatible additive이며 기존 AI Researcher 게시 순서, Git 정본, 사용자 RLS/OAuth 정책, Event Detail을 변경하지 않는다.
 
-기존 차단 이슈는 owner 승인 후 `agent/web-v1.1`에서 최소 correction했다. 2026-08-22~25의 schema version, potential, community platform taxonomy만 정규화했고 URL·요약·Event·Source 내용은 보존했다. 전체 archive dry-run과 GitHub Actions Preview backfill run `32929594618`이 통과했으며, 작업 브랜치에 일시 추가한 sync trigger/watermark 허용은 성공 직후 제거해 현재 workflow는 다시 `main` 전용이다. GitHub `main` 정본 반영은 별도 correction-only PR/merge 단계로 남아 있다.
+기존 차단 이슈는 owner 승인 후 `agent/web-v1.1`에서 최소 correction했다. 2026-08-22~25의 schema version, potential, community platform taxonomy만 정규화했고 URL·요약·Event·Source 내용은 보존했다. 전체 archive dry-run과 GitHub Actions Preview backfill run `32929594618`이 통과했으며, 작업 브랜치에 일시 추가한 sync trigger/watermark 허용은 성공 직후 제거해 현재 workflow는 다시 `main` 전용이다. GitHub `main` 정본 반영용 correction-only PR은 [#6](https://github.com/Alliesy/ai-daily-intelligence/pull/6)으로 분리했으며, main merge와 Production 변경은 수행하지 않았다.
 
 과거 Morning Paper는 occurrence에 저장된 표시 필드만 노출한다. Topic·Entity 기반 Archive 검색은 현재 index를 사용하므로 당시 taxonomy 자체를 재현하는 기능은 후속 additive snapshot 후보이며, 과거 카드에는 current-derived publisher/time/topic label을 표시하지 않는다.
 
