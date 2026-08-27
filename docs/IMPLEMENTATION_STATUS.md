@@ -13,8 +13,11 @@
 | 방문자 metadata | 보존 | Vercel 일일 unique read-only 구현을 포함하고 누적 미집계를 정직하게 표시 |
 | 검증 | 완료 | Supabase foundation, importer 17, Web 48 tests, lint, typecheck, build PASS; 1440px/390px Event Detail과 날짜 포함 2026-08-07 archive 상세, 가로 overflow, browser warning/error 없음 |
 | 독립 리뷰 | 승인·후속 확인 | 차단 이슈 없음. 첫 V1.2 canonical 발행 시 byte-for-byte smoke test와 Preview Supabase 날짜별 Source snapshot 통합 검증 필요 |
+| Vercel Preview | 완료 | `agent/web-v1.2-reader-content` 배포 Ready. Today, Reader-first Event Detail, 2026-08-07 날짜별 Event/Source snapshot을 live 확인하고 browser warning/error 없음 |
 
 Git Daily JSON, `schema/daily.schema.json`, AI Researcher 자동화, Supabase migration과 Production 환경은 변경하지 않았다. V1.2는 Web presentation layer만 변경하며 main merge와 Production 배포는 사용자 검토 전 수행하지 않는다.
+
+V1.2 Preview: `https://ai-daily-intelligence-preview-git-agent-a22a4e-syparks-projects.vercel.app`
 
 ## V1.1 Morning Paper 진행 상태 — 2026-08-26
 
