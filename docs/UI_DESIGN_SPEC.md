@@ -1,5 +1,11 @@
 # AI Daily Intelligence V1 UI Design Spec
 
+## V1.2 Reader Content 순서 (2026-08-27)
+
+Event Detail은 Header의 한국어 제목과 한줄 설명 뒤에 Researcher V1.2 Dry Run이 Reader 용도로 명시한 `why_it_matters`, `outlook`을 `먼저 읽어보세요` 영역으로 표시한다. 이후 원문 기반 상세 내용, AI 인텔리전스 분석, 사업 기회, `더 궁금하다면` Source 순서로 이어진다. Web은 문장을 재작성하지 않고 Typography, label, disclosure와 responsive 배치만 담당한다. 현재 main Daily는 아직 V1.2 콘텐츠로 간주하지 않는다.
+
+Desktop Reader Copy는 얇은 divider와 editorial 2열 label/body를 사용하고 Mobile은 한 열로 쌓는다. 별도 대형 카드나 badge를 추가하지 않는다. AI 분석은 기존 desktop compact card와 mobile accordion을 유지하되 한국어 label을 우선한다. 명시 Action/Event 유형/Source locale이 없는 경우 빈 UI를 만들지 않는다.
+
 ## V1.1 공식 메인 디자인 — Morning Paper (2026-08-26)
 
 2026-08-26 승인 목업을 Today와 Archive의 최신 시각 정본으로 사용한다. 아래의 기존 `AI Newsroom + Intelligence Dashboard` 규칙은 News Detail과 전용 목록 페이지에만 유효하며, KPI·3열 dashboard·다수 카드 중심 Today는 deprecated다.

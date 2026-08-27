@@ -1,5 +1,13 @@
 # AI Daily Intelligence Web V1 Architecture
 
+## V1.2 Reader Content presentation (2026-08-27)
+
+V1.2의 책임 경계는 `Researcher = 편집`, `Git = 콘텐츠 정본`, `Supabase = 재구축 가능한 projection`, `Web = presentation`으로 고정한다. 2026-08-27의 Reader-Friendly 결과는 docs-only Dry Run이며 현재 `main` Daily는 아직 V1.2로 승격되지 않았다. Dry Run이 명시한 기존 계약은 `title`, `one_line_summary`, `why_it_matters`, `outlook`, `summary`, `morning_paper`다. Web은 이 문장을 번역·축약·재작성하거나 런타임 AI로 보강하지 않는다.
+
+Event Detail은 제목·한줄 설명 다음에 `why_it_matters`와 `outlook`을 먼저 표시하고, 원문 기반 상세 요약과 FACT/INTERPRETATION/SIGNAL/SPECULATION 분석은 후순위로 둔다. 사용자 label은 `왜 알아야 할까요?`, `앞으로 볼 건`, `무슨 일이에요?`, `이게 왜 중요하냐면`, `뭐가 달라지고 있나요?`, `가능성은 어디까지일까요?`로 표현한다. Source section label은 `더 궁금하다면`이다.
+
+과거 Archive의 Event link는 `?date=YYYY-MM-DD`를 보존하고 해당 날짜 occurrence의 제목·요약·Analysis·Source snapshot을 조회한다. Reader 필드가 비어 있는 legacy Event는 기존 원문·분석 fallback으로 정상 렌더링하고 문장을 새로 만들지 않는다. 현재 정본에 명시 필드가 없는 Event 유형, `지금 해보기`, Source 언어/국가 표시는 추측하지 않고 숨긴다. 향후 Researcher가 schema 승인과 함께 optional 필드를 실제 출력할 때만 additive projection을 검토한다.
+
 ## V1.1 Morning Paper 및 Archive 확장 (2026-08-26)
 
 V1.1의 공개 읽기 흐름은 `Git Daily JSON → service-role importer → Supabase occurrence snapshot → server-only DAL → MorningPaper renderer`다. `/`는 최신 Briefing, `/daily/[date]`는 지정 날짜 Briefing을 같은 renderer에 전달한다. 과거 화면은 occurrence의 제목·요약·중요도·이미지·Analysis·Source 구성/검증·Opportunity 평가와 V1.1 선정 순서를 사용한다. 현재 projection에서만 존재하는 Source publisher/time과 Topic·Entity label은 과거 카드에서 숨겨 current state가 당시 표시를 바꾸지 않게 한다. `/archive` 검색의 Topic·Entity는 현재 검색 index이며 당시 taxonomy snapshot이라는 의미는 아니다. 공개 route와 선택적 Google OAuth 경계는 변하지 않는다.

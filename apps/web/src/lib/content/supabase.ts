@@ -2,7 +2,7 @@ import "server-only";
 
 import { createClient } from "@supabase/supabase-js";
 import type { BriefingDto, BriefingSummaryDto, EventDto, EventRouteDto, OpportunityDto, SourceDto, TrendMetricDto, TrendOverviewDto } from "./types";
-import { mergeRedirectSlug, selectLatestOccurrence, selectLatestSourceOccurrences } from "./selection";
+import { mergeRedirectSlug, selectLatestSourceOccurrences, selectOccurrenceByDate } from "./selection";
 import { buildOriginalContent, normalizeAnalysisFields } from "./presentation";
 import { matchesBriefingKeyword, splitLegacyInsight } from "./morning-paper";
 
@@ -212,7 +212,7 @@ export async function searchSupabaseBriefings(query: string) {
   return (await getSupabaseBriefingSummaries()).filter((summary) => matchesBriefingKeyword(summary, query));
 }
 
-export async function getSupabaseEventRoute(slug: string): Promise<EventRouteDto | null> {
+export async function getSupabaseEventRoute(slug: string, dateKst?: string): Promise<EventRouteDto | null> {
   const client = publicClient();
   const { data: event, error } = await client.from("events").select("id,merged_into_event_id").eq("slug", slug).maybeSingle();
   if (error) throw error;
@@ -226,9 +226,9 @@ export async function getSupabaseEventRoute(slug: string): Promise<EventRouteDto
   const { data: occurrences, error: occurrenceError } = await client.from("daily_briefing_events")
     .select("*,daily_briefings!inner(date_kst,source_revision)").eq("event_id", event.id);
   if (occurrenceError) throw occurrenceError;
-  const occurrence = selectLatestOccurrence(asRows(occurrences));
+  const occurrence = selectOccurrenceByDate(asRows(occurrences), dateKst);
   if (!occurrence) return null;
-  const hydrated = (await hydrateEvents(str(occurrence.briefing_id), [occurrence], "event"))[0] ?? null;
+  const hydrated = (await hydrateEvents(str(occurrence.briefing_id), [occurrence], dateKst ? "briefing" : "event"))[0] ?? null;
   return hydrated ? { kind: "event", event: hydrated } : null;
 }
 

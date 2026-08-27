@@ -26,6 +26,13 @@ export function selectLatestOccurrence(rows: Row[]) {
   return [...rows].sort(compareOccurrenceRecency)[0] ?? null;
 }
 
+export function selectOccurrenceByDate(rows: Row[], dateKst?: string) {
+  const scoped = dateKst
+    ? rows.filter((row) => text(relation(row, "daily_briefings").date_kst) === dateKst)
+    : rows;
+  return selectLatestOccurrence(scoped);
+}
+
 export function selectLatestSourceOccurrences(rows: Row[]) {
   const latest = new Map<string, Row>();
   for (const row of [...rows].sort(compareOccurrenceRecency)) {

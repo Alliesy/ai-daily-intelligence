@@ -1,5 +1,21 @@
 # AI Daily Intelligence Web V1 Implementation Status
 
+## V1.2 Reader Content 연동 — 2026-08-27
+
+| 영역 | 상태 | 결과 |
+|---|---|---|
+| Researcher 상태 확인 | 완료 | V1.2 Reader-Friendly 결과는 docs-only Dry Run이며 2026-08-27 main Daily는 아직 기존 발행 결과임을 확인 |
+| Supabase projection | 변경 없음 | 기존 occurrence/Analysis가 필요한 문장을 비손실 저장; migration/importer/RLS 변경 없음 |
+| Event Detail | 완료 | Reader Copy를 원문 상세·AI 분석보다 먼저 배치하고 Source를 `더 궁금하다면`으로 변경 |
+| UI label | 완료 | FACT/INTERPRETATION/SIGNAL/SPECULATION/OUTLOOK 의미는 유지하고 한국어 presentation label 적용 |
+| Archive fallback | 완료 | 날짜 포함 Event link와 occurrence별 상세/Source snapshot 조회; legacy 영어/Reader 결측은 기존 원문 fallback |
+| Action/Event 유형/한국 기사 | upstream 대기 | 실제 canonical 명시 필드가 없어 생성·추론하지 않음. 승인된 additive schema가 생길 때만 연동 |
+| 방문자 metadata | 보존 | Vercel 일일 unique read-only 구현을 포함하고 누적 미집계를 정직하게 표시 |
+| 검증 | 완료 | Supabase foundation, importer 17, Web 48 tests, lint, typecheck, build PASS; 1440px/390px Event Detail과 날짜 포함 2026-08-07 archive 상세, 가로 overflow, browser warning/error 없음 |
+| 독립 리뷰 | 승인·후속 확인 | 차단 이슈 없음. 첫 V1.2 canonical 발행 시 byte-for-byte smoke test와 Preview Supabase 날짜별 Source snapshot 통합 검증 필요 |
+
+Git Daily JSON, `schema/daily.schema.json`, AI Researcher 자동화, Supabase migration과 Production 환경은 변경하지 않았다. V1.2는 Web presentation layer만 변경하며 main merge와 Production 배포는 사용자 검토 전 수행하지 않는다.
+
 ## V1.1 Morning Paper 진행 상태 — 2026-08-26
 
 | 영역 | 상태 | 결과 |

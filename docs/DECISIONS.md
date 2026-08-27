@@ -1,5 +1,37 @@
 # AI Daily Intelligence Decision Log
 
+## 2026-08-27 V1.2 Reader Content 결정
+
+### D-063 — 기존 canonical 필드를 Reader Copy로 그대로 투영한다
+
+- 상태: `confirmed`
+- 결정: V1.2 Dry Run이 Reader 용도로 명시한 `title`, `one_line_summary`, `why_it_matters`, `outlook`, `summary`, `morning_paper`를 추가 해석 없이 사용한다. Event Detail은 `why_it_matters`와 `outlook`을 먼저 배치하고 분석 원문은 후순위에 둔다. 현재 main Daily는 아직 V1.2로 간주하지 않는다.
+- 근거: Researcher V1.2 Dry Run은 현재 schema로 제목·쉬운 한줄·독자 관련성·전망·Insight를 표현할 수 있으며 새 `reader_copy` 필드명은 별도 schema 승인 전 정본에 쓰지 않는다고 명시한다.
+- 고려한 대안: Web 런타임 번역/재작성, 승인 전 optional field 추측, DB column 선추가
+- 이유: 같은 Git packet은 항상 같은 문장을 보여주고 Git 정본과 archive snapshot을 보존한다.
+- 영향: 이번 변경에는 daily schema, migration, importer 또는 RLS 변경이 없다. legacy 빈 필드는 기존 원문 fallback을 사용한다.
+- 재검토 조건: Researcher가 승인된 Reader 전용 필드를 실제 canonical packet에 기록할 때
+
+### D-064 — 없는 Event 유형·Action·Source locale은 표시하지 않는다
+
+- 상태: `confirmed`
+- 결정: `지금 해보기`, Event 유형과 `한국 기사` 표시는 명시적인 upstream 필드가 있을 때만 사용하며 현재는 추론하거나 생성하지 않는다.
+- 근거: 2026-08-27 Reader-Friendly 결과는 Production 미반영 Dry Run이고 schema 검토 전 예시 필드명을 정본에 쓰지 않는다고 기록한다.
+- 고려한 대안: Event tag/제목에서 유형 추론, 한글 publisher/title로 한국 기사 추정, `why_it_matters`에서 Action 생성
+- 이유: 잘못된 분류와 Web의 편집 책임 침범을 막고 Source 신뢰도에 암묵적 영향을 주지 않는다.
+- 영향: 섹션은 데이터가 없으면 생성되지 않는다. 향후 additive 계약에는 occurrence snapshot과 명시 locale/provenance가 필요하다.
+- 재검토 조건: Researcher schema와 importer mapping이 함께 승인될 때
+
+### D-065 — Archive Event Detail은 요청 날짜 occurrence를 유지한다
+
+- 상태: `confirmed`
+- 결정: `/daily/[date]`의 Event link에 날짜를 포함하고 Event Detail DAL은 해당 Briefing occurrence의 제목·요약·Analysis와 Source snapshot만 조회한다. 날짜 없는 일반 Event route만 최신 occurrence와 누적 Source를 사용한다.
+- 근거: 같은 Event가 후속 보강되면 최신 상세를 재사용하는 기존 link는 과거 발행 당시 문장을 재현하지 못한다.
+- 고려한 대안: 모든 과거 Event link를 최신 상세로 연결, 날짜별 별도 Event route 생성
+- 이유: public slug는 유지하면서 최소 query contract로 V1.1 occurrence snapshot 원칙을 완성한다.
+- 영향: 잘못되거나 해당 occurrence가 없는 date는 404이며 merge redirect도 date를 보존한다.
+- 재검토 조건: 날짜별 상세를 독립 canonical URL로 제공하는 제품 결정이 생길 때
+
 ## 2026-08-26 V1.1 결정
 
 ### D-062 — Today 방문자 통계는 Vercel의 일일 unique만 공개한다

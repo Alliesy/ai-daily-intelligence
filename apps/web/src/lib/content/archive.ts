@@ -268,8 +268,10 @@ export async function searchArchiveBriefings(query: string) {
   return (await getArchiveBriefingSummaries()).filter((summary) => matchesBriefingKeyword(summary, query));
 }
 
-export async function getArchiveEvent(slug: string) {
-  const files = (await listPackets()).reverse();
+export async function getArchiveEvent(slug: string, dateKst?: string) {
+  const files = dateKst
+    ? (await listPackets()).filter((file) => path.basename(file, ".json") === dateKst)
+    : (await listPackets()).reverse();
   for (const file of files) {
     const packet = mapPacket(await readPacket(file));
     const event = packet.events.find((item) => item.slug === slug || item.id === slug);

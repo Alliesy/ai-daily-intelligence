@@ -17,9 +17,9 @@ export const getLatestBriefing = cache(async () => shouldUseSupabase() ? getLate
 export const getBriefingByDate = cache(async (dateKst: string) => shouldUseSupabase() ? getSupabaseBriefingByDate(dateKst) : getArchiveBriefingByDate(dateKst));
 export const getBriefingSummaries = cache(async () => shouldUseSupabase() ? getSupabaseBriefingSummaries() : getArchiveBriefingSummaries());
 export const searchBriefings = cache(async (query: string) => shouldUseSupabase() ? searchSupabaseBriefings(query) : searchArchiveBriefings(query));
-export const getEventRoute = cache(async (slug: string) => {
-  if (shouldUseSupabase()) return getSupabaseEventRoute(slug);
-  const event = await getArchiveEvent(slug);
+export const getEventRoute = cache(async (slug: string, dateKst?: string) => {
+  if (shouldUseSupabase()) return getSupabaseEventRoute(slug, dateKst);
+  const event = await getArchiveEvent(slug, dateKst);
   return event ? { kind: "event" as const, event } : null;
 });
 export async function getEventSlugs() { return shouldUseSupabase() ? getSupabaseEventSlugs() : getArchiveEventSlugs(); }

@@ -1,5 +1,11 @@
 # AI Daily Intelligence Web V1 Database Schema
 
+## V1.2 Reader Content 검토 결과 (2026-08-27)
+
+Researcher V1.2 Reader-Friendly 결과는 docs-only Dry Run이며 2026-08-27 `main` packet은 아직 V1.2 canonical이 아니다. Dry Run이 명시한 기존 `news[].title`, `one_line_summary`, `why_it_matters`, `outlook`, `summary`와 `morning_paper`는 기존 Event occurrence와 Analysis projection에 이미 비손실 저장되므로 presentation 준비를 위한 schema 또는 Supabase migration은 추가하지 않는다.
+
+Web은 occurrence의 `title_ko → title_original`, `one_line_summary_ko` fallback과 해당 Briefing의 Analysis를 읽어 presentation 순서만 바꾼다. Event 유형, `지금 해보기`, Source locale은 현재 계약에 없으므로 column을 미리 만들거나 제목·도메인·본문에서 추론하지 않는다. 실제 upstream 필드와 validator가 승인되면 nullable additive migration, occurrence snapshot, importer idempotency와 legacy fallback을 함께 설계한다. 사용자 table, RLS, account deletion cascade와 content rebuild 경계는 변하지 않는다.
+
 ## V1.1 additive projection (2026-08-26)
 
 Migration `20260826000100_v11_morning_paper_projection.sql`은 기존 row와 RLS를 유지하며 nullable snapshot만 추가한다.

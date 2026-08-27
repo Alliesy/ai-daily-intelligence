@@ -2,6 +2,17 @@
 
 AI Daily Intelligence의 사용자에게 의미 있는 구조·기능 변경을 기록한다. Git daily archive와 AI Researcher 자동화 변경은 별도로 명시한다.
 
+## 2026-08-27
+
+### Web V1.2 Reader Content presentation
+
+- Researcher 계약의 `why_it_matters`와 `outlook`을 Event Detail의 핵심 설명으로 먼저 표시한다. 현재 main Daily는 아직 V1.2 Dry Run 콘텐츠로 승격되지 않았다.
+- AI 분석 enum과 문장은 유지하고 FACT/INTERPRETATION/SIGNAL/SPECULATION/OUTLOOK의 사용자 label을 한국어로 개선했다.
+- Source section을 `더 궁금하다면`으로 바꾸고 desktop/mobile editorial hierarchy를 유지했다.
+- daily schema, importer, Supabase migration/RLS, Git archive와 AI Researcher 자동화는 변경하지 않았다.
+- 현재 정본에 없는 Event 유형, `지금 해보기`, Source locale은 생성하거나 추론하지 않는다.
+- Archive Event link가 날짜를 보존해 동일 Event의 과거 occurrence 상세와 Source snapshot을 재현한다.
+
 ## 2026-08-26
 
 ### V1.1 Daily Intelligence Morning Paper

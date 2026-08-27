@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { buildInsightEvidence, buildMorningPaper, matchesBriefingKeyword, selectTodayOpportunity, selectTopEvents } from "./morning-paper";
+import { buildInsightEvidence, buildMorningPaper, eventDetailHref, matchesBriefingKeyword, selectTodayOpportunity, selectTopEvents } from "./morning-paper";
 import type { BriefingDto, EventDto, OpportunityDto } from "./types";
 
 function event(id: string, importance: "S" | "A" | "B", sources: EventDto["sources"] = []): EventDto {
@@ -64,5 +64,10 @@ describe("Morning Paper selection", () => {
     expect(matchesBriefingKeyword(summary, "OpenAI")).toBe(true);
     expect(matchesBriefingKeyword(summary, "2026-08-26")).toBe(true);
     expect(matchesBriefingKeyword(summary, "로봇")).toBe(false);
+  });
+
+  test("keeps the briefing date in archive Event links", () => {
+    expect(eventDetailHref("same-event", "2026-08-07")).toBe("/events/same-event?date=2026-08-07");
+    expect(eventDetailHref("same-event")).toBe("/events/same-event");
   });
 });

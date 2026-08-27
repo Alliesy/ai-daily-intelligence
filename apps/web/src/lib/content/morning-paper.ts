@@ -19,6 +19,10 @@ export function splitLegacyInsight(value: string) {
   return { headline: sentences[0] ?? text, summary: sentences.slice(1, 4).join(" ") };
 }
 
+export function eventDetailHref(slug: string, dateKst?: string) {
+  return dateKst ? `/events/${slug}?date=${encodeURIComponent(dateKst)}` : `/events/${slug}`;
+}
+
 function selectByKeys(events: EventDto[], keys: string[]) {
   const byKey = new Map(events.flatMap((event) => [[event.eventKey, event], [event.id, event]]));
   return keys.flatMap((key) => {

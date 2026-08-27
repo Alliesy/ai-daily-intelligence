@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Building2, FileText, Globe2, ShieldCheck } from "lucide-react";
 import { EventActions } from "@/components/event-actions";
 import { VisitorMetadata } from "@/components/visitor-metadata";
-import { buildMorningPaper } from "@/lib/content/morning-paper";
+import { buildMorningPaper, eventDetailHref } from "@/lib/content/morning-paper";
 import type { BriefingDto, EventDto } from "@/lib/content";
 
 function koreanDate(value: string) {
@@ -30,7 +30,7 @@ function sourceTime(value: string | null) {
 
 function EventCard({ event, index, historicalDate, showImage }: { event: EventDto; index: number; historicalDate?: string; showImage: boolean }) {
   const source = primarySource(event);
-  const href = `/events/${event.slug}`;
+  const href = eventDetailHref(event.slug, historicalDate);
   return (
     <article className="morning-event-card">
       <div className="flex items-start justify-between gap-3">
@@ -55,7 +55,7 @@ function EventCard({ event, index, historicalDate, showImage }: { event: EventDt
 export function MorningPaper({ briefing, isArchive = false }: { briefing: BriefingDto; isArchive?: boolean }) {
   const paper = buildMorningPaper(briefing);
   const time = updateTime(briefing.generatedAt);
-  const evidenceSourceCount = paper.evidence.events.flatMap((event) => event.sources).length;
+  const evidenceSourceCount = new Set(paper.evidence.events.flatMap((event) => event.sources.map((source) => source.id))).size;
   const opportunity = paper.opportunity;
 
   return (

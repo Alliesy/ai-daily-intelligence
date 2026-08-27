@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { mergeRedirectSlug, selectLatestOccurrence, selectLatestSourceOccurrences } from "./selection";
+import { mergeRedirectSlug, selectLatestOccurrence, selectLatestSourceOccurrences, selectOccurrenceByDate } from "./selection";
 
 describe("Event occurrence selection", () => {
   it("prefers the latest briefing date over a higher-revision past correction", () => {
@@ -12,6 +12,13 @@ describe("Event occurrence selection", () => {
     const oldRevision = { briefing_id: "a", daily_briefings: { date_kst: "2026-08-08", source_revision: 10 } };
     const newRevision = { briefing_id: "b", daily_briefings: { date_kst: "2026-08-08", source_revision: 11 } };
     expect(selectLatestOccurrence([oldRevision, newRevision])).toBe(newRevision);
+  });
+
+  it("selects the requested archive occurrence instead of the latest Event copy", () => {
+    const past = { briefing_id: "past", title_ko: "당시 제목", daily_briefings: { date_kst: "2026-08-07", source_revision: 10 } };
+    const latest = { briefing_id: "latest", title_ko: "후속 제목", daily_briefings: { date_kst: "2026-08-27", source_revision: 20 } };
+    expect(selectOccurrenceByDate([latest, past], "2026-08-07")).toBe(past);
+    expect(selectOccurrenceByDate([latest, past], "2026-08-08")).toBeNull();
   });
 });
 
