@@ -1,177 +1,180 @@
-## 2026-08-28 KST
+## 2026-08-29 KST
 
-> 조사 기준: 2026-08-27 07:00~2026-08-28 07:00 KST 신규 발표와 최근 7일 중요 후속 변화. 공식 문서·논문·저장소를 우선하고, 미확정 보도는 별도로 표시했습니다.
+> 조사 기준: 2026-08-28 07:00~2026-08-29 07:14 KST 신규 발표와 최근 7일 중요 후속 변화. 공식 발표·법원 원문·모델 저장소를 우선하고 수치·정책·판결은 독립 출처로 교차 확인했습니다.
 
 
 ## 오늘의 인사이트
 
-### AI, 답변 밖으로
+### AI, 성능보다 조건
 
-오늘의 변화는 더 좋은 답변보다 그 답변이 어디에서 배우고, 무엇을 움직이며, 누가 유통과 방어를 통제하는지에 모였습니다. 한국은 공공데이터를 앞당겨 열고, Anthropic은 장비 제어 표준을 시험하며, NVIDIA의 Hugging Face 인수 보도는 모델 유통의 소유권을 흔듭니다. 교육 실험과 공동 사이버 서한은 성능만큼 평가·권한·검증 설계가 중요하다는 같은 신호를 보냅니다.
+오늘은 더 큰 모델보다 ‘어떤 조건으로 쓰는가’가 더 크게 움직였습니다. 한국 정부는 세 플랫폼에 국민 AI 배포 기회를 줬고, Tencent는 770B급 모델을 열었으며, 미 법원은 정부가 안전 제한을 이유로 Anthropic을 광범위하게 배제할 수 없다고 판단했습니다. 동시에 GitHub는 비용·보존 기본값을 바꾸고 보험사는 승인된 에이전트가 낸 피해를 어떻게 보상할지 다시 쓰고 있습니다. 성능표 뒤의 권한·계약·데이터·책임 조건이 실제 채택 속도를 결정하는 날입니다.
 
 ## Top News · 3
 
-### 1. 정부, AI·고가치 공공데이터 Top 100 개방을 2027년으로 앞당긴다 · 92/100 · S
+### 1. ‘모두의 AI’ 수행기관에 SKT·카카오·KT 컨소시엄이 선정됐다 · 93/100 · S
 
 **한줄요약**  
-정부가 AI 학습·서비스에 활용도가 높은 공공데이터 100종의 전면 개방 목표를 2028년에서 2027년으로 앞당기고, 37개 공공저작물의 AI 활용 라이선스 전환도 추진합니다.
+정부가 전 국민 대상 범용 AI·공공 에이전트 사업자로 SKT·카카오·KT 컨소시엄을 선정하고, 올해 NVIDIA B200 GPU 512장과 내년 이후 운영비 지원 계획을 밝혔습니다.
 
 **핵심 분석**
 
-- FACT: 정부는 2025년 10종, 2026년 25종에 이어 2027년 나머지 65종을 개방해 Top 100을 완성하고, 37개 공공저작물을 AI 활용 가능한 공공누리 유형으로 전환할 계획입니다.
-- INTERPRETATION: 데이터 부족보다 발견성·스키마·라이선스·운영 안정성이 다음 병목이 됩니다.
-- SIGNAL: 2015년 이후 개방한 267개 고품질 데이터가 3,625개 민간 서비스에 활용됐다는 정부 집계는 수요 기반을 보여줍니다.
-- SPECULATION: 데이터셋별 준비 상태와 변경점을 검증해 주는 얇은 운영 레이어가 작은 팀의 진입 시간을 줄일 수 있습니다.
+- FACT: 과기정통부는 6개 신청자 중 SKT·카카오·KT 컨소시엄을 선정했고, 9월 협약과 베타를 거쳐 연내 범용 AI 챗봇·공공 AI 에이전트·생활 특화 서비스를 출시할 계획입니다. 올해 B200 512장을 지원하고 2027년부터 운영비도 정부 예산으로 지원할 예정입니다.
+- INTERPRETATION: 승부처는 모델 점수보다 국민 접점, 공공 연계, 비용과 안전한 실행 경험입니다.
+- SIGNAL: 전화·문자, 카카오톡, 다음·지니TV 같은 기존 채널이 AI 배포망으로 바뀝니다.
+- SPECULATION: 서비스가 실제 예약·증명서·금융 과업까지 맡으면 동의·대리권·취소·감사 기록을 비교하는 수요가 커질 수 있습니다.
 
 **왜 중요한가**  
-국내 개인·1~3인 팀이 해외 데이터 번역보다 한국 행정·법률·교통 문제에 바로 접근할 수 있는 원재료가 늘어납니다.
+국내 이용자는 별도 AI 앱을 배우지 않고 익숙한 채널에서 서비스를 받을 수 있지만, 개인정보와 실행 권한 조건을 사업자별로 비교해야 합니다.
 
 **전망**  
-2026년 진행 중인 25종의 실제 공개 여부와 2027년 65종 목록, 공공누리 전환 범위가 다음 확인점입니다.
+9월 협약, 9~10월 베타, 연내 정식 서비스에서 무료 범위·연계 업무·데이터 보존·사람 승인 구조를 확인해야 합니다.
 
 **출처**  
-- [대한민국 정책브리핑 · [보도자료] 한성숙 국무총리 주재 데이터관계장관회의](https://www.korea.kr/briefing/pressReleaseView.do?newsId=156775788&pWise=main&pWiseMain=L4) · verified
-- [연합뉴스 · 공공데이터 Top100 개방 1년 앞당긴다…AI 경쟁력 강화](https://www.yna.co.kr/amp/view/AKR20260827167200001) · corroborated
+- [대한민국 정책브리핑·과학기술정보통신부 · ‘모두의 AI’ 프로젝트 수행에 SKT·카카오·KT 3개 컨소 선정](https://www.korea.kr/news/policyNewsView.do?newsId=148970838&pWise=sub&pWiseSub=C3) · verified
+- [연합뉴스 · 6곳 붙은 ‘모두의 AI’…SKT·카카오·KT가 잡았다](https://www.yna.co.kr/view/AKR20260828050151017) · corroborated
 
-### 2. Anthropic, AI 에이전트가 실험실·공장 장비를 다루는 MHS를 공개했다 · 91/100 · S
+### 2. Tencent, 770B급 오픈 모델 Hy4 preview를 공개했다 · 91/100 · S
 
 **한줄요약**  
-Anthropic이 현미경·액체 처리기·로봇팔 등 물리 장비를 모델 독립적으로 연결하는 Model Hardware Standard 연구 프리뷰를 시작했습니다.
+Tencent가 총 770B·토큰당 49B 활성 MoE 구조와 100만 토큰 문맥을 갖춘 Hy4 preview 가중치·코드를 공개하고 코딩·문서·연구 업무를 전면에 내세웠습니다.
 
 **핵심 분석**
 
-- FACT: MHS는 프로그래밍 가능한 장비에 공통 read/write 프리미티브를 제공하고, MCP 같은 표준 프로토콜로 어떤 에이전트 하네스에서도 접근하도록 설계됐습니다. HHMI Janelia와 공동 시작했으며 현재는 연구실·첨단 제조 파트너 대상 프리뷰입니다.
-- INTERPRETATION: 범용 모델보다 장비별 안전 드라이버와 검증 가능한 실행 계층이 채택 속도를 좌우할 수 있습니다.
-- SIGNAL: AWS·과학·로봇·제조 파트너가 초기 생태계에 참여하고 있습니다.
-- SPECULATION: 오픈소스 공개 뒤에는 시뮬레이터, 적합성 테스트, 한국 장비 어댑터 시장이 생길 수 있습니다.
+- FACT: Hy4 preview는 78층 MoE, 총 770B·활성 49B, 최대 1M 문맥을 표방하며 Hugging Face와 GitHub 등에 모델·배포 코드를 공개했습니다. Tencent는 내부 전문가 163명이 203개 실제 과제를 블라인드 평가한 결과를 제시했고, 복잡한 장기 사고와 과도한 자기 검증을 알려진 한계로 적었습니다.
+- INTERPRETATION: 공개 가중치만으로 접근성이 높다고 보기 어렵고 8-GPU급 배포 비용과 실제 한국어 업무 성능이 핵심입니다.
+- SIGNAL: 오픈 모델의 경쟁 기준이 벤치마크에서 다중 파일·표·프레젠테이션·도구 호출로 확장됩니다.
+- SPECULATION: 저렴한 API나 더 작은 증류판이 나오면 한국 기업의 공급자 다변화 검토가 빨라질 수 있습니다.
 
 **왜 중요한가**  
-물리 장비 오류는 비용과 안전 사고로 이어지므로 소프트웨어 에이전트보다 훨씬 엄격한 승인·관측·복구 설계가 필요합니다.
+개발팀은 ‘오픈’이라는 말보다 라이선스, 필요한 GPU, 한국어 정확도, 장기 작업 실패율과 총 추론비용을 함께 비교해야 합니다.
 
 **전망**  
-안전 평가 결과, 지원 장비 목록, 오픈소스 라이선스와 공개 시점이 핵심 후속 지표입니다.
+독립 벤치마크, API 가격, FP8 실사용 메모리, 한국어 코딩·문서 품질과 정식 Hy4 개선폭을 추적해야 합니다.
 
 **출처**  
-- [Anthropic · Previewing the Model Hardware Standard](https://www.anthropic.com/news/model-hardware-standard-research-preview) · verified
-- [Reuters · Anthropic unveils new framework allowing AI agents to operate physical devices](https://www.reuters.com/technology/anthropic-unveils-new-framework-allowing-ai-agents-operate-physical-devices-2026-08-27/) · corroborated
+- [Tencent · Tencent Releases and Open-Sources Tencent Hy4 preview](https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/) · verified
+- [Tencent on Hugging Face · tencent/Hy4-preview](https://huggingface.co/tencent/Hy4-preview) · verified
+- [Reuters · China's Tencent releases new open-source AI model for coding, research tasks](https://www.reuters.com/world/asia-pacific/chinas-tencent-releases-new-open-source-ai-model-coding-research-tasks-2026-08-28/) · corroborated
 
-### 3. NVIDIA의 Hugging Face 129억달러 인수 합의가 보도됐다 · 86/100 · A
+### 3. 미 법원, Pentagon의 Anthropic 공급망 위험 지정을 위법으로 판단했다 · 90/100 · S
 
 **한줄요약**  
-Reuters는 NVIDIA가 Hugging Face를 129억달러에 인수하기로 합의했다는 보도를 전했지만, 양사는 아직 공식 확인하지 않았습니다.
+미 연방법원이 Anthropic을 국가안보 공급망 위험으로 지정하고 연방 사용을 막은 조치가 보복적이고 법적 근거가 부족하다며 취소했습니다.
 
 **핵심 분석**
 
-- FACT: Reuters는 The Information의 단일 관계자 보도를 인용해 129억달러 합의와 Hugging Face의 연환산 매출 1억5천만달러를 전했습니다. 양사 공식 발표는 확인되지 않았습니다.
-- INTERPRETATION: 현재 확정된 거래가 아니라 시장 구조 변화를 가늠하는 미확정 신호입니다.
-- SIGNAL: NVIDIA가 칩뿐 아니라 개발자 배포 접점과 오픈 모델 생태계까지 통합하려는 기대가 커졌습니다.
-- SPECULATION: 성사 시 기업들은 모델·가중치·런타임의 이식성과 독립 미러를 더 중요하게 볼 수 있습니다.
+- FACT: Rita Lin 판사는 59쪽 판결에서 Pentagon의 공급망 위험 지정과 광범위한 제재가 자의적이고 보복적이며 제1·제5수정 위반이라고 판단했습니다. Pentagon은 Anthropic 사용을 선택하지 않을 수 있지만 정부 전체와 계약망에서 처벌하는 방식은 막혔습니다.
+- INTERPRETATION: 고위험 AI 계약에서 ‘누가 최종 사용 경계를 정하는가’가 기술 문제가 아니라 헌법·조달 문제로 확장됐습니다.
+- SIGNAL: 안전 제한, 공급자 교체 가능성, 정부 소유의 승인·감사 계층이 계약 핵심 조건이 됩니다.
+- SPECULATION: 대형 기업 조달에서도 공급자 사용정책 변경과 모델 교체권을 명시하는 사례가 늘 수 있습니다.
 
 **왜 중요한가**  
-Hugging Face에 배포·검색·호스팅을 의존하는 소형 팀은 소유권 변화가 가격, 접근 정책, 중립성에 미칠 영향을 확인해야 합니다.
+한국 기업도 해외 AI API를 핵심 업무에 넣을 때 공급자 정책과 고객 요구가 충돌할 경우를 대비해 대체 모델·로그·승인 책임을 계약에 남겨야 합니다.
 
 **전망**  
-양사 공식 발표, 규제 신고, 거래 조건이 확인되기 전에는 의사결정 근거로 확정해 사용하면 안 됩니다.
+정부 항소 여부, 별도 D.C. 사건, 연방기관의 Claude 사용 복구와 향후 국방 계약 조건이 후속 확인점입니다.
 
 **출처**  
-- [Reuters · Nvidia agrees to buy Hugging Face for $12.9 billion, The Information reports](https://www.reuters.com/technology/nvidia-talks-acquire-hugging-face-13-billion-deal-business-insider-reports-2026-08-27/) · unverified
-- [Reddit r/LocalLLM · NVIDIA Agrees To Buy Hugging Face for $12.9 Billion](https://www.reddit.com/r/LocalLLM/comments/1vzhihf/nvidia_agrees_to_buy_huggingface_for_129_billion/) · unverified
+- [U.S. District Court, Northern District of California · Order in Anthropic PBC v. U.S. Department of War](https://www.courthousenews.com/wp-content/uploads/2026/08/j-rita-lin-order.pdf) · verified
+- [Reuters · US judge blocks Pentagon's Anthropic blacklisting](https://www.reuters.com/legal/government/us-judge-blocks-pentagons-anthropic-blacklisting-2026-08-28/) · corroborated
+- [Associated Press · Judge says Pentagon's measures against Anthropic were illegal and baseless](https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c) · corroborated
 
 ## More Signals · 2
 
-### 4. 1,053명 무작위 실험, ChatGPT는 답의 완성도를 높이고 인과 훈련은 아이디어 폭을 넓혔다 · 84/100 · A
+### 4. GitHub Copilot, 선결제·통합 에이전트 정책·계정 수명 보존으로 바뀐다 · 87/100 · A
 
 **한줄요약**  
-Bocconi·OpenAI 연구진의 2×2 무작위 실험에서 GPT-4o 접근은 표준 평가 점수를 높였고, 인과 추론 훈련은 더 다양하고 반증 가능한 아이디어를 만들었습니다.
+GitHub가 Business·Enterprise 좌석 선결제, 웹·모바일·클라우드 에이전트 정책 통합, 웹 채팅 데이터의 계정 수명 보존과 코드리뷰 기본 강도 상향을 예고했습니다.
 
 **핵심 분석**
 
-- FACT: 1,053명의 1학년 학생을 ChatGPT Edu(GPT-4o), 인과 추론 훈련, 둘 다, 대조군으로 학급 단위 무작위 배정했습니다. ChatGPT는 논리적 일관성과 아이디어 수·평가 점수를 높였고, 인과 훈련은 메커니즘 설명·반증 논리·집단 아이디어 다양성을 높였습니다.
-- INTERPRETATION: 잘 정의된 루브릭은 매끄러운 표준 답을 보상하면서 독창성을 놓칠 수 있습니다.
-- SIGNAL: AI 활용 교육의 병목이 도구 접근에서 평가 설계로 이동합니다.
-- SPECULATION: 한국 학교·기업 교육에서도 결과물과 사고 과정을 분리 평가하는 가벼운 루브릭 도구가 필요해질 수 있습니다.
+- FACT: 9월 1일부터 일부 신규 Business·Enterprise 가입을 재개하며 좌석 접근 전 결제를 요구하고, 기존 카드·PayPal 고객은 10월 1일부터 청구주기 시작 시 좌석을 선결제합니다. 9월 28일 이후 웹·모바일·클라우드 에이전트를 통합하며 웹 채팅은 28일 대신 계정 수명 동안 보존됩니다. 코드리뷰 기본 강도는 Lite에서 Balanced로 바뀝니다.
+- INTERPRETATION: 기능 통합이 편의성을 높이는 대신 데이터·비용 기본값을 관리자에게 더 오래 남깁니다.
+- SIGNAL: AI 개발도구의 통제 단위가 IDE 기능에서 조직 정책·에이전트 세션·비용센터로 이동합니다.
+- SPECULATION: 팀별 정책 diff와 변경 전 승인 증빙을 자동으로 만드는 운영 수요가 늘 수 있습니다.
 
 **왜 중요한가**  
-학생뿐 아니라 신입 직원·주니어 평가에서도 최종 문서만으로 실력을 판단하기 어려워집니다.
+회사 코드와 업무 맥락을 다루는 팀은 9월 말 전에 보존 정책, opt-out 영향, 좌석 회수와 초과 사용 한도를 검토해야 합니다.
 
 **전망**  
-다른 학문, 연령, 언어와 최신 모델에서 재현되는지, 학습의 장기 지속성이 있는지가 다음 질문입니다.
+GitHub가 실제 적용일, 관리자 보존·삭제 기능, 통합 정책 문구와 감사·내보내기 옵션을 추가하는지 확인해야 합니다.
 
 **출처**  
-- [OpenAI·Bocconi University · Training novices to think, or giving them LLMs? Evidence from an RCT](https://cdn.openai.com/pdf/novices-and-llm-august-2026.pdf) · verified
-- [OpenAI · Better answers, broader thinking: What students gain from ChatGPT and critical-thinking training](https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training/) · corroborated
+- [GitHub · Upcoming changes to GitHub Copilot policies and billing](https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing/) · verified
+- [Developers Digest · GitHub Copilot's September Reset: Prepaid Seats, One Policy, Lifetime Chat Data](https://www.developersdigest.tech/blog/github-copilot-september-policy-billing-reset-2026) · corroborated
 
-### 5. 100곳 넘는 기업·기관, AI 시대 ‘사이버 방어 총력전’을 촉구했다 · 83/100 · A
+### 5. AI 에이전트 사고를 두고 사이버 보험 약관이 다시 쓰이기 시작했다 · 85/100 · A
 
 **한줄요약**  
-OpenAI·Anthropic·Microsoft·Google·AWS·보안사·금융사 등 100곳 넘는 조직이 AI 기반 공격 확산 전에 중요 인프라 방어 역량과 신뢰된 접근을 확대하자는 공동 서한에 서명했습니다.
+MSIG·QBE·Beazley 등 보험사들이 정당한 권한을 받은 AI 에이전트가 스스로 피해를 낸 경우를 기존 해킹 정의로 보상할 수 있는지 약관을 재검토하고 있습니다.
 
 **핵심 분석**
 
-- FACT: 공동 서한은 병원·상수도·인터넷 기반시설을 우선 대상으로 저비용 AI 방어 도구, 지속 테스트, 최소 권한, 신뢰된 접근, 자금과 현장 지원을 촉구합니다.
-- INTERPRETATION: 공격 모델 제한만으로는 부족하며 방어 측의 배포·검증 능력이 안전의 병목이라는 인식입니다.
-- SIGNAL: AI·클라우드·보안·금융·인프라 기업이 같은 원칙에 서명했습니다.
-- SPECULATION: 향후 조달과 규제에서 ‘AI 생성 코드 검증’과 ‘에이전트 신원 추적’이 기본 증빙으로 요구될 수 있습니다.
+- FACT: Reuters가 8명의 보험·분석 관계자를 취재한 결과 여러 보험사가 자율 에이전트 피해를 반영해 사이버 약관을 검토하고 있으며, 일부 전문사는 AI 전용 보장을 제공합니다. 기존 약관은 무단 접근이나 명확한 보안 사건을 전제로 하지만 에이전트는 승인된 권한으로 피해를 낼 수 있습니다.
+- INTERPRETATION: ‘해킹인가 오류인가’의 분류가 보상 여부를 가를 수 있습니다.
+- SIGNAL: 보험사는 권한 수준, 사람 승인, 로그와 모델·도구 공급망을 인수 심사 자료로 요구할 가능성이 큽니다.
+- SPECULATION: 에이전트 운영 증빙이 보안 인증뿐 아니라 보험료와 보장 범위를 결정할 수 있습니다.
 
 **왜 중요한가**  
-소형 팀도 AI 생성 코드와 에이전트 권한을 쓰는 순간 최소 권한·패치 검증·추적 가능한 신원을 고객 요구로 받게 될 가능성이 높습니다.
+소형 팀도 에이전트에게 결제·배포·데이터 접근 권한을 주면 사고 때 기존 사이버 보험이 자동으로 보장한다고 가정하면 안 됩니다.
 
 **전망**  
-서명 기업의 실제 공개 도구, 중요 인프라 지원 프로그램, 정부 예산과 측정 지표가 후속 검증 포인트입니다.
+보험 갱신 시 AI 정의, 승인된 접근, 모델 오류, 업무중단, 제3자 피해와 하도급 공급자 조항이 어떻게 바뀌는지 추적해야 합니다.
 
 **출처**  
-- [OpenAI and signatories · A call for collective action on cyber defense](https://openai.com/collective-cyberdefense/) · verified
-- [Reuters · Major tech companies call for defensive surge to defeat AI-driven hacks](https://www.reuters.com/legal/litigation/major-tech-companies-call-defensive-surge-defeat-ai-driven-hacks-2026-08-27/) · corroborated
+- [Reuters · As AI agents go rogue, cyber insurers are adapting their policies](https://www.reuters.com/legal/litigation/ai-agents-go-rogue-cyber-insurers-are-adapting-their-policies-2026-08-27/) · verified
+- [Aon · AI Risk 2026: What Business Leaders Need to Know](https://www.aon.com/en/insights/articles/ai-risk-2026-practical-agenda) · corroborated
 
 ## 사업 아이디어 · 1
 
-### 공공데이터 변화 레이더 · 4.2/5 · ★★★★ · High
+### AI 권한 리허설 · 4.2/5 · ★★★★ · High
 
-- **문제:** 어떤 고가치 데이터가 실제 개방됐는지, 라이선스·필드·인증·응답 형식이 바뀌었는지 여러 공지와 문서를 오가며 수동 확인해야 합니다.
-- **고객:** data.go.kr 기반 제품을 만드는 한국 1~10인 AI·데이터 팀, SI 프리랜서, 공공데이터 컨설턴트
-- **기존 해결법:** 공공데이터포털 검색·공지, 개별 API 문서, GitHub 큐레이션·래퍼, 팀별 스프레드시트와 수동 헬스체크
-- **경쟁사:** 공공데이터포털, public-apis-4Kr, opendata-mcp, 개별 데이터 API 래퍼, 사내 모니터링 스크립트
-- **차별점:** Top 100만 좁게 추적해 ‘오늘 사용 가능 여부’, 라이선스, 스키마 diff, 마지막 정상 응답과 복사 가능한 샘플 요청을 한 화면에 제공합니다. 쓰기 작업 없이 읽기 전용으로 시작합니다.
-- **2주 MVP:** Top 100 중 10개를 수동 선정하고 매일 메타데이터 스냅샷, 라이선스·필드 diff, 샘플 curl/Python, 정상 응답 시각, 이메일/웹 알림을 구현합니다.
-- **난이도:** 중간 — 공개 메타데이터 수집은 쉽지만 데이터셋별 인증·스키마·응답 검증을 안정적으로 유지해야 합니다.
-- **수익화:** 공개 상태 카드는 무료, 팀별 감시 목록·Slack/이메일 알림·CSV 내보내기·변경 이력은 월 구독으로 판매합니다.
-- **반증 조건:** 10개 팀 인터뷰에서 6개 미만이 월 1회 이상 변경 확인에 시간을 쓰거나, 3개 미만이 월 3만원 이상 지불 의향을 보이면 중단합니다. 포털이 동일 기능을 공식 제공하면 재평가합니다.
-- **오늘의 구축 후보:** 아님 — 고객 접근 경로와 공식 포털 대체 위험이 아직 검증되지 않았습니다.
+- **문제:** 팀은 ‘allow/ask/never’ 같은 정책을 만들지만 실제 과업에서 어떤 정상 행동이 막히고 어떤 과도한 행동이 승인되는지 배포 전에 확인하기 어렵습니다.
+- **고객:** 브라우저·GitHub·MCP·사내 API를 연결한 AI 에이전트를 시험하는 한국 20~300인 조직의 개발·IT 운영·보안 담당자
+- **기존 해결법:** 각 제품의 권한 화면, 수동 승인, OPA 같은 정책 엔진, 보안 체크리스트, promptfoo·에이전트 평가 도구, 사이버 보험 설문
+- **경쟁사:** Open Policy Agent, promptfoo, GitHub·MCP 기본 권한 설정, AI 거버넌스 체크리스트, 보안 컨설팅·보험 인수 설문
+- **차별점:** 실행을 차단하거나 보안 판정을 내리지 않고, 팀이 작성한 자연어 정책을 20개 표준 과업·과도 행동 시나리오에 리허설해 과잉 승인·과잉 차단·사람 승인 피로와 필요한 로그를 한국어 보고서로 보여줍니다.
+- **2주 MVP:** JSON/CSV로 10개 도구 행동과 권한을 입력하고 allow/ask/never 규칙을 작성하면 정상 10개·과도 행동 7개를 재생해 승인률, 차단률, 프롬프트 수, 정책 diff와 PDF 체크리스트를 생성합니다. 실제 자격증명·차단·보험 판정은 제외합니다.
+- **난이도:** 중간 — 권한 정책 시뮬레이션은 가능하지만 실제 조직의 도구·승인 흐름을 일반화하고 보안 판단으로 오해되지 않게 해야 합니다.
+- **수익화:** 무료 로컬 리허설 1개, 팀별 정책 버전·감사 PDF·GitHub Check·보험 갱신용 증빙 내보내기를 월 구독으로 제공합니다.
+- **반증 조건:** 한국 에이전트 운영팀 12곳 중 8곳 미만이 배포 전 권한 테스트를 수동 수행하거나, 4곳 미만이 월 5만원 이상 지불 의향을 보이면 중단합니다. GitHub·MCP 플랫폼이 동일 시뮬레이션을 기본 제공하면 재평가합니다.
+- **오늘의 구축 후보:** 아님 — 고객 접근 경로와 플랫폼 기본 기능의 대체 위험이 아직 검증되지 않았습니다.
 
 ## 오늘의 도구
 
-- [PyLabRobot](https://github.com/pylabrobot/pylabrobot) · 오픈소스 Python SDK · ★★★★★ — MHS 발표로 하드웨어 독립 실험실 자동화 인터페이스가 다시 주목받습니다. 실물 장비 없이 브라우저 시각화·시뮬레이션부터 확인할 수 있습니다.
-- [Model Hardware Standard](https://www.anthropic.com/news/model-hardware-standard-research-preview) · 연구 프리뷰 표준 · ★★★★ — AI 에이전트와 물리 장비 사이의 공통 드라이버·안전 계층을 제안합니다. 현재는 신청형 프리뷰이므로 구조와 안전 원칙을 읽고 지원 장비 공개를 기다리는 단계입니다.
-- [public-apis-4Kr](https://github.com/yybmion/public-apis-4Kr) · GitHub 큐레이션 · ★★★★ — 한국 공공 API를 한곳에서 찾으려는 커뮤니티 수요를 보여줍니다. 새 국내 데이터 제품의 후보 API를 빠르게 훑는 출발점으로 유용합니다.
-- [opendata-mcp](https://github.com/aeriis-kr/opendata-mcp) · 공공데이터 MCP 서버 · ★★★ — data.go.kr API를 에이전트 도구로 연결하려는 초기 구현입니다. 권한·개인정보가 없는 읽기 전용 데이터로 로컬 테스트한 뒤 사용하세요.
+- [Hy4-preview](https://github.com/Tencent-Hunyuan/Hy4-preview) · 오픈 가중치·배포 코드 · ★★★★★ — 770B MoE·1M 문맥을 내세운 Tencent의 새 업무형 모델 코드가 공개됐습니다. 직접 운영 전 README의 GPU 요구와 알려진 한계를 확인하고 작은 한국어 과제로 API 제공 여부부터 비교하세요.
+- [vLLM](https://github.com/vllm-project/vllm) · 오픈소스 추론 서버 · ★★★★★ — Hy4가 공식 배포 경로로 권장하며 OpenAI 호환 API를 제공합니다. 대형 모델을 바로 받기보다 보유 GPU에 맞는 소형 모델로 지연·메모리 측정부터 시작하세요.
+- [SGLang](https://github.com/sgl-project/sglang) · 오픈소스 모델 런타임 · ★★★★★ — Hy4의 희소 attention·도구 호출 배포 레시피를 지원합니다. 운영 환경과 동일한 도구 호출 20개로 안정성과 실패 복구를 먼저 검증하세요.
+- [Open Policy Agent](https://github.com/open-policy-agent/opa) · 정책 엔진 · ★★★★ — 에이전트 권한을 프롬프트가 아니라 검증 가능한 정책 규칙으로 분리할 때 참고할 수 있습니다. 결제·배포·삭제 세 행동만 deny-by-default 규칙으로 표현해 테스트하세요.
 
 ## 커뮤니티
 
-- **Reddit · 기대보다 집중 우려가 큼:** [LocalLLM 이용자들은 인수 보도의 전략적 타당성보다 Hugging Face의 중립성과 오픈 모델 접근이 흔들릴 가능성을 더 크게 토론했습니다.](https://www.reddit.com/r/LocalLLM/comments/1vzhihf/nvidia_agrees_to_buy_huggingface_for_129_billion/)
-- **GitHub · 실용적 협업:** [PyLabRobot은 장비 지원·드라이버·문서 관련 이슈와 PR이 활발해 물리 AI의 실제 통합 난도를 보여줍니다.](https://github.com/pylabrobot/pylabrobot/issues)
-- **Other · 반복되는 통합 피로:** [국내 개발자 사례에서는 공공 API의 응답 형식·오류 코드·문서 차이를 직접 우회한 경험이 공유됩니다.](https://okky.kr/articles/1442705)
+- **Hacker News · 높은 관심, 윤리·계약 책임 논쟁:** [Anthropic 판결 글은 하루 안에 수백 개 댓글이 달리며 정부 조달권과 공급자의 안전 제한 권한이 충돌할 때 누가 결정해야 하는지를 두고 의견이 갈렸습니다.](https://news.ycombinator.com/item?id=49473522)
+- **GitHub · 보존과 내보내기 요구:** [Copilot 이용자들은 짧은 자동 삭제보다 긴 기록을 원하면서도 보존 기간과 내보내기·삭제 통제가 명확해야 한다고 요구해 왔습니다.](https://github.com/orgs/community/discussions/156605)
+- **Reddit · 비용 불투명성에 반발:** [개발자들은 Copilot의 크레딧 기반 가격과 모델별 소모량이 실제 팀 비용을 예측하기 어렵게 만든다는 불만을 공유합니다.](https://www.reddit.com/r/github/comments/1ttcpw0/github_copilots_new_creditbased_pricing_is/)
 
 ## 오늘의 스킬
 
-**증거 등급표 만들기** — 공식 발표, 독립 기사, 커뮤니티 반응이 섞여 같은 사건을 확정 사실처럼 오해하기 쉬울 때
+**권한 리허설 표 만들기** — AI 에이전트에 GitHub·메일·결제·사내 API 권한을 연결하기 전, 정상 행동과 과도 행동의 경계를 팀이 합의해야 할 때
 
-NVIDIA–Hugging Face 건을 ‘Reuters가 전한 미확정 보도’로 표시하고 공식 확인 전에는 가격·통합 계획을 사실 목록에 넣지 않습니다.
+‘PR 생성’은 allow, ‘main 병합’은 ask, ‘저장소 삭제’는 never로 두고 정상·오류·프롬프트 주입 상황에서 규칙이 어떻게 작동하는지 표로 검토합니다.
 
-> 다음 자료를 FACT / INTERPRETATION / SIGNAL / SPECULATION으로 나누고, 각 출처의 authority·verification_status·evidence_group을 표로 정리해줘. 같은 원문을 재인용한 기사는 독립 검증으로 세지 마.
+> 다음 AI 에이전트 도구 목록을 정상 행동·경계 행동·금지 행동으로 나누고 각 행동에 allow/ask/never를 제안해줘. 과잉 승인, 과잉 차단, 필요한 로그, 사람 승인 시점을 함께 표로 정리해줘.
 
 ## Worth Reading · 4
 
-- **Paper:** [Training novices to think, or giving them LLMs? Evidence from an RCT](https://cdn.openai.com/pdf/novices-and-llm-august-2026.pdf) — 1,053명 무작위 실험의 설계·효과 크기·평가 한계를 원문 표와 함께 확인할 수 있습니다.
-- **GitHub:** [PyLabRobot](https://github.com/pylabrobot/pylabrobot) — 물리 장비를 하나의 Python 인터페이스로 다루는 오픈소스의 실제 지원 범위와 위험 고지를 볼 수 있습니다.
-- **YouTube:** [Hugging Face Co-Founder on Open-Source Robot, Reports of Acquisition](https://www.youtube.com/watch?v=LF7GmLKgvcc) — 인수 보도와 오픈소스 로봇 전략을 Hugging Face 공동창업자의 발언 맥락에서 확인할 수 있습니다.
-- **Blog:** [Previewing the Model Hardware Standard](https://www.anthropic.com/news/model-hardware-standard-research-preview) — MHS의 구조, 초기 파트너, 제한 조건과 향후 오픈소스 계획을 공식 설명으로 읽을 수 있습니다.
+- **Paper:** [Do User-Authored Permission Policies Improve Protection Against AI Agent Overreach?](https://arxiv.org/abs/2608.27443) — 113명 실험으로 자연어 권한 정책이 사람 승인보다 과도 행동을 덜 막고 승인 피로도 충분히 줄이지 못한 결과를 확인할 수 있습니다.
+- **GitHub:** [Tencent-Hunyuan/Hy4-preview](https://github.com/Tencent-Hunyuan/Hy4-preview) — 모델 구조, vLLM·SGLang 배포법, 도구 호출 설정과 실제 하드웨어 요구를 코드 기준으로 확인할 수 있습니다.
+- **YouTube:** [Jackson Hole, Anthropic's Court Win and PayPal Deal](https://www.youtube.com/watch?v=BC2Z6MS4BFo) — Anthropic 판결을 같은 날의 경제·기술 뉴스 맥락에서 짧게 파악할 수 있습니다.
+- **Blog:** [Upcoming changes to GitHub Copilot policies and billing](https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing/) — 좌석 선결제, 통합 에이전트 정책, 계정 수명 데이터 보존과 코드리뷰 기본값 변경일을 공식 문구로 확인할 수 있습니다.
 
 ## 검증 메모
 
-- NVIDIA의 Hugging Face 인수 합의는 2026-08-27 Reuters가 단일 관계자 보도를 재인용한 단계이며, 양사 공식 확인이 없어 미확정으로 분류했습니다.
-- Model Hardware Standard는 제한된 파트너 대상 연구 프리뷰이며, 안전성 평가와 오픈소스 공개 일정은 확정되지 않았습니다.
-- 공공데이터 Top 100 조기 개방의 실제 API 품질·갱신 주기·상업적 활용 조건은 데이터셋별로 별도 확인해야 합니다.
-- 교육 무작위 실험은 단일 대학의 1학년 경영 과제와 GPT-4o 조건에 한정되어 다른 과목·연령·모델로 일반화하기 어렵습니다.
+- Tencent Hy4 preview의 성능 비교는 Tencent 내부 163명·203개 과제 블라인드 테스트와 자체 벤치마크 중심이며, 한국어·ERP·장기 에이전트 업무에 대한 독립 검증은 확인되지 않았습니다.
+- Anthropic 판결은 미 연방법원 1심 판단이며 정부가 항소할 수 있고, 별도의 워싱턴 D.C. 사건은 계속 진행 중입니다.
+- ‘모두의 AI’는 수행기관 선정 단계로, 실제 무료 범위·개인정보 처리·에이전트 권한·서비스 품질은 베타와 약관 공개 전까지 확정할 수 없습니다.
+- GitHub Copilot의 통합 정책·데이터 보존 변경은 2026-09-28 이후 적용 예정이며 세부 일정과 관리자 옵션이 바뀔 수 있습니다.
+- AI 에이전트 보험 보장은 보험사·국가·약관별로 다르며 Reuters 기사와 업계 자료는 특정 계약의 보상 여부를 보장하지 않습니다.
 
 ## 구축 후보
 
