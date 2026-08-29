@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-08-30",
+  "generated_at": "2026-08-29T22:02:17Z",
+  "status": "complete",
+  "warnings": [
+    "OpenAI의 Cursor 모델 공급 종료일 2026-11-12는 제안된 일정이며 양측 협의 결과에 따라 바뀔 수 있습니다.",
+    "AIHub 29종 데이터는 무료 공개됐지만 데이터셋별 라이선스·개인정보·중복·라벨 품질은 내려받기 전에 별도 확인이 필요합니다.",
+    "Alibaba의 100억달러급 AI 투자금 조달은 투자 계획이며 수익성과 집행 성과를 보장하지 않습니다.",
+    "MiniMax 수치는 회사의 반기 실적 발표에 기반하며 장기 수익성·고객 유지율·한국 시장 성과는 확인되지 않았습니다.",
+    "AI4Math 연구는 arXiv 저자 자기공개와 2026년 8월 20일까지의 불완전한 월 데이터를 사용하며, 공개문제 해결 여부도 저자 설명 기준입니다."
+  ],
+  "news": [
+    {
+      "event_key": "openai-cursor-model-access-wind-down-2026-08-29",
+      "title": "OpenAI, SpaceX가 인수한 Cursor에 모델 공급 종료를 예고했다",
+      "importance": "S",
+      "one_line_summary": "OpenAI가 Cursor에 제공하던 모델 계약을 정리하고 2026년 11월 12일 직접 접근 종료를 제안하면서, AI 개발도구의 핵심 모델이 기업 소유권과 계약 관계에 따라 바뀔 수 있음을 드러냈습니다.",
+      "impact": "AI 코딩도구 사용자는 기능 성능뿐 아니라 모델 공급 계약, 대체 경로, 데이터·프롬프트 이식성을 운영 리스크로 관리해야 합니다.",
+      "original_url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "key_quote": "we intend to wind down our contract providing OpenAI models to Cursor",
+      "quote_translation": "OpenAI는 Cursor에 모델을 제공하는 계약을 단계적으로 종료할 계획이라고 밝혔습니다.",
+      "summary": "FACT: OpenAI는 SpaceX에 Cursor 모델 공급 계약을 종료할 의사를 통보했고 제안된 종료일은 2026년 11월 12일입니다. Reuters는 Cursor 공동창업자가 협의가 계속되고 있다고 말했다고 보도했습니다. INTERPRETATION: 코딩도구의 모델 선택권은 제품 기능이 아니라 공급자 간 계약과 소유권에도 좌우됩니다. SIGNAL: 멀티모델 제품도 공급 계약, 프롬프트·정책 호환성, 사용자별 모델 의존도를 운영 지표로 관리해야 합니다. SPECULATION: 기업 고객은 특정 모델 단절 시 기능·비용·품질을 재현하는 전환 훈련을 조달 조건으로 요구할 수 있습니다.",
+      "why_it_matters": "Cursor에서 OpenAI 모델을 쓰는 팀은 11월 전에 실제 사용 비중, 대체 모델 품질, 저장된 규칙과 워크플로의 이식성을 확인해야 합니다.",
+      "industry_mood": {
+        "sentiment": "충격과 실무적 전환 질문",
+        "rationale": "온라인 반응은 기업 간 갈등보다 API 키 사용 가능 여부, 구독 경로, 대체 모델로 무엇이 달라지는지에 집중됐습니다."
+      },
+      "outlook": "양측 최종 합의, 직접 API 키 사용 범위, 향후 OpenAI 모델 제공 여부와 Anthropic·Google 대체 용량을 추적해야 합니다.",
+      "business_opportunity": "전일의 공급자 이탈 대응 아이디어와 중복되므로 새 사업 아이디어로 세지 않고, 기존 아이디어의 증거만 강화합니다.",
+      "tags": [
+        "OpenAI",
+        "Cursor",
+        "SpaceX",
+        "AI 코딩",
+        "공급자 리스크",
+        "모델 이식성"
+      ],
+      "score": 96,
+      "sources": [
+        {
+          "title": "Our decision on Cursor following its acquisition by SpaceX",
+          "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+          "publisher": "OpenAI",
+          "published_at": "2026-08-29",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-cursor-decision"
+        },
+        {
+          "title": "OpenAI to cut off AI models for SpaceX-owned Cursor, escalating feud with Musk",
+          "url": "https://www.reuters.com/business/media-telecom/openai-end-partnership-with-spacexs-cursor-2026-08-29/",
+          "publisher": "Reuters",
+          "published_at": "2026-08-29",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "reuters-cursor-reporting"
+        }
+      ]
+    },
+    {
+      "event_key": "kr-aihub-dokpamo-data-release-2026-08-27",
+      "title": "정부, 독자 AI 모델 학습 데이터 1.56조 토큰을 무료 개방했다",
+      "importance": "S",
+      "one_line_summary": "과기정통부와 NIA가 독자 AI 파운데이션 모델 5개 팀이 구축한 29종·3,544만 건·약 1.56조 토큰의 데이터를 AIHub에서 공개했습니다.",
+      "impact": "한국어·멀티모달 AI를 만드는 소형 팀과 연구자가 대규모 원천 데이터를 확보할 수 있지만, 실제 가치는 라이선스·품질·중복·전처리 비용에 달렸습니다.",
+      "original_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148970751&pWise=sub&pWiseSub=C3",
+      "key_quote": "29종의 AI 학습용 데이터 3544만 건을 무료 개방한다",
+      "quote_translation": "정부가 29종, 3,544만 건의 AI 학습 데이터를 무료로 공개했습니다.",
+      "summary": "FACT: 정부는 5개 정예팀에서 받은 29종 데이터 3,544만 건, 11.3TB, 약 1.56조 토큰을 품질·개인정보·유해성 검증과 라이선스 제외 절차를 거쳐 공개했습니다. INTERPRETATION: 데이터 양보다 모델 목적에 맞는 조합, 정제와 재현 가능한 품질 기록이 활용 성과를 가릅니다. SIGNAL: 국가 AI 지원이 GPU와 모델 개발뿐 아니라 민간 재사용 가능한 데이터 자산으로 확장됩니다. SPECULATION: 데이터셋별 품질·라이선스·중복을 비교하는 공개 벤치마크가 없으면 많은 팀이 같은 전처리 비용을 반복할 수 있습니다.",
+      "why_it_matters": "국내 개인·소형 팀은 구매 비용 없이 한국어·음성·영상 데이터에 접근할 수 있지만, 원본을 바로 학습에 넣기보다 샘플 검사와 라이선스 매핑이 먼저입니다.",
+      "industry_mood": {
+        "sentiment": "환영과 품질 경계",
+        "rationale": "대규모 무료 개방은 긍정적이지만 공공 AI 데이터의 과거 중복·라벨 품질 논란 때문에 실사용 검증 요구가 큽니다."
+      },
+      "outlook": "AIHub의 데이터셋별 상세 라이선스, 다운로드 안정성, 정제 리포트, 실제 학습 성과와 오류 신고·수정 이력을 확인해야 합니다.",
+      "business_opportunity": "새 서비스보다 우선 29종 데이터의 라이선스·샘플 품질·중복·학습 적합성을 공개 체크리스트로 검증할 가치가 있습니다.",
+      "tags": [
+        "한국",
+        "AIHub",
+        "학습 데이터",
+        "소버린 AI",
+        "오픈 데이터",
+        "한국어 AI"
+      ],
+      "score": 92,
+      "sources": [
+        {
+          "title": "‘독파모’ 정예팀 데이터 3544만 건 개방…‘AI허브’서 무료",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148970751&pWise=sub&pWiseSub=C3",
+          "publisher": "대한민국 정책브리핑·과학기술정보통신부",
+          "published_at": "2026-08-27",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "msit-aihub-release"
+        },
+        {
+          "title": "Korea Opens 35 Million AI Training Data Records for Free Use",
+          "url": "https://en.sedaily.com/technology/2026/08/27/korea-opens-35-million-ai-training-data-records-for-free-use",
+          "publisher": "서울경제",
+          "published_at": "2026-08-27",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "sedaily-aihub-reporting"
+        }
+      ]
+    },
+    {
+      "event_key": "alibaba-hk80b-ai-equity-placement-2026-08-23",
+      "title": "Alibaba, AI 전액 투자를 위해 약 100억달러 규모 신주를 발행했다",
+      "importance": "A",
+      "one_line_summary": "Alibaba가 홍콩에서 710만 주가 아닌 7억1천만 주의 신주를 주당 HK$112.70에 배정해 HK$800억을 조달하고 순수입 전액을 AI 인프라와 풀스택 역량에 쓰기로 했습니다.",
+      "impact": "AI 경쟁의 병목이 모델 연구비에서 칩·데이터센터·클라우드·응용 서비스를 함께 감당하는 자본 규모로 이동하고 있습니다.",
+      "original_url": "https://www.alibabagroup.com/en-US/document-2028384807859257344",
+      "key_quote": "use 100% of the net proceeds to invest in its full stack AI capabilities",
+      "quote_translation": "순수입 전액을 풀스택 AI 역량에 투자할 계획입니다.",
+      "summary": "FACT: Alibaba는 7억1천만 주를 HK$112.70에 배정해 HK$800억을 조달했으며, 순수입 전액을 AI 인프라 확장과 풀스택 역량에 사용한다고 밝혔습니다. Reuters는 이를 약 102억달러 규모이자 홍콩 상장사의 최대 1차 후속 주식 발행이라고 보도했습니다. INTERPRETATION: AI 모델·클라우드·칩에 동시에 투자하는 기업은 자본 조달 자체가 경쟁 전략이 됩니다. SIGNAL: 모델 가격 하락과 별개로 기반시설 투자비는 계속 커지고 있습니다. SPECULATION: 투자 회수 압력이 커지면 API 가격, 클라우드 번들, 엔터프라이즈 계약 조건이 빠르게 바뀔 수 있습니다.",
+      "why_it_matters": "한국의 소형 팀은 대형 공급자의 저가 API가 영구적이라고 가정하지 말고 비용 상한과 대체 공급자를 준비해야 합니다.",
+      "industry_mood": {
+        "sentiment": "규모에 대한 기대와 수익성 우려",
+        "rationale": "조달 규모는 AI 수요 자신감을 보여주지만 희석과 순이익·현금흐름 부담에 대한 시장 경계도 함께 나타났습니다."
+      },
+      "outlook": "조달 종결, 실제 AI 자본지출, 클라우드 매출 성장, 가격 정책과 투자 회수기간 변화가 후속 확인점입니다.",
+      "business_opportunity": "소형 팀에는 자본집약 모델 경쟁보다 여러 API의 비용·품질·이탈 위험을 관리하는 얇은 운영 계층이 더 현실적입니다.",
+      "tags": [
+        "Alibaba",
+        "AI 투자",
+        "자본조달",
+        "클라우드",
+        "AI 인프라"
+      ],
+      "score": 89,
+      "sources": [
+        {
+          "title": "Alibaba Group Announced Pricing of HK$80 Billion Placing",
+          "url": "https://www.alibabagroup.com/en-US/document-2028384807859257344",
+          "publisher": "Alibaba Group",
+          "published_at": "2026-08-23",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "alibaba-placement-release"
+        },
+        {
+          "title": "Alibaba launches $10 billion Hong Kong share placement to fund AI spending",
+          "url": "https://www.reuters.com/business/retail-consumer/alibaba-proposes-hong-kong-share-placement-worth-10-billion-2026-08-23/",
+          "publisher": "Reuters",
+          "published_at": "2026-08-23",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "reuters-alibaba-placement"
+        }
+      ]
+    },
+    {
+      "event_key": "minimax-h1-2026-revenue-growth-2026-08-26",
+      "title": "MiniMax, 상반기 매출 283% 증가로 저가 AI 수요를 수치로 보여줬다",
+      "importance": "A",
+      "one_line_summary": "MiniMax의 2026년 상반기 매출이 1억1,660만달러로 283.1% 늘고, 오픈 플랫폼·기업 서비스 매출은 703.1% 증가해 전체의 63.4%를 차지했습니다.",
+      "impact": "저가 모델과 API가 관심을 넘어 기업 매출로 전환되고 있으며, 미국 폐쇄형 모델 중심이던 조달 비교표가 더 복잡해집니다.",
+      "original_url": "https://www.minimax.io/news/minimax-announces-first-half-2026-financial-results-1787744160",
+      "key_quote": "Revenue from Open Platform and other AI-based enterprise services increased by 703.1%",
+      "quote_translation": "오픈 플랫폼과 기타 AI 기반 기업 서비스 매출이 전년 동기 대비 703.1% 증가했습니다.",
+      "summary": "FACT: MiniMax는 상반기 매출 1억1,660만달러, 전년 대비 283.1% 성장을 발표했고 기업·개발자 서비스 매출은 7,390만달러로 703.1% 증가했습니다. Reuters가 핵심 수치를 독립 보도로 확인했습니다. INTERPRETATION: 경쟁력의 일부는 최고 성능보다 추론 단가와 기업 API 채택에 있습니다. SIGNAL: 중국 AI 업체가 소비자 앱에서 기업 인프라 매출로 중심을 옮기고 있습니다. SPECULATION: 한국 기업의 공급자 검토에서는 데이터 국외 이전, 계약 관할, 지원 품질이 가격 절감폭만큼 중요해질 수 있습니다.",
+      "why_it_matters": "비용 민감한 한국 팀에는 선택지가 늘지만, 단가만 보고 전환하면 데이터·지연·법률·지원 위험을 놓칠 수 있습니다.",
+      "industry_mood": {
+        "sentiment": "강한 성장과 지속성 검증",
+        "rationale": "매출 증가율은 높지만 손실, 경쟁 심화와 장기 고객 유지 여부를 함께 확인해야 합니다."
+      },
+      "outlook": "연간 매출 목표 달성, 총마진, 기업 고객 유지율, 해외 매출 비중과 API 가격·가용성 추적이 필요합니다.",
+      "business_opportunity": "가격 비교만이 아니라 한국어 과업·데이터 조건·장애 대응까지 묶은 공급자 검증 표가 실무적으로 유용합니다.",
+      "tags": [
+        "MiniMax",
+        "AI API",
+        "기업 AI",
+        "저가 모델",
+        "중국 AI",
+        "매출"
+      ],
+      "score": 87,
+      "sources": [
+        {
+          "title": "MiniMax Announces First Half 2026 Financial Results",
+          "url": "https://www.minimax.io/news/minimax-announces-first-half-2026-financial-results-1787744160",
+          "publisher": "MiniMax",
+          "published_at": "2026-08-26",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "minimax-h1-results"
+        },
+        {
+          "title": "China's MiniMax sees revenue nearly quadruple in first half as AI demand surges",
+          "url": "https://www.reuters.com/world/china/chinas-minimax-sees-revenue-nearly-quadruple-first-half-ai-demand-surges-2026-08-26/",
+          "publisher": "Reuters",
+          "published_at": "2026-08-26",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "reuters-minimax-results"
+        }
+      ]
+    },
+    {
+      "event_key": "ai4math-arxiv-adoption-study-2026-08-25",
+      "title": "수학 논문에서 실질적 AI 활용 비중이 5개월 만에 14.09%로 늘었다",
+      "importance": "A",
+      "one_line_summary": "32,944개 arXiv 수학 논문을 조사한 연구에서 저자가 공개한 실질적 AI 활용 비중이 2026년 3월 1.39%에서 8월 20일까지 14.09%로 증가했습니다.",
+      "impact": "AI가 수학 문제 풀이 시연을 넘어 실제 연구 작성과 공개문제 탐색에 들어왔지만, 검증·공개·기여 표시 기준은 아직 고르지 않습니다.",
+      "original_url": "https://arxiv.org/abs/2608.24961",
+      "key_quote": "substantive use growing from 1.39% of Mathematics submissions in March to 14.09% through August 20",
+      "quote_translation": "수학 논문에서 실질적 AI 활용은 3월 1.39%에서 8월 20일까지 14.09%로 늘었습니다.",
+      "summary": "FACT: 연구진은 2026년 3월 1일부터 8월 20일까지 수학 관련 arXiv 제출 32,944건을 조사해 AI 사용 공개 3,575건, 실질적 수학 기여 포함 1,712건을 분류했습니다. INTERPRETATION: AI 연구 보조가 빠르게 확산하지만 자기공개에 의존해 미공개 사용을 놓치거나 기여 수준을 잘못 분류할 수 있습니다. SIGNAL: 평가의 초점이 정답률에서 연구과정 공개, 재현성, 인간 검토와 형식 검증으로 이동합니다. SPECULATION: 학회와 연구팀은 모델·프롬프트·검증 로그를 논문 부록에 표준화해 요구할 수 있습니다.",
+      "why_it_matters": "연구·교육 조직은 AI 사용 금지나 허용만 정하기보다 무엇을 공개하고 어떤 결과를 독립 검증할지 기준을 먼저 세워야 합니다.",
+      "industry_mood": {
+        "sentiment": "빠른 확산과 검증 부담",
+        "rationale": "채택 수치는 크지만 분야·국가·모델별 편중과 저자 자기보고의 한계가 분명합니다."
+      },
+      "outlook": "동료평가 통과율, 철회·정정률, 형식 검증 비중, 8월 이후 추세와 학회별 공개 규칙을 추적해야 합니다.",
+      "business_opportunity": "연구 노트·모델 사용·검증 결과를 자동 정리하는 도구가 유망하지만, 실제 연구팀의 지불 의사와 기존 전자연구노트 대체 위험이 검증되지 않았습니다.",
+      "tags": [
+        "AI4Math",
+        "수학 연구",
+        "arXiv",
+        "연구 투명성",
+        "형식 검증"
+      ],
+      "score": 84,
+      "sources": [
+        {
+          "title": "The Gold Rush in AI4Math: Where Are We Now?",
+          "url": "https://arxiv.org/abs/2608.24961",
+          "publisher": "arXiv",
+          "published_at": "2026-08-25",
+          "tier": "A",
+          "source_type": "paper",
+          "authority": "primary",
+          "verification_status": "verified",
+          "evidence_group": "ai4math-adoption-study"
+        }
+      ]
+    }
+  ],
+  "business_ideas": [],
+  "tools": [
+    {
+      "name": "Portkey AI Gateway",
+      "type": "오픈소스 멀티모델 게이트웨이",
+      "url": "https://github.com/portkey-ai/gateway",
+      "stars": 5,
+      "why_trending": "Cursor 사건이 특정 모델 공급 계약에 대한 제품 의존성을 다시 드러냈습니다.",
+      "worth_trying": "실제 전환 전에 동일 프롬프트 10개를 두 공급자에 보내 결과·지연·비용과 도구 호출 호환성을 비교하세요."
+    },
+    {
+      "name": "awesome-ai-for-math",
+      "type": "AI 수학 연구 자료 모음",
+      "url": "https://github.com/seewoo5/awesome-ai-for-math",
+      "stars": 4,
+      "why_trending": "AI4Math 논문과 도구가 빠르게 늘어나는 가운데 관련 연구를 한곳에서 추적할 수 있습니다.",
+      "worth_trying": "바로 자동증명에 쓰기보다 관심 분야의 데이터셋·검증 도구·형식화 수준을 먼저 확인하세요."
+    }
+  ],
+  "community": [
+    {
+      "platform": "Reddit",
+      "mood": "공급 중단보다 실제 사용 경로를 질문",
+      "one_line_summary": "Cursor 이용자들은 발표 직후 직접 OpenAI API 키 사용 가능 여부, 구독 모델 접근과 대체 모델 차이를 묻고 있어 전환 정보의 공백을 보여줍니다.",
+      "url": "https://www.reddit.com/r/cursor/comments/1w19lrl/openai_is_ending_its_cursor_partnership_after/"
+    }
+  ],
+  "skill_of_the_day": {
+    "name": "모델 공급 중단 리허설",
+    "when_to_use": "특정 AI 모델이나 코딩도구에 핵심 업무가 묶여 있을 때 계약 종료·가격 변경·장애 전에 대체 경로를 확인할 때",
+    "practical_example": "최근 작업 10개를 골라 현재 모델과 대체 모델에서 재실행하고 성공률, 지연, 비용, 도구 호출, 규칙 파일 호환성과 수동 보정 시간을 기록합니다.",
+    "prompt_example": "다음 AI 워크플로를 기준으로 공급자 중단 리허설 표를 만들어줘. 현재 의존성, 대체 모델, 데이터 이식, 프롬프트·도구 호환성, 비용 상한, 검증 과업 10개, 복구 책임자를 포함해줘."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "The Gold Rush in AI4Math: Where Are We Now?",
+      "url": "https://arxiv.org/abs/2608.24961",
+      "why_read": "32,944개 수학 논문을 바탕으로 AI의 실질적 연구 활용 증가와 분야·국가·모델 편중을 수치로 볼 수 있습니다."
+    },
+    {
+      "type": "GitHub",
+      "title": "Portkey-AI/gateway",
+      "url": "https://github.com/portkey-ai/gateway",
+      "why_read": "여러 모델 공급자를 하나의 인터페이스로 라우팅하면서 재시도·관측·정책을 분리하는 구현을 확인할 수 있습니다."
+    },
+    {
+      "type": "YouTube",
+      "title": "Fields Medalist: AI won't kill math but change mathematical research",
+      "url": "https://www.youtube.com/watch?v=alaRwbm6tNc",
+      "why_read": "AI가 수학 연구를 대체하기보다 검증·탐색 방식을 바꾼다는 연구자 관점을 짧게 확인할 수 있습니다."
+    },
+    {
+      "type": "Blog",
+      "title": "Our decision on Cursor following its acquisition by SpaceX",
+      "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+      "why_read": "모델 공급 종료 이유와 제안된 종료일을 OpenAI의 공식 문구로 직접 확인할 수 있습니다."
+    }
+  ],
+  "todays_insight": "AI, 모델보다 생태계",
+  "morning_paper": {
+    "insight_headline": "AI, 모델보다 생태계",
+    "insight_summary": "오늘 여러 사건을 함께 보면 경쟁력의 단위가 모델 하나에서 접근권·데이터·자본·매출·검증 체계로 넓어졌습니다. OpenAI 모델은 계약 때문에 Cursor에서 빠질 수 있고, 한국은 1.56조 토큰을 열었으며, Alibaba는 100억달러를 AI에 투입하고 MiniMax는 저가 API 수요를 매출로 바꿨습니다. AI4Math의 빠른 확산까지 더하면, 무엇을 쓰느냐만큼 누가 공급하고 무엇으로 학습하며 어떻게 검증하는지가 성과를 결정합니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "openai-cursor-model-access-wind-down-2026-08-29",
+      "kr-aihub-dokpamo-data-release-2026-08-27",
+      "alibaba-hk80b-ai-equity-placement-2026-08-23",
+      "minimax-h1-2026-revenue-growth-2026-08-26",
+      "ai4math-arxiv-adoption-study-2026-08-25"
+    ],
+    "top_event_keys": [
+      "openai-cursor-model-access-wind-down-2026-08-29",
+      "kr-aihub-dokpamo-data-release-2026-08-27",
+      "alibaba-hk80b-ai-equity-placement-2026-08-23"
+    ]
+  },
+  "build_candidate": null
+}
