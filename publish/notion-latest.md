@@ -1,52 +1,46 @@
-# 2026-08-30 · AI, 모델보다 생태계
+# 2026-08-31 브리핑
 
-[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-30.md) · [원본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-30.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-08-31.md) · [원본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-08-31.json)
 
-오늘 여러 사건을 함께 보면 경쟁력의 단위가 모델 하나에서 접근권·데이터·자본·매출·검증 체계로 넓어졌습니다. OpenAI 모델은 계약 때문에 Cursor에서 빠질 수 있고, 한국은 1.56조 토큰을 열었으며, Alibaba는 100억달러를 AI에 투입하고 MiniMax는 저가 API 수요를 매출로 바꿨습니다. AI4Math의 빠른 확산까지 더하면, 무엇을 쓰느냐만큼 누가 공급하고 무엇으로 학습하며 어떻게 검증하는지가 성과를 결정합니다.
+## 오늘의 인사이트
+
+### AI, 기능보다 운영
+
+오늘 여러 사건을 함께 보면 AI 경쟁의 단위가 새 기능에서 운영 체계로 이동했습니다. Codex 모델은 오늘 교체되고, Persistent mode는 더 오래 일하는 에이전트를 예고하며, Granite는 추론 예산과 배포 위치를 열었습니다. HBM 공급망과 초당 영상 가격까지 더하면 앞으로의 차이는 모델 점수보다 수명주기·권한·비용·공급망을 얼마나 안정적으로 관리하는지에서 납니다.
 
 ## Top News
 
-### 1. OpenAI, SpaceX가 인수한 Cursor에 모델 공급 종료를 예고했다
-
-OpenAI가 Cursor에 제공하던 모델 계약을 정리하고 2026년 11월 12일 직접 접근 종료를 제안하면서, AI 개발도구의 핵심 모델이 기업 소유권과 계약 관계에 따라 바뀔 수 있음을 드러냈습니다.
-
-[원문](https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/)
-
-### 2. 정부, 독자 AI 모델 학습 데이터 1.56조 토큰을 무료 개방했다
-
-과기정통부와 NIA가 독자 AI 파운데이션 모델 5개 팀이 구축한 29종·3,544만 건·약 1.56조 토큰의 데이터를 AIHub에서 공개했습니다.
-
-[원문](https://www.korea.kr/news/policyNewsView.do?newsId=148970751&pWise=sub&pWiseSub=C3)
-
-### 3. Alibaba, AI 전액 투자를 위해 약 100억달러 규모 신주를 발행했다
-
-Alibaba가 홍콩에서 710만 주가 아닌 7억1천만 주의 신주를 주당 HK$112.70에 배정해 HK$800억을 조달하고 순수입 전액을 AI 인프라와 풀스택 역량에 쓰기로 했습니다.
-
-[원문](https://www.alibabagroup.com/en-US/document-2028384807859257344)
+1. [Codex의 GPT-5.4·5.4 mini가 오늘 은퇴한다](https://developers.openai.com/codex/models) — ChatGPT로 로그인한 Codex에서 GPT-5.4와 GPT-5.4 mini가 2026년 8월 31일 종료돼 저장 설정·사용자 에이전트·예약 작업의 모델 이름을 바꿔야 합니다.
+2. [OpenAI, 멈출 때까지 일하는 Codex ‘Persistent mode’를 시험한다](https://www.wired.com/story/openai-is-developing-a-persistent-ai-agent/) — OpenAI가 Codex가 사용자가 중단할 때까지 작업을 이어가고 후속 과업을 제안할 수 있는 Persistent mode를 시험 중이라고 확인했지만 즉시 출시 계획은 없습니다.
+3. [IBM, 추론 강도를 조절하는 오픈 모델 Granite 4.2를 공개했다](https://research.ibm.com/blog/introducing-granite-4-2) — IBM이 3B·8B·30B 규모의 Apache 2.0 모델에 추론 on·low·off, 도구 호출과 장기 문맥을 넣어 로컬·기업 에이전트 선택지를 넓혔습니다.
 
 ## More Signals
 
-- **MiniMax, 상반기 매출 283% 증가로 저가 AI 수요를 수치로 보여줬다** — MiniMax의 2026년 상반기 매출이 1억1,660만달러로 283.1% 늘고, 오픈 플랫폼·기업 서비스 매출은 703.1% 증가해 전체의 63.4%를 차지했습니다. [원문](https://www.minimax.io/news/minimax-announces-first-half-2026-financial-results-1787744160)
-- **수학 논문에서 실질적 AI 활용 비중이 5개월 만에 14.09%로 늘었다** — 32,944개 arXiv 수학 논문을 조사한 연구에서 저자가 공개한 실질적 AI 활용 비중이 2026년 3월 1.39%에서 8월 20일까지 14.09%로 증가했습니다. [원문](https://arxiv.org/abs/2608.24961)
+- [SK hynix, 미국 첫 HBM 첨단 패키징 공장 착공에 들어갔다](https://news.skhynix.com/en/groundbreaking-ceremony-in-indiana/) — SK hynix가 인디애나에 40억달러 이상을 투자해 HBM 첨단 패키징·연구 거점을 짓고 2029년 하반기 양산을 목표로 잡았습니다.
+- [Alibaba Cloud, 문서도 30초 영상으로 바꾸는 Wan3.0을 정식 출시했다](https://www.alibabacloud.com/blog/wan3-0-at-general-availability-capabilities-benchmarks-pricing-and-the-workflows-it-changes_603505) — Wan3.0이 텍스트·이미지뿐 아니라 PDF·스프레드시트·슬라이드·웹페이지를 최대 30초 영상으로 만들고 해상도별 초당 단가를 공개했습니다.
 
 ## 사업 아이디어
 
-새로운 검증 아이디어 없음. 전일 아이디어와 겹치는 제안은 중복 생성하지 않았습니다.
+0개. 기존 검증 아이디어와 겹치거나 문제 근거·현실성 Gate가 부족해 새 아이디어를 만들지 않았습니다.
+
+## 오늘의 스킬
+
+**장기 에이전트 중단 조건 쓰기** — 배포·결제·외부 메시지는 항상 ask, 읽기·초안은 allow로 두고 30분·10달러·3회 실패 중 하나에 도달하면 자동 중단하도록 적습니다.
 
 ## Worth Reading
 
-- **Paper:** [The Gold Rush in AI4Math: Where Are We Now?](https://arxiv.org/abs/2608.24961)
-- **GitHub:** [Portkey-AI/gateway](https://github.com/portkey-ai/gateway)
-- **YouTube:** [Fields Medalist: AI won't kill math but change mathematical research](https://www.youtube.com/watch?v=alaRwbm6tNc)
-- **Blog:** [Our decision on Cursor following its acquisition by SpaceX](https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/)
+- **Paper:** [SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries](https://arxiv.org/abs/2608.12654) — 106개 업무 시나리오에서 장기 에이전트가 실행할지 멈출지 판단하는 정확도와 과잉 차단 문제를 확인할 수 있습니다.
+- **GitHub:** [ibm-granite/granite-4.2-language-models](https://github.com/ibm-granite/granite-4.2-language-models) — 모델 크기, 추론 모드, 도구 호출과 양자화별 사용법을 공개 코드와 예제로 확인할 수 있습니다.
+- **YouTube:** [Granite 4.2 (3B vs 8B): IBM's New Reasoning Models, Tested Locally](https://www.youtube.com/watch?v=sUjlKcsR3pk) — 3B와 8B를 로컬에서 설치·시험하는 과정을 보며 실제 하드웨어와 응답 차이를 빠르게 파악할 수 있습니다.
+- **Blog:** [Granite 4.2 LLMs: How They're Built](https://huggingface.co/blog/ibm-granite/granite-4-2) — 15T 토큰 학습, 512K 문맥, 추론 모드와 agentic RL 구성을 기술적으로 확인할 수 있습니다.
 
 ## 검증 메모
 
-- OpenAI의 Cursor 모델 공급 종료일 2026-11-12는 제안된 일정이며 양측 협의 결과에 따라 바뀔 수 있습니다.
-- AIHub 29종 데이터는 무료 공개됐지만 데이터셋별 라이선스·개인정보·중복·라벨 품질은 내려받기 전에 별도 확인이 필요합니다.
-- Alibaba의 100억달러급 AI 투자금 조달은 투자 계획이며 수익성과 집행 성과를 보장하지 않습니다.
-- MiniMax 수치는 회사의 반기 실적 발표에 기반하며 장기 수익성·고객 유지율·한국 시장 성과는 확인되지 않았습니다.
-- AI4Math 연구는 arXiv 저자 자기공개와 2026년 8월 20일까지의 불완전한 월 데이터를 사용하며, 공개문제 해결 여부도 저자 설명 기준입니다.
+- Persistent mode는 OpenAI가 시험 중이라고 확인한 연구 단계이며 출시 일정·기능·권한 경계는 확정되지 않았습니다.
+- Codex의 GPT-5.4 계열 은퇴는 ChatGPT 로그인 세션에만 적용되며 OpenAI API와 API 키 인증 Codex는 영향받지 않습니다.
+- Granite 4.2의 한국어·장기 에이전트 성능과 512K 문맥의 실제 품질은 독립 검증이 충분하지 않습니다.
+- SK hynix 인디애나 공장은 2029년 양산 계획으로 공정 일정·지원 조건·수요 전망이 바뀔 수 있습니다.
+- Wan3.0의 문서 기반 영상 품질·상업 이용 조건·한국어 정확도는 독립 비교가 부족합니다.
 
 ## 구축 후보
 
