@@ -1,45 +1,72 @@
-# 2026-09-01 브리핑
-
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-01.md) · [원본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-01.json)
+# 2026-09-02 · AI Daily Intelligence
 
 ## 오늘의 인사이트
 
-### AI, 병목은 연결부
+### AI, 추천에서 권한으로
 
-오늘 여러 사건을 함께 보면 AI의 힘은 모델 하나보다 연결부에서 커지고 있습니다. 금융당국은 공용 모델·클라우드의 동시 위험을 경고했고, NVIDIA는 맞춤형 칩이 자사 랙에 연결되도록 투자했으며, 유럽은 부족한 컴퓨팅 입구를 공공 인프라로 넓힙니다. GitHub Spark 종료까지 더하면 앞으로 중요한 것은 무엇을 쓰느냐뿐 아니라 어디에 묶이고, 끊길 때 어떻게 옮기는지입니다.
+오늘 사건들은 AI가 답을 잘 쓰는 도구에서 기록을 읽고, 코드를 승인하고, 장시간 작업하며, 고위험 능력의 접근권을 나누는 운영 주체로 이동했음을 보여줍니다. 이제 핵심 질문은 어느 모델이 더 똑똑한지가 아니라 어떤 데이터와 행동을 누구의 승인 아래 맡기고, 틀렸을 때 자동으로 멈추는지입니다.
 
 ## Top News
 
-1. [FSB, 프런티어 AI 사이버 위험을 금융권의 ‘가장 즉각적 우려’로 지목했다](https://www.fsb.org/2026/08/fsb-chairs-letter-to-g20-finance-ministers-and-central-bank-governors-august-2026/) — 금융안정위원회 의장이 G20 재무장관·중앙은행 총재에게 프런티어 AI가 공격 속도·규모·비용을 바꿔 금융시장 신뢰를 흔들 수 있다고 경고했습니다.
-2. [NVIDIA, MediaTek에 35억달러를 투자해 맞춤형 AI 칩 동맹을 넓혔다](https://nvidianews.nvidia.com/news/nvidia-and-mediatek-deepen-long-standing-partnership-to-build-ai-edge-to-cloud-computing-platforms) — NVIDIA가 MediaTek 전환사채에 35억달러를 투자하고 NVLink Fusion을 맞춤형 XPU, 로컬 AI PC와 자동차 플랫폼에 공동 적용하기로 했습니다.
-3. [유럽, 수요 초과에 3억8780만유로 규모 LUMI-AI를 발주했다](https://www.globenewswire.com/news-release/2026/08/31/3353040/0/en/bull-selected-to-deliver-europe-s-387-8-million-lumi-ai-supercomputer-in-finland.html) — EuroHPC와 6개국 컨소시엄이 프랑스 Bull에 LUMI-AI 슈퍼컴퓨터를 발주해 2027년 하반기 핀란드에서 가동하고 기존 LUMI 대비 AI 용량을 10배로 늘릴 계획입니다.
+### 1. Anthropic, Claude Fable 5.1·Mythos 5.1과 기업용 보호장치를 함께 공개했다
+
+Anthropic이 장기 코딩·지식 작업용 Fable 5.1을 출시하고 제한형 Mythos 5.1, 캐시 읽기 비용 75% 인하, 고객 클라우드에 데이터를 두는 Enterprise Frontier Safeguards를 발표했습니다.
+
+**왜 중요한가:** 한국의 1~3인 개발팀은 새 모델 성능보다 실제 작업 한 건의 캐시 비용, 중단률, 데이터 보존과 대체 모델 경로를 먼저 시험해야 합니다.
+
+[원문·검증 출처 보기](https://www.anthropic.com/claude-fable-and-mythos-5-1)
+
+### 2. OpenAI, ChatGPT에 Epic 환자기록과 9개 공식 의료 데이터원을 연결했다
+
+ChatGPT for Healthcare가 권한 있는 Epic 환자기록을 읽고 PubMed·DailyMed·ClinicalTrials.gov·CMS 등 9개 공식 데이터원을 구조적으로 조회하도록 확장됐습니다.
+
+**왜 중요한가:** 한국 의료·헬스케어 팀은 범용 챗봇 도입보다 읽기 권한, 출처 버전, 환자별 접근 로그, 원문 링크와 사람의 최종 판단을 제품 요구사항으로 고정해야 합니다.
+
+[원문·검증 출처 보기](https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/)
+
+### 3. GitHub, Copilot의 PR 승인을 필수 승인 규칙에 포함할 수 있게 했다
+
+관리자가 명시적으로 켜면 Copilot code review가 승인 리뷰를 제출해 저장소의 필수 승인 수를 채울 수 있는 공개 프리뷰가 시작됐습니다.
+
+**왜 중요한가:** 작은 팀은 속도를 얻을 수 있지만 결제·인증·데이터 마이그레이션·인프라 권한 파일에는 AI 단독 승인을 허용하지 않는 편이 안전합니다.
+
+[원문·검증 출처 보기](https://github.blog/changelog/2026-09-01-copilot-code-review-can-now-approve-pull-requests/)
 
 ## More Signals
 
-- [GitHub Spark, 소스 내보내기 기한을 끝으로 서비스를 종료했다](https://github.blog/changelog/2026-08-04-upcoming-deprecation-of-github-spark-on-github-com/) — GitHub의 AI 앱 제작 서비스 Spark가 2026년 8월 31일 종료됐으며 기존 배포 앱은 유지되지만 사용자는 종료 전 저장소로 소스를 내보내야 했습니다.
+- **미국·중국, G20 ‘Carolina Principles’의 가벼운 AI 규제 방향에 동참했다** — 미국이 AI 전용 규제기구 신설을 피하고 새로운 위험에만 별도 규칙을 두자는 원칙을 제안했으며 Reuters는 중국도 서명했다고 보도했습니다. [출처](https://www.reuters.com/legal/litigation/us-urges-hands-off-approach-ai-regulation-g20-tech-meeting-2026-09-01/)
+- **OpenAI, 미출시 Astra를 첫 ‘Critical’ 사이버 모델로 평가하고 접근을 제한한다** — OpenAI 관계자들은 미출시 Astra가 자율 취약점 발견·공격 연쇄 능력 때문에 추가 안전장치가 필요하며 최고 기능은 제한된 방어 파트너에게만 제공될 것이라고 밝혔습니다. [출처](https://www.reuters.com/business/openai-says-upcoming-model-is-so-capable-it-requires-stronger-guardrails-2026-09-01/)
 
-## 사업 아이디어
+## 사업 아이디어 · 1
 
-0개. 기존 검증 아이디어와 겹치거나 한국 사용자 문제 근거가 부족해 새 아이디어를 만들지 않았습니다.
+### 의료 근거 변경 레이더 · 4.1/5 · ★★★★ · High
 
-## 오늘의 스킬
+의약품 허가사항·급여 기준·임상시험·논문이 서로 다른 사이트에서 바뀌어 기존 AI 답변이나 안내 문구가 어느 버전을 근거로 했는지 추적하기 어렵습니다.
 
-**AI 연결부 의존성 지도** — 화면에서 시작해 모델 API, 비밀키, 데이터베이스, 저장소, 배포, 결제 순으로 연결선을 그리고 각 항목에 소유자·대체품·내보내기 방법·복구 시간을 적습니다.
+- 고객: 국내 디지털헬스 스타트업의 임상·규제 담당자, 소형 병원 연구팀, 의료 콘텐츠 검수팀
+- 차별점: 국내 공식 원문과 PubMed·임상시험 레코드의 버전 차이를 하나의 변경 묶음으로 만들고, 기존 문구·프롬프트·FAQ에서 영향을 받는 문장을 출처 링크와 함께 표시합니다.
+- 2주 MVP: 식약처 의약품안전나라 공개 변경 공지와 PubMed 저장 검색 2개만 연결해 URL·버전·변경 전후·영향 문구를 보여주는 읽기 전용 이메일/웹 리포트를 만듭니다.
+- 수익화: 팀당 월 구독과 변경 영향 리포트 수 기준 요금제
+- 반증 조건: 의료·헬스케어 실무자 10명 중 4명 미만이 월 2회 이상 수동 변경 확인을 하거나, 3곳 미만이 유료 파일럿 의사를 보이면 중단합니다.
+- 상태: 구축 후보 아님 — 문제 강도·고객 접근·대체 위험 미확인, 국내 의료 데이터 이용조건 게이트 실패
 
 ## Worth Reading
 
-- **Paper:** [Agent Safety Should Be a Runtime Contract](https://arxiv.org/abs/2608.11274) — 에이전트 안전을 모델 성향이 아니라 권한·예산·승인·감사 로그를 강제하는 실행 계약으로 다뤄야 한다는 주장을 볼 수 있습니다.
-- **GitHub:** [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector) — 설치할 Agent Skill의 프롬프트 주입, 과도 권한, 코드 실행과 공급망 위험을 정적·의미 분석으로 점검하는 구현을 확인할 수 있습니다.
-- **YouTube:** [Nvidia Deepens Chip Ties With $3.5 Billion MediaTek Bet](https://www.youtube.com/watch?v=KcFmfWj6X64) — NVIDIA–MediaTek 투자가 GPU 판매를 넘어 맞춤형 칩 연결 생태계를 넓히는 이유를 짧게 확인할 수 있습니다.
-- **Blog:** [Nvidia's NVLink Fusion Redefines Custom XPU Economics](https://www.techbuzz.ai/articles/nvidia-s-nvlink-fusion-redefines-custom-xpu-economics) — 자체 XPU가 늘어날수록 NVIDIA가 인터커넥트와 시스템 통합에서 어떤 경제적 위치를 확보하는지 분석합니다.
-
-## 검증 메모
-
-- FSB 서한은 G20에 제출된 위험 평가와 정책 권고이며 현재 한국 금융기관에 직접 적용되는 구속력 있는 규정은 아닙니다.
-- NVIDIA–MediaTek의 35억달러 투자는 전환사채 투자와 협력 계획으로, 맞춤형 XPU의 출시 일정·고객·성과는 확정되지 않았습니다.
-- LUMI-AI는 2027년 하반기 가동 목표이며 건설 일정·성능·접근 조건과 현재 컴퓨팅 수요 부족은 바뀔 수 있습니다.
-- GitHub Spark의 기존 배포 앱은 계속 동작한다고 공지됐지만 외부 모델·자격증명·빌드 의존성은 앱별로 따로 확인해야 합니다.
+- **Paper:** [DERELAB: Probing Defeasible Reasoning and Confirmation Bias in LLMs](https://arxiv.org/abs/2608.30413) — 9개 모델이 반대 증거를 확인하고도 결론을 잘 수정하지 않는 경향을 보인 최신 EMNLP 논문으로, AI 승인 전에 변화된 증거를 다시 묻는 이유를 설명합니다.
+- **GitHub:** [openclaw/openclaw](https://github.com/openclaw/openclaw) — 개인용과 팀용 에이전트를 같은 게이트웨이에서 운용하는 오픈소스 구현의 권한·채널·플러그인 구조를 직접 확인할 수 있습니다.
+- **YouTube:** [Building AI for better healthcare — the OpenAI Podcast](https://www.youtube.com/watch?v=VAzryGwnJW8) — 의료 AI가 기록 연결과 임상 워크플로에 들어갈 때 모델 성능 외에 필요한 현장 검증과 책임 경계를 이해하는 데 도움이 됩니다.
+- **Blog:** [Vibe Check: Fable 5.1—Anthropic Is So Back (Again)](https://every.to/vibe-check/fable-5-1-vibe-check) — 공식 벤치마크와 별개로 실제 글쓰기·코딩 작업에서 새 모델의 체감 장단점을 비교한 초기 독립 사용기입니다.
 
 ## 구축 후보
 
 없음. 자동 구현·설계·배포를 실행하지 않았습니다.
+
+## 검증 메모
+
+- Claude Fable 5.1의 성능·비용 절감 수치는 Anthropic과 초기 고객 평가이며 공개 독립 벤치마크 재현은 아직 없습니다.
+- ChatGPT 의료 데이터 연결은 미국의 적격 기관·사용자 중심이며 한국 EHR·의약품·급여 데이터 연결과 국내 규제 적합성은 확인되지 않았습니다.
+- Copilot PR 승인 기능은 opt-in 공개 프리뷰이며 출시 직후 독립적인 오류율·보안성 평가는 아직 없습니다.
+- Carolina Principles의 전체 공식 문서는 공개 확인되지 않았고 Reuters가 연설·참가국 발언을 바탕으로 보도했습니다.
+- OpenAI Astra는 미출시 모델이며 Reuters·Wired·WSJ가 회사 관계자 설명을 보도했지만 이번 조사에서 직접 연결 가능한 OpenAI 발표문은 확인하지 못했습니다.
+
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-02.md) · [정본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-02.json)
