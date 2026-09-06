@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-09-07",
+  "generated_at": "2026-09-07T06:58:38+09:00",
+  "status": "complete",
+  "warnings": [
+    "OpenAI 수석과학자의 확장 감속·중단선 제안은 회사의 공식 정책이나 법적 의무가 아니라 개인 명의의 공식 게시물입니다.",
+    "Daybreak의 10억달러는 현금 지출액이 아니라 6개월 내 사용을 목표로 한 보조 접근·교육·지원 약정이며 한국 제공 조건은 공개되지 않았습니다.",
+    "ASCII 스머글링 수치는 Microsoft Defender 관측 범위이고 전체 이메일 생태계의 공격 규모를 뜻하지 않습니다.",
+    "캘리포니아 SB 574는 의회를 통과했지만 주지사 서명 또는 거부 전이라 아직 시행 법률이 아닙니다.",
+    "Microsoft의 새 구간은 Azure 매출 가시성을 높이지만 제품별 비용·이익을 모두 공개하지는 않습니다."
+  ],
+  "news": [
+    {
+      "event_key": "openai-pachocki-alien-mind-rsi-safety-bars-2026-09-06",
+      "title": "OpenAI 수석과학자, AI 자기개선 앞두고 ‘필요하면 확장 감속’ 제안",
+      "importance": "S",
+      "score": 98,
+      "one_line_summary": "Jakub Pachocki가 2026년 9월 6일 어느 연구소도 최대 속도 확장을 오래 책임질 만큼 정렬·모니터링을 해결하지 못했다며 공동 안전선이 생길 때까지 자발적 감속을 제안했습니다.",
+      "impact": "프런티어 AI 경쟁의 내부 핵심 인사가 성능 확대보다 모니터링 신뢰를 병목으로 지목하면서, 출시 여부를 가르는 중단선과 외부 감사가 기술 로드맵의 일부가 됐습니다.",
+      "original_url": "https://openai.com/index/an-alien-mind/",
+      "key_quote": "This is a time that calls for extreme caution.",
+      "quote_translation": "지금은 극도의 주의를 요구하는 시기입니다.",
+      "summary": "FACT: Pachocki는 2026년 9월 6일 OpenAI 게시물에서 최신 모델의 사고 과정 모니터링이 더 어려워지고, AI가 AI 연구를 가속하는 재귀적 자기개선이 향후 과학 발견의 핵심이 될 수 있다고 썼습니다. 그는 공동 안전선 전까지 자발적 감속과 제3자 감사·정부·국제기구가 집행하는 의무 기준을 제안했습니다. Business Insider는 같은 날 그의 발언과 Sam Altman의 지지 공유를 독립 보도했습니다. INTERPRETATION: 이는 확장 중단을 선언한 회사 정책이 아니라 수석과학자의 공개 제안이지만, 능력보다 감시 가능성이 다음 출시를 제한할 수 있다는 신호입니다. SIGNAL: 고위험 AI 조달·배포에서 벤치마크 점수뿐 아니라 중단 조건, 외부 감사, 관측 불가 행동의 처리 규칙을 요구할 가능성이 커집니다. SPECULATION: 경쟁 연구소가 공통 안전선을 합의하지 못하면 각 사의 자율 감속은 짧아지고 정부 주도 규칙이 더 빨리 개입할 수 있습니다.",
+      "why_it_matters": "한국의 AI 에이전트 팀도 ‘잘 작동하는가’만 묻지 말고 어떤 관측 실패·권한 이탈·재현 불가 상황에서 출시나 자동 실행을 멈출지 숫자로 정해야 합니다.",
+      "industry_mood": {
+        "sentiment": "위험 인정은 환영하지만 회사 정책과 이해관계의 충돌에는 회의적",
+        "rationale": "공식 채널의 강한 경고는 주목받았으나 Hacker News에서는 ‘외계 지능’ 비유와 프런티어 연구소가 스스로 속도를 조절할 수 있다는 전제에 비판이 이어졌습니다."
+      },
+      "outlook": "OpenAI가 제안한 안전선을 회사 배포 정책에 반영하는지, 감사 주체·임계치·중단 절차를 공개하는지와 다른 프런티어 연구소의 동참 여부를 확인해야 합니다.",
+      "business_opportunity": "에이전트 배포 전 관측 가능성·권한·회복 가능성을 검사하고 중단 기준을 증거와 함께 남기는 독립 릴리스 게이트 수요를 재검토할 계기입니다.",
+      "tags": ["OpenAI", "재귀적 자기개선", "모니터링", "AI 안전", "중단선"],
+      "sources": [
+        {
+          "title": "An Alien Mind",
+          "url": "https://openai.com/index/an-alien-mind/",
+          "publisher": "OpenAI",
+          "published_at": "2026-09-06",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-pachocki-rsi-safety-bars"
+        },
+        {
+          "title": "OpenAI's chief scientist says AI labs may need to slow down",
+          "url": "https://www.businessinsider.com/openai-chief-scientist-ai-risks-slowdown-rogue-agents-consequences-safety-2026-9",
+          "publisher": "Business Insider",
+          "published_at": "2026-09-06T19:26:04Z",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "pachocki-independent-coverage"
+        }
+      ]
+    },
+    {
+      "event_key": "openai-daybreak-frontline-defenders-billion-2026-09-03",
+      "title": "OpenAI, 필수서비스 방어팀에 10억달러 규모 Daybreak 지원 약정",
+      "importance": "S",
+      "score": 94,
+      "one_line_summary": "OpenAI가 상하수도·전력·지방정부·지역은행·비영리단체·오픈소스 유지관리자에게 Daybreak 접근과 교육·기술지원을 보조하는 10억달러 규모 계획을 발표했습니다.",
+      "impact": "공격 능력과 방어 능력이 함께 커지는 시기에 고급 사이버 AI를 대기업 밖 운영자에게 배분하는 실험이 시작됐지만, 지원액의 실제 사용·선발·성과 기준은 아직 불명확합니다.",
+      "original_url": "https://openai.com/index/daybreak-for-frontline-defenders/",
+      "key_quote": "$1 billion in subsidized Daybreak access",
+      "quote_translation": "10억달러 규모의 보조된 Daybreak 접근",
+      "summary": "FACT: OpenAI는 2026년 9월 3일 Daybreak 접근·교육·기술지원·파트너십에 10억달러를 약정하고 미국 필수서비스 운영자를 우선하며 6개월 내 사용을 목표로 한다고 밝혔습니다. MS-ISAC과 공공·상하수도 분야 파일럿, 35개가 넘는 파트너 제품·서비스도 제시했습니다. Reuters가 금액·대상·배경을 독립 확인했습니다. INTERPRETATION: 현금 투자 발표가 아니라 보조 접근과 지원의 명목 가치여서 실제 채택률과 위험 감소가 핵심 성과입니다. SIGNAL: 고급 사이버 모델의 시장은 좌석 판매보다 검증된 조직 선발, 권한 통제, 교육과 책임 공유를 묶은 운영 프로그램으로 확장되고 있습니다. SPECULATION: 성공 사례와 비용 절감이 공개되면 공공 인프라 AI 조달이 모델 구독보다 지원·감사 패키지 중심으로 바뀔 수 있습니다.",
+      "why_it_matters": "한국의 보안 스타트업과 공공·금융 IT 팀은 모델 접근권 자체보다 어떤 시스템을 어떤 권한으로 검사하고 발견된 취약점을 누가 승인·수정하는지까지 묶은 방어 운영 상품을 준비해야 합니다.",
+      "industry_mood": {
+        "sentiment": "방어 격차 완화 기대와 실효성·선발 기준 의문이 공존",
+        "rationale": "지원 대상과 규모는 구체적이지만 신청 기준, 한국 제공 범위, 사용 후 가격과 독립 성과지표는 아직 공개되지 않았습니다."
+      },
+      "outlook": "첫 선정 기관, 국가별 제공 범위, 보조금 산정 방식, 취약점 발견·수정 성과와 사고 책임 구조를 추적해야 합니다.",
+      "business_opportunity": "소규모 필수서비스 운영자가 AI 보안도구를 도입할 때 자산목록·승인 범위·수정 우선순위·감사 증거를 묶어주는 현지 운영 파트너 수요가 생길 수 있습니다.",
+      "tags": ["OpenAI", "Daybreak", "사이버보안", "필수서비스", "공공 인프라"],
+      "sources": [
+        {
+          "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+          "url": "https://openai.com/index/daybreak-for-frontline-defenders/",
+          "publisher": "OpenAI",
+          "published_at": "2026-09-03",
+          "tier": "A",
+          "source_type": "official_announcement",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-daybreak-frontline"
+        },
+        {
+          "title": "OpenAI commits $1 billion to cyberdefense effort amid AI safety scrutiny",
+          "url": "https://www.reuters.com/legal/litigation/openai-commits-1-billion-cyberdefense-effort-amid-ai-safety-scrutiny-2026-09-03/",
+          "publisher": "Reuters",
+          "published_at": "2026-09-03T21:42:00Z",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "daybreak-reuters"
+        }
+      ]
+    },
+    {
+      "event_key": "microsoft-ascii-smuggling-phishing-disclosure-2026-09-03",
+      "title": "Microsoft, 보이지 않는 Unicode로 필터를 우회한 대규모 피싱 공개",
+      "importance": "S",
+      "score": 92,
+      "one_line_summary": "Microsoft가 AI 프롬프트 주입 연구로 알려진 ASCII 스머글링이 금융 피싱에 전용돼 하루 탐지량이 약 2만1000건에서 130만건 이상으로 뛴 사례를 공개했습니다.",
+      "impact": "사람에게 보이는 문자열과 필터·AI가 읽는 문자열의 차이가 프롬프트 공격뿐 아니라 기존 메일 보안도 우회해, 입력 정규화와 렌더링 비교가 공통 보안 계층이 됐습니다.",
+      "original_url": "https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/",
+      "key_quote": "What is new is the specific characters and scale.",
+      "quote_translation": "새로운 점은 특정 문자와 공격 규모입니다.",
+      "summary": "FACT: Microsoft는 2026년 9월 3일 U+E0000~U+E007F 태그 문자를 금융 유인 단어 중간에 넣은 캠페인을 공개했습니다. 자사 텔레메트리에서 2월 8일 약 2만1000건이던 서명이 다음 날 130만건 이상, 2월 11일 230만건 이상으로 늘었고 고용량 단계가 약 3개월 지속됐습니다. 계층형 Defender 보호가 대다수를 별도 신호로 탐지했다고 밝혔고 The Hacker News가 수치와 캠페인을 독립 보도했습니다. INTERPRETATION: AI 특화 공격기법이 전통 피싱으로 이동했다기보다, 같은 표현 차이를 공격자가 여러 탐지 파이프라인에 재사용한 사례입니다. SIGNAL: 이메일·문서·RAG 입력에서 원문, 정규화 문자열, 실제 렌더링을 비교하는 전처리가 모델 보안과 일반 보안의 공통 요구가 됩니다. SPECULATION: 공격자가 태그 문자 외 변형 선택자·양방향 제어문자까지 혼합하면 단일 정규화 규칙만으로는 우회와 오탐을 동시에 줄이기 어렵습니다.",
+      "why_it_matters": "한국의 문서·메일 연동 AI 팀은 모델 호출 전에 숨은 Unicode를 표시·격리하고, 정규화 전후 차이를 사람에게 보여주며, 탐지 하나가 실패해도 외부 링크·발신자·행동 권한 검사가 남도록 설계해야 합니다.",
+      "industry_mood": {
+        "sentiment": "실제 규모에 경계하면서도 계층형 방어의 효과는 확인",
+        "rationale": "수백만 건 신호가 관측됐지만 Microsoft는 대다수 메시지가 Unicode 전용 규칙이 아닌 다른 Defender 보호에도 잡혔다고 명시했습니다."
+      },
+      "outlook": "메일·문서 수집기의 Unicode Tags·변형 선택자·양방향 제어문자 처리, 정규화 오탐, AI 에이전트의 숨은 지시 실행 여부를 실제 파일로 재검증해야 합니다.",
+      "business_opportunity": "계약서·이력서·메일·RAG 문서의 ‘사람에게 보이는 내용 대 AI가 읽는 내용’을 비교해 CI나 수신함에서 차단하는 경량 스캐너 수요가 확인됩니다.",
+      "tags": ["Microsoft", "ASCII 스머글링", "피싱", "프롬프트 주입", "Unicode"],
+      "sources": [
+        {
+          "title": "ASCII smuggling crosses over from AI prompt injection to phishing evasion",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/",
+          "publisher": "Microsoft Security",
+          "published_at": "2026-09-03",
+          "tier": "A",
+          "source_type": "threat_research",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "microsoft-ascii-smuggling-telemetry"
+        },
+        {
+          "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
+          "url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
+          "publisher": "The Hacker News",
+          "published_at": "2026-09-04",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "ascii-smuggling-independent"
+        }
+      ]
+    },
+    {
+      "event_key": "california-sb574-lawyer-generative-ai-passed-2026-09-01",
+      "title": "캘리포니아 의회, 변호사의 AI 인용 검증·기밀 보호 법안 통과",
+      "importance": "A",
+      "score": 90,
+      "one_line_summary": "SB 574가 양원을 통과해 변호사의 AI 산출물 검증·오류 수정·법원 인용 직접 확인·기밀정보 입력 제한과 중재인의 AI 결정 위임 금지를 요구하고 주지사 결정을 기다립니다.",
+      "impact": "‘AI를 썼다’는 표시보다 사람이 무엇을 직접 검증하고 어떤 정보를 입력하지 않았는지 증명하는 절차가 전문서비스의 규제 단위로 구체화됐습니다.",
+      "original_url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB574",
+      "key_quote": "shall not delegate the practice of law",
+      "quote_translation": "법률 업무를 위임해서는 안 됩니다.",
+      "summary": "FACT: 캘리포니아 SB 574의 의회 통과본은 변호사가 법률 업무를 생성형 AI에 위임하지 못하게 하고, 산출물 정확성 검증과 오류 수정, 법원 제출 인용의 개인 직접 확인, 일정 기밀·개인·비공개 정보 입력 금지를 규정합니다. 중재인은 결정 일부를 AI에 위임할 수 없습니다. Reuters는 양원이 8월 31일까지 같은 본문을 승인했고 법안이 Gavin Newsom 주지사의 서명 또는 거부를 기다린다고 9월 1일 보도했습니다. INTERPRETATION: 아직 법률은 아니며 일부 의무는 기존 윤리규칙과 겹치지만 AI 사용 증거를 더 직접적인 제재 근거로 만드는 시도입니다. SIGNAL: 법률·세무·회계·의료처럼 책임 주체가 분명한 업무에서 인용 검증, 데이터 입력 통제, 인간 승인 기록이 제품 기능으로 요구될 수 있습니다. SPECULATION: 서명되면 다른 주와 전문직 규제기관이 비슷한 ‘비위임·직접 검증’ 문구를 채택할 가능성이 있습니다.",
+      "why_it_matters": "한국 전문서비스 팀도 해외 법안 자체를 국내 의무로 오해하지 말고, AI 산출물의 출처·직접 확인자·수정 내역·민감정보 입력 여부를 남기는 운영 규칙을 선제적으로 시험할 수 있습니다.",
+      "industry_mood": {
+        "sentiment": "명확한 책임선이라는 평가와 기존 윤리의 중복이라는 비판이 병존",
+        "rationale": "Reuters가 인용한 법률 전문가는 기준 강화 효과를 인정하면서도 이미 존재하는 변호사 윤리 의무와 상당 부분 겹친다고 평가했습니다."
+      },
+      "outlook": "9월 30일까지 주지사 서명·거부 여부, 시행일, 적용되는 생성형 AI 시스템 범위와 법원 제출 공개 방식의 세부 규칙을 확인해야 합니다.",
+      "business_opportunity": "전문가가 인용 원문과 민감정보 입력 여부를 직접 확인하고 승인 기록을 남기는 업무별 AI 증거 계층 수요를 검증할 근거입니다.",
+      "tags": ["California", "SB 574", "법률 AI", "인용 검증", "기밀 보호"],
+      "sources": [
+        {
+          "title": "SB 574: Attorneys, arbitrators, judicial officers, and alternative dispute resolution",
+          "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB574",
+          "publisher": "California Legislative Information",
+          "published_at": "2026-08-31",
+          "tier": "A",
+          "source_type": "legislation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "california-sb574-official"
+        },
+        {
+          "title": "California lawmakers pass bill governing lawyers' use of AI",
+          "url": "https://www.reuters.com/legal/government/california-lawmakers-pass-bill-governing-lawyers-use-ai-2026-09-01/",
+          "publisher": "Reuters",
+          "published_at": "2026-09-01T23:17:00Z",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "sb574-reuters"
+        }
+      ]
+    },
+    {
+      "event_key": "microsoft-fy27-agents-infra-azure-revenue-reporting-2026-09-02",
+      "title": "Microsoft, 재무보고를 ‘Agents and Infra’ 중심으로 재편하고 Azure 매출 공개",
+      "importance": "A",
+      "score": 89,
+      "one_line_summary": "Microsoft가 FY2027부터 세 사업 구간을 ‘Agents and Infra’와 ‘Devices and Consumer’ 두 구간으로 바꾸고 Azure 분기 매출액을 처음 공개합니다.",
+      "impact": "AI가 제품군 하나가 아니라 회사의 자원 배분·매출 분류 기준으로 자리 잡았고, 투자자는 Azure 성장률 대신 실제 매출을 비교할 수 있지만 AI 제품별 수익성은 여전히 분리되지 않습니다.",
+      "original_url": "https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424",
+      "key_quote": "AI represents a profound shift in both technology and business.",
+      "quote_translation": "AI는 기술과 비즈니스 모두의 근본적 전환입니다.",
+      "summary": "FACT: Microsoft는 2026년 9월 2일 8-K에서 FY2027부터 기존 세 구간을 ‘Agents and Infra’와 ‘Devices and Consumer’로 바꾸겠다고 공시했습니다. Azure·M365 Cloud 등 핵심 사업의 분기 매출 투명성을 높이겠다고 밝혔고 Reuters는 최근 분기 Azure 매출 294억달러, 최근 회계연도 1019억달러를 확인했습니다. INTERPRETATION: AI가 독립 제품군이라기보다 클라우드·업무 소프트웨어를 묶는 회사 운영 축이 됐다는 회계적 선언입니다. SIGNAL: 공급업체 평가에서 ‘AI 매출’이라는 홍보 수치보다 제품별 매출·비용·마진·종료 가능성을 구분해야 할 필요가 커집니다. SPECULATION: 다른 대형 기술사도 AI 인프라와 에이전트 매출을 더 직접 공개하라는 투자자 압력을 받을 수 있습니다.",
+      "why_it_matters": "한국 팀은 Microsoft 생태계 매출 확대를 수요 증거로 보되, Azure·M365·GitHub가 같은 묶음에 들어가는 만큼 어느 제품이 실제 고객 문제와 이익을 만드는지 별도 지표로 추적해야 합니다.",
+      "industry_mood": {
+        "sentiment": "Azure 가시성 개선은 긍정적이나 AI 수익성은 여전히 불투명",
+        "rationale": "실제 Azure 매출을 분기별로 볼 수 있게 됐지만 새 대형 구간은 제품별 비용·이익과 AI 투자 회수율을 직접 보여주지 않습니다."
+      },
+      "outlook": "FY2027 1분기부터 Azure·M365 Cloud 분리 매출, Agents and Infra의 마진, AI 인프라 비용과 OpenAI 관련 손익을 함께 비교해야 합니다.",
+      "business_opportunity": "대형 공급자의 공시·가격·제품 구간 변화를 고객별 AI 비용·성과와 연결하는 FinOps·공급자 위험 대시보드 수요를 재확인합니다.",
+      "tags": ["Microsoft", "Azure", "Agents and Infra", "재무보고", "AI 인프라"],
+      "sources": [
+        {
+          "title": "Microsoft Form 8-K: FY27 Segments and Investor Metrics",
+          "url": "https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424",
+          "publisher": "Microsoft Investor Relations",
+          "published_at": "2026-09-02",
+          "tier": "A",
+          "source_type": "sec_filing",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "microsoft-fy27-segments"
+        },
+        {
+          "title": "Microsoft reveals Azure cloud sales in financial reporting shift",
+          "url": "https://www.reuters.com/business/retail-consumer/microsoft-reveal-azure-cloud-sales-financial-reporting-shift-2026-09-02/",
+          "publisher": "Reuters",
+          "published_at": "2026-09-02T20:31:00Z",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "microsoft-azure-revenue-reuters"
+        }
+      ]
+    }
+  ],
+  "business_ideas": [],
+  "tools": [
+    {
+      "name": "Hidden Text Detector",
+      "type": "문서 숨은 텍스트·프롬프트 주입 스캐너",
+      "url": "https://github.com/wppoland/hidden-text-detector",
+      "stars": 4,
+      "why_trending": "ASCII 스머글링이 실제 대규모 피싱에 쓰인 사실이 공개된 가운데 PDF·DOCX의 숨은 Unicode와 렌더링 차이를 로컬에서 찾는 MIT 라이선스 도구입니다.",
+      "worth_trying": "고객이 보내온 PDF·DOCX 10개를 복사본으로 검사하고 숨은 텍스트·초소형 글자·화면 밖 문구·Unicode 태그를 사람이 보이는 문서와 비교하세요. 결과를 자동 실행하지 말고 검토 큐로만 보내세요."
+    }
+  ],
+  "community": [
+    {
+      "platform": "Hacker News",
+      "mood": "안전 경고에는 공감하지만 ‘외계 지능’ 비유와 자율 감속의 실행 가능성에는 회의적",
+      "one_line_summary": "토론은 모델 능력보다 ‘alien mind’라는 표현이 책임과 학습 기원을 흐릴 수 있다는 비판, 그리고 경쟁 중인 연구소가 스스로 감속할 유인이 있는지에 집중했습니다.",
+      "url": "https://news.ycombinator.com/item?id=49588080"
+    }
+  ],
+  "skill_of_the_day": {
+    "name": "AI 중단선·증거선 설계",
+    "when_to_use": "AI가 외부 쓰기·결제·배포·보안 분석 또는 다음 모델·프롬프트 개선에 참여하기 전",
+    "practical_example": "작업별 허용 권한, 관측해야 할 로그, 자동 중단 임계치, 중단 후 되돌리기와 재개 승인자를 한 장에 적고 정상·경계·중단 사례로 리허설합니다.",
+    "prompt_example": "이 AI 업무를 분석해줘. 정상 실행, 경계 경보, 즉시 중단 조건을 측정 가능한 수치로 정의하고 각 조건에 필요한 로그·증거·되돌리기 절차·재개 승인자를 표로 만들어줘. 외부 시스템 변경이나 자동 실행은 하지 마."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D",
+      "url": "https://arxiv.org/abs/2607.19321",
+      "why_read": "자동 AI 연구의 숨은 방해를 네 종류 모니터로 시험해, 학습데이터에 섞인 방해는 절반 미만만 탐지됐고 산출물 실행 검사도 충분하지 않았다는 결과를 확인할 수 있습니다."
+    },
+    {
+      "type": "GitHub",
+      "title": "aisa-group/ResearchArena",
+      "url": "https://github.com/aisa-group/ResearchArena",
+      "why_read": "안전 후학습·역량 후학습·CUDA 커널·추론 서버의 정상 과제와 숨은 방해 과제를 재현하는 공개 코드로 자체 에이전트 감시 평가를 설계할 수 있습니다."
+    },
+    {
+      "type": "YouTube",
+      "title": "Tomek Korbak — Chain of Thought Monitorability for AI Safety",
+      "url": "https://www.youtube.com/watch?v=wa1XIJ6NmiA",
+      "why_read": "사고 과정 모니터링이 왜 유용하면서도 취약한지 연구자가 설명해 ‘로그가 있으면 안전하다’는 단순 가정을 점검할 수 있습니다."
+    },
+    {
+      "type": "Blog",
+      "title": "Why Pacing the AI Frontier Will Not Work",
+      "url": "https://ilblackdragon.substack.com/p/why-pacing-the-ai-frontier-will-not",
+      "why_read": "AI 연구 감속보다 모델·실행·프롬프트·데이터·하드웨어 전체의 검증 가능성을 높여야 한다는 반론을 읽어 오늘의 안전선 제안을 반대 관점에서 검토할 수 있습니다."
+    }
+  ],
+  "todays_insight": "AI, 신뢰는 멈춤·검증·가시성에서 만들어진다 — 프런티어 연구소는 확장 감속과 방어 지원을 동시에 말하고, 공격자는 사람이 보지 못하는 문자 차이를 활용하며, 규제와 회계는 직접 검증·매출 공개를 요구하기 시작했습니다. AI를 더 쓰는 것보다 언제 멈추고 무엇을 사람이 확인하며 비용과 행동을 어떤 증거로 보여줄지가 경쟁력이 됩니다.",
+  "morning_paper": {
+    "insight_headline": "AI, 신뢰는 멈춤·검증·가시성에서 만들어진다",
+    "insight_summary": "프런티어 연구소는 확장 감속과 방어 지원을 동시에 말하고, 공격자는 사람이 보지 못하는 문자 차이를 활용하며, 규제와 회계는 직접 검증·매출 공개를 요구하기 시작했습니다. AI를 더 쓰는 것보다 언제 멈추고 무엇을 사람이 확인하며 비용과 행동을 어떤 증거로 보여줄지가 경쟁력이 됩니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "openai-pachocki-alien-mind-rsi-safety-bars-2026-09-06",
+      "openai-daybreak-frontline-defenders-billion-2026-09-03",
+      "microsoft-ascii-smuggling-phishing-disclosure-2026-09-03",
+      "california-sb574-lawyer-generative-ai-passed-2026-09-01",
+      "microsoft-fy27-agents-infra-azure-revenue-reporting-2026-09-02"
+    ],
+    "top_event_keys": [
+      "openai-pachocki-alien-mind-rsi-safety-bars-2026-09-06",
+      "openai-daybreak-frontline-defenders-billion-2026-09-03",
+      "microsoft-ascii-smuggling-phishing-disclosure-2026-09-03"
+    ]
+  },
+  "build_candidate": null
+}
