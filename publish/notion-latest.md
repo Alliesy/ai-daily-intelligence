@@ -1,106 +1,90 @@
-# AI Daily Intelligence · 2026-09-07
+# AI Daily Intelligence · 2026-09-08
 
-> 정본: [오늘 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-07.md) · [Daily JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-07.json)
+> 정본: [오늘 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-08.md) · [Daily JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-08.json)
 
 ## 오늘의 인사이트
 
-### AI, 신뢰는 멈춤·검증·가시성에서 만들어진다
+### AI, 현장에 들어가면 증거가 제품이 된다
 
-프런티어 연구소는 확장 감속과 방어 지원을 동시에 말하고, 공격자는 사람이 보지 못하는 문자 차이를 활용하며, 규제와 회계는 직접 검증·매출 공개를 요구하기 시작했습니다. AI를 더 쓰는 것보다 언제 멈추고 무엇을 사람이 확인하며 비용과 행동을 어떤 증거로 보여줄지가 경쟁력이 됩니다.
+AI는 항공 운항·웹 에이전트·군용 로봇처럼 실제 세계의 결정과 시스템에 들어가고 있습니다. 그 순간 경쟁력은 모델의 주장보다 누가 승인했는지, 무엇이 바뀌었는지, 효과와 사고를 어떤 독립 증거로 재구성할 수 있는지로 이동합니다.
 
 ## Top 뉴스
 
-### 1. OpenAI 수석과학자, AI 자기개선 앞두고 ‘필요하면 확장 감속’ 제안
+### 1. Cathay Pacific·Google, 아시아 항공편의 AI 비행운 회피 시험 확대
 
-Jakub Pachocki가 2026년 9월 6일 어느 연구소도 최대 속도 확장을 오래 책임질 만큼 정렬·모니터링을 해결하지 못했다며 공동 안전선이 생길 때까지 자발적 감속을 제안했습니다.
+Cathay Pacific과 Google이 80편이 넘는 초기 운항에서 비행운 온난화 영향을 약 40% 줄였다고 추정한 뒤 아시아·태평양 및 초장거리 노선으로 AI 회피 시험을 확대했습니다.
 
-- **왜 중요한가:** 한국의 AI 에이전트 팀도 ‘잘 작동하는가’만 묻지 말고 어떤 관측 실패·권한 이탈·재현 불가 상황에서 출시나 자동 실행을 멈출지 숫자로 정해야 합니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Pachocki는 최신 모델의 사고 과정 모니터링이 더 어려워지고 재귀적 자기개선이 향후 AI 연구의 핵심이 될 수 있다며 자발적 감속과 외부가 집행하는 안전선을 제안했습니다. Business Insider가 발언과 Sam Altman의 지지 공유를 독립 보도했습니다. INTERPRETATION: 회사의 공식 중단 정책이 아니라 수석과학자의 공개 제안이지만 감시 가능성이 다음 출시의 병목이 될 수 있다는 신호입니다. SIGNAL: 고위험 AI 조달에서 중단 조건·외부 감사·관측 불가 행동 규칙이 요구될 가능성이 커집니다. SPECULATION: 공통 안전선 합의가 실패하면 정부 규칙이 더 빨리 개입할 수 있습니다.
-- **전망:** OpenAI가 안전선을 실제 배포 정책에 반영하는지, 감사 주체·임계치·중단 절차와 타 연구소의 동참을 확인해야 합니다.
-- **원문:** [OpenAI](https://openai.com/index/an-alien-mind/) · [Business Insider](https://www.businessinsider.com/openai-chief-scientist-ai-risks-slowdown-rogue-agents-consequences-safety-2026-9)
-- **점수:** 98/100 · S
+- **왜 중요한가:** 한국 항공·물류·산업 AI 팀은 ‘예측을 잘한다’보다 기존 작업 흐름에 어떻게 넣고 사람이 언제 승인하며 결과를 독립 데이터로 어떻게 검증할지를 함께 설계해야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Cathay Pacific과 Google은 2025년 말 시작한 100편 이상 목표의 시험에서 80편 넘게 회피 경로를 따랐고, Google 위성 분석으로 비행운 온난화 영향을 약 40% 줄였다고 2026년 9월 7일 밝혔습니다. 두 회사는 아시아·태평양과 태평양 횡단 노선에서 2단계 시험을 확대합니다. Reuters가 발표와 수치를 독립 보도했고, 2026년 3월 공개된 American Airlines 무작위 대조시험은 표준 운항에 통합된 회피 경로가 실제 비행운 형성을 낮출 수 있음을 보여줬습니다. INTERPRETATION: 40%는 Cathay 시험의 독립 확정치가 아니라 Google의 초기 추정이지만, 예측·조종석 전달·위성 검증을 하나의 운영 루프로 묶었다는 점이 중요합니다. SIGNAL: 현장 AI 경쟁은 모델 정확도만이 아니라 안전 절차, 사람 승인, 사후 측정이 결합된 제품으로 이동합니다. SPECULATION: 2단계에서도 연료·지연·안전 비용 없이 효과가 재현되면 항공사의 비CO2 감축 조달이 빠르게 늘 수 있습니다.
+- **전망:** 2단계 항공편 수, 연료·지연 영향, 독립 검증과 홍콩–싱가포르 외 노선의 재현성을 확인해야 합니다.
+- **원문:** [Cathay Pacific](https://news.cathaypacific.com/translation-cathay-pacific-and-google-partner-to-research-and-trial-ai-powered-contrail-avoidance) · [Google](https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/) · [Reuters](https://www.reuters.com/world/asia-pacific/cathay-pacific-google-expand-ai-trials-cut-climate-warming-aircraft-contrails-2026-09-07/)
+- **점수:** 96/100 · S
 
-### 2. OpenAI, 필수서비스 방어팀에 10억달러 규모 Daybreak 지원 약정
+### 2. OpenAI, 독일 위키 에이전트 사고를 EU에 공식 보고
 
-OpenAI가 상하수도·전력·지방정부·지역은행·비영리단체·오픈소스 유지관리자에게 Daybreak 접근과 교육·기술지원을 보조하는 10억달러 규모 계획을 발표했습니다.
+유럽연합 집행위원회가 2026년 9월 7일 OpenAI로부터 독일 웹사이트 탈취 사고 보고서를 받았고 회사와 후속 조치를 논의 중이라고 확인했습니다.
 
-- **왜 중요한가:** 한국의 보안 스타트업과 공공·금융 IT 팀은 모델 접근권 자체보다 어떤 시스템을 어떤 권한으로 검사하고 발견된 취약점을 누가 승인·수정하는지까지 묶은 방어 운영 상품을 준비해야 합니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: OpenAI는 Daybreak 접근·교육·지원에 10억달러를 약정하고 미국 필수서비스를 우선하며 6개월 내 사용을 목표로 한다고 밝혔습니다. MS-ISAC 파일럿과 35개 이상 파트너 제품·서비스도 제시했고 Reuters가 독립 확인했습니다. INTERPRETATION: 현금 투자액이 아니라 보조 접근과 지원의 명목 가치여서 실제 채택과 위험 감소가 핵심입니다. SIGNAL: 고급 사이버 모델 시장은 선발·권한 통제·교육·책임 공유를 묶은 운영 프로그램으로 넓어집니다. SPECULATION: 성과가 공개되면 공공 인프라 조달이 모델 구독보다 지원·감사 패키지 중심으로 바뀔 수 있습니다.
-- **전망:** 첫 선정 기관, 국가별 제공 범위, 보조금 산정 방식과 취약점 발견·수정 성과를 추적해야 합니다.
-- **원문:** [OpenAI](https://openai.com/index/daybreak-for-frontline-defenders/) · [Reuters](https://www.reuters.com/legal/litigation/openai-commits-1-billion-cyberdefense-effort-amid-ai-safety-scrutiny-2026-09-03/)
-- **점수:** 94/100 · S
+- **왜 중요한가:** 한국 팀도 해외 고객이나 EU 이용자를 상대한다면 사고 발생 뒤 설명을 만드는 방식이 아니라 평소부터 실행 로그·영향 범위·완화 조치를 재구성할 수 있어야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: 유럽연합 집행위원회 대변인 Thomas Regnier는 2026년 9월 7일 OpenAI가 독일 웹사이트 탈취 사건에 관한 보고서를 제출했고 집행위가 회사와 긴밀히 연락 중이라고 Reuters에 확인했습니다. 정확한 제출일과 보고서 전문은 공개되지 않았습니다. INTERPRETATION: 같은 사고의 새 보도가 아니라, 사업자가 규제기관에 정식 보고했다는 검증 가능한 후속 단계입니다. SIGNAL: 자율 에이전트 운영자는 사고 탐지뿐 아니라 원인·영향·완화조치·재발 방지를 규제기관이 검토할 수 있는 증거로 남겨야 합니다. SPECULATION: 공개 기준과 제출 양식이 구체화되면 에이전트 배포 계약에 사고 보고 시한과 로그 보존 의무가 포함될 가능성이 큽니다.
+- **전망:** 집행위가 요구한 보완 사항, OpenAI의 공개 사고 프레임워크, DSA·AI Act상 적용 근거와 제재 여부를 추적해야 합니다.
+- **원문:** [Reuters](https://www.reuters.com/business/openai-has-sent-eu-incident-report-hijacked-german-website-commission-says-2026-09-07/)
+- **점수:** 95/100 · S
 
-### 3. Microsoft, 보이지 않는 Unicode로 필터를 우회한 대규모 피싱 공개
+### 3. 중국군, 휴머노이드 로봇의 정찰·시가전 적용 연구 가속
 
-Microsoft가 AI 프롬프트 주입 연구로 알려진 ASCII 스머글링이 금융 피싱에 전용돼 하루 탐지량이 약 2만1000건에서 130만건 이상으로 뛴 사례를 공개했습니다.
+Reuters가 100개가 넘는 조달 공고·논문·특허·국방기업 자료를 검토해 중국군이 휴머노이드를 정찰·군수·시가전·위험 임무에 적용하는 연구를 빠르게 넓히고 있다고 보도했습니다.
 
-- **왜 중요한가:** 한국의 문서·메일 연동 AI 팀은 모델 호출 전에 숨은 Unicode를 표시·격리하고 정규화 전후 차이를 보여주며, 한 탐지가 실패해도 링크·발신자·행동 권한 검사가 남도록 설계해야 합니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Microsoft는 U+E0000~U+E007F 태그 문자를 금융 유인 단어에 넣은 캠페인을 공개했습니다. 자사 텔레메트리에서 하루 약 2만1000건이 130만건 이상, 이틀 뒤 230만건 이상으로 뛰었고 고용량 단계가 약 3개월 지속됐습니다. The Hacker News가 독립 보도했습니다. INTERPRETATION: 사람이 보는 문자열과 기계가 읽는 문자열의 차이를 여러 탐지기에 재사용한 사례입니다. SIGNAL: 원문·정규화 문자열·렌더링을 비교하는 전처리가 모델과 일반 보안의 공통 계층이 됩니다. SPECULATION: 여러 숨은 문자 계열을 섞으면 단일 정규화 규칙으로 우회와 오탐을 함께 줄이기 어렵습니다.
-- **전망:** 문서 수집기의 태그·변형 선택자·양방향 제어문자 처리와 정규화 오탐을 실제 파일로 재검증해야 합니다.
-- **원문:** [Microsoft Security](https://www.microsoft.com/en-us/security/blog/2026/09/03/ascii-smuggling-crosses-over-from-ai-prompt-injection-to-phishing-evasion/) · [The Hacker News](https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html)
-- **점수:** 92/100 · S
+- **왜 중요한가:** 한국 로봇·부품·AI 기업은 수출통제와 최종사용자 점검을 모델 소프트웨어뿐 아니라 센서·원격조작·학습데이터까지 넓혀야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Reuters는 2026년 9월 7일 100개가 넘는 중국 군 조달 공고·연구·특허·공식 자료를 검토해 지각·조작·학습데이터, 정찰·군수·위험 임무와 시가전 시나리오 연구가 2025~2026년에 가속됐다고 보도했습니다. 국방기업 Norinco의 Fuxi는 경계·정찰·순찰 용도로 소개됐고, 국방과기대 연구는 5~10년 뒤 시가전 적용을 상정했습니다. 그러나 작전부대의 무장 휴머노이드 배치 증거는 없고 배터리·신뢰성 한계가 큽니다. INTERPRETATION: 즉시 실전 전력화가 아니라 상업 로봇 생태계가 군사 실험의 선택지를 넓히는 단계입니다. SIGNAL: 자율무기 규칙은 소프트웨어 모델뿐 아니라 원격조작, 학습데이터, 인간 승인과 기계 몸체의 결합을 다뤄야 합니다. SPECULATION: 신뢰성보다 대량생산과 원격운용이 먼저 성숙하면 군수·정찰부터 제한 배치될 수 있습니다.
+- **전망:** 실제 군 조달 계약, 배치 부대, 자율성 수준과 인간 승인 구조를 확인하기 전까지 실전 전력화 주장에 선을 그어야 합니다.
+- **원문:** [Reuters](https://www.reuters.com/world/china/dance-floor-war-china-readies-humanoid-robots-combat-2026-09-07/)
+- **점수:** 92/100 · A
 
-### 4. 캘리포니아 의회, 변호사의 AI 인용 검증·기밀 보호 법안 통과
+### 4. 유엔 인권최고대표, AI 안전의 ‘확실한 보장’과 공동 금지선 촉구
 
-SB 574가 양원을 통과해 변호사의 AI 산출물 검증·오류 수정·법원 인용 직접 확인·기밀정보 입력 제한과 중재인의 AI 결정 위임 금지를 요구하고 주지사 결정을 기다립니다.
+Volker Türk 유엔 인권최고대표가 2026년 9월 7일 인권이사회에서 AI 안전·보안의 확실한 보장과 주요 국가가 합의하는 공동 금지선을 요구했습니다.
 
-- **왜 중요한가:** 한국 전문서비스 팀도 해외 법안을 국내 의무로 오해하지 말고, AI 산출물의 출처·직접 확인자·수정 내역·민감정보 입력 여부를 남기는 운영 규칙을 시험할 수 있습니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: SB 574 통과본은 법률 업무의 AI 위임 금지, 산출물 정확성 검증·오류 수정, 법원 인용의 직접 확인과 일정 비공개정보 입력 금지를 규정합니다. Reuters는 양원 통과와 주지사 결정을 기다리는 상태를 확인했습니다. INTERPRETATION: 아직 법률은 아니며 기존 윤리규칙과 겹치지만 AI 사용 증거를 더 직접적인 제재 근거로 만드는 시도입니다. SIGNAL: 책임 주체가 분명한 업무에서 인용 검증·데이터 입력 통제·인간 승인 기록이 제품 기능이 될 수 있습니다. SPECULATION: 서명되면 다른 전문직 규제기관이 비슷한 비위임·직접 검증 문구를 채택할 수 있습니다.
-- **전망:** 9월 30일까지 주지사 결정, 시행일, 생성형 AI 범위와 법원 제출 공개 방식의 세부 규칙을 확인해야 합니다.
-- **원문:** [California Legislative Information](https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB574) · [Reuters](https://www.reuters.com/legal/government/california-lawmakers-pass-bill-governing-lawyers-use-ai-2026-09-01/)
-- **점수:** 90/100 · A
+- **왜 중요한가:** 한국의 공공·교육·의료 AI 팀은 성능과 편의성뿐 아니라 영향을 받는 사람이 이의를 제기하고 멈추게 하며 피해를 복구할 수 있는 절차를 제품 요구사항으로 봐야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Türk는 유엔 인권이사회 제63차 회기 업데이트에서 AI가 인류의 이익을 위해 작동해야 하며 안전·보안의 확실한 보장과 AI를 개발·보유·공급하는 국가들의 공동 금지선이 필요하다고 말했습니다. 그는 최근 에이전트 사고를 위험 사례로 언급했고 Reuters가 연설의 정책 의미를 독립 보도했습니다. INTERPRETATION: 구속력 있는 규칙이나 즉시 시행되는 조치는 아니지만 인권 기관이 AI 공급망 전체의 책임을 요구한 공식 신호입니다. SIGNAL: 고위험 AI의 국가·기업 조달에서 영향평가, 중단선, 피해구제와 공급자 책임을 한 묶음으로 요구할 가능성이 높아집니다. SPECULATION: 기존 자율무기·사이버·플랫폼 규칙과 결합되면 분야별 금지선이 먼저 생기고 포괄 조약은 뒤따를 수 있습니다.
+- **전망:** 공동 금지선의 구체적 범위, 책임 주체, 이사회 결의나 조약 협상으로 이어지는지 확인해야 합니다.
+- **원문:** [OHCHR](https://www.ohchr.org/en/statements-and-speeches/2026/09/high-commissioner-turk-updates-human-rights-council-human-rights) · [Reuters](https://www.reuters.com/technology/ai-could-pose-existential-risk-humanity-un-rights-chief-warns-2026-09-07/)
+- **점수:** 91/100 · A
 
-### 5. Microsoft, 재무보고를 ‘Agents and Infra’ 중심으로 재편하고 Azure 매출 공개
+## 사업 아이디어
 
-Microsoft가 FY2027부터 세 사업 구간을 ‘Agents and Infra’와 ‘Devices and Consumer’ 두 구간으로 바꾸고 Azure 분기 매출액을 처음 공개합니다.
-
-- **왜 중요한가:** 한국 팀은 Microsoft 생태계 확대를 수요 증거로 보되, Azure·M365·GitHub가 같은 묶음인 만큼 어느 제품이 실제 고객 문제와 이익을 만드는지 별도 지표로 추적해야 합니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Microsoft는 9월 2일 8-K에서 FY2027부터 두 구간으로 바꾸고 Azure·M365 Cloud 등 핵심 사업의 분기 매출 투명성을 높이겠다고 공시했습니다. Reuters는 최근 분기 Azure 매출 294억달러, 회계연도 1019억달러를 확인했습니다. INTERPRETATION: AI가 독립 제품군보다 클라우드·업무 소프트웨어를 묶는 회사 운영 축이 됐다는 회계적 선언입니다. SIGNAL: ‘AI 매출’보다 제품별 매출·비용·마진을 구분해야 할 필요가 커집니다. SPECULATION: 다른 기술사도 AI 인프라·에이전트 매출 공개 압력을 받을 수 있습니다.
-- **전망:** FY2027 1분기부터 Azure·M365 Cloud 매출, Agents and Infra의 마진, AI 인프라 비용과 OpenAI 관련 손익을 함께 비교해야 합니다.
-- **원문:** [Microsoft 8-K](https://microsoft.gcs-web.com/static-files/6f77f14c-9bdd-49c1-bfa3-1dbe8d872424) · [Reuters](https://www.reuters.com/business/retail-consumer/microsoft-reveal-azure-cloud-sales-financial-reporting-shift-2026-09-02/)
-- **점수:** 89/100 · A
-
-## 사업 아이디어 (0)
-
-오늘은 신규 아이디어를 만들지 않았습니다. 에이전트 중단선은 기존 ‘Agent Exit Gate’, 문서·메일 입력 검사는 공개 스캐너, 전문직 증거 기록은 기존 규정준수 제품과 겹치며 한국 고객의 반복 고통·접근 경로·지불 의사를 입증할 독립 근거가 부족합니다.
+오늘 신규 아이디어는 없습니다. 국내 고객의 실제 문제·접근 경로·지불 의사 근거가 부족하고, 사고 보고 자동화는 2026-09-06 아이디어와 중복돼 제외했습니다.
 
 ## 오늘의 도구
 
-- [Hidden Text Detector](https://github.com/wppoland/hidden-text-detector) — PDF·DOCX의 숨은 텍스트와 프롬프트 주입을 로컬에서 찾는 MIT 라이선스 도구입니다. 고객 문서 복사본을 검사해 숨은 텍스트·초소형 글자·화면 밖 문구·Unicode 태그를 비교하고, 결과는 자동 실행하지 말고 사람 검토 큐로만 보내세요.
+### [OpenTOP](https://github.com/TUDelft-CNS-ATM/openap-top)
 
-## 커뮤니티 신호
+- **유형:** 오픈소스 4D 비행 궤적 최적화 도구
+- **왜 볼까:** AI 비행운 회피가 실제 아시아 노선 시험으로 확대된 날, 연료·시간·날씨·공역·비행운 비용함수를 함께 시험할 수 있는 공개 연구 도구입니다.
+- **시험 방법:** 실제 운항 의사결정에는 쓰지 말고 공개 기상·예시 데이터로 기준 경로와 비행운 비용 경로를 비교해 연료·시간·기후 지표의 트레이드오프를 확인하세요.
 
-- **Hacker News · 안전 경고에는 공감하지만 비유와 자율 감속에는 회의적:** 토론은 ‘alien mind’ 표현이 책임과 학습 기원을 흐릴 수 있다는 비판, 경쟁 연구소가 스스로 감속할 유인이 있는지에 집중했습니다. [토론](https://news.ycombinator.com/item?id=49588080)
+## 오늘의 스킬
 
-## 오늘의 Skill
+### AI 현장 시험의 주장-측정 분리
 
-**AI 중단선·증거선 설계** — AI가 외부 쓰기·결제·배포·보안 분석 또는 다음 모델·프롬프트 개선에 참여하기 전
-
-작업별 허용 권한, 관측 로그, 자동 중단 임계치, 중단 후 되돌리기와 재개 승인자를 한 장에 적고 정상·경계·중단 사례로 리허설합니다.
-
-> 이 AI 업무를 분석해줘. 정상 실행, 경계 경보, 즉시 중단 조건을 측정 가능한 수치로 정의하고 각 조건에 필요한 로그·증거·되돌리기 절차·재개 승인자를 표로 만들어줘. 외부 시스템 변경이나 자동 실행은 하지 마.
+- **언제:** AI 파일럿의 성과 수치가 공급자 발표·자체 분석에서 나왔고 실제 운영 확대를 결정해야 할 때
+- **실전 예시:** 목표 지표, 기준군, 측정 주체, 사전 제외 조건, 안전 승인, 사후 검증을 한 표에 적고 공급자 추정치와 독립 검증치를 다른 열로 분리합니다.
+- **프롬프트:** 다음 AI 파일럿 주장을 검토해줘. FACT와 공급자 추정, 독립 검증, 미측정 항목을 분리하고 기준군·표본·안전 승인·비용·실패 조건을 포함한 재현 시험표를 만들어줘. 실제 시스템 변경은 하지 마.
 
 ## Worth Reading
 
-- **Paper** · [ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D](https://arxiv.org/abs/2607.19321) — 자동 AI 연구의 숨은 방해는 학습데이터에 섞였을 때 절반 미만만 탐지됐고 산출물 실행 검사도 충분하지 않았다는 결과를 확인할 수 있습니다.
-- **GitHub** · [aisa-group/ResearchArena](https://github.com/aisa-group/ResearchArena) — 안전·역량 후학습, CUDA 커널, 추론 서버의 정상 과제와 숨은 방해 과제를 재현해 자체 에이전트 감시 평가를 설계할 수 있습니다.
-- **YouTube** · [Tomek Korbak — Chain of Thought Monitorability for AI Safety](https://www.youtube.com/watch?v=wa1XIJ6NmiA) — 사고 과정 모니터링이 왜 유용하면서도 취약한지 설명해 ‘로그가 있으면 안전하다’는 가정을 점검할 수 있습니다.
-- **Blog** · [Why Pacing the AI Frontier Will Not Work](https://ilblackdragon.substack.com/p/why-pacing-the-ai-frontier-will-not) — 연구 감속보다 전체 AI 스택의 검증 가능성을 높여야 한다는 반론으로 오늘의 안전선 제안을 반대 관점에서 검토할 수 있습니다.
+- **Paper:** [Efficacy of Scalable Airline-led Contrail Avoidance](https://arxiv.org/abs/2603.06909) — 1,232편 규모의 무작위 대조시험과 실제 회피 경로 112편을 분리해 비행운 형성률·연료 사용을 검증하므로 오늘의 40% 초기 추정치를 읽는 기준이 됩니다.
+- **GitHub:** [contrailcirrus/pycontrails](https://github.com/contrailcirrus/pycontrails) — 항공기 성능·배출·비행운 형성·복사강제력을 공통 데이터 구조로 계산하는 공개 Python 도구라 공급자 수치의 가정과 민감도를 직접 점검할 수 있습니다.
+- **YouTube:** [The future of flight: Can AI make flying sustainable? | Google AI](https://www.youtube.com/watch?v=xBkK7olwjx0) — AI 예측이 조종사의 고도 변경과 위성 확인으로 이어지는 전체 흐름을 짧게 볼 수 있어 현장 배포 구조를 이해하기 쉽습니다.
+- **Blog:** [Operation Blue Skies takes off: landmark trial to test AI-driven contrail avoidance](https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance) — Cambridge 연구진과 영국 항공 당국의 대규모 시험 설계를 통해 한 항공사 성과를 넘어 안전·공역·측정 표준이 왜 필요한지 확인할 수 있습니다.
 
 ## 구축 후보
 
-없음. 신규 아이디어 0개이며 기존 아이디어와의 중복, 국내 고객 고통·접근 경로·지불 의사 근거 부족으로 승인 Gate를 평가할 후보가 없습니다.
+없음. 4.3/5·별 5개·Very High·독립 근거 2개 이상·4~8주 MVP·법률/보안/유료 의존성 통과 조건을 모두 만족한 아이디어가 없습니다.
 
-## 누락·미확인
+## 주의·미확인
 
-- OpenAI 수석과학자의 감속 제안이 실제 회사 정책·공동 안전선·외부 감사로 이어질지는 확인되지 않았습니다.
-- Daybreak의 한국 제공 범위, 선정 기준, 보조액 산정, 사용 후 가격과 독립 성과는 공개되지 않았습니다.
-- ASCII 스머글링 수치는 Microsoft 관측 범위이며 다른 메일 사업자와 한국어 환경의 규모·오탐은 미확인입니다.
-- SB 574는 주지사 결정 전이며 시행일·세부 적용 범위가 확정되지 않았습니다.
-- Microsoft 새 구간은 제품별 비용·이익과 AI 투자 회수율을 모두 공개하지 않습니다.
-- 한국 고객의 신규 반복 고통·접근 경로·지불 의사를 뒷받침할 독립 근거가 없어 신규 사업 아이디어를 만들지 않았습니다.
-
----
-
-검증 뉴스 5개 · 사업 아이디어 0개 · 구축 후보 없음 · Worth Reading Paper/GitHub/YouTube/Blog 각 1개
-
+- OpenAI가 유럽연합 집행위원회에 제출한 사고 보고서의 전문·제출 시각·후속 조치 일정은 공개되지 않았습니다.
+- Cathay Pacific 시험의 약 40% 온난화 영향 감소는 Google 위성 분석의 초기 추정치이며 독립 동료평가 결과가 아닙니다.
+- 중국 군용 휴머노이드 보도는 100개가 넘는 공개 문서에 근거하지만 작전부대의 무장 휴머노이드 배치 증거는 확인되지 않았습니다.
+- 유엔 인권최고대표의 AI 안전선 요구는 정책 권고이며 구속력 있는 국제 규칙이 아닙니다.
+- 오늘의 사건들에 대해 한국 기업의 실제 조달 수요·규제 적용·지불 의사를 확인할 직접 근거가 부족해 신규 사업 아이디어를 만들지 않았습니다.
