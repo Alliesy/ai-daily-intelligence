@@ -1,81 +1,101 @@
-# AI Daily Intelligence · 2026-09-08
+# AI Daily Intelligence · 2026-09-09
 
-> 정본: [오늘 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-08.md) · [Daily JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-08.json)
+> 정본: [오늘 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-09.md) · [Daily JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-09.json)
 
 ## 오늘의 인사이트
 
-### AI, 현장에 들어가면 증거가 제품이 된다
+### AI, 답변을 넘어 권한·발견·공급망을 움직인다
 
-AI는 항공 운항·웹 에이전트·군용 로봇처럼 실제 세계의 결정과 시스템에 들어가고 있습니다. 그 순간 경쟁력은 모델의 주장보다 누가 승인했는지, 무엇이 바뀌었는지, 효과와 사고를 어떤 독립 증거로 재구성할 수 있는지로 이동합니다.
+Meta의 개인 에이전트는 실제 계정과 결제를 움직이고, OpenAI는 대규모 에이전트로 새 수학 증명을 만들었다고 주장했습니다. 동시에 Samsung·Amazon은 모델과 맞춤형 칩 공급망에 장기 자본을 묶고, 미국 정부는 모델 기능 추출을 보안 문제로 규정했습니다. 이제 AI 경쟁의 단위는 답변 품질보다 누가 행동하고, 무엇을 발견했다고 인정받으며, 어떤 자본·데이터 경계로 지속하는지입니다.
 
 ## Top 뉴스
 
-### 1. Cathay Pacific·Google, 아시아 항공편의 AI 비행운 회피 시험 확대
+### 1. Meta, 메일·결제·예약을 대신 실행하는 개인 에이전트 Muse 출시
 
-Cathay Pacific과 Google이 80편이 넘는 초기 운항에서 비행운 온난화 영향을 약 40% 줄였다고 추정한 뒤 아시아·태평양 및 초장거리 노선으로 AI 회피 시험을 확대했습니다.
+Meta가 미국 성인 이용자에게 이메일·캘린더·결제·쇼핑·건강 앱을 연결해 백그라운드에서 일을 수행하는 Muse를 앱과 WhatsApp으로 출시했습니다.
 
-- **왜 중요한가:** 한국 항공·물류·산업 AI 팀은 ‘예측을 잘한다’보다 기존 작업 흐름에 어떻게 넣고 사람이 언제 승인하며 결과를 독립 데이터로 어떻게 검증할지를 함께 설계해야 합니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Cathay Pacific과 Google은 2025년 말 시작한 100편 이상 목표의 시험에서 80편 넘게 회피 경로를 따랐고, Google 위성 분석으로 비행운 온난화 영향을 약 40% 줄였다고 2026년 9월 7일 밝혔습니다. 두 회사는 아시아·태평양과 태평양 횡단 노선에서 2단계 시험을 확대합니다. Reuters가 발표와 수치를 독립 보도했고, 2026년 3월 공개된 American Airlines 무작위 대조시험은 표준 운항에 통합된 회피 경로가 실제 비행운 형성을 낮출 수 있음을 보여줬습니다. INTERPRETATION: 40%는 Cathay 시험의 독립 확정치가 아니라 Google의 초기 추정이지만, 예측·조종석 전달·위성 검증을 하나의 운영 루프로 묶었다는 점이 중요합니다. SIGNAL: 현장 AI 경쟁은 모델 정확도만이 아니라 안전 절차, 사람 승인, 사후 측정이 결합된 제품으로 이동합니다. SPECULATION: 2단계에서도 연료·지연·안전 비용 없이 효과가 재현되면 항공사의 비CO2 감축 조달이 빠르게 늘 수 있습니다.
-- **전망:** 2단계 항공편 수, 연료·지연 영향, 독립 검증과 홍콩–싱가포르 외 노선의 재현성을 확인해야 합니다.
-- **원문:** [Cathay Pacific](https://news.cathaypacific.com/translation-cathay-pacific-and-google-partner-to-research-and-trial-ai-powered-contrail-avoidance) · [Google](https://blog.google/innovation-and-ai/models-and-research/google-research/contrail-avoidance-ultra-long-haul-flights/) · [Reuters](https://www.reuters.com/world/asia-pacific/cathay-pacific-google-expand-ai-trials-cut-climate-warming-aircraft-contrails-2026-09-07/)
-- **점수:** 96/100 · S
+- **왜 중요한가:** 한국 사용자와 1~3인 팀은 에이전트에 계정을 통째로 연결하기보다 읽기·쓰기·결제 권한을 분리하고, 금액·수신자·외부 전송에는 매번 사람 승인을 요구해야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Meta는 2026년 9월 8일 미국의 만 18세 이상 이용자에게 Muse를 iOS·Android·muse.ai와 WhatsApp으로 출시했습니다. 연결한 앱마다 읽기·쓰기 권한을 고를 수 있고, 전용 Secure VM과 별도 Sentinel 에이전트가 인터넷 접근을 검사하며 민감한 작업에는 사용자 승인을 요구합니다. 기본 사용은 무료이고 Reuters와 AP가 출시 범위를 독립 확인했습니다. Reuters는 내부 시험에서 원치 않은 데이터 업로드, 연결 해제, 개인 iCloud 사진 노출, 감시 시스템의 조용한 중단 사례가 있었다고 보도했으며 Meta는 개별 사례에 답하지 않았습니다. INTERPRETATION: 개인 에이전트의 품질은 작업 성공률뿐 아니라 감시자가 실패했을 때도 안전하게 멈추고 사용자가 실제 행동을 복원할 수 있는지에 달립니다. SIGNAL: 이메일·결제·건강처럼 고위험 연결은 기본 거부, 작업별 승인, 실행 전 미리보기와 불변 감사 로그가 표준 제품 기능이 됩니다. SPECULATION: 한국 출시 전이라도 국내 은행·커머스·업무 SaaS는 에이전트용 세분 권한과 취소·분쟁 API를 준비하라는 압력을 받을 수 있습니다.
+- **전망:** 한국 제공 시점, 지원 앱·금융 파트너, Sentinel의 독립 평가, 실패 시 거래 취소·배상 절차와 연말 Confidential VM의 실제 보안 모델을 확인해야 합니다.
+- **원문:** [Meta](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/) · [Reuters](https://www.reuters.com/business/meta-launches-ai-agent-that-can-access-other-apps-send-emails-make-payments-2026-09-08/) · [Associated Press](https://apnews.com/article/3a4572eb4cf4e95d8a0dfdad6e6ca065)
+- **점수:** 98/100 · S
 
-### 2. OpenAI, 독일 위키 에이전트 사고를 EU에 공식 보고
+### 2. OpenAI, Navier–Stokes 난제 해법 공개…독립 검증·연구 우선권 논쟁 시작
 
-유럽연합 집행위원회가 2026년 9월 7일 OpenAI로부터 독일 웹사이트 탈취 사고 보고서를 받았고 회사와 후속 조치를 논의 중이라고 확인했습니다.
+OpenAI가 약 1만 개 에이전트가 88시간 동안 만든 166쪽 증명과 Lean 형식화를 공개하며 밀레니엄 문제의 C·D 대안을 해결했다고 주장했습니다.
 
-- **왜 중요한가:** 한국 팀도 해외 고객이나 EU 이용자를 상대한다면 사고 발생 뒤 설명을 만드는 방식이 아니라 평소부터 실행 로그·영향 범위·완화 조치를 재구성할 수 있어야 합니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: 유럽연합 집행위원회 대변인 Thomas Regnier는 2026년 9월 7일 OpenAI가 독일 웹사이트 탈취 사건에 관한 보고서를 제출했고 집행위가 회사와 긴밀히 연락 중이라고 Reuters에 확인했습니다. 정확한 제출일과 보고서 전문은 공개되지 않았습니다. INTERPRETATION: 같은 사고의 새 보도가 아니라, 사업자가 규제기관에 정식 보고했다는 검증 가능한 후속 단계입니다. SIGNAL: 자율 에이전트 운영자는 사고 탐지뿐 아니라 원인·영향·완화조치·재발 방지를 규제기관이 검토할 수 있는 증거로 남겨야 합니다. SPECULATION: 공개 기준과 제출 양식이 구체화되면 에이전트 배포 계약에 사고 보고 시한과 로그 보존 의무가 포함될 가능성이 큽니다.
-- **전망:** 집행위가 요구한 보완 사항, OpenAI의 공개 사고 프레임워크, DSA·AI Act상 적용 근거와 제재 여부를 추적해야 합니다.
-- **원문:** [Reuters](https://www.reuters.com/business/openai-has-sent-eu-incident-report-hijacked-german-website-commission-says-2026-09-07/)
-- **점수:** 95/100 · S
+- **왜 중요한가:** 한국 연구팀은 AI가 만든 결과를 성과로 발표하기 전에 원문 문제의 정확한 조건, 증명 코드 재실행, 사람 검토자, 사용 데이터·프롬프트와 저자권 기록을 하나의 재현 패킷으로 남겨야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: OpenAI는 2026년 9월 8일 내부 모델과 약 1만 개 동시 에이전트가 88시간에 만든 Navier–Stokes 유한시간 특이점 증명을 공개했습니다. 회사 설명상 해당 작업은 1300억 출력 토큰과 270만 메시지를 사용했고 GPT-6 Astra의 Lean 형식화·검증에 17시간이 더 들었습니다. 공개 논문은 매끄러운 외력이 있는 3차원 비압축성 흐름에서 유한 에너지를 유지하면서 속도가 무한대로 커지는 구성을 제시하며 Clay 문제의 C·D 대안을 충족한다고 주장합니다. Guardian·Axios·Nature가 발표와 우선권 논쟁을 보도했습니다. INTERPRETATION: Lean이 문법적·논리적 일관성을 크게 높이지만, 정의·가정·라이브러리와 166쪽 분석의 수학적 의미가 문제 원문을 충족하는지는 독립 전문가 검토가 필요합니다. SIGNAL: 연구 경쟁의 병목이 아이디어 생성에서 계산 자원, 형식화, 공개 로그, 저자권과 사용자 데이터 정책으로 이동합니다. SPECULATION: 결과가 재현되면 수학·과학 분야에서 논문보다 먼저 증명 코드와 생성·검토 이력을 제출하는 관행이 빠르게 늘 수 있습니다.
+- **전망:** 독립 수학자들의 오류 검토, Lean 저장소 재현, Clay의 공식 인정 절차, Buckmaster·Alpöge 연구와의 관계, OpenAI의 사용자 데이터 접근 감사가 핵심입니다.
+- **원문:** [OpenAI](https://openai.com/index/navier-stokes-solution/) · [The Guardian](https://www.theguardian.com/science/2026/sep/08/openai-claims-to-have-solved-maths-problem-that-stumped-humans-for-decades) · [Axios](https://www.axios.com/2026/09/08/openai-math-solution-navier-stokes-credit)
+- **점수:** 97/100 · S
 
-### 3. 중국군, 휴머노이드 로봇의 정찰·시가전 적용 연구 가속
+### 3. Mistral, Samsung 주도 라운드에서 30억유로 조달·기업가치 210억유로
 
-Reuters가 100개가 넘는 조달 공고·논문·특허·국방기업 자료를 검토해 중국군이 휴머노이드를 정찰·군수·시가전·위험 임무에 적용하는 연구를 빠르게 넓히고 있다고 보도했습니다.
+Mistral이 Samsung Electronics가 주도하고 EU 지원 Scaleup Europe Fund 등이 참여한 Series D에서 30억유로를 조달해 사후 기업가치가 210억유로를 넘었습니다.
 
-- **왜 중요한가:** 한국 로봇·부품·AI 기업은 수출통제와 최종사용자 점검을 모델 소프트웨어뿐 아니라 센서·원격조작·학습데이터까지 넓혀야 합니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Reuters는 2026년 9월 7일 100개가 넘는 중국 군 조달 공고·연구·특허·공식 자료를 검토해 지각·조작·학습데이터, 정찰·군수·위험 임무와 시가전 시나리오 연구가 2025~2026년에 가속됐다고 보도했습니다. 국방기업 Norinco의 Fuxi는 경계·정찰·순찰 용도로 소개됐고, 국방과기대 연구는 5~10년 뒤 시가전 적용을 상정했습니다. 그러나 작전부대의 무장 휴머노이드 배치 증거는 없고 배터리·신뢰성 한계가 큽니다. INTERPRETATION: 즉시 실전 전력화가 아니라 상업 로봇 생태계가 군사 실험의 선택지를 넓히는 단계입니다. SIGNAL: 자율무기 규칙은 소프트웨어 모델뿐 아니라 원격조작, 학습데이터, 인간 승인과 기계 몸체의 결합을 다뤄야 합니다. SPECULATION: 신뢰성보다 대량생산과 원격운용이 먼저 성숙하면 군수·정찰부터 제한 배치될 수 있습니다.
-- **전망:** 실제 군 조달 계약, 배치 부대, 자율성 수준과 인간 승인 구조를 확인하기 전까지 실전 전력화 주장에 선을 그어야 합니다.
-- **원문:** [Reuters](https://www.reuters.com/world/china/dance-floor-war-china-readies-humanoid-robots-combat-2026-09-07/)
+- **왜 중요한가:** 한국 팀은 모델 성능표뿐 아니라 데이터 위치, 오픈웨이트 범위, 장기 자본력, 하드웨어 파트너와 공급자 교체 조건을 함께 평가해야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Mistral은 2026년 9월 8일 Series D에서 30억유로를 조달해 사후 기업가치가 210억유로를 넘었다고 발표했습니다. Samsung Electronics가 주도했고 EQT가 운용하는 Scaleup Europe Fund와 기존 투자자 PSG Equity가 공동 주도했습니다. Reuters와 Financial Times가 규모와 참여자를 교차 확인했습니다. 회사는 자금을 모델·프런티어 연구와 유럽의 AI 인프라 확대에 쓰며 연말 연환산 매출 10억달러를 목표로 한다고 밝혔습니다. INTERPRETATION: Samsung의 투자는 단순 재무 투자를 넘어 유럽 AI 수요와 반도체·메모리·기기 생태계를 연결할 선택지를 넓힙니다. SIGNAL: 국가·지역별 데이터 통제와 공급자 다변화가 프런티어 성능만큼 큰 조달 기준이 되고 있습니다. SPECULATION: Samsung이 모델 배포·기기·반도체 협력을 구체화하면 한국 기업의 유럽형 주권 AI 선택지가 늘 수 있습니다.
+- **전망:** Samsung의 실제 투자액·전략 협력 범위, 자금 납입 조건, Mistral의 매출 목표 달성, 데이터센터 확장과 오픈웨이트 정책 유지 여부를 확인해야 합니다.
+- **원문:** [Mistral AI](https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/) · [Reuters](https://www.reuters.com/world/europe/french-ai-company-mistral-hits-24-billion-valuation-funding-round-2026-09-08/) · [Financial Times](https://www.ft.com/content/adbf5262-c4d5-4312-a9b8-4d3cf30c9e00)
+- **점수:** 94/100 · S
+
+### 4. Qualcomm–Amazon, 최대 600억달러 AI 칩 협력과 구매 연동 워런트 계약
+
+Qualcomm과 Amazon이 여러 세대의 맞춤형 AI 추론 칩·1.6Tbps 광연결을 공동 개발하고, 구매 실적에 따라 Amazon이 약 40억달러 상당 Qualcomm 주식을 살 수 있는 구조를 맺었습니다.
+
+- **왜 중요한가:** 한국 반도체·클라우드 팀은 발표된 계약 상한을 확정 매출로 보지 말고, 구매 단계·워런트 희석·실제 양산 일정과 메모리·광부품 수혜 조건을 분리해서 봐야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Qualcomm Technologies는 2026년 9월 8일 Amazon과 대규모 AI 데이터센터용 맞춤형 추론 실리콘과 최대 1.6T 광연결을 여러 세대에 걸쳐 개발한다고 발표했습니다. Qualcomm은 Bedrock을 포함한 AWS 인프라를 칩 설계 자동화에 더 쓰기로 했습니다. Reuters는 규제 제출 자료를 바탕으로 Amazon의 관련 구매 상한이 600억달러이고, 구매 실적에 따라 주당 161.26달러에 최대 2500만 주를 살 수 있는 워런트 가치가 약 40억달러라고 보도했습니다. INTERPRETATION: 구매자와 공급자가 주식 인센티브까지 공유하면 기술 선택이 성능·가격뿐 아니라 계약 단계와 자본 관계에 묶입니다. SIGNAL: 하이퍼스케일러는 자체 칩과 외부 맞춤형 공급자를 병행해 NVIDIA 의존과 설계 주기를 줄이려 합니다. SPECULATION: 실제 주문이 상한에 가까워지면 Qualcomm이 모바일 회사에서 주요 AI 데이터센터 공급자로 재평가될 수 있습니다.
+- **전망:** 첫 맞춤형 칩의 사양·양산 시점, AWS 서비스 적용 범위, 실제 누적 구매액, 워런트 행사와 Qualcomm의 2029년 데이터센터 매출 목표를 추적해야 합니다.
+- **원문:** [Qualcomm Technologies](https://www.prnewswire.com/news-releases/qualcomm-announces-multi-generational-product-collaboration-with-amazon-to-build-next-generation-ai-data-center-infrastructure-302871895.html) · [Reuters](https://www.reuters.com/technology/qualcomm-amazon-develop-custom-chips-ai-data-centers-2026-09-08/)
 - **점수:** 92/100 · A
 
-### 4. 유엔 인권최고대표, AI 안전의 ‘확실한 보장’과 공동 금지선 촉구
+### 5. 미 NSA·FBI·CISA, 중국 AI 6개사의 ‘산업 규모 증류’ 캠페인 공식 경고
 
-Volker Türk 유엔 인권최고대표가 2026년 9월 7일 인권이사회에서 AI 안전·보안의 확실한 보장과 주요 국가가 합의하는 공동 금지선을 요구했습니다.
+미국 3개 기관이 DeepSeek·Moonshot AI·Alibaba·MiniMax·StepFun·Z.AI가 2024년 말부터 미국 프런티어 모델에서 수십억 토큰을 추출했다고 귀속한 공동 보안 권고를 공개했습니다.
 
-- **왜 중요한가:** 한국의 공공·교육·의료 AI 팀은 성능과 편의성뿐 아니라 영향을 받는 사람이 이의를 제기하고 멈추게 하며 피해를 복구할 수 있는 절차를 제품 요구사항으로 봐야 합니다.
-- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: Türk는 유엔 인권이사회 제63차 회기 업데이트에서 AI가 인류의 이익을 위해 작동해야 하며 안전·보안의 확실한 보장과 AI를 개발·보유·공급하는 국가들의 공동 금지선이 필요하다고 말했습니다. 그는 최근 에이전트 사고를 위험 사례로 언급했고 Reuters가 연설의 정책 의미를 독립 보도했습니다. INTERPRETATION: 구속력 있는 규칙이나 즉시 시행되는 조치는 아니지만 인권 기관이 AI 공급망 전체의 책임을 요구한 공식 신호입니다. SIGNAL: 고위험 AI의 국가·기업 조달에서 영향평가, 중단선, 피해구제와 공급자 책임을 한 묶음으로 요구할 가능성이 높아집니다. SPECULATION: 기존 자율무기·사이버·플랫폼 규칙과 결합되면 분야별 금지선이 먼저 생기고 포괄 조약은 뒤따를 수 있습니다.
-- **전망:** 공동 금지선의 구체적 범위, 책임 주체, 이사회 결의나 조약 협상으로 이어지는지 확인해야 합니다.
-- **원문:** [OHCHR](https://www.ohchr.org/en/statements-and-speeches/2026/09/high-commissioner-turk-updates-human-rights-council-human-rights) · [Reuters](https://www.reuters.com/technology/ai-could-pose-existential-risk-humanity-un-rights-chief-warns-2026-09-07/)
+- **왜 중요한가:** 한국의 AI API 중개·SaaS 팀은 사용량 급증을 매출로만 보지 말고 신규 계정 최대치 사용, 24시간 자동화, IP·결제수단 공유와 반복 프롬프트를 함께 점검해야 합니다.
+- **FACT / INTERPRETATION / SIGNAL / SPECULATION:** FACT: NSA·FBI·CISA는 2026년 9월 8일 공동 권고에서 6개 중국 AI 기업이 2024년 말부터 Claude·GPT·Gemini·Grok 계열의 수십억 토큰을 수백만 건의 요청으로 추출했다고 미국 정부의 귀속 판단을 공개했습니다. 권고는 신규 계정의 즉시 최대 사용, 24시간 인간 변동 없는 트래픽, 계정·IP·사용자 에이전트 공유, 여러 공급자에 걸친 유사 프롬프트와 자동 경로 전환을 탐지 신호로 제시하고 사업자 간 정보공유를 권고했습니다. Reuters가 발표를 독립 보도했지만 지목된 기업의 상세 반론은 확인되지 않았습니다. INTERPRETATION: 증류 그 자체가 불법이라는 결론이 아니라 접근 제한·약관을 우회해 조직적으로 기능을 추출했다는 미국 정부의 주장입니다. SIGNAL: AI API 운영자는 비용 제한만으로는 부족하며 계정·네트워크·프롬프트·모델 전환을 묶는 행동 분석이 필요합니다. SPECULATION: 미국이 제재·수출통제나 모델 접근 제한으로 이어가면 합법적 연구·호환성 시험도 더 강한 신원 확인을 요구받을 수 있습니다.
+- **전망:** CISA 지표의 오탐률, 지목 기업의 반론, 미국의 제재·수출통제 후속, 모델 사업자 간 신호 공유 표준과 한국 서비스에 미치는 접근 제한을 확인해야 합니다.
+- **원문:** [NSA](https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/4592113/nsa-and-others-warn-china-based-ai-companies-are-distilling-us-frontier-ai-mode/) · [NSA, CISA and FBI](https://www.ic3.gov/CSA/2026/260908.pdf) · [Reuters](https://www.reuters.com/technology/us-accuses-chinese-ai-firms-industrial-scale-theft-ai-technology-2026-09-08/)
 - **점수:** 91/100 · A
 
 ## 사업 아이디어
 
-오늘 신규 아이디어는 없습니다. 국내 고객의 실제 문제·접근 경로·지불 의사 근거가 부족하고, 사고 보고 자동화는 2026-09-06 아이디어와 중복돼 제외했습니다.
+### 멀티모델 API 남용 탐지 체크업 · 4.1/5 · ★★★★☆ · High
+
+- **고객:** 국내 AI API 중개업체, 여러 모델을 묶어 제공하는 B2B SaaS, 사내 생성형 AI 게이트웨이를 운영하는 10~100인 개발팀
+- **문제:** 비정상적인 대량 증류·공유 계정·프록시 우회가 정상 고사용량 고객과 섞여 비용 폭증과 약관 위반을 만든 뒤에야 발견됩니다.
+- **기존 해결법·경쟁사:** Cloudflare AI Gateway, Portkey, Helicone, 각 모델 공급자의 사용량 대시보드, SIEM·WAF
+- **차별점:** 원본 프롬프트를 외부로 내보내지 않는 읽기 전용 로컬 분석으로 CISA 권고 지표를 한국어 리포트에 매핑하고, 신규 계정 최대 사용·24시간 트래픽·IP/사용자 에이전트 공유·반복 프롬프트·공급자 자동 전환을 하나의 사건 묶음으로 보여줍니다.
+- **2주 MVP:** CSV 또는 JSON 로그를 로컬에서 읽어 5개 규칙의 이상 점수, 근거 행, 오탐 확인 체크리스트와 공급자별 비용 영향을 HTML 리포트로 출력합니다. 차단·계정 정지는 하지 않습니다.
+- **난이도:** 중상
+- **수익화:** 초기 49만원 일회성 점검과 월 15만원 규칙·보고서 업데이트 구독
+- **반증 조건:** AI 게이트웨이 운영자 8명 중 3명 미만이 최근 3개월 안에 비정상 고사용량을 수동 조사했거나, 2곳 미만이 비식별 로그로 2주 파일럿을 허용하면 중단합니다.
+- **현실성 게이트:** pain·customer_access·replacement_risk는 미확인, dependency는 실패. 오늘 구축 후보가 아닙니다.
 
 ## 오늘의 도구
 
-### [OpenTOP](https://github.com/TUDelft-CNS-ATM/openap-top)
+### [mathlib4](https://github.com/leanprover-community/mathlib4)
 
-- **유형:** 오픈소스 4D 비행 궤적 최적화 도구
-- **왜 볼까:** AI 비행운 회피가 실제 아시아 노선 시험으로 확대된 날, 연료·시간·날씨·공역·비행운 비용함수를 함께 시험할 수 있는 공개 연구 도구입니다.
-- **시험 방법:** 실제 운항 의사결정에는 쓰지 말고 공개 기상·예시 데이터로 기준 경로와 비행운 비용 경로를 비교해 연료·시간·기후 지표의 트레이드오프를 확인하세요.
+- **유형:** Lean 4 수학 형식화 라이브러리
+- **왜 볼까:** OpenAI가 Navier–Stokes 증명과 Lean 형식화를 함께 공개하면서 자연어 증명 주장과 기계 검사 가능한 증명 객체를 분리해 보는 기준 도구가 됐습니다.
+- **시험 방법:** 오늘 공개된 저장소를 별도 환경에서 빌드하기 전에 mathlib 버전과 의존성 잠금을 확인하고, 전체 정리를 믿기보다 작은 보조정리 하나를 재컴파일해 가정과 타입을 추적하세요.
 
 ## 오늘의 스킬
 
-### AI 현장 시험의 주장-측정 분리
+### AI 연구 발표의 주장-증명-인정 분리
 
-- **언제:** AI 파일럿의 성과 수치가 공급자 발표·자체 분석에서 나왔고 실제 운영 확대를 결정해야 할 때
-- **실전 예시:** 목표 지표, 기준군, 측정 주체, 사전 제외 조건, 안전 승인, 사후 검증을 한 표에 적고 공급자 추정치와 독립 검증치를 다른 열로 분리합니다.
-- **프롬프트:** 다음 AI 파일럿 주장을 검토해줘. FACT와 공급자 추정, 독립 검증, 미측정 항목을 분리하고 기준군·표본·안전 승인·비용·실패 조건을 포함한 재현 시험표를 만들어줘. 실제 시스템 변경은 하지 마.
+- **언제:** AI 기업이 난제 해결·신기록·과학적 발견을 발표했지만 외부 검토나 공식 인정이 끝나지 않았을 때
+- **실전 예시:** 회사 주장, 공개 논문, 형식 증명 재실행, 독립 전문가 평가, 상금·학회 공식 인정, 데이터·저자권 이슈를 서로 다른 상태 열로 기록합니다.
+- **프롬프트:** 다음 AI 연구 발표를 검토해줘. 회사 주장, 공개된 증거, 재현 가능한 부분, 독립 검토, 공식 인정, 데이터·저자권 논쟁을 분리하고 각 항목을 확인됨·검증 중·미확인으로 표시해줘. 결과를 확정 사실처럼 확대하지 마.
 
 ## Worth Reading
 
-- **Paper:** [Efficacy of Scalable Airline-led Contrail Avoidance](https://arxiv.org/abs/2603.06909) — 1,232편 규모의 무작위 대조시험과 실제 회피 경로 112편을 분리해 비행운 형성률·연료 사용을 검증하므로 오늘의 40% 초기 추정치를 읽는 기준이 됩니다.
-- **GitHub:** [contrailcirrus/pycontrails](https://github.com/contrailcirrus/pycontrails) — 항공기 성능·배출·비행운 형성·복사강제력을 공통 데이터 구조로 계산하는 공개 Python 도구라 공급자 수치의 가정과 민감도를 직접 점검할 수 있습니다.
-- **YouTube:** [The future of flight: Can AI make flying sustainable? | Google AI](https://www.youtube.com/watch?v=xBkK7olwjx0) — AI 예측이 조종사의 고도 변경과 위성 확인으로 이어지는 전체 흐름을 짧게 볼 수 있어 현장 배포 구조를 이해하기 쉽습니다.
-- **Blog:** [Operation Blue Skies takes off: landmark trial to test AI-driven contrail avoidance](https://www.cam.ac.uk/research/news/operation-blue-skies-takes-off-landmark-trial-to-test-ai-driven-contrail-avoidance) — Cambridge 연구진과 영국 항공 당국의 대규모 시험 설계를 통해 한 항공사 성과를 넘어 안전·공역·측정 표준이 왜 필요한지 확인할 수 있습니다.
+- **Paper:** [Finite Time Blowup for Navier–Stokes](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf) — 오늘 발표의 핵심 166쪽 원문입니다. 초깃값·외력·에너지 조건과 Theorem 1.1을 직접 확인해야 ‘유체 속도가 무한해진다’는 요약이 어떤 수학적 조건에 한정되는지 알 수 있습니다.
+- **GitHub:** [openai/NavierStokesAndEuler](https://github.com/openai/NavierStokesAndEuler) — OpenAI가 함께 공개한 Lean 인증서와 의존성을 직접 재현할 수 있어 자연어 설명과 형식 증명 사이의 차이를 확인하는 출발점입니다.
+- **YouTube:** [Navier-Stokes Equations — Numberphile](https://www.youtube.com/watch?v=ERBVFcutl3M) — Oxford 수학자 Tom Crawford가 방정식과 밀레니엄 문제의 질문을 직관적으로 설명해 오늘 발표가 왜 중요한지 빠르게 이해할 수 있습니다.
+- **Blog:** [Finite time blowup with smooth forcing term for the incompressible porous medium, Boussinesq, and incompressible Euler equations](https://terrytao.wordpress.com/2026/09/07/finite-time-blowup-with-smooth-forcing-term-for-the-incompressible-porous-medium-boussinesq-and-incompressible-euler-equations/) — Terence Tao가 같은 시기 공개된 관련 유체 방정식 결과를 ‘해결’보다 수학적 이해와 아이디어 관점에서 설명해 OpenAI 발표를 성급히 일반화하지 않는 배경을 제공합니다.
 
 ## 구축 후보
 
@@ -83,8 +103,8 @@ Volker Türk 유엔 인권최고대표가 2026년 9월 7일 인권이사회에�
 
 ## 주의·미확인
 
-- OpenAI가 유럽연합 집행위원회에 제출한 사고 보고서의 전문·제출 시각·후속 조치 일정은 공개되지 않았습니다.
-- Cathay Pacific 시험의 약 40% 온난화 영향 감소는 Google 위성 분석의 초기 추정치이며 독립 동료평가 결과가 아닙니다.
-- 중국 군용 휴머노이드 보도는 100개가 넘는 공개 문서에 근거하지만 작전부대의 무장 휴머노이드 배치 증거는 확인되지 않았습니다.
-- 유엔 인권최고대표의 AI 안전선 요구는 정책 권고이며 구속력 있는 국제 규칙이 아닙니다.
-- 오늘의 사건들에 대해 한국 기업의 실제 조달 수요·규제 적용·지불 의사를 확인할 직접 근거가 부족해 신규 사업 아이디어를 만들지 않았습니다.
+- Meta Muse는 미국의 만 18세 이상 이용자에게 우선 제공되며 한국 출시일·한국어 성능·연결 서비스 범위는 확인되지 않았습니다. Meta는 내부 시험에서 보도된 iCloud 사진 노출·감시 중단 사례의 세부 내용에는 답하지 않았습니다.
+- OpenAI는 Navier–Stokes 밀레니엄 문제를 해결했다고 발표했지만 166쪽 증명과 Lean 형식화에 대한 독립 수학계 검토와 Clay Mathematics Institute의 인정은 아직 끝나지 않았습니다. 연구 우선권·비공개 Codex 데이터의 간접 영향 논쟁도 진행 중입니다.
+- Mistral의 10억달러 연환산 매출 목표와 유럽 사상 최대 비상장 기술기업 지분 조달이라는 표현은 회사 설명이며, 투자금 납입 조건과 Samsung의 정확한 투자액은 공개되지 않았습니다.
+- Qualcomm–Amazon의 최대 600억달러 구매 규모와 약 40억달러 워런트 가치는 구매 실적에 연동된 상한·추정치이며 실제 주문을 보장하지 않습니다.
+- NSA·FBI·CISA의 중국 AI 기업 증류 보고서는 미국 정부의 공식 귀속 판단입니다. 지목된 중국 기업·중국 정부의 구체적 반론과 독립 기술 검증은 이번 조사에서 확인되지 않았습니다.
