@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-09-11",
+  "generated_at": "2026-09-10T22:01:02Z",
+  "status": "complete",
+  "warnings": [
+    "Anthropic의 최신 Threat Intelligence 보고서 직접 원문 URL은 확인하지 못했다. 캠페인 규모와 지목 기업 관련 수치는 Reuters와 AP가 전한 Anthropic 주장으로 취급하며, 지목 기업들의 상세 반론과 독립 포렌식은 미확인이다.",
+    "IBM–NASA 달 기초모델의 공식 모델 카드·라이선스·벤치마크 보고서 직접 URL은 확인하지 못했다. 정확도 향상 수치는 IBM·NASA가 Reuters에 제공한 주장으로 독립 검증되지 않았다.",
+    "OpenAI가 제시한 Agents API 고객 성과와 금융 벤치마크는 회사 또는 설계 파트너 측 수치이며 독립 실무 평가가 없다."
+  ],
+  "news": [
+    {
+      "event_key": "openai-agents-api-public-beta-2026-09-10",
+      "title": "OpenAI, Codex 실행 환경을 관리형 Agents API로 공개",
+      "importance": "S",
+      "score": 97,
+      "one_line_summary": "OpenAI가 장기 작업, 도구 호출, 컨텍스트 압축, 샌드박스와 멀티에이전트 운영을 묶은 Agents API를 공개 베타로 출시했다.",
+      "impact": "모델 API 경쟁이 응답 품질을 넘어 실행 환경·관측성·권한 관리 경쟁으로 이동한다.",
+      "original_url": "https://openai.com/index/introducing-the-agents-api/",
+      "key_quote": "Today, we’re introducing the Agents API in public beta.",
+      "quote_translation": "오늘 Agents API를 공개 베타로 선보입니다.",
+      "summary": "FACT: 2026-09-10 OpenAI는 작업·모델·도구·환경을 지정해 클라우드 에이전트를 만드는 Agents API를 공개 베타로 출시했다. 공식 문서는 OpenAI 호스팅, 자체 호스팅, 파트너 환경과 관리형 컨텍스트 압축, 도구 검색, 프로그램형 도구 호출, 멀티에이전트 지원을 설명한다. GitHub의 Agents SDK는 세션, 추적, 휴먼 인 더 루프를 제공한다. 고객 성과 수치는 OpenAI 측 사례이며 독립 검증 전이다.",
+      "why_it_matters": "INTERPRETATION: 개발자는 실행 인프라를 직접 조립하는 시간을 줄일 수 있지만, 작업 상태와 로그가 특정 공급자 실행층에 묶일 위험도 커진다. 한국의 1~3인 팀에는 프로토타입 속도가 빨라지는 대신 권한·비용·반출 경로를 먼저 설계해야 한다.",
+      "industry_mood": {
+        "label": "낙관 속 경계",
+        "fact": "공개 베타와 공식 문서, 공식 SDK가 동시에 제공됐다.",
+        "signal": "에이전트 제품의 차별점이 모델 선택에서 실행 하네스와 운영 통제로 이동하고 있다."
+      },
+      "outlook": "SIGNAL: 향후 3~6개월 동안 클라우드 사업자와 개발 도구가 장기 작업, 승인, 감사 로그, 샌드박스를 묶은 관리형 런타임을 경쟁적으로 내놓을 가능성이 높다. SPECULATION: 관리형 실행층이 표준이 되면 모델 교체보다 실행 상태와 도구 권한의 이식성이 더 큰 잠금 요인이 될 수 있다.",
+      "business_opportunity": "에이전트 런타임 간 작업 정의·권한·추적 데이터를 비교하고 반출 가능성을 점검하는 서비스 수요가 생길 수 있으나, 최근의 권한 리허설·사고 공개·공급자 전환 아이디어와 중복되어 오늘 신규 아이디어로 승격하지 않았다.",
+      "tags": [
+        "OpenAI",
+        "Agents API",
+        "Codex",
+        "agent runtime",
+        "developer tools"
+      ],
+      "sources": [
+        {
+          "title": "Introducing the Agents API",
+          "url": "https://openai.com/index/introducing-the-agents-api/",
+          "publisher": "OpenAI",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-agents-api"
+        },
+        {
+          "title": "Agents API overview",
+          "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+          "publisher": "OpenAI",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "corroborated",
+          "evidence_group": "openai-agents-api"
+        },
+        {
+          "title": "OpenAI Agents SDK for Python",
+          "url": "https://github.com/openai/openai-agents-python",
+          "publisher": "OpenAI",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "github",
+          "authority": "official",
+          "verification_status": "corroborated",
+          "evidence_group": "openai-agents-sdk"
+        }
+      ]
+    },
+    {
+      "event_key": "openai-chatgpt-financial-services-2026-09-10",
+      "title": "OpenAI, 금융 데이터·감사 통제를 묶은 ChatGPT for Financial Services 출시",
+      "importance": "S",
+      "score": 95,
+      "one_line_summary": "OpenAI가 금융기관용 ChatGPT에 전문 데이터, 50개 이상 커넥터, 역할 기반 통제와 감사 로그를 결합했다.",
+      "impact": "범용 AI가 규제 산업의 데이터 구독·권한·감사 체계를 제품 내부로 흡수하기 시작했다.",
+      "original_url": "https://openai.com/index/introducing-chatgpt-financial-services/",
+      "key_quote": "It brings together built-in data, connected sources, and financial analysis workflows.",
+      "quote_translation": "내장 데이터, 연결된 자료원, 금융 분석 워크플로를 한데 모읍니다.",
+      "summary": "FACT: OpenAI는 2026-09-10 적격 금융기관을 대상으로 ChatGPT for Financial Services를 출시했다. 공식 발표는 Daloopa, PitchBook, LSEG News, Crunchbase의 내장 데이터와 S&P Global, MSCI, Factiva, Moody’s 등 기존 구독 연결, 50개 이상 커넥터를 제시한다. SAML SSO, SCIM, 역할 기반 접근, 암호화, 보존 정책, 감사 로그 내보내기와 정보 장벽도 포함된다. Reuters가 출시와 Morgan Stanley·Evercore의 설계 참여를 독립 보도했다.",
+      "why_it_matters": "INTERPRETATION: 금융 AI의 핵심 상품이 단순 답변에서 허가된 데이터 출처와 추적 가능한 산출물로 이동한다. 국내 금융·회계팀은 한국 데이터 제공 범위, 정보 장벽의 실제 강도, 감사 가능성을 별도 확인해야 한다.",
+      "industry_mood": {
+        "label": "도입 가속, 검증 유보",
+        "fact": "전문 데이터 제공사와 엔터프라이즈 통제가 하나의 상품으로 묶였다.",
+        "signal": "규제 산업 AI의 구매 기준이 모델 성능과 함께 데이터 권리·감사 증거를 포함하기 시작했다."
+      },
+      "outlook": "SIGNAL: 법률·의료·공공 부문에서도 전문 데이터와 거버넌스를 묶은 수직형 AI 패키지가 확대될 가능성이 높다. SPECULATION: 데이터 라이선스와 정보 장벽을 검증할 수 있는 공급자가 모델 공급자보다 더 강한 협상력을 가질 수 있다.",
+      "business_opportunity": "한국 금융기관용 근거 추적·감사 워크북 수요 가능성은 있으나, 프리미엄 데이터 의존성과 금융 보안·규제 게이트, 국내 고객 접근성이 해결되지 않아 신규 아이디어와 구축 후보에서 제외했다.",
+      "tags": [
+        "OpenAI",
+        "financial services",
+        "enterprise AI",
+        "audit",
+        "data governance"
+      ],
+      "sources": [
+        {
+          "title": "Introducing ChatGPT for Financial Services",
+          "url": "https://openai.com/index/introducing-chatgpt-financial-services/",
+          "publisher": "OpenAI",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-financial-services"
+        },
+        {
+          "title": "OpenAI launches ChatGPT for financial services industry",
+          "url": "https://www.reuters.com/business/openai-launches-chatgpt-financial-services-industry-2026-09-10/",
+          "publisher": "Reuters",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "reuters-openai-financial-services"
+        }
+      ]
+    },
+    {
+      "event_key": "anthropic-threat-intelligence-campaigns-2026-09-10",
+      "title": "Anthropic, Claude를 악용한 러시아·중국 연계 캠페인 차단 주장",
+      "importance": "S",
+      "score": 93,
+      "one_line_summary": "Anthropic이 사이버 공격과 모델 증류에서 사람이 감독하고 AI가 다수 단계를 직접 수행한 캠페인을 차단했다고 밝혔다.",
+      "impact": "에이전트 악용이 단발성 프롬프트가 아니라 계정망·도구·자동화가 결합된 운영 문제임을 보여준다.",
+      "original_url": "https://www.reuters.com/legal/litigation/anthropic-disrupts-russian-chinese-ai-campaigns-targeting-its-claude-models-2026-09-10/",
+      "key_quote": "The use of AI went beyond simple questions and responses from a chatbot.",
+      "quote_translation": "AI 사용은 챗봇의 단순 질의응답을 넘어섰습니다.",
+      "summary": "FACT: Reuters와 AP는 Anthropic이 2026-01~09 관측한 위협 캠페인을 공개했다고 보도했다. Anthropic은 중국계 연구소들의 대규모 모델 증류와 러시아 연계 그룹의 피싱·계정 탈취·악성코드 변형, 생물학적 이중용도 시도를 차단했다고 주장했다. Reuters는 Alibaba에 귀속됐다고 회사가 주장한 1억5100만 건의 교환 등 수치를 전했으나, 보고서 직접 원문과 독립 포렌식은 확인되지 않았다.",
+      "why_it_matters": "INTERPRETATION: 방어 기준은 모델 출력 필터만으로 충분하지 않고 계정 생성, 호출 패턴, 도구 권한, 데이터 반출을 함께 봐야 한다. 지목 기업에 대한 주장은 아직 일방의 귀속 판단이므로 확정 사실로 읽어서는 안 된다.",
+      "industry_mood": {
+        "label": "높은 경계",
+        "fact": "두 독립 매체가 Anthropic 발표 내용을 보도했다.",
+        "signal": "AI 보안의 단위가 프롬프트에서 캠페인·계정망·실행 경로로 확대되고 있다."
+      },
+      "outlook": "SIGNAL: 모델 제공사는 호출 속도, 계정 연계성, 도구 사용, 데이터 유사도를 묶은 행위 기반 탐지를 강화할 가능성이 높다. SPECULATION: 국가 간 모델 접근 제한과 고객 검증 절차가 확대되어 정상 개발자의 비용과 마찰도 커질 수 있다.",
+      "business_opportunity": "멀티모델 API 남용 탐지 수요는 전일 아이디어와 직접 중복된다. 독립 고객 근거와 개인정보·영업비밀 처리 설계가 부족해 새로운 아이디어를 만들지 않았다.",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "cybersecurity",
+        "model distillation",
+        "agent abuse"
+      ],
+      "sources": [
+        {
+          "title": "Anthropic disrupts Russian, Chinese AI campaigns targeting its Claude models",
+          "url": "https://www.reuters.com/legal/litigation/anthropic-disrupts-russian-chinese-ai-campaigns-targeting-its-claude-models-2026-09-10/",
+          "publisher": "Reuters",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "reuters-anthropic-threat-report"
+        },
+        {
+          "title": "Anthropic says it blocked AI-assisted cyber and biological threats",
+          "url": "https://apnews.com/article/00266dca90e4f8853f669648998d3bda",
+          "publisher": "Associated Press",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "ap-anthropic-threat-report"
+        }
+      ]
+    },
+    {
+      "event_key": "ibm-nasa-lunar-foundation-model-2026-09-10",
+      "title": "IBM·NASA, 달 얼음·분화구 분석용 공개 AI 기초모델 발표",
+      "importance": "A",
+      "score": 89,
+      "one_line_summary": "IBM과 NASA가 4개 달 탐사 임무의 9개 관측 장비와 30개 이상 데이터층을 학습한 공개 달 탐사 모델을 발표했다.",
+      "impact": "공개 기초모델이 범용 언어를 넘어 과학 관측과 현장 의사결정의 재사용 가능한 기반으로 확장된다.",
+      "original_url": "https://www.reuters.com/science/ibm-nasa-launch-ai-model-help-map-ice-craters-moon-2026-09-10/",
+      "key_quote": "IBM and NASA released an open-source AI model for lunar exploration.",
+      "quote_translation": "IBM과 NASA가 달 탐사용 오픈소스 AI 모델을 공개했습니다.",
+      "summary": "FACT: Reuters는 IBM과 NASA가 LRO를 포함한 4개 임무, 9개 관측 장비, 30개 이상 데이터층을 사용한 달 기초모델을 공개했다고 보도했다. 얼음 퇴적 후보, 분화구와 착륙지, 화산 지형 분석을 지원한다. 최대 23% 정확도 향상은 IBM·NASA 측 설명이며, 공식 모델 카드·라이선스·벤치마크 원문은 이번 조사에서 확인하지 못했다.",
+      "why_it_matters": "INTERPRETATION: 공개 모델의 가치가 가중치 자체보다 데이터 계보, 센서 결합, 검증 가능한 과학 작업에 있을 가능성을 보여준다. 한국의 소규모 팀에는 우주 자체보다 위성·기상·제조 센서 모델의 재사용 패턴이 더 직접적인 신호다.",
+      "industry_mood": {
+        "label": "과학 개방에 긍정",
+        "fact": "모델 공개와 사용 목적이 보도됐지만 직접 모델 카드는 미확인이다.",
+        "signal": "공공 과학 데이터와 도메인 기초모델의 결합이 늘고 있다."
+      },
+      "outlook": "SIGNAL: 우주·기후·재난·산업 센서 분야에서 공공 데이터 기반 도메인 모델 공개가 늘어날 수 있다. SPECULATION: 실제 채택은 정확도 수치보다 데이터 라이선스, 재현 가능한 평가, 기존 GIS·분석 도구와의 연결성에 좌우될 것이다.",
+      "business_opportunity": "국내 위성·센서 분석 도구로 확장 가능성은 있으나 고객 문제, 한국 데이터 접근권, 도메인 검증 인력이 확인되지 않아 사업 아이디어로 승격하지 않았다.",
+      "tags": [
+        "IBM",
+        "NASA",
+        "lunar model",
+        "open source",
+        "scientific AI"
+      ],
+      "sources": [
+        {
+          "title": "IBM, NASA launch AI model to help map ice and craters on the moon",
+          "url": "https://www.reuters.com/science/ibm-nasa-launch-ai-model-help-map-ice-craters-moon-2026-09-10/",
+          "publisher": "Reuters",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "reuters-ibm-nasa-lunar"
+        }
+      ]
+    },
+    {
+      "event_key": "bis-ai-boom-financial-stability-warning-2026-09-10",
+      "title": "BIS, AI 투자 붐의 부채·시장집중 위험 경고",
+      "importance": "A",
+      "score": 87,
+      "one_line_summary": "BIS 수장이 AI 생산성 잠재력을 인정하면서 대규모 부채 조달과 불투명한 상호연결이 금융안정 위험을 키운다고 경고했다.",
+      "impact": "AI 인프라 경쟁의 성패가 기술 수요뿐 아니라 자금 조달 구조와 집중 위험에 달리기 시작했다.",
+      "original_url": "https://www.reuters.com/business/finance/ai-boom-poses-new-financial-stability-risks-bis-head-says-2026-09-10/",
+      "key_quote": "The promise of AI is real.",
+      "quote_translation": "AI의 잠재력은 현실입니다.",
+      "summary": "FACT: Reuters는 BIS 총재가 상위 5개 기술기업의 2025~2026년 AI 투자 규모가 1조달러를 넘고, 업계 전망상 2030년까지 최대 4조달러가 더 필요할 수 있다고 말했다고 보도했다. 그는 기업 이익보다 부채와 사모신용 의존이 커지며 불투명하고 상호연결된 위험이 생긴다고 지적했다. BIS 2026 연차경제보고서는 AI의 생산성 잠재력과 노동·시장 재편을 별도로 다룬다.",
+      "why_it_matters": "INTERPRETATION: AI 공급망 수요가 강해도 자금 비용과 소수 기업 집중이 충격 전파 경로가 될 수 있다. 반도체 수출 비중이 높은 한국에는 주문 증가와 고객 집중 위험이 동시에 존재한다.",
+      "industry_mood": {
+        "label": "장기 낙관, 금융 경계",
+        "fact": "BIS는 생산성 가능성을 인정하면서 투자 자금 구조의 위험을 함께 제시했다.",
+        "signal": "AI 평가에 모델 성능뿐 아니라 프로젝트 현금흐름·부채 만기·구매자 집중도가 포함되기 시작했다."
+      },
+      "outlook": "SIGNAL: 은행·감독기관은 데이터센터와 AI 칩 프로젝트의 대출 심사에서 전력 계약, 앵커 고객, 구매 약정과 재융자 위험을 더 엄격히 볼 가능성이 높다. SPECULATION: 수요 기대가 꺾이면 비상장 신용과 공급망 기업에서 먼저 가격 조정이 나타날 수 있다.",
+      "business_opportunity": "AI 인프라 재무 위험 모니터링은 전문 데이터와 금융 규제 지식이 필요한 영역이며, 1~3인 팀의 접근성과 유료 데이터 의존성 게이트를 통과하지 못해 아이디어로 만들지 않았다.",
+      "tags": [
+        "BIS",
+        "AI investment",
+        "financial stability",
+        "private credit",
+        "infrastructure"
+      ],
+      "sources": [
+        {
+          "title": "AI boom poses new financial stability risks, BIS head says",
+          "url": "https://www.reuters.com/business/finance/ai-boom-poses-new-financial-stability-risks-bis-head-says-2026-09-10/",
+          "publisher": "Reuters",
+          "published_at": "2026-09-10",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "reuters-bis-ai-risk"
+        },
+        {
+          "title": "Artificial intelligence: from progress to peril",
+          "url": "https://www.bis.org/publications/aer-2026/progress-peril",
+          "publisher": "Bank for International Settlements",
+          "published_at": "2026-06-24",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "corroborated",
+          "evidence_group": "bis-ai-economic-report"
+        }
+      ]
+    }
+  ],
+  "business_ideas": [],
+  "tools": [
+    {
+      "name": "OpenAI Agents API",
+      "type": "Managed cloud agent runtime",
+      "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+      "stars": 4,
+      "why_trending": "장기 작업, 도구, 환경, 컨텍스트 압축, 멀티에이전트 운영을 하나의 공개 베타 API로 묶었다.",
+      "worth_trying": "운영 시스템과 분리된 샌드박스에서 읽기 전용 자료 요약 작업 하나만 실행하고, 도구 허용 목록·비용 한도·중단 조건·로그 반출 가능성을 먼저 확인할 가치가 있다."
+    }
+  ],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "에이전트 실행 경계표 만들기",
+    "when_to_use": "예약·장기 실행 업무를 관리형 에이전트 API로 옮기기 전에 사용한다.",
+    "practical_example": "입력 데이터, 허용 도구, 쓰기 대상, 최대 비용, 재시도 횟수, 사람 승인 지점, 중단 조건, 감사 로그와 반출 형식을 한 장에 적고 테스트 결과와 대조한다.",
+    "prompt_example": "이 에이전트 업무의 데이터·도구·쓰기 권한·비용·재시도·사람 승인·중단·감사 로그 경계를 표로 만들고, 미확인 항목은 추정하지 말고 unknown으로 표시해줘."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "OGX: An Open-Source, Vendor-Neutral Generative AI Application Server",
+      "url": "https://arxiv.org/abs/2608.14580",
+      "why_read": "20개 이상 추론 백엔드와 13개 벡터 저장소를 하나의 공개 규격 아래 묶는 설계를 통해 에이전트 실행층의 공급자 중립성이 왜 어려운지 살펴볼 수 있다."
+    },
+    {
+      "type": "GitHub",
+      "title": "OpenAI Agents SDK for Python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "why_read": "세션, 추적, 휴먼 인 더 루프와 에이전트 샌드박스가 실제 SDK에서 어떤 구조로 제공되는지 확인할 수 있다."
+    },
+    {
+      "type": "YouTube",
+      "title": "Build Hour: Agents SDK",
+      "url": "https://www.youtube.com/watch?v=tK32trvj_b4",
+      "why_read": "업데이트된 SDK로 장기 실행 에이전트를 구성하는 흐름을 공식 실습 영상으로 확인할 수 있다."
+    },
+    {
+      "type": "Blog",
+      "title": "Building effective agents",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "why_read": "복잡한 자율 에이전트보다 단순한 워크플로부터 시작하고 비용·지연·통제의 교환관계를 평가해야 한다는 실무 원칙을 정리한다."
+    }
+  ],
+  "todays_insight": "AI, 모델보다 실행 기반이 시장을 가른다. OpenAI는 에이전트 하네스와 금융 데이터·통제를 상품화했고, Anthropic은 같은 자동화가 공격 캠페인으로 확장될 수 있음을 경고했다. IBM·NASA의 공개 과학 모델과 BIS의 자금 위험은 실행 기반의 가치가 데이터 계보, 검증, 관측성, 자금 구조에서 결정된다는 신호다.",
+  "morning_paper": {
+    "insight_headline": "AI, 모델보다 실행 기반이 시장을 가른다",
+    "insight_summary": "관리형 에이전트 실행층과 규제 산업용 데이터 경계가 빠르게 상품화되는 동시에, 악용 캠페인과 대규모 자금 조달 위험이 통제와 증거의 중요성을 키우고 있다. 승자는 더 큰 모델보다 작업 상태, 권한, 데이터 계보와 비용을 설명할 수 있는 실행 기반을 가진 쪽일 가능성이 높다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "openai-agents-api-public-beta-2026-09-10",
+      "openai-chatgpt-financial-services-2026-09-10",
+      "anthropic-threat-intelligence-campaigns-2026-09-10",
+      "ibm-nasa-lunar-foundation-model-2026-09-10",
+      "bis-ai-boom-financial-stability-warning-2026-09-10"
+    ],
+    "top_event_keys": [
+      "openai-agents-api-public-beta-2026-09-10",
+      "openai-chatgpt-financial-services-2026-09-10",
+      "anthropic-threat-intelligence-campaigns-2026-09-10"
+    ]
+  },
+  "build_candidate": null
+}
