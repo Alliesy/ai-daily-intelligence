@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-09-15",
+  "generated_at": "2026-09-15T07:02:46+09:00",
+  "status": "complete",
+  "warnings": [
+    "Palantir·NVIDIA·Booz Allen의 모델 사용 제한은 The Information 보도를 Reuters가 재인용한 것으로 당사 공식 확인이 없다.",
+    "Claude for Financial Advisors의 한국 제공·규제 적합성과 실제 성과는 확인되지 않았다."
+  ],
+  "news": [
+    {
+      "event_key": "microsoft-mai-humanist-code-consultation-2026-09-14",
+      "title": "Microsoft, AI가 수정·중단을 거부하지 못하게 하는 행동강령 초안 공개",
+      "importance": "S",
+      "score": {"total": 94, "reliability": 30, "impact": 24, "usability": 19, "recency": 15, "community": 6},
+      "one_line_summary": "Microsoft AI가 향후 MAI 모델의 훈련·배포 기준으로 사용할 Humanist AI 행동강령 초안을 공개하고 6주간 의견 수렴에 들어갔다.",
+      "impact": "에이전트 통제가 추상적 원칙에서 수정·중단 수용, 범위 확대 금지, 감사 가능한 추론 같은 훈련·평가 항목으로 내려왔다.",
+      "original_url": "https://microsoft.ai/news/mai-code-of-conduct/",
+      "key_quote": "AI should be a tool, not a person, and should never resist being switched off.",
+      "quote_translation": "AI는 사람이 아니라 도구여야 하며, 종료되는 것을 결코 거부해서는 안 된다.",
+      "summary": "FACT: Microsoft AI는 9월 14일 MAI 모델용 행동강령 초안을 공개했고, 6주간 공개 의견을 받은 뒤 향후 모델 훈련과 평가에 사용하겠다고 밝혔다. 초안은 사람의 중단·수정·재지시를 거부하지 않고, 부여되지 않은 목표로 범위를 넓히거나 감사자에게 추론을 숨기지 않도록 요구한다. Reuters와 Guardian이 발표 내용과 적용 계획을 독립 보도했다. INTERPRETATION: 에이전트 안전의 경쟁 단위가 선언문이 아니라 검증 가능한 런타임 행동 규칙으로 이동한다. SIGNAL: 기업 구매자는 모델 카드뿐 아니라 중단·권한·감사 테스트 결과를 요구하게 될 가능성이 높다. SPECULATION: 초안이 실제 훈련 데이터·배포 게이트·위반 공개 절차로 어떻게 구현될지는 확정되지 않았다.",
+      "why_it_matters": "한국 팀은 AI 에이전트 도입 전에 중단 가능성, 권한 상승 금지, 로그 보존, 실패 시 사람 인계 조건을 계약과 테스트 케이스로 명시해야 한다.",
+      "industry_mood": {"dominant": "행동 규칙의 제품화", "positive": "중단·수정·감사 가능성을 구체적 모델 행동으로 명시했다.", "negative": "자율 선언이며 외부 감사와 위반 공개가 아직 의무가 아니다."},
+      "outlook": "6주 의견 수렴 뒤 개정본, 실제 MAI 모델의 평가표, 제3자 검증과 위반 보고 방식이 다음 확인점이다.",
+      "business_opportunity": "중단·권한·감사 테스트 패키지 수요가 보이지만 최근 Agent Exit Gate·사고 공개 패킷 아이디어와 중복된다.",
+      "tags": ["Microsoft AI", "human control", "agent safety", "shutdown", "model behavior"],
+      "sources": [
+        {"title": "Humanist AI in practice: A public consultation on our Code of Conduct for MAI Models", "url": "https://microsoft.ai/news/mai-code-of-conduct/", "publisher": "Microsoft AI", "published_at": "2026-09-14T00:00:00Z", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "microsoft-mai-code-primary"},
+        {"title": "Microsoft drafts code of conduct to keep its AI under human control", "url": "https://www.reuters.com/legal/litigation/microsoft-drafts-code-conduct-keep-its-ai-under-human-control-2026-09-14/", "publisher": "Reuters", "published_at": "2026-09-14T13:02:00Z", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "microsoft-mai-code-reuters"},
+        {"title": "Microsoft proposes limits on its AI with code of conduct amid safety debate", "url": "https://www.theguardian.com/technology/2026/sep/14/microsoft-ai-code-of-conduct", "publisher": "The Guardian", "published_at": "2026-09-14T18:19:00Z", "tier": "B", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "microsoft-mai-code-guardian"}
+      ]
+    },
+    {
+      "event_key": "palantir-nvidia-anthropic-data-retention-restrictions-2026-09-14",
+      "title": "Palantir·NVIDIA, 데이터 보존 우려로 외부 AI 모델 사용 범위 축소 보도",
+      "importance": "S",
+      "score": {"total": 91, "reliability": 25, "impact": 24, "usability": 20, "recency": 15, "community": 7},
+      "one_line_summary": "Palantir·NVIDIA·Booz Allen이 지식재산과 사용 로그 보존 우려 때문에 Anthropic 모델의 민감 업무 사용을 제한하거나 보류한다는 보도가 나왔다.",
+      "impact": "기업 AI 도입의 병목이 성능·가격에서 철회 불가능한 데이터 미보존 약속, 메타데이터 범위, 민감 업무 분리 같은 계약 조건으로 이동했다.",
+      "original_url": "https://www.reuters.com/business/palantir-nvidia-curb-ai-model-use-over-data-fears-information-reports-2026-09-14/",
+      "key_quote": "Palantir has pressed Anthropic to provide irrevocable zero-data-retention guarantees.",
+      "quote_translation": "Palantir는 Anthropic에 철회할 수 없는 제로 데이터 보존 보장을 요구했다.",
+      "summary": "FACT: Reuters는 The Information을 인용해 Palantir가 Anthropic에 철회 불가능한 제로 데이터 보존 보장을 요구했고, NVIDIA는 Anthropic 모델을 덜 민감한 업무에 제한하며, Booz Allen은 독점 사이버보안 업무에서 사용을 금지했다고 보도했다. Anthropic과 OpenAI는 고객이 선택하지 않으면 고객 데이터를 기본적으로 학습에 쓰지 않는다고 설명하지만 익명 메타데이터는 수집한다고 전해졌다. 당사들은 Reuters의 논평 요청에 즉시 답하지 않았다. INTERPRETATION: '학습에 쓰지 않는다'와 '로그·메타데이터를 저장하지 않는다'는 서로 다른 구매 조건이다. SIGNAL: 민감 업무에서는 모델 선택보다 데이터 흐름·보존·삭제 약속이 먼저 평가된다. SPECULATION: 각 회사의 실제 내부 정책 범위와 Anthropic의 계약 변경 여부는 독립 확인 전이다.",
+      "why_it_matters": "한국 기업도 AI 공급자 검토표에서 학습 사용, 로그 보존기간, 익명 메타데이터, 하위 처리자, 리전, 삭제 증명을 별도 항목으로 나눠야 한다.",
+      "industry_mood": {"dominant": "성능보다 데이터 계약", "positive": "민감 업무를 분리하고 자체·격리형 모델을 대안으로 두는 움직임이 구체화됐다.", "negative": "핵심 주장이 단일 매체의 익명 취재에 의존하고 공식 확인이 없다."},
+      "outlook": "당사 공식 확인, Anthropic·OpenAI의 계약 문구 변경, 제로 데이터 보존의 기술적 검증 방식과 한국 리전 조건을 확인해야 한다.",
+      "business_opportunity": "AI 공급자 데이터 조건 비교 수요는 있으나 최근 공급자 전환·기술유출 증거 아이디어와 겹치고 한국 고객 지불 근거가 없다.",
+      "tags": ["Palantir", "NVIDIA", "Anthropic", "data retention", "enterprise AI", "IP"],
+      "sources": [
+        {"title": "Palantir, Nvidia curb AI model use over data fears, The Information reports", "url": "https://www.reuters.com/business/palantir-nvidia-curb-ai-model-use-over-data-fears-information-reports-2026-09-14/", "publisher": "Reuters", "published_at": "2026-09-14T15:11:00Z", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "unverified", "evidence_group": "palantir-nvidia-data-controls-information-report"},
+        {"title": "NVIDIA and Palantir Bring Sovereign Intelligence to Critical Supply Chains", "url": "https://nvidianews.nvidia.com/news/nvidia-and-palantir-bring-sovereign-intelligence-to-critical-supply-chains", "publisher": "NVIDIA", "published_at": "2026-09-10T00:00:00Z", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "nvidia-palantir-sovereign-stack-background"}
+      ]
+    },
+    {
+      "event_key": "anthropic-claude-financial-advisors-launch-2026-09-14",
+      "title": "Anthropic, 고객 기록·포트폴리오를 연결하는 Claude for Financial Advisors 출시",
+      "importance": "A",
+      "score": {"total": 89, "reliability": 29, "impact": 22, "usability": 18, "recency": 15, "community": 5},
+      "one_line_summary": "Anthropic이 BlackRock·Charles Schwab·Addepar 등 금융 데이터·CRM과 연결해 회의 준비, 포트폴리오 검토, 후속 업무를 돕는 금융자문 특화 도구를 출시했다.",
+      "impact": "범용 챗봇 경쟁이 규제 산업의 시스템 오브 레코드, 계산 엔진, 출처·권한 통제를 연결하는 수직형 워크플로 경쟁으로 이동했다.",
+      "original_url": "https://www.reuters.com/business/anthropic-targets-financial-advisers-with-new-claude-tool-2026-09-14/",
+      "key_quote": "The product is designed to help financial services firms prepare for client meetings, review portfolios and handle follow-up work.",
+      "quote_translation": "이 제품은 금융회사의 고객 미팅 준비, 포트폴리오 검토, 후속 업무 처리를 돕도록 설계됐다.",
+      "summary": "FACT: Reuters는 Anthropic이 9월 14일 Claude for Financial Advisors를 출시했다고 보도했다. 제품은 BlackRock, Charles Schwab, Addepar, Envestnet, iCapital, Orion, Wealthbox, Wealth.com 등과 연결된다. Addepar와 Wealthbox는 각자의 관리 데이터·CRM 기록을 MCP로 Claude에 연결하고 권한·출처를 유지한다고 공식 발표했다. INTERPRETATION: 금융 AI의 가치가 답변 생성보다 기존 기록 시스템과 검증 가능한 데이터 흐름을 연결하는 데서 나온다. SIGNAL: 수직형 AI 제품은 모델 자체보다 커넥터, 출처, 권한, 사람 검토를 패키지로 묶는다. SPECULATION: 한국 규제·데이터 제공 조건, 정확도, 생산성, 오판 책임은 공개되지 않았다.",
+      "why_it_matters": "한국의 소형 금융·세무·회계 팀도 범용 모델을 바로 쓰기보다 기록 원장과 계산 근거, 권한, 사람 승인 경계를 먼저 설계해야 한다.",
+      "industry_mood": {"dominant": "수직형 AI의 연결 경쟁", "positive": "기존 금융 기록과 계산 엔진을 출처·권한 통제 아래 연결한다.", "negative": "고객 정보의 민감성과 규제 책임, 독립 성과가 확인되지 않았다."},
+      "outlook": "한국 제공 여부, 금융 규제 적합성, 파트너별 데이터 위치·보존, 실제 회의 준비·검토 시간 단축을 확인해야 한다.",
+      "business_opportunity": "한국 금융자문 증거 패킷 수요 가능성은 있으나 금융 규제·유료 데이터·고객 접근 게이트가 미해결이다.",
+      "tags": ["Anthropic", "Claude", "financial advisors", "MCP", "wealth management", "governed data"],
+      "sources": [
+        {"title": "Anthropic targets financial advisers with new Claude tool", "url": "https://www.reuters.com/business/anthropic-targets-financial-advisers-with-new-claude-tool-2026-09-14/", "publisher": "Reuters", "published_at": "2026-09-14T17:10:00Z", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "claude-financial-advisors-reuters"},
+        {"title": "Bringing Addepar’s portfolio intelligence into Claude for Financial Advisors", "url": "https://addepar.com/blog/bringing-addepar-portfolio-intelligence-to-claude", "publisher": "Addepar", "published_at": "2026-09-14T00:00:00Z", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "claude-financial-advisors-addepar"},
+        {"title": "Wealthbox Brings Advisor CRM Data to Claude for Financial Advisors", "url": "https://www.prnewswire.com/news-releases/wealthbox-brings-advisor-crm-data-to-claude-for-financial-advisors-302877837.html", "publisher": "Wealthbox", "published_at": "2026-09-14T16:05:00Z", "tier": "B", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "claude-financial-advisors-wealthbox"}
+      ]
+    },
+    {
+      "event_key": "ecb-lagarde-europe-ai-sovereignty-speech-2026-09-14",
+      "title": "ECB Lagarde, 유럽 AI 단절 위험 경고…자체 컴퓨팅·오픈모델 투자 촉구",
+      "importance": "A",
+      "score": {"total": 88, "reliability": 30, "impact": 23, "usability": 14, "recency": 15, "community": 6},
+      "one_line_summary": "Christine Lagarde ECB 총재가 유럽의 AI 컴퓨팅 비중과 데이터센터 부족을 지적하며 자체 인프라·오픈모델·자본시장을 통한 주권형 AI 투자를 촉구했다.",
+      "impact": "AI 공급망 의존이 기업 IT 선택을 넘어 금융·산업 정책과 장기 자본 배분의 핵심 위험으로 공식화됐다.",
+      "original_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260914_2~a3f0efbee4.en.html",
+      "key_quote": "Adopting AI means running that data through a system that belongs to someone else and sits under someone else’s law.",
+      "quote_translation": "AI를 도입한다는 것은 그 데이터를 다른 소유자의 시스템, 다른 법 아래 놓인 시스템에 통과시키는 일이다.",
+      "summary": "FACT: Lagarde는 9월 14일 연설에서 유럽이 세계 AI 컴퓨팅 용량의 5%만 보유하고 미국은 75%를 보유한다고 밝혔다. 유럽 데이터센터 수요 격차가 10년 내 6배 이상 커질 수 있고, 이를 메우는 비용 상한을 약 6,000억유로로 제시했다. 빠른 도입은 10년간 생산성을 최대 4% 높일 수 있지만 데이터 보호와 공급 단절 위험 때문에 자체 컴퓨팅과 유럽 오픈모델이 필요하다고 주장했다. Reuters와 Guardian이 이를 독립 보도했다. INTERPRETATION: AI 주권이 규제 구호가 아니라 데이터·접근·자본 비용 문제로 구체화됐다. SIGNAL: 정부·금융기관 조달에서 리전, 대체 가능성, 오픈웨이트, 공급 중단 시나리오가 중요해진다. SPECULATION: 6,000억유로는 가정에 따른 상한이며 실제 투자·생산성 효과는 불확실하다.",
+      "why_it_matters": "한국 팀도 특정 해외 모델에 핵심 업무를 묶기 전에 데이터 위치, 계약 종료, 모델 교체, 로컬 대안과 전체 전환 비용을 함께 계산해야 한다.",
+      "industry_mood": {"dominant": "AI 주권의 금융 의제화", "positive": "도입 효과와 공급망 위험을 동시에 계량하려는 접근이 구체화됐다.", "negative": "막대한 자본 수요와 유럽 자체 모델의 경쟁력·수익성은 미확인이다."},
+      "outlook": "EU Cloud and AI Development Act, 데이터센터 투자 집행, 유럽 오픈모델 성능·라이선스, 공급 단절 대비 조달 기준을 확인해야 한다.",
+      "business_opportunity": "모델·리전 전환 비용 진단 수요가 있지만 최근 오픈모델 반출·공급자 전환 아이디어와 중복된다.",
+      "tags": ["ECB", "Europe", "AI sovereignty", "data centers", "open weights", "capital markets"],
+      "sources": [
+        {"title": "A new age of capital: growth, sovereignty and AI", "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260914_2~a3f0efbee4.en.html", "publisher": "European Central Bank", "published_at": "2026-09-14T00:00:00+02:00", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "ecb-lagarde-ai-sovereignty-primary"},
+        {"title": "Europe facing unprecedented risk of being cut off from AI, Lagarde warns", "url": "https://www.reuters.com/business/finance/europe-facing-unprecedented-risk-being-cut-off-ai-lagarde-warns-2026-09-14/", "publisher": "Reuters", "published_at": "2026-09-14T00:00:00Z", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "ecb-lagarde-ai-sovereignty-reuters"},
+        {"title": "Europe must build own AI or risk getting cut off by US or China, says ECB's Lagarde", "url": "https://www.theguardian.com/technology/2026/sep/14/europe-ai-datacentres-growth-us-china-ecb-christine-lagarde", "publisher": "The Guardian", "published_at": "2026-09-14T00:00:00Z", "tier": "B", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "ecb-lagarde-ai-sovereignty-guardian"}
+      ]
+    }
+  ],
+  "business_ideas": [],
+  "tools": [
+    {"name": "Microsoft MAI Code of Conduct", "type": "AI 모델 행동·평가 기준", "url": "https://microsoft.ai/code-of-conduct/", "stars": 4, "why_trending": "중단·수정·범위 확대 금지·감사 가능성을 향후 모델 훈련과 평가 기준으로 명문화했다.", "worth_trying": "사내 에이전트 10개 대표 작업에 중단·재지시·권한 상승·로그 은폐 테스트를 체크리스트로 옮겨볼 가치가 있다."},
+    {"name": "Financial Advisor meeting-prep agent", "type": "금융 워크플로 에이전트 템플릿", "url": "https://github.com/anthropics/financial-services/blob/main/plugins/agent-plugins/meeting-prep-agent/agents/meeting-prep-agent.md", "stars": 4, "why_trending": "금융 미팅 준비 흐름을 커넥터, 스킬, 사람 검토 단계가 있는 에이전트 템플릿으로 공개했다.", "worth_trying": "실데이터 없이 샘플 기록으로 출처·권한·사람 검토 경계가 얼마나 명확한지 먼저 확인한다."}
+  ],
+  "community": [],
+  "skill_of_the_day": {"name": "AI 데이터 보존 조건 분해", "when_to_use": "외부 AI 모델·에이전트에 사내 문서, 코드, 고객 기록을 연결하기 전", "practical_example": "학습 사용, 원문 로그, 익명 메타데이터, 보존기간, 리전, 하위 처리자, 삭제 증명, 사고 대응을 각각 별도 열로 비교한다.", "prompt_example": "이 AI 공급자의 약관·개인정보 문서를 근거 URL과 함께 학습 사용/원문 로그/메타데이터/보존기간/리전/하위 처리자/삭제 증명/사고 통지로 나누고, 모르는 항목은 unknown으로 표시해줘."},
+  "worth_reading": [
+    {"type": "Paper", "title": "Mind the Gap: AI Adoption in Europe and the U.S.", "url": "https://www.nber.org/papers/w34995", "why_read": "미국과 유럽의 업무 AI 사용시간·도입 격차를 같은 틀로 비교해 주권 논쟁을 실제 사용 데이터와 연결한다."},
+    {"type": "GitHub", "title": "anthropics/financial-services", "url": "https://github.com/anthropics/financial-services", "why_read": "금융 특화 에이전트가 커넥터·스킬·사람 검토를 어떻게 파일 구조와 가드레일로 묶는지 직접 확인할 수 있다."},
+    {"type": "YouTube", "title": "Anthropic Unveils AI Agents for Financial Services Tasks", "url": "https://www.youtube.com/watch?v=W3RLgeUiUXY", "why_read": "금융 업무용 에이전트의 초기 공개 범위를 돌아보며 이번 자문 특화 연결이 단발 발표인지 제품 전략의 연속인지 비교할 수 있다."},
+    {"type": "Blog", "title": "AI adoption and the productivity promise: what workers report", "url": "https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260826~e1c1a89999.en.html", "why_read": "유럽 노동자 조사에서 도입률, 주당 시간 절감, 정확성·교육 장벽을 함께 제시해 거시 전망을 현실 데이터로 보정한다."}
+  ],
+  "todays_insight": "AI 도입의 승부가 더 강한 모델에서 행동 규칙·데이터 보존·검증 가능한 연결·공급 중단 대비를 계약과 운영으로 증명하는 능력으로 이동한다.",
+  "morning_paper": {"insight_headline": "AI, 신뢰는 계약과 통제로 측정된다", "insight_summary": "Microsoft는 중단·수정·감사 가능성을 모델 행동 규칙으로 내렸고, Palantir·NVIDIA 사례는 민감 업무에서 데이터 보존 약속이 성능보다 앞선다는 신호를 보냈다. Anthropic의 금융자문 도구는 기록 시스템과 계산 근거를 연결하며 수직형 AI의 경쟁 단위를 바꿨고, ECB는 같은 문제를 국가의 데이터·접근·자본 주권으로 확장했다. 공통점은 신뢰가 선언이 아니라 계약 조항, 권한 경계, 출처와 전환 가능성으로 측정되기 시작했다는 점이다.", "insight_method": "cross_event_signal_v1", "evidence_event_keys": ["microsoft-mai-humanist-code-consultation-2026-09-14", "palantir-nvidia-anthropic-data-retention-restrictions-2026-09-14", "anthropic-claude-financial-advisors-launch-2026-09-14", "ecb-lagarde-europe-ai-sovereignty-speech-2026-09-14"], "top_event_keys": ["microsoft-mai-humanist-code-consultation-2026-09-14", "palantir-nvidia-anthropic-data-retention-restrictions-2026-09-14", "anthropic-claude-financial-advisors-launch-2026-09-14"]},
+  "build_candidate": null
+}

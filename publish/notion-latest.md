@@ -1,136 +1,46 @@
-# AI Daily Intelligence — 2026-09-14
+# AI Daily Intelligence — 2026-09-15
 
-> 오늘의 인사이트: **AI 경쟁의 중심이 모델 하나에서 데이터·권리·법적 증거를 연결하는 운영 루프로 이동한다.**
+[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-15.md) · [날짜별 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-15.json)
 
-한국은 기술유출을 다루는 법적 경계를 넓혔고, 현대차는 외부 AI 스택과 자체 모델을 실도로 데이터·검증·배포 루프로 연결했다. Reuters는 검증 뉴스의 권리와 편집 규칙을 MCP 실행 흐름에 넣었으며, BRICS는 오픈모델·클라우드·교육을 국가 간 인프라로 묶으려 한다. 공통점은 좋은 모델을 고르는 것보다 데이터가 어디서 와서 어떤 권한·규칙·증거를 거쳐 행동으로 이어지는지를 설계하는 일이 경쟁력이 된다는 점이다.
+> 오늘의 인사이트: **AI 도입의 승부가 더 강한 모델에서 행동 규칙·데이터 보존·검증 가능한 연결·공급 중단 대비를 계약과 운영으로 증명하는 능력으로 이동한다.**
+
+Microsoft는 중단·수정·감사 가능성을 모델 행동 규칙으로 내렸고, Palantir·NVIDIA 사례는 민감 업무에서 데이터 보존 약속이 성능보다 앞선다는 신호를 보냈다. Anthropic의 금융자문 도구는 기록 시스템과 계산 근거를 연결하며 수직형 AI의 경쟁 단위를 바꿨고, ECB는 같은 문제를 국가의 데이터·접근·자본 주권으로 확장했다.
 
 ## Top 3
 
-1. [한국, 외국 대상 간첩죄 확대 시행…반도체·AI 기술유출 방어선 강화](https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1002136951) — 형법 제98조의2가 9월 13일 시행돼 ‘적국’뿐 아니라 외국·준하는 단체를 위한 국가기밀 탐지·수집·누설·전달·중개도 3년 이상 유기징역 대상이 됐다.
-2. [현대차, NVIDIA 병행·Atria 내재화 자율주행 로드맵 공개](https://org.hyundai.com/worldwide/en/newsroom/detail/0000001273) — 현대차그룹은 NVIDIA 기반 Level 2+·2++를 2028년에 먼저 양산하고 자체 Atria AI Level 2++를 2029년 하반기에 투입하는 이중 경로를 공개했다.
-3. [중국, BRICS AI 오픈소스 공동체·디지털 클라우드 플랫폼 제안](https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202609/t20260913_12021300.html) — 시진핑 중국 국가주석은 BRICS 정상회의에서 대형모델 공동 개발·활용, 교육, 디지털 클라우드 플랫폼을 포함한 오픈소스 AI 공동체를 제안했다.
+1. [Microsoft, AI가 수정·중단을 거부하지 못하게 하는 행동강령 초안 공개](https://microsoft.ai/news/mai-code-of-conduct/)
+2. [Palantir·NVIDIA, 데이터 보존 우려로 외부 AI 모델 사용 범위 축소 보도](https://www.reuters.com/business/palantir-nvidia-curb-ai-model-use-over-data-fears-information-reports-2026-09-14/)
+3. [Anthropic, 고객 기록·포트폴리오를 연결하는 Claude for Financial Advisors 출시](https://www.reuters.com/business/anthropic-targets-financial-advisers-with-new-claude-tool-2026-09-14/)
 
-## 검증 뉴스
+## 핵심 변화
 
-### 한국, 외국 대상 간첩죄 확대 시행…반도체·AI 기술유출 방어선 강화
-
-- 등급·점수: **S · 94/100** (신뢰 30/30 · 영향 24/25 · 활용 19/20 · 최신 15/15 · 커뮤니티 6/10)
-- 한 줄: 형법 제98조의2가 9월 13일 시행돼 ‘적국’뿐 아니라 외국·준하는 단체를 위한 국가기밀 탐지·수집·누설·전달·중개도 3년 이상 유기징역 대상이 됐다.
-- 영향: 한국의 반도체·배터리·AI 기술 보호가 산업기술보호법 중심 대응에서 국가안보 범죄 체계까지 넓어졌다.
-- 구분: FACT: 국가법령정보센터는 형법 제98조의2가 2026년 9월 13일 시행됐고, 외국 또는 이에 준하는 단체의 지령·사주·의사 연락 아래 국가기밀을 탐지·수집·누설·전달·중개하거나 방조하면 3년 이상 유기징역에 처한다고 명시한다. Reuters와 Financial Times는 반도체 등 전략기술 유출 방어를 위한 제도 변화로 보도했다. INTERPRETATION: 기술유출 대응이 영업비밀 관리만의 문제가 아니라 국가기밀성·외국 연계·증거 보존을 함께 다루는 문제로 확대됐다. SIGNAL: 보안 인력이 부족한 중소 협력사의 로그·접근권·퇴직자 관리가 더 중요해질 수 있다. SPECULATION: 개별 기업 정보가 ‘국가기밀’에 해당하는 범위와 첫 적용 사건의 법원 판단은 아직 없다.
-- 왜 중요한가: 한국의 기술기업과 협력사는 저장소·문서·USB·퇴직자 접근 기록을 사고 후 찾는 방식에서 벗어나, 기밀 지정과 증거 보존 절차를 사전에 설계해야 한다.
-- 분위기: 기술유출의 국가안보화 — 긍정: 외국 연계 기술유출을 더 강하게 다룰 법적 수단이 생겼다. 부정: 국가기밀 범위와 외국 기업·조직 연계 입증 기준이 불명확해 준법 비용과 해석 위험이 남는다.
-- 전망: 법무부·수사기관의 적용 지침, 국가기밀 판단 기준, 외국 기업이 수혜자인 사건의 첫 기소·판결을 확인해야 한다.
-- 기회 신호: 중소 기술기업용 증거 타임라인·보존 준비 서비스 수요가 생길 수 있지만 법률 자문 경계와 민감 로그 처리 보안이 해결돼야 한다.
-- 핵심 문장: “3년 이상의 유기징역에 처한다.” — The offense is punishable by imprisonment for at least three years.
-- 출처: [국가법령정보센터 · 형법 제98조의2(외국 등을 위한 간첩)](https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1002136951) · [Reuters · South Korea's expanded espionage law takes effect amid push to protect chip technology](https://www.reuters.com/world/china/south-koreas-expanded-espionage-law-takes-effect-amid-push-protect-chip-2026-09-13/) · [Financial Times · South Korea arms itself to protect chip secrets from foreign spies](https://www.ft.com/content/6fa49d3c-e7b9-4bcd-9eb1-b737ff0c552e)
-
-### 현대차, NVIDIA 병행·Atria 내재화 자율주행 로드맵 공개
-
-- 등급·점수: **S · 92/100** (신뢰 30/30 · 영향 23/25 · 활용 18/20 · 최신 15/15 · 커뮤니티 6/10)
-- 한 줄: 현대차그룹은 NVIDIA 기반 Level 2+·2++를 2028년에 먼저 양산하고 자체 Atria AI Level 2++를 2029년 하반기에 투입하는 이중 경로를 공개했다.
-- 영향: 한국 자동차 산업의 AI 경쟁이 단일 모델 성능보다 차량 데이터 수집, 학습·검증·OTA 배포를 잇는 운영 루프와 외부 플랫폼 의존 관리로 이동했다.
-- 구분: FACT: 현대차그룹은 9월 13일 NVIDIA DRIVE Hyperion 10 기반 Level 2+를 2028년 상반기, Level 2++를 하반기에 양산하고, 자체 Atria AI 기반 Level 2++는 2029년 하반기를 목표로 한다고 발표했다. Reuters는 자체 시스템 일정이 기존 계획보다 2년 늦어졌다고 보도했다. 현대차는 연간 700만대 이상 판매 기반의 데이터를 학습·검증·배포로 되돌리는 Data Flywheel을 강조했다. INTERPRETATION: 외부 스택으로 출시를 앞당기면서 자체 기술 독립성을 늦게 확보하는 이중 전략이다. SIGNAL: 차량 AI의 핵심 자산이 모델만이 아니라 센서 표준과 실제 주행 데이터·검증 속도로 이동한다. SPECULATION: Level 2++ 안전 성능, 규제 승인, 실제 양산 시점은 독립 검증 전이다.
-- 왜 중요한가: 한국 기업이 물리 AI를 도입할 때도 외부 공급자 조기 도입과 내부 데이터·모델 내재화를 별도 일정과 종료 조건으로 관리해야 한다.
-- 분위기: 외부 가속과 내부 독립의 병행 — 긍정: 단계별 양산 목표와 데이터 학습 루프가 구체화됐다. 부정: 자체 시스템 지연과 NVIDIA 의존, 실제 도로 안전성 미검증이 남는다.
-- 전망: 2026년 말 광주 실도로 수집, 2028년 양산 차종·안전평가, 2029년 Atria 전환 조건과 데이터 권리 구조를 확인해야 한다.
-- 기회 신호: 외부 AI 스택에서 자체 스택으로 전환할 때 데이터·평가·승인 증거를 관리하는 도구 신호가 있지만 최근 공급자 전환 아이디어와 중복된다.
-- 핵심 문장: “Production of Atria AI-powered Level 2++ vehicles targeted for the second half of 2029.” — Atria AI 기반 Level 2++ 차량 양산 목표는 2029년 하반기다.
-- 출처: [Hyundai Motor Group · Hyundai Motor Group Accelerates Autonomous Driving Innovation with AI-Powered Data Flywheel](https://org.hyundai.com/worldwide/en/newsroom/detail/0000001273) · [Reuters · Hyundai Motor to roll out in-house driver-assist system in 2029](https://www.reuters.com/business/autos-transportation/hyundai-motor-roll-out-in-house-driver-assist-system-2029-2026-09-13/) · [NVIDIA · Hyundai Motor, Kia and NVIDIA Expand Strategic Partnership for Next-Generation Autonomous Driving Technology](https://investor.nvidia.com/news/press-release-details/2026/Hyundai-Motor-Kia-and-NVIDIA-Expand-Strategic-Partnership-for-Next-Generation-Autonomous-Driving-Technology/default.aspx)
-
-### 중국, BRICS AI 오픈소스 공동체·디지털 클라우드 플랫폼 제안
-
-- 등급·점수: **A · 88/100** (신뢰 29/30 · 영향 23/25 · 활용 14/20 · 최신 15/15 · 커뮤니티 7/10)
-- 한 줄: 시진핑 중국 국가주석은 BRICS 정상회의에서 대형모델 공동 개발·활용, 교육, 디지털 클라우드 플랫폼을 포함한 오픈소스 AI 공동체를 제안했다.
-- 영향: 오픈소스 AI가 기업 경쟁을 넘어 신흥국의 공동 인프라·표준·인재 양성 체계로 조직될 가능성이 커졌다.
-- 구분: FACT: 중국 외교부가 공개한 9월 13일 BRICS 정상회의 연설은 BRICS AI 오픈소스 공동체, 대형모델 공동 개발·활용, 전문 세미나·교육, 디지털 생태계 클라우드 플랫폼을 제안했다. Reuters는 이를 중국 주도의 BRICS 협력 확대 구상으로 독립 보도했다. INTERPRETATION: 오픈소스 모델·클라우드·교육·표준이 하나의 외교·산업 패키지로 묶이고 있다. SIGNAL: 글로벌 사우스 시장에서 미국·유럽 플랫폼과 별도의 AI 유통·운영 채널이 생길 수 있다. SPECULATION: 예산, 참여국, 저장소, 라이선스, 거버넌스와 출범 일정은 아직 공개되지 않았다.
-- 왜 중요한가: 한국 모델·도구 기업은 BRICS권 진출 시 단순 API 판매보다 현지 클라우드, 오픈모델 라이선스, 데이터 이동·표준 적합성을 함께 봐야 한다.
-- 분위기: 오픈소스의 지정학적 플랫폼화 — 긍정: 신흥국의 모델·교육·클라우드 접근성을 넓힐 수 있다. 부정: 중국 주도 구조의 거버넌스·상호운용성·데이터 주권 기준이 불명확하다.
-- 전망: 공동체 설립 문서, 참여국, 저장소·라이선스, 클라우드 운영 주체와 첫 공동 모델을 확인해야 한다.
-- 기회 신호: BRICS권 모델·라이선스·배포 조건을 추적하는 시장 정보 수요가 가능하지만 한국 소규모 팀의 고객 접근성과 반복 지불 근거가 없다.
-- 핵심 문장: “China will be a pioneer in establishing a BRICS AI open source community.” — 중국은 BRICS AI 오픈소스 공동체 구축에 앞장설 것이다.
-- 출처: [Ministry of Foreign Affairs of China · Cementing the Foundation for BRICS Cooperation and Bolstering the Strength of the Global South](https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202609/t20260913_12021300.html) · [Reuters · Xi pushes 'Greater BRICS' economic ties to give bloc larger global role](https://www.reuters.com/business/aerospace-defense/xi-pushes-greater-brics-economic-ties-give-bloc-larger-global-role-2026-09-13/) · [Associated Press · At BRICS, India's Modi warns geopolitical tensions and supply chain shocks threaten global stability](https://apnews.com/article/72e4329da3bc30ab7b231b2d11aae375)
-
-### DeepSeek, V4.1 Flash 공개…저비용 장기 에이전트 경쟁 재점화
-
-- 등급·점수: **A · 87/100** (신뢰 28/30 · 영향 21/25 · 활용 17/20 · 최신 12/15 · 커뮤니티 9/10)
-- 한 줄: DeepSeek가 100만 토큰 문맥의 오픈웨이트 멀티모달 MoE 모델 V4.1 Flash를 공개하고 API 가격·효율 개선을 내세웠다.
-- 영향: 장기 문맥 에이전트의 비용·메모리 경쟁이 빨라져, 소규모 팀도 폐쇄형 모델과 오픈웨이트 모델을 과업당 비용으로 다시 비교해야 한다.
-- 구분: FACT: DeepSeek는 9월 10일 V4.1 Flash를 공개했고 공식 모델 페이지는 552B 백본, 멀티모달 MoE, 최대 100만 토큰 문맥을 제시한다. Reuters는 출시 사실과 더 빠른 추론·처리량 주장을 보도했고, 외부 모델 추적 사이트는 가격·벤치마크 행을 별도로 수집했다. INTERPRETATION: 긴 에이전트 세션에서 캐시·메모리·토큰 가격이 모델 품질만큼 중요한 선택 기준이 됐다. SIGNAL: 오픈웨이트 모델이 비용 우위를 전면에 내세우며 기업용 장기 작업 시장을 압박한다. SPECULATION: 회사 발표 벤치마크의 재현성, 한국어 품질, 데이터·라이선스·운영 보안은 독립 검증이 부족하다.
-- 왜 중요한가: 한국 소규모 팀은 모델 교체 전 대표 과업의 완주율·지연·총비용·한국어 오류·데이터 위치를 같은 평가표로 측정해야 한다.
-- 분위기: 과업당 비용 경쟁 — 긍정: 오픈웨이트와 낮은 API 가격이 실험 장벽을 낮춘다. 부정: 독립 성능 검증과 한국의 개인정보·공공 부문 사용 조건이 부족하다.
-- 전망: Artificial Analysis 등 독립 측정, 공식 라이선스, 한국어 장기 작업 완주율, 운영 장애와 가격 안정성을 확인해야 한다.
-- 기회 신호: 모델별 장기 과업 비용·완주율 벤치마크 수요는 있지만 최근 비용·공급자 전환 아이디어와 중복된다.
-- 핵심 문장: “We introduce DeepSeek-V4.1-Flash.” — DeepSeek-V4.1-Flash를 소개한다.
-- 출처: [DeepSeek · Introducing DeepSeek-V4.1-Flash](https://www.deepseek.com/) · [DeepSeek · deepseek-ai/DeepSeek-V4.1-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) · [Reuters · China's DeepSeek launches V4.1-Flash model](https://www.reuters.com/world/asia-pacific/chinas-deepseek-launches-v41-flash-model-2026-09-10/) · [LLM Stats · DeepSeek-V4.1-Flash Benchmarks, Pricing & Context](https://llm-stats.com/models/deepseek-v4-1-flash)
-
-### Reuters·CuttingRoom, 검증 뉴스와 AI 영상 편집을 MCP로 직접 연결
-
-- 등급·점수: **A · 86/100** (신뢰 28/30 · 영향 19/25 · 활용 18/20 · 최신 14/15 · 커뮤니티 7/10)
-- 한 줄: Reuters MCP 서버와 CuttingRoom ShortCut이 연결돼 편집자가 자연어로 검증 영상을 찾고 컷·오디오·자막·플랫폼별 재구성을 브라우저에서 수행할 수 있게 됐다.
-- 영향: 생성형 AI가 원본 출처 검색과 편집을 분리하지 않고, 라이선스된 콘텐츠·편집 규칙·고객 데이터 경계를 한 워크플로로 묶는 상용 사례가 나왔다.
-- 구분: FACT: Reuters는 9월 12일 자사 MCP 서버를 CuttingRoom의 브라우저형 AI 편집기 ShortCut과 직접 통합했다고 발표했다. 고객은 Reuters 구독 콘텐츠와 내부 자산을 같은 타임라인에서 찾고 컷·믹싱·색보정·자막·세로형 재구성을 요청하며, 편집 규칙은 고객이 자연어로 정하고 자료는 고객 인프라 안에 남는다고 밝혔다. INTERPRETATION: AI 미디어 도구의 차별점이 생성 품질보다 출처·권리·편집 규칙을 보존하는 통합으로 이동한다. SIGNAL: MCP가 검색 보조를 넘어 제작 도구의 실행 인터페이스로 확장되고 있다. SPECULATION: 편집 시간 절감, 오류율, 가격과 독립적인 newsroom 성과는 공개되지 않았다.
-- 왜 중요한가: 한국 미디어·브랜드 팀은 AI 편집 도입 시 생성 기능보다 원본 권리, 출처 추적, 고객별 규칙, 게시 전 사람 승인을 먼저 요구할 수 있다.
-- 분위기: 검증 콘텐츠와 실행 도구의 결합 — 긍정: 출처 있는 영상과 고객 규칙을 편집 흐름 안에서 유지한다. 부정: 효율·정확성 성과와 가격은 공급자 주장 밖에서 검증되지 않았다.
-- 전망: 실사용 뉴스룸, 오류·수정률, 라이선스 범위, 한국어 자막·현지 제공과 가격 공개가 다음 확인점이다.
-- 기회 신호: 출처·권리·승인 로그를 보존하는 경량 콘텐츠 워크플로 수요가 있으나 Reuters 구독과 특정 편집기 의존성이 높다.
-- 핵심 문장: “Each CuttingRoom customer controls their own integration.” — 각 CuttingRoom 고객이 자신의 통합을 직접 통제한다.
-- 출처: [Reuters Communications · Reuters and CuttingRoom partner to provide newsrooms with AI-assisted video editing](https://www.reuters.com/media-center/reuters-cuttingroom-partner-provide-newsrooms-with-ai-assisted-video-editing-2026-09-12/) · [Digiday · Inside Reuters' agentic AI video experiment](https://digiday.com/media/inside-reuters-agentic-ai-video-experiment/)
+- **행동 통제:** Microsoft는 중단·수정·재지시 거부 금지와 감사 가능성을 모델 훈련·평가 기준으로 내렸다.
+- **데이터 계약:** Palantir·NVIDIA 사례는 학습 미사용과 로그·메타데이터 미보존을 별도 조건으로 검토해야 함을 보여준다.
+- **수직형 연결:** Claude for Financial Advisors는 금융 기록·계산·CRM을 출처와 권한 아래 연결한다.
+- **공급 주권:** ECB는 데이터 위치·공급 단절·자본 조달을 AI 도입의 핵심 위험으로 공식화했다.
 
 ## Opportunity Finder
 
-### 기술유출 증거 타임라인 · 4.1/5 · ★★★★☆ · High
-
-- 문제: 의심 사고 뒤 Git·문서·출입·USB·퇴직자 접근 기록이 흩어져 있어 무엇을 언제 보존하고 전문가에게 넘길지 판단이 늦다.
-- 고객: 전담 보안팀이 없는 국내 반도체·배터리·AI 부품·소프트웨어 중소기업의 대표, 보안·인사 담당자
-- 기존 해결법·경쟁사: 국내 DLP·DRM 구축사 · 디지털 포렌식 업체 · 법무법인 기술유출 대응팀 · 수기 엑셀 체크리스트
-- 차별점: 감시·판단을 대신하지 않고 고객이 내보낸 읽기 전용 로그의 시간순 정리, 누락 증거 체크, 원본 해시, 변호사·포렌식 인계 패킷만 제공한다.
-- 2주 MVP: 가상 데이터로 Git·문서·인사 CSV 업로드, 사건 타임라인, 누락 체크리스트, 원본 해시, PDF 인계 요약을 만드는 로컬 우선 프로토타입과 5개 기업·2개 법무/포렌식 인터뷰.
-- 난이도: 중간 — 민감 로그를 최소 수집하는 보안 설계와 변호사·포렌식 업체로 넘길 명확한 경계가 필요하다.
-- 수익화: 연 120만~360만원 준비형 구독 또는 사건별 50만~150만원 증거 정리 패킷; 전문 판단·조사는 파트너에게 인계.
-- 반증 조건: 10개 기술 중소기업 인터뷰에서 3개 미만만 파일럿 의향을 보이거나, 법무·포렌식 업체가 이미 같은 준비 패킷을 무료로 제공하거나, 민감 로그 반출 없이 쓸 수 없으면 중단한다.
-- 문제 근거: [법무부 형법 개정 공지](https://www.moj.go.kr/bbs/moj/159/604279/artclView.do) · [Japan Times 독립 보도](https://www.japantimes.co.jp/news/2026/09/11/asia-pacific/south-korea-spy-china-chips/)
-- 현실성 Gate: 고객 pass · 고통 pass · 기존 해결법 pass · 기술 변화 pass · 구축성 pass · MVP pass · 고객 접근 unknown · 대체 위험 unknown · 의존성 fail
-- Today Opportunity: **아님** — 법률 해석·민감 로그 보안·고객 접근·대체 위험 게이트가 남아 있다.
-
-- 신규 사업 아이디어: **1개**
+- 신규 사업 아이디어: **0개** — 최근 아이디어와 중복되거나 한국 고객의 반복 문제·접근성·지불 의사 근거가 부족했다.
 - 구축 후보: **없음**
-
-## Tools
-
-- [DeepSeek-V4.1-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) · ★★★★☆ — 100만 토큰 문맥과 낮은 API 비용을 내세워 장기 에이전트 과업의 가격 경쟁을 다시 촉발했다. 비민감 한국어 과업 20개로 완주율·지연·총비용을 기존 모델과 병렬 비교할 가치가 있다.
-- [Reuters MCP × CuttingRoom ShortCut](https://www.reuters.com/media-center/reuters-cuttingroom-partner-provide-newsrooms-with-ai-assisted-video-editing-2026-09-12/) · ★★★★☆ — 출처 있는 뉴스 자산, 편집 규칙, 고객 인프라를 한 에이전트형 영상 워크플로로 연결했다. Reuters 구독·가격·한국어 지원을 확인한 뒤 비게시 샘플에서 출처·자막·승인 로그가 유지되는지 시험한다.
-- [Hyundai Atria AI](https://org.hyundai.com/worldwide/en/newsroom/detail/0000001273) · ★★★☆☆ — 한국 실도로 데이터와 NVIDIA 병행 도입, 자체 모델 전환을 단계별로 공개했다. 일반 사용 도구는 아니므로 공개 주행 영상과 안전 검증 공개 범위를 관찰하는 대상으로 본다.
-
-## Community
-
-- 독립적으로 검증해 별도 수록할 만한 신규 커뮤니티 항목 없음.
-
-## Skill of the Day
-
-- **법률 시행일과 실행 항목 분리**
-- 언제: 새 규제·법률이 제품, 보안 또는 데이터 운영에 영향을 준다는 보도를 검토할 때
-- 예: 법령 원문에서 시행일·적용 주체·행위·처벌을 추출하고, 기사 해석과 조직별 실행 항목을 별도 표로 관리한다.
-- 프롬프트: `이 법령 원문과 보도를 FACT/INTERPRETATION/SIGNAL/SPECULATION으로 나누고, 시행일·적용 대상·금지 행위·증거 보존·미확인 판례를 한국 중소기업 체크리스트로 정리해줘.`
 
 ## Worth Reading
 
-- **Paper** · [AutoCut: End-to-end advertisement video editing based on multimodal discretization and controllable generation](https://arxiv.org/abs/2603.28366) — 영상·오디오·텍스트를 하나의 편집 토큰 공간으로 묶는 연구로, 자연어 영상 편집의 기술적 기반과 한계를 볼 수 있다.
-- **GitHub** · [reuters-graphics/ai2svelte](https://github.com/reuters-graphics/ai2svelte) — Reuters Graphics가 Illustrator 결과물을 반응형 Svelte 코드로 내보내는 실제 제작 도구를 공개해 AI 이후에도 남는 편집·배포 연결부를 보여준다.
-- **YouTube** · [Hyundai Atria AI — Seoul Executive Ride-Along](https://youtu.be/5c5ojBJUznU) — 공식 발표문만으로 판단하기 어려운 서울 실도로 주행과 시스템 설명을 직접 확인할 수 있다.
-- **Blog** · [Reuters launches Model Context Protocol server](https://www.reuters.com/media-center/reuters-launches-model-context-protocol-server-bring-trusted-news-directly-into-2026-07-08/) — 이번 CuttingRoom 통합의 기반인 Reuters MCP가 어떤 검색·다운로드·멀티미디어 조립 작업을 지원하는지 원 발표로 확인할 수 있다.
+- **Paper** · [Mind the Gap: AI Adoption in Europe and the U.S.](https://www.nber.org/papers/w34995)
+- **GitHub** · [anthropics/financial-services](https://github.com/anthropics/financial-services)
+- **YouTube** · [Anthropic Unveils AI Agents for Financial Services Tasks](https://www.youtube.com/watch?v=W3RLgeUiUXY)
+- **Blog** · [AI adoption and the productivity promise: what workers report](https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260826~e1c1a89999.en.html)
 
 ## 누락·미확인
 
-- 확대 간첩죄의 국가기밀 범위와 첫 적용 사건·판례는 확인되지 않았다.
-- Atria AI Level 2++의 독립 안전성·완주율과 실제 양산 일정은 미확인이다.
-- BRICS AI 오픈소스 공동체의 예산·참여국·저장소·라이선스·거버넌스가 공개되지 않았다.
-- Reuters–CuttingRoom 통합의 독립 효율 평가·가격·한국어 제공 조건이 없다.
-- DeepSeek V4.1 Flash의 한국어 장기 과업 독립 벤치마크와 데이터·라이선스 조건이 불완전하다.
+- Palantir·NVIDIA·Booz Allen 제한 범위와 Anthropic 계약 요구의 당사 공식 확인
+- Microsoft 행동강령의 최종 문안·배포 게이트·외부 감사 방식
+- Claude for Financial Advisors의 한국 제공·규제 적합성·독립 성과
+- ECB 투자·생산성 추정의 실제 집행과 성과
 
 ## 게시 상태
 
 - 상태: **complete**
-- 뉴스: **5개** · 사업 아이디어: **1개** · 구축 후보: **없음**
+- 뉴스: **4개** · 사업 아이디어: **0개** · 구축 후보: **없음**
 - Worth Reading: **Paper 1 · GitHub 1 · YouTube 1 · Blog 1**
 - 부분 실패: **없음**
