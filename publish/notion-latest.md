@@ -1,42 +1,42 @@
-# AI Daily Intelligence — 2026-09-15
+# AI Daily Intelligence — 2026-09-16
 
-[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-15.md) · [날짜별 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-15.json)
+[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-16.md) · [날짜별 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-16.json)
 
-> 오늘의 인사이트: **AI 도입의 승부가 더 강한 모델에서 행동 규칙·데이터 보존·검증 가능한 연결·공급 중단 대비를 계약과 운영으로 증명하는 능력으로 이동한다.**
+> 오늘의 인사이트: **AI 실행은 스마트폰·현장·기업 서버로 빠르게 분산되지만, 신뢰를 만드는 권한·보안·감사 정책은 조직과 국가의 중앙 통제로 수렴한다.**
 
-Microsoft는 중단·수정·감사 가능성을 모델 행동 규칙으로 내렸고, Palantir·NVIDIA 사례는 민감 업무에서 데이터 보존 약속이 성능보다 앞선다는 신호를 보냈다. Anthropic의 금융자문 도구는 기록 시스템과 계산 근거를 연결하며 수직형 AI의 경쟁 단위를 바꿨고, ECB는 같은 문제를 국가의 데이터·접근·자본 주권으로 확장했다.
+MediaTek은 최대 30B 모델을 스마트폰 NPU로, Axelera는 기업 서버와 EU AI Factory로 실행 위치를 넓혔다. 반대로 KISA는 에이전트·Physical AI의 실행 권한과 위험 체크리스트를 만들고, GitHub는 조직 관리자가 우회할 수 없는 보안 정책을 기업 수준에 고정했다.
 
 ## Top 3
 
-1. [Microsoft, AI가 수정·중단을 거부하지 못하게 하는 행동강령 초안 공개](https://microsoft.ai/news/mai-code-of-conduct/)
-2. [Palantir·NVIDIA, 데이터 보존 우려로 외부 AI 모델 사용 범위 축소 보도](https://www.reuters.com/business/palantir-nvidia-curb-ai-model-use-over-data-fears-information-reports-2026-09-14/)
-3. [Anthropic, 고객 기록·포트폴리오를 연결하는 Claude for Financial Advisors 출시](https://www.reuters.com/business/anthropic-targets-financial-advisers-with-new-claude-tool-2026-09-14/)
+1. [KISA, 자율 AI 에이전트·Physical AI 보안 가이드 개정 착수](https://www.reuters.com/legal/litigation/south-korea-develop-new-security-guidelines-autonomous-ai-agents-2026-09-15/)
+2. [MediaTek, 2nm Dimensity 9600 Pro로 30B급 온디바이스 AI 확대](https://www.mediatek.com/press-room/mediatek-dimensity-9600-pro-sets-new-standard-for-flagship-smartphone-chips)
+3. [Axelera, Europa 추론 가속기 출하와 EU AI Factory 공급 계약 공개](https://axelera.ai/news/axelera-ai-launches-europa-delivers-physical-and-enterprise-ai-through-growing-partner-ecosystem-including-dell-and-supermicro)
 
 ## 핵심 변화
 
-- **행동 통제:** Microsoft는 중단·수정·재지시 거부 금지와 감사 가능성을 모델 훈련·평가 기준으로 내렸다.
-- **데이터 계약:** Palantir·NVIDIA 사례는 학습 미사용과 로그·메타데이터 미보존을 별도 조건으로 검토해야 함을 보여준다.
-- **수직형 연결:** Claude for Financial Advisors는 금융 기록·계산·CRM을 출처와 권한 아래 연결한다.
-- **공급 주권:** ECB는 데이터 위치·공급 단절·자본 조달을 AI 도입의 핵심 위험으로 공식화했다.
+- **국내 통제선:** KISA가 에이전트 서비스의 실행 위험과 Physical AI까지 다룰 보안 체크리스트를 준비한다.
+- **기기 내 실행:** MediaTek은 2nm SoC와 최대 30B 모델 지원으로 개인 AI의 지연·개인정보·배터리 경쟁을 앞당겼다.
+- **대안 인프라:** Axelera는 표준 PCIe·OEM·EU AI Factory를 묶어 주권형 추론 가속기를 현실 배치로 옮겼다.
+- **중앙 정책:** GitHub는 조직 관리자도 우회할 수 없는 Advanced Security 설정을 기업 수준에서 강제한다.
 
 ## Opportunity Finder
 
-- 신규 사업 아이디어: **0개** — 최근 아이디어와 중복되거나 한국 고객의 반복 문제·접근성·지불 의사 근거가 부족했다.
+- 신규 사업 아이디어: **0개** — 최근 권한·사고 공개·출구 통제 아이디어와 중복되거나 하드웨어 의존성, 한국 고객 문제·접근성·지불 의사 근거가 부족했다.
 - 구축 후보: **없음**
 
 ## Worth Reading
 
-- **Paper** · [Mind the Gap: AI Adoption in Europe and the U.S.](https://www.nber.org/papers/w34995)
-- **GitHub** · [anthropics/financial-services](https://github.com/anthropics/financial-services)
-- **YouTube** · [Anthropic Unveils AI Agents for Financial Services Tasks](https://www.youtube.com/watch?v=W3RLgeUiUXY)
-- **Blog** · [AI adoption and the productivity promise: what workers report](https://www.ecb.europa.eu/press/blog/date/2026/html/ecb.blog20260826~e1c1a89999.en.html)
+- **Paper** · [A Black Box for Agentic Processes](https://arxiv.org/abs/2609.04017)
+- **GitHub** · [GenAI-Security-Project/GenAI-LLM-Top10](https://github.com/GenAI-Security-Project/GenAI-LLM-Top10)
+- **YouTube** · [The AI Agent Governance Gap: What CISOs Need Now](https://www.youtube.com/watch?v=tuLABXvW6rI)
+- **Blog** · [The AI Agent Governance Gap: What CISOs Need Now](https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-agent-governance-framework-gap-20260403/)
 
 ## 누락·미확인
 
-- Palantir·NVIDIA·Booz Allen 제한 범위와 Anthropic 계약 요구의 당사 공식 확인
-- Microsoft 행동강령의 최종 문안·배포 게이트·외부 감사 방식
-- Claude for Financial Advisors의 한국 제공·규제 적합성·독립 성과
-- ECB 투자·생산성 추정의 실제 집행과 성과
+- KISA 개정 가이드 전문·발간 일정·의무 범위
+- Dimensity 9600 Pro의 실제 30B 모델·배터리·한국어 성능과 한국 출시 단말
+- Axelera 계약별 실제 발주·매출, 독립 성능·전력·호환성 검증
+- GitHub 중앙 강제 정책의 예외 처리·비용·실제 취약점 감소 효과
 
 ## 게시 상태
 
