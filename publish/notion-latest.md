@@ -1,46 +1,49 @@
-# AI Daily Intelligence — 2026-09-16
+# AI Daily Intelligence — 2026-09-17
 
-[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-16.md) · [날짜별 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-16.json)
+[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-17.md) · [날짜별 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-17.json)
 
-> 오늘의 인사이트: **AI 실행은 스마트폰·현장·기업 서버로 빠르게 분산되지만, 신뢰를 만드는 권한·보안·감사 정책은 조직과 국가의 중앙 통제로 수렴한다.**
+> 오늘의 인사이트: **AI 경쟁은 답변 품질을 넘어 대화형 광고·업무 제작·주권형 모델·지역 컴퓨팅·코드 보안을 연결한 유통망을 누가 통제하느냐로 이동한다.**
 
-MediaTek은 최대 30B 모델을 스마트폰 NPU로, Axelera는 기업 서버와 EU AI Factory로 실행 위치를 넓혔다. 반대로 KISA는 에이전트·Physical AI의 실행 권한과 위험 체크리스트를 만들고, GitHub는 조직 관리자가 우회할 수 없는 보안 정책을 기업 수준에 고정했다.
+OpenAI는 대화를 광고 발견·상담·전환 경로로 만들었고, Anthropic은 문서·슬라이드 제작을 하나의 작업면에 통합했다. Cohere와 Aleph Alpha는 모델·규제·지역 클라우드를 한 회사로 묶고, Anthropic은 아시아태평양 추론 용량을 선점했으며, GitHub는 AI 보안 탐지의 설정 장벽을 낮췄다.
 
 ## Top 3
 
-1. [KISA, 자율 AI 에이전트·Physical AI 보안 가이드 개정 착수](https://www.reuters.com/legal/litigation/south-korea-develop-new-security-guidelines-autonomous-ai-agents-2026-09-15/)
-2. [MediaTek, 2nm Dimensity 9600 Pro로 30B급 온디바이스 AI 확대](https://www.mediatek.com/press-room/mediatek-dimensity-9600-pro-sets-new-standard-for-flagship-smartphone-chips)
-3. [Axelera, Europa 추론 가속기 출하와 EU AI Factory 공급 계약 공개](https://axelera.ai/news/axelera-ai-launches-europa-delivers-physical-and-enterprise-ai-through-growing-partner-ecosystem-including-dell-and-supermicro)
+1. [OpenAI, 대화형 광고용 Sponsored Agents와 Ads Manager 공개 시험](https://openai.com/index/reimagining-advertising-with-ai/)
+2. [Anthropic, Claude 작업면 통합하고 Docs·Slides 베타 출시](https://www.reuters.com/business/media-telecom/anthropic-fold-claude-ai-features-into-one-interface-launches-document-tools-2026-09-16/)
+3. [Cohere·Aleph Alpha, 주권형 기업 AI 합병 본계약 체결](https://www.reuters.com/legal/transactional/cohere-aleph-alpha-combine-target-enterprise-ai-market-2026-09-16/)
 
 ## 핵심 변화
 
-- **국내 통제선:** KISA가 에이전트 서비스의 실행 위험과 Physical AI까지 다룰 보안 체크리스트를 준비한다.
-- **기기 내 실행:** MediaTek은 2nm SoC와 최대 30B 모델 지원으로 개인 AI의 지연·개인정보·배터리 경쟁을 앞당겼다.
-- **대안 인프라:** Axelera는 표준 PCIe·OEM·EU AI Factory를 묶어 주권형 추론 가속기를 현실 배치로 옮겼다.
-- **중앙 정책:** GitHub는 조직 관리자도 우회할 수 없는 Advanced Security 설정을 기업 수준에서 강제한다.
+- **대화형 광고:** OpenAI가 후원 에이전트와 자연어 Ads Manager를 열어 광고 발견부터 상담·전환까지 한 대화로 연결한다.
+- **통합 작업면:** Claude가 채팅·Cowork·Design·Docs·Slides를 자동 선택해 편집 가능한 산출물까지 만든다.
+- **주권형 공급자:** Cohere·Aleph Alpha가 모델·온프레미스·규제·지역 클라우드를 합병사 안에 묶는다.
+- **지역 추론:** Anthropic은 호주 2.16GW 캠퍼스로 아시아태평양 추론 용량과 데이터 관할을 선점한다.
+- **보안 배포:** GitHub AI Scan은 CodeQL 기본 설정 없이도 PR에서 실행돼 적용 장벽이 낮아진다.
 
 ## Opportunity Finder
 
-- 신규 사업 아이디어: **0개** — 최근 권한·사고 공개·출구 통제 아이디어와 중복되거나 하드웨어 의존성, 한국 고객 문제·접근성·지불 의사 근거가 부족했다.
-- 구축 후보: **없음**
+- 신규 사업 아이디어: **1개** — `스폰서 에이전트 중립성 테스트팩`(4.2/5)
+- 내용: 한국어 구매 대화에서 후원 표시·가격·대안·근거·개인화·옵트아웃을 페르소나별로 점검하는 감사형 테스트팩
+- 구축 후보: **없음** — 고객 고통·접근성 미확인, 플랫폼 대체 위험과 폐쇄·유료 의존성 게이트 미충족
 
 ## Worth Reading
 
-- **Paper** · [A Black Box for Agentic Processes](https://arxiv.org/abs/2609.04017)
-- **GitHub** · [GenAI-Security-Project/GenAI-LLM-Top10](https://github.com/GenAI-Security-Project/GenAI-LLM-Top10)
-- **YouTube** · [The AI Agent Governance Gap: What CISOs Need Now](https://www.youtube.com/watch?v=tuLABXvW6rI)
-- **Blog** · [The AI Agent Governance Gap: What CISOs Need Now](https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-agent-governance-framework-gap-20260403/)
+- **Paper** · [Ads in AI Chatbots?](https://arxiv.org/abs/2604.08525)
+- **GitHub** · [NVIDIA/garak](https://github.com/NVIDIA/garak)
+- **YouTube** · [What are LLM Evals?](https://www.youtube.com/watch?v=FdqrP7jvZEo)
+- **Blog** · [The AI Era: Expanding marketing and creative potential](https://blog.google/products/ads-commerce/generative-ai-creative-experimentation/)
 
 ## 누락·미확인
 
-- KISA 개정 가이드 전문·발간 일정·의무 범위
-- Dimensity 9600 Pro의 실제 30B 모델·배터리·한국어 성능과 한국 출시 단말
-- Axelera 계약별 실제 발주·매출, 독립 성능·전력·호환성 검증
-- GitHub 중앙 강제 정책의 예외 처리·비용·실제 취약점 감소 효과
+- Sponsored Agents의 한국 제공·가격·로그·독립 전환 성과
+- Claude Docs·Slides의 한국어 품질·왕복 편집·기업 데이터 경계
+- Cohere·Aleph Alpha 합병 승인·지분·가치·제품 통합 일정
+- 호주 데이터센터의 착공·실제 용량·전력원·환경 영향
+- GitHub AI Scan의 오탐·정확도·AI 크레딧·취약점 감소 효과
 
 ## 게시 상태
 
 - 상태: **complete**
-- 뉴스: **4개** · 사업 아이디어: **0개** · 구축 후보: **없음**
+- 뉴스: **5개** · 사업 아이디어: **1개** · 구축 후보: **없음**
 - Worth Reading: **Paper 1 · GitHub 1 · YouTube 1 · Blog 1**
 - 부분 실패: **없음**

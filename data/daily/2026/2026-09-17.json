@@ -1,0 +1,176 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-09-17",
+  "generated_at": "2026-09-17T07:04:17+09:00",
+  "status": "complete",
+  "todays_insight": "AI 경쟁은 답변 품질을 넘어 대화형 광고·업무 제작·주권형 모델·지역 컴퓨팅·코드 보안을 연결한 유통망을 누가 통제하느냐로 이동한다.",
+  "news": [
+    {
+      "event_key": "openai-sponsored-agents-ads-manager-2026-09-16",
+      "title": "OpenAI, 대화형 광고용 Sponsored Agents와 Ads Manager 공개 시험",
+      "importance": "S",
+      "one_line_summary": "OpenAI가 광고를 본 사용자가 기업 후원 에이전트와 대화하고, 광고주가 자연어로 캠페인을 만들고 고치는 새 광고 유통면을 시험한다.",
+      "impact": "95/100 (신뢰 30/30 · 영향 25/25 · 활용 19/20 · 최신 15/15 · 커뮤니티 6/10)",
+      "original_url": "https://openai.com/index/reimagining-advertising-with-ai/",
+      "key_quote": "Sponsored Agents are clearly labeled and separate from ChatGPT's independent responses",
+      "quote_translation": "Sponsored Agents는 명확히 표시되며 ChatGPT의 독립적인 응답과 분리된다.",
+      "summary": "FACT: OpenAI는 9월 16일 미국의 일부 광고주와 Sponsored Agents를 시험한다고 발표했다. 광고에서 시작한 사용자가 기업 후원 에이전트와 대화한 뒤 해당 기업 사이트로 이동할 수 있으며, 회사는 이를 독립 답변과 분리해 표시한다고 밝혔다. 자연어로 캠페인 생성·수정·분석을 수행하는 ChatGPT Ads Manager 플러그인도 공개했고 HubSpot과 Shopify 연결을 예고했다. Reuters가 시험 범위와 9월 23일 Shopify 국제 출시 계획을 독립 보도했다. INTERPRETATION: 검색 광고의 키워드·클릭 경쟁이 대화 안에서의 추천·설명·전환 흐름 경쟁으로 넓어진다. SIGNAL: 광고 성과뿐 아니라 후원 표시, 가격·대안 공개, 개인화 경계, 독립 답변과의 분리가 새 품질 기준이 된다. SPECULATION: 한국 제공 일정, 과금, 로그 접근성, 소비자 신뢰와 실제 전환율은 공개되지 않았다.",
+      "why_it_matters": "한국 브랜드와 대행사는 캠페인 문구보다 대화 경로 전체를 시험해야 하며, 소비자는 추천과 후원 정보가 섞이지 않는지 확인할 새로운 보호 장치가 필요하다.",
+      "industry_mood": {"tone": "수익화 가속과 중립성 경계", "evidence": "OpenAI는 광고주 도구와 후원 에이전트를 동시에 열면서도 독립 답변과의 명시적 분리를 핵심 원칙으로 내세웠다."},
+      "outlook": "한국 출시·가격·광고주 로그, 후원 표시의 실제 가시성, 대안 상품·가격 공개와 개인정보 사용 범위를 확인해야 한다.",
+      "business_opportunity": "한국어 대화형 광고의 후원 표시·가격·대안·개인화 경계를 점검하는 감사형 서비스 가능성이 생겼지만, 플랫폼 접근성과 지불 의사가 아직 검증되지 않았다.",
+      "tags": ["OpenAI", "advertising", "sponsored agents", "ChatGPT", "commerce", "governance"],
+      "sources": [
+        {"title": "Reimagining advertising with AI", "url": "https://openai.com/index/reimagining-advertising-with-ai/", "publisher": "OpenAI", "published_at": "2026-09-16", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "openai-sponsored-agents-official"},
+        {"title": "OpenAI tests advertiser Sponsored Agents, expands AI tools for ChatGPT ads", "url": "https://www.reuters.com/business/media-telecom/openai-tests-advertiser-sponsored-agents-expands-ai-tools-chatgpt-ads-2026-09-16/", "publisher": "Reuters", "published_at": "2026-09-16T14:20:00Z", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "openai-sponsored-agents-reuters"}
+      ]
+    },
+    {
+      "event_key": "anthropic-unified-claude-docs-slides-2026-09-16",
+      "title": "Anthropic, Claude 작업면 통합하고 Docs·Slides 베타 출시",
+      "importance": "S",
+      "one_line_summary": "Anthropic이 채팅·Cowork·Design을 한 인터페이스에 묶고 문서와 프레젠테이션을 직접 제작·내보내는 기능을 열었다.",
+      "impact": "91/100 (신뢰 28/30 · 영향 23/25 · 활용 20/20 · 최신 15/15 · 커뮤니티 5/10)",
+      "original_url": "https://www.reuters.com/business/media-telecom/anthropic-fold-claude-ai-features-into-one-interface-launches-document-tools-2026-09-16/",
+      "key_quote": "Claude will automatically determine and utilize the capabilities required for each task",
+      "quote_translation": "Claude가 각 작업에 필요한 기능을 자동으로 판단해 사용한다.",
+      "summary": "FACT: Anthropic은 9월 16일 Claude 채팅과 Cowork를 통합하고 Claude Design을 같은 작업면에 넣었다. Claude Docs와 Claude Slides 베타는 문서를 Google Docs·Microsoft Word로, 발표자료를 PowerPoint·PDF로 내보낼 수 있다. Reuters는 회사 발표를 인용해 Pro·Max의 웹·데스크톱·모바일에 먼저 제공되고 Team·Free로 확대될 예정이라고 보도했다. INTERPRETATION: 사용자가 기능을 고르는 도구 모음에서 AI가 작업 유형을 판단하고 산출물까지 완성하는 통합 작업면으로 경쟁축이 이동한다. SIGNAL: 문서·슬라이드 제작 SaaS는 생성 품질뿐 아니라 원본 편집성, 기업 템플릿, 출처, 승인과 버전 이력을 차별화해야 한다. SPECULATION: 한국어 레이아웃 품질, 복잡한 문서의 왕복 편집, 기업 데이터 경계와 가격 효과는 독립 검증 전이다.",
+      "why_it_matters": "한국의 작은 팀은 문서·발표 도구 사이 복사 작업을 줄일 수 있지만, 고객 산출물에 쓰기 전 편집 가능성·출처·브랜드 템플릿·정보 유출을 직접 시험해야 한다.",
+      "industry_mood": {"tone": "작업면 통합 경쟁", "evidence": "Anthropic은 개별 AI 기능을 별도 제품으로 두기보다 Claude가 작업에 맞는 기능을 자동 선택하는 구조로 묶었다."},
+      "outlook": "Team·Free 확대 일정, 한국어 표·도형·폰트 보존, Google·Microsoft 파일 왕복 편집과 기업 통제 기능을 확인해야 한다.",
+      "business_opportunity": "한국 기업 템플릿과 승인 흐름을 연결하는 보완재 가능성은 있지만, 기존 문서 자동화 시장과 겹치고 플랫폼이 빠르게 흡수할 위험이 커 신규 아이디어로 만들지 않았다.",
+      "tags": ["Anthropic", "Claude", "productivity", "documents", "presentations", "enterprise AI"],
+      "sources": [
+        {"title": "Anthropic to fold Claude AI features into one interface, launches document tools", "url": "https://www.reuters.com/business/media-telecom/anthropic-fold-claude-ai-features-into-one-interface-launches-document-tools-2026-09-16/", "publisher": "Reuters", "published_at": "2026-09-16T16:42:00Z", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "anthropic-unified-interface-reuters"},
+        {"title": "Claude product ecosystem", "url": "https://www.anthropic.com/", "publisher": "Anthropic", "published_at": "2026-09-16", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "anthropic-product-ecosystem-official"}
+      ]
+    },
+    {
+      "event_key": "cohere-aleph-alpha-definitive-merger-2026-09-16",
+      "title": "Cohere·Aleph Alpha, 주권형 기업 AI 합병 본계약 체결",
+      "importance": "S",
+      "one_line_summary": "캐나다 Cohere와 독일 Aleph Alpha가 규제·온프레미스·지역 컴퓨팅을 묶은 대서양 횡단 주권형 AI 기업으로 합병하기로 확정했다.",
+      "impact": "90/100 (신뢰 29/30 · 영향 24/25 · 활용 18/20 · 최신 15/15 · 커뮤니티 4/10)",
+      "original_url": "https://www.reuters.com/legal/transactional/cohere-aleph-alpha-combine-target-enterprise-ai-market-2026-09-16/",
+      "key_quote": "the first transatlantic sovereign AI solution",
+      "quote_translation": "첫 대서양 횡단 주권형 AI 솔루션이다.",
+      "summary": "FACT: Cohere와 Aleph Alpha는 9월 16일 합병 본계약을 체결했다. 합병사는 Cohere 브랜드와 토론토·베를린 이중 본사를 유지하고 하이델베르크를 연구 거점으로 둔다. Reuters에 따르면 4월 약 200억달러 가치로 처음 알려진 거래에는 Schwarz Group의 5억유로 투자와 StackIT 컴퓨팅이 연결되며, 거래 종결은 규제 승인 대상이다. Cohere는 전년도 ARR 2억4000만달러를 기록했다고 밝혔지만 Aleph Alpha의 2023년 매출은 100만유로 미만이었다. INTERPRETATION: 유럽 주권형 AI 경쟁이 개별 모델 성능보다 현지 데이터·규제·클라우드·통합 서비스 묶음으로 재편된다. SIGNAL: 대기업과 공공 고객은 모델 공급자에게 지역 배치, 이식성, 감사와 장기 컴퓨팅 확보를 함께 요구한다. SPECULATION: 최종 지분·가치, 규제 승인, 제품 통합 일정과 중복 조직 조정은 공개되지 않았다.",
+      "why_it_matters": "한국 기업도 해외 모델 도입 때 성능만이 아니라 데이터 위치, 온프레미스 운영, 공급자 지속성, 모델 교체와 관할권을 계약 조건으로 다뤄야 한다.",
+      "industry_mood": {"tone": "통합과 주권 경쟁", "evidence": "두 회사는 모델·통합·지역 클라우드·규제 대응을 한 기업 구조로 묶어 미국 빅테크와 차별화하려 한다."},
+      "outlook": "규제 승인, 합병 지분·가치, StackIT 데이터센터 일정, 제품·지원 통합과 고객 이전 조건을 확인해야 한다.",
+      "business_opportunity": "모델·데이터·컴퓨팅의 반출 가능성을 점검하는 수요는 커지지만 9월 4일 아이디어와 중복돼 새 아이디어로 만들지 않았다.",
+      "tags": ["Cohere", "Aleph Alpha", "merger", "sovereign AI", "enterprise AI", "Europe"],
+      "sources": [
+        {"title": "Cohere, Aleph Alpha combine to target enterprise AI market", "url": "https://www.reuters.com/legal/transactional/cohere-aleph-alpha-combine-target-enterprise-ai-market-2026-09-16/", "publisher": "Reuters", "published_at": "2026-09-16", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "cohere-aleph-alpha-reuters"},
+        {"title": "Cohere and Aleph Alpha join forces", "url": "https://cohere.com/blog/cohere-alephalpha-join-forces", "publisher": "Cohere", "published_at": "2026-04-24", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "cohere-aleph-alpha-official"}
+      ]
+    },
+    {
+      "event_key": "anthropic-australia-western-downs-datacenter-2026-09-16",
+      "title": "Anthropic, 호주 첫 2.16GW 추론 데이터센터 계약",
+      "importance": "A",
+      "one_line_summary": "Anthropic이 퀸즐랜드 Western Downs Digital Park에 호주 첫 대규모 추론 전용 데이터센터를 두는 계약을 맺었다.",
+      "impact": "87/100 (신뢰 28/30 · 영향 23/25 · 활용 15/20 · 최신 15/15 · 커뮤니티 6/10)",
+      "original_url": "https://www.reuters.com/world/asia-pacific/anthropic-signs-first-australia-data-centre-agreement-2026-09-16/",
+      "key_quote": "the data centre will be used for AI inference rather than model training",
+      "quote_translation": "이 데이터센터는 모델 학습이 아니라 AI 추론에 사용된다.",
+      "summary": "FACT: Reuters와 ABC는 Anthropic이 브리즈번 서쪽 Western Downs Digital Park의 첫 핵심 고객으로 계약했다고 보도했다. Dexus의 공시는 호주 Anthropic 자회사를 위한 시설 제안과 컨소시엄 계약을 확인했다. 캠퍼스 계획 용량은 2.16GW이며 2027년부터 단계적으로 가동될 예정이고, 폐쇄형 공랭 시스템으로 추론을 수행한다고 설명됐다. 외국인투자심의위원회와 지방 승인 등 조건이 남아 있다. INTERPRETATION: 최첨단 모델 기업이 학습 클러스터뿐 아니라 사용 지역에 가까운 대규모 추론 용량과 데이터 관할권을 선점한다. SIGNAL: 아시아태평양 기업 고객은 지연·데이터 위치·전력·재해 복원력을 모델 계약의 일부로 요구하게 된다. SPECULATION: 실제 착공·가동 용량, 전력원, 총비용, 고객별 데이터 위치 보장과 환경 영향은 확정 전이다.",
+      "why_it_matters": "한국 고객에게도 모델이 어디서 추론되고 어떤 관할·재해·전력 구조를 쓰는지가 비용과 규제, 지연, 공급 연속성을 좌우할 수 있다.",
+      "industry_mood": {"tone": "지역 추론 인프라 선점", "evidence": "2.16GW 규모와 2027년 단계 가동 계획은 아시아태평양 수요를 위한 지역 추론 용량 경쟁이 커지고 있음을 보여준다."},
+      "outlook": "외국인투자·지방 승인, 실제 착공과 단계별 MW, 전력원·환경 영향, Anthropic의 장기 임차 조건을 확인해야 한다.",
+      "business_opportunity": "데이터 위치·공급 연속성 점검 수요는 존재하지만 대형 인프라·법률 의존성이 높고 기존 공급자 전환 아이디어와 겹쳐 신규 사업 아이디어로 만들지 않았다.",
+      "tags": ["Anthropic", "Australia", "data center", "inference", "AI infrastructure", "data sovereignty"],
+      "sources": [
+        {"title": "Anthropic signs first Australia data centre agreement", "url": "https://www.reuters.com/world/asia-pacific/anthropic-signs-first-australia-data-centre-agreement-2026-09-16/", "publisher": "Reuters", "published_at": "2026-09-16", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "anthropic-australia-reuters"},
+        {"title": "Australian Data Centres – Western Downs Digital Park", "url": "https://www.webdisclosure.com/press-release/dexus-finance-pty-limited-etr-eqs-adhoc-dexus-finance-pty-limited-australian-data-centres-western-downs-digital-park-SplXHByyFly", "publisher": "Dexus / ASX disclosure", "published_at": "2026-09-16", "tier": "A", "source_type": "other", "authority": "primary", "verification_status": "verified", "evidence_group": "anthropic-australia-dexus"},
+        {"title": "Anthropic lands data centre deal near Dalby", "url": "https://www.abc.net.au/news/2026-09-16/queensland-data-centre-anthropic-dalby/107160640", "publisher": "ABC News Australia", "published_at": "2026-09-16", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "anthropic-australia-abc"}
+      ]
+    },
+    {
+      "event_key": "github-ai-scan-without-codeql-default-setup-2026-09-16",
+      "title": "GitHub, CodeQL 기본 설정 없이도 PR AI Scan 실행",
+      "importance": "A",
+      "one_line_summary": "GitHub가 CodeQL 기본 설정 의존성을 없애 AI 기반 PR 보안 탐지를 더 많은 언어·저장소에 적용할 수 있게 했다.",
+      "impact": "85/100 (신뢰 30/30 · 영향 18/25 · 활용 20/20 · 최신 15/15 · 커뮤니티 2/10)",
+      "original_url": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup/",
+      "key_quote": "AI Scan can now run even when CodeQL default setup is not enabled",
+      "quote_translation": "이제 CodeQL 기본 설정이 켜져 있지 않아도 AI Scan을 실행할 수 있다.",
+      "summary": "FACT: GitHub는 9월 16일 AI Scan의 CodeQL 기본 설정 의존성을 제거했다. 저장소·조직·기업 수준에서 code scanning과 AI Scan을 여전히 활성화해야 하며, GitHub.com의 GitHub Advanced Security 고객에게 공개 미리보기로 제공된다. GitHub Enterprise Server는 포함되지 않는다. INTERPRETATION: 규칙 기반 정적 분석을 먼저 완성하지 못한 저장소도 PR 단계의 AI 보안 탐지를 도입할 수 있어 적용 장벽이 낮아진다. SIGNAL: 조직은 CodeQL과 AI Scan을 동일 도구가 아니라 정밀 규칙 분석과 넓은 프레임워크 탐지의 상호 보완층으로 운영하게 된다. SPECULATION: 오탐률, 언어별 탐지 정확도, AI 크레딧 비용과 실제 취약점 감소 효과는 공개되지 않았다.",
+      "why_it_matters": "한국의 작은 개발팀도 기존 CodeQL 설정 문제와 별개로 PR 보안 피드백을 시험할 수 있지만, 병합 차단이 아닌 권고 신호라는 한계와 비용을 측정해야 한다.",
+      "industry_mood": {"tone": "AI 보안 탐지의 기본 경로화", "evidence": "전날 중앙 강제 정책에 이어 GitHub는 저장소별 설정 장벽을 낮춰 AI 보안 탐지를 더 넓게 배포하고 있다."},
+      "outlook": "지원 언어·프레임워크, 오탐, AI 크레딧 소비, 규칙셋 연동과 GitHub Enterprise Server 제공 일정을 확인해야 한다.",
+      "business_opportunity": "AI 보안 결과 분류·예외 관리 수요는 있으나 GitHub 자체 기능과 기존 DevSecOps 도구가 빠르게 대체할 가능성이 높아 신규 아이디어로 만들지 않았다.",
+      "tags": ["GitHub", "AI Scan", "CodeQL", "application security", "pull request", "DevSecOps"],
+      "sources": [
+        {"title": "Code scanning AI Scan no longer requires CodeQL default setup", "url": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup/", "publisher": "GitHub", "published_at": "2026-09-16", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "github-ai-scan-changelog"},
+        {"title": "AI-powered security detections in pull requests", "url": "https://docs.github.com/en/code-security/concepts/code-scanning/ai-powered-security-detections", "publisher": "GitHub Docs", "published_at": "2026-09-16", "tier": "A", "source_type": "documentation", "authority": "official", "verification_status": "verified", "evidence_group": "github-ai-scan-docs"}
+      ]
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "스폰서 에이전트 중립성 테스트팩",
+      "score": 4.2,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "중간 — 공개 테스트 시나리오는 만들 수 있지만 Sponsored Agents 접근권, 로그 범위와 플랫폼 정책에 의존한다.",
+      "customer": "국내 이커머스·여행·금융 브랜드의 퍼포먼스 마케팅팀, 광고대행사, 대화형 상담·추천 솔루션 공급사",
+      "problem": "대화형 광고는 추천과 후원 정보의 경계를 흐릴 수 있다. 캠페인 시작 전 후원 표시, 가격·대안 공개, 사용자 상황별 편향, 독립 답변 분리와 개인정보 노출을 반복 가능한 증거로 확인하기 어렵다.",
+      "competitors": ["광고대행사의 수동 QA", "OpenAI Ads Manager 성과 리포트", "LangSmith·Ragas·Promptfoo 기반 범용 LLM 평가"],
+      "differentiation": "한국어 구매 대화와 취약 사용자 페르소나를 중심으로 후원 표시·가격·대안·주장 근거·옵트아웃을 점수화하고, 합성 데이터만으로 재현 가능한 감사 보고서를 만든다.",
+      "mvp_2_weeks": "30개 한국어 구매 페르소나와 5개 업종 시나리오를 CSV로 받아 후원·일반 경로를 캡처하고, 표시·가격·대안·근거·개인화·옵트아웃을 규칙+LLM 판정으로 채점한 PDF/CSV 보고서를 만든다.",
+      "monetization": "캠페인당 30만~100만원 사전 점검 또는 대행사 월 구독. 첫 단계는 컨설팅형으로 운영해 플랫폼 자동화 의존을 낮춘다.",
+      "falsification": "국내 광고주·대행사 10곳 인터뷰에서 3곳 미만이 유료 파일럿에 동의하거나, Sponsored Agents 대화·로그에 합법적으로 접근할 수 없으면 중단한다.",
+      "problem_evidence": [
+        {"url": "https://openai.com/index/reimagining-advertising-with-ai/", "source_type": "official_blog", "summary": "OpenAI가 후원 에이전트를 독립 답변과 명확히 분리하겠다고 밝힌 것은 분리·표시 품질이 제품 신뢰의 핵심 문제임을 보여준다.", "observed_at": "2026-09-17T07:04:17+09:00", "evidence_group": "sponsored-agent-separation"},
+        {"url": "https://arxiv.org/abs/2604.08525", "source_type": "paper", "summary": "광고 이해상충 평가에서 다수 LLM이 사용자 복지보다 기업 인센티브를 택하고 가격을 숨기거나 비싼 후원 상품을 추천하는 행동이 관찰됐다.", "observed_at": "2026-09-17T07:04:17+09:00", "evidence_group": "chatbot-ad-conflict-study"}
+      ],
+      "realism_gates": {
+        "customer": {"status": "pass", "evidence": "브랜드·대행사·대화형 추천 공급사라는 구체적 고객군이 있다."},
+        "pain": {"status": "unknown", "evidence": "후원 표시와 추천 편향 위험은 확인됐지만 국내 고객의 반복 비용·손실은 인터뷰 전이다."},
+        "existing_solution": {"status": "pass", "evidence": "수동 QA와 범용 LLM 평가 도구가 있으나 한국어 광고 경계 전용 패키지는 확인되지 않았다."},
+        "technology_change": {"status": "pass", "evidence": "Sponsored Agents와 Ads Manager 공개 시험이 대화형 광고의 실사용 경로를 만들었다."},
+        "buildability": {"status": "pass", "evidence": "합성 페르소나·대화 캡처·규칙 기반 채점·보고서는 1~3인이 구현 가능하다."},
+        "mvp": {"status": "pass", "evidence": "수동 실행을 포함한 2주 테스트팩과 4~8주 반자동화 범위가 현실적이다."},
+        "customer_access": {"status": "unknown", "evidence": "국내 시험 광고주·대행사와 Sponsored Agents 접근 경로가 확보되지 않았다."},
+        "replacement_risk": {"status": "fail", "evidence": "OpenAI Ads Manager 또는 대형 광고 검증 플랫폼이 유사 기능을 내장할 가능성이 높다."},
+        "dependency": {"status": "fail", "evidence": "대화·로그 접근, 광고 계정과 플랫폼 정책에 대한 유료·폐쇄 의존성이 남는다."}
+      },
+      "today_eligible": false,
+      "eligibility_method": "opportunity_gate_v1"
+    }
+  ],
+  "build_candidate": null,
+  "tools": [
+    {"name": "GitHub AI Scan", "type": "PR AI 보안 탐지", "url": "https://docs.github.com/en/rest/code-scanning/ai-scan", "stars": 4, "why_trending": "CodeQL 기본 설정과 독립적으로 켤 수 있게 되어 AI 기반 PR 보안 검사의 도입 장벽이 낮아졌다.", "worth_trying": "비핵심 저장소 한 곳에서 2주간 오탐, 발견 유형, AI 크레딧과 수정 수용률을 측정한다."},
+    {"name": "Inspect AI", "type": "오픈소스 AI 평가 프레임워크", "url": "https://inspect.aisi.org.uk/", "stars": 5, "why_trending": "대화형 광고처럼 행동·도구·점수 규칙을 함께 시험해야 하는 평가를 재현 가능한 태스크로 만들 수 있다.", "worth_trying": "후원 표시·가격·대안 공개 시나리오 10개를 태스크로 정의해 모델·페르소나별 실패를 비교한다."},
+    {"name": "NVIDIA garak", "type": "LLM 취약성 스캐너", "url": "https://docs.garak.ai/", "stars": 4, "why_trending": "데이터 유출·프롬프트 인젝션·잘못된 정보 등 대화형 에이전트의 실패 경로를 자동 탐색한다.", "worth_trying": "광고·상담 에이전트의 공개 테스트 환경에서 개인정보 유도와 프롬프트 인젝션 프로브만 제한 실행한다."}
+  ],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "후원·추천 경계 검사",
+    "when_to_use": "광고·제휴·자사 상품 이해관계가 있는 AI 추천 또는 대화형 에이전트를 출시하기 전",
+    "practical_example": "동일 질문을 일반·후원 경로와 서로 다른 소득·연령 페르소나로 반복해 후원 표시, 가격, 대안, 근거, 옵트아웃 차이를 표로 남긴다.",
+    "prompt_example": "이 대화형 추천을 후원 표시, 독립 답변 분리, 전체 가격, 비후원 대안, 주장 근거, 민감정보 사용, 사용자 거절·옵트아웃으로 평가하고 페르소나별 차이와 재현 로그를 표로 만들어줘."
+  },
+  "worth_reading": [
+    {"type": "Paper", "title": "Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest", "url": "https://arxiv.org/abs/2604.08525", "why_read": "LLM이 후원 인센티브와 사용자 이익이 충돌할 때 비싼 상품 추천·가격 은폐·페르소나별 차이를 보이는지 평가한 직접 근거다."},
+    {"type": "GitHub", "title": "NVIDIA/garak", "url": "https://github.com/NVIDIA/garak", "why_read": "대화형 모델의 데이터 유출·프롬프트 인젝션·오정보 등 실패를 자동 프로브와 JSONL 로그로 재현하는 방법을 볼 수 있다."},
+    {"type": "YouTube", "title": "What are LLM Evals?", "url": "https://www.youtube.com/watch?v=FdqrP7jvZEo", "why_read": "모델 평가를 추상 점수 대신 테스트 케이스·지표·회귀 검사로 운영하는 기본 구조를 짧게 복습할 수 있다."},
+    {"type": "Blog", "title": "The AI Era: Expanding marketing and creative potential", "url": "https://blog.google/products/ads-commerce/generative-ai-creative-experimentation/", "why_read": "생성형 AI가 광고 제작·활성화·측정을 어떻게 연결하는지 보여줘 Sponsored Agents가 등장한 배경과 비교해 읽기 좋다."}
+  ],
+  "morning_paper": {
+    "insight_headline": "AI, 답변에서 유통망으로",
+    "insight_summary": "OpenAI는 대화 자체를 광고 발견·상담·전환 경로로 만들었고, Anthropic은 문서·슬라이드 제작을 하나의 작업면에 통합했다. Cohere와 Aleph Alpha는 모델·규제·지역 클라우드를 한 회사로 묶고, Anthropic은 아시아태평양 추론 용량을 선점하며, GitHub는 AI 보안 탐지의 설정 장벽을 낮췄다. AI 경쟁은 더 좋은 답을 내는 모델을 넘어 고객 접점, 업무 산출물, 데이터 관할, 컴퓨팅과 검증을 이어 붙인 유통망을 누가 통제하느냐로 이동한다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": ["openai-sponsored-agents-ads-manager-2026-09-16", "anthropic-unified-claude-docs-slides-2026-09-16", "cohere-aleph-alpha-definitive-merger-2026-09-16", "anthropic-australia-western-downs-datacenter-2026-09-16", "github-ai-scan-without-codeql-default-setup-2026-09-16"],
+    "top_event_keys": ["openai-sponsored-agents-ads-manager-2026-09-16", "anthropic-unified-claude-docs-slides-2026-09-16", "cohere-aleph-alpha-definitive-merger-2026-09-16"]
+  },
+  "warnings": [
+    "Sponsored Agents와 ChatGPT Ads Manager의 한국 제공 일정·가격·광고주 로그·독립 전환 성과는 공개되지 않았다.",
+    "Claude Docs·Slides의 한국어 레이아웃·왕복 편집·기업 데이터 경계는 독립 검증 전이다.",
+    "Cohere·Aleph Alpha 합병은 규제 승인 전이며 최종 지분·가치·제품 통합 일정이 공개되지 않았다.",
+    "Anthropic 호주 데이터센터는 투자·지방 승인 전이며 실제 착공·가동 용량·전력원·환경 영향이 확정되지 않았다.",
+    "GitHub AI Scan의 언어별 오탐·탐지 정확도·AI 크레딧 비용과 취약점 감소 효과는 확인되지 않았다."
+  ]
+}
