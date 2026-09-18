@@ -1,33 +1,33 @@
-# 2026-09-18 AI Daily Intelligence
+# 2026-09-19 AI Daily Intelligence
 
-[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-18.md) · [날짜별 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-18.json)
+[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-09-19.md) · [날짜별 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-19.json)
 
-> **오늘의 인사이트: AI, 확장과 검증이 동시에 쪼개진다**
+> **오늘의 인사이트: AI, 스스로 만드는 속도만큼 인간 검증의 서명이 중요해진다**
 >
-> OpenAI는 오정렬을 사건 단위로, Anthropic은 과학 모델 최적화를 코드·핀·모드로 쪼개 공개했다. Federal Register의 Qwen 철회와 미·중 군사 AI 제안은 실행 경계·인간 승인·사고 통지의 중요성을 보여준다. Huawei는 칩부터 광연결·KV 캐시·오픈소스 생태계까지 확장한다.
+> Claude는 차세대 모델 연구의 일부를 주도하고 생물학 실험실의 로봇까지 지휘하려 한다. OpenAI는 법률 검색·문서 작업을 수직 통합했지만 법원은 AI가 관여한 제출물에 인간 검증 인증을 요구하려 한다. Hacktron의 침투는 AI가 제품 경계를 잇는 공격 속도를 높인다는 점을 보여준다.
 
 ## Top 뉴스
 
-1. [OpenAI, 모델 오정렬 상시 공개 체계와 첫 6건 보고서 발표](https://openai.com/index/model-misalignment-reporting-framework/)
-2. [Huawei, 4,096 NPU Atlas 960E와 100만 NPU 에이전트 클러스터 로드맵 공개](https://www.huawei.com/en/news/2026/9/hc-wang-keynote)
-3. [Anthropic, 생체분자 오픈모델 36종 최적화 코드 공개…평균 약 4배 가속 주장](https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling)
-4. [미 Federal Register, Qwen 기반 규제 검색 도구 노출 뒤 철회](https://www.reuters.com/legal/litigation/us-government-website-used-ai-search-tool-china-that-fbi-said-copied-anthropic-2026-09-17/)
-5. [미·중 전문가, 핵 지휘망 AI 금지선과 사고 핫라인 제안](https://www.brookings.edu/articles/advancing-human-control-of-military-ai/)
+1. [Anthropic, Claude가 차세대 모델 R&D의 26%를 주도한다고 공개](https://www.reuters.com/business/anthropic-says-claude-now-leads-quarter-work-building-its-next-ai-models-2026-09-17/)
+2. [Anthropic, AI가 로봇 실험을 지휘하는 첫 생물학 wet lab 구축](https://www.reuters.com/world/anthropic-quietly-sets-up-biology-lab-it-ramps-ai-drug-program-2026-09-18/)
+3. [OpenAI, 2억3천만 URL 법률 검색을 결합한 Astra for Law 출시](https://openai.com/index/astra-for-law/)
+4. [미 제10연방항소법원, AI 작성 서면의 인간 검증 인증 규칙 제안](https://www.reuters.com/legal/government/us-appeals-court-rule-would-require-lawyers-certify-ai-prepared-filings-2026-09-18/)
+5. [Hacktron, 이미지 취약점·SSO 결함을 엮어 OpenAI 내부 코드 접근](https://www.hacktron.ai/blog/hacking-openai)
 
 ## 사업 기회
 
-- 신규 아이디어: **0개** — 최근 사고 공개·공급자 전환·기술유출 증거 아이디어와 중복되거나 국내 고객·재현성·의존성 근거가 부족하다.
+- 신규 아이디어: **0개** — 최근 아이디어와 중복되거나 한국의 의무 근거·고객 접근·전문직 책임·민감 문서 보안·장비·규제 게이트가 남았다.
 - 구축 후보: **없음**
 
 ## Worth Reading
 
-- **Paper:** [Harness Engineering for LLM-Driven GPU Kernel Generation](https://arxiv.org/abs/2607.17979)
-- **GitHub:** [anthropics/uplifting-biomolecular-modeling](https://github.com/anthropics/uplifting-biomolecular-modeling)
-- **YouTube:** [NVIDIA Keynote Live at SIGGRAPH 2026](https://www.youtube.com/watch?v=vXDetI2TUWw)
-- **Blog:** [Our framework for reporting model misalignment](https://openai.com/index/model-misalignment-reporting-framework/)
+- **Paper:** [Dream-RSI: Recursive Self-Improvement through Evolving Worlds](https://arxiv.org/abs/2609.14858)
+- **GitHub:** [zhengkid/Dream-RSI](https://github.com/zhengkid/Dream-RSI)
+- **YouTube:** [Astra for Law: Frontier intelligence built for your practice](https://www.youtube.com/watch?v=YeeGHCixr7o)
+- **Blog:** [Hacking OpenAI](https://www.hacktron.ai/blog/hacking-openai)
 
 ## 누락·미확인
 
-OpenAI 공개 체계의 포착률·외부 감사, Huawei 수치의 독립 검증·양산 공급, Anthropic 최적화의 외부 재현·wet-lab 결과, Federal Register Qwen의 배치·데이터 경계·철회 이유, 미·중 제안의 정부 채택은 확인되지 않았다.
+Claude 연구개발 기여 수치의 독립 감사, Anthropic wet lab의 규모·가동·안전·성과, Astra for Law의 한국 제공·가격·실제 오류율, 제10연방항소법원 제안의 최종 채택, Hacktron 사건의 전체 로그·접근 범위는 확인되지 않았다.
 
 **부분 실패:** 없음
