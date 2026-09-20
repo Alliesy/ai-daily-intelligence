@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-09-21",
+  "generated_at": "2026-09-21T07:01:26+09:00",
+  "status": "complete",
+  "todays_insight": "AI 경쟁의 숨은 의존성이 국제 협상, 장부 밖 보증, 메모리 공급망과 독립 검증 규칙으로 표면화되고 있다.",
+  "news": [
+    {
+      "event_key": "california-independent-ai-oversight-kill-switch-order-2026-09-18",
+      "title": "캘리포니아, AI 독립감독·검증된 중단장치 추진 행정명령",
+      "importance": "S",
+      "one_line_summary": "Newsom 주지사는 독립 검증기관의 현장 감독과 상시 검증 가능한 AI 중단장치 방안을 두 달 안에 마련하도록 지시했다.",
+      "impact": "93/100 (신뢰 30/30 · 영향 25/25 · 활용 20/20 · 최신 12/15 · 커뮤니티 6/10)",
+      "original_url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/",
+      "key_quote": "ongoing, verified AI kill switch",
+      "quote_translation": "지속적으로 검증되는 AI 중단장치",
+      "summary": "FACT: 캘리포니아 주지사는 9월 18일 행정명령으로 전문가 그룹이 두 달 안에 독립 검증기관의 현장 배치, 안전계획·위험평가 검증, 상시 검증 가능한 중단장치와 통제 상실 사고 정의 확대 방안을 제안하도록 했다. 즉시 중단장치를 의무화한 것은 아니다. INTERPRETATION: 프런티어 AI 감독이 기업의 자체 보고에서 외부 검증과 운영 중단 가능성으로 이동한다. SIGNAL: 모델 공급자는 안전 문서뿐 아니라 독립 접근권, 테스트 가능한 중단 절차와 사고 증거를 준비해야 한다. SPECULATION: 전문가 권고, 후속 법률, 집행기관과 기술 표준은 아직 확정되지 않았다.",
+      "why_it_matters": "캘리포니아 사업자와 연결된 한국 기업도 계약·조달 단계에서 독립 감사와 중단 가능성 증거를 요구받을 수 있다.",
+      "industry_mood": {"tone": "자율규제에서 상주 검증으로 전환", "evidence": "공식 행정명령과 복수 보도가 독립 감독·중단장치 검토의 방향을 일치하게 전했다."},
+      "outlook": "11월 중순까지 나올 전문가 권고, SB 813·AB 1405 시행 규칙, 독립 검증기관의 권한·책임과 기술 시험 방법을 확인해야 한다.",
+      "business_opportunity": "독립 감사 증거 패킷과 중단장치 테스트 수요는 있으나 최근 사고 공개·격리 프록시 아이디어와 중복돼 신규 아이디어로 만들지 않았다.",
+      "tags": ["California", "AI safety", "independent oversight", "kill switch", "audit", "regulation"],
+      "sources": [
+        {"title": "Governor Newsom issues executive order to accelerate independent oversight and advance the creation of an AI kill switch", "url": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/", "publisher": "Governor of California", "published_at": "2026-09-18", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "california-ai-oversight-order"},
+        {"title": "California Governor issues executive order on AI safety", "url": "https://indianexpress.com/article/technology/artificial-intelligence/california-governor-issues-executive-order-on-ai-safety-10885791/", "publisher": "The Indian Express", "published_at": "2026-09-20", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "california-ai-oversight-independent"},
+        {"title": "Newsom's big AI swings put 2028 in focus", "url": "https://www.axios.com/2026/09/18/newsom-ai-2028-focus", "publisher": "Axios", "published_at": "2026-09-18", "tier": "B", "source_type": "article", "authority": "analysis", "verification_status": "corroborated", "evidence_group": "california-ai-oversight-axios"}
+      ]
+    },
+    {
+      "event_key": "us-china-ai-safety-critical-minerals-talks-2026-09-20",
+      "title": "미·중, 정상회담 앞두고 AI 안전·무역·핵심광물 협상 착수",
+      "importance": "S",
+      "one_line_summary": "미국 Bessent 재무장관과 중국 He Lifeng 부총리는 뉴욕에서 AI 안전장치와 희토류 흐름을 무역 의제와 함께 논의했다.",
+      "impact": "91/100 (신뢰 27/30 · 영향 25/25 · 활용 18/20 · 최신 15/15 · 커뮤니티 6/10)",
+      "original_url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/",
+      "key_quote": "AI, trade and critical minerals",
+      "quote_translation": "AI, 무역과 핵심광물",
+      "summary": "FACT: Reuters는 9월 20일 양국 경제 수장이 뉴욕에서 Trump–Xi 정상회담을 준비하며 AI 안전, 무역과 핵심광물을 논의했다고 보도했다. 보도된 제안에는 자기개선 AI와 생물·핵 이중용도에 대한 안전장치, 희토류 흐름 안정이 포함된다. INTERPRETATION: AI 안전 규칙과 반도체 원료 공급이 하나의 전략 협상 묶음으로 결합되고 있다. SIGNAL: 모델·칩 구매자는 수출통제뿐 아니라 광물·부품 조달과 국제 안전 합의 변화까지 공급 연속성 시나리오에 넣어야 한다. SPECULATION: 합의문, 집행 방식과 정상회담 결과는 아직 없다.",
+      "why_it_matters": "한국은 반도체·배터리 공급망과 미국·중국 시장에 동시에 연결돼 있어 안전 규칙과 핵심광물 조건의 결합에 직접 노출된다.",
+      "industry_mood": {"tone": "충돌 관리와 제한적 합의 기대", "evidence": "협상은 시작됐지만 양측 공식 공동문과 구체적 양보는 공개되지 않았다."},
+      "outlook": "미 재무부·중국 측 공식 브리핑, 11월 10일 무역휴전 연장, 안전장치 문안과 희토류 공급 약속의 검증 조건을 추적해야 한다.",
+      "business_opportunity": "지정학·공급망 경보 서비스 가능성은 있으나 공공 데이터 지연, 기존 리스크 플랫폼과의 대체 위험 때문에 제외했다.",
+      "tags": ["US-China", "AI safety", "critical minerals", "trade", "semiconductors", "supply chain"],
+      "sources": [
+        {"title": "US Treasury's Bessent and China's He launch talks on AI, trade and critical minerals", "url": "https://www.reuters.com/business/finance/us-treasurys-bessent-chinas-he-launch-talks-ai-trade-critical-minerals-2026-09-20/", "publisher": "Reuters", "published_at": "2026-09-20", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "us-china-ai-talks-reuters"},
+        {"title": "Why China is pushing back on US warnings over rapid AI development", "url": "https://www.theguardian.com/world/2026/sep/20/why-china-is-pushing-back-on-us-warnings-over-rapid-ai-development", "publisher": "The Guardian", "published_at": "2026-09-20", "tier": "A", "source_type": "article", "authority": "analysis", "verification_status": "corroborated", "evidence_group": "us-china-ai-talks-guardian"}
+      ]
+    },
+    {
+      "event_key": "cxmt-fifth-gen-dram-mass-production-2026-09-20",
+      "title": "중국 CXMT, 5세대 DRAM 플랫폼 양산 진입 발표",
+      "importance": "S",
+      "one_line_summary": "CXMT는 11.95nm 셀 간격의 4중 패터닝 공정과 24Gb LPDDR5X 제품을 공개하며 5세대 DRAM 플랫폼 양산을 선언했다.",
+      "impact": "90/100 (신뢰 26/30 · 영향 24/25 · 활용 20/20 · 최신 15/15 · 커뮤니티 5/10)",
+      "original_url": "https://www.reuters.com/world/asia-pacific/chinas-cxmt-says-new-memory-chip-platform-enters-mass-production-2026-09-20/",
+      "key_quote": "enters mass production",
+      "quote_translation": "양산에 들어갔다.",
+      "summary": "FACT: Reuters와 Indian Express는 CXMT가 5세대 DRAM 플랫폼 양산 진입을 발표하고 24Gb LPDDR5X 두 종을 공개했다고 전했다. 회사는 4중 패터닝으로 셀 간격을 11.95nm까지 줄이고 이전 세대보다 웨이퍼당 총 다이 수를 최소 50% 늘렸다고 주장했다. INTERPRETATION: 중국의 메모리 자립 경쟁이 연구개발을 넘어 모바일·엣지용 고밀도 DRAM 생산 단계로 확장된다. SIGNAL: Samsung·SK hynix와 국내 부품사는 HBM뿐 아니라 범용·모바일 DRAM의 가격, 중국 현지 조달과 장비 국산화 속도를 함께 봐야 한다. SPECULATION: 실제 수율, 출하량, 고객, 전력 효율과 선두 제품 대비 성능은 독립 검증되지 않았다.",
+      "why_it_matters": "한국 메모리 산업의 규모·가격 우위와 중국 매출 구조에 직접 영향을 줄 수 있는 공급 증가 신호다.",
+      "industry_mood": {"tone": "기술 격차 축소 주장에 경계", "evidence": "두 매체가 회사 발표를 일치하게 전했지만 독립 생산 데이터는 없다."},
+      "outlook": "CXMT 공식 기술문서, 고객 인증, 웨이퍼 투입량·수율, 실제 LPDDR5X 벤치마크와 미국 수출통제 영향을 확인해야 한다.",
+      "business_opportunity": "메모리 공급 리스크 대시보드는 가능하지만 산업 데이터 비용과 기존 리서치·조달 솔루션 대체 위험이 커 제외했다.",
+      "tags": ["CXMT", "DRAM", "LPDDR5X", "China", "Samsung", "SK hynix", "semiconductor"],
+      "sources": [
+        {"title": "China's CXMT says new memory-chip platform enters mass production", "url": "https://www.reuters.com/world/asia-pacific/chinas-cxmt-says-new-memory-chip-platform-enters-mass-production-2026-09-20/", "publisher": "Reuters", "published_at": "2026-09-20", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "cxmt-dram-reuters"},
+        {"title": "China's CXMT says new memory-chip platform enters mass production", "url": "https://indianexpress.com/article/technology/tech-news-technology/chinas-cxmt-says-new-memory-chip-platform-enters-mass-production-10885809/", "publisher": "The Indian Express", "published_at": "2026-09-20", "tier": "B", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "cxmt-dram-indian-express"}
+      ]
+    },
+    {
+      "event_key": "big-tech-ai-off-balance-guarantees-2026-09-20",
+      "title": "빅테크, 최대 3,000억달러 AI 보증을 장부 밖 구조로 조달",
+      "importance": "A",
+      "one_line_summary": "Financial Times는 빅테크·칩 기업들이 특수목적법인과 잔존가치 보증으로 최대 3,000억달러의 AI 인프라 위험을 장부 밖에 두고 있다고 보도했다.",
+      "impact": "89/100 (신뢰 26/30 · 영향 24/25 · 활용 18/20 · 최신 15/15 · 커뮤니티 6/10)",
+      "original_url": "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563",
+      "key_quote": "$300bn of AI exposure off balance sheets",
+      "quote_translation": "3,000억달러의 AI 노출을 장부 밖에 둔다.",
+      "summary": "FACT: FT는 Meta가 개척하고 NVIDIA·Broadcom 등이 사용하는 잔존가치 보증과 특수목적법인 구조가 최대 3,000억달러의 AI 데이터센터·칩 금융을 뒷받침한다고 보도했다. S&P는 일부 노출을 조정 레버리지에 반영한다. INTERPRETATION: AI 인프라 비용이 현금 지출만이 아니라 조건부 보증·장기 계약·거래상대방 위험으로 이동한다. SIGNAL: 공급자·투자자는 CAPEX와 부채 외에 보증 한도, 자산 잔존가치, take-or-pay 계약과 상대방 부도 시 책임을 함께 봐야 한다. SPECULATION: 총액 산정 범위, 개별 보증 조건과 실제 손실률은 회사별 공시로 완전히 검증되지 않았다.",
+      "why_it_matters": "한국 클라우드·반도체 공급사와 투자자는 해외 AI 수요의 지속성을 매출 전망뿐 아니라 보증 구조와 고객 신용으로 평가해야 한다.",
+      "industry_mood": {"tone": "성장 자금의 복잡성과 전염 위험을 재평가", "evidence": "FT의 구조 분석과 신용평가·금융권 경고가 AI 부채의 상호연결성을 공통으로 지적한다."},
+      "outlook": "회사별 10-K·계약 공시, S&P 조정 방식, 특수목적법인 채무·잔존가치와 실제 데이터센터 가동률을 확인해야 한다.",
+      "business_opportunity": "AI 계약의 우발채무 추출 도구는 가능하지만 회계·법률 책임, 유료 데이터와 기존 금융정보 서비스 의존성이 커 제외했다.",
+      "tags": ["AI infrastructure", "financing", "guarantees", "SPV", "data centers", "credit risk"],
+      "sources": [
+        {"title": "Big Tech uses guarantees to keep $300bn of AI exposure off balance sheets", "url": "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563", "publisher": "Financial Times", "published_at": "2026-09-20", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "ai-guarantees-ft"},
+        {"title": "AI debt is surging. A credit ratings agency has concerns", "url": "https://www.axios.com/2026/09/11/ai-debt-hyperscalers-sp", "publisher": "Axios", "published_at": "2026-09-11", "tier": "B", "source_type": "article", "authority": "analysis", "verification_status": "corroborated", "evidence_group": "ai-guarantees-axios"},
+        {"title": "AI slowdown sparks calls to prepare for collapse of tech bubble", "url": "https://www.theguardian.com/business/2026/sep/20/ai-slowdown-calls-collapse-of-bubble-datacentre-tech-firms", "publisher": "The Guardian", "published_at": "2026-09-20", "tier": "B", "source_type": "article", "authority": "analysis", "verification_status": "corroborated", "evidence_group": "ai-guarantees-guardian"}
+      ]
+    }
+  ],
+  "business_ideas": [],
+  "build_candidate": null,
+  "tools": [
+    {"name": "Open Policy Agent", "type": "범용 정책 결정·집행 엔진", "url": "https://github.com/open-policy-agent/opa", "stars": 5, "why_trending": "AI 에이전트의 도구 호출을 deny·escalate·audit·allow로 제어하는 사용 사례가 커뮤니티에서 구체화되고 있다.", "worth_trying": "테스트 에이전트의 외부 전송·고비용 호출·민감 파일 접근 세 가지를 Rego 정책으로 차단하고 결정 로그를 남긴다."},
+    {"name": "OpenTelemetry Semantic Conventions", "type": "분산 추적·생성형 AI 관측성 표준", "url": "https://github.com/open-telemetry/semantic-conventions", "stars": 4, "why_trending": "모델 호출과 도구 실행을 공급자 중립적 속성으로 기록해 독립 감사 증거의 기반을 만들 수 있다.", "worth_trying": "비운영 워크플로 하나에 모델·도구·비용·오류 span을 넣고 한 번의 실패를 끝까지 재구성할 수 있는지 확인한다."}
+  ],
+  "community": [
+    {"platform": "GitHub", "mood": "에이전트 권한을 코드 밖 정책 계층으로 분리하려는 요구", "one_line_summary": "OPA 커뮤니티에 도구 호출을 허용·차단·승인·감사로 나누는 AI Agent Policy Enforcement 가이드 제안이 올라왔다.", "url": "https://github.com/open-policy-agent/opa/issues/8851"}
+  ],
+  "skill_of_the_day": {
+    "name": "숨은 의존성 레지스터",
+    "when_to_use": "AI 공급자·칩·데이터센터·규제 변화가 서비스 연속성이나 원가에 영향을 줄 때",
+    "practical_example": "모델 API별 장기계약, 사용량 최소치, 보증·선급금, 칩·광물 의존, 중단장치·감사권과 대체 공급자를 한 표로 연결하고 분기마다 실제 전환 시험을 한다.",
+    "prompt_example": "이 AI 서비스의 계약·금융·칩·광물·규제 의존성을 직접/간접/우발 항목으로 나누고, 각 항목의 증거 URL·중단 조건·대체 경로·검증 주기를 표로 만들어줘. 확인되지 않은 값은 추정하지 말고 unknown으로 남겨줘."
+  },
+  "worth_reading": [
+    {"type": "Paper", "title": "Concentrated siting of AI data centers drives regional power-system stress under rising global compute demand", "url": "https://arxiv.org/abs/2604.06198", "why_read": "AI 인프라 집중이 전력망 위험을 어디에 모으는지 정량 모델로 본다."},
+    {"type": "GitHub", "title": "open-policy-agent/opa", "url": "https://github.com/open-policy-agent/opa", "why_read": "에이전트 행동을 모델 프롬프트가 아닌 테스트 가능한 정책 결정으로 분리하는 기반이다."},
+    {"type": "YouTube", "title": "Financing the digital economy: the role of private credit", "url": "https://www.youtube.com/watch?v=oDCJUDIxPgk", "why_read": "BIS가 디지털 인프라와 민간신용의 결합을 금융안정 관점에서 설명한다."},
+    {"type": "Blog", "title": "Supervising banks in an AI-shaped economy", "url": "https://www.bis.org/speeches/20260918-supervising-banks-ai-shaped-economy", "why_read": "AI 위험을 모델 거버넌스와 운영·전략 회복탄력성으로 함께 보는 감독 프레임을 제시한다."}
+  ],
+  "morning_paper": {
+    "insight_headline": "AI, 숨은 의존성이 규칙이 된다",
+    "insight_summary": "AI 경쟁은 더 이상 모델 점수만의 싸움이 아니다. 미·중은 안전과 희토류를 한 협상에 묶고, CXMT는 메모리 자립을 양산으로 옮겼다. 빅테크의 인프라 비용은 장부 밖 보증으로 이동하며, 캘리포니아는 독립 감독과 검증된 중단장치를 제도화하려 한다. 운영자는 공급망·계약·권한의 숨은 의존성을 증거와 전환 시험으로 관리해야 한다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": ["california-independent-ai-oversight-kill-switch-order-2026-09-18", "us-china-ai-safety-critical-minerals-talks-2026-09-20", "cxmt-fifth-gen-dram-mass-production-2026-09-20", "big-tech-ai-off-balance-guarantees-2026-09-20"],
+    "top_event_keys": ["california-independent-ai-oversight-kill-switch-order-2026-09-18", "us-china-ai-safety-critical-minerals-talks-2026-09-20", "cxmt-fifth-gen-dram-mass-production-2026-09-20"]
+  }
+}
