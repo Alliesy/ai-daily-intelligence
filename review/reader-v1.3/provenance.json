@@ -1,0 +1,170 @@
+{
+  "status": "draft_waiting_for_owner",
+  "base_commit": "2d6c33bf62486573a8083c2151dd0b546a344814",
+  "web_v12_commit": "4ac9bfcc72954b1ea38d9a0cbce7ea6f561edfc3",
+  "dates": [
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-23"
+  ],
+  "source_policy": "Editorial rewrite of pinned archive; not fresh news verification.",
+  "entries": [
+    {
+      "date": "2026-09-20",
+      "event_key": "google-gemini-real-company-breakouts-2026-09-19",
+      "source_path": "data/daily/2026/2026-09-20.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "표적·권한 재검증이 summary SIGNAL과 why에 겹침; 경로 설명은 body, 점검 행동은 action으로 분리."
+    },
+    {
+      "date": "2026-09-20",
+      "event_key": "openai-278b-cash-burn-forecast-2026-09-19",
+      "source_path": "data/daily/2026/2026-09-20.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "summary의 공급 지속성 주장과 why의 원가·연속성 반복을 제거; 미래 가격 단정 대신 이용자에게 현재 의미의 한계를 설명."
+    },
+    {
+      "date": "2026-09-20",
+      "event_key": "anthropic-next-model-release-ipo-pressure-2026-09-19",
+      "source_path": "data/daily/2026/2026-09-20.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "summary SIGNAL과 why의 외부평가 요구 반복을 why 한 곳으로 줄이고 outlook은 확인 문서로 한정."
+    },
+    {
+      "date": "2026-09-20",
+      "event_key": "imf-europe-ai-growth-strain-2026-09-19",
+      "source_path": "data/daily/2026/2026-09-20.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "summary와 why의 전력·지역 격차를 body에 통합; outlook에는 원문 가정 확인만 남김."
+    },
+    {
+      "date": "2026-09-21",
+      "event_key": "california-independent-ai-oversight-kill-switch-order-2026-09-18",
+      "source_path": "data/daily/2026/2026-09-21.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "summary SPECULATION과 outlook의 미확정 항목 반복을 현재 법적 상태/body와 향후 권고/outlook으로 분리."
+    },
+    {
+      "date": "2026-09-21",
+      "event_key": "us-china-ai-safety-critical-minerals-talks-2026-09-20",
+      "source_path": "data/daily/2026/2026-09-21.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "summary SIGNAL과 why의 공급망 연결 반복을 body의 한국 맥락으로 합침; 합의문 확인은 outlook만 담당."
+    },
+    {
+      "date": "2026-09-21",
+      "event_key": "cxmt-fifth-gen-dram-mass-production-2026-09-20",
+      "source_path": "data/daily/2026/2026-09-21.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "summary의 공급 증가 신호와 why의 가격 우위 영향을 body의 한계 설명으로 정리; 수율과 다이 수 차이 명확화."
+    },
+    {
+      "date": "2026-09-21",
+      "event_key": "big-tech-ai-off-balance-guarantees-2026-09-20",
+      "source_path": "data/daily/2026/2026-09-21.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "CAPEX·보증·신용 평가가 summary와 why에서 반복; 금융 용어는 body로 풀고 의미는 주문의 지속성 한 가지로 축소."
+    },
+    {
+      "date": "2026-09-23",
+      "event_key": "alibaba-qwen-zhenwu-v900-20gw-roadmap-2026-09-22",
+      "source_path": "data/daily/2026/2026-09-23.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "숫자 목록의 dek/FACT 반복을 제거; dek에는 계획의 범위, body에는 수치와 주장 수준 배정."
+    },
+    {
+      "date": "2026-09-23",
+      "event_key": "meta-muse-human-concierge-zero-day-patch-2026-09-22",
+      "source_path": "data/daily/2026/2026-09-23.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "사람·권한·데이터 나열이 SIGNAL과 why에 반복; body는 두 사건의 차이, why는 동의, outlook은 재출시 조건으로 분리."
+    },
+    {
+      "date": "2026-09-23",
+      "event_key": "openai-independent-math-advisory-group-2026-09-21",
+      "source_path": "data/daily/2026/2026-09-23.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "summary의 검증 병목과 why/outlook의 검증 요구가 겹침; body는 자문단 권한, why는 인정 주체, outlook은 권고 내용으로 분리."
+    },
+    {
+      "date": "2026-09-23",
+      "event_key": "australia-ai-training-copyright-conditional-approval-2026-09-22",
+      "source_path": "data/daily/2026/2026-09-23.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "기존 제목이 두 회사의 다른 요구를 한 안처럼 압축; reader에서 분리하고 법률 미확정은 body, 다음 보고서는 outlook에 배정."
+    },
+    {
+      "date": "2026-09-23",
+      "event_key": "reuters-ipsos-us-ai-safety-poll-2026-09-22",
+      "source_path": "data/daily/2026/2026-09-23.json",
+      "source_fields": [
+        "summary",
+        "why_it_matters",
+        "outlook",
+        "sources"
+      ],
+      "semantic_review": "summary·why의 안전 증거/신뢰 판매 반복을 제거; body는 문항 해석과 일반화 한계, why는 응답으로 알 수 없는 선호."
+    }
+  ],
+  "production_changed": false
+}

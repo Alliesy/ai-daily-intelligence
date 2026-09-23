@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "schema_version": "1.0",
+  "schema_change": "two_additive_elements_only",
+  "days": [
+    {
+      "date": "2026-09-20",
+      "events": [
+        {
+          "event_key": "google-gemini-real-company-breakouts-2026-09-19",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            3,
+            3,
+            2
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "openai-278b-cash-burn-forecast-2026-09-19",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "anthropic-next-model-release-ipo-pressure-2026-09-19",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "imf-europe-ai-growth-strain-2026-09-19",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            3,
+            2,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        }
+      ],
+      "legacy_preserved": true,
+      "old_and_new_schema_valid": true
+    },
+    {
+      "date": "2026-09-21",
+      "events": [
+        {
+          "event_key": "california-independent-ai-oversight-kill-switch-order-2026-09-18",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            2,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "us-china-ai-safety-critical-minerals-talks-2026-09-20",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "cxmt-fifth-gen-dram-mass-production-2026-09-20",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "big-tech-ai-off-balance-guarantees-2026-09-20",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        }
+      ],
+      "legacy_preserved": true,
+      "old_and_new_schema_valid": true
+    },
+    {
+      "date": "2026-09-23",
+      "events": [
+        {
+          "event_key": "alibaba-qwen-zhenwu-v900-20gw-roadmap-2026-09-22",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "meta-muse-human-concierge-zero-day-patch-2026-09-22",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "openai-independent-math-advisory-group-2026-09-21",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            2,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "australia-ai-training-copyright-conditional-approval-2026-09-22",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        },
+        {
+          "event_key": "reuters-ipsos-us-ai-safety-poll-2026-09-22",
+          "paragraphs": 4,
+          "sentences_per_paragraph": [
+            2,
+            3,
+            3,
+            3
+          ],
+          "exact_duplicate_sentences": 0
+        }
+      ],
+      "legacy_preserved": true,
+      "old_and_new_schema_valid": true
+    }
+  ],
+  "negative_cases": {
+    "missing_body": "rejected",
+    "wrong_version": "rejected",
+    "empty_body": "rejected",
+    "numeric_action": "rejected",
+    "unknown_reader_field": "rejected"
+  },
+  "limitations": [
+    "Exact duplicate detection is not semantic duplicate proof.",
+    "No live importer, database, browser, non-developer or audio test."
+  ]
+}
