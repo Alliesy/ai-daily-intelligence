@@ -6,6 +6,8 @@ import type { BriefingDto, BriefingSummaryDto, EventDto, OpportunityDto, SourceD
 import { buildOriginalContent, normalizeAnalysisFields, parseLabeledAnalysis } from "./presentation";
 import { buildMorningPaper, matchesBriefingKeyword } from "./morning-paper";
 
+import { parseReaderContent } from "./reader-v13";
+
 type RecordValue = Record<string, unknown>;
 
 async function findArchiveRoot() {
@@ -143,6 +145,7 @@ function mapEvent(item: RecordValue): EventDto {
   const originalUrl = text(item.original_url);
   const sources = records(item.sources).map((source, index) => mapSource(source, originalUrl, index));
   return {
+    reader: parseReaderContent(item.reader),
     id: text(item.event_key),
     eventKey: text(item.event_key),
     slug: text(item.event_key),

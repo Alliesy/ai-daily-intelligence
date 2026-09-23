@@ -25,4 +25,4 @@ export const getEventRoute = cache(async (slug: string, dateKst?: string) => {
 export async function getEventSlugs() { return shouldUseSupabase() ? getSupabaseEventSlugs() : getArchiveEventSlugs(); }
 export const getTrendOverview = cache(async (window: 7 | 30) => shouldUseSupabase() ? getSupabaseTrendOverview(window) : getArchiveTrendOverview(window));
 
-export type { BriefingDto, BriefingSummaryDto, EventDto, EventRouteDto, MorningPaperDto, OpportunityDto, OriginalContentDto, ResourceDto, SourceDto, TrendMetricDto, TrendOverviewDto, TrendSignalDto } from "./types";
+export type { BriefingDto, BriefingSummaryDto, EventDto, EventRouteDto, MorningPaperDto, OpportunityDto, OriginalContentDto, ReaderContentDto, ResourceDto, SourceDto, TrendMetricDto, TrendOverviewDto, TrendSignalDto } from "./types";

@@ -1,5 +1,17 @@
 # AI Daily Intelligence Decision Log
 
+## D-066 — V1.3 Reader는 날짜별 완전한 원고 묶음이다
+
+- 날짜: 2026-09-23
+- 상태: Preview 구현, Production 승인 대기. Reader 존재 시 D-063의 V1.2 기본 조립 순서를 대체하며 Legacy에서는 유지한다.
+- 결정: version/headline/dek/body/takeaway/what_to_watch/action 7키 계약을 따른다. 뒤 3개는 nullable이다. Daily schema_version은 1.0이며 reader는 optional additive다.
+- 근거: 최신 사용자 확정 계약이 Researcher 초안의 why_it_matters/outlook 이름보다 우선한다. 고정 Researcher commit 1372da7cce8d12ec7d5f0c22b0e8b61219510adf는 이 이름 변경 이전이다.
+- 대안: Web에서 구 필드를 자동 alias, 부분 reader와 legacy 혼합, 전역 events에 최신 reader만 저장.
+- 이유: 문장 생성·임의 migration과 과거 archive 덮어쓰기를 막는다.
+- 영향: importer는 구 초안/불완전 reader를 거절하고 Web은 invalid reader 전체를 Legacy로 표시한다. review/web-v1.3/packets는 필드명만 명시적으로 정렬한 QA 사본이며 문장과 production archive는 변경하지 않았다.
+- 재검토: 최종 Researcher 계약 commit이 제공되면 7키 일치 확인. Vercel Preview와 4개 기사 실제 읽기 QA 후 Production 승인 요청.
+
+
 ## 2026-08-27 V1.2 Reader Content 결정
 
 ### D-063 — 기존 canonical 필드를 Reader Copy로 그대로 투영한다

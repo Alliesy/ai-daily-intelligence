@@ -1,5 +1,14 @@
 # AI Daily Intelligence Web V1 Database Schema
 
+## V1.3 Reader occurrence (2026-09-23, Production 미적용)
+
+`daily_briefing_events.reader jsonb NULL`에 Git의 Reader 객체 전체를 저장한다. 키는 Briefing×Event이며 전역 events 열에는 Reader를 두지 않는다. JSONB는 객체 키 순서/공백 표현을 보장하지 않지만 모든 문자열(문단 경계 포함), null과 값은 그대로 보존한다. 같은 날짜 correction은 해당 occurrence만 갱신하고 다른 날짜는 유지한다.
+
+`20260923000100_reader_occurrence.sql`은 기존 service-role RPC 서명·CAS·transaction을 유지하는 wrapper다. 이전 V1.1 RPC는 private로 이동하고 모든 외부 role의 직접 실행을 revoke한다. 승인된 import만 해당 날짜 reader를 갱신하며 Reader 없는 correction은 그 날짜만 NULL로 돌린다. RLS policy·사용자 테이블은 변경하지 않는다.
+
+Mapper version을 daily-projection-v1.3으로 올려 기존 checksum 때문에 새 열 backfill이 생략되지 않게 한다. 배포 순서는 Preview migration → 고정 branch snapshot import/rebuild → Web → Preview 검증이다. Production에는 별도 승인 후 동일 순서를 적용한다.
+
+
 ## V1.2 Reader Content 검토 결과 (2026-08-27)
 
 Researcher V1.2 Reader-Friendly 결과는 docs-only Dry Run이며 2026-08-27 `main` packet은 아직 V1.2 canonical이 아니다. Dry Run이 명시한 기존 `news[].title`, `one_line_summary`, `why_it_matters`, `outlook`, `summary`와 `morning_paper`는 기존 Event occurrence와 Analysis projection에 이미 비손실 저장되므로 presentation 준비를 위한 schema 또는 Supabase migration은 추가하지 않는다.

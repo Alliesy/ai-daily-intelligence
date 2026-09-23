@@ -1,5 +1,14 @@
 # AI Daily Intelligence V1 UI Design Spec
 
+## V1.3 Reader Article — Preview implementation (2026-09-23)
+
+이 규칙은 유효한 Reader V1.3에 한해 V1.2 상세 순서를 대체한다. Today는 headline/dek만 표시한다. 상세는 명조 제목, dek, 출처·날짜, 카드 없는 최대 46rem 산세리프 본문(문단 간 24px, line-height 1.9), nullable takeaway/what_to_watch/action, 닫힌 `AI 분석 더 보기`, Sources 순서다. 본문은 `\n\n` 경계만 분리하고 문자열을 수정하지 않는다.
+
+불완전한 Reader는 전체 Legacy mode로 전환한다. Legacy도 Header 요약과 분석 FACT를 OriginalContent로 다시 표시하지 않는다. 분석값은 보존한다. Today의 탈락 Opportunity 빈 상태와 Detail의 자유 텍스트 business_opportunity는 표시하지 않는다. Detail에 검증된 Opportunity 관계가 없는 상태에서 뉴스 문장으로 기회를 추론하지 않는다.
+
+실제 1440/tablet/390 브라우저·읽기 QA는 Preview 인증 연결 후 수행해야 한다. 서버 렌더링 테스트는 브라우저 QA를 대체하지 않는다.
+
+
 ## V1.2 Reader Content 순서 (2026-08-27)
 
 Event Detail은 Header의 한국어 제목과 한줄 설명 뒤에 Researcher V1.2 Dry Run이 Reader 용도로 명시한 `why_it_matters`, `outlook`을 `먼저 읽어보세요` 영역으로 표시한다. 이후 원문 기반 상세 내용, AI 인텔리전스 분석, 사업 기회, `더 궁금하다면` Source 순서로 이어진다. Web은 문장을 재작성하지 않고 Typography, label, disclosure와 responsive 배치만 담당한다. 현재 main Daily는 아직 V1.2 콘텐츠로 간주하지 않는다.

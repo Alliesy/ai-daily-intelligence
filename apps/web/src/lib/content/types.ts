@@ -33,7 +33,18 @@ export interface OriginalContentDto {
   sections: { title: string; body: string }[];
 }
 
+export interface ReaderContentDto {
+  version: "1.3";
+  headline: string;
+  dek: string;
+  body: string;
+  takeaway: string | null;
+  whatToWatch: string | null;
+  action: string | null;
+}
+
 export interface EventDto {
+  reader: ReaderContentDto | null;
   id: string;
   eventKey: string;
   slug: string;

@@ -87,7 +87,18 @@ export interface DailyIdea extends JsonObject {
   name: string;
 }
 
-export interface DailyNews extends JsonObject {
+export interface ReaderContent extends JsonObject {
+  version: "1.3";
+  headline: string;
+  dek: string;
+  body: string;
+  takeaway: string | null;
+  what_to_watch: string | null;
+  action: string | null;
+}
+
+export type DailyNews = JsonObject & {
+  reader?: ReaderContent;
   event_key: string;
   original_url: string;
   sources: DailySource[];

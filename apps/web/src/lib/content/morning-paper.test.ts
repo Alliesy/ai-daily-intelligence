@@ -7,7 +7,7 @@ function event(id: string, importance: "S" | "A" | "B", sources: EventDto["sourc
     id, eventKey: id, slug: id, title: `제목 ${id}`, oneLineSummary: "요약", importance,
     impact: "", fact: null, interpretation: null, signal: null, speculation: null,
     whyItMatters: "", outlook: "", businessOpportunity: null,
-    originalContent: { mode: "unavailable", label: "", sections: [] }, topics: [], entities: [],
+    reader: null, originalContent: { mode: "unavailable", label: "", sections: [] }, topics: [], entities: [],
     heroImageUrl: null, heroImageAttribution: null, sources,
   };
 }

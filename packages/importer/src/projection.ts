@@ -1,5 +1,6 @@
 import type {
   DailyPacket,
+  ReaderContent,
   DailySource,
   IdentityRegistries,
   JsonObject,
@@ -53,6 +54,7 @@ export function projectDailyPacket(packet: DailyPacket, registries: IdentityRegi
     }
     return {
       ...news,
+      ...(news.reader === undefined ? {} : { reader: projectReader(news.reader) }),
       original_raw_url: rawOriginalUrl,
       original_url: normalizedOriginal,
       sources,
@@ -191,4 +193,18 @@ function buildSourceLookup(registries: IdentityRegistries): Map<string, string> 
 function normalizeSourceIdentityUrl(rawUrl: string, lookup: Map<string, string>): string {
   const normalized = normalizeUrl(rawUrl).normalizedUrl;
   return lookup.get(normalized) ?? normalized;
+}
+
+/** Preserve the entire approved snapshot; reject partial/old draft contracts. */
+export function projectReader(value: unknown): ReaderContent {
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("Invalid Reader snapshot");
+  const reader = value as Record<string, unknown>;
+  const keys = ["version", "headline", "dek", "body", "takeaway", "what_to_watch", "action"];
+  const text = (v: unknown) => typeof v === "string" && v.trim().length > 0;
+  if (Object.keys(reader).length !== keys.length || keys.some((key) => !Object.hasOwn(reader, key)) ||
+    reader.version !== "1.3" || ![reader.headline, reader.dek, reader.body].every(text) ||
+    ![reader.takeaway, reader.what_to_watch, reader.action].every((v) => v === null || text(v))) {
+    throw new Error("Invalid Reader snapshot");
+  }
+  return structuredClone(reader) as ReaderContent;
 }

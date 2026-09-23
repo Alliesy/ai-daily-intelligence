@@ -6,6 +6,8 @@ import { mergeRedirectSlug, selectLatestSourceOccurrences, selectOccurrenceByDat
 import { buildOriginalContent, normalizeAnalysisFields } from "./presentation";
 import { matchesBriefingKeyword, splitLegacyInsight } from "./morning-paper";
 
+import { parseReaderContent } from "./reader-v13";
+
 type Row = Record<string, unknown>;
 
 function publicClient() {
@@ -79,6 +81,7 @@ async function hydrateEvents(briefingId: string, occurrenceRows: Row[], sourceSc
     return [{
       id: str(event.id), eventKey: str(event.canonical_event_key, str(event.slug)), slug: str(event.slug), title,
       oneLineSummary,
+      reader: parseReaderContent(occurrence.reader),
       importance: str(occurrence.importance, str(event.importance, "B")) as EventDto["importance"],
       impact: str(selected.impact), fact: analysis.fact, interpretation: analysis.interpretation,
       signal: analysis.signal, speculation: analysis.speculation,

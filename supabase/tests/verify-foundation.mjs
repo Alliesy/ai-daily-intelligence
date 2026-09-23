@@ -77,6 +77,7 @@ const migrations = [
   await readFile(join(root, "supabase/migrations/20260808000100_initial_v1_schema.sql"), "utf8"),
   await readFile(join(root, "supabase/migrations/20260808000200_identity_and_import_rpc.sql"), "utf8"),
   await readFile(join(root, "supabase/migrations/20260826000100_v11_morning_paper_projection.sql"), "utf8"),
+  await readFile(join(root, "supabase/migrations/20260923000100_reader_occurrence.sql"), "utf8"),
 ].join("\n");
 
 for (const table of [

@@ -5,6 +5,18 @@ do $$
 declare
   target_table text;
 begin
+  if not exists (
+    select 1 from information_schema.columns
+    where table_schema = 'public' and table_name = 'daily_briefing_events'
+      and column_name = 'reader' and data_type = 'jsonb'
+  ) then
+    raise exception 'Reader occurrence snapshot is missing';
+  end if;
+  if has_function_privilege('anon', 'private.import_daily_packet_v11(text,jsonb,text,text,bigint,text,text,text)', 'EXECUTE')
+     or has_function_privilege('authenticated', 'private.import_daily_packet_v11(text,jsonb,text,text,bigint,text,text,text)', 'EXECUTE')
+     or has_function_privilege('service_role', 'private.import_daily_packet_v11(text,jsonb,text,text,bigint,text,text,text)', 'EXECUTE') then
+    raise exception 'V1.1 private importer bypass is exposed';
+  end if;
   foreach target_table in array array[
     'daily_briefings', 'events', 'event_keys', 'event_analysis', 'sources',
     'source_urls', 'event_sources', 'event_source_occurrences', 'topics',
