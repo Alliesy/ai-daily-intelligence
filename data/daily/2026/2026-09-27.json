@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-09-27",
+  "generated_at": "2026-09-26T22:02:18Z",
+  "status": "complete",
+  "news": [
+    {
+      "event_key": "ai-generated-summaries-human-memory-study-2026-09-25",
+      "title": "AI 요약 오류가 사람의 기억까지 바꾼다…328명 실험 결과 공개",
+      "importance": "S",
+      "one_line_summary": "Georgetown·워싱턴대 연구진은 잘못된 AI 영상 요약을 읽은 참가자가 원래 사건을 더 부정확하게 기억했으며, 실험에 포함된 20개 AI 요약 모두에서 오류를 찾았습니다.",
+      "impact": "경찰 기록·의료 문서·회의록처럼 원문을 나중에 다시 확인하기 어려운 곳에서는 요약을 먼저 읽는 것 자체가 검증자의 기억에 영향을 줄 수 있습니다. 원문과 요약의 비교 순서, 출처 표시, 독립 검토 절차를 함께 설계해야 합니다.",
+      "original_url": "https://arxiv.org/abs/2609.28820",
+      "key_quote": "People who read a misleading AI summary were significantly less likely to accurately recall the original event",
+      "quote_translation": "잘못된 AI 요약을 읽은 사람은 원래 사건을 정확히 기억할 가능성이 유의하게 낮았습니다.",
+      "summary": "FACT: Georgetown University와 University of Washington 연구진은 9월 23일 논문을 공개했고, 9월 25일 대학 보도자료로 결과를 설명했습니다. 연구진은 짧은 교통사고 영상 두 편을 ChatGPT와 Gemini로 반복 요약한 20개 결과를 분석했습니다. 20개 모두 오류가 있었고 핵심 세부 정보의 51.6%가 빠졌습니다. 328명 실험에서는 잘못된 요약을 읽은 집단의 정확한 회상이 낮았습니다.\n\nINTERPRETATION: 사람이 최종 검토자라도 요약을 먼저 읽으면 그 오류가 원래 기억을 덮을 수 있습니다. 원문을 먼저 보거나 요약과 원문 차이를 명시적으로 비교해야 합니다.\n\nSIGNAL: AI 요약 품질 평가는 문장 정확도에서 사람의 후속 판단과 기억에 주는 영향으로 넓어지고 있습니다.\n\nSPECULATION: 영상 두 편과 특정 사고 장면으로 한 실험이라 다른 문서·업무로 바로 일반화할 수 없습니다.",
+      "why_it_matters": "AI 요약은 다음 판단의 출발점입니다. 사람이 확인하면 된다고 가정하기 전에 검토 순서가 기억을 왜곡하지 않는지 살펴야 합니다.",
+      "industry_mood": {
+        "label": "결과에는 경계, 일반화에는 신중",
+        "basis": "논문·데이터는 공개됐지만 영상 두 편과 단일 기억 과제에 한정됐고 독립 재현은 없습니다."
+      },
+      "outlook": "다른 문서·언어에서도 효과가 반복되는지, 원문 선확인이나 차이 표시가 기억 오류를 줄이는지 확인해야 합니다.",
+      "business_opportunity": "요약 검증 도구 여지는 있지만 고위험 업무의 법적 책임과 개인정보 처리, 국내 구매 행동이 확인되지 않았습니다.",
+      "tags": [
+        "AI 요약",
+        "기억 왜곡",
+        "인간 검토"
+      ],
+      "sources": [
+        {
+          "title": "AI-Enabled Human Memory Manipulation: Misleading AI-Generated Summaries Distort Human Memory",
+          "url": "https://arxiv.org/abs/2609.28820",
+          "publisher": "arXiv",
+          "published_at": "2026-09-23",
+          "tier": "A",
+          "source_type": "paper",
+          "authority": "primary",
+          "verification_status": "verified",
+          "evidence_group": "ai-summary-memory-primary-study"
+        },
+        {
+          "title": "New research finds that misleading AI-generated summaries can distort human memory",
+          "url": "https://www.eurekalert.org/news-releases/1145579",
+          "publisher": "Georgetown University Medical Center / EurekAlert",
+          "published_at": "2026-09-25",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "primary",
+          "verification_status": "corroborated",
+          "evidence_group": "ai-summary-memory-university-release"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 24,
+        "utility": 20,
+        "recency": 15,
+        "community": 7,
+        "total": 95
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "논문·대학 보도자료 확인",
+        "independent_performance_reproduction": false,
+        "missing": [
+          "독립 재현",
+          "다른 문서·언어·업무 일반화"
+        ]
+      }
+    },
+    {
+      "event_key": "github-copilot-slack-teams-context-provenance-2026-09-25",
+      "title": "GitHub Copilot, Slack·Teams 대화에서 파일을 읽고 작업 출처까지 연결",
+      "importance": "A",
+      "one_line_summary": "GitHub는 Copilot이 Slack 파일·메시지 링크와 Teams 이미지·전달 메시지·스레드 기록을 참고하고, 만든 이슈와 원래 대화를 서로 연결하도록 공개 미리보기를 확대했습니다.",
+      "impact": "대화에서 바로 개발 작업을 만들 수 있어 전달 손실은 줄지만, 채팅의 민감한 파일과 오래된 맥락이 작업 입력으로 넘어갑니다. 관리자는 앱 권한·기본 저장소·클라우드 에이전트 예산을 함께 점검해야 합니다.",
+      "original_url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams/",
+      "key_quote": "Copilot also checks for similar issues before creating a new one",
+      "quote_translation": "Copilot은 새 이슈를 만들기 전에 비슷한 이슈가 있는지도 확인합니다.",
+      "summary": "FACT: GitHub는 9월 25일 Slack·Microsoft Teams용 Copilot 공개 미리보기를 갱신했습니다. Slack 파일·첨부·메시지 링크와 Teams 이미지·전달 메시지·채널 및 스레드 기록을 맥락으로 쓸 수 있습니다. 유사 이슈를 확인하고 생성한 작업과 출발한 대화를 서로 링크합니다.\n\nINTERPRETATION: 대화에서 개발 작업으로 옮기는 단계가 줄었지만 협업 도구의 대화와 파일이 개발 에이전트의 입력 경계 안으로 들어옵니다.\n\nSIGNAL: 코딩 에이전트는 IDE를 넘어 업무 대화가 시작되는 곳에서 맥락을 받고 결과를 추적 가능한 작업으로 되돌립니다.\n\nSPECULATION: 실제 중복 이슈 감소, 잘못된 저장소 작업, 민감 파일 노출에 관한 독립 운영 데이터는 없습니다.",
+      "why_it_matters": "대화에서 작업으로 넘어가는 맥락 손실은 줄지만 어떤 채팅과 파일이 에이전트에게 전달되는지 통제하는 일이 새 관리 과제가 됩니다.",
+      "industry_mood": {
+        "label": "편의성 확대에 기대, 권한 경계는 점검 필요",
+        "basis": "기능과 조건은 공식 발표로 확인됐지만 오류율과 보안 효과는 공개되지 않았습니다."
+      },
+      "outlook": "한국어 품질, 유사 이슈 판정 정확도, 채팅 파일 보존·감사 로그, 관리자별 세부 권한을 확인해야 합니다.",
+      "business_opportunity": "협업 맥락 점검 서비스는 자체 관리 기능과 겹치며 국내 고객의 별도 지불 의사를 확인하지 못했습니다.",
+      "tags": [
+        "GitHub Copilot",
+        "Slack",
+        "Microsoft Teams"
+      ],
+      "sources": [
+        {
+          "title": "Updates to GitHub Copilot for Slack and Microsoft Teams",
+          "url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams/",
+          "publisher": "GitHub",
+          "published_at": "2026-09-25",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "github-copilot-collaboration-update"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 20,
+        "utility": 23,
+        "recency": 15,
+        "community": 6,
+        "total": 93
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "공식 변경 기록 확인",
+        "independent_performance_reproduction": false,
+        "missing": [
+          "독립 사용성·보안 평가",
+          "한국어 품질"
+        ]
+      }
+    },
+    {
+      "event_key": "github-agentic-autofix-copilot-memory-2026-09-25",
+      "title": "GitHub 보안 자동수정, 저장소별 해결 패턴을 기억해 다시 쓴다",
+      "importance": "A",
+      "one_line_summary": "GitHub의 Agentic Autofix가 Copilot Memory를 켠 저장소에서 과거 보안 수정 맥락을 읽고, 새 수정 패턴을 다음 경고와 코드리뷰·클라우드 에이전트가 쓰는 기억으로 저장합니다.",
+      "impact": "반복되는 취약점 수정은 빨라질 수 있지만 잘못된 해결 패턴도 여러 기능으로 퍼질 수 있습니다. 공개 미리보기 단계에서는 기억의 생성·검토·삭제와 회귀 테스트를 함께 운영해야 합니다.",
+      "original_url": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory/",
+      "key_quote": "When it creates a fix, it stores the fix pattern as a memory for future use",
+      "quote_translation": "수정을 만들면 그 패턴을 다음에 쓰기 위한 기억으로 저장합니다.",
+      "summary": "FACT: GitHub는 9월 25일 Agentic Autofix가 Copilot Memory를 사용한다고 발표했습니다. 기능을 켠 저장소에서 기존 기억을 참고해 보안 경고 수정을 만들고 성공한 수정 패턴을 새 기억으로 남깁니다. 이 기억은 코드리뷰와 클라우드 에이전트 등 다른 기능에도 전달될 수 있습니다. 두 기능 모두 공개 미리보기입니다.\n\nINTERPRETATION: 자동수정은 저장소의 과거 해결법을 누적하지만, 한 번의 잘못된 패턴이 이후 수정과 리뷰에 반복될 위험도 있습니다.\n\nSIGNAL: 개발 에이전트의 차별점이 모델 답변에서 조직·저장소별 기억을 축적하고 통제하는 방식으로 옮겨가고 있습니다.\n\nSPECULATION: 취약점 해결률이나 회귀 위험이 실제로 얼마나 달라지는지는 공개되지 않았습니다.",
+      "why_it_matters": "보안 자동화의 품질은 기억을 많이 쌓는 것보다 틀린 기억을 찾아 고칠 수 있는지에 달려 있습니다.",
+      "industry_mood": {
+        "label": "반복 작업 절감 기대, 기억 오염은 경계",
+        "basis": "공식 설명은 확인했지만 해결률·오탐·회귀에 대한 독립 자료가 없습니다."
+      },
+      "outlook": "기억의 승인·삭제·감사 기능, 잘못된 패턴 전파 방지, 저장소 간 격리를 확인해야 합니다.",
+      "business_opportunity": "기억 회귀 테스트 도구를 생각할 수 있으나 GitHub 자체 기능과 대체 위험이 크고 국내 구매 근거가 없습니다.",
+      "tags": [
+        "GitHub Copilot",
+        "Agentic Autofix",
+        "Copilot Memory"
+      ],
+      "sources": [
+        {
+          "title": "Agentic autofix now uses Copilot Memory",
+          "url": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory/",
+          "publisher": "GitHub",
+          "published_at": "2026-09-25",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "github-agentic-autofix-memory-update"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 19,
+        "utility": 23,
+        "recency": 15,
+        "community": 5,
+        "total": 91
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "공식 변경 기록 확인",
+        "independent_performance_reproduction": false,
+        "missing": [
+          "독립 해결률·회귀 평가",
+          "기억 검토·삭제 정책"
+        ]
+      }
+    },
+    {
+      "event_key": "korea-national-rnd-ai-research-ethics-guide-2026-09-20",
+      "title": "한국 국가R&D AI 윤리 가이드 확정…최종 책임은 연구자에게",
+      "importance": "A",
+      "one_line_summary": "과기정통부는 국가연구개발에서 AI를 도구로 한정하고, 사실 검증·독립 판단·투명성·신뢰성·법규·보안·개인정보 등 일곱 원칙과 최종 책임을 연구자에게 두는 가이드를 확정했습니다.",
+      "impact": "국가R&D 연구자와 평가자는 AI 사용 범위와 검증 과정을 남겨야 합니다. 평가 자료를 외부 AI에 넣는 행위와 AI로 심사 기준을 우회·왜곡하는 행위도 명시적으로 금지됐습니다.",
+      "original_url": "https://admin.korea.kr/briefing/pressReleaseView.do?newsId=156782520&pWiseMinistry=ministryNews&repCode=A00033&repCodeType=%EC%A0%95%EB%B6%80%EB%B6%80%EC%B2%98",
+      "key_quote": "인공지능을 활용한 연구개발 결과물에 대한 책임과 권리는 연구자에 귀속",
+      "quote_translation": "AI를 활용한 연구개발 결과의 책임과 권리는 연구자에게 있습니다.",
+      "summary": "FACT: 과학기술정보통신부는 9월 20일 국가연구개발 AI 연구윤리 가이드 최종본을 발표했습니다. AI는 연구를 돕는 도구이며 결과에 대한 책임과 권리는 연구자에게 있다고 정했습니다. 사실 검증, 독립 판단, 투명성, 결과 신뢰성 관리, 정책·법규 준수, 보안, 개인정보 보호 등 일곱 권고사항을 제시했습니다.\n\nINTERPRETATION: AI를 썼다는 사실보다 어디에 썼고 무엇을 사람이 다시 확인했는지를 남기는 일이 국가R&D 절차로 들어옵니다.\n\nSIGNAL: 국내 연구윤리는 AI 사용을 금지하기보다 책임·검증·공개·보안의 구체적 절차를 요구하는 방향으로 정리되고 있습니다.\n\nSPECULATION: 기관별 적용 시점, 위반 시 제재, 학술지·대학 규정과의 연결은 추가 지침에 따라 달라질 수 있습니다.",
+      "why_it_matters": "한국 연구팀은 AI 사용을 개인 습관으로 두기보다 연구 기록과 보안 절차 안에 넣어야 합니다.",
+      "industry_mood": {
+        "label": "책임 원칙은 명확, 현장 적용 기준은 확인 필요",
+        "basis": "최종 가이드는 공개됐지만 기관별 양식·제재·감사 방식은 모두 확인되지 않았습니다."
+      },
+      "outlook": "부처·전문기관별 적용 지침, AI 사용 공개 양식, 외부 모델에 넣을 수 없는 자료 범위, 위반 시 처리를 확인해야 합니다.",
+      "business_opportunity": "연구 AI 사용 기록 도구 수요 가능성은 있으나 기관별 규정과 조달 경로가 확정되지 않았고 민감 연구데이터 보안 게이트가 남아 있습니다.",
+      "tags": [
+        "한국",
+        "국가R&D",
+        "연구윤리"
+      ],
+      "sources": [
+        {
+          "title": "｢국가연구개발 AI 연구윤리 가이드｣ 마련",
+          "url": "https://admin.korea.kr/briefing/pressReleaseView.do?newsId=156782520&pWiseMinistry=ministryNews&repCode=A00033&repCodeType=%EC%A0%95%EB%B6%80%EB%B6%80%EC%B2%98",
+          "publisher": "과학기술정보통신부 / 대한민국 정책브리핑",
+          "published_at": "2026-09-20",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "korea-national-rnd-ai-ethics-guide"
+        },
+        {
+          "title": "New government guide on AI R&D ethics limits tech's role to tool",
+          "url": "https://www.korea.net/NewsFocus/Sci-Tech/view?articleId=299941",
+          "publisher": "Korea.net",
+          "published_at": "2026-09-21",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "official",
+          "verification_status": "corroborated",
+          "evidence_group": "korea-national-rnd-ai-ethics-explainer"
+        }
+      ],
+      "selection_score": {
+        "confidence": 30,
+        "impact": 22,
+        "utility": 23,
+        "recency": 8,
+        "community": 4,
+        "total": 87
+      },
+      "time_scope": "recent_7d_followup",
+      "verification": {
+        "status": "정부 보도자료·공식 영문 설명 확인",
+        "independent_performance_reproduction": false,
+        "missing": [
+          "기관별 시행 양식",
+          "제재와 감사 기준"
+        ]
+      }
+    }
+  ],
+  "business_ideas": [],
+  "tools": [],
+  "community": [],
+  "problem_scout": {
+    "observations": [
+      {
+        "source_type": "paper",
+        "url": "https://arxiv.org/abs/2609.28820",
+        "summary": "요약 오류 문제는 확인됐지만 한국 조직의 반복 구매 행동은 확인되지 않았습니다."
+      },
+      {
+        "source_type": "official_blog",
+        "url": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory/",
+        "summary": "저장소 기억 검증 수요 가능성은 있으나 플랫폼 대체 위험이 큽니다."
+      }
+    ],
+    "decision": "요약 검증과 저장소 기억 회귀 테스트를 검토했지만 국내 고객 접근·지불 행동·법적 책임·플랫폼 의존성 게이트가 남아 사업 아이디어를 만들지 않았습니다."
+  },
+  "skill_of_the_day": {
+    "name": "원문을 먼저 읽는 2단계 검토",
+    "when_to_use": "AI 요약이 이후 판단에 영향을 줄 수 있을 때",
+    "practical_example": "검토자는 먼저 원문에서 핵심 사실을 적고 그 다음 AI 요약과 비교해 누락·추가·왜곡을 표시합니다.",
+    "prompt_example": "아래 원문과 AI 요약을 비교하되 원문을 기준으로만 판단해라. 빠진 핵심 사실, 추가된 사실, 방향이 바뀐 표현을 표로 정리하고 근거 문장을 표시해라."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "AI-Enabled Human Memory Manipulation: Misleading AI-Generated Summaries Distort Human Memory",
+      "url": "https://arxiv.org/abs/2609.28820",
+      "why_read": "AI 요약 오류가 사람 기억에 주는 영향을 328명 실험과 20개 요약 분석으로 살핍니다. 논문과 보조자료 링크를 확인했으며 독립 재현은 없습니다."
+    },
+    {
+      "type": "GitHub",
+      "title": "Uber ADR: Agentic AI Detection and Response",
+      "url": "https://github.com/uber/ADR",
+      "why_read": "에이전트 발견·실행 추적·보안 평가·위협 탐지·차단을 묶은 공개 시스템입니다. README, Apache-2.0 라이선스, MLSys 2026 논문 연결을 확인했습니다."
+    },
+    {
+      "type": "YouTube",
+      "title": "Introducing the Agents API",
+      "url": "https://www.youtube.com/watch?v=2YHa1vhnmK0",
+      "why_read": "도구 연결과 실행 흐름을 보여주는 OpenAI 공식 영상입니다. 제목·출처·링크를 확인했으며 전체 영상과 자막은 검토하지 않았습니다."
+    },
+    {
+      "type": "Blog",
+      "title": "Agentic AI Fails Where Governance Stops",
+      "url": "https://www.gartner.com/en/articles/agentic-ai-infrastructure-governance",
+      "why_read": "문서 정책만으로 에이전트 실행을 막기 어렵다는 점과 런타임 통제 필요성을 설명합니다. 9월 24일 원문을 확인했습니다."
+    }
+  ],
+  "todays_insight": "AI가 더 많은 맥락을 기억할수록 출처와 검토 순서가 제품 기능이 됩니다. GitHub는 채팅과 과거 수정 패턴을 에이전트 입력으로 연결했고, 새 연구는 잘못된 요약이 사람의 기억까지 바꿀 수 있음을 보여줬습니다. 한국 국가R&D 가이드도 AI를 도구로 한정하고 최종 판단과 책임을 사람에게 남겼습니다.",
+  "morning_paper": {
+    "insight_headline": "AI가 기억을 얻자, 출처와 검토 순서가 중요해집니다",
+    "insight_summary": "GitHub는 채팅 맥락과 과거 보안 수정 패턴을 에이전트가 다시 쓰게 했습니다.\n새 연구는 잘못된 AI 요약을 사람이 읽으면 원래 사건의 기억도 흔들릴 수 있다고 경고합니다.\n맥락을 더 많이 연결할수록 출처를 남기고, 원문을 먼저 확인하며, 잘못된 기억을 지울 수 있어야 합니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "ai-generated-summaries-human-memory-study-2026-09-25",
+      "github-copilot-slack-teams-context-provenance-2026-09-25",
+      "github-agentic-autofix-copilot-memory-2026-09-25",
+      "korea-national-rnd-ai-research-ethics-guide-2026-09-20"
+    ],
+    "top_event_keys": [
+      "ai-generated-summaries-human-memory-study-2026-09-25",
+      "github-copilot-slack-teams-context-provenance-2026-09-25",
+      "korea-national-rnd-ai-research-ethics-guide-2026-09-20"
+    ]
+  },
+  "build_candidate": null,
+  "warnings": [
+    "기억 왜곡 연구는 영상 두 편과 특정 과제로 진행돼 다른 언어·문서·현장에 바로 일반화할 수 없으며 독립 재현이 없습니다.",
+    "GitHub의 두 기능은 공개 미리보기이며 실제 생산성·오류율·보안 효과가 독립 검증되지 않았습니다.",
+    "국가R&D AI 연구윤리 가이드의 기관별 적용 양식과 제재·감사 기준은 추가 확인이 필요합니다.",
+    "YouTube 항목은 제목·출처·링크만 확인했으며 전체 영상·자막을 검토하지 않았습니다.",
+    "국내 고객의 반복 문제와 지불 행동을 확인하지 못해 신규 사업 아이디어를 만들지 않았습니다."
+  ]
+}
