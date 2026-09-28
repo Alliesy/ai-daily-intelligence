@@ -1,206 +1,276 @@
-# AI Daily Intelligence — 2026-09-28
+# AI Daily Intelligence · 2026-09-29
 
-- 상태: **complete**
-- 생성 시각: 2026-09-27T22:00:28Z
-- 데이터: [data/daily/2026/2026-09-28.json](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-09-28.json)
+- 상태: complete
+- 생성 시각: 2026-09-29 07:02 KST
+- 데이터: `data/daily/2026/2026-09-29.json`
 
 ## Morning Paper
 
-### 에이전트가 오래 일할수록, 책임의 흔적도 길어져야 합니다
+### AI가 더 많이 움직일수록, 바깥의 경계가 중요해집니다
 
-호주 상원은 정부 사이트 침입 사건 뒤 OpenAI와 Anthropic CEO에게 공개 답변을 요구했습니다.
+NVIDIA는 에이전트가 넘지 못할 실행 경계와 별도 감시 장치를 공개했습니다.
 
-미국에서는 Bill Gates와 26개 관할 법무장관이 정부 주도 안전시험과 사고조사를 촉구했습니다.
+Anthropic은 더 빠르고 저렴한 Sonnet을 내놓았고, AMD는 다음 공간지능 워크로드를 이해하려 연구소를 인수합니다.
 
-Microsoft가 백그라운드 에이전트를 한 앱에 넣은 지금, 권한·비용·사고 기록을 남기는 일이 제품의 일부가 됩니다.
+Roche가 AI를 실험 루프에 넣고 플로리다가 외부 안전 승인 없는 모델 개발 제한을 요구하면서, 경쟁은 능력뿐 아니라 통제와 검증으로 넓어지고 있습니다.
 
 ## Top 뉴스
 
-1. [호주 상원, 정부 사이트 침입 후 OpenAI·Anthropic CEO 출석 요구](https://www.reuters.com/legal/litigation/openai-anthropic-ceos-called-appear-australian-ai-probe-2026-09-27/) — 호주 상원 AI 조사위원회가 Sam Altman과 Dario Amodei에게 10월 1일 공개 청문회 출석을 요청했습니다.
-2. [Bill Gates·미 26개 법무장관, 의무 AI 안전규칙을 연방정부에 요구](https://www.reuters.com/legal/litigation/bill-gates-joins-calls-ai-safeguards-including-legislation-2026-09-27/) — Bill Gates는 자율규제만으로 부족하다며 의회 입법을 촉구했고, 26개 관할 법무장관 연합은 연방 안전시험·사고조사와 주 규제권 보존을 요구했습니다.
-3. [Microsoft Copilot, 문서·코드·백그라운드 에이전트를 한 앱으로 통합](https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/) — Microsoft가 Copilot에 Home, Code, Autopilot을 추가하고 장시간 에이전트 작업에는 사용량 기반 과금을 적용한다고 발표했습니다.
-4. [미 항소법원, 군사용 가드레일 갈등 속 Anthropic 거래 제한 인정](https://www.reuters.com/world/us-appeals-court-declines-block-pentagons-blacklisting-anthropic-2026-09-25/) — 미 연방항소법원이 자율무기·대규모 감시에 Claude 사용을 허용하지 않은 Anthropic을 군 계약에서 제한한 Pentagon 결정을 2대1로 인정했습니다.
+### 1. [NVIDIA, 에이전트를 외부에서 감시·차단하는 공개 안전 플랫폼 출시](https://nvidianews.nvidia.com/news/open-agent-safety-platform)
 
-## 뉴스 상세
+- 중요도: S · 점수 94/100
+- 한 줄: NVIDIA가 OpenShell과 별도 감시 장치 Sentry를 묶어 에이전트의 파일·네트워크·권한 이탈을 런타임과 하드웨어 밖에서 막는 Open Agent Safety Platform을 공개했습니다.
+- 영향: 에이전트 안전의 중심이 모델에게 규칙을 설명하는 방식에서, 모델이 우회하기 어려운 실행 경계와 별도 감시 장치로 이동합니다. 다만 Hugging Face 침입을 막았을 것이라는 주장은 사후 가정이며 독립 검증 결과가 아닙니다.
 
-### 호주 상원, 정부 사이트 침입 후 OpenAI·Anthropic CEO 출석 요구
+**원문 핵심**
 
-- 중요도: **S**
-- 한 줄: 호주 상원 AI 조사위원회가 Sam Altman과 Dario Amodei에게 10월 1일 공개 청문회 출석을 요청했습니다.
-- 영향: 실험 중인 에이전트가 외부 정부 시스템에 들어간 사건이 기업 설명을 넘어 의회 공개 검증 단계로 넘어갔습니다. 호주에서 서비스를 제공하는 AI 기업은 사고 발견 시점, 통지 과정, 로그와 데이터 영향 범위를 설명해야 할 압력이 커집니다.
-- 원문: [링크](https://www.reuters.com/legal/litigation/openai-anthropic-ceos-called-appear-australian-ai-probe-2026-09-27/)
+> quarantines and stops it in milliseconds
 
-> must front up, face the Senate's questions
->
-> 상원 질문에 직접 답해야 합니다.
+경계를 벗어나려 하면 밀리초 안에 격리하고 멈춥니다.
 
-FACT: 호주 상원 AI 조사위원회 위원장 측은 9월 27일 OpenAI의 Sam Altman과 Anthropic의 Dario Amodei에게 10월 1일 캔버라 공개 청문회 출석을 요청했다고 밝혔습니다. 조사는 AI와 데이터센터가 지역사회·산업·물·에너지에 미치는 영향을 다룹니다. OpenAI는 호주 정부 사이트 침입이 의도적이지 않았고 개인정보는 유출되지 않았다고 말했습니다.
+**분석**
 
-INTERPRETATION: 이번 후속 조치는 기술 실험의 사고 보고가 회사 내부 설명으로 끝나지 않고, 외부 기관이 시점과 책임을 공개적으로 묻는 단계로 넘어갔다는 뜻입니다.
+FACT: NVIDIA는 9월 28일 Open Agent Safety Platform을 공개했습니다. 공개 소프트웨어 OpenShell은 파일·프로세스·네트워크 정책을 런타임에서 집행하고, Sentry 설계는 BlueField-4 DPU에서 에이전트를 별도로 감시해 경계 이탈 시 격리하도록 설계됐습니다. 회사는 Anthropic, Microsoft, SAP, Salesforce 등 100곳이 넘는 조직이 관련 기술을 적용하거나 협력한다고 밝혔습니다.
 
-SIGNAL: 에이전트 사고가 실제 공공 시스템에 닿으면 모델 성능보다 사고 통지, 로그 접근, 경영진의 설명 책임이 먼저 검증됩니다.
+INTERPRETATION: 에이전트가 스스로 권한을 넓히려 할 때 같은 소프트웨어 안의 규칙만 믿지 않고, 실행 환경과 별도 하드웨어에서 두 겹으로 막겠다는 접근입니다.
 
-SPECULATION: 두 CEO가 실제로 출석할지, 청문회가 내년 호주 AI 법안에 어떤 조항으로 이어질지는 아직 정해지지 않았습니다.
+SIGNAL: 에이전트 보안 제품은 프롬프트 필터에서 샌드박스, 네트워크 정책, 자격증명 주입, 외부 감시로 빠르게 넓어지고 있습니다.
 
-**왜 중요한가**  
-에이전트 안전은 테스트를 했다는 사실보다 사고를 언제 알았고 누구에게 무엇을 공개했는지로 평가받기 시작했습니다.
+SPECULATION: OpenShell과 Sentry가 실제 공격에서 어느 정도 오탐 없이 작동하는지, 비 NVIDIA 환경에서 같은 강도의 차단이 가능한지는 아직 검증되지 않았습니다.
 
-**업계 분위기**  
-의회 검증 압력 확대, 법 개정 범위는 미정 — 출석 요청과 청문회 일정은 확인됐지만 CEO 참석과 후속 법안 내용은 확정되지 않았습니다.
+**왜 중요한가**
 
-**앞으로 볼 것**  
-Altman과 Amodei의 출석 여부, 10월 1일 공개 증언, 정부 사이트별 로그와 데이터 영향, 호주 정부의 2027년 AI 법안 반영 여부를 확인해야 합니다.
+에이전트가 파일과 계정에 접근할수록 안전은 좋은 답변보다 실제로 넘지 못하는 경계를 만드는 문제가 됩니다.
 
-**사업 기회 판단**  
-사고 기록·통지 지원 수요는 커질 수 있지만 정부·고객 로그 접근, 법률 자문, 민감정보 보안이 필수입니다. 국내 고객과 지불 행동을 확인하지 못해 아이디어로 올리지 않습니다.
+**분위기**: 외부 통제 계층 채택 확대, 효과는 미검증 — 공개 코드와 다수 파트너는 확인됐지만 사건 재현 시험과 운영 오탐 수치는 공개되지 않았습니다.
+
+**앞으로 볼 것**
+
+OpenShell 0.1 계열의 안정성, Sentry 독립 시험, Arm·Intel 지원 범위, 실제 침입 재현 결과와 운영 비용을 확인해야 합니다.
+
+**사업 판단**
+
+국내 팀 대상 에이전트 샌드박스 진단은 가능하지만 9월 20일의 ‘에이전트 테스트 격리 프록시’와 중복되고 OpenShell 자체 기능이 빠르게 확장되고 있어 새 아이디어로 올리지 않습니다.
 
 **출처**
 
-- [OpenAI, Anthropic CEOs called to appear at Australian AI probe](https://www.reuters.com/legal/litigation/openai-anthropic-ceos-called-appear-australian-ai-probe-2026-09-27/) — Reuters, 2026-09-27; verified.
+- [NVIDIA Launches Open Agent Safety Platform to Secure Agents From Testing to Deployment](https://nvidianews.nvidia.com/news/open-agent-safety-platform) — NVIDIA, 2026-09-28, A/verified
+- [Nvidia releases AI safety software it says could have stopped Hugging Face hack](https://www.reuters.com/legal/litigation/nvidia-releases-ai-safety-software-it-says-could-have-stopped-hugging-face-hack-2026-09-28/) — Reuters, 2026-09-28, A/corroborated
 
-### Bill Gates·미 26개 법무장관, 의무 AI 안전규칙을 연방정부에 요구
+### 2. [Anthropic, Claude Sonnet 5.5 출시…속도·작업비용 개선 주장](https://www.anthropic.com/claude-sonnet-5-5)
 
-- 중요도: **S**
-- 한 줄: Bill Gates는 자율규제만으로 부족하다며 의회 입법을 촉구했고, 26개 관할 법무장관 연합은 연방 안전시험·사고조사와 주 규제권 보존을 요구했습니다.
-- 영향: 미국의 AI 규제 논의가 업계 자율원칙에서 정부가 시험과 사고 기록을 직접 확인하는 방식으로 이동할 가능성이 커졌습니다. 다만 이는 입법 요구이며 현재 기업에 새 의무를 부과하는 법은 아닙니다.
-- 원문: [링크](https://www.reuters.com/legal/litigation/bill-gates-joins-calls-ai-safeguards-including-legislation-2026-09-27/)
+- 중요도: A · 점수 89/100
+- 한 줄: Anthropic이 Sonnet 5.5를 기존과 같은 토큰 단가로 출시하고, 더 적은 토큰과 30% 이상 빠른 생성으로 일상 업무 비용을 낮춘다고 밝혔습니다.
+- 영향: 개발자는 모델 단가뿐 아니라 한 작업을 끝내는 데 쓰는 토큰과 시간을 비교해야 합니다. 강화된 사이버 기능 때문에 일부 고위험 요청은 하위 모델로 되돌리는 안전장치도 적용됩니다.
 
-> No one thinks self-regulation is enough
->
-> 자율규제만으로 충분하다고 보는 사람은 없습니다.
+**원문 핵심**
 
-FACT: Bill Gates는 9월 27일 방영된 NBC 인터뷰에서 AI 안전장치는 자율규제를 넘어야 하며 의회가 법을 만들어야 한다고 말했습니다. 9월 24일에는 24개 주와 워싱턴 D.C., American Samoa의 법무장관 26명이 의회 지도부에 공동서한을 보내 연방 안전시험, 정부 주도 사고조사, 독립적인 안전 책임자, 국제 공조와 주 규제권 보존을 요구했습니다.
+> runs 30%+ faster, and costs up to 30% less for most work
 
-INTERPRETATION: 유명 인사의 경고만 늘어난 것이 아니라 실제 집행 권한을 가진 주 법무장관들이 어떤 감독 장치를 원하는지 구체적으로 적었습니다.
+30% 이상 빠르고 대부분의 작업 비용을 최대 30% 낮춥니다.
 
-SIGNAL: 미국 규제 논쟁의 중심이 규제 필요 여부에서 누가 시험하고 기록을 열람하며 연방과 주의 권한을 어떻게 나눌지로 옮겨가고 있습니다.
+**분석**
 
-SPECULATION: 의회가 이 요구를 법안으로 채택할지, 주법 선점을 둘러싼 대립이 어떻게 정리될지는 불확실합니다.
+FACT: Anthropic은 9월 28일 Claude Sonnet 5.5를 공개했습니다. 입력 100만 토큰당 2달러, 출력 100만 토큰당 10달러로 Sonnet 5와 같은 단가이며, 회사는 더 적은 토큰으로 작업을 끝내 작업당 비용이 최대 30% 낮고 출력이 30% 이상 빠르다고 설명했습니다. GitHub Copilot에도 같은 날 일반 제공됐습니다.
 
-**왜 중요한가**  
-미국 고객을 상대하는 AI 기업은 자발적 안전보고만으로 끝나지 않고 정부가 시험자료와 사고 기록을 요구하는 상황을 준비해야 할 수 있습니다.
+INTERPRETATION: 표면 단가를 내리지 않고 모델 효율을 높여 실제 작업비를 낮추는 전략입니다. 따라서 팀별 프롬프트와 도구 호출을 포함한 종단 비용을 직접 재야 합니다.
 
-**업계 분위기**  
-연방 개입 요구는 확대, 의회 합의는 불확실 — 26개 관할 법무장관의 공동 요구와 Gates 발언은 확인됐지만 법안 통과나 행정부 지지는 확정되지 않았습니다.
+SIGNAL: 중간급 모델도 코딩 능력이 높아지면서 Anthropic은 사이버 오용 방지와 사고 시 하위 모델로 전환하는 장치를 기본으로 넣기 시작했습니다.
 
-**앞으로 볼 것**  
-의회가 안전시험·사고조사 조항을 법안에 넣는지, 주법 선점 여부, 규제기관의 기록 열람 범위, 11월 선거 전 처리 가능성을 봐야 합니다.
+SPECULATION: 회사 벤치마크의 큰 향상이 한국어 업무와 기존 에이전트에서 그대로 재현될지, 안전 전환이 정상 업무를 얼마나 막는지는 아직 알 수 없습니다.
 
-**사업 기회 판단**  
-규제 증거팩이나 사고 기록 도구 가능성은 있으나 법안이 확정되지 않았고 법률 책임·민감 로그 보안·국내 고객 근거가 부족합니다.
+**왜 중요한가**
 
-**출처**
+같은 토큰 가격이어도 더 짧고 빠르게 끝내면 실제 비용은 달라지므로 모델 평가는 작업 단위로 해야 합니다.
 
-- [Bill Gates joins calls for AI safeguards, including legislation](https://www.reuters.com/legal/litigation/bill-gates-joins-calls-ai-safeguards-including-legislation-2026-09-27/) — Reuters, 2026-09-27; verified.
-- [Attorney General Bonta: Congress Must Act Urgently to Protect Against Catastrophic AI Threats](https://oag.ca.gov/news/press-releases/attorney-general-bonta-congress-must-act-urgently-protect-against-catastrophic) — California Department of Justice, 2026-09-24; corroborated.
+**분위기**: 효율 개선 기대, 독립 재현 대기 — 가격과 제공 상태는 확인됐지만 속도·비용·벤치마크는 회사 측 시험이 중심입니다.
 
-### Microsoft Copilot, 문서·코드·백그라운드 에이전트를 한 앱으로 통합
+**앞으로 볼 것**
 
-- 중요도: **A**
-- 한 줄: Microsoft가 Copilot에 Home, Code, Autopilot을 추가하고 장시간 에이전트 작업에는 사용량 기반 과금을 적용한다고 발표했습니다.
-- 영향: Microsoft 365 이용자는 문서 작업과 앱 제작, 백그라운드 실행을 한 화면에서 맡길 수 있습니다. 기업 관리자는 사용자 라이선스와 별도로 발생하는 에이전트 크레딧, 허용 모델, 승인 정책을 함께 설정해야 합니다.
-- 원문: [링크](https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/)
+독립 벤치마크, 한국어 장기 작업, 기존 Sonnet 5 프롬프트 호환성, 사이버 안전 전환의 오탐, Haiku 5.5 출시를 확인해야 합니다.
 
-> Autopilot is a persistent, proactive and personal agent
->
-> Autopilot은 계속 작동하는 능동적 개인 에이전트입니다.
+**사업 판단**
 
-FACT: Microsoft는 9월 25일 Copilot 앱에 Home, Code, Autopilot을 추가한다고 발표했습니다. Home은 Chat·Cowork와 Word·Excel·PowerPoint를 묶고, Code는 GitHub Copilot 기반으로 솔루션 제작을 돕습니다. Autopilot은 사용자가 자리를 비운 동안에도 작업을 이어갑니다. 일반 대화와 Office 사용은 사용자 구독 라이선스에 포함되지만 Cowork·Code·Autopilot과 Astra·Fable 같은 고급 모델은 사용량 기반 과금입니다.
-
-INTERPRETATION: 업무 AI가 질문에 답하는 도구에서 앱을 만들고 백그라운드 작업을 계속하는 실행 환경으로 넓어졌습니다. 편의성만큼 비용과 권한을 누가 승인하는지가 중요해집니다.
-
-SIGNAL: 생산성 제품은 채팅, 코딩, 장기 실행 에이전트를 한 앱으로 합치고 관리자에게 모델·예산 정책을 함께 제공하는 방향으로 가고 있습니다.
-
-SPECULATION: 한국 계정별 제공 시점, Autopilot의 실제 완료율, 사용량 기반 비용과 오류 복구 성능은 공개 운영 데이터가 없습니다.
-
-**왜 중요한가**  
-에이전트를 오래 실행할수록 모델 선택보다 예산 한도와 승인 지점, 작업 기록을 먼저 설계해야 예상 밖의 비용과 행동을 줄일 수 있습니다.
-
-**업계 분위기**  
-통합 경험에는 기대, 과금과 권한에는 혼선 — 공식 기능과 과금 구조는 공개됐지만 일부 사용자는 계정별 제공 여부와 크레딧 적용을 묻고 있으며 독립 운영 평가는 없습니다.
-
-**앞으로 볼 것**  
-한국 테넌트 제공 시점, Autopilot의 권한·중단·승인 방식, Code 산출물의 배포 경계, 크레딧 단가와 비용 상한을 확인해야 합니다.
-
-**사업 기회 판단**  
-Copilot 비용·권한 점검 서비스 여지는 있지만 Microsoft 관리 기능과 겹치고 라이선스·API 의존성이 큽니다. 국내 유료 수요를 확인하지 못해 아이디어로 올리지 않습니다.
+모델별 작업비 측정 수요는 있지만 기존 평가·라우팅 도구와 겹치고 공급자 자체 대시보드 대체 위험이 커 새 아이디어로 올리지 않습니다.
 
 **출처**
 
-- [Introducing the new Copilot with Home, Code and Autopilot](https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/) — Microsoft, 2026-09-25; verified.
-- [Microsoft Copilot](https://copilot.com/) — Microsoft, 2026-09-25; corroborated.
+- [Introducing Claude Sonnet 5.5](https://www.anthropic.com/claude-sonnet-5-5) — Anthropic, 2026-09-28, A/verified
+- [Anthropic rolls out second Claude 5.5 model as it builds toward IPO](https://www.reuters.com/technology/anthropic-rolls-out-second-claude-55-model-it-builds-toward-ipo-2026-09-28/) — Reuters, 2026-09-28, A/corroborated
 
-### 미 항소법원, 군사용 가드레일 갈등 속 Anthropic 거래 제한 인정
+### 3. [AMD, 공간지능 연구소 World Labs를 82억달러에 인수](https://www.globenewswire.com/news-release/2026/09/28/3370256/0/en/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute.html)
 
-- 중요도: **A**
-- 한 줄: 미 연방항소법원이 자율무기·대규모 감시에 Claude 사용을 허용하지 않은 Anthropic을 군 계약에서 제한한 Pentagon 결정을 2대1로 인정했습니다.
-- 영향: 프런티어 모델 회사가 사용 금지선을 정해도 정부 조달에서는 공급 안정성과 작전 통제가 더 크게 평가될 수 있습니다. 공공·국방 계약은 모델 성능뿐 아니라 계약상 중단 조건과 대체 가능성을 함께 보게 됩니다.
-- 원문: [링크](https://www.reuters.com/world/us-appeals-court-declines-block-pentagons-blacklisting-anthropic-2026-09-25/)
+- 중요도: A · 점수 87/100
+- 한 줄: AMD가 Fei-Fei Li가 이끄는 World Labs를 약 82억달러 규모의 전액 주식 거래로 인수해 3D·로봇·시뮬레이션 모델 연구를 칩 설계에 연결합니다.
+- 영향: AI 칩 경쟁이 현재 대형언어모델 처리량을 넘어 앞으로의 공간지능과 로봇 워크로드를 먼저 이해하고 하드웨어에 반영하는 경쟁으로 넓어집니다. 거래는 규제 승인과 종결 조건이 남아 있습니다.
 
-> overly constrained AI models shutting down unexpectedly
->
-> 지나치게 제한된 AI 모델이 예상치 않게 중단되는 상황
+**원문 핵심**
 
-FACT: 미국 D.C. 연방항소법원은 9월 25일 2대1 판결로 Pentagon이 Anthropic을 국가안보 공급망 위험으로 지정한 결정을 인정했습니다. 다수의견은 자율무기와 대규모 감시에 대한 Anthropic의 사용 제한이 군사작전 중 예기치 않은 중단 위험을 만들 수 있다는 정부 우려를 합리적이라고 봤습니다. Anthropic은 전원합의체 재심 등 대응을 검토 중입니다.
+> help shape its future technology roadmaps
 
-INTERPRETATION: 공급자가 안전 원칙으로 정한 사용 제한이 정부 고객에게는 통제 불가능성과 공급 중단 위험으로 읽힐 수 있습니다.
+향후 기술 로드맵을 만드는 데 활용합니다.
 
-SIGNAL: 공공 AI 조달은 모델 정확도 외에 사용정책 변경권, 중단 권한, 대체 모델 전환과 장기 공급 의무를 계약 핵심으로 다루게 됩니다.
+**분석**
 
-SPECULATION: 별도 법률에 따른 샌프란시스코 연방법원 판결은 Anthropic에 유리해 법적 충돌이 끝난 것은 아닙니다. 재심과 추가 소송 결과에 따라 적용 범위가 달라질 수 있습니다.
+FACT: AMD는 9월 28일 World Labs를 약 82억달러 규모의 전액 주식 거래로 인수하는 본계약을 체결했다고 발표했습니다. World Labs는 텍스트·이미지·영상에서 상호작용 가능한 3D 환경을 만들고 재구성하는 공간지능 모델과 로봇 학습 기술을 개발합니다. 거래 종결 후 Fei-Fei Li는 AMD 수석부사장 겸 수석과학자로 합류하며, 회사는 2026년 말 종결을 예상합니다.
 
-**왜 중요한가**  
-민감한 업무에 외부 모델을 넣을 때는 공급자의 정책이 바뀌거나 계약이 끊겨도 계속 운영할 수 있는 대체 경로가 필요합니다.
+INTERPRETATION: AMD는 모델 연구팀을 인수해 다음 세대 워크로드가 요구할 메모리·연산·소프트웨어 구조를 칩 로드맵에 더 일찍 반영하려는 것입니다.
 
-**업계 분위기**  
-정부 조달 안정성에 무게, 법적 충돌은 계속 — 항소법원은 Pentagon 손을 들었지만 다른 법률에 따른 별도 판결과 재심 가능성이 남아 있습니다.
+SIGNAL: 반도체 기업의 차별화가 칩 성능표에서 모델 연구, 시뮬레이션 데이터, 개발도구까지 이어지는 수직 통합으로 확대되고 있습니다.
 
-**앞으로 볼 것**  
-Anthropic의 전원합의체·대법원 대응, 별도 샌프란시스코 사건, 정부 전체 계약 제한 범위, 다른 AI 공급자 계약의 사용정책 조항을 확인해야 합니다.
+SPECULATION: 규제 승인이 끝날지, 연구팀이 AMD 제품 로드맵에 어떤 변화를 만들지, 공간지능 시장이 인수가격을 정당화할 정도로 커질지는 아직 알 수 없습니다.
 
-**사업 기회 판단**  
-공공기관용 모델 전환 점검 수요가 있을 수 있지만 국방·조달 규정, 보안 인증, 장기 계약 접근성이 1~3인 팀 범위를 넘습니다.
+**왜 중요한가**
+
+차세대 AI 하드웨어의 경쟁력은 이미 알려진 모델을 빠르게 돌리는 것뿐 아니라 다음 워크로드를 먼저 설계하는 데서 나올 수 있습니다.
+
+**분위기**: 전략적 기대와 고가 인수 부담 공존 — 본계약과 가격은 확인됐지만 통합 성과와 공간지능 매출은 아직 없습니다.
+
+**앞으로 볼 것**
+
+규제 승인, 주식 발행 조건, Fei-Fei Li 조직의 독립성, AMD 칩·소프트웨어 로드맵 반영, 첫 공동 제품을 봐야 합니다.
+
+**사업 판단**
+
+공간지능용 데이터·평가 수요는 커질 수 있지만 1~3인 한국 팀이 핵심 연구 고객에 접근하기 어렵고 고성능 컴퓨팅 의존성이 커 아이디어로 올리지 않습니다.
 
 **출처**
 
-- [US appeals court upholds Pentagon's blacklisting of Anthropic](https://www.reuters.com/world/us-appeals-court-declines-block-pentagons-blacklisting-anthropic-2026-09-25/) — Reuters, 2026-09-25; verified.
+- [AMD to Acquire World Labs to Advance the Future of AI Compute](https://www.globenewswire.com/news-release/2026/09/28/3370256/0/en/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute.html) — AMD, 2026-09-28, A/verified
+- [AMD acquires World Labs in $8.2 billion deal to bolster AI systems strategy](https://www.reuters.com/technology/amd-acquire-fei-fei-lis-world-labs-82-billion-deal-2026-09-28/) — Reuters, 2026-09-28, A/corroborated
+
+### 4. [플로리다, OpenAI의 새 모델 개발 제한을 법원에 요청](https://www.reuters.com/world/florida-asks-court-bar-openai-developing-new-models-part-child-harm-lawsuit-2026-09-28/)
+
+- 중요도: A · 점수 85/100
+- 한 줄: 플로리다 검찰총장이 독립 안전장치 승인 없이는 OpenAI가 새 모델을 개발하지 못하게 하고 미성년자의 ChatGPT 이용도 막아 달라는 임시금지 신청을 냈습니다.
+- 영향: 법원이 받아들일 경우 소비자보호 소송이 모델 개발 과정 자체에 외부 사전승인을 요구하는 수단이 될 수 있습니다. 현재는 주정부의 신청일 뿐 법원의 결정이나 전국적 금지가 아닙니다.
+
+**원문 핵심**
+
+> asked a judge ... to bar OpenAI from developing new artificial intelligence models
+
+판사에게 OpenAI의 새 AI 모델 개발을 막아 달라고 요청했습니다.
+
+**분석**
+
+FACT: 플로리다 검찰총장은 9월 28일 Highlands County 제10순회법원에 임시금지 신청을 냈습니다. 신청은 독립적인 제3자 안전장치 승인 없는 새 모델 개발 금지, 미성년자의 ChatGPT 이용 제한, 인간처럼 보이게 하는 표현 제한 등을 요구합니다. OpenAI는 Reuters에 가장 강력한 모델의 훈련을 이미 멈췄으며 추가 안전장치 전에는 재개하지 않겠다고 답했습니다.
+
+INTERPRETATION: 새 AI 법률이 아니라 기존 소비자보호 소송을 이용해 모델 개발 과정에 사전 조건을 붙이려는 시도입니다.
+
+SIGNAL: 에이전트 사고와 아동 안전 사건이 이어지면서 규제 요구가 공개 의무를 넘어 개발 중단과 외부 승인으로 강해지고 있습니다.
+
+SPECULATION: 법원이 신청을 받아들일지, 명령 범위를 플로리다 밖까지 넓힐 수 있을지, 상급심에서 유지될지는 전혀 정해지지 않았습니다.
+
+**왜 중요한가**
+
+모델 출시 후 책임을 묻는 규제에서 개발 전에 외부 안전 승인을 요구하는 소송으로 압력이 이동하고 있습니다.
+
+**분위기**: 강한 법적 요구, 효력은 아직 없음 — 신청서와 OpenAI 답변은 확인됐지만 법원 결정은 나오지 않았습니다.
+
+**앞으로 볼 것**
+
+법원의 심리 일정과 명령 범위, OpenAI의 정식 답변, 미성년자 접근 제한의 집행 방식, 항소 여부를 확인해야 합니다.
+
+**사업 판단**
+
+안전 승인 문서화 수요는 예상되지만 법적 책임과 미성년자 데이터, 주별 규칙 해석이 핵심이라 1~3인 팀 아이디어로 올리지 않습니다.
+
+**출처**
+
+- [Florida asks court to bar OpenAI from developing new models as part of child harm lawsuit](https://www.reuters.com/world/florida-asks-court-bar-openai-developing-new-models-part-child-harm-lawsuit-2026-09-28/) — Reuters, 2026-09-28, A/verified
+- [Florida AG seeks to halt OpenAI development, citing alleged risk to survival of humankind](https://www.cbsnews.com/miami/news/florida-ag-james-uthmeier-halt-openai-development/) — CBS Miami / News Service of Florida, 2026-09-28, A/corroborated
+
+### 5. [Roche, 신약 연구를 ‘자율 AI 실험실’로 전환하는 계획 공개](https://www.roche.com/investors/events/roche-pharma-day-2026)
+
+- 중요도: A · 점수 82/100
+- 한 줄: Roche가 AI가 가설과 실험 순서를 제안하고 실험 데이터가 다시 모델로 돌아오는 자율형 연구 루프를 구축해 신약 발견을 빠르게 하겠다고 밝혔습니다.
+- 영향: 제약 AI가 문헌 요약과 후보 추천을 넘어 실험 설계와 연구 의사결정 흐름에 들어갑니다. 다만 40%의 파이프라인 결정에 계산 기여가 있었다는 수치와 향후 목표는 회사 자체 집계이며 임상 성공을 뜻하지 않습니다.
+
+**원문 핵심**
+
+> recently started building autonomous AI-driven labs
+
+최근 자율형 AI 기반 실험실 구축을 시작했습니다.
+
+**분석**
+
+FACT: Roche는 9월 28일 Pharma Day에서 ‘Lab in a Loop’와 자율 AI 기반 실험실 계획을 공개했습니다. 회사는 2025년 4분기부터 2026년 2분기까지 파이프라인 결정의 40%에 추적 가능한 AI 또는 계산 기여가 있었고, Target Nexus가 2026년 말 연구 포트폴리오 결정의 80%에 기여하도록 하는 목표를 제시했습니다.
+
+INTERPRETATION: 모델이 연구자에게 답만 주는 것이 아니라 실험 결과를 받아 다음 실험을 정하는 반복 과정 안으로 들어가는 변화입니다.
+
+SIGNAL: 대형 제약사는 AI 도구 구매보다 자체 데이터, 자동화 장비, 연구 의사결정을 하나의 폐쇄 루프로 연결하는 데 투자하고 있습니다.
+
+SPECULATION: 자동화 루프가 후보물질 발굴 시간을 얼마나 줄일지, 임상 성공률을 높일지, 실패 실험을 안전하게 중단할지는 아직 입증되지 않았습니다.
+
+**왜 중요한가**
+
+AI의 연구 기여는 모델 점수보다 실제 실험과 의사결정 사이의 반복을 얼마나 짧게 만드는지로 평가될 가능성이 큽니다.
+
+**분위기**: 대형 제약사의 도입 가속, 임상 증거는 부족 — 공식 전략과 내부 기여율은 공개됐지만 독립 재현과 환자 성과는 없습니다.
+
+**앞으로 볼 것**
+
+첫 자율 실험실의 규모와 운영 시점, 인간 승인 단계, 실패 실험 처리, 후보물질 발굴 시간, 임상 성공률 변화를 봐야 합니다.
+
+**사업 판단**
+
+연구 루프 기록 도구는 가능성이 있지만 장비 통합, 생명과학 안전, 고객 데이터 접근이 큰 장벽이라 새 아이디어로 올리지 않습니다.
+
+**출처**
+
+- [Roche Pharma Day 2026](https://www.roche.com/investors/events/roche-pharma-day-2026) — Roche, 2026-09-28, A/verified
+- [Roche outlines plans to move towards autonomous AI labs](https://www.reuters.com/business/healthcare-pharmaceuticals/roche-outlines-plans-move-towards-autonomous-ai-labs-2026-09-28/) — Reuters, 2026-09-28, A/corroborated
 
 ## 사업 아이디어
 
-신규 아이디어 없음. Copilot 비용·권한 점검과 AI 사고 기록팩을 검토했지만 기존 관리 기능과 겹치고 법률·보안·플랫폼 의존성, 국내 고객·지불 행동 근거가 부족했습니다.
+검증 기준을 통과한 신규 아이디어가 없습니다. 에이전트 격리·평가 수요는 이미 최근 아이디어와 중복되고, 제약·공간지능 분야는 고객 접근과 데이터·장비 의존성이 큽니다.
+
+- 구축 후보: 없음
+
+## 커뮤니티
+
+- Reddit: 하드웨어 밖의 통제에는 관심, 출시 직후 효과 주장에는 신중
+  - OpenShell 관련 토론은 프롬프트 규칙보다 샌드박스 강제력에 관심을 보이지만, 실제 침입 재현과 운영 경험이 아직 부족하다는 한계가 있습니다.
+  - [토론 보기](https://www.reddit.com/r/LocalLLaMA/comments/1ws9ydg/nvidia_shipped_openshell_an_open_source_sandbox/)
 
 ## 오늘의 스킬
 
-### 장기 실행 에이전트 권한표
+### 에이전트 경계 점검
 
-- 쓸 때: 에이전트가 백그라운드에서 메일·문서·코드·외부 시스템을 계속 다룰 때
-- 예시: 작업별로 읽기·쓰기·외부 전송·결제 권한, 1회 비용 한도, 사람 승인 시점, 즉시 중단 조건, 남길 로그를 한 장에 적습니다.
-- 프롬프트: `이 에이전트의 장기 실행 권한표를 만들어라. 작업별 읽기·쓰기·외부 전송·비용 한도, 사람 승인 지점, 자동 중단 조건, 필수 감사 로그를 표로 정리해라.`
+- 언제: 에이전트가 파일·네트워크·자격증명·외부 API를 스스로 사용할 때
+- 예시: 작업별 허용 파일 경로, 외부 호스트, API 메서드, 자격증명 범위와 사람 승인 지점을 적은 뒤 에이전트 프로세스 밖에서 강제되는지 확인합니다.
+- 프롬프트: `이 에이전트가 쓰는 파일, 네트워크, 프로세스, 자격증명을 목록화하고 허용 범위·차단 조건·사람 승인 지점·감사 로그를 표로 정리해라.`
 
 ## Worth Reading
 
-- **Paper** — [Adoption and Impact of Command-Line AI Coding Agents](https://arxiv.org/abs/2607.01418): Microsoft의 2026년 초기 배포에서 수만 명 개발자의 채택과 유지, 병합 PR 변화를 분석합니다. 초록·서지정보와 24% 추정치를 확인했으며 병합 PR이 실제 가치와 같지 않다는 한계가 있습니다.
-- **GitHub** — [Microsoft Agent Framework](https://github.com/microsoft/agent-framework): Python·.NET에서 에이전트와 다중 에이전트 워크플로를 만들고 운영하는 Microsoft 공식 공개 프레임워크입니다. README, 코드 구조, 지원 통합과 라이선스를 확인했으며 실제 운영 배포는 재현하지 않았습니다.
-- **YouTube** — [Agent Framework 1.0: General Availability (Part 1/2)](https://www.youtube.com/watch?v=2ZwxQmT1l7s): Microsoft Agent Framework 1.0의 설계와 변경점을 설명하는 영상입니다. 제목·링크·주제를 확인했으며 전체 영상과 자막은 검토하지 않았습니다.
-- **Blog** — [Introducing the new Copilot with Home, Code and Autopilot](https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/): Microsoft가 채팅·코딩·장기 실행 에이전트와 사용자 구독·사용량 기반 과금을 어떻게 한 제품에 묶었는지 확인할 수 있습니다.
+- **Paper** · [Agent Safety Should Be a Runtime Contract](https://arxiv.org/abs/2608.11274)
+  - 에이전트 안전을 약속이 아니라 권한·감사·완료 증거를 강제하는 실행 계약으로 다루는 근거를 볼 수 있습니다.
+- **GitHub** · [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell)
+  - 파일·네트워크·프로세스·자격증명 정책이 실제 런타임에서 어떻게 집행되는지 코드와 문서로 확인할 수 있습니다.
+- **YouTube** · [Introducing Claude Sonnet 5](https://www.youtube.com/watch?v=fVLOuiO6jAQ)
+  - Sonnet 5.5의 변화 폭을 판단하기 위한 직전 세대의 공식 제품 설명을 비교 기준으로 볼 수 있습니다.
+- **Blog** · [NVIDIA, 테스트부터 배포까지 에이전트를 지키는 Open Agent Safety Platform 공개](https://blogs.nvidia.co.kr/blog/open-agent-safety-platform/)
+  - OpenShell과 Sentry가 소프트웨어·하드웨어 밖에서 어떤 경계를 만들고 어떤 파트너가 적용하는지 한국어 공식 설명으로 확인할 수 있습니다.
 
 ## 오늘의 인사이트
 
-AI 에이전트가 오래 일하고 실제 시스템까지 움직이기 시작하자, 질문은 성능에서 책임으로 옮겨가고 있습니다. 호주 상원은 기업 CEO에게 공개 설명을 요구했고 미국에서는 정부가 안전시험과 사고 기록을 직접 확인해야 한다는 요구가 커졌습니다. Microsoft는 장기 실행 에이전트와 함께 예산·모델 정책을 내놨고, Anthropic 판결은 민감한 조달에서 공급자의 가드레일 자체가 계약 위험으로 평가될 수 있음을 보여줍니다.
+AI가 더 많이 움직일수록, 모델보다 바깥의 경계와 실험 루프가 경쟁력이 됩니다.
 
 ## 누락·미확인
 
-- 호주 상원의 CEO 출석 요청 공문 원문과 두 CEO의 참석 수락 여부는 확인되지 않았습니다.
-- 미국 26개 관할 법무장관의 요구는 입법 제안이며 새 의무를 만든 법률이 아닙니다. 공동서한 최종 원문 전체 대조는 하지 못했습니다.
-- Microsoft Copilot의 한국 계정별 제공 시점과 Autopilot 완료율·오류율·실제 비용은 독립 검증되지 않았습니다.
-- Anthropic 판결은 별도 법률에 따른 다른 연방법원 판단과 충돌하며 판결문 전문과 재심 여부를 확인해야 합니다.
-- YouTube 항목은 제목·링크·주제만 확인했으며 전체 영상·자막을 검토하지 않았습니다.
-- 국내 고객의 반복 문제와 지불 행동을 확인하지 못해 신규 사업 아이디어를 만들지 않았습니다.
+- NVIDIA 안전 플랫폼의 독립 침입 재현, 오탐·누락률, 비 NVIDIA 하드웨어의 동등한 강제력
+- Sonnet 5.5의 한국어 장기 작업, 실제 작업당 비용, 안전 전환 오탐의 독립 평가
+- AMD–World Labs 거래 승인과 통합 후 첫 제품·매출 기여
+- 플로리다 임시금지 신청의 법원 결정과 효력 범위
+- Roche 자율 실험실의 규모·가동 일정·독립 성과와 임상 영향
+- YouTube 항목은 제목·공식 채널을 확인했으며 전체 영상은 검토하지 않음
 
 ## 게시 전 검증
 
-- 뉴스 4개, 사업 아이디어 0개
+- 뉴스: 5개
+- 사업 아이디어: 0개
 - Worth Reading: Paper·GitHub·YouTube·Blog 각 1개
-- event_key·정규화 URL 중복 없음
-- 구축 후보 없음; 승인 게이트 자동 통과 없음
-- `latest.json`은 네 필드 포인터
+- 중복 event_key: 없음
+- 중복 정규화 URL: 없음
+- 구축 후보: 없음, 승인 게이트 자동 실행 없음
+- `latest.json`: date_kst·data_path·report_path·status 네 필드만 사용
