@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate an AI Daily Intelligence packet using only the Python standard library."""
+"""Validate the canonical JSON Schema, then publication-specific semantics."""
 
 from __future__ import annotations
 
@@ -9,6 +9,21 @@ import sys
 from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
+
+from jsonschema import Draft202012Validator, FormatChecker
+
+
+SCHEMA_PATH = Path(__file__).resolve().parents[1] / "schema" / "daily.schema.json"
+SCHEMA = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+Draft202012Validator.check_schema(SCHEMA)
+SCHEMA_VALIDATOR = Draft202012Validator(SCHEMA, format_checker=FormatChecker())
+
+
+def schema_errors(error):
+    """Include nested anyOf diagnostics with their actual field paths."""
+    yield error
+    for child in error.context:
+        yield from schema_errors(child)
 
 
 def normalized_url(value: str) -> str:
@@ -24,8 +39,15 @@ def is_http_url(value: object) -> bool:
 
 
 def validate(packet: dict) -> tuple[list[str], list[str]]:
-    errors: list[str] = []
+    errors: list[str] = [
+        f"/{'/'.join(str(part).replace('~', '~0').replace('/', '~1') for part in error.absolute_path)}: {error.message}"
+        for parent in SCHEMA_VALIDATOR.iter_errors(packet)
+        for error in schema_errors(parent)
+    ]
     warnings: list[str] = []
+    # Do not traverse malformed shapes in the semantic checks below.
+    if errors:
+        return errors, warnings
     required = {
         "schema_version", "date_kst", "generated_at", "status", "news",
         "business_ideas", "tools", "community", "skill_of_the_day",

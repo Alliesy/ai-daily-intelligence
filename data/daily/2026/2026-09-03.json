@@ -43,7 +43,7 @@
           "publisher": "City of New York",
           "published_at": "2026-09-02",
           "tier": "A",
-          "source_type": "official_release",
+          "source_type": "official_blog",
           "authority": "official",
           "verification_status": "verified",
           "evidence_group": "nyc-ai-school-moratorium"
@@ -126,7 +126,7 @@
           "publisher": "U.S. House of Representatives",
           "published_at": "2026-08-10",
           "tier": "A",
-          "source_type": "official_document",
+          "source_type": "documentation",
           "authority": "official",
           "verification_status": "verified",
           "evidence_group": "house-openai-oversight-letter"
@@ -237,7 +237,7 @@
           "publisher": "Adobe",
           "published_at": "2026-04-16",
           "tier": "A",
-          "source_type": "official_research",
+          "source_type": "official_blog",
           "authority": "official",
           "verification_status": "corroborated",
           "evidence_group": "adobe-ai-retail-traffic"
@@ -276,7 +276,7 @@
           "publisher": "U.S. Department of Justice",
           "published_at": "2026-09-01",
           "tier": "A",
-          "source_type": "official_document",
+          "source_type": "documentation",
           "authority": "official",
           "verification_status": "verified",
           "evidence_group": "doj-openai-nyt-fair-use"
@@ -328,7 +328,7 @@
       "problem_evidence": [
         {
           "url": "https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat",
-          "source_type": "official_release",
+          "source_type": "official_blog",
           "summary": "뉴욕시가 연령별 금지·제한·리터러시 구역을 나눠 교육 AI 경계 수요를 공식화했습니다.",
           "observed_at": "2026-09-03",
           "evidence_group": "nyc-ai-school-moratorium"
@@ -410,7 +410,7 @@
         },
         {
           "url": "https://business.adobe.com/blog/ai-traffic-surge-retail-sites-not-machine-readable",
-          "source_type": "official_research",
+          "source_type": "official_blog",
           "summary": "Adobe가 AI 유입 증가와 소매 사이트의 기계 판독성 격차를 측정해 실제 상거래 연결 수요를 확인했습니다.",
           "observed_at": "2026-09-03",
           "evidence_group": "adobe-ai-retail-traffic"
@@ -470,7 +470,7 @@
   ],
   "community": [
     {
-      "platform": "Action Network",
+      "platform": "Other",
       "mood": "학교 AI 확대보다 보호자 통제와 장기 검증 요구",
       "one_line_summary": "뉴욕시 학부모·교육자 연합의 2년 유예 청원에는 6천명 이상이 참여해 저연령 AI 도입에서 속도보다 독립 평가·옵트인·비AI 대안을 요구했습니다.",
       "url": "https://actionnetwork.org/petitions/please-enact-a-two-year-moratorium-on-the-use-of-ai-in-nyc-public-schools"

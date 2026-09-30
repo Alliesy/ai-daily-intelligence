@@ -19,7 +19,7 @@ latest.json                       # 최신 정본을 가리키는 포인터
 LATEST.md                         # GitHub 첫 화면용 최신 브리핑
 publish/notion-latest.md          # Notion 단일 페이지 게시용 본문
 schema/daily.schema.json          # 데이터 계약
-scripts/validate_daily.py         # 무의존성 검증기
+scripts/validate_daily.py         # 공통 JSON Schema + 게시 의미 검증
 scripts/render_daily.py           # JSON → Markdown 렌더러
 ```
 
@@ -37,6 +37,7 @@ scripts/render_daily.py           # JSON → Markdown 렌더러
 ## 로컬 검증
 
 ```powershell
+python -m pip install -r requirements-validation.txt
 python scripts/validate_daily.py data/daily/2026/2026-08-07.json
 python scripts/render_daily.py data/daily/2026/2026-08-07.json
 ```

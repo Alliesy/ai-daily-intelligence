@@ -1,5 +1,6 @@
 import copy
 import importlib.util
+import json
 import unittest
 from pathlib import Path
 
@@ -59,14 +60,62 @@ class ValidationTests(unittest.TestCase):
         value = packet()
         value["news"] = value["news"][:2]
         errors, _ = MODULE.validate(value)
-        self.assertTrue(any("3 to 5" in error for error in errors))
+        self.assertTrue(any("/news:" in error for error in errors))
 
     def test_missing_reading_type_fails(self):
         value = packet()
         value["worth_reading"] = value["worth_reading"][:3]
         value["worth_reading"][0]["type"] = "Blog"
         errors, _ = MODULE.validate(value)
-        self.assertTrue(any("exactly once" in error for error in errors))
+        self.assertTrue(any("/worth_reading:" in error for error in errors))
+
+    def test_all_archived_packets(self):
+        paths = sorted((Path(__file__).parents[1] / "data" / "daily").rglob("*.json"))
+        self.assertTrue(paths, "archive must not be empty")
+        for path in paths:
+            with self.subTest(packet=path.name):
+                errors, _ = MODULE.validate(json.loads(path.read_text(encoding="utf-8")))
+                self.assertEqual([], errors)
+
+    def test_invalid_source_taxonomy_including_problem_evidence(self):
+        for source_type in ("official_release", "official_document", "official_research",
+                            "official_announcement", "threat_research", "legislation", "sec_filing"):
+            for location in ("source", "problem_evidence"):
+                with self.subTest(source_type=source_type, location=location):
+                    value = packet()
+                    if location == "source":
+                        value["news"][0]["sources"][0]["source_type"] = source_type
+                    else:
+                        value["business_ideas"][0]["problem_evidence"] = [{
+                            "url": "https://example.com/source", "summary": "Evidence",
+                            "source_type": source_type,
+                        }]
+                    errors, _ = MODULE.validate(value)
+                    self.assertTrue(any("source_type" in error for error in errors))
+
+    def test_schema_rejects_bad_shapes_enums_and_formats(self):
+        cases = [
+            ("news", None), ("news", [None, None, None]),
+            ("date_kst", "2026-02-30"), ("generated_at", "not-a-timestamp"),
+            ("community", [{"platform": "Action Network", "mood": "Mixed",
+                            "one_line_summary": "Summary", "url": "https://example.com"}]),
+        ]
+        for field, invalid in cases:
+            with self.subTest(field=field, invalid=invalid):
+                value = packet()
+                value[field] = invalid
+                errors, _ = MODULE.validate(value)
+                self.assertTrue(errors)
+        for invalid in (None, [], "packet"):
+            self.assertTrue(MODULE.validate(invalid)[0])
+
+    def test_preserves_semantic_checks_and_quote_warnings(self):
+        value = packet()
+        value["build_candidate"]["idea_name"] = "Missing idea"
+        value["news"][0]["key_quote"] = "word " * 26
+        errors, warnings = MODULE.validate(value)
+        self.assertTrue(any("reference a business idea" in error for error in errors))
+        self.assertTrue(any("exceeds 25 words" in warning for warning in warnings))
 
 
 if __name__ == "__main__":
