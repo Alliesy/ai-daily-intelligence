@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { projectionInputChecksum, rawChecksum, registryChecksum } from "./checksums.js";
@@ -72,7 +72,7 @@ test("A to B to A content still advances projection checksums by accepted input 
   // Git ancestry, not checksum monotonicity, authorizes the final A import.
 });
 
-test("validates the real archive and produces conservative projection source fields", async () => {
+test("validates the legacy fixture and produces conservative projection source fields", async () => {
   const { validators, registries, packet } = await loadRealFixtures();
   validatePacketIdentities(packet, registries);
   const projection = projectDailyPacket(packet, registries);
@@ -88,6 +88,71 @@ test("validates the real archive and produces conservative projection source fie
   assert.equal(official.verification_status, "unverified");
   assert.ok(registryChecksum(registries).match(/^[0-9a-f]{64}$/));
   assert.ok(validators.daily(packet));
+});
+
+async function realArchivePaths(): Promise<string[]> {
+  const root = path.join(repoRoot, "data/daily");
+  return (await readdir(root, { recursive: true }))
+    .filter((entry) => entry.endsWith(".json"))
+    .map((entry) => `data/daily/${entry.replaceAll(path.sep, "/")}`).sort();
+}
+
+
+test("dry-runs every real archived packet with effective identities and projections", async () => {
+  const paths = await realArchivePaths();
+  assert.ok(paths.length > 1, "must exercise the complete archive, not a single fixture");
+  const report = await runImporter({
+    repoRoot, commitSha: C, remoteMainSha: C, mode: "dry-run",
+    git: new FullArchiveGitRunner([]),
+  });
+  assert.deepEqual(report.packets.map((packet) => packet.path), paths);
+  assert.ok(report.packets.every((packet) => packet.action === "dry_run"));
+  assert.equal(report.registryAction, "dry_run");
+});
+
+test("reports all invalid archive paths before any RPC call", async () => {
+  class InvalidArchiveGitRunner extends FullArchiveGitRunner {
+    override async run(args: readonly string[]): Promise<GitRunResult> {
+      const response = await super.run(args);
+      if (args[0] === "show" && /2026-09-(03|07)\.json$/.test(args[1] ?? "")) {
+        const packet = JSON.parse(response.stdout);
+        packet.news[0].sources[0].source_type = "official_release";
+        response.stdout = JSON.stringify(packet);
+      }
+      return response;
+    }
+  }
+  const rpc = new RecordingRpc({});
+  await assert.rejects(runImporter({
+    repoRoot, commitSha: C, remoteMainSha: C, mode: "backfill",
+    git: new InvalidArchiveGitRunner([]), rpc,
+  }), (error: Error) => {
+    assert.match(error.message, /2026-09-03\.json/);
+    assert.match(error.message, /2026-09-07\.json/);
+    assert.match(error.message, /source_type/);
+    return true;
+  });
+  assert.equal(rpc.calls.length, 0);
+});
+
+test("canonical schema rejects unsupported source and community taxonomy", async () => {
+  const { validators, packet } = await loadRealFixtures();
+  for (const invalid of ["official_release", "official_document", "official_research",
+    "official_announcement", "threat_research", "legislation", "sec_filing"]) {
+    const value = structuredClone(packet);
+    Object.assign(value.news[0]!.sources[0]!, { source_type: invalid });
+    assert.equal(validators.daily(value), false, invalid);
+    const evidence = structuredClone(packet);
+    Object.assign(evidence.business_ideas[0]!, { problem_evidence: [
+      { url: "https://example.com", summary: "Evidence", source_type: invalid },
+    ] });
+    assert.equal(validators.daily(evidence), false, `problem_evidence: ${invalid}`);
+  }
+  const community = structuredClone(packet);
+  Object.assign(community, { community: [
+    { platform: "Action Network", mood: "Mixed", one_line_summary: "Summary", url: "https://example.com" },
+  ] });
+  assert.equal(validators.daily(community), false);
 });
 
 test("keeps legacy packets valid and projects the additive Morning Paper contract", async () => {
@@ -487,4 +552,13 @@ function passingRealismGates(): RealismGates {
     replacement_risk: pass("범용 프롬프트로 대체되지 않음"),
     dependency: pass("고가·특수 의존성 없음"),
   };
+}
+
+class FullArchiveGitRunner extends SnapshotGitRunner {
+  override async run(args: readonly string[]): Promise<GitRunResult> {
+    if (args[0] === "ls-tree") {
+      return { code: 0, stdout: `${(await realArchivePaths()).join("\n")}\n`, stderr: "" };
+    }
+    return super.run(args);
+  }
 }

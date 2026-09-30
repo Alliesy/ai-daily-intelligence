@@ -81,7 +81,7 @@
           "publisher": "OpenAI",
           "published_at": "2026-09-03",
           "tier": "A",
-          "source_type": "official_announcement",
+          "source_type": "official_blog",
           "authority": "official",
           "verification_status": "verified",
           "evidence_group": "openai-daybreak-frontline"
@@ -125,7 +125,7 @@
           "publisher": "Microsoft Security",
           "published_at": "2026-09-03",
           "tier": "A",
-          "source_type": "threat_research",
+          "source_type": "official_blog",
           "authority": "official",
           "verification_status": "verified",
           "evidence_group": "microsoft-ascii-smuggling-telemetry"
@@ -169,7 +169,7 @@
           "publisher": "California Legislative Information",
           "published_at": "2026-08-31",
           "tier": "A",
-          "source_type": "legislation",
+          "source_type": "documentation",
           "authority": "official",
           "verification_status": "verified",
           "evidence_group": "california-sb574-official"
@@ -213,7 +213,7 @@
           "publisher": "Microsoft Investor Relations",
           "published_at": "2026-09-02",
           "tier": "A",
-          "source_type": "sec_filing",
+          "source_type": "documentation",
           "authority": "official",
           "verification_status": "verified",
           "evidence_group": "microsoft-fy27-segments"

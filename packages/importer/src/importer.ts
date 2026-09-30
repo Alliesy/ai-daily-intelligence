@@ -173,10 +173,16 @@ async function loadEffectiveSnapshot(
   ]);
   const explicit = await parseRegistries(rawEvents, rawSources, validators);
   const packets = new Map<string, { raw: Uint8Array; packet: DailyPacket }>();
+  const failures: string[] = [];
   for (const packetPath of archivePaths) {
-    const raw = await showFileAtCommit(git, commitSha, packetPath);
-    packets.set(packetPath, { raw, packet: await parseDailyPacket(raw, validators.daily) });
+    try {
+      const raw = await showFileAtCommit(git, commitSha, packetPath);
+      packets.set(packetPath, { raw, packet: await parseDailyPacket(raw, validators.daily) });
+    } catch (error) {
+      failures.push(`${packetPath}: ${error instanceof Error ? error.message : String(error)}`);
+    }
   }
+  if (failures.length > 0) throw new Error(`Archive validation failed (${failures.length} packets):\n${failures.join("\n")}`);
   const registries = buildEffectiveRegistries(
     explicit,
     [...packets.values()].map((entry) => entry.packet),
