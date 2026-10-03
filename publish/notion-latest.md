@@ -1,105 +1,125 @@
-# AI Daily Intelligence · 2026-10-03
+# AI Daily Intelligence · 2026-10-04
 
-- 상태: complete
-- 생성 시각: 2026-10-03 07:03 KST
-- 데이터: `data/daily/2026/2026-10-03.json`
+- 상태: **complete**
+- 생성 시각: 2026-10-04 07:03 KST
+- 데이터: `data/daily/2026/2026-10-04.json`
+- 구축 후보: **없음**
 
 ## Morning Paper
 
-### AI의 병목이 모델에서 사람·통제·자금으로 옮겨가고 있습니다
+### AI가 커질수록, 경계는 더 구체적인 곳에 생깁니다
 
-OpenAI는 에이전트 활동과 관련해 100곳 넘는 조직에 통보했고, Anthropic은 실제 업무에 AI를 배포할 엔지니어 1만명을 직접 키우기로 했습니다. GitHub의 모델 교체는 운영자가 수명주기를 따라가야 한다는 현실을 보여줍니다. Amazon과 SoftBank의 움직임은 이 경쟁을 지탱하려면 칩과 모델만큼 금융 구조도 중요하다는 점을 드러냅니다.
+Apple은 에이전트의 Mac 데이터 접근을 더 분명히 통제하려 하고, 캘리포니아는 법률 업무의 검증 책임을 사람에게 남겼습니다. 일본의 데이터센터는 발전소 곁으로 가고, 반도체 투자는 메모리 연결을 빛으로 바꾸려 합니다.
 
 ## Top 뉴스
 
-### 1. [OpenAI, 에이전트 활동 관련 100곳 넘는 조직에 통보](https://www.reuters.com/legal/litigation/openai-alerts-more-than-100-groups-about-rogue-ai-agent-activity-2026-10-01/)
+### 1. Mac의 전체 디스크 권한, AI 에이전트가 마음대로 넘지 못하게 됩니다
 
-OpenAI가 자사 AI 모델의 잠재적 외부 영향과 관련해 9월 26일까지 100곳 넘는 조직에 통보했다고 밝혔습니다.
+Apple이 AI 에이전트의 광범위한 데이터 접근에 더 분명한 사용자 확인을 요구하겠다고 밝혔습니다. Mac에서 대신 일하는 앱은 앞으로 권한을 얻는 방식부터 바꿔야 할 수 있습니다.
 
-- 중요도: S · 점수: 97/100
-- 영향: Hugging Face에서 시작된 조사 범위가 개별 사고를 넘어 대규모 검토로 커졌습니다. 에이전트를 시험하는 조직은 권한 제한뿐 아니라 외부 접촉을 추적하고 당사자에게 알릴 절차까지 갖춰야 합니다.
-- 왜 중요한가: 에이전트가 외부 서비스를 다루는 순간, 안전성은 모델 설명이 아니라 실제 접촉 기록과 통보 속도로 평가됩니다.
-- 앞으로 볼 것: OpenAI의 사건별 분류, 영향받은 조직의 확인, 50페타바이트 검토 결과, 재발 방지 통제와 규제기관의 후속 조치를 확인해야 합니다.
+Mac의 ‘전체 디스크 접근’은 파일뿐 아니라 메일, 메시지, 브라우징 기록처럼 민감한 정보까지 열어줄 수 있습니다. Apple은 10월 2일 이 권한을 AI 에이전트가 사용할 때 사용자가 훨씬 명확하게 승인하도록 새 통제를 마련하겠다고 밝혔습니다.
 
-### 2. [Anthropic, 1억달러 규모 Claude 현장 배포 엔지니어 아카데미 출범](https://www.anthropic.com/news/claude-frontier-academy)
+지금까지는 사용자가 앱에 넓은 권한을 한 번 주면 그 뒤의 여러 작업이 같은 허용 범위 안에서 이뤄질 수 있었습니다. 하지만 에이전트는 사용자를 대신해 오래 움직이고 예상하지 못한 도구까지 호출할 수 있습니다. 그래서 ‘이 앱을 믿는다’는 한 번의 동의만으로는 부족하다는 판단이 나온 것입니다.
 
-Anthropic이 2027년 말까지 기업 현장 배포 엔지니어 1만명을 양성하는 Claude Frontier Academy를 시작했습니다.
+발표 시점은 Meta의 개인 에이전트 Muse가 Mac 데이터에 접근하는 방식을 둘러싼 불만이 나온 뒤입니다. Meta는 접근이 사용자의 선택에 따라 이뤄진다고 설명했습니다. 다만 옵트인이라는 사실과 사용자가 실제 접근 범위를 이해한다는 것은 같은 문제가 아닙니다.
 
-- 중요도: A · 점수: 94/100
-- 영향: 기업의 AI 도입 병목을 모델 구매보다 실제 시스템에 붙이고 보안 검토를 통과시키는 사람의 부족으로 봤습니다. 컨설팅사와 대기업이 공급사 인증 인력을 중심으로 배포 역량을 묶을 가능성이 커집니다.
-- 왜 중요한가: 기업 AI의 경쟁력이 모델 접근권보다 내부에서 끝까지 배포를 책임질 사람에게 달려 있다는 판단이 커지고 있습니다.
-- 앞으로 볼 것: 첫 자격 배출 시점인 2027년 초, 프로젝트 완료율, 보안 심사 통과율, 한국 기업 참여와 교육비·선발 조건을 확인해야 합니다.
+아직 새 통제가 어느 macOS 버전에 들어가는지, 기존 앱이 무엇을 바꿔야 하는지는 공개되지 않았습니다. Mac용 에이전트를 개발하거나 업무에 도입했다면 기능보다 권한 요청 화면과 작업 기록이 먼저 점검 대상이 됩니다.
 
-### 3. [Amazon, 80억달러 NVIDIA AI 칩을 별도 기구로 옮겨 임차 추진](https://www.reuters.com/business/retail-consumer/amazon-seeks-offload-8-billion-nvidia-chips-investors-ft-reports-2026-10-02/)
+**하나만 기억한다면:** 에이전트가 대신 하는 일이 많아질수록, 한 번의 넓은 허용보다 작업마다 이해할 수 있는 승인이 중요해집니다.
 
-Amazon이 이미 데이터센터에 설치한 약 80억달러 규모 Grace Blackwell 칩을 투자자 기구에 넘기고 다시 빌려 쓰는 방안을 논의 중입니다.
+**앞으로 볼 건:** 적용 macOS 버전과 시행일, 개발자 API, 기업용 MDM에서 예외와 승인 기록을 어떻게 다루는지입니다.
 
-- 중요도: A · 점수: 89/100
-- 영향: AI 칩을 직접 보유하는 대신 외부 자본이 소유하고 클라우드사가 임차하는 구조가 커지면, 막대한 설비 투자를 계속하면서도 재무 부담을 분산할 수 있습니다. 대신 장기 임차료와 자산 가치 하락 위험이 덜 보이게 될 수 있습니다.
-- 왜 중요한가: AI 컴퓨팅 가격은 칩 성능뿐 아니라 자금 조달 비용과 자산 가치에 대한 투자자의 판단에도 영향을 받게 됩니다.
-- 앞으로 볼 것: 거래 체결 여부, 부채 금리, 임차 기간, 잔존가치 보증, 회계 처리와 AWS 가격 전가를 확인해야 합니다.
+**지금 확인할 것:** Mac의 시스템 설정에서 전체 디스크 접근 권한을 가진 앱을 확인하고, 더 이상 쓰지 않는 자동화·에이전트 앱의 권한을 끄세요.
 
-### 4. [GitHub Copilot, Gemini·Kimi·Claude 구형 모델 4종 지원 종료](https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/)
+출처: [Apple Developer](https://developer.apple.com/news/?id=p6zjojqw) · [Reuters](https://www.reuters.com/business/retail-consumer/apple-says-it-will-flag-ai-requests-mac-data-after-metas-muse-draws-complaints-2026-10-02/) · [The Verge](https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents)
 
-GitHub가 Copilot 전 기능에서 Gemini 3.5·3.6 Flash, Kimi K2.7 Code와 Claude Opus 4.7을 10월 2일부로 중단했습니다.
+### 2. 캘리포니아, 변호사의 AI 검증 책임을 법으로 못 박았습니다
 
-- 중요도: A · 점수: 91/100
-- 영향: Copilot에서 모델을 직접 고르거나 조직 정책으로 허용 목록을 제한했다면 대체 모델로 설정을 바꿔야 합니다. 같은 프롬프트와 에이전트 작업도 모델 교체 뒤 결과·비용·속도가 달라질 수 있습니다.
-- 왜 중요한가: 코딩 에이전트가 오래 운영될수록 모델 교체를 발견하고 회귀 테스트하는 일이 일상적인 유지보수가 됩니다.
-- 앞으로 볼 것: 조직별 허용 모델 정책, 저장된 프롬프트와 에이전트 설정이 자동 전환되는지, 대체 모델의 품질·지연·비용 차이를 확인해야 합니다.
+변호사는 AI가 만든 법원 서면과 인용을 직접 확인해야 하고, 중재인은 판단을 AI에 맡길 수 없습니다. AI를 써도 최종 책임은 사람에게 남는다는 원칙이 법률이 됐습니다.
 
-### 5. [SoftBank, OpenAI 후속 투자 300억달러 집행 완료](https://group.softbank/en/news/press/20261001)
+캘리포니아 주지사가 9월 30일 SB 574에 서명했습니다. 이 법은 변호사가 AI로 작성한 법원 제출물과 인용을 직접 확인하고, 잘못된 내용을 발견하면 고치도록 요구합니다. 고객의 기밀 정보를 AI 도구에 넣을 때 지켜야 할 책임도 분명히 했습니다.
 
-SoftBank가 마지막 100억달러를 납입해 OpenAI 후속 투자 300억달러를 마쳤고 누적 투자액은 646억달러가 됐습니다.
+법은 AI 사용 자체를 금지하지 않습니다. 대신 변호사가 핵심 법률 업무를 통째로 넘기거나 ‘AI가 작성했다’는 이유로 오류 책임을 피하지 못하게 합니다. 중재인 역시 사건 판단을 AI에 맡길 수 없습니다.
 
-- 중요도: A · 점수: 89/100
-- 영향: OpenAI의 대규모 컴퓨팅 지출을 뒷받침하는 자금이 실제 납입 단계까지 왔습니다. 동시에 SoftBank는 단일 비상장 AI 기업에 약 13% 지분과 막대한 자본을 집중하게 됐습니다.
-- 왜 중요한가: AI 선두 기업의 연구·컴퓨팅 계획은 거대한 자금 약속이 실제 현금으로 이어질 때 비로소 지속할 수 있습니다.
-- 앞으로 볼 것: OpenAI의 자금 사용, 다음 조달, 상장 일정, SoftBank의 부채·자산담보 조달과 지분 가치 변화를 확인해야 합니다.
+이 변화는 법률 AI의 경쟁 기준도 바꿉니다. 문서를 빨리 만드는 기능만으로는 부족하고, 어떤 자료를 근거로 삼았는지와 누가 최종 확인했는지를 남길 수 있어야 합니다. 법률 조직에는 검토 절차가 제품 선택만큼 중요해집니다.
+
+구체적인 시행일과 징계 기준, 다른 주가 같은 규칙을 따를지는 더 확인해야 합니다. 한국에 바로 적용되는 법은 아니지만, 해외 고객이나 캘리포니아 사건을 다루는 조직에는 영향을 줄 수 있습니다.
+
+**하나만 기억한다면:** 고위험 전문 업무에서는 AI의 성능보다 사람이 검증했다는 사실을 증명하는 절차가 먼저 요구됩니다.
+
+**앞으로 볼 건:** 시행일과 징계 기준, 법원 규칙과의 연결, 다른 미국 주의 유사 입법입니다.
+
+출처: [California Governor](https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/) · [Reuters](https://www.reuters.com/legal/government/california-sets-guardrails-lawyers-ai-use-2026-10-01/) · [California Courts](https://newsroom.courts.ca.gov/news/use-ai-new-rules-and-maybe-law-are-horizon-california-lawyers)
+
+### 3. 일본 AI 데이터센터가 발전소 옆으로 갑니다
+
+JERA와 Dell, RHAELM이 지바 발전소 부지에 최대 400MW 규모의 AI 데이터센터를 추진합니다. 서버보다 먼저 전력 연결을 확보하려는 움직임입니다.
+
+일본 최대 발전회사 중 하나인 JERA가 Dell Technologies, 인프라 개발사 RHAELM과 AI 데이터센터를 추진합니다. 첫 부지는 지바의 JERA 발전소이며, 계획상 용량은 최대 400MW입니다. 단계별 투자액은 150억달러를 넘을 수 있습니다.
+
+일반적인 데이터센터는 전력망에 연결되는 데 오랜 시간이 걸릴 수 있습니다. 이번 구상은 발전소 부지에서 전력, 냉각, 컴퓨팅을 함께 설계해 그 대기 시간을 줄이려 합니다. 공식 발표는 2028년경 운영 시작을, Reuters는 2029년 완전 가동 목표를 전했습니다.
+
+이 방식이 자리 잡으면 AI 인프라의 위치를 정하는 기준도 달라집니다. 네트워크와 부동산만 보는 대신 안정적인 전력 공급과 냉각, 장기 계약을 먼저 묶어야 합니다. 일본이 자국 안에서 대규모 AI 연산 능력을 확보하려는 흐름과도 맞닿아 있습니다.
+
+다만 아직 양해각서 단계입니다. 최종 투자 결정과 고객, 실제 착공, 어떤 전력을 얼마나 쓸지는 공개되지 않았습니다.
+
+**하나만 기억한다면:** 대규모 AI의 다음 병목은 칩 구매보다 전력을 언제, 어디서, 얼마나 안정적으로 확보하느냐에 있습니다.
+
+**앞으로 볼 건:** 최종 투자 결정과 착공 허가, 앵커 고객, 전력원과 냉각 방식, 단계별 실제 집행액입니다.
+
+출처: [JERA](https://www.jera.co.jp/en/news/information/20261001_2535) · [Reuters](https://www.reuters.com/business/energy/jera-teams-up-with-dell-rhaelm-ai-infrastructure-development-japan-2026-10-01/)
+
+### 4. AI 메모리 병목, 칩 사이를 빛으로 잇는 경쟁이 커집니다
+
+Volantis가 GPU와 메모리를 광학 방식으로 연결하는 기술에 8,800만달러를 유치했습니다. 계산 능력보다 데이터를 옮기는 속도가 느린 문제를 겨냥합니다.
+
+AI 가속기는 계산이 빨라도 필요한 데이터를 제때 받지 못하면 기다려야 합니다. Volantis는 GPU와 메모리 칩 사이를 전기 신호 대신 빛으로 연결해 이 병목을 줄이려 합니다. 회사는 이를 위해 8,800만달러의 시리즈A 투자를 받았습니다.
+
+현재 GPU 주변에는 연결 방식과 전력 때문에 붙일 수 있는 메모리 수가 제한됩니다. Reuters에 따르면 Volantis는 VCSEL이라는 소형 레이저를 이용해 한 GPU가 훨씬 많은 메모리 칩과 통신하도록 설계하고 있습니다. 목표대로라면 더 큰 모델을 메모리에 올리고 데이터 이동에 드는 시간을 줄일 수 있습니다.
+
+광학 연결은 이미 데이터센터 간 네트워크에서 쓰이지만, 이를 서버 내부의 메모리 연결까지 끌어들이는 일은 쉽지 않습니다. 칩 패키징과 수율, 발열, 비용을 함께 맞춰야 하기 때문입니다. Volantis는 내년 칩을 목표로 하고 있습니다.
+
+회사가 제시한 초대형 모델과 높은 처리 속도는 아직 전망입니다. 실제 제품과 독립 벤치마크가 나오기 전까지는 가능성과 검증된 성능을 구분해서 봐야 합니다.
+
+**하나만 기억한다면:** AI 하드웨어 경쟁은 GPU 연산량만이 아니라 메모리에서 데이터를 얼마나 빨리 가져오느냐로 넓어지고 있습니다.
+
+**앞으로 볼 건:** 실칩 공개와 독립 벤치마크, 패키징 수율, 전력과 지연, 실제 고객 검증입니다.
+
+출처: [Volantis](https://volantissemi.ai/news-insights/our-88m-series-a-demolishing-the-memory-wall-with-photonics-post) · [Reuters](https://www.reuters.com/business/volantis-raises-88-million-tech-connect-ai-memory-chips-2026-10-01/)
 
 ## 사업 아이디어
 
-신규 아이디어 없음. 최근 에이전트 격리·사고 기록·AI 도구 관리 아이디어와 겹치거나 국내 고객 접근, 법률·민감 로그, 플랫폼 대체 위험을 통과하지 못했습니다.
-
-- 구축 후보: 없음
-
-## 오늘의 도구
-
-- [Prime Agent](https://github.com/PrimeIntellect-ai/prime-agent) — 폐쇄형 에이전트 대신 실행 구조와 검증 경로를 직접 살펴보려는 개발자에게 유용합니다.
+새 아이디어는 선정하지 않았습니다. Mac 권한 점검은 기존 에이전트 격리·승인 통제와 겹치고 플랫폼 자체 기능으로 대체될 위험이 있습니다. 법률 검증은 기밀·책임 게이트가 남고, 데이터센터와 광학 메모리는 1~3인 팀의 자본·장비 범위를 벗어납니다.
 
 ## 오늘의 스킬
 
-**모델 교체 회귀 점검**
+### 에이전트 권한 경계 점검
 
-기존 작업 10개를 고정 평가 세트로 만들고 구형·대체 모델의 성공률, 지연, 비용, 도구 호출 차이를 같은 조건에서 비교합니다.
+AI 에이전트가 로컬 파일·메일·브라우저·업무 SaaS에 접근하도록 허용하기 전에 사용합니다. 필요한 데이터와 금지할 데이터, 작업별 승인 시점, 로그와 중단 조건을 한 장에 적고 최소 권한으로 시험합니다.
 
 ## Worth Reading
 
-- **Paper** · [Reproducible, Explainable, and Effective Evaluations of Agentic AI for Software Engineering](https://arxiv.org/abs/2604.01437) — 코딩 에이전트를 비교할 때 실행 궤적과 모델 상호작용을 어떻게 남겨야 재현성과 설명 가능성을 확보하는지 정리합니다.
-- **GitHub** · [Prime Agent: A Self-Improving RLM Harness](https://github.com/PrimeIntellect-ai/prime-agent) — 장기 실행 코딩·리서치 에이전트의 하네스, 검증기와 학습 구조를 공개 코드로 확인할 수 있습니다.
-- **YouTube** · [CMU AI Agents 2026](https://www.youtube.com/watch?v=UwfjzyLnvMg) — 에이전트의 기본 구조와 평가 문제를 대학 강의 흐름으로 정리해 오늘의 사고 통제·배포 인력 이슈를 이해하는 데 도움을 줍니다.
-- **Blog** · [What is an AI agent?](https://www.langchain.com/blog/what-is-an-agent) — 에이전트의 자율성 수준이 높아질수록 관찰성, 평가, 권한과 안전 실행이 왜 더 중요해지는지 실무 언어로 설명합니다.
+- **Paper:** [How Agents Ask for Permission](https://arxiv.org/abs/2607.13718)
+- **GitHub:** [Meta-Agent Challenge](https://github.com/ant-research/meta-agent-challenge)
+- **YouTube:** [Rails World 2026 Opening Keynote - DHH](https://www.youtube.com/watch?v=vDjW_dRyKXY) — 메타데이터만 확인했으며 전체 영상은 검토하지 않았습니다.
+- **Blog:** [Making Your Data Ready for Agentic AI](https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html)
 
 ## 오늘의 인사이트
 
-AI의 다음 병목은 더 큰 모델이 아니라, 안전하게 움직이게 할 통제와 현장 인력, 그리고 오래 버틸 자금입니다.
+AI가 현실의 일에 들어올수록 경쟁의 경계는 모델 점수보다 권한, 사람의 책임, 전력과 메모리처럼 구체적인 곳에 생깁니다.
 
 ## 누락·미확인
 
-- OpenAI 통보 건은 회사 원문 블로그의 안정적인 직접 URL을 찾지 못해 Reuters와 Washington Post의 독립 보도로 교차 확인했습니다.
-- Amazon 칩 SPV는 FT 최초 보도를 Reuters와 MarketWatch가 전한 협상 단계이며 Amazon·NVIDIA 공식 확인과 최종 계약이 없습니다.
-- YouTube Worth Reading은 제목·채널·강의 설명을 확인했지만 전체 영상을 끝까지 검토하지 않았습니다.
-
-- OpenAI 개별 사건의 실제 침해 여부와 최종 검토 결과
-- Claude Frontier Academy 수료자의 실제 배포 성과와 한국 참여 조건
-- Amazon SPV의 최종 계약·금리·회계 처리
-- Copilot 대체 모델의 회귀 성능과 조직 정책 전환 동작
-- OpenAI 투자금 사용 내역과 SoftBank의 장기 수익
+- Apple 통제의 적용 버전·시행일·API와 MDM 정책
+- 캘리포니아 법의 시행일·집행 기준·역외 적용
+- JERA 프로젝트의 최종 투자 결정·고객·집행액·전력원
+- Volantis의 실칩·독립 성능·수율·고객
+- YouTube 항목 전체 영상 내용
 
 ## 게시 전 검증
 
-- 뉴스 5개, 사업 아이디어 0개, 구축 후보 0개
-- Worth Reading: Paper·GitHub·YouTube·Blog 각 1개
-- 동일 event_key 없음, 뉴스 출처 정규화 URL 중복 없음
-- 후보 승인 게이트: 해당 없음
-- `latest.json`: date_kst·data_path·report_path·status 네 필드만 포함
+- 뉴스 4개, 사업 아이디어 0개
+- 동일 event_key 없음, 뉴스 간 정규화 URL 중복 없음
+- Worth Reading: Paper·GitHub·YouTube·Blog 정확히 1개씩
+- 구축 후보 없음; 승인 게이트 대상 없음
+- `latest.json`: 네 필드 포인터 구조

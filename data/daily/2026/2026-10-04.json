@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-10-04",
+  "generated_at": "2026-10-03T22:03:31Z",
+  "status": "complete",
+  "warnings": [
+    "YouTube Worth Reading은 제목·채널·설명·공개 상태를 확인했지만 전체 영상을 검토하지 않았습니다.",
+    "Volantis의 성능 수치는 회사 전망이며 독립 재현 결과가 아닙니다."
+  ],
+  "news": [
+    {
+      "event_key": "apple-macos-full-disk-access-ai-agent-controls-2026-10-02",
+      "title": "Apple, macOS 전체 디스크 접근에 AI 에이전트용 추가 통제 예고",
+      "importance": "S",
+      "one_line_summary": "Apple이 AI 에이전트가 Mac의 파일·메일·메시지 등에 접근할 때 더 명시적인 사용자 동의를 요구하는 통제를 예고했습니다.",
+      "impact": "전체 디스크 접근을 한 번 허용하면 에이전트가 넓은 개인 데이터에 닿을 수 있다는 문제가 제품 수준의 권한 통제로 이어졌습니다.",
+      "original_url": "https://developer.apple.com/news/?id=p6zjojqw",
+      "key_quote": "New controls will require very explicit user action before granting that level of access.",
+      "quote_translation": "새 통제는 그 수준의 접근을 허용하기 전에 매우 명시적인 사용자 행동을 요구합니다.",
+      "summary": "FACT: Apple은 10월 2일 전체 디스크 접근이 파일·메일·메시지·브라우징 기록을 노출할 수 있다며, AI 에이전트에 더 명시적인 사용자 행동을 요구하는 통제를 마련하겠다고 밝혔습니다. Reuters와 The Verge는 Meta의 Muse를 둘러싼 불만 뒤 발표가 나왔다고 전했습니다.\n\nINTERPRETATION: 운영체제가 에이전트를 일반 앱과 같은 권한 모델로만 다루기 어렵다고 보기 시작했습니다.\n\nSIGNAL: 에이전트 제품은 어떤 데이터에 언제 접근했는지 설명하고 제한하는 능력으로 평가받을 가능성이 커졌습니다.\n\nSPECULATION: 구체적인 macOS 버전, 시행 시점, API와 기업 관리 정책은 아직 공개되지 않았습니다.",
+      "why_it_matters": "AI 에이전트의 편리함이 커질수록 운영체제 차원의 최소 권한과 사용자 확인이 제품 기본값이 됩니다.",
+      "industry_mood": {"label": "권한을 다시 쪼개는 단계", "basis": "Apple이 방향은 공개했지만 구체적인 API와 적용 일정은 아직 제시하지 않았습니다."},
+      "outlook": "적용 macOS 버전과 시점, 개발자 API, MDM 정책, 기존 앱의 전환 방식을 확인해야 합니다.",
+      "business_opportunity": "Mac 권한 점검 수요는 생기지만 기존 격리·승인 통제 아이디어와 겹치고 Apple 자체 통제로 대체될 위험이 커 새 아이디어로 선정하지 않습니다.",
+      "tags": ["Apple", "macOS", "AI 에이전트", "개인정보", "권한 관리"],
+      "sources": [
+        {"title": "Updates to Full Disk Access in macOS", "url": "https://developer.apple.com/news/?id=p6zjojqw", "publisher": "Apple Developer", "published_at": "2026-10-02", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "apple-macos-agent-disk-access"},
+        {"title": "Apple says it will flag AI requests for Mac data after Meta's Muse draws complaints", "url": "https://www.reuters.com/business/retail-consumer/apple-says-it-will-flag-ai-requests-mac-data-after-metas-muse-draws-complaints-2026-10-02/", "publisher": "Reuters", "published_at": "2026-10-02", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "apple-macos-agent-disk-access"},
+        {"title": "Apple is going to limit how AI agents access your Mac's data", "url": "https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents", "publisher": "The Verge", "published_at": "2026-10-02", "tier": "B", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "apple-macos-agent-disk-access"}
+      ],
+      "selection_score": {"confidence": 30, "impact": 24, "utility": 20, "recency": 15, "community": 6, "total": 95},
+      "time_scope": "last_24h",
+      "verification": {"status": "Apple 공식 발표와 Reuters·The Verge 교차 확인", "missing": ["적용 버전과 시행일", "개발자 API와 MDM 정책", "기존 앱 호환성"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "Mac의 전체 디스크 권한, AI 에이전트가 마음대로 넘지 못하게 됩니다",
+        "dek": "Apple이 AI 에이전트의 광범위한 데이터 접근에 더 분명한 사용자 확인을 요구하겠다고 밝혔습니다. Mac에서 대신 일하는 앱은 앞으로 권한을 얻는 방식부터 바꿔야 할 수 있습니다.",
+        "body": "Mac의 ‘전체 디스크 접근’은 파일뿐 아니라 메일, 메시지, 브라우징 기록처럼 민감한 정보까지 열어줄 수 있습니다. Apple은 10월 2일 이 권한을 AI 에이전트가 사용할 때 사용자가 훨씬 명확하게 승인하도록 새 통제를 마련하겠다고 밝혔습니다.\n\n지금까지는 사용자가 앱에 넓은 권한을 한 번 주면 그 뒤의 여러 작업이 같은 허용 범위 안에서 이뤄질 수 있었습니다. 하지만 에이전트는 사용자를 대신해 오래 움직이고 예상하지 못한 도구까지 호출할 수 있습니다. 그래서 ‘이 앱을 믿는다’는 한 번의 동의만으로는 부족하다는 판단이 나온 것입니다.\n\n발표 시점은 Meta의 개인 에이전트 Muse가 Mac 데이터에 접근하는 방식을 둘러싼 불만이 나온 뒤입니다. Meta는 접근이 사용자의 선택에 따라 이뤄진다고 설명했습니다. 다만 옵트인이라는 사실과 사용자가 실제 접근 범위를 이해한다는 것은 같은 문제가 아닙니다.\n\n아직 새 통제가 어느 macOS 버전에 들어가는지, 기존 앱이 무엇을 바꿔야 하는지는 공개되지 않았습니다. Mac용 에이전트를 개발하거나 업무에 도입했다면 기능보다 권한 요청 화면과 작업 기록이 먼저 점검 대상이 됩니다.",
+        "takeaway": "에이전트가 대신 하는 일이 많아질수록, 한 번의 넓은 허용보다 작업마다 이해할 수 있는 승인이 중요해집니다.",
+        "what_to_watch": "적용 macOS 버전과 시행일, 개발자 API, 기업용 MDM에서 예외와 승인 기록을 어떻게 다루는지 보면 됩니다.",
+        "action": "Mac의 시스템 설정에서 전체 디스크 접근 권한을 가진 앱을 확인하고, 더 이상 쓰지 않는 자동화·에이전트 앱의 권한을 끄세요."
+      }
+    },
+    {
+      "event_key": "california-sb574-lawyer-ai-accountability-2026-09-30",
+      "title": "캘리포니아, 변호사와 중재인의 AI 사용 책임을 법제화",
+      "importance": "S",
+      "one_line_summary": "캘리포니아가 변호사의 AI 작성 서면 검증과 기밀 보호, 중재인의 판단 위임 금지를 법에 담았습니다.",
+      "impact": "AI가 만들었다는 설명이 오류나 기밀 유출의 면책 사유가 될 수 없게 됐습니다.",
+      "original_url": "https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/",
+      "key_quote": "Attorneys cannot fully hand over core legal work to AI.",
+      "quote_translation": "변호사는 핵심 법률 업무를 AI에 완전히 넘길 수 없습니다.",
+      "summary": "FACT: 캘리포니아 주지사는 9월 30일 SB 574에 서명했습니다. Reuters에 따르면 변호사는 법원 제출물과 인용을 직접 검증하고, 환각을 바로잡으며, 기밀 정보를 보호해야 합니다. 중재인은 결정을 AI에 맡길 수 없습니다.\n\nINTERPRETATION: 법률 AI 규율이 윤리 지침에서 사람의 검증 책임을 명시한 법률로 이동했습니다.\n\nSIGNAL: 고위험 전문 업무에서는 누가 무엇을 확인했는지 남기는 절차가 중요해집니다.\n\nSPECULATION: 다른 주와 국가가 같은 인간 검증 의무를 채택할지는 아직 알 수 없습니다.",
+      "why_it_matters": "전문가가 AI를 쓸 수는 있지만 최종 판단과 검증 책임까지 넘길 수 없다는 경계가 법으로 구체화됐습니다.",
+      "industry_mood": {"label": "사용 금지보다 책임 고정", "basis": "법은 AI 사용 자체를 막지 않고 검증·기밀·판단 책임을 사람에게 남겼습니다."},
+      "outlook": "시행일과 징계 기준, 법원 규칙과의 관계, 다른 주의 유사 법안을 확인해야 합니다.",
+      "business_opportunity": "검증 기록 수요는 예상되지만 법률 책임과 고객 기밀, 기존 공급자의 대체 위험이 커 새 아이디어로 선정하지 않습니다.",
+      "tags": ["캘리포니아", "법률 AI", "SB 574", "인간 검증"],
+      "sources": [
+        {"title": "California's nation-leading AI framework just got stronger", "url": "https://www.gov.ca.gov/2026/09/30/californias-nation-leading-ai-framework-just-got-stronger-governor-newsom-signs-more-first-in-the-nation-worker-protections-and-more/", "publisher": "Office of Governor Gavin Newsom", "published_at": "2026-09-30", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "california-sb574-lawyer-ai-accountability"},
+        {"title": "California sets guardrails for lawyers' AI use", "url": "https://www.reuters.com/legal/government/california-sets-guardrails-lawyers-ai-use-2026-10-01/", "publisher": "Reuters", "published_at": "2026-10-01", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "california-sb574-lawyer-ai-accountability"},
+        {"title": "Use of AI: New rules and maybe a law are on the horizon for California lawyers", "url": "https://newsroom.courts.ca.gov/news/use-ai-new-rules-and-maybe-law-are-horizon-california-lawyers", "publisher": "California Courts Newsroom", "published_at": "2026-09-26", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "corroborated", "evidence_group": "california-sb574-lawyer-ai-accountability"}
+      ],
+      "selection_score": {"confidence": 30, "impact": 25, "utility": 18, "recency": 12, "community": 5, "total": 90},
+      "time_scope": "last_7d_followup",
+      "verification": {"status": "주지사 공식 발표·캘리포니아 법원·Reuters 교차 확인", "missing": ["조문별 시행일", "징계와 집행 기준", "역외 적용"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "캘리포니아, 변호사의 AI 검증 책임을 법으로 못 박았습니다",
+        "dek": "변호사는 AI가 만든 법원 서면과 인용을 직접 확인해야 하고, 중재인은 판단을 AI에 맡길 수 없습니다. AI를 써도 최종 책임은 사람에게 남는다는 원칙이 법률이 됐습니다.",
+        "body": "캘리포니아 주지사가 9월 30일 SB 574에 서명했습니다. 이 법은 변호사가 AI로 작성한 법원 제출물과 인용을 직접 확인하고, 잘못된 내용을 발견하면 고치도록 요구합니다. 고객의 기밀 정보를 AI 도구에 넣을 때 지켜야 할 책임도 분명히 했습니다.\n\n법은 AI 사용 자체를 금지하지 않습니다. 대신 변호사가 핵심 법률 업무를 통째로 넘기거나 ‘AI가 작성했다’는 이유로 오류 책임을 피하지 못하게 합니다. 중재인 역시 사건 판단을 AI에 맡길 수 없습니다.\n\n이 변화는 법률 AI의 경쟁 기준도 바꿉니다. 문서를 빨리 만드는 기능만으로는 부족하고, 어떤 자료를 근거로 삼았는지와 누가 최종 확인했는지를 남길 수 있어야 합니다. 법률 조직에는 검토 절차가 제품 선택만큼 중요해집니다.\n\n구체적인 시행일과 징계 기준, 다른 주가 같은 규칙을 따를지는 더 확인해야 합니다. 한국에 바로 적용되는 법은 아니지만, 해외 고객이나 캘리포니아 사건을 다루는 조직에는 영향을 줄 수 있습니다.",
+        "takeaway": "고위험 전문 업무에서는 AI의 성능보다 사람이 검증했다는 사실을 증명하는 절차가 먼저 요구됩니다.",
+        "what_to_watch": "시행일과 징계 기준, 법원 규칙과의 연결, 다른 미국 주의 유사 입법을 확인하면 됩니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "jera-dell-rhaelm-chiba-ai-infrastructure-2026-10-01",
+      "title": "JERA·Dell·RHAELM, 일본 발전소 연계형 AI 데이터센터 추진",
+      "importance": "A",
+      "one_line_summary": "JERA와 Dell, RHAELM이 일본 지바의 발전소 부지에 최대 400MW 규모 AI 데이터센터를 짓는 계획을 공개했습니다.",
+      "impact": "AI 데이터센터가 발전·냉각·컴퓨팅을 한 묶음으로 설계하는 인프라로 바뀌고 있습니다.",
+      "original_url": "https://www.jera.co.jp/en/news/information/20261001_2535",
+      "key_quote": "The first project targets up to 400 MW of capacity at a JERA power station in Chiba.",
+      "quote_translation": "첫 프로젝트는 지바의 JERA 발전소에서 최대 400MW 용량을 목표로 합니다.",
+      "summary": "FACT: JERA, Dell Technologies, RHAELM은 지바 발전소 부지에 AI 인프라를 개발하는 양해각서를 체결했습니다. 공식 발표는 최대 400MW, 단계별 150억달러 이상, 2028년경 운영 시작을 제시했습니다. Reuters는 완전 가동 목표를 2029년으로 전했습니다.\n\nINTERPRETATION: 병목이 서버 조달에서 전력 연결과 냉각, 장기 공급 계약을 함께 확보하는 문제로 이동했습니다.\n\nSIGNAL: 발전소와 데이터센터를 직접 연결하는 설계가 커질 수 있습니다.\n\nSPECULATION: 총 투자액, 고객, 실제 착공과 전력원 구성은 확정되지 않았습니다.",
+      "why_it_matters": "AI 인프라 경쟁에서는 칩만큼 전력 부지와 장기 공급 구조를 먼저 묶는 능력이 중요해졌습니다.",
+      "industry_mood": {"label": "발전과 컴퓨팅을 한 부지에", "basis": "용량과 투자 방향은 나왔지만 최종 투자 결정과 고객은 공개되지 않았습니다."},
+      "outlook": "최종 투자 결정, 착공, 전력원·냉각, 고객과 실제 집행액을 확인해야 합니다.",
+      "business_opportunity": "대규모 자본과 규제, 장기 계약이 필요한 영역이라 한국의 1~3인 팀 후보로 적합하지 않습니다.",
+      "tags": ["JERA", "Dell", "RHAELM", "AI 데이터센터", "일본"],
+      "sources": [
+        {"title": "JERA, Dell Technologies and RHAELM Sign MOU for AI Infrastructure Development in Japan", "url": "https://www.jera.co.jp/en/news/information/20261001_2535", "publisher": "JERA", "published_at": "2026-10-01", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "jera-chiba-ai-infrastructure"},
+        {"title": "JERA teams up with Dell, Rhaelm for AI infrastructure development in Japan", "url": "https://www.reuters.com/business/energy/jera-teams-up-with-dell-rhaelm-ai-infrastructure-development-japan-2026-10-01/", "publisher": "Reuters", "published_at": "2026-10-01", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "jera-chiba-ai-infrastructure"}
+      ],
+      "selection_score": {"confidence": 29, "impact": 23, "utility": 15, "recency": 12, "community": 4, "total": 83},
+      "time_scope": "last_7d_followup",
+      "verification": {"status": "JERA 공식 발표와 Reuters 교차 확인", "missing": ["최종 투자 결정", "앵커 고객", "전력원·냉각", "실제 집행액"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "일본 AI 데이터센터가 발전소 옆으로 갑니다",
+        "dek": "JERA와 Dell, RHAELM이 지바 발전소 부지에 최대 400MW 규모의 AI 데이터센터를 추진합니다. 서버보다 먼저 전력 연결을 확보하려는 움직임입니다.",
+        "body": "일본 최대 발전회사 중 하나인 JERA가 Dell Technologies, 인프라 개발사 RHAELM과 AI 데이터센터를 추진합니다. 첫 부지는 지바의 JERA 발전소이며, 계획상 용량은 최대 400MW입니다. 단계별 투자액은 150억달러를 넘을 수 있습니다.\n\n일반적인 데이터센터는 전력망에 연결되는 데 오랜 시간이 걸릴 수 있습니다. 이번 구상은 발전소 부지에서 전력, 냉각, 컴퓨팅을 함께 설계해 그 대기 시간을 줄이려 합니다. 공식 발표는 2028년경 운영 시작을, Reuters는 2029년 완전 가동 목표를 전했습니다.\n\n이 방식이 자리 잡으면 AI 인프라의 위치를 정하는 기준도 달라집니다. 네트워크와 부동산만 보는 대신 안정적인 전력 공급과 냉각, 장기 계약을 먼저 묶어야 합니다. 일본이 자국 안에서 대규모 AI 연산 능력을 확보하려는 흐름과도 맞닿아 있습니다.\n\n다만 아직 양해각서 단계입니다. 최종 투자 결정과 고객, 실제 착공, 어떤 전력을 얼마나 쓸지는 공개되지 않았습니다.",
+        "takeaway": "대규모 AI의 다음 병목은 칩 구매보다 전력을 언제, 어디서, 얼마나 안정적으로 확보하느냐에 있습니다.",
+        "what_to_watch": "최종 투자 결정과 착공 허가, 앵커 고객, 전력원과 냉각 방식, 단계별 실제 집행액을 보면 됩니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "volantis-photonic-memory-interconnect-series-a-2026-09-29",
+      "title": "Volantis, 광학 메모리 연결 기술로 8,800만달러 조달",
+      "importance": "A",
+      "one_line_summary": "Volantis가 GPU와 훨씬 많은 메모리 칩을 빛으로 연결하는 기술 개발을 위해 8,800만달러 시리즈A를 유치했습니다.",
+      "impact": "메모리 병목을 칩 사이 연결 방식으로 풀려는 투자가 커졌습니다.",
+      "original_url": "https://volantissemi.ai/news-insights/our-88m-series-a-demolishing-the-memory-wall-with-photonics-post",
+      "key_quote": "We raised $88 million to tackle the memory wall with photonics.",
+      "quote_translation": "우리는 광학 기술로 메모리 장벽을 풀기 위해 8,800만달러를 조달했습니다.",
+      "summary": "FACT: Volantis는 9월 29일 8,800만달러 시리즈A와 누적 9,700만달러 조달을 발표했습니다. Reuters는 VCSEL 광원을 이용해 GPU에 훨씬 많은 메모리 칩을 연결하려는 설계와 내년 칩 목표를 전했습니다.\n\nINTERPRETATION: AI 성능 경쟁이 연산 칩 자체에서 메모리 용량과 데이터 이동 방식으로 넓어졌습니다.\n\nSIGNAL: 광학 연결이 서버 내부의 메모리 연결까지 내려오고 있습니다.\n\nSPECULATION: 회사의 속도 전망은 아직 실칩과 독립 벤치마크로 확인되지 않았습니다.",
+      "why_it_matters": "GPU가 계산을 기다리는 시간을 줄이면 더 큰 모델을 돌리거나 추론 비용을 낮출 여지가 생깁니다.",
+      "industry_mood": {"label": "메모리 장벽에 자본 집중", "basis": "대규모 초기 투자는 이뤄졌지만 제품과 독립 성능은 아직 나오지 않았습니다."},
+      "outlook": "실칩, 수율, 메모리 수, 전력과 지연, 고객 검증과 독립 벤치마크를 확인해야 합니다.",
+      "business_opportunity": "반도체와 광학 패키징에 장비·자본·고객 인증 의존성이 커 1~3인 팀 후보가 아닙니다.",
+      "tags": ["Volantis", "광학 연결", "AI 반도체", "메모리 병목", "투자"],
+      "sources": [
+        {"title": "Our $88M Series A: Demolishing the Memory Wall with Photonics", "url": "https://volantissemi.ai/news-insights/our-88m-series-a-demolishing-the-memory-wall-with-photonics-post", "publisher": "Volantis Semiconductor", "published_at": "2026-09-29", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "volantis-photonic-memory-series-a"},
+        {"title": "Volantis raises $88 million for tech to connect AI memory chips", "url": "https://www.reuters.com/business/volantis-raises-88-million-tech-connect-ai-memory-chips-2026-10-01/", "publisher": "Reuters", "published_at": "2026-10-01", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "volantis-photonic-memory-series-a"}
+      ],
+      "selection_score": {"confidence": 27, "impact": 21, "utility": 14, "recency": 11, "community": 4, "total": 77},
+      "time_scope": "last_7d_followup",
+      "verification": {"status": "회사 공식 발표와 Reuters 교차 확인", "missing": ["실칩과 독립 벤치마크", "수율", "고객과 양산 일정", "전력·지연·비용"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "AI 메모리 병목, 칩 사이를 빛으로 잇는 경쟁이 커집니다",
+        "dek": "Volantis가 GPU와 메모리를 광학 방식으로 연결하는 기술에 8,800만달러를 유치했습니다. 계산 능력보다 데이터를 옮기는 속도가 느린 문제를 겨냥합니다.",
+        "body": "AI 가속기는 계산이 빨라도 필요한 데이터를 제때 받지 못하면 기다려야 합니다. Volantis는 GPU와 메모리 칩 사이를 전기 신호 대신 빛으로 연결해 이 병목을 줄이려 합니다. 회사는 이를 위해 8,800만달러의 시리즈A 투자를 받았습니다.\n\n현재 GPU 주변에는 연결 방식과 전력 때문에 붙일 수 있는 메모리 수가 제한됩니다. Reuters에 따르면 Volantis는 VCSEL이라는 소형 레이저를 이용해 한 GPU가 훨씬 많은 메모리 칩과 통신하도록 설계하고 있습니다. 목표대로라면 더 큰 모델을 메모리에 올리고 데이터 이동에 드는 시간을 줄일 수 있습니다.\n\n광학 연결은 이미 데이터센터 간 네트워크에서 쓰이지만, 이를 서버 내부의 메모리 연결까지 끌어들이는 일은 쉽지 않습니다. 칩 패키징과 수율, 발열, 비용을 함께 맞춰야 하기 때문입니다. Volantis는 내년 칩을 목표로 하고 있습니다.\n\n회사가 제시한 초대형 모델과 높은 처리 속도는 아직 전망입니다. 실제 제품과 독립 벤치마크가 나오기 전까지는 가능성과 검증된 성능을 구분해서 봐야 합니다.",
+        "takeaway": "AI 하드웨어 경쟁은 GPU 연산량만이 아니라 메모리에서 데이터를 얼마나 빨리 가져오느냐로 넓어지고 있습니다.",
+        "what_to_watch": "실칩 공개와 독립 벤치마크, 패키징 수율, 전력과 지연, 실제 고객 검증을 확인하면 됩니다.",
+        "action": null
+      }
+    }
+  ],
+  "business_ideas": [],
+  "tools": [],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "에이전트 권한 경계 점검",
+    "when_to_use": "AI 에이전트가 로컬 파일·메일·브라우저·업무 SaaS에 접근하도록 허용하기 전",
+    "practical_example": "필요한 데이터와 금지할 데이터, 작업별 승인 시점, 로그와 중단 조건을 한 장에 적고 최소 권한으로 시험합니다.",
+    "prompt_example": "이 에이전트가 수행할 작업을 기준으로 필요한 권한, 과도한 권한, 사용자 재확인이 필요한 단계, 로그 항목과 즉시 중단 조건을 표로 정리해라."
+  },
+  "worth_reading": [
+    {"type": "Paper", "title": "How Agents Ask for Permission: User Permissions for AI Agents, from Interfaces to Enforcement", "url": "https://arxiv.org/abs/2607.13718", "why_read": "21개 제안과 5개 상용 에이전트를 비교해 권한 요청을 화면, 정책, 실행 통제로 나눠 볼 수 있습니다."},
+    {"type": "GitHub", "title": "Meta-Agent Challenge", "url": "https://github.com/ant-research/meta-agent-challenge", "why_read": "에이전트가 다른 에이전트를 설계·개선하는 능력을 평가하는 과제와 재현 자료입니다."},
+    {"type": "YouTube", "title": "Rails World 2026 Opening Keynote - DHH", "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY", "why_read": "AI 에이전트 시대의 개발 방식을 다룹니다. 제목·채널·설명은 확인했지만 전체 영상은 검토하지 않았습니다."},
+    {"type": "Blog", "title": "Making Your Data Ready for Agentic AI", "url": "https://martinfowler.com/articles/making-data-ready-for-agentic-ai.html", "why_read": "에이전트에 데이터를 열 때 위임 접근, 단기 자격증명, 최소 권한과 관찰 가능성을 설명합니다."}
+  ],
+  "todays_insight": "AI가 현실의 일에 들어올수록 경쟁의 경계는 모델 점수보다 권한, 사람의 책임, 전력과 메모리처럼 구체적인 곳에 생깁니다.",
+  "morning_paper": {
+    "insight_headline": "AI가 커질수록, 경계는 더 구체적인 곳에 생깁니다",
+    "insight_summary": "Apple은 에이전트의 Mac 데이터 접근을 더 분명히 통제하려 하고, 캘리포니아는 법률 업무의 검증 책임을 사람에게 남겼습니다. 일본의 데이터센터는 발전소 곁으로 가고, 반도체 투자는 메모리 연결을 빛으로 바꾸려 합니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": ["apple-macos-full-disk-access-ai-agent-controls-2026-10-02", "california-sb574-lawyer-ai-accountability-2026-09-30", "jera-dell-rhaelm-chiba-ai-infrastructure-2026-10-01", "volantis-photonic-memory-interconnect-series-a-2026-09-29"],
+    "top_event_keys": ["apple-macos-full-disk-access-ai-agent-controls-2026-10-02", "california-sb574-lawyer-ai-accountability-2026-09-30", "jera-dell-rhaelm-chiba-ai-infrastructure-2026-10-01"]
+  },
+  "build_candidate": null
+}
+
