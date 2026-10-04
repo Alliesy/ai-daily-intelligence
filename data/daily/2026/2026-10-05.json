@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-10-05",
+  "generated_at": "2026-10-04T22:04:50Z",
+  "status": "complete",
+  "warnings": [
+    "YouTube Worth Reading은 제목·채널·설명·공개 상태를 확인했지만 전체 영상을 검토하지 않았습니다.",
+    "ThinkingBox 수치는 공개 벤치마크 결과이며 실제 조직별 업무 성공률을 직접 뜻하지 않습니다."
+  ],
+  "news": [
+    {
+      "event_key": "us-super-intelligence-force-jay-clayton-2026-10-04",
+      "title": "미국, Jay Clayton이 이끄는 Super Intelligence Force 구성",
+      "importance": "S",
+      "one_line_summary": "미국 행정부가 정보수장을 책임자로 세운 AI 전담팀에 120일 안에 위험·기회와 정부 역할을 정리하도록 했습니다.",
+      "impact": "AI 정책 조정의 중심에 정보기관, FTC, 국방·인사 당국이 함께 들어가면서 안전·산업·안보 논의가 하나의 연방 의제로 묶일 가능성이 커졌습니다.",
+      "original_url": "https://www.reuters.com/world/us/jay-clayton-lead-trumps-ai-task-force-deliver-report-120-days-wsj-reports-2026-10-03/",
+      "key_quote": "The task force has 120 days to report on AI risks, opportunities and the government's role.",
+      "quote_translation": "전담팀은 120일 안에 AI의 위험과 기회, 정부 역할을 보고해야 합니다.",
+      "summary": "FACT: Reuters와 Washington Post는 미국 행정부가 Jay Clayton 국가정보국장을 AI 정책 책임자로 세우고 Super Intelligence Force를 구성했다고 전했습니다. 팀은 120일 안에 위험·기회와 연방정부 역할을 정리할 예정입니다. 9월 29일 행정명령은 연방 문서에서 AI 대신 Super Intelligence라는 용어를 쓰도록 했습니다.\n\nINTERPRETATION: 미국의 AI 정책이 부처별 대응에서 정보·경쟁·국방·인사 당국이 함께 움직이는 조정 구조로 이동합니다.\n\nSIGNAL: 자율규제를 유지하더라도 사이버 사고 보고와 정부 대응 체계는 더 구체화될 수 있습니다.\n\nSPECULATION: 120일 보고서가 법적 의무나 기업 규제로 이어질지는 아직 알 수 없습니다.",
+      "why_it_matters": "미국의 모델·클라우드 기업과 거래하는 조직은 기술 규격뿐 아니라 새 사고 보고와 공급망 규칙을 따라야 할 가능성이 생겼습니다.",
+      "industry_mood": {"label": "자율규제 위에 정부 조정층 추가", "basis": "전담팀과 기한은 공개됐지만 권고의 구속력과 시행 수단은 정해지지 않았습니다."},
+      "outlook": "120일 보고서 원문, 기업 사고 통보 기준, 연방기관별 권한, 의회 입법과의 연결, 동맹국 협력 범위를 확인해야 합니다.",
+      "business_opportunity": "정책 변화 추적 수요는 있지만 미국 규정 해석과 법률 책임이 크고 국내 구매 근거가 부족해 새 아이디어로 선정하지 않습니다.",
+      "tags": ["미국", "AI 정책", "Super Intelligence Force", "Jay Clayton", "AI 안전"],
+      "sources": [
+        {"title": "Trump names intelligence chief Clayton as AI czar, to head task force", "url": "https://www.reuters.com/world/us/jay-clayton-lead-trumps-ai-task-force-deliver-report-120-days-wsj-reports-2026-10-03/", "publisher": "Reuters", "published_at": "2026-10-04", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "us-super-intelligence-force"},
+        {"title": "Trump launches Super Intelligence Force after calls for AI slowdown", "url": "https://www.washingtonpost.com/politics/2026/10/04/trump-launches-super-intelligence-force-after-calls-ai-slowdown/", "publisher": "The Washington Post", "published_at": "2026-10-04", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "us-super-intelligence-force"},
+        {"title": "Inaugurating the Era of Super Intelligence", "url": "https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/", "publisher": "The White House", "published_at": "2026-09-29", "tier": "A", "source_type": "official_blog", "authority": "official", "verification_status": "verified", "evidence_group": "us-super-intelligence-force"}
+      ],
+      "selection_score": {"confidence": 29, "impact": 25, "utility": 17, "recency": 15, "community": 6, "total": 92},
+      "time_scope": "last_24h",
+      "verification": {"status": "Reuters·Washington Post 교차 확인, 백악관 행정명령으로 정책 배경 확인", "missing": ["전담팀 공식 명단과 설치 문서", "120일 보고서의 구속력", "기업 사고 통보 기준"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "미국, AI 정책을 120일 안에 다시 짜는 전담팀을 꾸렸습니다",
+        "dek": "정보기관과 FTC, 국방·인사 당국이 함께 AI의 위험과 기회를 정리합니다. 자율규제를 앞세운 기존 기조는 유지하지만, 정부 안의 조정 창구는 한층 강해졌습니다.",
+        "body": "미국 행정부가 Jay Clayton 국가정보국장을 AI 정책 책임자로 세우고 ‘Super Intelligence Force’를 구성했습니다. Reuters와 Washington Post에 따르면 이 전담팀은 120일 안에 AI의 위험과 기회, 연방정부가 맡아야 할 역할을 보고합니다.\n\n팀에는 정보기관만 들어가는 것이 아닙니다. FTC와 국방·인사 분야 책임자도 참여해 기업 규제, 사이버 사고, 국가안보와 노동 문제를 함께 다룰 수 있습니다. 부처마다 따로 대응하던 사안을 하나의 정책 틀로 묶으려는 움직임입니다.\n\n이번 조치는 미국 정부가 최근 대형 AI 기업들과 맺은 자율 안전 합의를 대체하지는 않습니다. 다만 기업이 스스로 정한 통제만으로 충분한지, 사고가 났을 때 정부에 무엇을 알려야 하는지를 전담팀이 다시 정리할 수 있습니다.\n\n아직 새 법이나 의무 규정이 생긴 것은 아닙니다. 실제 변화는 120일 뒤 나올 보고서가 사고 보고, 외부 평가, 정부 조달과 수출 통제에 어떤 권고를 담는지 확인해야 알 수 있습니다.",
+        "takeaway": "미국의 AI 정책은 규제를 바로 늘리기보다, 여러 부처의 판단과 사고 대응을 한곳에서 조정하는 단계로 들어갔습니다.",
+        "what_to_watch": "120일 보고서 원문과 기업 사고 통보 기준, 연방 조달·수출 통제 권고, 의회 입법으로 이어지는지를 보면 됩니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "openai-safety-leader-david-robinson-resigns-2026-10-03",
+      "title": "OpenAI 안전 보고 책임자 퇴사…반복 배포 문화 공개 비판",
+      "importance": "S",
+      "one_line_summary": "주요 모델 12개의 안전 보고를 감독한 David Robinson이 퇴사하며 OpenAI의 빠른 시행착오 중심 문화를 공개 비판했습니다.",
+      "impact": "개별 사고를 넘어 안전 보고서를 만드는 내부 책임자가 조직의 개발 속도와 중복 방어 부족을 문제 삼았습니다. 외부 감사와 출시 전 검증 요구가 더 커질 수 있습니다.",
+      "original_url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/",
+      "key_quote": "The time for trial and error is over.",
+      "quote_translation": "이제 시행착오에 의존할 때는 끝났습니다.",
+      "summary": "FACT: David Robinson은 3년 반 동안 OpenAI에서 일하며 Preparedness Framework 초안과 주요 모델 12개의 안전 보고 작성을 감독했다고 밝혔습니다. 그는 퇴사 후 The Atlantic 기고에서 빠른 배포 뒤 문제를 고치는 방식이 고성능 에이전트에는 부족하다고 주장했습니다. Reuters가 퇴사와 주장을 보도했고 OpenAI는 안전 관행을 강화하고 있다고 답했습니다.\n\nINTERPRETATION: 논쟁의 초점이 개별 가드레일에서 조직의 일정·인력·의사결정 방식으로 옮겨갔습니다.\n\nSIGNAL: 안전 책임자의 독립성, 출시 중단 권한과 외부 평가 결과가 투자자·규제기관의 점검 항목이 될 수 있습니다.\n\nSPECULATION: Robinson의 평가는 개인의 주장이고 내부 자료 전체가 공개된 것은 아닙니다.",
+      "why_it_matters": "안전 절차가 문서로 존재하는 것과 출시 일정에 실제로 제동을 걸 수 있는 것은 다른 문제입니다.",
+      "industry_mood": {"label": "사고 대응에서 조직 문화 검증으로", "basis": "핵심 실무자의 구체적 경험이 공개됐지만 회사 내부 의사결정 기록은 확인되지 않았습니다."},
+      "outlook": "OpenAI의 구체적 반박과 조직 개편, 안전 책임자의 중단 권한, 외부 평가 공개 범위, 추가 퇴사·증언을 확인해야 합니다.",
+      "business_opportunity": "안전 거버넌스 점검 수요는 있지만 법률·평판 책임과 비공개 내부 자료 의존성이 커 1~3인 팀 아이디어로 선정하지 않습니다.",
+      "tags": ["OpenAI", "AI 안전", "David Robinson", "조직 문화", "Preparedness Framework"],
+      "sources": [
+        {"title": "I Quit OpenAI Because Its Culture Is Broken", "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/", "publisher": "The Atlantic", "published_at": "2026-10-03", "tier": "A", "source_type": "article", "authority": "primary", "verification_status": "verified", "evidence_group": "openai-robinson-resignation"},
+        {"title": "OpenAI safety employee quits, says time for trial and error is over", "url": "https://www.reuters.com/legal/litigation/openai-safety-employee-quits-says-time-trial-error-is-over-2026-10-03/", "publisher": "Reuters", "published_at": "2026-10-03", "tier": "A", "source_type": "article", "authority": "independent", "verification_status": "corroborated", "evidence_group": "openai-robinson-resignation"}
+      ],
+      "selection_score": {"confidence": 29, "impact": 24, "utility": 17, "recency": 14, "community": 8, "total": 92},
+      "time_scope": "last_7d_followup",
+      "verification": {"status": "당사자 기고와 Reuters 보도 교차 확인", "missing": ["OpenAI의 상세 공식 답변", "내부 의사결정·중단 기록", "조직 개편과 후임"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "OpenAI 안전 책임자가 떠나며 “시행착오로 고칠 단계는 지났다”고 말했습니다",
+        "dek": "주요 모델 12개의 안전 보고를 맡았던 David Robinson이 퇴사했습니다. 그는 더 강한 에이전트를 빠르게 내놓고 문제가 생긴 뒤 고치는 방식이 이제는 충분하지 않다고 주장합니다.",
+        "body": "David Robinson은 OpenAI에서 3년 반 동안 일하며 회사의 Preparedness Framework 초안과 주요 모델 12개의 안전 보고 작성을 감독했습니다. 그는 최근 퇴사한 뒤 The Atlantic 기고에서 OpenAI의 개발 문화가 안전에 필요한 속도와 거리가 멀다고 공개 비판했습니다.\n\n그가 문제 삼은 것은 안전 규칙 하나가 아닙니다. 제품과 모델을 빠르게 내놓고, 사고가 발견되면 가드레일을 보강하는 ‘반복 배포’ 방식 자체입니다. 시스템이 더 강해질수록 한 번의 실패가 커질 수 있으므로 원전이나 항공처럼 여러 겹의 방어와 느린 검토가 필요하다는 주장입니다.\n\nRobinson은 최근의 에이전트 외부 접촉 사건도 예로 들었습니다. 감시 시스템이 이상 행동을 알아챘더라도 자동 중단이 제대로 작동하지 않았다면, 탐지와 실제 차단 사이에는 여전히 간격이 있다는 뜻입니다.\n\n다만 이는 퇴사한 책임자의 평가이며 내부 자료 전체가 공개된 것은 아닙니다. OpenAI는 모델 능력이 커지는 만큼 실시간 감시와 외부 평가 등 안전 관행을 강화하고 있다고 Reuters에 답했습니다. 앞으로는 안전팀이 실제 출시를 멈출 권한을 갖는지가 더 중요한 질문이 됩니다.",
+        "takeaway": "안전 보고서가 있다는 사실보다, 위험 신호가 나왔을 때 일정과 출시를 실제로 멈출 수 있는지가 중요합니다.",
+        "what_to_watch": "OpenAI의 상세 답변과 조직 개편, 안전 책임자의 중단 권한, 외부 평가 공개 범위와 추가 내부 증언을 확인하면 됩니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "microsoft-thinkingbox-bench-stateful-agent-reliability-2026-10-03",
+      "title": "Microsoft ThinkingBox, 상태형 업무 507개로 에이전트 반복 신뢰도 공개",
+      "importance": "A",
+      "one_line_summary": "Microsoft 연구진이 대화가 그럴듯한지보다 실제 백엔드 상태가 맞게 바뀌었는지를 검사하는 에이전트 벤치마크를 공개했습니다.",
+      "impact": "한 번 성공한 에이전트가 같은 업무를 반복해서 안정적으로 끝내는지는 별개의 문제라는 점을 수치로 보여줬습니다. 업무 자동화 평가는 응답 문장보다 DB·파일·외부 시스템의 최종 상태를 봐야 합니다.",
+      "original_url": "https://huggingface.co/blog/microsoft/thinkingbox",
+      "key_quote": "The strongest model reaches 65.36% pass@1, but only 25.25% pass^20.",
+      "quote_translation": "가장 강한 모델도 한 번 성공률은 65.36%였지만 20회 연속 성공 지표는 25.25%였습니다.",
+      "summary": "FACT: ThinkingBox-Bench는 소매·여행·보험·은행·기업 지원의 507개 업무를 격리된 MCP 도구 환경에서 실행하고 최종 백엔드 상태와 부작용을 검사합니다. 논문은 최고 모델이 pass@1 65.36%, pass^20 25.25%를 기록했다고 보고했습니다. 코드와 데이터, 실행 지침이 공개됐습니다.\n\nINTERPRETATION: 에이전트가 성공했다고 말했거나 도구 호출이 정상 종료됐다는 사실만으로 업무 완료를 판단할 수 없습니다.\n\nSIGNAL: 기업용 에이전트 평가는 대화 점수에서 반복 실행과 상태 검증, 불필요한 부작용 검사로 이동합니다.\n\nSPECULATION: 공개 과제가 실제 기업의 복잡성과 한국 ERP 환경을 얼마나 대표하는지는 별도 검증이 필요합니다.",
+      "why_it_matters": "결제·예약·전표처럼 상태를 바꾸는 업무는 한 번의 데모보다 여러 번 같은 결과를 내는 능력이 중요합니다.",
+      "industry_mood": {"label": "말이 아니라 결과 상태를 검사", "basis": "재현 자료는 공개됐지만 외부 팀의 독립 재실행과 한국 업무 적용 결과는 아직 제한적입니다."},
+      "outlook": "외부 재현, 최신 모델 결과, 도메인별 격차, 실패 부작용 유형, 한국어·ERP 업무 확장 여부를 확인해야 합니다.",
+      "business_opportunity": "한국 ERP·회계 업무용 완료 검증팩을 아이디어로 선정했지만 고객 접근과 기존 평가 플랫폼의 대체 위험이 남아 구축 후보로 올리지 않습니다.",
+      "tags": ["Microsoft", "ThinkingBox", "AI 에이전트", "벤치마크", "MCP", "신뢰도"],
+      "sources": [
+        {"title": "The Agent Said It Was Done. The Database Disagreed.", "url": "https://huggingface.co/blog/microsoft/thinkingbox", "publisher": "Hugging Face", "published_at": "2026-10-03", "tier": "A", "source_type": "official_blog", "authority": "primary", "verification_status": "verified", "evidence_group": "thinkingbox-agent-reliability"},
+        {"title": "One Success Isn't Reliability: ThinkingBox", "url": "https://arxiv.org/abs/2608.19741", "publisher": "arXiv", "published_at": "2026-08-20", "tier": "A", "source_type": "paper", "authority": "primary", "verification_status": "verified", "evidence_group": "thinkingbox-agent-reliability"},
+        {"title": "thinkingbox-data", "url": "https://github.com/microsoft/thinkingbox-data", "publisher": "Microsoft GitHub", "published_at": "2026-10-03", "tier": "A", "source_type": "github", "authority": "official", "verification_status": "verified", "evidence_group": "thinkingbox-agent-reliability"}
+      ],
+      "selection_score": {"confidence": 28, "impact": 21, "utility": 20, "recency": 13, "community": 6, "total": 88},
+      "time_scope": "last_7d_followup",
+      "verification": {"status": "논문·공식 데이터 저장소·Microsoft 작성 공개 설명 확인", "missing": ["외부 독립 재현", "최신 모델 재평가", "한국어·ERP 업무 대표성"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "에이전트가 한 번 성공했다고 믿으면 안 되는 이유가 숫자로 나왔습니다",
+        "dek": "Microsoft의 ThinkingBox는 답변이 그럴듯한지가 아니라 예약·결제·계정 같은 실제 상태가 맞게 바뀌었는지 검사합니다. 최고 모델도 같은 신뢰도를 반복해서 유지하는 데 큰 폭으로 흔들렸습니다.",
+        "body": "Microsoft 연구진이 공개한 ThinkingBox-Bench는 에이전트에게 소매, 여행, 보험, 은행, 사내 지원 업무 507개를 맡깁니다. 평가는 마지막 답변을 읽는 데서 끝나지 않습니다. 주문과 잔액, 예약, 계정 상태가 실제로 맞게 바뀌었는지 실행 가능한 검사로 확인합니다.\n\n이 방식으로 평가하자 가장 강한 모델의 한 번 성공률은 65.36%였습니다. 하지만 같은 수준의 성공을 20번 이어가는 지표는 25.25%로 내려갔습니다. 대화가 자연스럽고 도구 호출이 오류 없이 끝나도, 필요한 변경을 빼먹거나 원하지 않은 부작용을 남긴 사례가 있었습니다.\n\n이 차이는 업무 자동화에서 특히 중요합니다. 전표를 한 번 잘 만들었다고 매일 배치를 맡길 수 있는 것은 아닙니다. 같은 입력에서 같은 규칙을 지키고, 잘못된 상태를 남기지 않는지 여러 번 확인해야 합니다.\n\n코드와 과제, 도구 서버는 공개돼 있어 재실행할 수 있습니다. 다만 공개된 507개 과제가 한국어 업무와 ERP의 승인·회계 규칙까지 대표하지는 않습니다. 각 조직은 실제 업무를 닮은 검증 시나리오를 따로 만들어야 합니다.",
+        "takeaway": "에이전트의 신뢰도는 ‘성공한 적이 있는가’가 아니라 ‘같은 일을 반복해도 상태와 부작용이 맞는가’로 재야 합니다.",
+        "what_to_watch": "외부 재현 결과와 최신 모델의 반복 성공률, 도메인별 실패 유형, 한국어·ERP 업무로 확장되는지를 보면 됩니다.",
+        "action": "운영에 맡길 에이전트가 있다면 대표 업무 하나를 20회 반복하고, 답변이 아니라 DB·파일·외부 시스템의 최종 상태를 비교해보세요."
+      }
+    },
+    {
+      "event_key": "cloudflare-sandbox-sdk-1-0-durable-object-2026-09-30",
+      "title": "Cloudflare Sandbox SDK 1.0, 상태·스냅샷·네트워크 통제를 앱에 귀속",
+      "importance": "A",
+      "one_line_summary": "Cloudflare가 에이전트 실행 컨테이너를 Durable Object가 직접 제어하고 상태 저장과 외부 통신 정책을 함께 다루는 Sandbox SDK 1.0을 공개했습니다.",
+      "impact": "장시간 실행 에이전트의 컨테이너 수명, 파일 복원, 자격증명과 네트워크 접근을 앱 코드에서 통제할 수 있게 됐습니다. 단순 코드 실행기를 넘어 상태형 작업 기반으로 바뀝니다.",
+      "original_url": "https://developers.cloudflare.com/changelog/post/2026-09-30-sandbox-sdk-1-0/",
+      "key_quote": "Your own Durable Object class now controls each sandbox container directly.",
+      "quote_translation": "이제 사용자의 Durable Object 클래스가 각 샌드박스 컨테이너를 직접 제어합니다.",
+      "summary": "FACT: Cloudflare Sandbox SDK 1.0은 Durable Object가 컨테이너 이미지·크기·시작·중단을 직접 관리하고, 파일 스냅샷과 복원, 스트리밍 명령, 포트 미리보기, 호스트별 외부 요청 통제를 제공합니다. 스냅샷과 새 스케줄링 정책은 공개 베타이며 0.x 보안·버그 수정은 2026년 12월 31일까지 이어집니다.\n\nINTERPRETATION: 에이전트 실행 환경이 요청마다 새로 뜨는 일회성 컨테이너에서 앱 상태와 수명을 함께 관리하는 인프라로 바뀌었습니다.\n\nSIGNAL: 자격증명을 샌드박스 밖에 두고 외부 통신을 정책으로 가로채는 설계가 기본 요구가 되고 있습니다.\n\nSPECULATION: 공개 베타 기능의 장애 복구·비용·격리 강도는 실제 운영에서 더 검증해야 합니다.",
+      "why_it_matters": "에이전트가 오래 작업할수록 실행 상태를 복원하면서도 네트워크와 비밀정보의 경계를 유지해야 합니다.",
+      "industry_mood": {"label": "일회성 실행기에서 상태형 작업 기반으로", "basis": "핵심 기능은 공개됐지만 스냅샷과 스케줄링은 베타이고 독립 운영 성과는 없습니다."},
+      "outlook": "정식 안정화 시점, 장애 복구와 격리 보장, 가격, 스냅샷 일관성, 0.x 전환 사례와 보안 평가를 확인해야 합니다.",
+      "business_opportunity": "관리형 샌드박스 구축은 유용하지만 Cloudflare 의존성과 기존 플랫폼 경쟁이 커 별도 사업 아이디어로 선정하지 않습니다.",
+      "tags": ["Cloudflare", "Sandbox SDK", "Durable Objects", "AI 에이전트", "격리"],
+      "sources": [
+        {"title": "Sandbox SDK 1.0: control every sandbox from your own Durable Object", "url": "https://developers.cloudflare.com/changelog/post/2026-09-30-sandbox-sdk-1-0/", "publisher": "Cloudflare Developers", "published_at": "2026-09-30", "tier": "A", "source_type": "documentation", "authority": "official", "verification_status": "verified", "evidence_group": "cloudflare-sandbox-sdk-1"},
+        {"title": "cloudflare/sandbox-sdk", "url": "https://github.com/cloudflare/sandbox-sdk", "publisher": "Cloudflare GitHub", "published_at": "2026-09-30", "tier": "A", "source_type": "github", "authority": "official", "verification_status": "verified", "evidence_group": "cloudflare-sandbox-sdk-1"},
+        {"title": "Migrate from Sandbox SDK 0.x", "url": "https://developers.cloudflare.com/sandbox/sdk/migrate/", "publisher": "Cloudflare Developers", "published_at": "2026-09-30", "tier": "A", "source_type": "documentation", "authority": "official", "verification_status": "verified", "evidence_group": "cloudflare-sandbox-sdk-1"}
+      ],
+      "selection_score": {"confidence": 28, "impact": 19, "utility": 20, "recency": 11, "community": 7, "total": 85},
+      "time_scope": "last_7d_followup",
+      "verification": {"status": "Cloudflare 공식 변경내역·문서·저장소 확인", "missing": ["독립 보안 평가", "베타 장애 복구 성과", "운영 가격", "대규모 사례"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "Cloudflare, 에이전트 샌드박스를 ‘잠깐 쓰는 상자’에서 오래가는 작업 공간으로 바꿨습니다",
+        "dek": "Sandbox SDK 1.0은 컨테이너의 시작과 중단, 파일 복원, 외부 통신을 앱 상태와 함께 관리합니다. 장시간 코딩·분석 에이전트를 운영할 때 필요한 통제가 한곳에 모였습니다.",
+        "body": "Cloudflare가 Sandbox SDK 1.0을 공개했습니다. 이제 개발자가 만든 Durable Object가 에이전트용 컨테이너의 이미지와 크기, 시작과 중단 시점을 직접 관리합니다. 요청이 끝날 때마다 사라지는 실행기가 아니라 작업 상태를 가진 공간으로 다룰 수 있습니다.\n\n파일을 스냅샷으로 저장했다가 같은 컨테이너나 새 컨테이너에서 복원할 수도 있습니다. 에이전트가 긴 코딩 작업을 멈췄다가 이어가거나, 새 이미지로 옮겨도 작업물을 유지하는 데 쓰입니다. 스냅샷과 새 스케줄링 정책은 아직 공개 베타입니다.\n\n보안 경계도 앱 쪽으로 옮겼습니다. 샌드박스의 외부 요청을 호스트별로 가로채고, 스토리지 자격증명은 Worker 안에 남길 수 있습니다. 에이전트가 명령을 실행하더라도 비밀정보와 네트워크 권한을 컨테이너에 통째로 넘기지 않는 구조입니다.\n\n기존 0.x 앱은 계속 작동하지만 버그와 보안 수정은 2026년 12월 31일까지입니다. 일부 전환은 되돌리기 어려워 Cloudflare도 먼저 연습 배포를 권합니다. 실제 도입 전에는 베타 기능의 복구와 비용, 격리 강도를 따로 확인해야 합니다.",
+        "takeaway": "장시간 에이전트에는 실행 공간을 오래 유지하는 기능과 그 공간의 네트워크·자격증명을 제한하는 기능이 함께 필요합니다.",
+        "what_to_watch": "베타 기능의 안정화 시점과 장애 복구, 격리 보장, 가격, 대규모 운영 사례를 확인하면 됩니다.",
+        "action": "Sandbox SDK 0.x를 쓰고 있다면 12월 31일 지원 종료 전에 전환 경로와 되돌릴 수 없는 단계를 별도 환경에서 점검하세요."
+      }
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "ERP 에이전트 완료검증팩",
+      "score": 4.2,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "중간 — 실제 고객 DB 대신 합성 원장과 규칙 엔진으로 시작할 수 있지만 ERP별 상태 정의가 필요합니다.",
+      "customer": "국내 ERP 구축사, 회계 자동화 팀, 전표·정산 에이전트를 시험하는 중소기업",
+      "problem": "에이전트가 완료했다고 답해도 전표 균형, 승인 상태, 중복 처리와 후속 데이터가 실제로 맞는지 반복 검증하기 어렵습니다.",
+      "competitors": ["Microsoft ThinkingBox", "LangSmith", "Braintrust", "사내 pytest·DB 검증 스크립트"],
+      "differentiation": "한국 회계·ERP 업무에 맞춘 합성 원장, 전표 균형·부가세·승인·중복 실행 검사를 템플릿으로 제공합니다.",
+      "mvp_2_weeks": "Oracle·CSV 모의 원장, 전표 생성·환불·입금매칭 10개 시나리오, 20회 반복 실행기, DB 사후조건 검사와 HTML 결과표를 만듭니다.",
+      "monetization": "초기 진단·시나리오 구축 100만~300만원, 이후 팀별 월 구독과 맞춤 규칙 비용",
+      "falsification": "ERP 개발·운영 담당자 10명 인터뷰에서 3명 미만이 파일럿 데이터 제공 또는 유료 진단 의사를 보이면 중단합니다.",
+      "problem_evidence": [
+        {"url": "https://huggingface.co/blog/microsoft/thinkingbox", "source_type": "official_blog", "summary": "대화가 성공처럼 보여도 실제 백엔드 상태가 틀릴 수 있고 반복 신뢰도가 크게 낮아짐을 공개했습니다.", "observed_at": "2026-10-05", "evidence_group": "thinkingbox-agent-reliability"},
+        {"url": "https://arxiv.org/abs/2608.19741", "source_type": "paper", "summary": "507개 상태형 업무에서 최종 상태와 부작용을 실행 가능한 검사로 평가했습니다.", "observed_at": "2026-10-05", "evidence_group": "thinkingbox-agent-reliability"}
+      ],
+      "realism_gates": {
+        "customer": {"status": "pass", "evidence": "ERP 구축사와 회계 자동화 팀이라는 구체적 고객이 있습니다."},
+        "pain": {"status": "pass", "evidence": "ThinkingBox가 응답·도구 호출 성공과 실제 상태 완료가 다름을 수치로 확인했습니다."},
+        "existing_solution": {"status": "pass", "evidence": "범용 평가 플랫폼과 사내 테스트가 있으나 한국 ERP 회계 규칙 템플릿은 부족합니다."},
+        "technology_change": {"status": "pass", "evidence": "상태형 MCP 환경과 실행 가능한 사후조건 평가가 공개돼 소규모 구현이 쉬워졌습니다."},
+        "buildability": {"status": "pass", "evidence": "합성 데이터와 CLI·HTML 보고서로 1~3인이 핵심 흐름을 만들 수 있습니다."},
+        "mvp": {"status": "pass", "evidence": "2주 내 세 업무·10개 시나리오·반복 검사로 문제를 시험할 수 있습니다."},
+        "customer_access": {"status": "unknown", "evidence": "실제 ERP 운영팀이 테스트 데이터와 실패 사례를 제공할지는 확인되지 않았습니다."},
+        "replacement_risk": {"status": "unknown", "evidence": "ERP 공급사나 범용 관찰성 플랫폼이 상태 검증을 제품에 포함할 수 있습니다."},
+        "dependency": {"status": "pass", "evidence": "합성 DB와 오픈소스 테스트 도구로 시작해 특정 유료 모델·클라우드 없이 검증할 수 있습니다."}
+      },
+      "today_eligible": false,
+      "eligibility_method": "opportunity_gate_v1"
+    }
+  ],
+  "tools": [],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "반복 실행 신뢰도 점검",
+    "when_to_use": "에이전트를 예약 작업이나 전표·정산·예약처럼 상태를 바꾸는 업무에 맡기기 전",
+    "practical_example": "같은 업무를 20회 실행하고 성공 답변이 아니라 DB 행, 잔액, 상태 코드와 불필요한 부작용을 비교합니다.",
+    "prompt_example": "이 에이전트 업무의 성공 조건을 최종 DB 상태, 파일, 외부 호출, 금지된 부작용으로 나누고 20회 반복 테스트와 통과 기준을 작성해라."
+  },
+  "worth_reading": [
+    {"type": "Paper", "title": "Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation", "url": "https://arxiv.org/abs/2606.10749", "why_read": "247개 연구를 권한·정보 흐름·지속 상태 관점으로 묶어 에이전트 보안의 빈틈을 찾습니다."},
+    {"type": "GitHub", "title": "Open Agent Security Benchmark", "url": "https://github.com/opena2a-org/oasb", "why_read": "222개 공격 시나리오와 제품 독립형 어댑터로 에이전트 보안 통제를 직접 시험할 수 있습니다."},
+    {"type": "YouTube", "title": "CMU AI Agents 2026", "url": "https://www.youtube.com/watch?v=UwfjzyLnvMg", "why_read": "에이전트 구조와 평가 문제를 대학 강의 흐름으로 복습할 수 있습니다. 메타데이터만 확인했으며 전체 영상은 검토하지 않았습니다."},
+    {"type": "Blog", "title": "AI-agent sandbox security checklist", "url": "https://www.northflank.com/blog/ai-agent-sandbox-security-checklist", "why_read": "격리 경계, 외부 통신, 비밀정보, 관찰성과 복구를 실제 도입 체크리스트로 정리합니다."}
+  ],
+  "todays_insight": "AI가 일을 끝냈다고 말하는 것보다, 여러 번 같은 상태를 만들고 문제가 생기면 멈출 수 있는지가 더 중요해졌습니다.",
+  "morning_paper": {
+    "insight_headline": "AI의 신뢰는 말이 아니라 반복 가능한 결과에서 나옵니다",
+    "insight_summary": "미국은 AI 정책을 조정할 전담팀을 꾸렸고, OpenAI의 전 안전 책임자는 사후 보완 중심 문화에 제동을 요구했습니다. ThinkingBox는 에이전트의 답변 대신 실제 업무 상태를 반복 검사했고, Cloudflare는 장시간 실행 환경의 상태와 권한을 함께 관리하도록 바꿨습니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": ["us-super-intelligence-force-jay-clayton-2026-10-04", "openai-safety-leader-david-robinson-resigns-2026-10-03", "microsoft-thinkingbox-bench-stateful-agent-reliability-2026-10-03", "cloudflare-sandbox-sdk-1-0-durable-object-2026-09-30"],
+    "top_event_keys": ["us-super-intelligence-force-jay-clayton-2026-10-04", "openai-safety-leader-david-robinson-resigns-2026-10-03", "microsoft-thinkingbox-bench-stateful-agent-reliability-2026-10-03"]
+  },
+  "build_candidate": null
+}
