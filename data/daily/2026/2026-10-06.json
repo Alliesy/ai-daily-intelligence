@@ -1,0 +1,348 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-10-06",
+  "generated_at": "2026-10-05T22:02:02Z",
+  "status": "complete",
+  "warnings": [
+    "Reflection Beam의 가중치·기술 보고서·모델 카드는 아직 공개되지 않아 회사 발표 성능을 독립 재현할 수 없습니다.",
+    "YouTube Worth Reading은 제목·공식 게시자·공개 상태를 확인했지만 전체 영상을 검토하지 않았습니다."
+  ],
+  "news": [
+    {
+      "event_key": "reflection-ai-beam-open-weight-preview-2026-10-05",
+      "title": "Reflection AI, 501B 오픈웨이트 모델 Beam 공개 예고",
+      "importance": "S",
+      "one_line_summary": "Reflection AI가 코딩·에이전트 작업용 501B MoE 모델 Beam을 공개하고 이달 안에 Apache 2.0 가중치와 실행 도구를 배포하겠다고 밝혔습니다.",
+      "impact": "미국계 오픈웨이트 모델이 중국 모델의 비용·커스터마이징 강점에 정면으로 대응합니다. 다만 현재는 제한된 미리보기이며 성능과 안전성은 아직 회사 자료에 의존합니다.",
+      "original_url": "https://reflection.ai/blog/introducing-beam",
+      "key_quote": "Beam은 501B 전체 파라미터 중 작업마다 23B만 활성화하도록 설계됐습니다.",
+      "quote_translation": "전체 모델은 크지만 매번 일부만 사용해 추론 비용을 줄이겠다는 구조입니다.",
+      "summary": "FACT: Reflection AI는 10월 5일 Beam을 발표했습니다. 이 모델은 501B 전체 파라미터와 23B 활성 파라미터를 가진 희소 MoE이며 코딩·추론·에이전트 작업을 겨냥합니다. 회사는 23.8조 토큰으로 사전학습했고 10,500대의 NVIDIA GB300에서 4주 동안 1억 회가 넘는 RL rollout을 생성했다고 밝혔습니다. 가중치·기술 보고서·모델 카드·개발 도구는 이달 안에 Apache 2.0으로 공개할 예정입니다.\n\nINTERPRETATION: 미국 오픈웨이트 경쟁이 작은 모델이 아니라 대규모 훈련과 효율적 활성 파라미터를 결합하는 방향으로 커지고 있습니다.\n\nSIGNAL: 기업은 폐쇄형 API와 중국 오픈모델 사이에서 미국산 로컬 실행 대안을 하나 더 검토할 수 있습니다.\n\nSPECULATION: 회사가 제시한 성능 우위와 추론 효율이 실제 하드웨어·한국어 업무에서 재현될지는 아직 알 수 없습니다.",
+      "why_it_matters": "오픈웨이트 선택지는 데이터 통제와 공급자 전환에 직접 영향을 주지만, 다운로드 가능한 가중치와 재현 가능한 평가가 나와야 실제 대안이 됩니다.",
+      "industry_mood": {
+        "label": "오픈모델 경쟁이 국가와 공급망 경쟁으로 확대",
+        "basis": "공식 공개 일정과 구조는 확인됐지만 현재 가중치와 전체 평가 자료는 공개 전입니다."
+      },
+      "outlook": "이달 안에 약속한 가중치·Apache 2.0 라이선스·기술 보고서가 실제 공개되는지, 독립 벤치마크와 한국어 성능, 필요한 GPU 메모리를 확인해야 합니다.",
+      "business_opportunity": "오픈모델 전환·평가 수요는 커질 수 있지만 가중치가 아직 없고 기존 평가 플랫폼 경쟁이 커 새 아이디어로 선정하지 않습니다.",
+      "tags": ["Reflection AI", "Beam", "open-weight", "coding", "agent"],
+      "sources": [
+        {
+          "title": "Introducing Beam: Reflection’s 501B open-weight model",
+          "url": "https://reflection.ai/blog/introducing-beam",
+          "publisher": "Reflection AI",
+          "published_at": "2026-10-05",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "reflection-beam-launch"
+        },
+        {
+          "title": "Nvidia-backed Reflection unveils first AI model to take on Chinese open models",
+          "url": "https://www.reuters.com/technology/nvidia-backed-reflection-unveils-first-ai-model-take-chinese-open-models-2026-10-05/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-05",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "reflection-beam-launch"
+        }
+      ],
+      "selection_score": {
+        "confidence": 28,
+        "impact": 23,
+        "utility": 18,
+        "recency": 15,
+        "community": 8,
+        "total": 92
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "Reflection 공식 발표와 Reuters 보도로 구조·공개 계획 교차 확인",
+        "missing": [
+          "다운로드 가능한 가중치와 최종 Apache 2.0 라이선스",
+          "기술 보고서·모델 카드·안전평가 원문",
+          "독립 성능·비용·한국어 재현"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "미국산 오픈모델 Beam이 나옵니다…하지만 아직은 ‘공개 예고’입니다",
+        "dek": "Reflection AI가 501B 규모의 코딩·에이전트 모델을 선보였습니다. 이달 안에 가중치와 실행 도구를 공개하겠다고 했지만, 지금은 회사가 고른 시험 결과만 확인할 수 있습니다.",
+        "body": "Reflection AI가 첫 오픈웨이트 모델 Beam을 발표했습니다. 전체 파라미터는 501B지만 작업할 때는 23B만 활성화하는 희소 Mixture-of-Experts 구조입니다. 큰 모델의 능력을 유지하면서 매번 쓰는 계산량은 줄이려는 설계입니다.\n\n회사는 Beam을 코딩과 에이전트 업무에 집중해 훈련했습니다. 23.8조 토큰으로 사전학습한 뒤 NVIDIA GB300 10,500대에서 4주 동안 1억 회가 넘는 강화학습 시도를 돌렸다고 밝혔습니다. 자사 시험에서는 GLM 5.2와 경쟁하고 Qwen 3.8-Max에 가까운 결과를 냈다고 설명합니다.\n\n다만 지금 바로 내려받아 쓸 수 있는 모델은 아닙니다. Beam은 최종 레드팀과 평가를 거치는 제한된 미리보기 단계입니다. Reflection은 이달 안에 가중치, 기술 보고서, 모델 카드와 실행·평가·미세조정 도구를 Apache 2.0 라이선스로 공개할 계획입니다.\n\n공개가 예정대로 이뤄지면 기업은 민감한 코드를 외부 API에 보내지 않고 자체 환경에서 돌릴 선택지를 하나 더 갖게 됩니다. 반대로 가중치와 전체 평가 자료가 나오기 전까지는 성능과 비용, 안전성을 회사 발표만으로 판단하기 어렵습니다.",
+        "takeaway": "오픈웨이트라는 이름보다 실제 가중치·라이선스·재현 자료가 함께 나오는지가 기업 도입 가능성을 가릅니다.",
+        "what_to_watch": "이달 공개 약속이 지켜지는지, 필요한 GPU 메모리와 독립 벤치마크, 한국어 코딩·에이전트 성능을 확인하면 됩니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "openai-textgrain-eu-text-watermarking-2026-10-05",
+      "title": "OpenAI, EU ChatGPT·Codex 텍스트에 textGrain 워터마크 도입",
+      "importance": "S",
+      "one_line_summary": "OpenAI가 API에는 선택형, EU의 ChatGPT·Codex에는 단계적으로 적용하는 통계적 텍스트 워터마크 textGrain을 공개했습니다.",
+      "impact": "AI 생성문 식별이 사후 분류기에서 생성 단계에 심는 신호로 이동합니다. 그러나 짧은 글·코드·편집된 글에서는 검출 신뢰도가 크게 떨어져 저작자 판정 도구로 쓸 수 없습니다.",
+      "original_url": "https://openai.com/index/eu-text-provenance/",
+      "key_quote": "textGrain은 단어 선택의 통계적 패턴에 보이지 않는 신호를 심습니다.",
+      "quote_translation": "숨은 문자나 태그를 붙이는 방식이 아니라 모델이 다음 단어를 고르는 확률을 조금 조정합니다.",
+      "summary": "FACT: OpenAI는 10월 5일부터 전 세계 API 고객이 일부 모델에 textGrain을 선택 적용할 수 있게 했고, 향후 몇 주 안에 EU의 ChatGPT·Codex 적격 텍스트에 보이지 않는 워터마크를 추가한다고 밝혔습니다. 1% 오탐 목표에서 200토큰 글 검출률은 약 80%, 400토큰은 약 95%였지만 400토큰 글의 단어 10%를 동의어로 바꾸면 약 92%에서 66%, 25%를 바꾸면 17%로 떨어졌습니다. 탐지기는 승인된 연구·전문기관에만 제한 제공합니다.\n\nINTERPRETATION: EU 투명성 의무가 모델 출력 자체의 생성 방식과 기업 운영 설정을 바꾸기 시작했습니다.\n\nSIGNAL: 기업은 AI 사용 표시 여부를 정책 문구만이 아니라 모델·프로젝트 설정과 변환 과정별 검증으로 관리해야 합니다.\n\nSPECULATION: 워터마크가 표준화되지 않은 상태에서 공급자별 탐지기가 늘어나면 상호운용성과 오판 책임이 새 문제로 떠오를 수 있습니다.",
+      "why_it_matters": "워터마크는 AI가 관여했다는 단서일 뿐 사람의 기여도나 저작자를 증명하지 않습니다. 규제 준수와 진위 판정은 다른 문제로 다뤄야 합니다.",
+      "industry_mood": {
+        "label": "AI 표시는 선언에서 생성 설정으로 이동",
+        "basis": "EU 적용과 API 옵션은 시작됐지만 편집 내성과 탐지 접근성이 제한됩니다."
+      },
+      "outlook": "EU 적용 모델·언어 범위, 공개 예정인 소스 코드, 탐지기 접근 확대, 한국어와 번역·요약 후 검출률을 확인해야 합니다.",
+      "business_opportunity": "한국어 문서의 번역·요약·사람 편집 전후에 워터마크가 유지되는지 검사하는 회귀검증 서비스를 아이디어로 선정했습니다.",
+      "tags": ["OpenAI", "textGrain", "watermark", "EU AI Act", "provenance"],
+      "sources": [
+        {
+          "title": "Our approach to EU text provenance rules",
+          "url": "https://openai.com/index/eu-text-provenance/",
+          "publisher": "OpenAI",
+          "published_at": "2026-10-05",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-textgrain"
+        },
+        {
+          "title": "OpenAI is adding text watermarking in ChatGPT and Codex",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+          "publisher": "The Verge",
+          "published_at": "2026-10-05",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "openai-textgrain"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 23,
+        "utility": 20,
+        "recency": 15,
+        "community": 8,
+        "total": 95
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "OpenAI 발표·기술 보고서와 독립 보도로 적용 범위·한계 확인",
+        "missing": [
+          "EU 실제 적용 모델과 계정별 시작일",
+          "한국어·번역·요약 후 독립 검출률",
+          "공개 소스와 일반 탐지기 제공 일정"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "ChatGPT 글에 보이지 않는 표식이 들어갑니다…하지만 ‘AI가 썼다’는 판정표는 아닙니다",
+        "dek": "OpenAI가 EU의 ChatGPT·Codex 텍스트에 워터마크를 넣고, API 고객에게는 선택 기능을 열었습니다. 긴 원문에서는 잘 잡히지만 짧거나 편집된 글은 신호가 빠르게 약해집니다.",
+        "body": "OpenAI가 textGrain이라는 텍스트 워터마크를 공개했습니다. 전 세계 API 고객은 일부 모델에서 지금부터 선택해 켤 수 있습니다. EU의 ChatGPT와 Codex에는 향후 몇 주 동안 적격 텍스트부터 단계적으로 적용됩니다.\n\n이 기능은 문장에 숨은 문자나 특수기호를 넣지 않습니다. 모델이 다음 단어를 고르는 확률을 조금 조정해, 긴 글 전체에 통계적인 패턴을 남깁니다. 승인된 탐지기는 그 패턴을 읽어 OpenAI 시스템이 관여했을 가능성을 평가합니다.\n\n문제는 편집에 약하다는 점입니다. OpenAI 시험에서 400토큰 글의 단어 10%를 동의어로 바꾸자 검출률이 약 92%에서 66%로 내려갔고, 25%를 바꾸면 17%까지 떨어졌습니다. 짧은 답변과 코드는 애초에 선택할 수 있는 표현이 적어 더 어렵습니다.\n\n따라서 워터마크가 잡혔다고 글 전체를 AI가 썼다고 단정할 수 없고, 잡히지 않았다고 사람 글이라고 말할 수도 없습니다. EU 투명성 의무를 위한 출처 신호로는 쓸 수 있지만 표절 판정이나 저작자 확인을 대신하지는 못합니다.",
+        "takeaway": "텍스트 워터마크는 출처를 추정하는 한 가지 신호이며, 사람의 기여도나 저작권을 판정하는 증거는 아닙니다.",
+        "what_to_watch": "EU 계정별 적용 시점과 지원 모델, 한국어 검출률, 번역·요약·맞춤법 교정 뒤 신호 유지, 탐지기 공개 범위를 보면 됩니다.",
+        "action": "OpenAI API로 EU 고객용 문서를 만든다면 프로젝트 설정의 Text provenance 옵션과 최종 편집 뒤 표시 정책을 함께 점검하세요."
+      }
+    },
+    {
+      "event_key": "deutsche-telekom-ai-investor-day-savings-2026-10-05",
+      "title": "Deutsche Telekom, AI로 2030년 간접비 25억유로 절감 목표",
+      "importance": "A",
+      "one_line_summary": "Deutsche Telekom이 네트워크·고객센터·개발·관리 업무에 AI를 확대해 2030년 간접비 25억유로와 기업 AI 매출 8억유로를 목표로 제시했습니다.",
+      "impact": "AI 도입 성과를 사용량이 아니라 비용·매출·민원·장애 대응 시간으로 공개했습니다. 대기업 AI 투자가 실험 단계에서 재무 책임 단계로 이동하고 있음을 보여줍니다.",
+      "original_url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/10/deutsche-telekom-boosts-growth-efficiency-and-quality-through-t",
+      "key_quote": "AI와 자동화로 2030년 간접비를 2023년 대비 약 25억유로 줄이는 것이 목표입니다.",
+      "quote_translation": "AI 프로젝트를 기술 시연이 아니라 회사 비용 구조와 투자 여력으로 연결하겠다는 뜻입니다.",
+      "summary": "FACT: Deutsche Telekom은 10월 5일 AI Investor Day에서 2030년까지 2023년 대비 간접비 약 25억유로 절감, 미국 외 기업 AI 매출 약 8억유로를 목표로 제시했습니다. 2027년 미국 외 지역의 총절감은 약 11억유로로 예상하고 일부를 독일 광섬유망과 디지털 전환에 재투자할 계획입니다. 회사는 상반기 고객센터 챗봇이 약 260만 건을 처리했고 네트워크 과부하 대응 시간이 수 시간에서 약 1분으로 줄었다고 밝혔습니다.\n\nINTERPRETATION: 기업 AI 투자의 성과 설명이 모델 도입 건수에서 비용·매출·품질 지표로 이동합니다.\n\nSIGNAL: AI 예산을 확보하려는 조직은 반복 업무별 기준선과 절감·품질 지표를 먼저 정해야 합니다.\n\nSPECULATION: 목표 절감액이 실제 현금비용 감소로 이어질지, AI 인프라·전환 비용을 뺀 순효과가 얼마나 될지는 아직 확인할 수 없습니다.",
+      "why_it_matters": "AI의 사업 가치는 도입 횟수가 아니라 기준선 대비 비용·매출·오류·처리시간 변화로 입증해야 예산과 운영 책임을 이어갈 수 있습니다.",
+      "industry_mood": {
+        "label": "AI 실험에서 재무 성과 관리로",
+        "basis": "구체적인 목표와 일부 운영 수치는 공개됐지만 독립 감사와 순절감 계산은 없습니다."
+      },
+      "outlook": "2027년 중간 목표 달성, 절감액 산식과 AI 인프라 비용, 고객 만족·오류율, 주권형 AI 매출의 실제 계약을 확인해야 합니다.",
+      "business_opportunity": "AI 성과 측정 컨설팅은 수요가 있을 수 있지만 대기업 데이터 접근과 기존 BI·컨설팅 대체 위험이 커 별도 아이디어로 선정하지 않습니다.",
+      "tags": ["Deutsche Telekom", "enterprise AI", "automation", "ROI", "telecom"],
+      "sources": [
+        {
+          "title": "Deutsche Telekom boosts growth, efficiency and quality through the use of AI",
+          "url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/10/deutsche-telekom-boosts-growth-efficiency-and-quality-through-t",
+          "publisher": "Deutsche Telekom",
+          "published_at": "2026-10-05",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "deutsche-telekom-ai-investor-day"
+        },
+        {
+          "title": "Deutsche Telekom sees €2.5 billion in savings from AI, automation by 2030",
+          "url": "https://www.reuters.com/business/media-telecom/deutsche-telekom-sees-25-billion-savings-ai-automation-by-2030-2026-10-05/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-05",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "deutsche-telekom-ai-investor-day"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 21,
+        "utility": 19,
+        "recency": 15,
+        "community": 5,
+        "total": 89
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "회사 Investor Day 발표와 Reuters 보도로 목표·운영 수치 확인",
+        "missing": [
+          "절감액 산식과 AI 인프라·전환 비용을 반영한 순효과",
+          "고객센터·네트워크 성과의 독립 감사",
+          "주권형 AI 매출의 실제 계약과 수익성"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "Deutsche Telekom은 AI 성과를 ‘25억유로 절감’으로 약속했습니다",
+        "dek": "네트워크와 고객센터, 개발·관리 업무의 자동화를 2030년 비용 목표에 연결했습니다. 이제 대기업 AI 프로젝트는 몇 개를 도입했는지보다 실제 비용과 서비스 품질을 얼마나 바꿨는지 설명해야 합니다.",
+        "body": "Deutsche Telekom이 AI와 자동화로 2030년 간접비를 2023년보다 약 25억유로 줄이겠다는 목표를 내놨습니다. 미국을 제외한 기업 대상 AI 매출은 올해 약 2억5천만유로에서 2030년 약 8억유로로 키울 계획입니다.\n\nAI는 네트워크 운영과 고객센터, 소프트웨어 개발, 관리 업무에 들어갑니다. 회사에 따르면 고객센터 챗봇은 올해 상반기에 약 260만 건의 전화를 처리했습니다. 이동통신망 과부하를 감지하고 대응하는 시간은 수 시간에서 약 1분으로 줄었습니다.\n\n2027년까지 예상하는 미국 외 지역의 총절감액은 약 11억유로입니다. 일부는 독일의 광섬유망과 디지털 전환에 다시 투자합니다. 비용을 줄이는 동시에 유럽 기업이 민감한 데이터를 통제하며 쓰는 주권형 AI를 새 매출원으로 만들겠다는 구상입니다.\n\n아직 공개된 숫자는 회사 목표와 자체 측정치입니다. AI 서버와 전환 비용을 뺀 순절감이 얼마인지, 상담 품질과 오류가 함께 좋아졌는지는 더 확인해야 합니다. 그래도 AI 예산을 ‘도입 건수’가 아니라 재무와 운영 지표로 설명한 점은 분명한 변화입니다.",
+        "takeaway": "AI 프로젝트를 오래 가져가려면 사용량보다 비용·처리시간·오류·고객 만족의 기준선과 변화를 함께 보여줘야 합니다.",
+        "what_to_watch": "2027년 절감 목표, AI 인프라 비용을 뺀 순효과, 고객센터 오류율과 만족도, 주권형 AI의 실제 계약 매출을 보면 됩니다.",
+        "action": null
+      }
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "한국어 AI 문서 워터마크 회귀검증",
+      "score": 4.1,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "중간 — 공개 SynthID 구현으로 시작할 수 있지만 OpenAI textGrain 탐지기는 승인된 기관에만 제공됩니다.",
+      "customer": "EU 고객에게 한국어 콘텐츠를 제공하는 국내 SaaS·교육·미디어 팀과 AI 문서 생성 솔루션사",
+      "problem": "워터마크를 켜도 번역·요약·맞춤법 교정·사람 편집 뒤 신호가 얼마나 남는지, 모델이나 설정 변경 때 품질이 흔들리는지 확인하기 어렵습니다.",
+      "competitors": [
+        "OpenAI textGrain detector",
+        "Google SynthID Text",
+        "Pangram",
+        "GPTZero",
+        "사내 수동 QA"
+      ],
+      "differentiation": "한국어 조사·어미 변화, 한영 번역, 요약, 맞춤법 교정과 CMS 재가공을 표준 변환 세트로 만들고 오탐·미탐·품질 변화를 버전별로 비교합니다.",
+      "mvp_2_weeks": "SynthID Text와 공개 모델로 한국어 문서 200개를 생성하고 8가지 변환을 적용한 뒤 검출률·오탐률·문장 품질을 HTML 보고서로 보여줍니다. OpenAI는 API 워터마크 생성 설정과 정책 체크만 연동합니다.",
+      "monetization": "초기 규제·품질 진단 100만~300만원, 이후 모델·프롬프트 변경 시 월별 회귀검증 구독",
+      "falsification": "국내 SaaS·교육·미디어 담당자 12명 중 4명 미만이 EU 납품 또는 출처표시 QA를 반복 업무로 인정하고 2명 미만이 파일럿을 원하면 중단합니다.",
+      "problem_evidence": [
+        {
+          "url": "https://openai.com/index/eu-text-provenance/",
+          "source_type": "official_blog",
+          "summary": "OpenAI는 텍스트 길이와 편집 비율에 따라 검출률이 크게 달라지고 워터마크가 사람의 기여도를 판정하지 못한다고 밝혔습니다.",
+          "observed_at": "2026-10-06",
+          "evidence_group": "openai-textgrain"
+        },
+        {
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act",
+          "source_type": "article",
+          "summary": "EU 적용과 제한된 탐지기 제공, 기술적 한계를 독립 보도로 확인했습니다.",
+          "observed_at": "2026-10-06",
+          "evidence_group": "openai-textgrain"
+        }
+      ],
+      "realism_gates": {
+        "customer": {
+          "status": "pass",
+          "evidence": "EU 고객에게 생성형 AI 콘텐츠를 제공하는 국내 SaaS·교육·미디어 팀이라는 구체적 고객이 있습니다."
+        },
+        "pain": {
+          "status": "pass",
+          "evidence": "공식 시험에서 편집 비율과 길이에 따라 검출률이 크게 달라졌습니다."
+        },
+        "existing_solution": {
+          "status": "pass",
+          "evidence": "공급자 탐지기와 SynthID가 있으나 한국어 업무 변환별 회귀검증은 별도로 필요합니다."
+        },
+        "technology_change": {
+          "status": "pass",
+          "evidence": "EU 의무 적용과 API 설정이 시작돼 운영팀의 반복 QA 대상이 생겼습니다."
+        },
+        "buildability": {
+          "status": "pass",
+          "evidence": "공개 SynthID 구현과 한국어 문서 변환 파이프라인으로 1~3인이 핵심 시험을 만들 수 있습니다."
+        },
+        "mvp": {
+          "status": "pass",
+          "evidence": "2주 동안 공개 모델·200개 문서·8개 변환으로 문제를 검증할 수 있습니다."
+        },
+        "customer_access": {
+          "status": "unknown",
+          "evidence": "국내 기업이 EU 출처표시 QA에 별도 예산을 배정할지는 확인되지 않았습니다."
+        },
+        "replacement_risk": {
+          "status": "unknown",
+          "evidence": "모델 공급자나 기존 AI 탐지 서비스가 다국어 회귀검증을 제품에 포함할 수 있습니다."
+        },
+        "dependency": {
+          "status": "unknown",
+          "evidence": "오픈소스로 MVP는 가능하지만 OpenAI textGrain의 직접 검출은 승인된 탐지기 접근에 의존합니다."
+        }
+      },
+      "today_eligible": false,
+      "eligibility_method": "opportunity_gate_v1"
+    }
+  ],
+  "tools": [],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "AI 성과 기준선 만들기",
+    "when_to_use": "AI 자동화 도입 전후의 비용과 품질을 비교해 예산·운영 결정을 내려야 할 때",
+    "practical_example": "전표 자동매칭 배치라면 처리시간뿐 아니라 미매칭률, 수동 재작업 건수, 잘못된 매칭과 인프라 비용을 도입 전 4주와 도입 후 4주로 비교합니다.",
+    "prompt_example": "이 AI 자동화의 도입 전 기준선과 도입 후 측정값을 비용, 처리시간, 오류, 재작업, 고객 영향, 인프라 비용으로 나누고 순효과 계산식을 작성해라."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "textGrain: Entropy-Calibrated Watermarking for Language Model Text",
+      "url": "https://cdn.openai.com/pdf/e9508624-d767-41b6-a26d-e34ca798ada6/textgrain-entropy-calibrated-watermarking-for-language-model-text.pdf",
+      "why_read": "워터마크 신호를 얼마나 강하게 심을지와 문장 다양성 손실을 정보이론 관점에서 설명합니다."
+    },
+    {
+      "type": "GitHub",
+      "title": "google-deepmind/synthid-text",
+      "url": "https://github.com/google-deepmind/synthid-text",
+      "why_read": "텍스트 워터마크 생성과 탐지의 공식 참고 구현을 직접 실행해볼 수 있습니다."
+    },
+    {
+      "type": "YouTube",
+      "title": "DT AI Investor Day: CEO Tim Höttges on Strategy + AI Ambition",
+      "url": "https://www.youtube.com/watch?v=NQCZfyfnpOA",
+      "why_read": "Deutsche Telekom이 AI 목표를 비용·매출·운영 지표로 설명하는 발표입니다. 메타데이터만 확인했으며 전체 영상은 검토하지 않았습니다."
+    },
+    {
+      "type": "Blog",
+      "title": "Watermarking in vLLM",
+      "url": "https://vllm-project.github.io/2026/09/24/watermarking-in-vllm.html",
+      "why_read": "오픈 모델 서빙 과정에서 워터마크를 적용하고 탐지하는 구현상의 선택을 살펴볼 수 있습니다."
+    }
+  ],
+  "todays_insight": "AI가 좋아졌다는 말보다, 열어보고 추적하고 숫자로 확인할 수 있어야 믿을 수 있습니다.",
+  "morning_paper": {
+    "insight_headline": "AI의 약속은 이제 열어보기·추적하기·숫자로 증명하기로 검증됩니다",
+    "insight_summary": "Reflection은 오픈웨이트 모델의 실제 공개를 약속했고, OpenAI는 생성문에 출처 신호를 심기 시작했습니다. Deutsche Telekom은 AI 도입을 25억유로 절감 목표로 연결했습니다. 세 발표 모두 성능 주장만으로는 부족하고, 재현 자료와 추적 신호, 기준선 대비 결과가 필요하다는 방향을 보여줍니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "reflection-ai-beam-open-weight-preview-2026-10-05",
+      "openai-textgrain-eu-text-watermarking-2026-10-05",
+      "deutsche-telekom-ai-investor-day-savings-2026-10-05"
+    ],
+    "top_event_keys": [
+      "openai-textgrain-eu-text-watermarking-2026-10-05",
+      "reflection-ai-beam-open-weight-preview-2026-10-05",
+      "deutsche-telekom-ai-investor-day-savings-2026-10-05"
+    ]
+  },
+  "build_candidate": null
+}

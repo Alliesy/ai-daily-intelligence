@@ -1,140 +1,118 @@
-# AI Daily Intelligence · 2026-10-05
+# AI Daily Intelligence · 2026-10-06
 
 ## Morning Paper
 
-### AI의 신뢰는 말이 아니라 반복 가능한 결과에서 나옵니다
+### AI의 약속은 이제 열어보기·추적하기·숫자로 증명하기로 검증됩니다
 
-미국은 AI 정책을 조정할 전담팀을 꾸렸고, OpenAI의 전 안전 책임자는 사후 보완 중심 문화에 제동을 요구했습니다. ThinkingBox는 에이전트의 답변 대신 실제 업무 상태를 반복 검사했고, Cloudflare는 장시간 실행 환경의 상태와 권한을 함께 관리하도록 바꿨습니다.
+Reflection은 오픈웨이트 모델의 실제 공개를 약속했고, OpenAI는 생성문에 출처 신호를 심기 시작했습니다. Deutsche Telekom은 AI 도입을 25억유로 절감 목표로 연결했습니다. 세 발표 모두 성능 주장만으로는 부족하고, 재현 자료와 추적 신호, 기준선 대비 결과가 필요하다는 방향을 보여줍니다.
 
-> AI가 일을 끝냈다고 말하는 것보다, 여러 번 같은 상태를 만들고 문제가 생기면 멈출 수 있는지가 더 중요해졌습니다.
+> AI가 좋아졌다는 말보다, 열어보고 추적하고 숫자로 확인할 수 있어야 믿을 수 있습니다.
 
 ## Top News
 
-### 1. 미국, AI 정책을 120일 안에 다시 짜는 전담팀을 꾸렸습니다
+### 1. 미국산 오픈모델 Beam이 나옵니다…하지만 아직은 ‘공개 예고’입니다
 
-정보기관과 FTC, 국방·인사 당국이 함께 AI의 위험과 기회를 정리합니다. 자율규제를 앞세운 기존 기조는 유지하지만, 정부 안의 조정 창구는 한층 강해졌습니다.
+Reflection AI가 501B 규모의 코딩·에이전트 모델을 선보였습니다. 이달 안에 가중치와 실행 도구를 공개하겠다고 했지만, 지금은 회사가 고른 시험 결과만 확인할 수 있습니다.
 
-미국 행정부가 Jay Clayton 국가정보국장을 AI 정책 책임자로 세우고 ‘Super Intelligence Force’를 구성했습니다. Reuters와 Washington Post에 따르면 이 전담팀은 120일 안에 AI의 위험과 기회, 연방정부가 맡아야 할 역할을 보고합니다.
+Reflection AI가 첫 오픈웨이트 모델 Beam을 발표했습니다. 전체 파라미터는 501B지만 작업할 때는 23B만 활성화하는 희소 Mixture-of-Experts 구조입니다. 큰 모델의 능력을 유지하면서 매번 쓰는 계산량은 줄이려는 설계입니다.
 
-팀에는 정보기관만 들어가는 것이 아닙니다. FTC와 국방·인사 분야 책임자도 참여해 기업 규제, 사이버 사고, 국가안보와 노동 문제를 함께 다룰 수 있습니다. 부처마다 따로 대응하던 사안을 하나의 정책 틀로 묶으려는 움직임입니다.
+회사는 Beam을 코딩과 에이전트 업무에 집중해 훈련했습니다. 23.8조 토큰으로 사전학습한 뒤 NVIDIA GB300 10,500대에서 4주 동안 1억 회가 넘는 강화학습 시도를 돌렸다고 밝혔습니다. 자사 시험에서는 GLM 5.2와 경쟁하고 Qwen 3.8-Max에 가까운 결과를 냈다고 설명합니다.
 
-이번 조치는 미국 정부가 최근 대형 AI 기업들과 맺은 자율 안전 합의를 대체하지는 않습니다. 다만 기업이 스스로 정한 통제만으로 충분한지, 사고가 났을 때 정부에 무엇을 알려야 하는지를 전담팀이 다시 정리할 수 있습니다.
+다만 지금 바로 내려받아 쓸 수 있는 모델은 아닙니다. Beam은 최종 레드팀과 평가를 거치는 제한된 미리보기 단계입니다. Reflection은 이달 안에 가중치, 기술 보고서, 모델 카드와 실행·평가·미세조정 도구를 Apache 2.0 라이선스로 공개할 계획입니다.
 
-아직 새 법이나 의무 규정이 생긴 것은 아닙니다. 실제 변화는 120일 뒤 나올 보고서가 사고 보고, 외부 평가, 정부 조달과 수출 통제에 어떤 권고를 담는지 확인해야 알 수 있습니다.
+공개가 예정대로 이뤄지면 기업은 민감한 코드를 외부 API에 보내지 않고 자체 환경에서 돌릴 선택지를 하나 더 갖게 됩니다. 반대로 가중치와 전체 평가 자료가 나오기 전까지는 성능과 비용, 안전성을 회사 발표만으로 판단하기 어렵습니다.
 
 **하나만 기억한다면**  
-미국의 AI 정책은 규제를 바로 늘리기보다, 여러 부처의 판단과 사고 대응을 한곳에서 조정하는 단계로 들어갔습니다.
+오픈웨이트라는 이름보다 실제 가중치·라이선스·재현 자료가 함께 나오는지가 기업 도입 가능성을 가릅니다.
 
 **앞으로 볼 건**  
-120일 보고서 원문과 기업 사고 통보 기준, 연방 조달·수출 통제 권고, 의회 입법으로 이어지는지를 보면 됩니다.
+이달 공개 약속이 지켜지는지, 필요한 GPU 메모리와 독립 벤치마크, 한국어 코딩·에이전트 성능을 확인하면 됩니다.
 
 **출처**  
-[Reuters](https://www.reuters.com/world/us/jay-clayton-lead-trumps-ai-task-force-deliver-report-120-days-wsj-reports-2026-10-03/) · [The Washington Post](https://www.washingtonpost.com/politics/2026/10/04/trump-launches-super-intelligence-force-after-calls-ai-slowdown/) · [The White House](https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/)
+[Reflection AI](https://reflection.ai/blog/introducing-beam) · [Reuters](https://www.reuters.com/technology/nvidia-backed-reflection-unveils-first-ai-model-take-chinese-open-models-2026-10-05/)
 
-### 2. OpenAI 안전 책임자가 떠나며 “시행착오로 고칠 단계는 지났다”고 말했습니다
+### 2. ChatGPT 글에 보이지 않는 표식이 들어갑니다…하지만 ‘AI가 썼다’는 판정표는 아닙니다
 
-주요 모델 12개의 안전 보고를 맡았던 David Robinson이 퇴사했습니다. 그는 더 강한 에이전트를 빠르게 내놓고 문제가 생긴 뒤 고치는 방식이 이제는 충분하지 않다고 주장합니다.
+OpenAI가 EU의 ChatGPT·Codex 텍스트에 워터마크를 넣고, API 고객에게는 선택 기능을 열었습니다. 긴 원문에서는 잘 잡히지만 짧거나 편집된 글은 신호가 빠르게 약해집니다.
 
-David Robinson은 OpenAI에서 3년 반 동안 일하며 회사의 Preparedness Framework 초안과 주요 모델 12개의 안전 보고 작성을 감독했습니다. 그는 최근 퇴사한 뒤 The Atlantic 기고에서 OpenAI의 개발 문화가 안전에 필요한 속도와 거리가 멀다고 공개 비판했습니다.
+OpenAI가 textGrain이라는 텍스트 워터마크를 공개했습니다. 전 세계 API 고객은 일부 모델에서 지금부터 선택해 켤 수 있습니다. EU의 ChatGPT와 Codex에는 향후 몇 주 동안 적격 텍스트부터 단계적으로 적용됩니다.
 
-그가 문제 삼은 것은 안전 규칙 하나가 아닙니다. 제품과 모델을 빠르게 내놓고, 사고가 발견되면 가드레일을 보강하는 ‘반복 배포’ 방식 자체입니다. 시스템이 더 강해질수록 한 번의 실패가 커질 수 있으므로 원전이나 항공처럼 여러 겹의 방어와 느린 검토가 필요하다는 주장입니다.
+이 기능은 문장에 숨은 문자나 특수기호를 넣지 않습니다. 모델이 다음 단어를 고르는 확률을 조금 조정해, 긴 글 전체에 통계적인 패턴을 남깁니다. 승인된 탐지기는 그 패턴을 읽어 OpenAI 시스템이 관여했을 가능성을 평가합니다.
 
-Robinson은 최근의 에이전트 외부 접촉 사건도 예로 들었습니다. 감시 시스템이 이상 행동을 알아챘더라도 자동 중단이 제대로 작동하지 않았다면, 탐지와 실제 차단 사이에는 여전히 간격이 있다는 뜻입니다.
+문제는 편집에 약하다는 점입니다. OpenAI 시험에서 400토큰 글의 단어 10%를 동의어로 바꾸자 검출률이 약 92%에서 66%로 내려갔고, 25%를 바꾸면 17%까지 떨어졌습니다. 짧은 답변과 코드는 애초에 선택할 수 있는 표현이 적어 더 어렵습니다.
 
-다만 이는 퇴사한 책임자의 평가이며 내부 자료 전체가 공개된 것은 아닙니다. OpenAI는 모델 능력이 커지는 만큼 실시간 감시와 외부 평가 등 안전 관행을 강화하고 있다고 Reuters에 답했습니다. 앞으로는 안전팀이 실제 출시를 멈출 권한을 갖는지가 더 중요한 질문이 됩니다.
-
-**하나만 기억한다면**  
-안전 보고서가 있다는 사실보다, 위험 신호가 나왔을 때 일정과 출시를 실제로 멈출 수 있는지가 중요합니다.
-
-**앞으로 볼 건**  
-OpenAI의 상세 답변과 조직 개편, 안전 책임자의 중단 권한, 외부 평가 공개 범위와 추가 내부 증언을 확인하면 됩니다.
-
-**출처**  
-[The Atlantic](https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/) · [Reuters](https://www.reuters.com/legal/litigation/openai-safety-employee-quits-says-time-trial-error-is-over-2026-10-03/)
-
-### 3. 에이전트가 한 번 성공했다고 믿으면 안 되는 이유가 숫자로 나왔습니다
-
-Microsoft의 ThinkingBox는 답변이 그럴듯한지가 아니라 예약·결제·계정 같은 실제 상태가 맞게 바뀌었는지 검사합니다. 최고 모델도 같은 신뢰도를 반복해서 유지하는 데 큰 폭으로 흔들렸습니다.
-
-Microsoft 연구진이 공개한 ThinkingBox-Bench는 에이전트에게 소매, 여행, 보험, 은행, 사내 지원 업무 507개를 맡깁니다. 평가는 마지막 답변을 읽는 데서 끝나지 않습니다. 주문과 잔액, 예약, 계정 상태가 실제로 맞게 바뀌었는지 실행 가능한 검사로 확인합니다.
-
-이 방식으로 평가하자 가장 강한 모델의 한 번 성공률은 65.36%였습니다. 하지만 같은 수준의 성공을 20번 이어가는 지표는 25.25%로 내려갔습니다. 대화가 자연스럽고 도구 호출이 오류 없이 끝나도, 필요한 변경을 빼먹거나 원하지 않은 부작용을 남긴 사례가 있었습니다.
-
-이 차이는 업무 자동화에서 특히 중요합니다. 전표를 한 번 잘 만들었다고 매일 배치를 맡길 수 있는 것은 아닙니다. 같은 입력에서 같은 규칙을 지키고, 잘못된 상태를 남기지 않는지 여러 번 확인해야 합니다.
-
-코드와 과제, 도구 서버는 공개돼 있어 재실행할 수 있습니다. 다만 공개된 507개 과제가 한국어 업무와 ERP의 승인·회계 규칙까지 대표하지는 않습니다. 각 조직은 실제 업무를 닮은 검증 시나리오를 따로 만들어야 합니다.
+따라서 워터마크가 잡혔다고 글 전체를 AI가 썼다고 단정할 수 없고, 잡히지 않았다고 사람 글이라고 말할 수도 없습니다. EU 투명성 의무를 위한 출처 신호로는 쓸 수 있지만 표절 판정이나 저작자 확인을 대신하지는 못합니다.
 
 **하나만 기억한다면**  
-에이전트의 신뢰도는 ‘성공한 적이 있는가’가 아니라 ‘같은 일을 반복해도 상태와 부작용이 맞는가’로 재야 합니다.
+텍스트 워터마크는 출처를 추정하는 한 가지 신호이며, 사람의 기여도나 저작권을 판정하는 증거는 아닙니다.
 
 **앞으로 볼 건**  
-외부 재현 결과와 최신 모델의 반복 성공률, 도메인별 실패 유형, 한국어·ERP 업무로 확장되는지를 보면 됩니다.
+EU 계정별 적용 시점과 지원 모델, 한국어 검출률, 번역·요약·맞춤법 교정 뒤 신호 유지, 탐지기 공개 범위를 보면 됩니다.
 
 **지금 확인할 것**  
-운영에 맡길 에이전트가 있다면 대표 업무 하나를 20회 반복하고, 답변이 아니라 DB·파일·외부 시스템의 최종 상태를 비교해보세요.
+OpenAI API로 EU 고객용 문서를 만든다면 프로젝트 설정의 Text provenance 옵션과 최종 편집 뒤 표시 정책을 함께 점검하세요.
 
 **출처**  
-[Microsoft Research on Hugging Face](https://huggingface.co/blog/microsoft/thinkingbox) · [Paper](https://arxiv.org/abs/2608.19741) · [GitHub](https://github.com/microsoft/thinkingbox-data)
+[OpenAI](https://openai.com/index/eu-text-provenance/) · [기술 보고서](https://cdn.openai.com/pdf/e9508624-d767-41b6-a26d-e34ca798ada6/textgrain-entropy-calibrated-watermarking-for-language-model-text.pdf) · [The Verge](https://www.theverge.com/ai-artificial-intelligence/1004880/openai-chatgpt-text-watermarks-eu-ai-act)
 
-### 4. Cloudflare, 에이전트 샌드박스를 ‘잠깐 쓰는 상자’에서 오래가는 작업 공간으로 바꿨습니다
+### 3. Deutsche Telekom은 AI 성과를 ‘25억유로 절감’으로 약속했습니다
 
-Sandbox SDK 1.0은 컨테이너의 시작과 중단, 파일 복원, 외부 통신을 앱 상태와 함께 관리합니다. 장시간 코딩·분석 에이전트를 운영할 때 필요한 통제가 한곳에 모였습니다.
+네트워크와 고객센터, 개발·관리 업무의 자동화를 2030년 비용 목표에 연결했습니다. 이제 대기업 AI 프로젝트는 몇 개를 도입했는지보다 실제 비용과 서비스 품질을 얼마나 바꿨는지 설명해야 합니다.
 
-Cloudflare가 Sandbox SDK 1.0을 공개했습니다. 이제 개발자가 만든 Durable Object가 에이전트용 컨테이너의 이미지와 크기, 시작과 중단 시점을 직접 관리합니다. 요청이 끝날 때마다 사라지는 실행기가 아니라 작업 상태를 가진 공간으로 다룰 수 있습니다.
+Deutsche Telekom이 AI와 자동화로 2030년 간접비를 2023년보다 약 25억유로 줄이겠다는 목표를 내놨습니다. 미국을 제외한 기업 대상 AI 매출은 올해 약 2억5천만유로에서 2030년 약 8억유로로 키울 계획입니다.
 
-파일을 스냅샷으로 저장했다가 같은 컨테이너나 새 컨테이너에서 복원할 수도 있습니다. 에이전트가 긴 코딩 작업을 멈췄다가 이어가거나, 새 이미지로 옮겨도 작업물을 유지하는 데 쓰입니다. 스냅샷과 새 스케줄링 정책은 아직 공개 베타입니다.
+AI는 네트워크 운영과 고객센터, 소프트웨어 개발, 관리 업무에 들어갑니다. 회사에 따르면 고객센터 챗봇은 올해 상반기에 약 260만 건의 전화를 처리했습니다. 이동통신망 과부하를 감지하고 대응하는 시간은 수 시간에서 약 1분으로 줄었습니다.
 
-보안 경계도 앱 쪽으로 옮겼습니다. 샌드박스의 외부 요청을 호스트별로 가로채고, 스토리지 자격증명은 Worker 안에 남길 수 있습니다. 에이전트가 명령을 실행하더라도 비밀정보와 네트워크 권한을 컨테이너에 통째로 넘기지 않는 구조입니다.
+2027년까지 예상하는 미국 외 지역의 총절감액은 약 11억유로입니다. 일부는 독일의 광섬유망과 디지털 전환에 다시 투자합니다. 비용을 줄이는 동시에 유럽 기업이 민감한 데이터를 통제하며 쓰는 주권형 AI를 새 매출원으로 만들겠다는 구상입니다.
 
-기존 0.x 앱은 계속 작동하지만 버그와 보안 수정은 2026년 12월 31일까지입니다. 일부 전환은 되돌리기 어려워 Cloudflare도 먼저 연습 배포를 권합니다. 실제 도입 전에는 베타 기능의 복구와 비용, 격리 강도를 따로 확인해야 합니다.
+아직 공개된 숫자는 회사 목표와 자체 측정치입니다. AI 서버와 전환 비용을 뺀 순절감이 얼마인지, 상담 품질과 오류가 함께 좋아졌는지는 더 확인해야 합니다. 그래도 AI 예산을 ‘도입 건수’가 아니라 재무와 운영 지표로 설명한 점은 분명한 변화입니다.
 
 **하나만 기억한다면**  
-장시간 에이전트에는 실행 공간을 오래 유지하는 기능과 그 공간의 네트워크·자격증명을 제한하는 기능이 함께 필요합니다.
+AI 프로젝트를 오래 가져가려면 사용량보다 비용·처리시간·오류·고객 만족의 기준선과 변화를 함께 보여줘야 합니다.
 
 **앞으로 볼 건**  
-베타 기능의 안정화 시점과 장애 복구, 격리 보장, 가격, 대규모 운영 사례를 확인하면 됩니다.
-
-**지금 확인할 것**  
-Sandbox SDK 0.x를 쓰고 있다면 12월 31일 지원 종료 전에 전환 경로와 되돌릴 수 없는 단계를 별도 환경에서 점검하세요.
+2027년 절감 목표, AI 인프라 비용을 뺀 순효과, 고객센터 오류율과 만족도, 주권형 AI의 실제 계약 매출을 보면 됩니다.
 
 **출처**  
-[Cloudflare Changelog](https://developers.cloudflare.com/changelog/post/2026-09-30-sandbox-sdk-1-0/) · [GitHub](https://github.com/cloudflare/sandbox-sdk) · [Migration Guide](https://developers.cloudflare.com/sandbox/sdk/migrate/)
+[Deutsche Telekom](https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/10/deutsche-telekom-boosts-growth-efficiency-and-quality-through-t) · [Reuters](https://www.reuters.com/business/media-telecom/deutsche-telekom-sees-25-billion-savings-ai-automation-by-2030-2026-10-05/)
 
 ## Opportunity
 
-### ERP 에이전트 완료검증팩 · 4.2/5
+### 한국어 AI 문서 워터마크 회귀검증 · 4.1/5
 
-에이전트가 완료했다고 답해도 전표 균형, 승인 상태, 중복 처리와 후속 데이터가 실제로 맞는지 반복 검증하기 어렵습니다. 한국 회계·ERP 업무에 맞춘 합성 원장과 상태 검사를 묶어 초기 진단과 팀 구독으로 판매하는 아이디어입니다.
+EU 고객에게 생성형 AI 콘텐츠를 제공하는 국내 SaaS·교육·미디어 팀을 위한 검증 서비스입니다. 워터마크를 켠 한국어 문서가 번역·요약·맞춤법 교정·사람 편집과 CMS 재가공을 거친 뒤에도 얼마나 검출되는지 버전별로 비교합니다.
 
-- 고객: 국내 ERP 구축사, 회계 자동화 팀, 전표·정산 에이전트를 시험하는 중소기업
-- 2주 MVP: 모의 원장, 전표 생성·환불·입금매칭 10개 시나리오, 20회 반복 실행기, DB 사후조건 검사와 HTML 결과표
-- 반증 조건: ERP 담당자 10명 중 3명 미만이 파일럿 데이터 제공 또는 유료 진단 의사를 보이면 중단
-- 구축 후보: 없음 — 고객 접근성과 ERP·범용 평가 도구의 대체 위험을 확인하지 못했습니다.
+- 기존 해결법: OpenAI textGrain 탐지기, Google SynthID Text, Pangram, GPTZero, 사내 수동 QA
+- 차별점: 한국어 조사·어미 변화와 한영 번역 등 실제 문서 흐름을 표준 변환 세트로 시험
+- 2주 MVP: 공개 SynthID 구현으로 한국어 문서 200개와 8가지 변환을 시험해 검출률·오탐률·문장 품질을 HTML로 제공
+- 수익화: 초기 진단 100만~300만원, 이후 모델·프롬프트 변경 시 월별 회귀검증 구독
+- 반증 조건: 담당자 12명 중 4명 미만이 반복 업무로 인정하고 2명 미만이 파일럿을 원하면 중단
+- 구축 후보: 없음 — 고객 접근성과 대체 위험, OpenAI 탐지기 접근 의존성을 확인하지 못했습니다.
 
 ## 오늘의 Skill
 
-### 반복 실행 신뢰도 점검
+### AI 성과 기준선 만들기
 
-에이전트를 예약 작업이나 전표·정산·예약처럼 상태를 바꾸는 업무에 맡기기 전, 같은 업무를 20회 실행하고 성공 답변이 아니라 DB 행, 잔액, 상태 코드와 불필요한 부작용을 비교합니다.
+AI 자동화 전후를 비용, 처리시간, 오류, 재작업, 고객 영향과 인프라 비용으로 나눠 비교합니다. 예를 들어 전표 자동매칭이라면 처리속도뿐 아니라 미매칭률, 잘못된 매칭, 수동 재작업과 서버 비용을 도입 전후 4주로 확인합니다.
 
 ## Worth Reading
 
-- **Paper** — [Toward Secure LLM Agents: Threat Surfaces, Attacks, Defenses, and Evaluation](https://arxiv.org/abs/2606.10749): 247개 연구를 권한·정보 흐름·지속 상태 관점으로 묶어 에이전트 보안의 빈틈을 찾습니다.
-- **GitHub** — [Open Agent Security Benchmark](https://github.com/opena2a-org/oasb): 222개 공격 시나리오와 제품 독립형 어댑터로 에이전트 보안 통제를 직접 시험할 수 있습니다.
-- **YouTube** — [CMU AI Agents 2026](https://www.youtube.com/watch?v=UwfjzyLnvMg): 에이전트 구조와 평가 문제를 대학 강의 흐름으로 복습할 수 있습니다. 메타데이터만 확인했으며 전체 영상은 검토하지 않았습니다.
-- **Blog** — [AI-agent sandbox security checklist](https://www.northflank.com/blog/ai-agent-sandbox-security-checklist): 격리 경계, 외부 통신, 비밀정보, 관찰성과 복구를 실제 도입 체크리스트로 정리합니다.
+- **Paper** — [textGrain: Entropy-Calibrated Watermarking for Language Model Text](https://cdn.openai.com/pdf/e9508624-d767-41b6-a26d-e34ca798ada6/textgrain-entropy-calibrated-watermarking-for-language-model-text.pdf): 워터마크 신호의 강도와 문장 다양성 손실을 정보이론 관점에서 설명합니다.
+- **GitHub** — [google-deepmind/synthid-text](https://github.com/google-deepmind/synthid-text): 텍스트 워터마크 생성과 탐지의 공식 참고 구현을 직접 실행해볼 수 있습니다.
+- **YouTube** — [DT AI Investor Day: CEO Tim Höttges on Strategy + AI Ambition](https://www.youtube.com/watch?v=NQCZfyfnpOA): AI 목표를 비용·매출·운영 지표로 설명하는 공식 발표입니다. 메타데이터만 확인했으며 전체 영상은 검토하지 않았습니다.
+- **Blog** — [Watermarking in vLLM](https://vllm-project.github.io/2026/09/24/watermarking-in-vllm.html): 오픈 모델 서빙 과정에서 워터마크를 적용하고 탐지하는 구현상의 선택을 살펴볼 수 있습니다.
 
 ## 확인이 더 필요한 것
 
-- 미국 전담팀의 공식 설치 문서·전체 명단과 120일 보고서의 구속력
-- OpenAI의 상세 기술 답변과 내부 중단 권한·의사결정 기록
-- ThinkingBox의 독립 재현과 한국어·ERP 업무 대표성
-- Cloudflare 베타 기능의 독립 보안평가·복구 신뢰도·가격
+- Beam의 실제 가중치·Apache 2.0 라이선스·모델 카드와 독립 성능·비용·한국어 재현
+- textGrain의 EU 계정별 시작일, 한국어·편집 후 독립 검출률, 탐지기·소스 공개 일정
+- Deutsche Telekom 절감액의 산식과 AI 인프라 비용을 뺀 순효과, 품질 지표 독립 감사
 - YouTube Worth Reading의 전체 영상 내용
 
 ## 검증
 
-- 뉴스 4개 · 사업 아이디어 1개 · 구축 후보 없음
+- 뉴스 3개 · 사업 아이디어 1개 · 구축 후보 없음
+- Reader V1.3 기사형 원고: 3개 모두 포함
 - Worth Reading: Paper·GitHub·YouTube·Blog 각 1개
 - 동일 사건·정규화 URL 중복 없음
 - `latest.json`: `date_kst`, `data_path`, `report_path`, `status` 네 필드
