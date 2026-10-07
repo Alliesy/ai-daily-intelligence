@@ -1,0 +1,302 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-10-08",
+  "generated_at": "2026-10-07T21:59:18Z",
+  "status": "complete",
+  "warnings": [
+    "GPT-6·Claude Haiku 5.5·RTX Spark의 성능·비용·안전성 수치는 대부분 공급자 자체 평가이며 한국어·실사용 독립 재현은 아직 부족합니다.",
+    "Microsoft MXC는 초기 프리뷰 단계이며 독립 보안평가와 한국 판매 조건이 확인되지 않았습니다.",
+    "YouTube Worth Reading은 제목·공식 게시자·공개 상태를 확인했지만 전체 영상을 검토하지 않았습니다."
+  ],
+  "news": [
+    {
+      "event_key": "openai-gpt6-intelligent-ui-global-rollout-2026-10-07",
+      "title": "OpenAI, GPT-6와 대화형 Intelligent UI 전 세계 배포",
+      "importance": "S",
+      "one_line_summary": "OpenAI가 GPT-6와 함께 질문마다 그림·버튼·폼·차트·계산기를 대화 안에서 구성하는 Intelligent UI를 배포합니다.",
+      "impact": "생성형 AI의 경쟁 범위가 답변 품질에서 답을 탐색하고 실행하는 인터페이스까지 넓어집니다. 다만 생성된 도구의 정확도·접근성과 일부 안전평가 회귀는 더 확인해야 합니다.",
+      "original_url": "https://openai.com/index/gpt-6-for-everyone/",
+      "key_quote": "Intelligent UI는 사용자의 질문에 맞춰 실시간으로 상호작용 화면을 구성합니다.",
+      "quote_translation": "정해진 답변 틀을 보여주는 대신 질문마다 필요한 조작 도구와 시각 요소를 새로 만든다는 뜻입니다.",
+      "summary": "FACT: OpenAI는 10월 7일 GPT-6와 Intelligent UI를 발표했습니다. 유료 이용자는 GPT-6 Sol을 당일부터, Free·Go 이용자는 GPT-6 Luna를 다음 날부터 받습니다. Intelligent UI는 텍스트·시각자료·버튼·폼·차트·도구를 대화 안에서 생성하며 답변이 완성되기 전에도 화면을 점진적으로 보여줍니다. 이번 변경은 Chat 탭에 적용되고 Work와 Codex 모델은 바뀌지 않습니다.\n\nINTERPRETATION: 챗봇이 문장을 생성하는 도구에서 질문마다 작은 앱을 만드는 실행 화면으로 확장됩니다.\n\nSIGNAL: AI 제품은 모델 선택뿐 아니라 생성 화면의 정확도·접근성·관리 통제를 함께 시험해야 합니다.\n\nSPECULATION: 동적 인터페이스가 안정되면 정형 웹앱의 일부 탐색·입력 흐름이 대화 안으로 흡수될 수 있지만 실제 전환율과 오류율은 아직 확인되지 않았습니다.",
+      "why_it_matters": "AI 서비스의 차이는 답의 내용뿐 아니라 사용자가 그 답을 바로 탐색하고 실행할 수 있게 만드는 화면에서 생기기 시작합니다.",
+      "industry_mood": {
+        "label": "답변에서 즉석 인터페이스로",
+        "basis": "전 세계 배포와 제품 범위는 공식 발표와 독립 보도로 확인했지만 실사용 정확도는 아직 평가 전입니다."
+      },
+      "outlook": "한국 계정별 배포 속도, 모바일 접근성, 생성 도구의 계산 정확도, 기업 관리자의 기능 통제 범위를 확인해야 합니다.",
+      "business_opportunity": "생성 UI 평가 수요는 생길 수 있지만 플랫폼 자체 개선과 기존 프런트엔드 테스트 도구의 대체 위험이 커 새 아이디어로 선정하지 않습니다.",
+      "tags": ["OpenAI", "GPT-6", "ChatGPT", "Intelligent UI", "generative UI"],
+      "sources": [
+        {
+          "title": "GPT-6 for everyone",
+          "url": "https://openai.com/index/gpt-6-for-everyone/",
+          "publisher": "OpenAI",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-gpt6-intelligent-ui"
+        },
+        {
+          "title": "GPT-6 Sol and GPT-6 Luna: October 2026 update",
+          "url": "https://deploymentsafety.openai.com/gpt-6-october",
+          "publisher": "OpenAI",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-gpt6-intelligent-ui"
+        },
+        {
+          "title": "ChatGPT is getting a lot more visual with a new interface",
+          "url": "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
+          "publisher": "TechCrunch",
+          "published_at": "2026-10-07",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "openai-gpt6-intelligent-ui"
+        }
+      ],
+      "selection_score": {"confidence": 29, "impact": 25, "utility": 20, "recency": 15, "community": 10, "total": 99},
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "OpenAI 제품 발표·시스템 카드와 독립 보도로 배포 범위·기능·안전평가 확인",
+        "missing": ["한국 계정별 실제 배포 시점", "생성 UI 정확도·접근성의 독립 평가", "GPT-6 안전성 회귀의 장기 실사용 영향"]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "ChatGPT가 답변마다 필요한 화면을 직접 만듭니다",
+        "dek": "GPT-6와 함께 Intelligent UI가 전 세계 ChatGPT에 배포됩니다. 설명만 적는 대신 질문에 맞춰 그림·버튼·폼·계산기 같은 인터페이스를 대화 안에서 바로 구성합니다.",
+        "body": "OpenAI가 GPT-6와 함께 Intelligent UI를 공개했습니다. 사용자가 여행을 비교하면 지도와 선택 버튼을, 재무 질문을 하면 차트와 계산 도구를 만드는 식으로 답변에 필요한 화면을 그 자리에서 구성합니다.\n\n기존 ChatGPT 화면은 텍스트와 이미지처럼 미리 정한 형식을 주로 보여줬습니다. 새 방식은 모델이 작은 구성요소를 골라 조립하고, 답변을 계속 생각하는 동안에도 화면을 먼저 보여줍니다. OpenAI는 검색 답변이 시작되는 시간이 내부 평가에서 44% 빨라졌다고 설명합니다.\n\n유료 이용자는 10월 7일부터 GPT-6 Sol을, Free와 Go 이용자는 다음 날부터 GPT-6 Luna를 받습니다. 이번 변경은 Chat 탭에만 적용됩니다. Work와 Codex에서 쓰는 모델은 그대로입니다.\n\n동적으로 만든 화면이 항상 올바르거나 쓰기 편하다는 뜻은 아닙니다. 계산·입력 결과와 모바일 접근성을 따로 확인해야 합니다. 시스템 카드에는 자해·고어·성적 콘텐츠와 청소년 관련 일부 평가가 이전 모델보다 낮아진 결과도 있으며, OpenAI는 심각도가 낮고 별도 분류기와 시스템 조치를 적용했다고 밝혔습니다.",
+        "takeaway": "AI 서비스의 차이는 이제 답의 내용뿐 아니라 사용자가 그 답을 바로 탐색하고 실행할 수 있게 만드는 화면에서 생깁니다.",
+        "what_to_watch": "한국 계정별 배포 속도, 모바일 접근성, 생성된 도구의 계산 정확도, 기업 관리자가 기능을 통제할 수 있는 범위를 확인하면 됩니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "microsoft-nvidia-windows-local-agents-mxc-2026-10-07",
+      "title": "Microsoft·NVIDIA, Windows 로컬 AI와 OS 격리 기술 MXC 공개",
+      "importance": "S",
+      "one_line_summary": "Microsoft와 NVIDIA가 대형 모델을 PC에서 실행하는 RTX Spark 장치와 에이전트 권한을 OS에서 제한하는 MXC를 공개했습니다.",
+      "impact": "민감한 데이터를 클라우드로 보내지 않는 로컬 에이전트가 현실적인 선택지로 다가옵니다. 그러나 2,599달러 이상 하드웨어와 초기 단계 격리 기술은 도입 장벽입니다.",
+      "original_url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+      "key_quote": "RTX Spark는 최대 128GB 통합 메모리로 대형 모델을 Windows PC에서 실행하도록 설계됐습니다.",
+      "quote_translation": "서버로 보내던 일부 AI 작업을 고성능 노트북이나 데스크톱 안에서 처리하려는 제품입니다.",
+      "summary": "FACT: Microsoft와 NVIDIA는 10월 7일 Surface Laptop Ultra RTX Spark와 Windows용 로컬 AI 모델, MXC 격리 기술을 공개했습니다. Surface 가격은 2,599달러부터 5,899달러이며 10월 16일 출시됩니다. RTX Spark는 최대 128GB 통합 메모리와 FP4 1페타플롭 성능을 표방합니다. MXC는 파일·네트워크·도구 권한을 OS 정책으로 제한하는 초기 프리뷰이며 Anthropic·OpenAI·NVIDIA가 지원 계획을 밝혔습니다.\n\nINTERPRETATION: 에이전트 실행 장소가 클라우드에서 개인 PC로 넓어지면서 하드웨어와 운영체제가 AI 보안 경계의 일부가 됩니다.\n\nSIGNAL: 로컬 AI 도입은 모델 성능만이 아니라 장치 가격·배터리·권한 격리·관리 가능성을 함께 비교해야 합니다.\n\nSPECULATION: MXC가 표준화되면 데스크톱 에이전트의 권한 모델이 앱별 임의 구현에서 OS 공통 정책으로 옮겨갈 수 있지만 현재는 알파 단계입니다.",
+      "why_it_matters": "로컬 AI는 데이터 전송과 클라우드 비용을 줄일 수 있지만 장치 가격과 권한 통제를 함께 해결해야 실용적입니다.",
+      "industry_mood": {"label": "로컬 실행과 OS 격리의 결합", "basis": "제품·가격·출시일은 확인됐지만 MXC와 로컬 성능의 독립 검증은 없습니다."},
+      "outlook": "MXC 정식 출시와 독립 보안시험, 한국 판매·가격, 배터리 지속시간, 로컬 모델의 실제 메모리·속도를 확인해야 합니다.",
+      "business_opportunity": "에이전트 격리 도구는 기존 아이디어와 겹치고 Microsoft가 OS 기본 기능으로 제공할 가능성이 커 별도 아이디어로 선정하지 않습니다.",
+      "tags": ["Microsoft", "NVIDIA", "Windows", "MXC", "RTX Spark", "local AI"],
+      "sources": [
+        {
+          "title": "Local AI comes to RTX Spark PCs at Microsoft Windows event",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/",
+          "publisher": "NVIDIA",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "windows-local-agents-mxc"
+        },
+        {
+          "title": "Surface Laptop Ultra",
+          "url": "https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra",
+          "publisher": "Microsoft",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "windows-local-agents-mxc"
+        },
+        {
+          "title": "Microsoft, Nvidia CEOs unveil new AI laptop at San Francisco event",
+          "url": "https://www.reuters.com/business/microsoft-nvidia-ceos-unveil-new-ai-laptop-san-francisco-event-2026-10-07/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "windows-local-agents-mxc"
+        }
+      ],
+      "selection_score": {"confidence": 29, "impact": 24, "utility": 19, "recency": 15, "community": 9, "total": 96},
+      "time_scope": "last_24h",
+      "verification": {"status": "Microsoft·NVIDIA 제품 자료와 Reuters로 기능·가격·일정 교차 확인", "missing": ["MXC 독립 보안평가", "한국 출시·가격·기업관리 조건", "실사용 배터리·속도·메모리 성능"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "Windows가 AI 에이전트를 PC 안에서 돌리고 가두기 시작합니다",
+        "dek": "Microsoft와 NVIDIA가 로컬 에이전트용 RTX Spark PC와 OS 수준 격리 기술 MXC를 함께 내놨습니다. 민감한 작업을 클라우드로 보내지 않을 수 있지만 고가 하드웨어와 초기 단계 보안 도구가 새 조건입니다.",
+        "body": "Microsoft와 NVIDIA가 대형 AI 모델을 Windows PC에서 실행하는 새 장치와 소프트웨어를 공개했습니다. Surface Laptop Ultra RTX Spark는 코딩·문서 분석·에이전트 작업을 클라우드 대신 기기 안에서 처리하도록 설계됐습니다.\n\n함께 공개된 MXC는 AI 에이전트가 파일과 네트워크, 외부 도구를 어디까지 쓸 수 있는지 운영체제에서 제한합니다. 앱마다 권한 장치를 따로 만드는 대신 Windows가 공통 경계를 제공하려는 시도입니다. Anthropic과 OpenAI, NVIDIA도 MXC를 지원할 계획입니다.\n\nRTX Spark는 최대 128GB 통합 메모리와 FP4 기준 1페타플롭 성능을 내세웁니다. Surface 모델은 2,599달러에서 시작해 구성에 따라 5,899달러까지 올라갑니다. 예약판매는 시작됐고 출시는 10월 16일입니다.\n\n로컬 실행은 민감한 데이터를 외부 서버로 보내지 않고 반복적인 클라우드 사용료를 줄일 수 있습니다. 다만 MXC는 아직 초기 프리뷰이고 독립 보안시험도 없습니다. 실제 배터리 시간과 모델 속도, 한국 판매 조건까지 확인해야 기업용 대안인지 판단할 수 있습니다.",
+        "takeaway": "로컬 AI는 클라우드 비용과 데이터 전송을 줄일 수 있지만 장치 가격과 권한 통제를 함께 해결해야 실용적입니다.",
+        "what_to_watch": "MXC의 정식 출시와 독립 보안시험, 한국 판매·가격, 배터리 지속시간, 로컬 모델의 실제 메모리·속도를 확인하면 됩니다.",
+        "action": "데스크톱 에이전트를 시험한다면 파일·네트워크 권한을 기본 거부로 두고 격리 환경에서 필요한 권한만 열어보세요."
+      }
+    },
+    {
+      "event_key": "anthropic-claude-haiku-5-5-launch-2026-10-07",
+      "title": "Anthropic, Claude Haiku 5.5 출시와 소형 모델 가격 대폭 인하",
+      "importance": "S",
+      "one_line_summary": "Anthropic이 짧은 입력 가격을 Haiku 4.5보다 90% 낮춘 Claude Haiku 5.5를 출시해 대량 요약·분류·서브에이전트 작업을 겨냥합니다.",
+      "impact": "단순 반복 작업에 상위 모델을 쓰는 비용 구조를 다시 계산하게 만듭니다. 다만 긴 입력의 가격 상승과 재시도·품질을 포함한 총비용은 별도 검증이 필요합니다.",
+      "original_url": "https://www.anthropic.com/claude-haiku-5-5",
+      "key_quote": "10만 토큰 이하 입력은 백만 토큰당 0.10달러, 출력은 0.50달러입니다.",
+      "quote_translation": "짧고 반복적인 작업은 이전 Haiku보다 훨씬 낮은 단가로 처리하겠다는 가격 구조입니다.",
+      "summary": "FACT: Anthropic은 10월 7일 Claude Haiku 5.5를 출시했습니다. 10만 토큰 이하 입력은 백만 토큰당 0.10달러, 출력은 0.50달러로 Haiku 4.5보다 90% 낮습니다. 10만 토큰을 넘으면 입력 0.50달러, 출력 2.50달러가 적용됩니다. 회사는 새 토크나이저까지 포함하면 평균 작업비가 약 75% 낮아진다고 주장합니다. 모델은 Anthropic API와 AWS·Google Cloud·Microsoft Azure에서 제공됩니다.\n\nINTERPRETATION: 모델 라우팅의 경제성이 커지며 단순 작업과 복잡한 판단을 다른 모델에 나누는 설계가 유리해집니다.\n\nSIGNAL: 가격표가 아니라 품질·지연·재시도까지 포함한 작업당 총비용을 측정해야 합니다.\n\nSPECULATION: 소형 모델이 서브에이전트 역할을 안정적으로 맡으면 다중 에이전트 구성의 비용 장벽이 낮아질 수 있지만 독립 재현은 아직 부족합니다.",
+      "why_it_matters": "비싼 모델 하나를 모든 작업에 쓰기보다 단순한 반복 작업을 작은 모델로 보내는 설계가 비용 경쟁력이 됩니다.",
+      "industry_mood": {"label": "작업별 모델 배치 경쟁", "basis": "가격과 제공 범위는 공식 확인됐지만 품질·총비용 주장은 공급자 평가 중심입니다."},
+      "outlook": "한국어 품질, 실제 처리 속도, 재시도까지 포함한 작업당 총비용, 긴 문맥에서 가격이 뛰는 구간을 확인해야 합니다.",
+      "business_opportunity": "모델 라우팅은 이미 경쟁이 치열하고 공급자가 기능을 흡수할 가능성이 커 별도 사업 아이디어로 선정하지 않습니다.",
+      "tags": ["Anthropic", "Claude", "Haiku 5.5", "pricing", "model routing"],
+      "sources": [
+        {
+          "title": "Claude Haiku 5.5",
+          "url": "https://www.anthropic.com/claude-haiku-5-5",
+          "publisher": "Anthropic",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "anthropic-haiku-5-5"
+        },
+        {
+          "title": "Anthropic launches third Claude 5.5 model, expanding lineup before planned IPO",
+          "url": "https://www.reuters.com/business/anthropic-launches-third-claude-55-model-expanding-ai-lineup-before-planned-ipo-2026-10-07/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "anthropic-haiku-5-5"
+        }
+      ],
+      "selection_score": {"confidence": 29, "impact": 22, "utility": 20, "recency": 15, "community": 9, "total": 95},
+      "time_scope": "last_24h",
+      "verification": {"status": "Anthropic 가격·제품 발표와 Reuters로 출시 범위 확인", "missing": ["한국어 업무 품질의 독립 평가", "재시도 포함 작업당 총비용", "장문·서브에이전트 성능 재현"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "Claude Haiku 5.5, 짧은 작업 비용을 10분의 1로 낮췄습니다",
+        "dek": "Anthropic이 반복·대량 작업용 소형 모델을 출시했습니다. 10만 토큰 이하 입력은 Haiku 4.5보다 90% 낮은 가격이며 요약·분류·서브에이전트 같은 작업을 겨냥합니다.",
+        "body": "Anthropic이 가장 빠르고 저렴한 소형 모델 Claude Haiku 5.5를 내놨습니다. 고객문의 분류와 요약, 데이터베이스 질의, 브라우저 작업, 큰 에이전트를 돕는 서브에이전트처럼 자주 반복되는 일을 맡기는 모델입니다.\n\n10만 토큰 이하 입력은 백만 토큰당 0.10달러, 출력은 0.50달러입니다. Haiku 4.5보다 90% 낮은 가격입니다. 10만 토큰을 넘으면 입력 0.50달러와 출력 2.50달러가 적용되므로 긴 문서를 한 번에 넣을 때는 차이가 줄어듭니다.\n\nHaiku 계열로는 처음으로 작업별 사고량을 조절할 수 있습니다. Anthropic은 컴퓨터 사용과 코딩 시험에서 이전 소형 모델보다 좋아졌다고 주장합니다. API뿐 아니라 AWS, Google Cloud, Microsoft Azure에서도 같은 모델을 쓸 수 있습니다.\n\n낮은 토큰 가격이 곧바로 낮은 총비용을 보장하지는 않습니다. 원하는 품질이 안 나와 재시도하거나 상위 모델로 넘기면 비용이 다시 올라갑니다. 한국어 품질과 실제 처리 지연도 공급자 시험과 별도로 확인해야 합니다.",
+        "takeaway": "비싼 모델 하나를 모든 작업에 쓰기보다 단순한 반복 작업을 작은 모델로 보내는 설계가 비용 경쟁력이 됩니다.",
+        "what_to_watch": "한국어 품질, 실제 처리 속도, 재시도까지 포함한 작업당 총비용, 긴 문맥에서 가격이 뛰는 구간을 보면 됩니다.",
+        "action": "Claude API를 쓴다면 요약·분류·검색 보조 같은 반복 작업 100건을 Haiku 5.5로 A/B 테스트하고 비용·지연·오류를 함께 기록하세요."
+      }
+    },
+    {
+      "event_key": "imf-ai-investment-inflation-systemic-risk-warning-2026-10-07",
+      "title": "IMF, AI 투자 붐의 성장 효과와 물가·금융 집중 위험 동시 경고",
+      "importance": "A",
+      "one_line_summary": "IMF 총재가 AI 투자가 성장률을 높일 수 있지만 전력·자본 수요와 물가, 기업가치 집중을 키워 실망 시 금융 충격을 만들 수 있다고 경고했습니다.",
+      "impact": "AI 설비투자가 기술 산업을 넘어 물가·금리·전력·금융안정에 영향을 주는 거시 변수로 커졌습니다.",
+      "original_url": "https://www.imf.org/en/news/articles/2026/10/07/sp100726-2026-annual-meetings-curtain-raiser",
+      "key_quote": "AI 투자는 생산성을 높일 수 있는 동시에 물가를 밀어 올리는 수요 충격입니다.",
+      "quote_translation": "성장 기대만 볼 것이 아니라 전력·자본 조달과 높은 기업가치가 만드는 부담도 함께 보라는 뜻입니다.",
+      "summary": "FACT: 크리스탈리나 게오르기에바 IMF 총재는 10월 7일 AI 투자 붐이 성장과 생산성을 높이는 긍정적 수요 충격이면서 물가 압력을 만들 수 있다고 말했습니다. IMF 연구는 AI를 제대로 활용하면 세계 연간 성장률을 약 0.5%포인트 높일 수 있다고 봅니다. 총재는 AI 투자의 GDP 비중이 철도·전력망·통신 인프라 건설기를 넘어설 수 있고 시장 집중과 높은 기업가치가 실망 시 광범위한 충격을 만들 수 있다고 경고했습니다.\n\nINTERPRETATION: AI 자본지출은 기술주만의 변수가 아니라 전력·물가·금리·고용을 연결하는 거시경제 변수입니다.\n\nSIGNAL: 기업과 정책당국은 생산성 이익과 함께 에너지·부채·시장집중·노동 전환 비용을 측정해야 합니다.\n\nSPECULATION: 실제 생산성이 기대를 밑돌면 AI 인프라 투자와 연결된 자산 가격·신용이 동시에 조정받을 수 있지만 시점과 규모는 알 수 없습니다.",
+      "why_it_matters": "AI 투자는 기술주만의 이야기가 아니라 전력·물가·금리·고용을 함께 움직이는 거시경제 변수가 됐습니다.",
+      "industry_mood": {"label": "성장 기대와 금융 경계가 동시 확대", "basis": "IMF 공식 연설과 Reuters 보도로 진단을 확인했으며 세부 가정은 후속 보고서가 필요합니다."},
+      "outlook": "IMF 성장·금융안정보고서의 AI 투자 규모, 생산성 가정, 에너지·시장집중 분석을 확인해야 합니다.",
+      "business_opportunity": "거시 위험 분석은 개인·소팀이 데이터 우위와 반복 구매를 확보하기 어려워 아이디어로 선정하지 않습니다.",
+      "tags": ["IMF", "AI investment", "inflation", "financial stability", "productivity"],
+      "sources": [
+        {
+          "title": "2026 Annual Meetings Curtain Raiser",
+          "url": "https://www.imf.org/en/news/articles/2026/10/07/sp100726-2026-annual-meetings-curtain-raiser",
+          "publisher": "IMF",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "other",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "imf-ai-investment-risk"
+        },
+        {
+          "title": "IMF chief warns energy shock, growing debt and AI risks threaten global growth",
+          "url": "https://www.reuters.com/world/asia-pacific/imf-chief-warns-energy-shock-growing-debt-ai-risks-threaten-global-growth-2026-10-07/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-07",
+          "tier": "A",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "imf-ai-investment-risk"
+        }
+      ],
+      "selection_score": {"confidence": 28, "impact": 24, "utility": 18, "recency": 15, "community": 8, "total": 93},
+      "time_scope": "last_24h",
+      "verification": {"status": "IMF 공식 연설과 Reuters 보도로 성장·물가·금융 위험 진단 확인", "missing": ["0.5%포인트 성장 추정의 국가별 가정", "AI 투자 규모의 세부 시계열", "후속 금융안정보고서 부속표"]},
+      "reader": {
+        "version": "1.3",
+        "headline": "IMF, AI 투자 붐이 성장과 물가를 동시에 밀어 올린다고 경고했습니다",
+        "dek": "AI 투자는 세계 성장률을 높일 수 있지만 전력·자본 수요와 시장 집중도 키웁니다. 기대한 생산성이 나오지 않으면 높은 기업가치와 대규모 투자가 금융 충격으로 돌아올 수 있다는 진단입니다.",
+        "body": "IMF가 AI 투자 붐의 두 얼굴을 짚었습니다. 크리스탈리나 게오르기에바 총재는 AI가 생산성을 높이는 동시에 전력과 자본 수요를 늘려 물가를 밀어 올릴 수 있다고 말했습니다.\n\n투자 규모도 과거 기술 전환기와 견줄 수준으로 커지고 있습니다. IMF는 AI 투자가 GDP에서 차지하는 비중이 철도와 전력망, 통신 인프라 건설기를 넘어설 수 있다고 봅니다. 자금과 기업가치가 소수 회사에 몰리는 현상도 함께 커졌습니다.\n\n상승 여력은 분명합니다. IMF 연구는 AI를 제대로 도입하면 세계 연간 성장률을 약 0.5%포인트 높일 수 있다고 추정합니다. 동시에 노동시장 전환과 사이버 위험, 금융 불안, 통제력 상실에 대비한 안전장치가 필요하다고 강조했습니다.\n\n문제는 기대만큼 생산성이 나오지 않을 때입니다. 높은 기업가치와 대규모 설비투자를 정당화하지 못하면 관련 자산과 신용이 함께 흔들릴 수 있습니다. 아직 확정된 전망이 아니라 위험 시나리오이므로 후속 IMF 보고서의 가정과 수치를 확인해야 합니다.",
+        "takeaway": "AI 투자는 기술주만의 이야기가 아니라 전력·물가·금리·고용을 함께 움직이는 거시경제 변수가 됐습니다.",
+        "what_to_watch": "IMF 성장·금융안정보고서의 AI 투자 규모, 생산성 가정, 에너지·시장집중 분석을 확인하면 됩니다.",
+        "action": null
+      }
+    }
+  ],
+  "business_ideas": [],
+  "tools": [],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "AI 작업을 모델별로 나누기",
+    "when_to_use": "반복 작업의 비용을 줄이면서 중요한 판단의 품질은 유지해야 할 때",
+    "practical_example": "고객문의 분류·요약은 소형 모델에 맡기고 환불 판단과 민감 답변은 상위 모델과 사람 승인으로 넘긴 뒤 100건의 비용·지연·오류를 비교합니다.",
+    "prompt_example": "이 업무를 반복·저위험, 복잡·중위험, 민감·고위험으로 나누고 각 단계에 적합한 모델, 사람 승인 조건, 실패 시 상위 모델 전환 규칙과 측정 지표를 작성해라."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing",
+      "url": "https://arxiv.org/abs/2609.37402",
+      "why_read": "모델 라우터를 훈련하는 비용까지 포함해 언제 실제 절감이 시작되는지 측정하며, 적은 감독 데이터로 손익분기점을 앞당기는 방법을 제안합니다."
+    },
+    {
+      "type": "GitHub",
+      "title": "microsoft/mxc",
+      "url": "https://github.com/microsoft/mxc",
+      "why_read": "Windows 에이전트의 파일·네트워크·도구 권한을 정책으로 제한하는 초기 구현과 TypeScript SDK를 볼 수 있습니다."
+    },
+    {
+      "type": "YouTube",
+      "title": "Microsoft Build 2026 | Satya Nadella Opening Keynote",
+      "url": "https://www.youtube.com/watch?v=FFMm454fxNA",
+      "why_read": "Surface RTX Spark와 MXC가 로컬 에이전트 전략 안에서 어떻게 연결되는지 설명합니다. 메타데이터만 확인했으며 전체 영상은 검토하지 않았습니다."
+    },
+    {
+      "type": "Blog",
+      "title": "Your AI strategy should outlast your favorite model",
+      "url": "https://dust.tt/blog/dust-index-ai-strategy-beyond-models",
+      "why_read": "공급자 하나에 고정하기보다 작업별 모델 선택과 비용 추적이 필요한 이유를 실제 사용 데이터로 설명합니다. 업체 자체 연구라는 한계가 있습니다."
+    }
+  ],
+  "todays_insight": "AI가 무엇을 아느냐보다 어디에서, 얼마에, 어떤 경계 안에서 일하느냐가 중요해집니다.",
+  "morning_paper": {
+    "insight_headline": "AI 경쟁이 모델 성능에서 실행 방식으로 옮겨갑니다",
+    "insight_summary": "OpenAI는 답변을 인터페이스로 바꾸고, Anthropic은 작은 모델의 가격을 크게 낮췄습니다. Microsoft와 NVIDIA는 에이전트를 PC 안에서 실행하고 OS가 권한을 통제하도록 만들었습니다. IMF의 경고까지 함께 보면 다음 경쟁은 더 똑똑한 모델 하나가 아니라 어떤 화면·비용·장치·통제 아래에서 실제 일을 맡기느냐에 달려 있습니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "openai-gpt6-intelligent-ui-global-rollout-2026-10-07",
+      "microsoft-nvidia-windows-local-agents-mxc-2026-10-07",
+      "anthropic-claude-haiku-5-5-launch-2026-10-07",
+      "imf-ai-investment-inflation-systemic-risk-warning-2026-10-07"
+    ],
+    "top_event_keys": [
+      "openai-gpt6-intelligent-ui-global-rollout-2026-10-07",
+      "microsoft-nvidia-windows-local-agents-mxc-2026-10-07",
+      "anthropic-claude-haiku-5-5-launch-2026-10-07"
+    ]
+  },
+  "build_candidate": null
+}
