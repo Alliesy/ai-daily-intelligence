@@ -32,6 +32,15 @@ AI Researcher → Opportunity Finder → Git Publisher → Notion Latest Publish
 4. `morning_paper.insight_method`는 `cross_event_signal_v1`, `evidence_event_keys`는 실제 근거 Event key, `top_event_keys`는 중요 Event key 최대 3개로 기록합니다. 강한 Event가 1~2개뿐이면 3개를 억지로 채우지 않습니다.
 5. Evidence 숫자는 Event/Source 관계에서만 계산합니다. 공식 Source는 명시적 `authority=official`, 독립 근거는 명시적 `authority=independent`이면서 서로 다른 `evidence_group`만 계산합니다. 분류가 없으면 추정 숫자를 만들지 않습니다.
 
+### 인사이트 제목 문체 — 사용자 승인 2026-10-08
+
+- 인사이트 제목은 추상적인 산업 진단보다 그날 실제로 바뀐 화면·가격·제품·행동이 눈에 보이는 구체적인 말과 동사로 씁니다. 여러 뉴스의 연결은 유지하되 비개발자도 제목만 읽고 변화의 장면을 떠올릴 수 있어야 합니다.
+- 자연스럽고 리듬감 있는 한국어를 사용합니다. 필요하면 병렬·대비를 활용하되 과장, 광고 문구, 낚시성 단정은 피합니다.
+- “AI의 다음 경쟁은…”, “AI의 병목이…”, “…에서 …로 옮겨갑니다”, “…할수록 …이 중요해집니다” 같은 추상적 문장 틀을 관성적으로 반복하지 않습니다.
+- 승인된 느낌의 예: “화면은 달라지고, 요금은 내려가고, PC는 바빠진다”. 이 제목의 구체성과 리듬을 참고하되 매일 세 구절 나열이나 같은 종결형으로 복제하지 않습니다. 뉴스에 맞게 문장 길이·주어·구조를 바꿉니다.
+- 게시 전 최근 7개 브리핑의 제목과 비교해 같은 도입부·문장 뼈대·추상어가 반복되면 다시 씁니다. 제목의 각 표현은 선정된 뉴스의 근거 안에서 설명할 수 있어야 합니다.
+- 이 기준은 `morning_paper.insight_headline`과 이를 표시하는 보고서·LATEST·Notion·완료 알림에 공통 적용합니다. 분석 내용·출처·검증 기준은 바꾸지 않습니다.
+
 ## 3. Problem Scout → Opportunity Finder
 
 - 뉴스에서 사업 아이디어를 바로 만들지 않습니다. `Signal → Problem Evidence → Opportunity` 순서로 판단합니다.
