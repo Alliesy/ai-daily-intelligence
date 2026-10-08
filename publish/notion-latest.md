@@ -1,163 +1,174 @@
-# AI Daily Intelligence · 2026-10-08
+# AI Daily Intelligence · 2026-10-09
 
-[GitHub 전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-08.md) · [날짜별 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-08.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-09.md) · [원본 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-09.json)
 
-## Morning Paper
+## 차트는 계산 근거를, 버그 보고서는 재현 코드를 내놓는다
 
-### 화면은 달라지고, 요금은 내려가고, PC는 바빠진다
+Claude의 새 차트에는 계산에 쓴 쿼리가 붙고, OSS Scanner의 보안 보고서에는 문제를 재현할 자료가 따라옵니다. Google은 에이전트가 한 일을 별도 신원으로 기록하겠다고 밝혔습니다. 결과를 빨리 받는 것에 더해, 사람이 어디를 열어보고 확인할 수 있는지가 제품 설명의 한 부분이 됐습니다. 이런 확인 경로가 있다는 사실과 결과가 정확하다는 증명은 구분해야 합니다.
 
-OpenAI는 답변을 인터페이스로 바꾸고, Anthropic은 작은 모델의 가격을 크게 낮췄습니다. Microsoft와 NVIDIA는 에이전트를 PC 안에서 실행하고 OS가 권한을 통제하도록 만들었습니다. IMF의 경고까지 함께 보면 다음 경쟁은 더 똑똑한 모델 하나가 아니라 어떤 화면·비용·장치·통제 아래에서 실제 일을 맡기느냐에 달려 있습니다.
+검증 뉴스 4개 · 사업 아이디어 0개 · 구축 후보 없음
 
-> AI가 무엇을 아느냐보다 어디에서, 얼마에, 어떤 경계 안에서 일하느냐가 중요해집니다.
+조사 기준: 2026-10-08 07:04:26 ~ 2026-10-09 07:04:26 KST의 신규 발표와 최근 7일 중요 후속 변화. 아래 네 사건의 발표일은 2026-10-08입니다.
 
-## Top News
+## 오늘 먼저 읽을 뉴스
 
-### 1. ChatGPT가 답변마다 필요한 화면을 직접 만듭니다
+1. **Google, 자기 메일함을 가진 업무용 Gemini 에이전트 공개** — 질문에 답하는 데서 끝나지 않고, 여러 앱을 오가며 맡긴 일을 이어갑니다. 중소기업 대상 제공은 초기 접근 단계입니다.
 
-GPT-6와 함께 Intelligent UI가 전 세계 ChatGPT에 배포됩니다. 설명만 적는 대신 질문에 맞춰 그림·버튼·폼·계산기 같은 인터페이스를 대화 안에서 바로 구성합니다.
+2. **Claude, 실시간 대시보드와 편집 가능한 설명 애니메이션 추가** — 회사 데이터를 연결해 차트를 만들고, 자료를 짧은 설명 영상으로 바꿀 수 있습니다. Dashboards는 유료 플랜, Motion은 Team·Enterprise에서 베타로 제공합니다.
 
-OpenAI가 GPT-6와 함께 Intelligent UI를 공개했습니다. 사용자가 여행을 비교하면 지도와 선택 버튼을, 재무 질문을 하면 차트와 계산 도구를 만드는 식으로 답변에 필요한 화면을 그 자리에서 구성합니다.
+3. **Anthropic, 무료 OSS Scanner와 기반시설 보안 지원 발표** — 오픈소스 유지관리자는 정기 검사 결과를 받아볼 수 있습니다. 전력·수도·교통 시설에는 전문 보안 업체를 통해 모델과 엔지니어를 지원합니다.
 
-기존 ChatGPT 화면은 텍스트와 이미지처럼 미리 정한 형식을 주로 보여줬습니다. 새 방식은 모델이 작은 구성요소를 골라 조립하고, 답변을 계속 생각하는 동안에도 화면을 먼저 보여줍니다. OpenAI는 검색 답변이 시작되는 시간이 내부 평가에서 44% 빨라졌다고 설명합니다.
+## Google, 자기 메일함을 가진 업무용 Gemini 에이전트 공개
 
-유료 이용자는 10월 7일부터 GPT-6 Sol을, Free와 Go 이용자는 다음 날부터 GPT-6 Luna를 받습니다. 이번 변경은 Chat 탭에만 적용됩니다. Work와 Codex에서 쓰는 모델은 그대로입니다.
+질문에 답하는 데서 끝나지 않고, 여러 앱을 오가며 맡긴 일을 이어갑니다. 중소기업 대상 제공은 초기 접근 단계입니다.
 
-동적으로 만든 화면이 항상 올바르거나 쓰기 편하다는 뜻은 아닙니다. 계산·입력 결과와 모바일 접근성을 따로 확인해야 합니다. 시스템 카드에는 자해·고어·성적 콘텐츠와 청소년 관련 일부 평가가 이전 모델보다 낮아진 결과도 있으며, OpenAI는 심각도가 낮고 별도 분류기와 시스템 조치를 적용했다고 밝혔습니다.
+Google이 10월 8일 발표한 Gemini는 문서 작성, 자료 분석, 코드 실행을 한곳에서 맡기는 업무용 에이전트입니다. 회사 설명대로라면 사용자가 노트북을 닫아도 클라우드에서 몇 시간이나 며칠 걸리는 일을 계속할 수 있습니다.
 
-#### 하나만 기억한다면
+팀이 함께 쓰는 ‘동료 에이전트’에는 이메일, 캘린더, Drive를 포함한 별도 Workspace 계정이 생깁니다. 사람이 한 일과 구분해 기록하며, 팀이 공유한 자료에 접근하도록 설계했습니다. 사용할 모델도 Gemini로 고정하지 않고 Claude를 함께 선택할 수 있게 했습니다.
 
-AI 서비스의 차이는 이제 답의 내용뿐 아니라 사용자가 그 답을 바로 탐색하고 실행할 수 있게 만드는 화면에서 생깁니다.
+관리자는 역할별 권한과 작업 기록을 확인하고 프로젝트별 지출 한도를 정할 수 있습니다. 다만 이런 기능이 발표됐다는 것과 모든 고객이 지금 사용할 수 있다는 것은 다릅니다. Google의 중소기업 안내는 현재 초기 접근이며 전체 제공은 추후라고 명시합니다.
 
-#### 앞으로 볼 건
+### 하나만 기억한다면
 
-한국 계정별 배포 속도, 모바일 접근성, 생성된 도구의 계산 정확도, 기업 관리자가 기능을 통제할 수 있는 범위를 확인하면 됩니다.
+AI를 팀에 넣을 때는 사람의 계정을 빌려주는 방식부터 다시 생각하게 됩니다.
 
-#### 더 궁금하다면
+### 앞으로 볼 건
 
-- [GPT-6 for everyone · OpenAI](https://openai.com/index/gpt-6-for-everyone/)
-- [GPT-6 Sol and GPT-6 Luna: October 2026 update · OpenAI](https://deploymentsafety.openai.com/gpt-6-october)
-- [ChatGPT is getting a lot more visual with a new interface · TechCrunch](https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/)
+한국 고객의 신청 조건, 실제 청구 단위, 공유 권한을 회수했을 때 진행 중인 작업도 즉시 멈추는지 확인해야 합니다.
 
-### 2. Windows가 AI 에이전트를 PC 안에서 돌리고 가두기 시작합니다
+### 더 궁금하다면
 
-Microsoft와 NVIDIA가 로컬 에이전트용 RTX Spark PC와 OS 수준 격리 기술 MXC를 함께 내놨습니다. 민감한 작업을 클라우드로 보내지 않을 수 있지만 고가 하드웨어와 초기 단계 보안 도구가 새 조건입니다.
+- [Welcome to Gemini at Work 2026: Introducing the Gemini agent](https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026) — Google Cloud, 2026-10-08
+- [Empowering SMBs to do more with Gemini](https://cloud.google.com/blog/topics/startups/how-to-grow-your-small-business-using-google-gemini/) — Google Cloud, 2026-10-08
+- [Google Cloud introduces Gemini agent for work as AI race heats up](https://www.reuters.com/business/google-cloud-introduces-gemini-agent-work-ai-race-heats-up-2026-10-08/) — Reuters, 2026-10-08
 
-Microsoft와 NVIDIA가 대형 AI 모델을 Windows PC에서 실행하는 새 장치와 소프트웨어를 공개했습니다. Surface Laptop Ultra RTX Spark는 코딩·문서 분석·에이전트 작업을 클라우드 대신 기기 안에서 처리하도록 설계됐습니다.
+검증 범위: Reuters 검색 색인으로 발표 교차 확인. 상세 기능과 초기 접근 범위는 Google 원문에 근거. 미확인: 한국 제공·가격·계약 조건, 독립 장기 실행 및 권한 차단 평가.
 
-함께 공개된 MXC는 AI 에이전트가 파일과 네트워크, 외부 도구를 어디까지 쓸 수 있는지 운영체제에서 제한합니다. 앱마다 권한 장치를 따로 만드는 대신 Windows가 공통 경계를 제공하려는 시도입니다. Anthropic과 OpenAI, NVIDIA도 MXC를 지원할 계획입니다.
+## Claude, 실시간 대시보드와 편집 가능한 설명 애니메이션 추가
 
-RTX Spark는 최대 128GB 통합 메모리와 FP4 기준 1페타플롭 성능을 내세웁니다. Surface 모델은 2,599달러에서 시작해 구성에 따라 5,899달러까지 올라갑니다. 예약판매는 시작됐고 출시는 10월 16일입니다.
+회사 데이터를 연결해 차트를 만들고, 자료를 짧은 설명 영상으로 바꿀 수 있습니다. Dashboards는 유료 플랜, Motion은 Team·Enterprise에서 베타로 제공합니다.
 
-로컬 실행은 민감한 데이터를 외부 서버로 보내지 않고 반복적인 클라우드 사용료를 줄일 수 있습니다. 다만 MXC는 아직 초기 프리뷰이고 독립 보안시험도 없습니다. 실제 배터리 시간과 모델 속도, 한국 판매 조건까지 확인해야 기업용 대안인지 판단할 수 있습니다.
+Claude에 분석 화면과 움직이는 설명 자료를 만드는 도구가 들어왔습니다. 10월 8일 발표된 Dashboards는 BigQuery나 Snowflake 같은 데이터 플랫폼을 연결해 질문에 맞는 화면을 구성합니다. 데이터가 바뀌면 화면도 갱신됩니다.
 
-#### 하나만 기억한다면
+숫자를 누르면 계산에 사용한 쿼리를 볼 수 있고, 차트에는 마지막 갱신 시각이 표시됩니다. Motion은 글자·도형·차트를 움직이는 코드를 만들어 MP4로 내보냅니다. 영상 생성 모델로 실사 장면을 만드는 방식이 아니어서 문구와 숫자, 타이밍을 직접 고칠 수 있습니다.
 
-로컬 AI는 클라우드 비용과 데이터 전송을 줄일 수 있지만 장치 가격과 권한 통제를 함께 해결해야 실용적입니다.
+이와 함께 Docs·Slides·Design은 베타를 마치고 무료 플랜까지 확대됩니다. Enterprise에서는 Dashboards와 Motion이 기본으로 꺼져 있어 관리자가 켜야 합니다. 완성된 모양만 보고 외부에 공유하기보다 집계 기준과 데이터 접근 범위를 먼저 확인하는 편이 좋습니다.
 
-#### 앞으로 볼 건
+### 하나만 기억한다면
 
-MXC의 정식 출시와 독립 보안시험, 한국 판매·가격, 배터리 지속시간, 로컬 모델의 실제 메모리·속도를 확인하면 됩니다.
+초안을 빨리 만드는 만큼, 사람이 틀린 부분을 찾고 고칠 수 있는지도 도구의 가치가 됩니다.
 
-#### 지금 확인할 것
+### 앞으로 볼 건
 
-데스크톱 에이전트를 시험한다면 파일·네트워크 권한을 기본 거부로 두고 격리 환경에서 필요한 권한만 열어보세요.
+연결한 데이터의 갱신 실패가 어떻게 표시되는지, 한국어 글꼴과 내보내기 결과가 유지되는지 살펴볼 만합니다.
 
-#### 더 궁금하다면
+### 지금 확인할 것
 
-- [Local AI comes to RTX Spark PCs at Microsoft Windows event · NVIDIA](https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/)
-- [Surface Laptop Ultra · Microsoft](https://www.microsoft.com/en-us/surface/devices/surface-laptop-ultra)
-- [Microsoft, Nvidia CEOs unveil new AI laptop · Reuters](https://www.reuters.com/business/microsoft-nvidia-ceos-unveil-new-ai-laptop-san-francisco-event-2026-10-07/)
+기존 claude.ai/design을 사용했다면 공식 이전 안내를 확인하세요. 독립 사이트는 12월 14일까지 유지되며 대화·댓글과 공개 링크는 별도 확인이 필요합니다.
 
-### 3. Claude Haiku 5.5, 짧은 작업 비용을 10분의 1로 낮췄습니다
+### 더 궁금하다면
 
-Anthropic이 반복·대량 작업용 소형 모델을 출시했습니다. 10만 토큰 이하 입력은 Haiku 4.5보다 90% 낮은 가격이며 요약·분류·서브에이전트 같은 작업을 겨냥합니다.
+- [Build live dashboards and animate explainers with Claude](https://claude.com/resources/articles/dashboards-and-motion) — Anthropic, 2026-10-08
+- [Anthropic launches dashboard, animation tools for Claude](https://www.reuters.com/technology/anthropic-launches-dashboard-animation-tools-claude-2026-10-08/) — Reuters, 2026-10-08
 
-Anthropic이 가장 빠르고 저렴한 소형 모델 Claude Haiku 5.5를 내놨습니다. 고객문의 분류와 요약, 데이터베이스 질의, 브라우저 작업, 큰 에이전트를 돕는 서브에이전트처럼 자주 반복되는 일을 맡기는 모델입니다.
+검증 범위: 공식 원문에서 플랜과 관리자 기본값 확인. Reuters 색인으로 출시 사실 교차 확인. 미확인: 독립 계산 정확도·한국어 출력 품질, 실사용 시간 절감.
 
-10만 토큰 이하 입력은 백만 토큰당 0.10달러, 출력은 0.50달러입니다. Haiku 4.5보다 90% 낮은 가격입니다. 10만 토큰을 넘으면 입력 0.50달러와 출력 2.50달러가 적용되므로 긴 문서를 한 번에 넣을 때는 차이가 줄어듭니다.
+## Anthropic, 무료 OSS Scanner와 기반시설 보안 지원 발표
 
-Haiku 계열로는 처음으로 작업별 사고량을 조절할 수 있습니다. Anthropic은 컴퓨터 사용과 코딩 시험에서 이전 소형 모델보다 좋아졌다고 주장합니다. API뿐 아니라 AWS, Google Cloud, Microsoft Azure에서도 같은 모델을 쓸 수 있습니다.
+오픈소스 유지관리자는 정기 검사 결과를 받아볼 수 있습니다. 전력·수도·교통 시설에는 전문 보안 업체를 통해 모델과 엔지니어를 지원합니다.
 
-낮은 토큰 가격이 곧바로 낮은 총비용을 보장하지는 않습니다. 원하는 품질이 안 나와 재시도하거나 상위 모델로 넘기면 비용이 다시 올라갑니다. 한국어 품질과 실제 처리 지연도 공급자 시험과 별도로 확인해야 합니다.
+Anthropic이 10월 8일 Cyber Mission을 발표했습니다. 새 OSS Scanner는 참여를 신청한 오픈소스 프로젝트를 무료로 반복 검사합니다. 보고서에는 취약점 설명과 재현 자료를 담고, 가능한 경우 수정안도 함께 보냅니다.
 
-#### 하나만 기억한다면
+빠른 전달에는 대가가 있습니다. 이 보고서는 사람이 검토하지 않은 채 전송되므로 심각도 판단이나 내용이 틀릴 수 있습니다. 회사는 결과를 처리할 여력이 있는 프로젝트를 대상으로 삼고, 그렇지 않은 프로젝트에는 사람이 확인한 취약점 제보를 계속하겠다고 설명했습니다.
 
-비싼 모델 하나를 모든 작업에 쓰기보다 단순한 반복 작업을 작은 모델로 보내는 설계가 비용 경쟁력이 됩니다.
+기반시설 지원은 별도 프로그램으로 진행합니다. 오랫동안 가동하는 산업 장비는 프로그램을 수정하려고 쉽게 멈출 수 없기 때문에, 현장을 아는 전문 업체들과 먼저 협력합니다. AI가 문제를 찾았다는 이유만으로 바로 패치를 적용할 수 있다는 뜻은 아닙니다.
 
-#### 앞으로 볼 건
+### 하나만 기억한다면
 
-한국어 품질, 실제 처리 속도, 재시도까지 포함한 작업당 총비용, 긴 문맥에서 가격이 뛰는 구간을 보면 됩니다.
+무료 검사 서비스를 평가할 때는 발견 건수보다 처리하지 못하고 쌓이는 보고서 수를 보는 편이 현실적입니다.
 
-#### 지금 확인할 것
+### 앞으로 볼 건
 
-Claude API를 쓴다면 요약·분류·검색 보조 같은 반복 작업 100건을 Haiku 5.5로 A/B 테스트하고 비용·지연·오류를 함께 기록하세요.
+참여 프로젝트가 실제로 채택한 수정안 비율과 검증에 쓴 시간, 현장 장비의 안전한 적용 사례가 공개되는지 지켜보면 됩니다.
 
-#### 더 궁금하다면
+### 더 궁금하다면
 
-- [Claude Haiku 5.5 · Anthropic](https://www.anthropic.com/claude-haiku-5-5)
-- [Anthropic launches third Claude 5.5 model · Reuters](https://www.reuters.com/business/anthropic-launches-third-claude-55-model-expanding-ai-lineup-before-planned-ipo-2026-10-07/)
+- [Introducing the Anthropic Cyber Mission](https://www.anthropic.com/news/anthropic-cyber-mission) — Anthropic, 2026-10-08
 
-### 4. IMF, AI 투자 붐이 성장과 물가를 동시에 밀어 올린다고 경고했습니다
+검증 범위: 프로그램 발표와 회사가 명시한 한계를 확인했으며 보안 효과는 검증하지 않음. 미확인: 독립 오탐률·수정안 채택률, 한국 프로젝트·고객의 실제 참여 조건.
 
-AI 투자는 세계 성장률을 높일 수 있지만 전력·자본 수요와 시장 집중도 키웁니다. 기대한 생산성이 나오지 않으면 높은 기업가치와 대규모 투자가 금융 충격으로 돌아올 수 있다는 진단입니다.
+## GlobalFoundries·TSMC, AI 칩 연결 부품 미국 생산에 20억달러 계약
 
-IMF가 AI 투자 붐의 두 얼굴을 짚었습니다. 크리스탈리나 게오르기에바 총재는 AI가 생산성을 높이는 동시에 전력과 자본 수요를 늘려 물가를 밀어 올릴 수 있다고 말했습니다.
+뉴욕 공장이 첨단 AI 칩 패키징에 들어가는 연결 부품을 공급하게 됩니다. 실제 양산 확대는 2028년 상반기부터로 예상됩니다.
 
-투자 규모도 과거 기술 전환기와 견줄 수준으로 커지고 있습니다. IMF는 AI 투자가 GDP에서 차지하는 비중이 철도와 전력망, 통신 인프라 건설기를 넘어설 수 있다고 봅니다. 자금과 기업가치가 소수 회사에 몰리는 현상도 함께 커졌습니다.
+GlobalFoundries가 10월 8일 TSMC와 20억달러 규모 제조 계약을 발표했습니다. 초기 계약 기간은 5년이며, 미국 뉴욕주 Malta 공장의 생산 능력을 늘릴 계획입니다.
 
-상승 여력은 분명합니다. IMF 연구는 AI를 제대로 도입하면 세계 연간 성장률을 약 0.5%포인트 높일 수 있다고 추정합니다. 동시에 노동시장 전환과 사이버 위험, 금융 불안, 통제력 상실에 대비한 안전장치가 필요하다고 강조했습니다.
+만드는 것은 AI 프로세서 자체가 아니라 실리콘 인터포저입니다. 프로세서와 메모리 아래에서 두 부품을 빠르게 연결하는 역할을 합니다. 칩을 개별적으로 잘 만들어도 이 연결·조립 단계가 부족하면 완성된 가속기 공급을 늘리기 어렵습니다.
 
-문제는 기대만큼 생산성이 나오지 않을 때입니다. 높은 기업가치와 대규모 설비투자를 정당화하지 못하면 관련 자산과 신용이 함께 흔들릴 수 있습니다. 아직 확정된 전망이 아니라 위험 시나리오이므로 후속 IMF 보고서의 가정과 수치를 확인해야 합니다.
+이번 계약은 TSMC의 CoWoS 패키징에 필요한 미국 내 부품 공급처를 추가합니다. 다만 계획된 생산이 바로 시작되는 것은 아니며, 발표에는 구체적인 생산량이나 수율이 없습니다. 지금 쓰는 클라우드의 요금이 곧 내려간다는 근거로 읽기는 어렵습니다.
 
-#### 하나만 기억한다면
+### 하나만 기억한다면
 
-AI 투자는 기술주만의 이야기가 아니라 전력·물가·금리·고용을 함께 움직이는 거시경제 변수가 됐습니다.
+AI 반도체를 이해하려면 가장 작은 회로뿐 아니라 칩들을 이어 붙이는 부품도 봐야 합니다.
 
-#### 앞으로 볼 건
+### 앞으로 볼 건
 
-IMF 성장·금융안정보고서의 AI 투자 규모, 생산성 가정, 에너지·시장집중 분석을 확인하면 됩니다.
+설비 증설과 고객 인증이 일정대로 진행되는지, 생산 확대 이후 공급량이 실제로 얼마나 늘어나는지 확인할 필요가 있습니다.
 
-#### 더 궁금하다면
+### 더 궁금하다면
 
-- [2026 Annual Meetings Curtain Raiser · IMF](https://www.imf.org/en/news/articles/2026/10/07/sp100726-2026-annual-meetings-curtain-raiser)
-- [IMF chief warns energy shock, growing debt and AI risks · Reuters](https://www.reuters.com/world/asia-pacific/imf-chief-warns-energy-shock-growing-debt-ai-risks-threaten-global-growth-2026-10-07/)
+- [GlobalFoundries reaches agreement to establish U.S.-based supply of silicon interposers for advanced AI packaging](https://gf.com/news-and-events/news/globalfoundries-reaches-agreement-to-establish-us-based-supply-of-silicon-interposers-for-advanced-ai-packaging/) — GlobalFoundries, 2026-10-08
+- [GlobalFoundries to make key AI chip component for TSMC in $2 billion deal](https://www.reuters.com/world/asia-pacific/globalfoundries-make-key-ai-chip-component-tsmc-2026-10-08/) — Reuters, 2026-10-08
 
-## 오늘의 Skill
+검증 범위: GF 공식 원문과 Reuters 보도 및 같은 보도의 AOL 재배포를 대조. 재배포는 별도 독립 근거로 세지 않음. 미확인: 계약별 매출 인식·실제 생산량·수율.
 
-### AI 작업을 모델별로 나누기
+## 사업 아이디어
 
-반복 작업의 비용을 줄이면서 중요한 판단의 품질은 유지해야 할 때 사용합니다.
+신규 사업 아이디어 0개. 구축 후보 없음.
 
-고객문의 분류·요약은 소형 모델에 맡기고 환불 판단과 민감 답변은 상위 모델과 사람 승인으로 넘긴 뒤 100건의 비용·지연·오류를 비교합니다.
+승인 기능은 현재 ADK 공식 저장소에 있고 Google도 내장 통제를 발표했습니다. 한국 소규모 고객의 반복 지출·대체 불가능한 문제·보안 책임 범위가 확인되지 않아 신규 아이디어 0개, 구축 후보 없음.
 
-프롬프트 예시:
+공개 문제 근거:
 
-> 이 업무를 반복·저위험, 복잡·중위험, 민감·고위험으로 나누고 각 단계에 적합한 모델, 사람 승인 조건, 실패 시 상위 모델 전환 규칙과 측정 지표를 작성해라.
+- 공개 사용자는 도구별·리소스별 승인과 실행 중단을 요구했습니다. 2025년의 종료된 이슈로 현재 미해결 문제라고 보지 않습니다. [원문](https://github.com/google/adk-python/issues/640)
+- 장기 실행 도중 승인 대기와 재개 방법을 묻는 공개 사례가 있습니다. 과거 요청이며 국내 구매 의사 증거는 아닙니다. [원문](https://github.com/google/adk-python/issues/1851)
 
 ## Worth Reading
 
-- **Paper** — [Routing Should Pay for Itself: Sparse Supervision for Economical LLM Routing](https://arxiv.org/abs/2609.37402)  
-  모델 라우터를 훈련하는 비용까지 포함해 언제 실제 절감이 시작되는지 측정하며, 적은 감독 데이터로 손익분기점을 앞당기는 방법을 제안합니다.
-- **GitHub** — [microsoft/mxc](https://github.com/microsoft/mxc)  
-  Windows 에이전트의 파일·네트워크·도구 권한을 정책으로 제한하는 초기 구현과 TypeScript SDK를 볼 수 있습니다.
-- **YouTube** — [Microsoft Build 2026 | Satya Nadella Opening Keynote](https://www.youtube.com/watch?v=FFMm454fxNA)  
-  Surface RTX Spark와 MXC가 로컬 에이전트 전략 안에서 어떻게 연결되는지 설명합니다. 메타데이터만 확인했으며 전체 영상은 검토하지 않았습니다.
-- **Blog** — [Your AI strategy should outlast your favorite model](https://dust.tt/blog/dust-index-ai-strategy-beyond-models)  
-  공급자 하나에 고정하기보다 작업별 모델 선택과 비용 추적이 필요한 이유를 실제 사용 데이터로 설명합니다. 업체 자체 연구라는 한계가 있습니다.
+- **Paper** · [τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains](https://arxiv.org/abs/2406.12045) — 대화의 끝말 대신 실제 데이터베이스 상태로 성공을 확인하고 반복 실행의 일관성을 측정하는 방법을 제시합니다. 2024년 연구이므로 당시 모델 성능을 현재 성능으로 읽지 않아야 합니다.
 
-## 확인이 더 필요한 것
+- **GitHub** · [google/adk-python](https://github.com/google/adk-python) — 도구 실행 전 확인과 사람의 승인을 포함한 에이전트 흐름을 살펴볼 수 있는 Google 공식 저장소입니다. 새 Gemini 에이전트의 공개 소스라는 뜻은 아닙니다.
 
-- GPT-6·Claude Haiku 5.5·RTX Spark의 한국어·실사용 성능과 비용을 독립적으로 재현한 자료
-- Intelligent UI의 한국 계정별 배포 시점, 계산 정확도, 모바일 접근성과 기업 관리 통제
-- MXC의 독립 보안평가, 한국 판매 조건, 배터리·로컬 모델 성능
-- IMF의 0.5%포인트 성장 추정에 사용한 국가별 가정과 후속 금융안정보고서 부속표
-- YouTube 항목은 메타데이터만 확인했으며 전체 영상은 검토하지 않음
+- **YouTube** · [Claude Dashboards·Motion 공식 데모 — 자전거 대여 데이터 시각화](https://www.youtube.com/watch?v=en0GuyhieQk) — 공식 발표문이 연결한 차트·애니메이션 데모입니다. 링크와 발표문 설명을 확인했으며 영상 전체와 자막, 별도 업로드 날짜는 검토하지 않았습니다.
 
-## 게시 전 검증
+- **Blog** · [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents) — 작업 기록과 실제 완료 상태를 분리해 평가하는 방법을 설명합니다. 2026년 1월 9일 글로, 오늘 업무 에이전트 발표를 판단할 배경 자료입니다.
 
-- 뉴스 4개, 사업 아이디어 0개, 구축 후보 없음
-- Worth Reading: Paper·GitHub·YouTube·Blog 각 1개
-- event_key와 정규화 URL 중복 없음
-- Reader V1.3: 네 이벤트 모두 headline·dek·body와 선택형 takeaway·what_to_watch·action 검증
-- 구축 후보 승인 게이트 적용: 해당 없음
-- `latest.json`: date_kst·data_path·report_path·status 네 필드만 유지
+## 오늘의 활용법 · 완료 메시지 대신 결과와 근거 함께 확인하기
+
+AI가 대시보드나 수정안을 만든 뒤 공유·적용 여부를 판단할 때
+
+매출 차트에서 쿼리와 집계 기간을 확인하고, 수정안은 재현 사례와 변경 후 결과를 대조합니다.
+
+요청 예시: “이 결과를 검토할 사람이 확인해야 할 원본 데이터, 계산 과정, 재현 절차를 알려주세요. 직접 확인한 항목과 아직 확인하지 못한 항목을 나눠 적어주세요. 외부 공유나 실제 변경은 수행하지 마세요.”
+
+## 선정과 검증
+
+점수는 신뢰도 30·영향도 25·활용도 20·최신성 15·커뮤니티 10의 편집 판단입니다. 독립 성능 평가 점수가 아닙니다.
+
+| 뉴스 | 신뢰도 | 영향도 | 활용도 | 최신성 | 커뮤니티 | 합계 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Google, 자기 메일함을 가진 업무용 Gemini 에이전트 공개 | 28 | 24 | 19 | 15 | 7 | 93 |
+| Claude, 실시간 대시보드와 편집 가능한 설명 애니메이션 추가 | 29 | 21 | 20 | 15 | 7 | 92 |
+| Anthropic, 무료 OSS Scanner와 기반시설 보안 지원 발표 | 27 | 23 | 18 | 15 | 6 | 89 |
+| GlobalFoundries·TSMC, AI 칩 연결 부품 미국 생산에 20억달러 계약 | 29 | 23 | 13 | 15 | 5 | 85 |
+
+FACT / INTERPRETATION / SIGNAL / SPECULATION과 검증 메타데이터는 원본 JSON에 보존했습니다. 보도 재배포는 별도 독립 근거로 계산하지 않았습니다.
+
+## 누락·미확인 사항
+
+- Google의 한국 제공·계약 조건과 독립적인 장기 실행 검증은 미확인입니다.
+- Claude Dashboards·Motion의 독립 정확도·한국어 출력 품질은 미확인입니다.
+- Cyber Mission의 독립 오탐률·수정안 채택률 자료는 확보하지 못했습니다.
+- GF 계약의 실제 생산량·수율·매출 인식은 미확인입니다.
+- YouTube는 10월 8일 공식 발표문이 연결한 데모 URL과 설명을 확인했습니다. 영상 전체·자막·별도 업로드 날짜는 검토하지 않았습니다.
+- Worth Reading의 Paper·GitHub·Blog는 배경 학습 자료이며 오늘 신규 발표로 세지 않았습니다.

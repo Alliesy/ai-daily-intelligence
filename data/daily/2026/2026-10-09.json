@@ -1,0 +1,389 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-10-09",
+  "generated_at": "2026-10-09T07:11:44+09:00",
+  "status": "complete",
+  "warnings": [
+    "Google의 한국 제공·계약 조건과 독립적인 장기 실행 검증은 미확인입니다.",
+    "Claude Dashboards·Motion의 독립 정확도·한국어 출력 품질은 미확인입니다.",
+    "Cyber Mission의 독립 오탐률·수정안 채택률 자료는 확보하지 못했습니다.",
+    "GF 계약의 실제 생산량·수율·매출 인식은 미확인입니다.",
+    "YouTube는 10월 8일 공식 발표문이 연결한 데모 URL과 설명을 확인했습니다. 영상 전체·자막·별도 업로드 날짜는 검토하지 않았습니다.",
+    "Worth Reading의 Paper·GitHub·Blog는 배경 학습 자료이며 오늘 신규 발표로 세지 않았습니다."
+  ],
+  "news": [
+    {
+      "event_key": "google-gemini-universal-work-agent-2026-10-08",
+      "title": "Google, 자기 메일함을 가진 업무용 Gemini 에이전트 공개",
+      "importance": "S",
+      "one_line_summary": "Google은 여러 앱에서 일을 이어가는 Gemini 에이전트를 발표했습니다. 팀용 에이전트에는 별도 계정과 저장 공간을 주며, 중소기업 대상 제공은 초기 접근 단계입니다.",
+      "impact": "업무 결과뿐 아니라 에이전트별 권한·사용 기록·비용을 함께 관리해야 할 범위가 넓어집니다.",
+      "original_url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+      "key_quote": "Work that takes hours or days keeps running after you close your laptop.",
+      "quote_translation": "몇 시간이나 며칠 걸리는 작업도 노트북을 닫은 뒤 계속 실행됩니다.",
+      "summary": "FACT: Google은 10월 8일 업무용 Gemini 에이전트와 동료 에이전트의 별도 신원을 발표했습니다.\nINTERPRETATION: 사람의 개인 계정으로 수행한 일과 AI가 한 일을 구분하기 쉬워지는 설계입니다.\nSIGNAL: 업무 연결과 함께 감사 기록·권한·예산 제한을 제품 안에 묶습니다.\nSPECULATION: 관리 시간이 실제로 줄어들지는 아직 검증되지 않았습니다.",
+      "why_it_matters": "에이전트가 실행한 변경을 누구의 작업으로 기록하는지가 협업 도구 선택에 영향을 줄 수 있습니다.",
+      "industry_mood": {
+        "official": "Google은 장기 작업·여러 모델 선택·기업 통제를 하나의 에이전트로 제시했습니다.",
+        "independent": "Reuters는 업무용 출시 경쟁을 보도했습니다. 독립적인 장기 실행·권한 차단 실험은 확인하지 못했습니다.",
+        "community": "ADK 공개 이슈에는 도구별 승인과 중단·재개 요구가 있습니다. 이를 새 Gemini 제품의 결함으로 간주하지 않습니다."
+      },
+      "outlook": "한국 계정의 제공 범위와 계약 조건, 작업 중단·재개 시 권한과 비용 기록을 확인해야 합니다.",
+      "business_opportunity": "권한 관리의 불편은 확인되지만 Google 내장 통제 및 ADK 승인 기능과 겹쳐 신규 사업으로 선정하지 않았습니다.",
+      "tags": [
+        "Google",
+        "Gemini",
+        "업무 에이전트",
+        "접근 권한"
+      ],
+      "sources": [
+        {
+          "title": "Welcome to Gemini at Work 2026: Introducing the Gemini agent",
+          "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+          "publisher": "Google Cloud",
+          "published_at": "2026-10-08",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "google-gemini-work-announcement"
+        },
+        {
+          "title": "Empowering SMBs to do more with Gemini",
+          "url": "https://cloud.google.com/blog/topics/startups/how-to-grow-your-small-business-using-google-gemini/",
+          "publisher": "Google Cloud",
+          "published_at": "2026-10-08",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "google-gemini-work-announcement"
+        },
+        {
+          "title": "Google Cloud introduces Gemini agent for work as AI race heats up",
+          "url": "https://www.reuters.com/business/google-cloud-introduces-gemini-agent-work-ai-race-heats-up-2026-10-08/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-08",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "reuters-gemini-work-report"
+        }
+      ],
+      "selection_score": {
+        "confidence": 28,
+        "impact": 24,
+        "utility": 19,
+        "recency": 15,
+        "community": 7,
+        "total": 93
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "announcement_verified",
+        "missing": [
+          "한국 제공·가격·계약 조건",
+          "독립 장기 실행 및 권한 차단 평가"
+        ],
+        "note": "Reuters 검색 색인으로 발표 교차 확인. 상세 기능과 초기 접근 범위는 Google 원문에 근거."
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "Google, 자기 메일함을 가진 업무용 Gemini 에이전트 공개",
+        "dek": "질문에 답하는 데서 끝나지 않고, 여러 앱을 오가며 맡긴 일을 이어갑니다. 중소기업 대상 제공은 초기 접근 단계입니다.",
+        "body": "Google이 10월 8일 발표한 Gemini는 문서 작성, 자료 분석, 코드 실행을 한곳에서 맡기는 업무용 에이전트입니다. 회사 설명대로라면 사용자가 노트북을 닫아도 클라우드에서 몇 시간이나 며칠 걸리는 일을 계속할 수 있습니다.\n\n팀이 함께 쓰는 ‘동료 에이전트’에는 이메일, 캘린더, Drive를 포함한 별도 Workspace 계정이 생깁니다. 사람이 한 일과 구분해 기록하며, 팀이 공유한 자료에 접근하도록 설계했습니다. 사용할 모델도 Gemini로 고정하지 않고 Claude를 함께 선택할 수 있게 했습니다.\n\n관리자는 역할별 권한과 작업 기록을 확인하고 프로젝트별 지출 한도를 정할 수 있습니다. 다만 이런 기능이 발표됐다는 것과 모든 고객이 지금 사용할 수 있다는 것은 다릅니다. Google의 중소기업 안내는 현재 초기 접근이며 전체 제공은 추후라고 명시합니다.",
+        "takeaway": "AI를 팀에 넣을 때는 사람의 계정을 빌려주는 방식부터 다시 생각하게 됩니다.",
+        "what_to_watch": "한국 고객의 신청 조건, 실제 청구 단위, 공유 권한을 회수했을 때 진행 중인 작업도 즉시 멈추는지 확인해야 합니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "anthropic-claude-dashboards-motion-2026-10-08",
+      "title": "Claude, 실시간 대시보드와 편집 가능한 설명 애니메이션 추가",
+      "importance": "A",
+      "one_line_summary": "Claude Dashboards와 Motion이 베타로 나왔습니다. 숫자의 쿼리와 애니메이션 코드를 확인·수정할 수 있으며, 이용 가능한 요금제는 서로 다릅니다.",
+      "impact": "데이터 탐색과 설명 자료의 초안을 직접 만들기 쉬워지지만, 수치 검증과 관리자 설정은 필요합니다.",
+      "original_url": "https://claude.com/resources/articles/dashboards-and-motion",
+      "key_quote": "Each chart shows the query behind it, and each animation is built as code you can edit.",
+      "quote_translation": "각 차트는 그 뒤의 쿼리를 보여주며, 각 애니메이션은 편집할 수 있는 코드로 만들어집니다.",
+      "summary": "FACT: 10월 8일 Dashboards는 유료 플랜, Motion은 Team·Enterprise 베타로 발표됐습니다.\nINTERPRETATION: 완성 화면뿐 아니라 결과를 만든 계산과 코드를 살펴볼 수 있습니다.\nSIGNAL: AI 제작 도구가 검토·수정 가능한 업무 파일까지 제공합니다.\nSPECULATION: 분석가나 영상 제작자의 작업량을 얼마나 줄일지는 독립 검증되지 않았습니다.",
+      "why_it_matters": "보기 좋은 출력과 올바른 계산을 구분할 수 있는 검토 경로가 생깁니다.",
+      "industry_mood": {
+        "official": "Anthropic은 기존 BI 도구와 함께 쓰는 탐색용 대시보드로 설명합니다.",
+        "independent": "Reuters가 출시 사실을 보도했습니다. 정확도·시간 절감 수치는 외부 검증하지 못했습니다."
+      },
+      "outlook": "연결 도구별 권한·갱신 안정성, 한국어 차트·폰트와 내보내기 품질을 확인해야 합니다.",
+      "business_opportunity": "대시보드·설명 영상 제작 자체는 기존 BI·영상 편집기와 신규 내장 기능이 제공해 차별화 근거가 부족합니다.",
+      "tags": [
+        "Claude",
+        "데이터 분석",
+        "대시보드",
+        "콘텐츠 제작"
+      ],
+      "sources": [
+        {
+          "title": "Build live dashboards and animate explainers with Claude",
+          "url": "https://claude.com/resources/articles/dashboards-and-motion",
+          "publisher": "Anthropic",
+          "published_at": "2026-10-08",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "anthropic-dashboards-motion-announcement"
+        },
+        {
+          "title": "Anthropic launches dashboard, animation tools for Claude",
+          "url": "https://www.reuters.com/technology/anthropic-launches-dashboard-animation-tools-claude-2026-10-08/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-08",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "reuters-claude-artifacts-report"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 21,
+        "utility": 20,
+        "recency": 15,
+        "community": 7,
+        "total": 92
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "announcement_verified",
+        "missing": [
+          "독립 계산 정확도·한국어 출력 품질",
+          "실사용 시간 절감"
+        ],
+        "note": "공식 원문에서 플랜과 관리자 기본값 확인. Reuters 색인으로 출시 사실 교차 확인."
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "Claude, 실시간 대시보드와 편집 가능한 설명 애니메이션 추가",
+        "dek": "회사 데이터를 연결해 차트를 만들고, 자료를 짧은 설명 영상으로 바꿀 수 있습니다. Dashboards는 유료 플랜, Motion은 Team·Enterprise에서 베타로 제공합니다.",
+        "body": "Claude에 분석 화면과 움직이는 설명 자료를 만드는 도구가 들어왔습니다. 10월 8일 발표된 Dashboards는 BigQuery나 Snowflake 같은 데이터 플랫폼을 연결해 질문에 맞는 화면을 구성합니다. 데이터가 바뀌면 화면도 갱신됩니다.\n\n숫자를 누르면 계산에 사용한 쿼리를 볼 수 있고, 차트에는 마지막 갱신 시각이 표시됩니다. Motion은 글자·도형·차트를 움직이는 코드를 만들어 MP4로 내보냅니다. 영상 생성 모델로 실사 장면을 만드는 방식이 아니어서 문구와 숫자, 타이밍을 직접 고칠 수 있습니다.\n\n이와 함께 Docs·Slides·Design은 베타를 마치고 무료 플랜까지 확대됩니다. Enterprise에서는 Dashboards와 Motion이 기본으로 꺼져 있어 관리자가 켜야 합니다. 완성된 모양만 보고 외부에 공유하기보다 집계 기준과 데이터 접근 범위를 먼저 확인하는 편이 좋습니다.",
+        "takeaway": "초안을 빨리 만드는 만큼, 사람이 틀린 부분을 찾고 고칠 수 있는지도 도구의 가치가 됩니다.",
+        "what_to_watch": "연결한 데이터의 갱신 실패가 어떻게 표시되는지, 한국어 글꼴과 내보내기 결과가 유지되는지 살펴볼 만합니다.",
+        "action": "기존 claude.ai/design을 사용했다면 공식 이전 안내를 확인하세요. 독립 사이트는 12월 14일까지 유지되며 대화·댓글과 공개 링크는 별도 확인이 필요합니다."
+      }
+    },
+    {
+      "event_key": "anthropic-cyber-mission-oss-scanner-2026-10-08",
+      "title": "Anthropic, 무료 OSS Scanner와 기반시설 보안 지원 발표",
+      "importance": "A",
+      "one_line_summary": "오픈소스에 정기 보안 검사를 제공하는 OSS Scanner와 기반시설 방어 프로그램이 나왔습니다. 자동 보고서에는 사람의 사전 검토가 없다는 한계를 명시했습니다.",
+      "impact": "취약점 발견 속도보다 보고서를 검증하고 수정할 유지관리자의 여력이 중요해집니다.",
+      "original_url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+      "key_quote": "The reports are model-generated and sent without human review.",
+      "quote_translation": "보고서는 모델이 생성하며 사람의 검토 없이 전송됩니다.",
+      "summary": "FACT: Anthropic은 10월 8일 Cyber Mission과 무료 선택 가입형 OSS Scanner를 발표했습니다.\nINTERPRETATION: 빠른 자동 전달을 택한 프로젝트가 검증 부담도 맡게 됩니다.\nSIGNAL: 보안 지원 범위가 취약점 발견에서 재현 자료·수정안·현장 엔지니어까지 넓어집니다.\nSPECULATION: AI가 2년 뒤 방어에 유리해진다는 회사 전망은 확정된 결과가 아닙니다.",
+      "why_it_matters": "검사 비용이 무료여도 유지관리자가 검증에 쓰는 시간은 남습니다.",
+      "industry_mood": {
+        "official": "회사는 재현 방법과 가능한 수정안을 보내되 부정확한 보고가 있을 수 있다고 인정했습니다.",
+        "independent": "외부의 오탐률·패치 채택률 측정은 확인하지 못했습니다."
+      },
+      "outlook": "실제 오탐률, 수정안 채택률, 소규모 프로젝트의 검증 부담과 가입 범위를 확인해야 합니다.",
+      "business_opportunity": "보안 보고서 정리 수요는 가능성이 있지만 국내 고객 근거·책임 범위가 부족하고 무료 도구와 겹쳐 선정하지 않았습니다.",
+      "tags": [
+        "Anthropic",
+        "오픈소스",
+        "보안",
+        "기반시설"
+      ],
+      "sources": [
+        {
+          "title": "Introducing the Anthropic Cyber Mission",
+          "url": "https://www.anthropic.com/news/anthropic-cyber-mission",
+          "publisher": "Anthropic",
+          "published_at": "2026-10-08",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "anthropic-cyber-mission-announcement"
+        }
+      ],
+      "selection_score": {
+        "confidence": 27,
+        "impact": 23,
+        "utility": 18,
+        "recency": 15,
+        "community": 6,
+        "total": 89
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "official_announcement_only",
+        "missing": [
+          "독립 오탐률·수정안 채택률",
+          "한국 프로젝트·고객의 실제 참여 조건"
+        ],
+        "note": "프로그램 발표와 회사가 명시한 한계를 확인했으며 보안 효과는 검증하지 않음."
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "Anthropic, 무료 OSS Scanner와 기반시설 보안 지원 발표",
+        "dek": "오픈소스 유지관리자는 정기 검사 결과를 받아볼 수 있습니다. 전력·수도·교통 시설에는 전문 보안 업체를 통해 모델과 엔지니어를 지원합니다.",
+        "body": "Anthropic이 10월 8일 Cyber Mission을 발표했습니다. 새 OSS Scanner는 참여를 신청한 오픈소스 프로젝트를 무료로 반복 검사합니다. 보고서에는 취약점 설명과 재현 자료를 담고, 가능한 경우 수정안도 함께 보냅니다.\n\n빠른 전달에는 대가가 있습니다. 이 보고서는 사람이 검토하지 않은 채 전송되므로 심각도 판단이나 내용이 틀릴 수 있습니다. 회사는 결과를 처리할 여력이 있는 프로젝트를 대상으로 삼고, 그렇지 않은 프로젝트에는 사람이 확인한 취약점 제보를 계속하겠다고 설명했습니다.\n\n기반시설 지원은 별도 프로그램으로 진행합니다. 오랫동안 가동하는 산업 장비는 프로그램을 수정하려고 쉽게 멈출 수 없기 때문에, 현장을 아는 전문 업체들과 먼저 협력합니다. AI가 문제를 찾았다는 이유만으로 바로 패치를 적용할 수 있다는 뜻은 아닙니다.",
+        "takeaway": "무료 검사 서비스를 평가할 때는 발견 건수보다 처리하지 못하고 쌓이는 보고서 수를 보는 편이 현실적입니다.",
+        "what_to_watch": "참여 프로젝트가 실제로 채택한 수정안 비율과 검증에 쓴 시간, 현장 장비의 안전한 적용 사례가 공개되는지 지켜보면 됩니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "globalfoundries-tsmc-us-interposer-deal-2026-10-08",
+      "title": "GlobalFoundries·TSMC, AI 칩 연결 부품 미국 생산에 20억달러 계약",
+      "importance": "A",
+      "one_line_summary": "GlobalFoundries가 뉴욕 공장에서 TSMC용 실리콘 인터포저를 생산하는 5년 계약을 발표했습니다. 양산 확대는 2028년 상반기부터로 예상합니다.",
+      "impact": "AI 프로세서와 메모리를 연결하는 부품의 미국 공급 기반이 추가되지만 당장 GPU 공급이 늘어나는 계약은 아닙니다.",
+      "original_url": "https://gf.com/news-and-events/news/globalfoundries-reaches-agreement-to-establish-us-based-supply-of-silicon-interposers-for-advanced-ai-packaging/",
+      "key_quote": "Volume production is expected to begin ramping at GF’s Malta site during the first half of 2028.",
+      "quote_translation": "GF는 Malta 공장의 양산 확대가 2028년 상반기에 시작될 것으로 예상합니다.",
+      "summary": "FACT: GF는 TSMC와 20억달러·초기 5년 제조 계약을 발표했습니다.\nINTERPRETATION: 첨단 공정 외의 연결 부품도 AI 칩 생산량을 좌우합니다.\nSIGNAL: 미국 내 첨단 패키징 공급망을 보강하는 계약입니다.\nSPECULATION: 이 계약만으로 GPU 가격이나 클라우드 요금 하락을 예측할 수 없습니다.",
+      "why_it_matters": "완성된 AI 가속기 공급량은 프로세서뿐 아니라 메모리 연결과 조립 능력에도 달려 있습니다.",
+      "industry_mood": {
+        "official": "GF는 수요에 따라 향후 생산 능력을 확대할 틀이라고 설명했습니다.",
+        "independent": "Reuters가 계약액·생산 장소·초기 기간을 교차 보도했습니다."
+      },
+      "outlook": "공장 증설 진척, 실제 양산 시점, 생산량과 수율을 확인해야 합니다.",
+      "business_opportunity": "대규모 제조 투자 영역이며 한국 개인·소규모 팀이 바로 접근할 고객과 자산 근거가 부족합니다.",
+      "tags": [
+        "GlobalFoundries",
+        "TSMC",
+        "반도체",
+        "AI 인프라"
+      ],
+      "sources": [
+        {
+          "title": "GlobalFoundries reaches agreement to establish U.S.-based supply of silicon interposers for advanced AI packaging",
+          "url": "https://gf.com/news-and-events/news/globalfoundries-reaches-agreement-to-establish-us-based-supply-of-silicon-interposers-for-advanced-ai-packaging/",
+          "publisher": "GlobalFoundries",
+          "published_at": "2026-10-08",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "gf-tsmc-interposer-announcement"
+        },
+        {
+          "title": "GlobalFoundries to make key AI chip component for TSMC in $2 billion deal",
+          "url": "https://www.reuters.com/world/asia-pacific/globalfoundries-make-key-ai-chip-component-tsmc-2026-10-08/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-08",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "reuters-gf-tsmc-deal"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 23,
+        "utility": 13,
+        "recency": 15,
+        "community": 5,
+        "total": 85
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "corroborated",
+        "missing": [
+          "계약별 매출 인식·실제 생산량·수율"
+        ],
+        "note": "GF 공식 원문과 Reuters 보도 및 같은 보도의 AOL 재배포를 대조. 재배포는 별도 독립 근거로 세지 않음."
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "GlobalFoundries·TSMC, AI 칩 연결 부품 미국 생산에 20억달러 계약",
+        "dek": "뉴욕 공장이 첨단 AI 칩 패키징에 들어가는 연결 부품을 공급하게 됩니다. 실제 양산 확대는 2028년 상반기부터로 예상됩니다.",
+        "body": "GlobalFoundries가 10월 8일 TSMC와 20억달러 규모 제조 계약을 발표했습니다. 초기 계약 기간은 5년이며, 미국 뉴욕주 Malta 공장의 생산 능력을 늘릴 계획입니다.\n\n만드는 것은 AI 프로세서 자체가 아니라 실리콘 인터포저입니다. 프로세서와 메모리 아래에서 두 부품을 빠르게 연결하는 역할을 합니다. 칩을 개별적으로 잘 만들어도 이 연결·조립 단계가 부족하면 완성된 가속기 공급을 늘리기 어렵습니다.\n\n이번 계약은 TSMC의 CoWoS 패키징에 필요한 미국 내 부품 공급처를 추가합니다. 다만 계획된 생산이 바로 시작되는 것은 아니며, 발표에는 구체적인 생산량이나 수율이 없습니다. 지금 쓰는 클라우드의 요금이 곧 내려간다는 근거로 읽기는 어렵습니다.",
+        "takeaway": "AI 반도체를 이해하려면 가장 작은 회로뿐 아니라 칩들을 이어 붙이는 부품도 봐야 합니다.",
+        "what_to_watch": "설비 증설과 고객 인증이 일정대로 진행되는지, 생산 확대 이후 공급량이 실제로 얼마나 늘어나는지 확인할 필요가 있습니다.",
+        "action": null
+      }
+    }
+  ],
+  "business_ideas": [],
+  "tools": [],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "완료 메시지 대신 결과와 근거 함께 확인하기",
+    "when_to_use": "AI가 대시보드나 수정안을 만든 뒤 공유·적용 여부를 판단할 때",
+    "practical_example": "매출 차트에서 쿼리와 집계 기간을 확인하고, 수정안은 재현 사례와 변경 후 결과를 대조합니다.",
+    "prompt_example": "이 결과를 검토할 사람이 확인해야 할 원본 데이터, 계산 과정, 재현 절차를 알려주세요. 직접 확인한 항목과 아직 확인하지 못한 항목을 나눠 적어주세요. 외부 공유나 실제 변경은 수행하지 마세요."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+      "url": "https://arxiv.org/abs/2406.12045",
+      "why_read": "대화의 끝말 대신 실제 데이터베이스 상태로 성공을 확인하고 반복 실행의 일관성을 측정하는 방법을 제시합니다. 2024년 연구이므로 당시 모델 성능을 현재 성능으로 읽지 않아야 합니다."
+    },
+    {
+      "type": "GitHub",
+      "title": "google/adk-python",
+      "url": "https://github.com/google/adk-python",
+      "why_read": "도구 실행 전 확인과 사람의 승인을 포함한 에이전트 흐름을 살펴볼 수 있는 Google 공식 저장소입니다. 새 Gemini 에이전트의 공개 소스라는 뜻은 아닙니다."
+    },
+    {
+      "type": "YouTube",
+      "title": "Claude Dashboards·Motion 공식 데모 — 자전거 대여 데이터 시각화",
+      "url": "https://www.youtube.com/watch?v=en0GuyhieQk",
+      "why_read": "공식 발표문이 연결한 차트·애니메이션 데모입니다. 링크와 발표문 설명을 확인했으며 영상 전체와 자막, 별도 업로드 날짜는 검토하지 않았습니다."
+    },
+    {
+      "type": "Blog",
+      "title": "Demystifying evals for AI agents",
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "why_read": "작업 기록과 실제 완료 상태를 분리해 평가하는 방법을 설명합니다. 2026년 1월 9일 글로, 오늘 업무 에이전트 발표를 판단할 배경 자료입니다."
+    }
+  ],
+  "todays_insight": "차트는 계산 근거를, 버그 보고서는 재현 코드를 내놓는다\n\nClaude의 새 차트에는 계산에 쓴 쿼리가 붙고, OSS Scanner의 보안 보고서에는 문제를 재현할 자료가 따라옵니다. Google은 에이전트가 한 일을 별도 신원으로 기록하겠다고 밝혔습니다. 결과를 빨리 받는 것에 더해, 사람이 어디를 열어보고 확인할 수 있는지가 제품 설명의 한 부분이 됐습니다. 이런 확인 경로가 있다는 사실과 결과가 정확하다는 증명은 구분해야 합니다.",
+  "morning_paper": {
+    "insight_headline": "차트는 계산 근거를, 버그 보고서는 재현 코드를 내놓는다",
+    "insight_summary": "Claude의 새 차트에는 계산에 쓴 쿼리가 붙고, OSS Scanner의 보안 보고서에는 문제를 재현할 자료가 따라옵니다. Google은 에이전트가 한 일을 별도 신원으로 기록하겠다고 밝혔습니다. 결과를 빨리 받는 것에 더해, 사람이 어디를 열어보고 확인할 수 있는지가 제품 설명의 한 부분이 됐습니다. 이런 확인 경로가 있다는 사실과 결과가 정확하다는 증명은 구분해야 합니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "google-gemini-universal-work-agent-2026-10-08",
+      "anthropic-claude-dashboards-motion-2026-10-08",
+      "anthropic-cyber-mission-oss-scanner-2026-10-08"
+    ],
+    "top_event_keys": [
+      "google-gemini-universal-work-agent-2026-10-08",
+      "anthropic-claude-dashboards-motion-2026-10-08",
+      "anthropic-cyber-mission-oss-scanner-2026-10-08"
+    ]
+  },
+  "build_candidate": null,
+  "research_window": {
+    "start_kst": "2026-10-08T07:04:26+09:00",
+    "end_kst": "2026-10-09T07:04:26+09:00",
+    "followup_start_kst": "2026-10-02T07:04:26+09:00",
+    "note": "발표일은 원문 기준 10월 8일. 시각이 없는 공식 발표는 같은 사건의 당일 보도와 대조. 지난 7일 발표의 중요 후속 변화도 조사했으나 오늘 네 신규 사건을 우선 선정."
+  },
+  "problem_scout": {
+    "status": "no_qualified_opportunity",
+    "evidence": [
+      {
+        "url": "https://github.com/google/adk-python/issues/640",
+        "summary": "공개 사용자는 도구별·리소스별 승인과 실행 중단을 요구했습니다. 2025년의 종료된 이슈로 현재 미해결 문제라고 보지 않습니다."
+      },
+      {
+        "url": "https://github.com/google/adk-python/issues/1851",
+        "summary": "장기 실행 도중 승인 대기와 재개 방법을 묻는 공개 사례가 있습니다. 과거 요청이며 국내 구매 의사 증거는 아닙니다."
+      }
+    ],
+    "decision": "승인 기능은 현재 ADK 공식 저장소에 있고 Google도 내장 통제를 발표했습니다. 한국 소규모 고객의 반복 지출·대체 불가능한 문제·보안 책임 범위가 확인되지 않아 신규 아이디어 0개, 구축 후보 없음."
+  },
+  "provenance": {
+    "canonical_repository": "Alliesy/ai-daily-intelligence",
+    "base_commit": "e2a8be70cf847c553332f67adecdd8020fab4a22",
+    "source_access_note": "일부 직접 URL 열기가 실패하여 검색 색인과 공식 원문 링크 재열기로 확인. 검색 스니펫만 확인한 독립 보도는 세부 성능 검증에 사용하지 않음."
+  }
+}
