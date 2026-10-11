@@ -2,12 +2,13 @@
   "schema_version": "1.0",
   "date_kst": "2026-10-12",
   "generated_at": "2026-10-12T07:31:00+09:00",
-  "status": "complete",
+  "status": "partial",
   "warnings": [
     "Amazon과 Decart의 인수 협상은 Wall Street Journal 보도 단계입니다. Reuters는 보도를 독립 확인하지 못했고 두 회사도 답하지 않았으므로 거래 성사를 전제로 해석하지 않았습니다.",
     "Yandex는 나흘 사이 세 데이터센터가 드론 공격을 받아 중단됐다고 밝혔습니다. 전체 서비스 영향, 장비 손실, 복구 일정과 공격별 최종 귀속은 확인되지 않았습니다.",
     "Firmus는 IPO 철회를 확인했지만 향후 사모 조달 규모·기업가치와 Nasdaq 재추진 여부는 확정되지 않았습니다.",
-    "Worth Reading의 YouTube는 제목·설명·출처·게시일을 확인했으며 전체 영상과 자막은 검토하지 않았습니다."
+    "Worth Reading의 YouTube는 제목·설명·출처·게시일을 확인했으며 전체 영상과 자막은 검토하지 않았습니다.",
+    "편집 재검토(2026-10-12): 기존 뉴스 3건은 개인 관련성 기준에 미달해 메인 추천에서 제외했습니다. 사실·출처·기사 원고는 산업 참고 자료로 보존하며, 개인용 뉴스 3~5건을 충족한 완료 브리핑으로 표시하지 않습니다."
   ],
   "news": [
     {
@@ -109,6 +110,20 @@
         "takeaway": "이번 인수설의 중심에는 모델보다 여러 칩을 이어 주는 소프트웨어가 있습니다.",
         "what_to_watch": "공식 계약과 최종 가격, 경쟁 입찰 여부, Decart가 AWS 밖의 GPU·TPU 지원을 계속하는지를 보면 됩니다.",
         "action": null
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "industry_background",
+        "gate": "fail",
+        "affected_reader": "AI 인프라 기업·투자자",
+        "reader_benefit": "Amazon–Decart 인수 협상 보도만으로 한국 개인의 AI 도구 가격·기능·이용 조건이 바뀌었다는 근거는 없습니다. 거래 성사와 개인 수혜를 추측해 Top으로 올리지 않습니다.",
+        "evidence_urls": [
+          "https://www.wsj.com/business/deals/amazon-in-talks-to-buy-ai-startup-decart-for-around-7-billion-9433abad",
+          "https://www.reuters.com/business/retail-consumer/amazon-talks-buy-ai-startup-decart-around-7-billion-wsj-reports-2026-10-11/",
+          "https://decart.ai/optimization-engine",
+          "https://aws.amazon.com/ai/machine-learning/trainium/customers/"
+        ],
+        "top_eligible": false
       }
     },
     {
@@ -187,6 +202,18 @@
         "takeaway": "AI 서비스도 공격받을 수 있는 건물과 전력망 위에서 돌아갑니다.",
         "what_to_watch": "센터별 복구 시점, 영향받은 서비스와 고객 수, 슈퍼컴퓨터 작업의 이전 여부, 데이터 손실 또는 훼손 발표를 확인해야 합니다.",
         "action": "자체 AI 서비스를 운영한다면 주 리전 장애 때 모델 엔드포인트·데이터 저장소·자격증명까지 함께 전환되는지 최근 복구훈련 기록을 확인하세요."
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "industry_background",
+        "gate": "fail",
+        "affected_reader": "Yandex 서비스 이용자·인프라 운영자",
+        "reader_benefit": "Yandex 이용자에게는 직접적인 장애지만, 이번 브리핑의 한국 일반 개인이 쓰는 AI 도구에 미친 영향이나 필요한 조치는 확인되지 않았습니다. 재해복구 훈련은 전문 운영자를 위한 내용입니다.",
+        "evidence_urls": [
+          "https://yandex.com/company/news/2026-10-09",
+          "https://www.reuters.com/world/europe/russias-yandex-says-data-centre-vladimir-area-shut-down-after-drone-attack-2026-10-11/"
+        ],
+        "top_eligible": false
       }
     },
     {
@@ -287,6 +314,20 @@
         "takeaway": "투자자는 이제 “얼마나 지을 것인가”보다 이미 켜진 용량과 현금을 따집니다.",
         "what_to_watch": "새 사모투자의 가격, Nasdaq 재도전 여부, 실제 온라인 용량과 파트너 계약의 집행 상황을 보면 됩니다.",
         "action": null
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "industry_background",
+        "gate": "fail",
+        "affected_reader": "데이터센터 사업자·전문 투자자",
+        "reader_benefit": "Firmus 상장 철회는 기업 자금조달 소식입니다. 한국 개인의 AI 이용료·가용성·도구 선택 변화가 확인되지 않아 개인용 Top으로 선정하지 않습니다.",
+        "evidence_urls": [
+          "https://www.reuters.com/world/asia-pacific/australian-nvidia-backed-ai-data-centre-operator-firmus-shelves-ipo-2026-10-08/",
+          "https://www.ft.com/content/205ef7a5-321f-46e3-8097-d055bf1f6b3b",
+          "https://www.abc.net.au/news/2026-10-10/how-firmus-the-biggest-ipo-in-three-decades-fell-over/107247100",
+          "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific"
+        ],
+        "top_eligible": false
       }
     }
   ],
@@ -325,21 +366,17 @@
       "why_read": "Amazon이 자체 칩 Trainium3를 왜 만들고 Decart의 실시간 추론을 대표 사례로 내세웠는지 공식 발표에서 확인할 수 있습니다."
     }
   ],
-  "todays_insight": "70억달러 인수설 옆에서, 데이터센터 세 곳과 310억달러 상장이 멈췄다\n\nAmazon은 여러 AI 칩 사이에서 작업을 옮기는 Decart 인수를 검토하는 것으로 전해졌습니다. 같은 날 Yandex는 나흘 사이 세 번째 데이터센터 중단을 알렸고, Firmus의 대형 상장은 높은 가치와 실행 불확실성 앞에서 철회됐습니다. 돈은 실제로 돌아가는 소프트웨어와 검증된 용량을 가려서 찾기 시작했고, AI를 받치는 건물과 전력은 생각보다 쉽게 멈출 수 있다는 사실도 드러났습니다.",
+  "todays_insight": "AI 기업의 몸값만 보고 잘나간다고 생각하면 안 됩니다\n\n큰 인수 금액이 거론된다고 그 기업의 사업까지 안정적이라고 볼 수는 없습니다. 서비스를 계속 제공할 수 있는 시설과 실제로 확보한 자금도 따로 확인해야 합니다. 오늘의 인수설·데이터센터 공격·상장 철회는 서로 다른 원인으로 벌어진 사례이며, 이 세 건만으로 AI 시장 전체가 나빠졌다고 판단할 수는 없습니다.",
   "morning_paper": {
-    "insight_headline": "70억달러 인수설 옆에서, 데이터센터 세 곳과 310억달러 상장이 멈췄다",
-    "insight_summary": "Amazon은 여러 AI 칩 사이에서 작업을 옮기는 Decart 인수를 검토하는 것으로 전해졌습니다. 같은 날 Yandex는 나흘 사이 세 번째 데이터센터 중단을 알렸고, Firmus의 대형 상장은 높은 가치와 실행 불확실성 앞에서 철회됐습니다. 돈은 실제로 돌아가는 소프트웨어와 검증된 용량을 가려서 찾기 시작했고, AI를 받치는 건물과 전력은 생각보다 쉽게 멈출 수 있다는 사실도 드러났습니다.",
+    "insight_headline": "AI 기업의 몸값만 보고 잘나간다고 생각하면 안 됩니다",
+    "insight_summary": "큰 인수 금액이 거론된다고 그 기업의 사업까지 안정적이라고 볼 수는 없습니다. 서비스를 계속 제공할 수 있는 시설과 실제로 확보한 자금도 따로 확인해야 합니다. 오늘의 인수설·데이터센터 공격·상장 철회는 서로 다른 원인으로 벌어진 사례이며, 이 세 건만으로 AI 시장 전체가 나빠졌다고 판단할 수는 없습니다.",
     "insight_method": "cross_event_signal_v1",
     "evidence_event_keys": [
       "amazon-decart-acquisition-talks-2026-10-11",
       "yandex-three-data-centers-drone-attacks-2026-10-11",
       "firmus-australia-ipo-withdrawal-2026-10-09"
     ],
-    "top_event_keys": [
-      "yandex-three-data-centers-drone-attacks-2026-10-11",
-      "amazon-decart-acquisition-talks-2026-10-11",
-      "firmus-australia-ipo-withdrawal-2026-10-09"
-    ]
+    "top_event_keys": []
   },
   "build_candidate": null,
   "research_window": {
@@ -370,5 +407,30 @@
     "canonical_repository": "Alliesy/ai-daily-intelligence",
     "base_commit": "5f1f7f65c37beb11a7e8660dae2a81c48a5af8e3",
     "source_access_note": "회사 공식 공지·제품 문서와 WSJ·Reuters·FT·호주 ABC를 대조했습니다. WSJ를 재인용한 Reuters는 Amazon–Decart 협상의 별도 독립 근거로 세지 않았고, 확인되지 않은 거래·피해·전망은 SPECULATION 또는 누락 사항으로 분리했습니다."
+  },
+  "editorial_review": {
+    "version": "personal_reader_v1",
+    "reviewed_at": "2026-10-11T22:34:22.100Z",
+    "user_approved_at": "2026-10-12T07:30:57+09:00",
+    "prior_commit": "164a3d54c3cb21447dc00c9b851417a67eaf8d63",
+    "reason": "독자가 의미를 이해하기 어려운 인사이트 제목과 기업 중심 뉴스 선정에 대한 사용자 수정 요청",
+    "prior_headline": "70억달러 인수설 옆에서, 데이터센터 세 곳과 310억달러 상장이 멈췄다",
+    "prior_top_event_keys": [
+      "yandex-three-data-centers-drone-attacks-2026-10-11",
+      "amazon-decart-acquisition-talks-2026-10-11",
+      "firmus-australia-ipo-withdrawal-2026-10-09"
+    ],
+    "review_scope": "이미 발행한 3건의 개인 관련성 재검토. 새 뉴스 수집 결과가 아닙니다.",
+    "retained_background_event_keys": [
+      "amazon-decart-acquisition-talks-2026-10-11",
+      "yandex-three-data-centers-drone-attacks-2026-10-11",
+      "firmus-australia-ipo-withdrawal-2026-10-09"
+    ],
+    "eligible_news_count": 0,
+    "direct_use_count": 0,
+    "top_news_count": 0,
+    "selection_status": "insufficient_personal_news",
+    "original_scores_context": "selection_score는 최초 산업 중심 선정 당시 값이며 새 개인 관련성 기준의 통과 점수가 아닙니다.",
+    "skill_and_reading_scope": "기존 산업 자료를 보존했습니다. 일반 개인의 오늘 활용 추천으로 재선정하지 않았습니다."
   }
 }
