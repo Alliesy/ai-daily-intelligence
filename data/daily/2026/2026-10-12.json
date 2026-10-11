@@ -1,0 +1,374 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-10-12",
+  "generated_at": "2026-10-12T07:31:00+09:00",
+  "status": "complete",
+  "warnings": [
+    "Amazon과 Decart의 인수 협상은 Wall Street Journal 보도 단계입니다. Reuters는 보도를 독립 확인하지 못했고 두 회사도 답하지 않았으므로 거래 성사를 전제로 해석하지 않았습니다.",
+    "Yandex는 나흘 사이 세 데이터센터가 드론 공격을 받아 중단됐다고 밝혔습니다. 전체 서비스 영향, 장비 손실, 복구 일정과 공격별 최종 귀속은 확인되지 않았습니다.",
+    "Firmus는 IPO 철회를 확인했지만 향후 사모 조달 규모·기업가치와 Nasdaq 재추진 여부는 확정되지 않았습니다.",
+    "Worth Reading의 YouTube는 제목·설명·출처·게시일을 확인했으며 전체 영상과 자막은 검토하지 않았습니다."
+  ],
+  "news": [
+    {
+      "event_key": "amazon-decart-acquisition-talks-2026-10-11",
+      "title": "Amazon, AI 칩 전환 소프트웨어 기업 Decart 70억달러 인수 협상 보도",
+      "importance": "S",
+      "one_line_summary": "Amazon이 여러 AI 칩에서 작업을 최적화하는 Decart를 약 70억달러에 인수하는 방안을 협상 중이라고 Wall Street Journal이 보도했습니다.",
+      "impact": "거래가 성사되면 AWS는 자체 Trainium 칩뿐 아니라 경쟁 가속기까지 아우르는 최적화 계층과 실시간 월드모델 기술을 함께 확보할 수 있습니다.",
+      "original_url": "https://www.wsj.com/business/deals/amazon-in-talks-to-buy-ai-startup-decart-for-around-7-billion-9433abad",
+      "key_quote": "A deal could happen soon, if talks do not fall apart or another suitor does not emerge.",
+      "quote_translation": "협상이 무산되거나 다른 인수자가 나타나지 않으면 거래가 곧 성사될 수 있다고 보도됐습니다.",
+      "summary": "FACT: Wall Street Journal은 10월 11일 관계자를 인용해 Amazon이 Decart를 약 70억달러에 인수하는 협상을 진행 중이라고 보도했습니다. Reuters는 이를 독립 확인하지 못했고 Amazon과 Decart는 답하지 않았습니다. Decart는 GPU·TPU·Trainium·AMD 가속기에서 학습과 추론을 최적화하는 DOS와 실시간 월드모델을 개발합니다.\nINTERPRETATION: Amazon이 원하는 것은 특정 모델 하나보다 워크로드를 여러 칩에 맞춰 옮기고 빠르게 돌리는 소프트웨어 계층일 수 있습니다.\nSIGNAL: 클라우드 사업자의 AI 경쟁이 칩 보유량에서 칩 사이 이동성과 커널·컴파일러 최적화 기술 확보로 넓어지고 있습니다.\nSPECULATION: 거래 가격, 완료 시점, 경쟁 입찰과 규제 심사는 확정되지 않았습니다.",
+      "why_it_matters": "Amazon이 하드웨어 중립을 내세운 최적화 회사를 품으면 고객의 칩 선택지는 넓어질 수도, AWS 중심으로 다시 묶일 수도 있습니다.",
+      "industry_mood": {
+        "official": "Decart는 자사 최적화 엔진이 NVIDIA GPU, Google TPU, AWS Trainium, AMD 가속기를 지원한다고 설명합니다. Amazon과 Decart는 인수 협상을 공식 확인하지 않았습니다.",
+        "independent": "Wall Street Journal이 관계자를 인용해 협상과 약 70억달러 가격을 보도했습니다. Reuters는 같은 보도를 전하면서 독립 확인하지 못했다고 밝혔습니다.",
+        "community": "여러 칩을 넘나드는 소프트웨어의 가치가 커졌다는 평가와 인수 뒤 중립성이 약해질 수 있다는 우려가 함께 나옵니다."
+      },
+      "outlook": "공식 계약 발표, 최종 가격, Decart의 경쟁 칩 지원 유지 여부, 세계모델과 최적화 사업 중 어느 쪽이 인수의 중심인지 확인해야 합니다.",
+      "business_opportunity": "멀티 가속기 최적화 수요는 분명하지만 커널·컴파일러 전문 인력과 비싼 테스트 장비가 필요하고 Decart·Triton·클라우드 사업자가 이미 경쟁해 소규모 신규 사업으로 선정하지 않았습니다.",
+      "tags": [
+        "Amazon",
+        "AWS",
+        "Decart",
+        "Trainium",
+        "AI 칩",
+        "인수합병"
+      ],
+      "sources": [
+        {
+          "title": "Amazon in Talks to Buy AI Startup Decart for Around $7 Billion",
+          "url": "https://www.wsj.com/business/deals/amazon-in-talks-to-buy-ai-startup-decart-for-around-7-billion-9433abad",
+          "publisher": "Wall Street Journal",
+          "published_at": "2026-10-11",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "unverified",
+          "evidence_group": "wsj-amazon-decart-talks"
+        },
+        {
+          "title": "Amazon in talks to buy AI startup Decart for around $7 billion, WSJ reports",
+          "url": "https://www.reuters.com/business/retail-consumer/amazon-talks-buy-ai-startup-decart-around-7-billion-wsj-reports-2026-10-11/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-11T21:16:59Z",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "unverified",
+          "evidence_group": "wsj-amazon-decart-talks"
+        },
+        {
+          "title": "Optimizations Engine",
+          "url": "https://decart.ai/optimization-engine",
+          "publisher": "Decart",
+          "published_at": "2026",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "decart-dos-official"
+        },
+        {
+          "title": "AI Accelerator - AWS Trainium Customers",
+          "url": "https://aws.amazon.com/ai/machine-learning/trainium/customers/",
+          "publisher": "Amazon Web Services",
+          "published_at": "2026",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "aws-trainium-decart"
+        }
+      ],
+      "selection_score": {
+        "confidence": 24,
+        "impact": 24,
+        "utility": 18,
+        "recency": 15,
+        "community": 8,
+        "total": 89
+      },
+      "time_scope": "last_24h",
+      "verification": {
+        "status": "reported_talks_not_confirmed",
+        "missing": [
+          "양사의 공식 거래 확인",
+          "최종 가격과 계약 구조",
+          "경쟁 입찰·규제 심사",
+          "인수 후 멀티칩 지원 정책"
+        ],
+        "note": "WSJ 원보도와 Reuters 재보도를 확인했습니다. Reuters는 독립 확인하지 못했다고 명시했으므로 두 기사를 하나의 근거군으로 계산했고, Decart의 제품 범위는 회사와 AWS 공식 페이지로 확인했습니다."
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "아마존이 ‘칩을 갈아타게 해주는’ Decart를 70억달러에 살 수 있습니다",
+        "dek": "Amazon이 여러 AI 칩에서 같은 작업을 빠르게 돌리도록 돕는 Decart와 인수 협상 중이라는 보도가 나왔습니다. 아직 계약은 없지만 AWS가 직접 만든 칩을 키우는 방식이 달라질 수 있습니다.",
+        "body": "Amazon이 AI 스타트업 Decart를 약 70억달러에 인수하는 방안을 논의하고 있다고 Wall Street Journal이 보도했습니다. Reuters는 이 보도를 따로 확인하지 못했고, Amazon과 Decart도 답하지 않았습니다. 협상이 깨지거나 다른 인수자가 나타날 가능성은 남아 있습니다.\n\nDecart는 실시간 영상을 만드는 Lucy와 로봇·자율주행 훈련용 환경을 생성하는 Oasis를 개발합니다. 하지만 Amazon이 더 탐낼 만한 부분은 DOS라는 최적화 소프트웨어입니다. 이 기술은 NVIDIA GPU뿐 아니라 Google TPU, AWS Trainium, AMD 가속기에서도 학습과 추론 속도를 끌어올리는 것을 목표로 합니다.\n\nAWS는 자체 AI 칩 Trainium으로 NVIDIA 의존도를 낮추려 하고 있습니다. Decart를 품으면 Trainium에 맞춘 최적화 능력을 강화하면서도, 고객 작업을 다른 칩에서 옮겨오는 도구를 확보할 수 있습니다. 반대로 지금의 하드웨어 중립성이 인수 뒤에도 유지될지는 알 수 없습니다.\n\n보도된 가격은 Decart가 5월 투자에서 인정받은 약 40억달러보다 크게 높습니다. Amazon이 공식 계약을 발표하는지, 가격에 최적화 사업과 월드모델 중 무엇이 더 많이 반영됐는지 확인할 필요가 있습니다.",
+        "takeaway": "이번 인수설의 중심에는 모델보다 여러 칩을 이어 주는 소프트웨어가 있습니다.",
+        "what_to_watch": "공식 계약과 최종 가격, 경쟁 입찰 여부, Decart가 AWS 밖의 GPU·TPU 지원을 계속하는지를 보면 됩니다.",
+        "action": null
+      }
+    },
+    {
+      "event_key": "yandex-three-data-centers-drone-attacks-2026-10-11",
+      "title": "Yandex, 드론 공격으로 데이터센터 세 곳 연쇄 중단",
+      "importance": "S",
+      "one_line_summary": "Yandex는 10월 8일부터 11일까지 Sasovo·Kaluga·Vladimir 데이터센터가 드론 공격을 받아 완전 또는 부분 중단됐고 일부 서비스가 이용 불가능하다고 밝혔습니다.",
+      "impact": "러시아의 검색·클라우드·AI 서비스를 받치는 물리 인프라와 모델 개발용 슈퍼컴퓨터가 동시에 영향을 받아 지역 이중화와 복구 능력이 직접 시험받고 있습니다.",
+      "original_url": "https://yandex.com/company/news/2026-10-09",
+      "key_quote": "In the night of October 11, the Yandex data center in Vladimir was attacked. No one was hurt, and the data center has been shut down.",
+      "quote_translation": "10월 11일 밤 Vladimir의 Yandex 데이터센터가 공격받았고 인명 피해는 없었지만 센터 운영은 중단됐습니다.",
+      "summary": "FACT: Yandex는 10월 8일 Sasovo 센터가 완전히 중단되고 9일 Kaluga 시설 일부가 멈춘 데 이어 11일 Vladimir 센터도 완전히 중단됐다고 발표했습니다. Reuters는 일부 서비스가 이용 불가능하며 Sasovo에 AI 모델 개발용 슈퍼컴퓨터 3대 중 2대가 있다고 보도했습니다.\nINTERPRETATION: 여러 지역을 쓰더라도 같은 위협이 짧은 기간에 반복되면 단순 복제만으로는 서비스 연속성을 보장하기 어렵습니다.\nSIGNAL: AI 인프라의 위험 범위에 전력·냉각뿐 아니라 물리 공격과 지역 동시 장애가 본격적으로 들어오고 있습니다.\nSPECULATION: 장비 손실 규모, 모델 개발 지연과 장기 서비스 영향은 아직 알 수 없습니다.",
+      "why_it_matters": "AI 서비스의 복원력은 모델 파일만 복제해서 생기지 않으며 데이터, 네트워크, 자격증명과 연산 자원을 다른 지역에서 함께 되살릴 수 있어야 합니다.",
+      "industry_mood": {
+        "official": "Yandex는 세 시설의 중단과 무인기 공격, 인명 피해가 없다는 점을 확인했지만 복구 일정은 제시하지 못했습니다.",
+        "independent": "Reuters는 Vladimir 중단, 일부 서비스 장애, 이전 두 시설과 Sasovo 슈퍼컴퓨터 배치를 확인해 보도했습니다.",
+        "community": "서비스 복구와 민간 인프라 보호 우려가 크며, 전쟁 상황에서 데이터센터가 직접 표적이 되는 위험이 부각됐습니다."
+      },
+      "outlook": "각 센터 복구 일정과 서비스 장애 범위, 슈퍼컴퓨터 손실 여부, 다른 지역으로의 작업 이전과 데이터 무결성 확인 결과를 봐야 합니다.",
+      "business_opportunity": "재해복구 점검은 실제 문제지만 대형 클라우드·DR 전문업체가 경쟁하고 민감한 인프라 접근과 책임이 필요해 한국 1~3인 팀의 신규 기회로 선정하지 않았습니다.",
+      "tags": [
+        "Yandex",
+        "데이터센터",
+        "AI 인프라",
+        "재해복구",
+        "서비스 연속성"
+      ],
+      "sources": [
+        {
+          "title": "What is happening to our data centers, the iron heart of Yandex",
+          "url": "https://yandex.com/company/news/2026-10-09",
+          "publisher": "Yandex",
+          "published_at": "2026-10-09; updated 2026-10-11",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "yandex-datacenter-incidents"
+        },
+        {
+          "title": "Russia’s Yandex says data centre in Vladimir area shut down after drone attack",
+          "url": "https://www.reuters.com/world/europe/russias-yandex-says-data-centre-vladimir-area-shut-down-after-drone-attack-2026-10-11/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-11T07:38:57Z",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "reuters-yandex-vladimir"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 25,
+        "utility": 18,
+        "recency": 15,
+        "community": 7,
+        "total": 94
+      },
+      "time_scope": "last_24h_with_4d_sequence",
+      "verification": {
+        "status": "official_with_independent_corroboration",
+        "missing": [
+          "전체 서비스 영향과 고객 피해",
+          "장비·데이터 손실 규모",
+          "센터별 복구 일정",
+          "공격별 최종 귀속"
+        ],
+        "note": "Yandex가 갱신한 공식 사고 공지와 Reuters의 독립 보도를 대조했습니다. 회사가 확인하지 않은 피해 규모와 공격 귀속은 확정하지 않았습니다."
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "Yandex 데이터센터 세 곳이 나흘 사이 공격을 받았습니다",
+        "dek": "Sasovo와 Vladimir 센터는 완전히 멈췄고 Kaluga 시설도 일부 중단됐습니다. 일부 Yandex 서비스가 끊겼으며 AI 모델 개발용 슈퍼컴퓨터도 영향권에 들어갔습니다.",
+        "body": "Yandex의 Vladimir 데이터센터가 10월 11일 드론 공격을 받아 완전히 멈췄습니다. 회사는 다친 사람은 없지만 일부 서비스가 사용자에게 제공되지 않고 있다고 밝혔습니다. 복구 시점은 아직 제시하지 못했습니다.\n\n이번이 첫 번째 장애는 아닙니다. 8일에는 Sasovo 센터가 심하게 손상돼 운영을 전면 중단했고, 다음 날 Kaluga 시설의 일부 인프라도 공격으로 멈췄습니다. Reuters에 따르면 Sasovo에는 Yandex가 AI 모델을 개발할 때 쓰는 슈퍼컴퓨터 3대 중 2대가 들어 있습니다.\n\n서로 다른 지역에 센터를 나눠 두는 것은 보통 한 곳의 장애를 견디기 위한 방법입니다. 하지만 같은 위협이 짧은 기간에 여러 시설을 덮치면 예비 용량과 네트워크 경로, 데이터 복제까지 한꺼번에 부족해질 수 있습니다. 검색이나 지도뿐 아니라 모델 학습 일정과 기업 고객의 업무에도 파장이 이어질 수 있습니다.\n\n현재 공개된 내용만으로 장비와 데이터가 얼마나 손상됐는지는 알 수 없습니다. 세 시설의 작업을 다른 지역이 얼마나 받아냈는지, 서비스가 정상화된 뒤 데이터 무결성을 어떻게 확인하는지가 다음 관건입니다.",
+        "takeaway": "AI 서비스도 공격받을 수 있는 건물과 전력망 위에서 돌아갑니다.",
+        "what_to_watch": "센터별 복구 시점, 영향받은 서비스와 고객 수, 슈퍼컴퓨터 작업의 이전 여부, 데이터 손실 또는 훼손 발표를 확인해야 합니다.",
+        "action": "자체 AI 서비스를 운영한다면 주 리전 장애 때 모델 엔드포인트·데이터 저장소·자격증명까지 함께 전환되는지 최근 복구훈련 기록을 확인하세요."
+      }
+    },
+    {
+      "event_key": "firmus-australia-ipo-withdrawal-2026-10-09",
+      "title": "Firmus, 306억달러 기업가치 목표 AI 데이터센터 IPO 철회",
+      "importance": "A",
+      "one_line_summary": "NVIDIA·Blackstone 등이 투자한 Firmus가 50억달러를 조달하고 306억달러 가치를 인정받으려던 호주 IPO를 투자 수요 부족 속에 철회했습니다.",
+      "impact": "AI 데이터센터 투자 열기 속에서도 가동 실적, 부채, 파트너 계약과 기존 주주의 매도 조건을 설명하지 못하면 공개시장이 높은 미래 가치를 받아들이지 않는다는 사례가 됐습니다.",
+      "original_url": "https://www.reuters.com/world/asia-pacific/australian-nvidia-backed-ai-data-centre-operator-firmus-shelves-ipo-2026-10-08/",
+      "key_quote": "The market was not comfortable taking that leap of faith quite at this stage yet.",
+      "quote_translation": "시장은 현 단계에서 그 정도의 믿음을 걸 준비가 되지 않았습니다.",
+      "summary": "FACT: Firmus는 약 50억달러 조달과 306억달러 기업가치를 목표로 한 ASX 상장 신청을 철회했습니다. Reuters와 ABC는 최근 투자 라운드의 거의 세 배에 이르는 가치, 약 300억달러 부채, 제한된 가동 실적, 주요 개발 파트너 이탈과 기존 주주의 매도 가능성이 수요를 약화했다고 보도했습니다.\nINTERPRETATION: 공개시장은 미래 용량과 계약 총액보다 이미 가동 중인 전력·센터와 현금 창출 능력을 더 엄격하게 보기 시작했습니다.\nSIGNAL: AI 인프라 자본은 계속 크지만 전략적 사모투자와 공개시장 가격 사이의 간격이 벌어지고 있습니다.\nSPECULATION: 사모 조달이나 Nasdaq 상장이 어떤 가치로 재개될지는 확정되지 않았습니다.",
+      "why_it_matters": "칩과 데이터센터에 돈이 몰리더라도 공개시장 투자자는 건설 계획보다 현재 용량과 계약의 실행 가능성을 따지기 시작했습니다.",
+      "industry_mood": {
+        "official": "Firmus는 시장 변동성과 여건을 이유로 상장을 철회하고 성장 자금 마련을 위한 다른 선택지를 검토하겠다고 밝혔습니다.",
+        "independent": "Reuters·FT·ABC는 투자자 수요 약화와 가치평가, 부채, 파트너 계약, 매도 제한 조건을 철회 배경으로 보도했습니다.",
+        "community": "AI 인프라 수요 자체보다 가격과 실행 증거가 문제였다는 평가가 우세합니다."
+      },
+      "outlook": "사모 조달의 실제 금액과 가치, Nasdaq 재추진, 온라인 전력용량 증가, CDC 관련 계약과 OpenAI·Meta 수요 계약의 집행을 확인해야 합니다.",
+      "business_opportunity": "데이터센터 투자 검증 서비스는 금융·법률·에너지 전문성과 비공개 계약 자료가 필요해 1~3인 팀의 4~8주 MVP 조건을 충족하지 못합니다.",
+      "tags": [
+        "Firmus",
+        "AI 데이터센터",
+        "IPO",
+        "NVIDIA",
+        "호주"
+      ],
+      "sources": [
+        {
+          "title": "Nvidia-backed Firmus scraps $5 billion Australia IPO amid growing AI scrutiny",
+          "url": "https://www.reuters.com/world/asia-pacific/australian-nvidia-backed-ai-data-centre-operator-firmus-shelves-ipo-2026-10-08/",
+          "publisher": "Reuters",
+          "published_at": "2026-10-09",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "reuters-firmus-ipo-withdrawal"
+        },
+        {
+          "title": "Australian data centre operator pulls $5bn IPO",
+          "url": "https://www.ft.com/content/205ef7a5-321f-46e3-8097-d055bf1f6b3b",
+          "publisher": "Financial Times",
+          "published_at": "2026-10-09",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "ft-firmus-ipo-withdrawal"
+        },
+        {
+          "title": "How Firmus’s plans for the biggest IPO in three decades fell over",
+          "url": "https://www.abc.net.au/news/2026-10-10/how-firmus-the-biggest-ipo-in-three-decades-fell-over/107247100",
+          "publisher": "ABC News Australia",
+          "published_at": "2026-10-10",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "abc-firmus-ipo-analysis"
+        },
+        {
+          "title": "Firmus Announces Fully Subscribed USD$2 Billion Strategic Equity Investment",
+          "url": "https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific",
+          "publisher": "Firmus",
+          "published_at": "2026-08",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "firmus-august-funding"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 23,
+        "utility": 18,
+        "recency": 12,
+        "community": 8,
+        "total": 90
+      },
+      "time_scope": "last_7d_followup",
+      "verification": {
+        "status": "withdrawal_confirmed_with_independent_analysis",
+        "missing": [
+          "사모 조달 금액과 기업가치",
+          "Nasdaq 상장 일정",
+          "계약별 확정 매출과 실제 가동 MW",
+          "CDC 협력 종료의 최종 범위"
+        ],
+        "note": "Firmus의 철회 설명을 Reuters가 인용한 기사와 FT·호주 ABC의 독립 보도를 대조했습니다. 회사의 8월 투자 발표는 기존 가치와 사업 범위 확인에만 사용했습니다."
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "310억달러를 바라보던 AI 데이터센터 IPO가 사흘 만에 멈췄습니다",
+        "dek": "호주 Firmus가 약 50억달러를 조달하려던 상장 계획을 철회했습니다. 투자자는 AI 데이터센터의 성장 약속보다 현재 가동 실적과 부채, 계약의 확실성을 더 따졌습니다.",
+        "body": "NVIDIA와 Blackstone 등이 투자한 Firmus가 호주 증시 상장 신청을 철회했습니다. 회사는 약 50억달러를 새로 조달하고 306억달러 안팎의 기업가치를 인정받으려 했습니다. 장부 수요를 모으기 시작한 지 사흘 만에 계획이 멈췄습니다.\n\n가격이 가장 큰 걸림돌이었습니다. 목표 가치는 8월 투자 때보다 거의 세 배 높았고, 회사가 짊어진 부채는 약 300억달러로 추산됐습니다. 가동 중인 데이터센터는 두 곳뿐인데 앞으로 다섯 곳을 더 지어 5년 안에 연간 50억달러 이익을 내겠다는 전망도 투자자의 검증 대상이 됐습니다.\n\n상장 직전 주요 파트너가 1.6GW 규모 개발 계획이 더는 진행되지 않는다고 밝힌 점도 영향을 줬습니다. 기존 주주가 상장 직후 절반이 넘는 주식을 팔 수 있는 구조가 알려지자 초기 주가가 흔들릴 수 있다는 우려도 커졌습니다.\n\nFirmus는 사모시장 등 다른 자금 조달 방법을 찾겠다고 밝혔습니다. AI 데이터센터 수요가 사라졌다는 뜻은 아닙니다. 다만 미래의 전력용량과 계약 총액만으로 공개시장 투자자를 설득하기는 어려워졌습니다.",
+        "takeaway": "투자자는 이제 “얼마나 지을 것인가”보다 이미 켜진 용량과 현금을 따집니다.",
+        "what_to_watch": "새 사모투자의 가격, Nasdaq 재도전 여부, 실제 온라인 용량과 파트너 계약의 집행 상황을 보면 됩니다.",
+        "action": null
+      }
+    }
+  ],
+  "business_ideas": [],
+  "tools": [],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "AI 서비스의 복구 경로를 끝까지 따라가기",
+    "when_to_use": "모델 API, 벡터 저장소, 파일·비밀키가 여러 클라우드와 지역에 흩어져 있을 때",
+    "practical_example": "주 리전이 멈췄다고 가정하고 모델 엔드포인트뿐 아니라 데이터 복제, DNS, 큐, 자격증명과 결제 한도까지 대체 경로에서 실제로 동작하는지 확인합니다.",
+    "prompt_example": "이 AI 서비스의 구성요소를 모델, 데이터, 네트워크, 자격증명, 외부 API로 나눠 주세요. 주 리전 전체가 중단됐을 때 각 요소의 대체 경로와 아직 수동인 복구 단계를 표시해 주세요."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "Compound AI System Reliability: A Failure Taxonomy and Resilience Pattern Catalog from 150 Production Incidents",
+      "url": "https://arxiv.org/abs/2610.02503",
+      "why_read": "150건의 실제 AI 시스템 장애를 검색·생성·도구·오케스트레이션·통합 실패로 나누고 어떤 복원 패턴이 필요한지 정리합니다."
+    },
+    {
+      "type": "GitHub",
+      "title": "triton-lang/triton",
+      "url": "https://github.com/triton-lang/triton",
+      "why_read": "AI 연산을 하드웨어에 맞게 빠르게 실행하는 커널과 컴파일러 계층이 어떤 문제를 푸는지 공개 코드와 문서로 확인할 수 있습니다."
+    },
+    {
+      "type": "YouTube",
+      "title": "AWS re:Invent 2025 - Keynote Customer - Decart",
+      "url": "https://www.youtube.com/watch?v=K49S79wOGl8",
+      "why_read": "Decart가 Trainium3에서 실시간 영상 모델을 시연하며 칩별 최적화가 사용자 경험과 비용을 어떻게 바꾸는지 보여줍니다. 제목·설명·출처를 확인했으며 전체 영상과 자막은 검토하지 않았습니다."
+    },
+    {
+      "type": "Blog",
+      "title": "AWS re:Invent 2025: Amazon announces Trainium3, Nova 2 and frontier agents",
+      "url": "https://www.aboutamazon.com/news/aws/aws-re-invent-2025-ai-news-updates",
+      "why_read": "Amazon이 자체 칩 Trainium3를 왜 만들고 Decart의 실시간 추론을 대표 사례로 내세웠는지 공식 발표에서 확인할 수 있습니다."
+    }
+  ],
+  "todays_insight": "70억달러 인수설 옆에서, 데이터센터 세 곳과 310억달러 상장이 멈췄다\n\nAmazon은 여러 AI 칩 사이에서 작업을 옮기는 Decart 인수를 검토하는 것으로 전해졌습니다. 같은 날 Yandex는 나흘 사이 세 번째 데이터센터 중단을 알렸고, Firmus의 대형 상장은 높은 가치와 실행 불확실성 앞에서 철회됐습니다. 돈은 실제로 돌아가는 소프트웨어와 검증된 용량을 가려서 찾기 시작했고, AI를 받치는 건물과 전력은 생각보다 쉽게 멈출 수 있다는 사실도 드러났습니다.",
+  "morning_paper": {
+    "insight_headline": "70억달러 인수설 옆에서, 데이터센터 세 곳과 310억달러 상장이 멈췄다",
+    "insight_summary": "Amazon은 여러 AI 칩 사이에서 작업을 옮기는 Decart 인수를 검토하는 것으로 전해졌습니다. 같은 날 Yandex는 나흘 사이 세 번째 데이터센터 중단을 알렸고, Firmus의 대형 상장은 높은 가치와 실행 불확실성 앞에서 철회됐습니다. 돈은 실제로 돌아가는 소프트웨어와 검증된 용량을 가려서 찾기 시작했고, AI를 받치는 건물과 전력은 생각보다 쉽게 멈출 수 있다는 사실도 드러났습니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "amazon-decart-acquisition-talks-2026-10-11",
+      "yandex-three-data-centers-drone-attacks-2026-10-11",
+      "firmus-australia-ipo-withdrawal-2026-10-09"
+    ],
+    "top_event_keys": [
+      "yandex-three-data-centers-drone-attacks-2026-10-11",
+      "amazon-decart-acquisition-talks-2026-10-11",
+      "firmus-australia-ipo-withdrawal-2026-10-09"
+    ]
+  },
+  "build_candidate": null,
+  "research_window": {
+    "start_kst": "2026-10-11T07:01:25+09:00",
+    "end_kst": "2026-10-12T07:04:46+09:00",
+    "followup_start_kst": "2026-10-05T07:04:46+09:00",
+    "note": "10월 11일 UTC의 Amazon–Decart 협상 보도와 Yandex 공식 사고 갱신을 직전 24시간 사건으로 선정했습니다. Firmus IPO 철회는 최근 7일의 자본시장 후속 변화로 포함했습니다."
+  },
+  "problem_scout": {
+    "status": "no_qualified_opportunity",
+    "evidence": [
+      {
+        "url": "https://github.com/vllm-project/tpu-inference/issues/3570",
+        "summary": "다중 호스트 TPU 추론에서 실제 장애가 보고돼 하드웨어 이식성과 운영 문제는 확인됐지만 해결에는 깊은 분산시스템 전문성이 필요합니다."
+      },
+      {
+        "url": "https://decart.ai/optimization-engine",
+        "summary": "Decart가 이미 GPU·TPU·Trainium·AMD를 아우르는 기업용 최적화와 프로파일러를 제공해 핵심 수요에 직접 진입해 있습니다."
+      },
+      {
+        "url": "https://www.opsnow.io/kr-ko/products/opsnow-finops-plus",
+        "summary": "국내에도 멀티클라우드 비용·자원 가시화 제품이 있어 단순 대시보드의 차별화와 고객 접근성이 부족합니다."
+      }
+    ],
+    "decision": "멀티 가속기 이식성, AI 비용 가시화와 재해복구 문제는 확인됐습니다. 그러나 커널·분산시스템 전문성, 실제 GPU·TPU 테스트 비용, 민감한 인프라 접근과 사고 책임이 필요하며 Decart·Triton·국내 FinOps 제품과 직접 겹칩니다. 고객 접근·대체 위험·유료 의존성 게이트를 통과하지 못해 신규 아이디어 0개, 구축 후보 없음으로 판단했습니다."
+  },
+  "provenance": {
+    "canonical_repository": "Alliesy/ai-daily-intelligence",
+    "base_commit": "5f1f7f65c37beb11a7e8660dae2a81c48a5af8e3",
+    "source_access_note": "회사 공식 공지·제품 문서와 WSJ·Reuters·FT·호주 ABC를 대조했습니다. WSJ를 재인용한 Reuters는 Amazon–Decart 협상의 별도 독립 근거로 세지 않았고, 확인되지 않은 거래·피해·전망은 SPECULATION 또는 누락 사항으로 분리했습니다."
+  }
+}
