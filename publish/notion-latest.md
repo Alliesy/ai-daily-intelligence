@@ -1,165 +1,149 @@
-# AI Daily Intelligence · 2026-10-12
+# AI Daily Intelligence · 2026-10-14
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-12.md) · [원본 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-12.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-14.md) · [데이터 원문](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-14.json)
 
-## AI 기업의 몸값만 보고 잘나간다고 생각하면 안 됩니다
+검증 뉴스 3개 · 사업 아이디어 0개 · 구축 후보 없음
 
-큰 인수 금액이 거론된다고 그 기업의 사업까지 안정적이라고 볼 수는 없습니다. 서비스를 계속 제공할 수 있는 시설과 실제로 확보한 자금도 따로 확인해야 합니다. 오늘의 인수설·데이터센터 공격·상장 철회는 서로 다른 원인으로 벌어진 사례이며, 이 세 건만으로 AI 시장 전체가 나빠졌다고 판단할 수는 없습니다.
+## Character.AI 대화를 보관하려면 마지막 날까지 기다리기 어렵습니다
 
-개인용 메인 추천 0개 · 산업 참고 자료 3개 · 사업 아이디어 0개 · 구축 후보 없음
+공식 도움말에 따르면 데이터 내보내기에 3~4주가 걸릴 수 있습니다. 서비스 종료가 확정된 것은 아니지만, 소중한 기록을 보관하려는 이용자는 종료 공지가 나온 뒤 요청하면 늦을 수 있다는 점을 알아둘 만합니다.
 
-> 편집 재검토: 기존 세 기사는 한국 일반 개인의 도구 선택·비용·사용법에 미치는 영향이 확인되지 않아 메인 추천에서 제외했습니다. 검증된 기사와 출처는 아래에 보존합니다. 오늘 발행분은 새 개인 관련성 기준 미달(partial)로 표시하며, 아래 자료를 개인용 추천 뉴스로 세지 않습니다.
+## Gemini 유료 이용자에게 ‘자리 비워도 계속하는 작업’이 열립니다
 
-조사 기준: 2026-10-11 07:01:25 ~ 2026-10-12 07:04:46 KST의 신규 발표와 최근 7일 중요 후속 변화.
+채팅창에서 작업을 맡기고 결과를 기다리는 방식이 더해집니다. Pro·Ultra 구독자를 대상으로 배포가 시작됐지만, 한국에서 연결되는 앱과 이용 한도는 따로 확인해야 합니다.
 
-## 오늘 메인 추천
+Google이 10월 13일 Gemini 4 Argon을 앱에 제공하기 시작했습니다. 앞선 모델 예고에서 한 단계 나아가 이용자가 직접 써볼 수 있게 된 것입니다. 회사는 답변의 불필요한 반복을 줄이고, 긴 일을 처리하는 중간에도 진행 상황을 더 잘 알려준다고 설명합니다.
 
-기존 발행분 세 건을 재검토했지만 개인용 메인 추천으로 유지할 항목은 없었습니다. 새 뉴스가 없다고 결론 낸 것은 아니며, 이번 수정은 이미 발행한 기사의 관련성을 바로잡은 것입니다.
+눈에 띄는 것은 대화와 작업을 전환하는 기능입니다. Google 앱뿐 아니라 Adobe·Shopify 등 40개가 넘는 앱과 연결한다고 합니다. macOS용 Gemini에는 코딩 도구 Antigravity의 작업 화면도 들어옵니다. 다만 이 연결 목록이 한국에서 모든 서비스를 같은 방식으로 쓸 수 있다는 뜻은 아닙니다.
 
-## 산업 참고 자료 · 메인 추천에서 제외
+개발용 API를 쓰는 사람은 비용도 구분해야 합니다. 공식 문서상 11월 30일까지 입력·출력 100만 토큰당 각각 2달러·10달러이며, 12월 1일부터는 4달러·20달러입니다. 앱 구독료에 이 API 사용료가 포함된다고 생각하면 안 됩니다.
 
-### 아마존이 ‘칩을 갈아타게 해주는’ Decart를 70억달러에 살 수 있습니다
+Gemini 웹 앱은 한국과 한국어를 지원합니다. 그러나 이번 새 작업 기능의 국내 배포 상태와 실제 한국어 결과는 계정에서 확인하지 못했습니다. 지금 쓰는 도구를 바로 갈아타기보다는, 민감한 정보가 없는 작은 작업에서 원하는 결과가 나오는지 비교할 만합니다.
 
-Amazon이 여러 AI 칩에서 같은 작업을 빠르게 돌리도록 돕는 Decart와 인수 협상 중이라는 보도가 나왔습니다. 아직 계약은 없지만 AWS가 직접 만든 칩을 키우는 방식이 달라질 수 있습니다.
+### 하나만 기억한다면
 
-Amazon이 AI 스타트업 Decart를 약 70억달러에 인수하는 방안을 논의하고 있다고 Wall Street Journal이 보도했습니다. Reuters는 이 보도를 따로 확인하지 못했고, Amazon과 Decart도 답하지 않았습니다. 협상이 깨지거나 다른 인수자가 나타날 가능성은 남아 있습니다.
+새 모델이 보인다는 것과 필요한 앱까지 연결해 일을 끝낼 수 있다는 것은 별개입니다.
 
-Decart는 실시간 영상을 만드는 Lucy와 로봇·자율주행 훈련용 환경을 생성하는 Oasis를 개발합니다. 하지만 Amazon이 더 탐낼 만한 부분은 DOS라는 최적화 소프트웨어입니다. 이 기술은 NVIDIA GPU뿐 아니라 Google TPU, AWS Trainium, AMD 가속기에서도 학습과 추론 속도를 끌어올리는 것을 목표로 합니다.
+### 앞으로 볼 건
 
-AWS는 자체 AI 칩 Trainium으로 NVIDIA 의존도를 낮추려 하고 있습니다. Decart를 품으면 Trainium에 맞춘 최적화 능력을 강화하면서도, 고객 작업을 다른 칩에서 옮겨오는 도구를 확보할 수 있습니다. 반대로 지금의 하드웨어 중립성이 인수 뒤에도 유지될지는 알 수 없습니다.
+국내 계정에 표시되는 작업 한도, 앱별 승인 단계, 작업 중단·실패 때의 안내가 구체화되는지 보세요.
 
-보도된 가격은 Decart가 5월 투자에서 인정받은 약 40억달러보다 크게 높습니다. Amazon이 공식 계약을 발표하는지, 가격에 최적화 사업과 월드모델 중 무엇이 더 많이 반영됐는지 확인할 필요가 있습니다.
+### 지금 확인할 것
 
-#### 하나만 기억한다면
+이미 Pro·Ultra를 쓰고 있다면 모델 선택 메뉴와 작업 전환 기능이 나타나는지 먼저 확인하세요.
 
-이번 인수설의 중심에는 모델보다 여러 칩을 이어 주는 소프트웨어가 있습니다.
+### 더 궁금하다면
 
-#### 앞으로 볼 건
+- [Gemini 4 Argon comes to the Gemini app.](https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/) — Google, 2026-10-13
+- [What's new in Gemini 4 Argon](https://ai.google.dev/gemini-api/docs/latest-model?hl=en) — Google, 게시일 미표기; 2026-10-14 KST 확인
+- [Where you can use the Gemini web app](https://support.google.com/gemini/answer/13575153?hl=en&version=published) — Google, 게시일 미표기; 2026-10-14 KST 확인
+- [Google launches flagship AI model Gemini 4 Argon for developers, businesses](https://www.reuters.com/business/google-launches-flagship-ai-model-gemini-4-argon-developers-businesses-2026-10-13/) — Reuters, 2026-10-13
+- [Google finally releases Gemini 4 Argon](https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon) — The Verge, 2026-10-13
 
-공식 계약과 최종 가격, 경쟁 입찰 여부, Decart가 AWS 밖의 GPU·TPU 지원을 계속하는지를 보면 됩니다.
+검증 범위: 앱 공식 안내와 API 문서의 이용 조건을 따로 읽었습니다. API 문서의 Pro 제외를 Gemini 앱의 Pro 제외로 잘못 옮기지 않았습니다. 일부 페이지는 직접 열기 실패 후 검색에 수록된 본문으로 확인했습니다.
 
-#### 더 궁금하다면
+## Character.AI는 계속 열려 있지만, 대화 백업은 서두를 이유가 생겼습니다
 
-- [Amazon in Talks to Buy AI Startup Decart for Around $7 Billion](https://www.wsj.com/business/deals/amazon-in-talks-to-buy-ai-startup-decart-for-around-7-billion-9433abad) — Wall Street Journal, 2026-10-11
-- [Amazon in talks to buy AI startup Decart for around $7 billion, WSJ reports](https://www.reuters.com/business/retail-consumer/amazon-talks-buy-ai-startup-decart-around-7-billion-wsj-reports-2026-10-11/) — Reuters, 2026-10-11T21:16:59Z
-- [Optimizations Engine](https://decart.ai/optimization-engine) — Decart, 2026
-- [AI Accelerator - AWS Trainium Customers](https://aws.amazon.com/ai/machine-learning/trainium/customers/) — Amazon Web Services, 2026
+회사는 운영을 이어갈 매수 제안을 찾고 있으며, 없으면 플랫폼을 종료할 수 있다고 밝혔습니다. 구독 요금은 지금도 그대로 청구됩니다.
 
-검증 범위: WSJ 원보도와 Reuters 재보도를 확인했습니다. Reuters는 독립 확인하지 못했다고 명시했으므로 두 기사를 하나의 근거군으로 계산했고, Decart의 제품 범위는 회사와 AWS 공식 페이지로 확인했습니다. 미확인: 양사의 공식 거래 확인, 최종 가격과 계약 구조, 경쟁 입찰·규제 심사, 인수 후 멀티칩 지원 정책.
+캐릭터와 대화하거나 이야기를 만드는 Character.AI가 10월 12일 법원 감독 아래 회사를 매각하기 위한 절차를 발표했습니다. 다음 날 Reuters와 Wall Street Journal도 거래 내용을 보도했습니다. 이용자에게는 회사의 가치보다 자신이 만든 기록을 앞으로도 열어볼 수 있는지가 더 가까운 문제입니다.
 
-### Yandex 데이터센터 세 곳이 나흘 사이 공격을 받았습니다
+Disney가 일부 자산의 라이선스를 사겠다고 나선 것과 앱 전체의 운영을 맡는 것은 다릅니다. Character.AI는 매각 절차를 11월 말이나 12월 초에 마칠 것으로 예상하지만, 이는 확정된 서비스 종료일이 아닙니다. 아직 접속할 수 있다는 이유만으로 앞으로의 운영이 보장됐다고 볼 수도 없습니다.
 
-Sasovo와 Vladimir 센터는 완전히 멈췄고 Kaluga 시설도 일부 중단됐습니다. 일부 Yandex 서비스가 끊겼으며 AI 모델 개발용 슈퍼컴퓨터도 영향권에 들어갔습니다.
+기록을 보관하려면 대기시간을 알아둘 필요가 있습니다. 공식 도움말은 데이터 내보내기에 3~4주가 걸릴 수 있다고 안내합니다. 파일이 준비되면 이메일로 다운로드 링크를 보내며, 링크는 발송 후 7일 동안 유효합니다. 요청 직후 이메일이 없다고 바로 실패로 판단할 일은 아닙니다.
 
-Yandex의 Vladimir 데이터센터가 10월 11일 드론 공격을 받아 완전히 멈췄습니다. 회사는 다친 사람은 없지만 일부 서비스가 사용자에게 제공되지 않고 있다고 밝혔습니다. 복구 시점은 아직 제시하지 못했습니다.
+내보내기는 다른 앱에서 같은 캐릭터와 대화를 그대로 이어가는 기능과도 다릅니다. 이번 조사에서는 파일을 다른 서비스에 완전히 옮길 수 있다는 보장은 확인하지 못했습니다. 우선은 자신의 기록을 확보하는 용도로 생각하는 편이 정확합니다.
 
-이번이 첫 번째 장애는 아닙니다. 8일에는 Sasovo 센터가 심하게 손상돼 운영을 전면 중단했고, 다음 날 Kaluga 시설의 일부 인프라도 공격으로 멈췄습니다. Reuters에 따르면 Sasovo에는 Yandex가 AI 모델을 개발할 때 쓰는 슈퍼컴퓨터 3대 중 2대가 들어 있습니다.
+### 앞으로 볼 건
 
-서로 다른 지역에 센터를 나눠 두는 것은 보통 한 곳의 장애를 견디기 위한 방법입니다. 하지만 같은 위협이 짧은 기간에 여러 시설을 덮치면 예비 용량과 네트워크 경로, 데이터 복제까지 한꺼번에 부족해질 수 있습니다. 검색이나 지도뿐 아니라 모델 학습 일정과 기업 고객의 업무에도 파장이 이어질 수 있습니다.
+유료 기능이 달라질 경우 어떤 사전 안내가 오는지, 매각 제안에 플랫폼 운영까지 포함되는지를 확인하세요.
 
-현재 공개된 내용만으로 장비와 데이터가 얼마나 손상됐는지는 알 수 없습니다. 세 시설의 작업을 다른 지역이 얼마나 받아냈는지, 서비스가 정상화된 뒤 데이터 무결성을 어떻게 확인하는지가 다음 관건입니다.
+### 지금 확인할 것
 
-#### 하나만 기억한다면
+보관할 대화가 있다면 웹의 Profile Settings → Account → Manage Account & Data → Export Data에서 내보내기를 요청하세요.
 
-AI 서비스도 공격받을 수 있는 건물과 전력망 위에서 돌아갑니다.
+### 더 궁금하다면
 
-#### 앞으로 볼 건
+- [An Update on Character.ai](https://blog.character.ai/an-update-on-character-ai/) — Character.ai, 2026-10-12
+- [How do I download my data?](https://support.character.ai/hc/en-us/articles/56967715028891-How-do-I-download-my-data) — Character.ai, 2026-10-08 updated
+- [Character.AI files for bankruptcy, to sell some assets to Disney for $20 million](https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/) — Reuters, 2026-10-13
+- [Character.ai Maker Files for Chapter 11 Bankruptcy](https://www.wsj.com/tech/ai/character-ai-maker-files-for-chapter-11-bankruptcy-740e6fb1) — The Wall Street Journal, 2026-10-13
 
-센터별 복구 시점, 영향받은 서비스와 고객 수, 슈퍼컴퓨터 작업의 이전 여부, 데이터 손실 또는 훼손 발표를 확인해야 합니다.
+검증 범위: 회사 FAQ는 검색 수록 본문, 내보내기 도움말은 직접 원문, Reuters·WSJ는 검색에 수록된 보도로 확인했습니다. 법원 사건 원문은 직접 열람하지 않았고 종료 확정으로 쓰지 않았습니다.
 
-#### 지금 확인할 것
+## GitHub가 Claude API 키를 코드와 함께 올리는 실수를 더 막아줍니다
 
-자체 AI 서비스를 운영한다면 주 리전 장애 때 모델 엔드포인트·데이터 저장소·자격증명까지 함께 전환되는지 최근 복구훈련 기록을 확인하세요.
+Anthropic의 서비스·사용자 키가 새 기본 차단 대상에 들어갔습니다. Claude로 개인 앱을 만들고 GitHub에 공개하는 사람에게 직접 관련 있는 변경입니다.
 
-#### 더 궁금하다면
+GitHub가 10월 13일 비밀정보 탐지 목록을 갱신했습니다. 이제 지원되는 인증 키가 코드에 들어 있으면 서버에 올리는 단계에서 막을 수 있습니다. API 키는 앱이 AI 서비스를 호출할 때 쓰는 비밀값이라, 일반적인 설정 이름이나 모델 이름처럼 공개하면 안 됩니다.
 
-- [What is happening to our data centers, the iron heart of Yandex](https://yandex.com/company/news/2026-10-09) — Yandex, 2026-10-09; updated 2026-10-11
-- [Russia’s Yandex says data centre in Vladimir area shut down after drone attack](https://www.reuters.com/world/europe/russias-yandex-says-data-centre-vladimir-area-shut-down-after-drone-attack-2026-10-11/) — Reuters, 2026-10-11T07:38:57Z
+무료 공개 저장소도 보호 범위에 포함됩니다. GitHub 문서에 따르면 개인 계정의 공개 저장소 푸시 보호는 기본으로 켜져 있습니다. 다만 비공개 저장소까지 전부 같은 조건이라고 생각하면 안 되고, 저장소 종류와 보안 기능 이용 조건을 구분해야 합니다.
 
-검증 범위: Yandex가 갱신한 공식 사고 공지와 Reuters의 독립 보도를 대조했습니다. 회사가 확인하지 않은 피해 규모와 공격 귀속은 확정하지 않았습니다. 미확인: 전체 서비스 영향과 고객 피해, 장비·데이터 손실 규모, 센터별 복구 일정, 공격별 최종 귀속.
+이 장치는 지원하는 패턴을 찾아내는 방식입니다. 모든 비밀값이나 과거 유출까지 해결해 주지는 않으며, 공식 문서에도 검사 범위의 제한이 있습니다. AI가 코드를 작성했다는 이유로 안전하다고 믿기보다는, 공개 전에 인증 정보가 들어간 파일을 한 번 더 살펴볼 필요가 있습니다.
 
-### 310억달러를 바라보던 AI 데이터센터 IPO가 사흘 만에 멈췄습니다
+### 하나만 기억한다면
 
-호주 Firmus가 약 50억달러를 조달하려던 상장 계획을 철회했습니다. 투자자는 AI 데이터센터의 성장 약속보다 현재 가동 실적과 부채, 계약의 확실성을 더 따졌습니다.
+코드를 공개하는 판단과 계정에 접근할 권한을 공개하는 판단은 나눠야 합니다.
 
-NVIDIA와 Blackstone 등이 투자한 Firmus가 호주 증시 상장 신청을 철회했습니다. 회사는 약 50억달러를 새로 조달하고 306억달러 안팎의 기업가치를 인정받으려 했습니다. 장부 수요를 모으기 시작한 지 사흘 만에 계획이 멈췄습니다.
+### 지금 확인할 것
 
-가격이 가장 큰 걸림돌이었습니다. 목표 가치는 8월 투자 때보다 거의 세 배 높았고, 회사가 짊어진 부채는 약 300억달러로 추산됐습니다. 가동 중인 데이터센터는 두 곳뿐인데 앞으로 다섯 곳을 더 지어 5년 안에 연간 50억달러 이익을 내겠다는 전망도 투자자의 검증 대상이 됐습니다.
+GitHub 계정의 공개 저장소 푸시 보호가 켜져 있는지 확인하고, 코드에 실제 API 키를 직접 적어두지 않았는지 점검하세요.
 
-상장 직전 주요 파트너가 1.6GW 규모 개발 계획이 더는 진행되지 않는다고 밝힌 점도 영향을 줬습니다. 기존 주주가 상장 직후 절반이 넘는 주식을 팔 수 있는 구조가 알려지자 초기 주가가 흔들릴 수 있다는 우려도 커졌습니다.
+### 더 궁금하다면
 
-Firmus는 사모시장 등 다른 자금 조달 방법을 찾겠다고 밝혔습니다. AI 데이터센터 수요가 사라졌다는 뜻은 아닙니다. 다만 미래의 전력용량과 계약 총액만으로 공개시장 투자자를 설득하기는 어려워졌습니다.
+- [Secret scanning blocks Anthropic keys by default, adds Salesforce](https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/) — GitHub, 2026-10-13
+- [Secret scanning detection scope](https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-scope) — GitHub, 게시일 미표기; 2026-10-14 KST 확인
+- [Working with push protection in the GitHub UI](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/work-with-leak-prevention/push-protection-in-the-github-ui) — GitHub, 게시일 미표기; 2026-10-14 KST 확인
 
-#### 하나만 기억한다면
-
-투자자는 이제 “얼마나 지을 것인가”보다 이미 켜진 용량과 현금을 따집니다.
-
-#### 앞으로 볼 건
-
-새 사모투자의 가격, Nasdaq 재도전 여부, 실제 온라인 용량과 파트너 계약의 집행 상황을 보면 됩니다.
-
-#### 더 궁금하다면
-
-- [Nvidia-backed Firmus scraps $5 billion Australia IPO amid growing AI scrutiny](https://www.reuters.com/world/asia-pacific/australian-nvidia-backed-ai-data-centre-operator-firmus-shelves-ipo-2026-10-08/) — Reuters, 2026-10-09
-- [Australian data centre operator pulls $5bn IPO](https://www.ft.com/content/205ef7a5-321f-46e3-8097-d055bf1f6b3b) — Financial Times, 2026-10-09
-- [How Firmus’s plans for the biggest IPO in three decades fell over](https://www.abc.net.au/news/2026-10-10/how-firmus-the-biggest-ipo-in-three-decades-fell-over/107247100) — ABC News Australia, 2026-10-10
-- [Firmus Announces Fully Subscribed USD$2 Billion Strategic Equity Investment](https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific) — Firmus, 2026-08
-
-검증 범위: Firmus의 철회 설명을 Reuters가 인용한 기사와 FT·호주 ABC의 독립 보도를 대조했습니다. 회사의 8월 투자 발표는 기존 가치와 사업 범위 확인에만 사용했습니다. 미확인: 사모 조달 금액과 기업가치, Nasdaq 상장 일정, 계약별 확정 매출과 실제 가동 MW, CDC 협력 종료의 최종 범위.
+검증 범위: 공식 변경 기록과 사용자용 보호 문서를 대조했습니다. 저장소 수준 설정과 개인 계정 기본 보호는 구분합니다. 한국 계정에서 직접 차단 실험은 하지 않았습니다.
 
 ## 사업 아이디어
 
-신규 사업 아이디어 0개. 구축 후보 없음.
+이번에는 선정하지 않았습니다. 백업 위치·대기시간·파일 활용의 불편은 공개 게시물에서 확인했으나, 한국 고객의 지불 의사·접근 경로와 민감 대화 처리의 안전한 방식은 확인되지 않았습니다. 공식 내보내기와 기존 도구의 대체 가능성도 남아 있습니다.
 
-멀티 가속기 이식성, AI 비용 가시화와 재해복구 문제는 확인됐습니다. 그러나 커널·분산시스템 전문성, 실제 GPU·TPU 테스트 비용, 민감한 인프라 접근과 사고 책임이 필요하며 Decart·Triton·국내 FinOps 제품과 직접 겹칩니다. 고객 접근·대체 위험·유료 의존성 게이트를 통과하지 못해 신규 아이디어 0개, 구축 후보 없음으로 판단했습니다.
+공개 사용자 질문:
 
-공개 문제 근거:
+- [질문 원문](https://www.reddit.com/r/characterai_lounge/comments/1x4zv9r/export_chats/) — 내보내기 위치와 추출한 파일을 어디서 쓸 수 있는지 묻는 공개 질문 및 기존 확장 사용 제안. 개인 식별정보 미수집.
+- [질문 원문](https://www.reddit.com/r/CharacterAI/comments/1x4qh83/how_does_the_exporting_for_cai_work_and_how_long/) — 기록 보관 범위와 내보내기 이메일 대기시간을 묻는 공개 질문. 응답의 종료 시점 추측은 사실로 채택하지 않았음.
 
-- 다중 호스트 TPU 추론에서 실제 장애가 보고돼 하드웨어 이식성과 운영 문제는 확인됐지만 해결에는 깊은 분산시스템 전문성이 필요합니다. [원문](https://github.com/vllm-project/tpu-inference/issues/3570)
-- Decart가 이미 GPU·TPU·Trainium·AMD를 아우르는 기업용 최적화와 프로파일러를 제공해 핵심 수요에 직접 진입해 있습니다. [원문](https://decart.ai/optimization-engine)
-- 국내에도 멀티클라우드 비용·자원 가시화 제품이 있어 단순 대시보드의 차별화와 고객 접근성이 부족합니다. [원문](https://www.opsnow.io/kr-ko/products/opsnow-finops-plus)
+## Worth Reading
 
-## Worth Reading · 기존 산업 참고 자료
+오늘의 신규 뉴스와 별개인 참고 자료입니다.
 
-아래 네 자료는 최초 발행본에서 보존한 배경 자료입니다. 일반 개인을 위한 새 추천으로 선정한 목록은 아닙니다.
+- **Paper** · [Cognitive offloading and the speedup illusion in human-AI interaction](https://arxiv.org/abs/2605.23177) — 2026-05-22 공개된 연구입니다. 간단한 인지 과제에서 AI가 시간을 줄일 것이라는 예상과 실제 소요시간이 달랐습니다. 새 모델의 효율을 자신의 작업에서 비교할 이유를 줍니다. 모든 업무에 같은 결론을 적용할 수는 없습니다.
 
-- **Paper** · [Compound AI System Reliability: A Failure Taxonomy and Resilience Pattern Catalog from 150 Production Incidents](https://arxiv.org/abs/2610.02503) — 150건의 실제 AI 시스템 장애를 검색·생성·도구·오케스트레이션·통합 실패로 나누고 어떤 복원 패턴이 필요한지 정리합니다.
+- **GitHub** · [Gitleaks](https://github.com/gitleaks/gitleaks) — 개인 개발자가 로컬 코드와 Git 기록에서 API 키 등 비밀정보를 찾는 도구입니다. 터미널 사용이 필요합니다. 현재 README는 기능 개발 완료와 보안 패치 위주 유지 방침을 명시하며, 새 Anthropic 키 두 유형의 탐지 지원을 확인한 추천은 아닙니다.
 
-- **GitHub** · [triton-lang/triton](https://github.com/triton-lang/triton) — AI 연산을 하드웨어에 맞게 빠르게 실행하는 커널과 컴파일러 계층이 어떤 문제를 푸는지 공개 코드와 문서로 확인할 수 있습니다.
+- **YouTube** · [How to Use Google Gemini Al (Full Tutorial)](https://www.youtube.com/watch?v=PDMcpthR88U) — Kevin Stratvert의 2026-05-22 입문 영상입니다. 설명과 목차에서 파일 분석·연결 앱·Canvas 사용법을 확인했습니다. 이번 Argon 출시 설명 영상은 아니며, 화면·요금 조건은 현재와 다를 수 있습니다. 전체 영상·자막은 검토하지 않았습니다.
 
-- **YouTube** · [AWS re:Invent 2025 - Keynote Customer - Decart](https://www.youtube.com/watch?v=K49S79wOGl8) — Decart가 Trainium3에서 실시간 영상 모델을 시연하며 칩별 최적화가 사용자 경험과 비용을 어떻게 바꾸는지 보여줍니다. 제목·설명·출처를 확인했으며 전체 영상과 자막은 검토하지 않았습니다.
+- **Blog** · [Digitize your paper notes with Gemini.](https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide/) — 2026-05-11 Google 글입니다. 손글씨 노트 사진으로 복습 자료를 만드는 방법을 소개합니다. 시험 공부에 응용하기 좋으며, 이름 등 개인정보를 가리고 원노트와 대조하는 방식으로 참고할 수 있습니다. 오늘의 새 기능으로 선정한 항목은 아닙니다.
 
-- **Blog** · [AWS re:Invent 2025: Amazon announces Trainium3, Nova 2 and frontier agents](https://www.aboutamazon.com/news/aws/aws-re-invent-2025-ai-news-updates) — Amazon이 자체 칩 Trainium3를 왜 만들고 Decart의 실시간 추론을 대표 사례로 내세웠는지 공식 발표에서 확인할 수 있습니다.
+## 오늘의 활용법 · AI에게 맡기기 전후 시간을 따로 재기
 
-## 운영자용 참고 · AI 서비스의 복구 경로를 끝까지 따라가기
+새 AI 모델이나 유료 플랜이 내 작업 시간을 실제로 줄이는지 비교할 때
 
-모델 API, 벡터 저장소, 파일·비밀키가 여러 클라우드와 지역에 흩어져 있을 때
+반복해서 쓰는 300자 안내문 하나를 정해 직접 작성 시간과 AI 지시·대기·수정 시간을 각각 기록합니다. 결과의 누락도 함께 비교하면 빠르게 느껴진 것과 실제로 빨라진 것을 구분할 수 있습니다.
 
-주 리전이 멈췄다고 가정하고 모델 엔드포인트뿐 아니라 데이터 복제, DNS, 큐, 자격증명과 결제 한도까지 대체 경로에서 실제로 동작하는지 확인합니다.
+요청 예시: “아래 사실만 사용해 안내문을 300자 안팎으로 써주세요. 없는 정보는 만들지 말고 확인이 필요한 부분을 표시해 주세요. 대상 독자: [독자]. 반드시 들어갈 내용: [내용].”
 
-요청 예시: “이 AI 서비스의 구성요소를 모델, 데이터, 네트워크, 자격증명, 외부 API로 나눠 주세요. 주 리전 전체가 중단됐을 때 각 요소의 대체 경로와 아직 수동인 복구 단계를 표시해 주세요.”
+## 선정과 검증
 
-## 기존 선정 점수와 재검토
+개인의 이용·비용·위험에 직접 관련 있는 소식 3개를 선정했습니다. Character.AI는 10월 12일 발표와 13일 후속 보도를 통합했고, 나머지 두 건은 13일 새 변경입니다. 이전 발표를 다시 소개하거나 기업 투자 뉴스로 개수를 채우지 않았습니다.
 
-아래 점수는 재검토 전 산업 영향 중심으로 매긴 최초 평가입니다. 새 개인 관련성 기준의 통과 점수로 사용하지 않습니다. 신뢰도 30·영향도 25·활용도 20·최신성 15·커뮤니티 10의 가중치는 유지하되, 앞으로 영향도와 활용도를 개인의 사용·비용·선택·이해 기준으로 평가합니다.
+점수는 개인 관련성 검토 후 신뢰도 30·영향도 25·활용도 20·최신성 15·커뮤니티 10으로 매긴 편집 판단입니다.
 
 | 뉴스 | 신뢰도 | 영향도 | 활용도 | 최신성 | 커뮤니티 | 합계 |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 아마존이 ‘칩을 갈아타게 해주는’ Decart를 70억달러에 살 수 있습니다 | 24 | 24 | 18 | 15 | 8 | 89 |
-| Yandex 데이터센터 세 곳이 나흘 사이 공격을 받았습니다 | 29 | 25 | 18 | 15 | 7 | 94 |
-| 310억달러를 바라보던 AI 데이터센터 IPO가 사흘 만에 멈췄습니다 | 29 | 23 | 18 | 12 | 8 | 90 |
+| Gemini 유료 이용자에게 ‘자리 비워도 계속하는 작업’이 열립니다 | 28 | 23 | 19 | 15 | 6 | 91 |
+| Character.AI는 계속 열려 있지만, 대화 백업은 서두를 이유가 생겼습니다 | 28 | 22 | 20 | 13 | 7 | 90 |
+| GitHub가 Claude API 키를 코드와 함께 올리는 실수를 더 막아줍니다 | 28 | 19 | 19 | 15 | 5 | 86 |
 
-FACT / INTERPRETATION / SIGNAL / SPECULATION과 검증 메타데이터는 원본 JSON에 보존했습니다. 같은 보도의 재배포는 별도 독립 근거로 계산하지 않았습니다.
-
-## 개인 관련성 재검토 결과
-
-- **아마존이 ‘칩을 갈아타게 해주는’ Decart를 70억달러에 살 수 있습니다**: Amazon–Decart 인수 협상 보도만으로 한국 개인의 AI 도구 가격·기능·이용 조건이 바뀌었다는 근거는 없습니다. 거래 성사와 개인 수혜를 추측해 Top으로 올리지 않습니다.
-- **Yandex 데이터센터 세 곳이 나흘 사이 공격을 받았습니다**: Yandex 이용자에게는 직접적인 장애지만, 이번 브리핑의 한국 일반 개인이 쓰는 AI 도구에 미친 영향이나 필요한 조치는 확인되지 않았습니다. 재해복구 훈련은 전문 운영자를 위한 내용입니다.
-- **310억달러를 바라보던 AI 데이터센터 IPO가 사흘 만에 멈췄습니다**: Firmus 상장 철회는 기업 자금조달 소식입니다. 한국 개인의 AI 이용료·가용성·도구 선택 변화가 확인되지 않아 개인용 Top으로 선정하지 않습니다.
+세 뉴스를 함께 설명할 강한 공통 의미가 없어 시장 전체에 대한 결론은 만들지 않았습니다. 내부 분석과 출처 분류는 데이터 원문에 보존했습니다.
 
 ## 누락·미확인 사항
 
-- Amazon과 Decart의 인수 협상은 Wall Street Journal 보도 단계입니다. Reuters는 보도를 독립 확인하지 못했고 두 회사도 답하지 않았으므로 거래 성사를 전제로 해석하지 않았습니다.
-- Yandex는 나흘 사이 세 데이터센터가 드론 공격을 받아 중단됐다고 밝혔습니다. 전체 서비스 영향, 장비 손실, 복구 일정과 공격별 최종 귀속은 확인되지 않았습니다.
-- Firmus는 IPO 철회를 확인했지만 향후 사모 조달 규모·기업가치와 Nasdaq 재추진 여부는 확정되지 않았습니다.
-- Worth Reading의 YouTube는 제목·설명·출처·게시일을 확인했으며 전체 영상과 자막은 검토하지 않았습니다.
+- Gemini의 한국 계정별 새 작업 기능 배포와 한도, 한국어 장기 작업 성능 및 최종 결제 금액은 확인하지 못했습니다.
+- Character.AI의 서비스 종료는 확정되지 않았습니다. 법원 제출 문서 직접 원문과 최종 매각 조건, 개별 데이터 내보내기 완료 시점은 미확인입니다.
+- GitHub 새 Anthropic 키 탐지의 독립 효과·오탐·누락률은 미확인입니다.
+- 일부 공식 발표와 독립 보도는 직접 페이지 열기가 실패해 검색에 수록된 본문으로 확인했습니다.
+- YouTube는 메타데이터·설명·목차만 확인했습니다. Paper는 초록과 서지를 확인했고 전문은 검토하지 않았습니다.
