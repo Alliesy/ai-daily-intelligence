@@ -1,149 +1,127 @@
-# AI Daily Intelligence · 2026-10-14
+AI Daily Intelligence · 2026-10-15 KST
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-14.md) · [데이터 원문](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-14.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-15.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-15.json)
 
-검증 뉴스 3개 · 사업 아이디어 0개 · 구축 후보 없음
+상태: complete · 뉴스 3개 · 사업 아이디어 0개 · 구축 후보 없음
 
-## Character.AI 대화를 보관하려면 마지막 날까지 기다리기 어렵습니다
+**오늘의 인사이트**
 
-공식 도움말에 따르면 데이터 내보내기에 3~4주가 걸릴 수 있습니다. 서비스 종료가 확정된 것은 아니지만, 소중한 기록을 보관하려는 이용자는 종료 공지가 나온 뒤 요청하면 늦을 수 있다는 점을 알아둘 만합니다.
+AI 표시가 없는 노래도 사람이 만들었다고 단정할 수 없습니다
 
-## Gemini 유료 이용자에게 ‘자리 비워도 계속하는 작업’이 열립니다
+YouTube Music의 새 표시는 제작 방식을 알려주는 단서이지, 모든 음원을 빠짐없이 판정했다는 보증은 아닙니다. 공식 도움말에도 정보가 없어 판단하지 못한 경우가 남는다고 나옵니다. 표시가 붙은 곡과 그렇지 않은 곡을 단순히 AI와 사람의 작품으로 나누면 잘못 이해할 수 있습니다.
 
-채팅창에서 작업을 맡기고 결과를 기다리는 방식이 더해집니다. Pro·Ultra 구독자를 대상으로 배포가 시작됐지만, 한국에서 연결되는 앱과 이용 한도는 따로 확인해야 합니다.
+---
 
-Google이 10월 13일 Gemini 4 Argon을 앱에 제공하기 시작했습니다. 앞선 모델 예고에서 한 단계 나아가 이용자가 직접 써볼 수 있게 된 것입니다. 회사는 답변의 불필요한 반복을 줄이고, 긴 일을 처리하는 중간에도 진행 상황을 더 잘 알려준다고 설명합니다.
+**1. YouTube Music에서 AI로 만든 노래에 표시가 붙습니다**
 
-눈에 띄는 것은 대화와 작업을 전환하는 기능입니다. Google 앱뿐 아니라 Adobe·Shopify 등 40개가 넘는 앱과 연결한다고 합니다. macOS용 Gemini에는 코딩 도구 Antigravity의 작업 화면도 들어옵니다. 다만 이 연결 목록이 한국에서 모든 서비스를 같은 방식으로 쓸 수 있다는 뜻은 아닙니다.
+곡을 들으면서 제작 방식을 확인할 단서가 생깁니다. 다만 이 표시는 AI 음악을 추천에서 자동으로 빼주는 기능과는 다릅니다.
 
-개발용 API를 쓰는 사람은 비용도 구분해야 합니다. 공식 문서상 11월 30일까지 입력·출력 100만 토큰당 각각 2달러·10달러이며, 12월 1일부터는 4달러·20달러입니다. 앱 구독료에 이 API 사용료가 포함된다고 생각하면 안 됩니다.
+YouTube가 10월 14일 음악 재생 화면에 AI 사용 여부를 표시하기 시작했습니다. 작곡이나 보컬처럼 곡의 주요 부분을 생성형 AI로 만든 경우가 대상입니다. 표시를 누르면 제작 방식에 관한 설명을 볼 수 있고, 이후 일반 YouTube 앱으로도 확대할 예정입니다.
 
-Gemini 웹 앱은 한국과 한국어를 지원합니다. 그러나 이번 새 작업 기능의 국내 배포 상태와 실제 한국어 결과는 계정에서 확인하지 못했습니다. 지금 쓰는 도구를 바로 갈아타기보다는, 민감한 정보가 없는 작은 작업에서 원하는 결과가 나오는지 비교할 만합니다.
+기준은 ‘컴퓨터를 조금이라도 썼는가’가 아닙니다. 공식 도움말은 전부 생성한 음악, 일부를 생성한 음악, 생성형 AI를 쓰지 않은 음악을 구분합니다. 사람이 부른 목소리의 음정을 일반적인 보정 도구로 다듬는 작업은 마지막 범주의 예로 제시합니다.
 
-### 하나만 기억한다면
+분류에는 음악 파트너가 제공한 정보와 YouTube의 자체 탐지 신호가 함께 쓰입니다. 신고가 없고 다른 신호로도 판단하지 못한 경우는 알 수 없는 상태로 남습니다. 따라서 표시가 안 보인다는 이유만으로 사람이 모든 부분을 만들었다고 결론 내리면 안 됩니다.
 
-새 모델이 보인다는 것과 필요한 앱까지 연결해 일을 끝낼 수 있다는 것은 별개입니다.
+국내 이용자가 오늘 모든 곡에서 같은 화면을 볼 수 있는지는 확인하지 못했습니다. 한국 계정별 배포 시점이나 무료·유료 계정 사이의 차이도 발표문에는 구체적으로 나와 있지 않습니다. 새 표시를 음질이나 작품의 좋고 나쁨을 매기는 점수로 볼 필요는 없습니다.
 
-### 앞으로 볼 건
+**앞으로 볼 건**
 
-국내 계정에 표시되는 작업 한도, 앱별 승인 단계, 작업 중단·실패 때의 안내가 구체화되는지 보세요.
+잘못 붙은 표시를 어떻게 수정하는지, 이용자가 AI 음악의 추천 여부까지 선택할 수 있게 되는지가 다음 확인 사항입니다.
 
-### 지금 확인할 것
+더 궁금하다면
 
-이미 Pro·Ultra를 쓰고 있다면 모델 선택 메뉴와 작업 전환 기능이 나타나는지 먼저 확인하세요.
+- [YouTube Music adds new labels for AI music](https://blog.youtube/news-and-events/youtube-music-ai-labels/) — YouTube, 2026-10-14
+- [Disclose Gen AI usage for music content](https://support.google.com/youtube/answer/17124251?hl=en) — YouTube, 게시일 미표기; 2026-10-15 KST 확인
+- [YouTube sticks new labels on AI-generated songs](https://www.theverge.com/ai-artificial-intelligence/1011369/youtube-music-ai-label) — The Verge, 2026-10-14
+- [YouTube Music rolling out AI labels in the Now Playing screen](https://9to5google.com/2026/10/14/youtube-music-ai-label/) — 9to5Google, 2026-10-14
 
-### 더 궁금하다면
+---
 
-- [Gemini 4 Argon comes to the Gemini app.](https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/) — Google, 2026-10-13
-- [What's new in Gemini 4 Argon](https://ai.google.dev/gemini-api/docs/latest-model?hl=en) — Google, 게시일 미표기; 2026-10-14 KST 확인
-- [Where you can use the Gemini web app](https://support.google.com/gemini/answer/13575153?hl=en&version=published) — Google, 게시일 미표기; 2026-10-14 KST 확인
-- [Google launches flagship AI model Gemini 4 Argon for developers, businesses](https://www.reuters.com/business/google-launches-flagship-ai-model-gemini-4-argon-developers-businesses-2026-10-13/) — Reuters, 2026-10-13
-- [Google finally releases Gemini 4 Argon](https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon) — The Verge, 2026-10-13
+**2. Gemini 스킬이 보이지 않나요? 계정에 따라 제공 일정이 다릅니다**
 
-검증 범위: 앱 공식 안내와 API 문서의 이용 조건을 따로 읽었습니다. API 문서의 Pro 제외를 Gemini 앱의 Pro 제외로 잘못 옮기지 않았습니다. 일부 페이지는 직접 열기 실패 후 검색에 수록된 본문으로 확인했습니다.
+반복해서 쓰는 지시를 저장하는 기능이 순차적으로 열리고 있습니다. 회사 문서에서 쓰는 Workspace 스킬은 배포가 미뤄졌습니다.
 
-## Character.AI는 계속 열려 있지만, 대화 백업은 서두를 이유가 생겼습니다
+Google은 10월 13일 스킬 제공 일정을 다시 안내했습니다. Gemini 앱 쪽은 11월 중순까지 순차 배포를 마칠 계획이지만, Workspace 쪽의 새 일정은 아직 정하지 않았습니다. 지난 소개를 보고 곧바로 모든 화면에서 쓸 수 있다고 기대했다면 구분이 필요한 대목입니다.
 
-회사는 운영을 이어갈 매수 제안을 찾고 있으며, 없으면 플랫폼을 종료할 수 있다고 밝혔습니다. 구독 요금은 지금도 그대로 청구됩니다.
+스킬은 매번 적던 작업 방식을 저장해 두는 기능입니다. 예를 들어 글을 고칠 때 지킬 문체와 금지할 표현을 한 번 정해 여러 대화에서 다시 사용할 수 있습니다. 도움말은 채팅에서 사용하는 스킬에는 Google AI 구독이 필요 없다고 설명합니다. 유료 요금제와 연결된 Tasks 이용 조건까지 무료라는 뜻은 아닙니다.
 
-캐릭터와 대화하거나 이야기를 만드는 Character.AI가 10월 12일 법원 감독 아래 회사를 매각하기 위한 절차를 발표했습니다. 다음 날 Reuters와 Wall Street Journal도 거래 내용을 보도했습니다. 이용자에게는 회사의 가치보다 자신이 만든 기록을 앞으로도 열어볼 수 있는지가 더 가까운 문제입니다.
+공식 안내끼리 맞지 않는 부분도 있습니다. 배포 공지는 Gemini 앱 스킬을 모든 Workspace 고객과 개인 계정, 모든 연령에 제공한다고 적었지만, 현재 사용 도움말은 개인 계정부터 제공하며 18세 이상이어야 한다고 안내합니다. 회사·학교 계정은 아직 사용할 수 없다는 설명도 있어, 넓은 발표 범위를 현재 계정의 이용 가능 여부로 단정하지 않았습니다.
 
-Disney가 일부 자산의 라이선스를 사겠다고 나선 것과 앱 전체의 운영을 맡는 것은 다릅니다. Character.AI는 매각 절차를 11월 말이나 12월 초에 마칠 것으로 예상하지만, 이는 확정된 서비스 종료일이 아닙니다. 아직 접속할 수 있다는 이유만으로 앞으로의 운영이 보장됐다고 볼 수도 없습니다.
+도움말은 Keep Activity를 켜야 한다는 조건도 명시합니다. 저장 기능을 쓰려고 활동 기록 설정까지 바꿀 것인지는 따로 판단할 문제입니다. 한국 계정의 정확한 도착 시점과 한국어 지시가 얼마나 일관되게 적용되는지는 이번 조사에서 확인하지 못했습니다.
 
-기록을 보관하려면 대기시간을 알아둘 필요가 있습니다. 공식 도움말은 데이터 내보내기에 3~4주가 걸릴 수 있다고 안내합니다. 파일이 준비되면 이메일로 다운로드 링크를 보내며, 링크는 발송 후 7일 동안 유효합니다. 요청 직후 이메일이 없다고 바로 실패로 판단할 일은 아닙니다.
+**앞으로 볼 건**
 
-내보내기는 다른 앱에서 같은 캐릭터와 대화를 그대로 이어가는 기능과도 다릅니다. 이번 조사에서는 파일을 다른 서비스에 완전히 옮길 수 있다는 보장은 확인하지 못했습니다. 우선은 자신의 기록을 확보하는 용도로 생각하는 편이 정확합니다.
+스킬 공유와 Google Drive 연결이 실제로 열리는지, 연령·계정 안내가 같은 조건으로 정리되는지 확인할 필요가 있습니다.
 
-### 앞으로 볼 건
+**지금 확인할 것**
 
-유료 기능이 달라질 경우 어떤 사전 안내가 오는지, 매각 제안에 플랫폼 운영까지 포함되는지를 확인하세요.
+이미 기능이 열린 계정이라면 Customize → Skills에서 민감한 자료 없이 짧은 글쓰기 지시 하나부터 시험해 보세요.
 
-### 지금 확인할 것
+더 궁금하다면
 
-보관할 대화가 있다면 웹의 Profile Settings → Account → Manage Account & Data → Export Data에서 내보내기를 요청하세요.
+- [An update on the launch of skills in the Gemini app and Workspace](https://workspaceupdates.googleblog.com/2026/10/an-update-on-launch-of-skills-in-gemini-app-and-workspace.html) — Google, 2026-10-13
+- [Create & manage skills for Gemini Apps](https://support.google.com/gemini/answer/17094296) — Google, 게시일 미표기; 2026-10-15 KST 확인
+- [Gemini Skills rollout has hit a speed bump for some users](https://www.androidauthority.com/gemini-skills-rollout-delayed-google-workspace-3722997/) — Android Authority, 2026-10-14
 
-### 더 궁금하다면
+---
 
-- [An Update on Character.ai](https://blog.character.ai/an-update-on-character-ai/) — Character.ai, 2026-10-12
-- [How do I download my data?](https://support.character.ai/hc/en-us/articles/56967715028891-How-do-I-download-my-data) — Character.ai, 2026-10-08 updated
-- [Character.AI files for bankruptcy, to sell some assets to Disney for $20 million](https://www.reuters.com/legal/litigation/characterai-files-bankruptcy-agrees-sell-some-assets-disney-20-million-2026-10-13/) — Reuters, 2026-10-13
-- [Character.ai Maker Files for Chapter 11 Bankruptcy](https://www.wsj.com/tech/ai/character-ai-maker-files-for-chapter-11-bankruptcy-740e6fb1) — The Wall Street Journal, 2026-10-13
+**3. GPT-4o·GPT-4.1 API를 쓰는 자동화는 내년 1월 14일 전에 바꿔야 합니다**
 
-검증 범위: 회사 FAQ는 검색 수록 본문, 내보내기 도움말은 직접 원문, Reuters·WSJ는 검색에 수록된 보도로 확인했습니다. 법원 사건 원문은 직접 열람하지 않았고 종료 확정으로 쓰지 않았습니다.
+OpenAI가 2027년 1월 14일을 일부 구형 모델의 종료일로 공지했습니다. ChatGPT 앱이 아니라, 모델을 직접 연결해 만든 도구와 자동화에 관한 소식입니다.
 
-## GitHub가 Claude API 키를 코드와 함께 올리는 실수를 더 막아줍니다
+OpenAI는 10월 14일 API 종료 안내에 GPT-4 계열의 일부 버전을 추가했습니다. 오늘 곧바로 작동이 멈추는 것은 아니지만, 계속 사용할 수 있는 기한이 정해진 셈입니다. API로 번역이나 문서 정리를 연결해 놓았다면 화면에서 보이는 앱 이름보다 내부의 모델 설정을 확인해야 합니다.
 
-Anthropic의 서비스·사용자 키가 새 기본 차단 대상에 들어갔습니다. Claude로 개인 앱을 만들고 GitHub에 공개하는 사람에게 직접 관련 있는 변경입니다.
+대상은 GPT-4o의 2024-08-06·2024-11-20 버전, GPT-4o mini의 2024-07-18 버전, GPT-4.1과 GPT-4.1 mini의 2025-04-14 버전입니다. 공식 권장 대체 모델은 gpt-6-luna입니다. 이 기반 모델을 추가 학습시켜 만든 미세조정 모델도 같은 종료 일정을 따릅니다.
 
-GitHub가 10월 13일 비밀정보 탐지 목록을 갱신했습니다. 이제 지원되는 인증 키가 코드에 들어 있으면 서버에 올리는 단계에서 막을 수 있습니다. API 키는 앱이 AI 서비스를 호출할 때 쓰는 비밀값이라, 일반적인 설정 이름이나 모델 이름처럼 공개하면 안 됩니다.
+모델 이름만 바꾼다고 기존 작업의 품질까지 같아지는 것은 아닙니다. 자주 처리하는 입력 몇 개를 남겨 두고, 교체 뒤 빠지는 내용이나 출력 형식이 달라지는지 비교하는 편이 좋습니다. 이번 공지는 새 모델이 더 저렴하다거나 한국어 작업을 반드시 더 잘한다는 증거는 아닙니다.
 
-무료 공개 저장소도 보호 범위에 포함됩니다. GitHub 문서에 따르면 개인 계정의 공개 저장소 푸시 보호는 기본으로 켜져 있습니다. 다만 비공개 저장소까지 전부 같은 조건이라고 생각하면 안 되고, 저장소 종류와 보안 기능 이용 조건을 구분해야 합니다.
+**앞으로 볼 건**
 
-이 장치는 지원하는 패턴을 찾아내는 방식입니다. 모든 비밀값이나 과거 유출까지 해결해 주지는 않으며, 공식 문서에도 검사 범위의 제한이 있습니다. AI가 코드를 작성했다는 이유로 안전하다고 믿기보다는, 공개 전에 인증 정보가 들어간 파일을 한 번 더 살펴볼 필요가 있습니다.
+다른 회사의 앱을 통해 이용 중이라면 해당 앱이 언제 어떤 모델로 바꾸는지, 별도 비용 변경이 있는지 살펴보세요.
 
-### 하나만 기억한다면
+**지금 확인할 것**
 
-코드를 공개하는 판단과 계정에 접근할 권한을 공개하는 판단은 나눠야 합니다.
+자동화 설정에서 gpt-4o, gpt-4o-mini, gpt-4.1, gpt-4.1-mini를 검색하고 정확한 버전을 공식 종료 목록과 대조하세요.
 
-### 지금 확인할 것
+더 궁금하다면
 
-GitHub 계정의 공개 저장소 푸시 보호가 켜져 있는지 확인하고, 코드에 실제 API 키를 직접 적어두지 않았는지 점검하세요.
+- [Deprecations — 2026-10-14: GPT-4 series model deprecations](https://developers.openai.com/api/docs/deprecations) — OpenAI, 2026-10-14
 
-### 더 궁금하다면
+---
 
-- [Secret scanning blocks Anthropic keys by default, adds Salesforce](https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/) — GitHub, 2026-10-13
-- [Secret scanning detection scope](https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-scope) — GitHub, 게시일 미표기; 2026-10-14 KST 확인
-- [Working with push protection in the GitHub UI](https://docs.github.com/en/code-security/how-tos/secure-your-secrets/work-with-leak-prevention/push-protection-in-the-github-ui) — GitHub, 게시일 미표기; 2026-10-14 KST 확인
+**오늘의 활용법 · 반복 지시와 이번 작업의 자료를 나누기**
 
-검증 범위: 공식 변경 기록과 사용자용 보호 문서를 대조했습니다. 저장소 수준 설정과 개인 계정 기본 보호는 구분합니다. 한국 계정에서 직접 차단 실험은 하지 않았습니다.
+항상 지킬 문체·분량은 저장 지시에 넣고, 이번 글의 사실과 날짜는 대화마다 따로 전달합니다. 지난 자료가 다음 작업에 섞이지 않는지 시험하세요.
 
-## 사업 아이디어
+예시 요청: 다음 글을 교정할 때 쓸 지시를 정리해 주세요. 항상 지킬 조건: 한 문장에 한 가지 의미, 근거 없는 숫자는 추가하지 않기. 이번 글의 내용은 재사용 지시에 넣지 마세요.
 
-이번에는 선정하지 않았습니다. 백업 위치·대기시간·파일 활용의 불편은 공개 게시물에서 확인했으나, 한국 고객의 지불 의사·접근 경로와 민감 대화 처리의 안전한 방식은 확인되지 않았습니다. 공식 내보내기와 기존 도구의 대체 가능성도 남아 있습니다.
+**Worth Reading**
 
-공개 사용자 질문:
+- Paper · [ProSA: Assessing and Understanding the Prompt Sensitivity of LLMs](https://arxiv.org/abs/2410.12405)
 
-- [질문 원문](https://www.reddit.com/r/characterai_lounge/comments/1x4zv9r/export_chats/) — 내보내기 위치와 추출한 파일을 어디서 쓸 수 있는지 묻는 공개 질문 및 기존 확장 사용 제안. 개인 식별정보 미수집.
-- [질문 원문](https://www.reddit.com/r/CharacterAI/comments/1x4qh83/how_does_the_exporting_for_cai_work_and_how_long/) — 기록 보관 범위와 내보내기 이메일 대기시간을 묻는 공개 질문. 응답의 종료 시점 추측은 사실로 채택하지 않았음.
+  2024-10-16 공개된 참고 연구입니다. 지시문을 바꾸면 결과가 얼마나 달라지는지 살펴봅니다. 저장 지시나 모델을 바꿀 때 실제 입력으로 다시 시험할 이유를 이해하는 데 도움이 됩니다. 오늘의 새 연구가 아니며 최신 모델의 성능을 증명하지 않습니다.
 
-## Worth Reading
+- GitHub · [Promptfoo](https://github.com/promptfoo/promptfoo)
 
-오늘의 신규 뉴스와 별개인 참고 자료입니다.
+  개인 개발자가 같은 입력으로 여러 프롬프트·모델 결과를 비교할 수 있는 MIT 공개 도구입니다. 터미널과 설정 파일 사용이 필요합니다. 도구가 공개됐다고 연결하는 모델 API까지 무료인 것은 아니며, 외부 API 사용 시 데이터 전송 조건도 따로 확인해야 합니다.
 
-- **Paper** · [Cognitive offloading and the speedup illusion in human-AI interaction](https://arxiv.org/abs/2605.23177) — 2026-05-22 공개된 연구입니다. 간단한 인지 과제에서 AI가 시간을 줄일 것이라는 예상과 실제 소요시간이 달랐습니다. 새 모델의 효율을 자신의 작업에서 비교할 이유를 줍니다. 모든 업무에 같은 결론을 적용할 수는 없습니다.
+- YouTube · [New! Simplified AI Labels & Auto-Detection — Creator Insider](https://www.youtube.com/watch?v=r99O5TAKM1E)
 
-- **GitHub** · [Gitleaks](https://github.com/gitleaks/gitleaks) — 개인 개발자가 로컬 코드와 Git 기록에서 API 키 등 비밀정보를 찾는 도구입니다. 터미널 사용이 필요합니다. 현재 README는 기능 개발 완료와 보안 패치 위주 유지 방침을 명시하며, 새 Anthropic 키 두 유형의 탐지 지원을 확인한 추천은 아닙니다.
+  2026-05-27 공개된 AI 표시 배경 영상입니다. 이번 음악 기능 자체의 소개 영상은 아닙니다. 제목·채널·날짜와 공식 YouTube 블로그의 연결 맥락을 확인했으며 영상·자막 전체는 검토하지 않았습니다.
 
-- **YouTube** · [How to Use Google Gemini Al (Full Tutorial)](https://www.youtube.com/watch?v=PDMcpthR88U) — Kevin Stratvert의 2026-05-22 입문 영상입니다. 설명과 목차에서 파일 분석·연결 앱·Canvas 사용법을 확인했습니다. 이번 Argon 출시 설명 영상은 아니며, 화면·요금 조건은 현재와 다를 수 있습니다. 전체 영상·자막은 검토하지 않았습니다.
+- Blog · [Let skills in Gemini tackle your most repetitive tasks](https://blog.google/products-and-platforms/products/gemini/automate-tasks-with-skills/)
 
-- **Blog** · [Digitize your paper notes with Gemini.](https://blog.google/innovation-and-ai/products/gemini-app/digitize-notes-gemini-study-guide/) — 2026-05-11 Google 글입니다. 손글씨 노트 사진으로 복습 자료를 만드는 방법을 소개합니다. 시험 공부에 응용하기 좋으며, 이름 등 개인정보를 가리고 원노트와 대조하는 방식으로 참고할 수 있습니다. 오늘의 새 기능으로 선정한 항목은 아닙니다.
+  2026-09-30 공식 소개 글입니다. 발표 준비·문체 적용 등 반복 지시를 저장하는 활용 예를 읽기 좋습니다. 이용 가능 일정은 이 글만 믿지 말고 오늘 뉴스에 실은 10월 13일 후속 공지와 최신 도움말을 우선하세요.
 
-## 오늘의 활용법 · AI에게 맡기기 전후 시간을 따로 재기
+**사업 기회 검토**
 
-새 AI 모델이나 유료 플랜이 내 작업 시간을 실제로 줄이는지 비교할 때
+AI 음악을 추천에서 제외하고 싶다는 반복 요구는 보이지만, 플랫폼 내 필터와 정확한 분류 데이터 접근을 확보하지 못했습니다. 한국 개인의 지불 의사와 고객 접근 경로도 확인되지 않아 별도 사업 아이디어로 승격하지 않았습니다.
 
-반복해서 쓰는 300자 안내문 하나를 정해 직접 작성 시간과 AI 지시·대기·수정 시간을 각각 기록합니다. 결과의 누락도 함께 비교하면 빠르게 느껴진 것과 실제로 빨라진 것을 구분할 수 있습니다.
+**확인하지 못한 내용**
 
-요청 예시: “아래 사실만 사용해 안내문을 300자 안팎으로 써주세요. 없는 정보는 만들지 말고 확인이 필요한 부분을 표시해 주세요. 대상 독자: [독자]. 반드시 들어갈 내용: [내용].”
+- YouTube Music의 한국 계정별 배포 완료, 무료·유료 계정 표시 차이, 독립 탐지 정확도는 미확인입니다.
+- Gemini 스킬은 공식 공지와 도움말의 계정·연령 범위가 다릅니다. 한국 개별 계정 접근과 Workspace 새 일정은 미확인입니다.
+- GPT-4 계열 API 종료는 공식 문서로 확인했지만 새 일정의 독립 보도 두 개와 대체 모델의 품질·비용 비교는 확보하지 못했습니다.
+- 일부 출시 발표·기사는 검색에 수록된 본문으로 확인했습니다. YouTube는 메타데이터·공식 연결 맥락만, Paper는 초록·서지만 검토했습니다.
 
-## 선정과 검증
-
-개인의 이용·비용·위험에 직접 관련 있는 소식 3개를 선정했습니다. Character.AI는 10월 12일 발표와 13일 후속 보도를 통합했고, 나머지 두 건은 13일 새 변경입니다. 이전 발표를 다시 소개하거나 기업 투자 뉴스로 개수를 채우지 않았습니다.
-
-점수는 개인 관련성 검토 후 신뢰도 30·영향도 25·활용도 20·최신성 15·커뮤니티 10으로 매긴 편집 판단입니다.
-
-| 뉴스 | 신뢰도 | 영향도 | 활용도 | 최신성 | 커뮤니티 | 합계 |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Gemini 유료 이용자에게 ‘자리 비워도 계속하는 작업’이 열립니다 | 28 | 23 | 19 | 15 | 6 | 91 |
-| Character.AI는 계속 열려 있지만, 대화 백업은 서두를 이유가 생겼습니다 | 28 | 22 | 20 | 13 | 7 | 90 |
-| GitHub가 Claude API 키를 코드와 함께 올리는 실수를 더 막아줍니다 | 28 | 19 | 19 | 15 | 5 | 86 |
-
-세 뉴스를 함께 설명할 강한 공통 의미가 없어 시장 전체에 대한 결론은 만들지 않았습니다. 내부 분석과 출처 분류는 데이터 원문에 보존했습니다.
-
-## 누락·미확인 사항
-
-- Gemini의 한국 계정별 새 작업 기능 배포와 한도, 한국어 장기 작업 성능 및 최종 결제 금액은 확인하지 못했습니다.
-- Character.AI의 서비스 종료는 확정되지 않았습니다. 법원 제출 문서 직접 원문과 최종 매각 조건, 개별 데이터 내보내기 완료 시점은 미확인입니다.
-- GitHub 새 Anthropic 키 탐지의 독립 효과·오탐·누락률은 미확인입니다.
-- 일부 공식 발표와 독립 보도는 직접 페이지 열기가 실패해 검색에 수록된 본문으로 확인했습니다.
-- YouTube는 메타데이터·설명·목차만 확인했습니다. Paper는 초록과 서지를 확인했고 전문은 검토하지 않았습니다.
+검증: 개인 직접 사용 관련 뉴스 3개, 기업 맥락 뉴스 0개. Worth Reading 네 유형 각 1개. 동일 사건·출처 URL 중복과 후보 승인 조건을 점검했습니다. 설계·구현·배포는 진행하지 않았습니다.
