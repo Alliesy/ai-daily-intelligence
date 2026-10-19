@@ -1,0 +1,558 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-10-20",
+  "generated_at": "2026-10-19T22:11:04Z",
+  "status": "complete",
+  "news": [
+    {
+      "event_key": "chatgpt-chrome-tab-workflow-update-2026-10-15",
+      "title": "ChatGPT에서 열어 둔 크롬 탭을 비교하고 작업할 수 있습니다",
+      "importance": "A",
+      "one_line_summary": "10월 15~16일 공개된 크롬 확장 기능 업데이트는 열린 탭을 대화에 활용하고 웹 작업을 이어가는 흐름을 넓혔습니다.",
+      "impact": "상품·요금제·자료를 여러 탭에 열어 두는 개인에게 복사·붙여넣기를 줄이는 선택지가 됩니다.",
+      "original_url": "https://learn.chatgpt.com/docs/chrome-extension",
+      "key_quote": "By default, ChatGPT asks before it interacts with each new website.",
+      "quote_translation": "기본적으로 ChatGPT는 새 웹사이트와 상호작용하기 전에 묻습니다.",
+      "summary": "FACT: 공식 문서는 열린 탭 언급, 사이드 채팅, 로그인된 사이트에서의 작업과 사이트별 권한을 설명합니다.\nINTERPRETATION: 자료를 AI에 옮기는 수고를 줄이되 사이트 접근과 실제 행동의 범위를 나눠 봐야 합니다.\nSIGNAL: 대화창과 기존 브라우저 작업을 연결하는 기능이 강화됩니다.\nSPECULATION: 한국 계정별 제공 시점과 실제 시간 절감 효과는 확인하지 못했습니다.",
+      "why_it_matters": "기존 웹 작업을 유지하면서 AI의 도움을 받을 수 있는지 판단할 근거입니다.",
+      "industry_mood": {
+        "official": "현재 사용법과 권한 설정을 문서화했습니다.",
+        "independent": "9to5Google의 업데이트 보도를 확인했습니다. The Verge 검색 본문도 일치하지만 직접 본문 접근은 실패했습니다."
+      },
+      "outlook": "한국 계정의 무료·유료별 제공 범위와 웹·데스크톱 간 기능 차이를 더 확인해야 합니다.",
+      "business_opportunity": "탭 비교 기능을 그대로 복제한 유료 서비스의 차별성과 국내 수요는 확인되지 않았습니다.",
+      "tags": [
+        "브라우저",
+        "자료 비교",
+        "권한"
+      ],
+      "sources": [
+        {
+          "title": "Browser extension",
+          "url": "https://learn.chatgpt.com/docs/chrome-extension",
+          "publisher": "OpenAI",
+          "published_at": "2026-10-20 조회; 게시일 미표시",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-chrome-extension"
+        },
+        {
+          "title": "Pricing",
+          "url": "https://learn.chatgpt.com/docs/pricing",
+          "publisher": "OpenAI",
+          "published_at": "2026-10-20 조회; 게시일 미표시",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-chrome-extension"
+        },
+        {
+          "title": "ChatGPT gets deeper Google Chrome integration including control over tabs",
+          "url": "https://9to5google.com/2026/10/16/chatgpt-gets-deeper-google-chrome-integration-including-control-over-tabs/",
+          "publisher": "9to5Google",
+          "published_at": "2026-10-16",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "9to5google-chrome-update"
+        },
+        {
+          "title": "ChatGPT can peek at your Chrome tabs now",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs",
+          "publisher": "The Verge",
+          "published_at": "2026-10-16",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "theverge-chrome-update",
+          "note": "검색 제공 본문만 확인; 직접 열기 실패. 독립 실사용 시험으로 계산하지 않음"
+        }
+      ],
+      "selection_score": {
+        "confidence": 26,
+        "impact": 22,
+        "utility": 19,
+        "recency": 10,
+        "community": 3,
+        "total": 80
+      },
+      "time_scope": "recent_7d_material_followup",
+      "followup": {
+        "event_date": "2026-10-15",
+        "previous_state": "기존 브라우저 확장 및 컴퓨터 사용 기능",
+        "material_change": "일반 ChatGPT 대화와 사이드바에서 열린 탭의 맥락을 활용하고 Work 작업으로 연결하는 개선",
+        "timestamp_note": "발표일은 공식 X 게시물을 인용한 외부 보도 기준. X 원문은 접근 불가. 현재 기능은 공식 문서로 확인; 24시간 신규로 분류하지 않음"
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "direct_use",
+        "gate": "pass",
+        "affected_reader": "자료 조사·쇼핑·요금제 비교를 하는 개인",
+        "reader_benefit": "현재 열어 둔 웹페이지를 AI에 보여주는 방법과 허용할 권한의 범위를 알 수 있습니다.",
+        "evidence_urls": [
+          "https://learn.chatgpt.com/docs/chrome-extension"
+        ],
+        "top_eligible": true
+      },
+      "verification": {
+        "status": "official_documentation_and_reporting_checked",
+        "missing": [
+          "공식 X 발표 원문",
+          "The Verge 전체 본문",
+          "한국 계정별 무료·유료 제공 범위",
+          "독립적인 오류율·시간 절감 시험"
+        ],
+        "note": "별도 브라우저 제어를 실행하거나 사용자의 탭을 읽지 않았습니다.",
+        "official_source_count": 2,
+        "independent_evidence_groups": [
+          "9to5google-chrome-update",
+          "theverge-chrome-update"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "ChatGPT에서 열어 둔 크롬 탭을 비교하고 작업할 수 있습니다",
+        "dek": "여러 페이지의 내용을 대화창에 옮기는 수고를 덜 수 있는 업데이트입니다. 내용을 읽게 하는 것과 웹사이트에서 행동하게 하는 것은 권한을 나눠 살펴야 합니다.",
+        "body": "OpenAI가 지난주 크롬 확장 프로그램의 활용 범위를 넓혔습니다. 쇼핑몰이나 서비스 안내 페이지를 열어 둔 채 AI에게 비교를 부탁하거나, 보고 있는 페이지 옆에서 대화를 이어갈 수 있습니다.\n\n공식 문서에는 특정 탭을 대화에 넣고 선택한 글을 질문에 활용하는 방법이 나옵니다. Work에서는 로그인된 사이트의 양식 작성 같은 작업도 이어갈 수 있어요. 예전부터 있던 브라우저 제어 전체가 이번에 처음 생겼다는 뜻은 아닙니다.\n\n편리해진 만큼 무엇을 허용하는지 살펴야 합니다. 새 사이트를 사용할 때는 기본적으로 확인을 요청하지만, 모든 사이트를 허용하면 이 확인이 사라집니다. 이용 범위는 배포 상황과 계정·워크스페이스 설정에 따라 달라지며, 한국 계정에서 무료·유료별로 어디까지 제공되는지는 이번 조사로 확정하지 못했습니다.",
+        "takeaway": "AI가 읽을 자료를 고르는 일도 이제 작업을 맡기는 과정의 일부입니다.",
+        "what_to_watch": "비교 결과가 각 탭의 출처와 일치하는지, 로그인 화면이나 팝업이 끼어도 작업이 정확히 멈추는지 확인할 필요가 있습니다.",
+        "action": "처음에는 공개된 페이지 두 개만 골라 읽기·비교 작업으로 시험하고, 제출이나 메시지 전송은 직접 검토한 뒤 진행하세요."
+      }
+    },
+    {
+      "event_key": "onlyoffice-desktop-editors-10-ai-tools-2026-10-13",
+      "title": "ONLYOFFICE, 문서·표·PDF를 다루는 AI 기능을 한곳에 모았습니다",
+      "importance": "A",
+      "one_line_summary": "10월 13일 Desktop Editors 10.0이 배포됐고 14일 직접 셀 편집 수정 안내, 16일 AI Tools 이용 조건 설명이 이어졌습니다.",
+      "impact": "무료 문서 편집기에서 AI를 선택적으로 연결하려는 개인이 설치와 모델 비용을 구분할 수 있습니다.",
+      "original_url": "https://www.onlyoffice.com/blog/2026/10/onlyoffice-desktop-editors-10",
+      "key_quote": "currently available as a beta version",
+      "quote_translation": "현재 베타 버전으로 제공됩니다.",
+      "summary": "FACT: Desktop Editors 10.0의 AI Tools는 기존 AI 에이전트와 플러그인을 통합하며 별도 설치와 모델 연결이 필요합니다.\nINTERPRETATION: 편집기 무료 제공과 AI 모델 무료 사용은 별개입니다.\nSIGNAL: 문서 맥락을 읽고 편집하는 기능을 앱 안에 모읍니다.\nSPECULATION: 한국어 품질과 실제 편집 정확도는 모델과 파일에 따라 달라질 수 있으며 직접 시험하지 않았습니다.",
+      "why_it_matters": "개인 문서 작업에 맞는 모델과 비용을 스스로 선택할 여지가 있습니다.",
+      "industry_mood": {
+        "official": "기존 셀 편집 실패가 10.0에서 개선됐다고 포럼에 안내했습니다.",
+        "independent": "OMG! Ubuntu는 별도 설치와 일부 설정의 이전 제한을 짚었습니다. It's FOSS는 제품군 차이를 설명했습니다."
+      },
+      "outlook": "기존 파일의 서식과 수식을 보존하는지, 모델별 호환성이 유지되는지 확인해야 합니다.",
+      "business_opportunity": "실제 편집 실패 사례는 있지만 제작사 수정과 겹치며 별도 유료 해결책의 국내 구매 근거가 부족합니다.",
+      "tags": [
+        "문서",
+        "스프레드시트",
+        "로컬 AI",
+        "비용"
+      ],
+      "sources": [
+        {
+          "title": "Meet ONLYOFFICE Desktop Editors 10.0",
+          "url": "https://www.onlyoffice.com/blog/2026/10/onlyoffice-desktop-editors-10",
+          "publisher": "ONLYOFFICE",
+          "published_at": "2026-10-13",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "onlyoffice-desktop-10"
+        },
+        {
+          "title": "ONLYOFFICE AI Tools: context-aware AI inside your documents",
+          "url": "https://www.onlyoffice.com/blog/2026/10/onlyoffice-ai-tools",
+          "publisher": "ONLYOFFICE",
+          "published_at": "2026-10-16",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "onlyoffice-desktop-10"
+        },
+        {
+          "title": "ONLYOFFICE 10.0 is a fully rebuilt app with more AI tools",
+          "url": "https://www.omgubuntu.co.uk/2026/10/onlyoffice-10-expands-ai-tools",
+          "publisher": "OMG! Ubuntu",
+          "published_at": "2026-10-15 수정 표시",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "omgubuntu-onlyoffice-10"
+        },
+        {
+          "title": "With 10.0 Release, ONLYOFFICE Goes All in on AI",
+          "url": "https://itsfoss.com/news/onlyoffice-docs-10-release/",
+          "publisher": "It's FOSS",
+          "published_at": "2026-10-13",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "itsfoss-onlyoffice-10",
+          "note": "Docs 제품군 중심 보도; Desktop의 세부 제공 조건은 공식 문서 우선"
+        }
+      ],
+      "selection_score": {
+        "confidence": 27,
+        "impact": 19,
+        "utility": 18,
+        "recency": 8,
+        "community": 5,
+        "total": 77
+      },
+      "time_scope": "recent_7d_material_followup",
+      "followup": {
+        "event_date": "2026-10-13",
+        "previous_state": "별도 AI 에이전트·플러그인, 직접 셀 수정 실패 신고",
+        "material_change": "데스크톱 10.0 배포 후 10월 14일 제작사 수정 확인 및 16일 설치·비용 조건 상세 안내",
+        "timestamp_note": "전날 조사 후보였으나 게시하지 않은 항목. 기존 뉴스 재발행이 아니며 당일 신규 발표로 표시하지 않음"
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "direct_use",
+        "gate": "pass",
+        "affected_reader": "문서·가계부·발표 자료를 편집하는 개인과 작은 팀",
+        "reader_benefit": "AI를 쓰고 싶을 때만 설치할 수 있고, 앱 비용과 모델 비용을 구분해 선택할 수 있습니다.",
+        "evidence_urls": [
+          "https://www.onlyoffice.com/blog/2026/10/onlyoffice-desktop-editors-10",
+          "https://www.onlyoffice.com/blog/2026/10/onlyoffice-ai-tools"
+        ],
+        "top_eligible": true
+      },
+      "verification": {
+        "status": "official_release_and_followup_checked",
+        "missing": [
+          "한국어 문서 편집 품질",
+          "국내에서의 모델별 비용",
+          "사용자 측 수정 재현"
+        ],
+        "note": "포럼의 수정 확인은 제작사 진술이며 독립 재현으로 세지 않았습니다.",
+        "official_source_count": 2,
+        "independent_evidence_groups": [
+          "omgubuntu-onlyoffice-10",
+          "itsfoss-onlyoffice-10"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "ONLYOFFICE, 문서·표·PDF를 다루는 AI 기능을 한곳에 모았습니다",
+        "dek": "10.0에서는 필요할 때 AI 도구를 따로 설치해 쓸 수 있습니다. 편집기가 무료여도 연결한 모델 사용료까지 무료인 것은 아닙니다.",
+        "body": "ONLYOFFICE가 10월 13일 Windows·macOS·Linux용 Desktop Editors 10.0을 내놓았습니다. 따로 움직이던 AI 에이전트와 플러그인을 AI Tools라는 모듈로 합쳤고, 현재는 베타로 제공합니다.\n\n이제 시작 화면에서 파일을 붙여 질문하거나, 문서를 편집하면서 요약과 교정 등을 요청할 수 있습니다. 스프레드시트에서 AI가 완료했다고 답해도 실제 셀이 바뀌지 않던 문제에 대해서는 제작사가 14일 수정됐다고 알렸습니다. 다만 해당 사용자가 다시 시험해 확인한 결과까지 확보한 것은 아닙니다.\n\n설치 뒤에는 모델 연결이 필요합니다. 클라우드 AI의 API 키를 넣거나 Ollama·LM Studio 같은 도구로 실행한 로컬 모델을 연결할 수 있어요. 로컬 모델은 PC 성능과 설정 과정이 필요하고, 클라우드 모델은 제공사 요금이 적용될 수 있어 간단한 채팅 앱처럼 바로 시작하는 방식과는 다릅니다.",
+        "takeaway": null,
+        "what_to_watch": "업그레이드 후 기존 설정이 유지되는지, 복잡한 수식과 한글 서식이 손상되지 않는지가 실제 사용의 관건입니다.",
+        "action": "중요한 원본 대신 복사본으로 시작해, AI가 완료했다고 말한 부분이 실제 파일에도 반영됐는지 확인하세요."
+      }
+    },
+    {
+      "event_key": "nvidia-broadcast-2-3-file-processor-2026-10-13",
+      "title": "찍어 둔 영상도 NVIDIA Broadcast로 보정할 수 있습니다",
+      "importance": "A",
+      "one_line_summary": "Broadcast 2.3은 실시간 카메라뿐 아니라 저장된 파일 처리와 베타 영상 확대·프레임 생성을 지원합니다.",
+      "impact": "호환 RTX 그래픽카드를 가진 영상 제작자가 기존 녹화 파일을 다듬는 도구로 검토할 수 있습니다.",
+      "original_url": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/release-notes/",
+      "key_quote": "live processing and file processing cannot be active at the same time.",
+      "quote_translation": "실시간 처리와 파일 처리는 동시에 사용할 수 없습니다.",
+      "summary": "FACT: 2.3에는 File Processor와 최대 4K 확대, 파일 프레임 2배·4배 생성이 추가됐습니다. 확대와 프레임 생성의 GPU 요건은 다릅니다.\nINTERPRETATION: 실시간 방송 보정 도구가 녹화 후 편집에도 쓰이게 됐습니다.\nSIGNAL: 기존 영상 도구에서 로컬 AI 보정 범위가 넓어집니다.\nSPECULATION: 모든 영상의 화질 개선이나 원래 촬영 정보 복원은 보장되지 않습니다.",
+      "why_it_matters": "보유 장비로 가능한 후처리를 확인하고 불필요한 새 장비·서비스 구매를 피하는 데 도움이 됩니다.",
+      "industry_mood": {
+        "official": "릴리스 노트에 파일 형식과 GPU별 지원 조건을 명시했습니다.",
+        "independent": "VideoCardz와 TweakTown이 조건을 보도했지만 TweakTown은 VideoCardz를 출처로 밝혀 같은 근거 그룹으로 묶었습니다."
+      },
+      "outlook": "베타 기능의 잔상·얼굴 왜곡과 긴 영상 처리 안정성에 대한 독립 평가가 필요합니다.",
+      "business_opportunity": "기존 무료·유료 영상 편집 대안이 많고 추가로 돈을 낼 반복 문제는 확인하지 못했습니다.",
+      "tags": [
+        "영상 편집",
+        "RTX",
+        "로컬 처리"
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA Broadcast App Release Highlights",
+          "url": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/release-notes/",
+          "publisher": "NVIDIA",
+          "published_at": "2026-10-13 발표; 릴리스 노트 날짜 미표시",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "nvidia-broadcast-23"
+        },
+        {
+          "title": "All Systems Go: Global PC App Ecosystem Ready for NVIDIA RTX Spark",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/",
+          "publisher": "NVIDIA",
+          "published_at": "2026-10-13",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "nvidia-broadcast-23"
+        },
+        {
+          "title": "NVIDIA Broadcast App",
+          "url": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/",
+          "publisher": "NVIDIA",
+          "published_at": "2026-10-20 조회; 게시일 미표시",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "nvidia-broadcast-23"
+        },
+        {
+          "title": "NVIDIA Broadcast 2.3 adds 4K video upscaling and 4× frame generation for prerecorded videos",
+          "url": "https://videocardz.com/newz/nvidia-broadcast-2-3-adds-4k-video-upscaling-and-4x-frame-generation-for-prerecorded-videos",
+          "publisher": "VideoCardz",
+          "published_at": "2026-10-14",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "videocardz-broadcast-23"
+        },
+        {
+          "title": "NVIDIA Broadcast 2.3.0 adds RTX Video upscaling and frame generation to video files and webcams",
+          "url": "https://www.tweaktown.com/news/114077/nvidia-broadcast-2-3-0-adds-rtx-video-upscaling-and-frame-generation-to-video-files-and-webcams/index.html",
+          "publisher": "TweakTown",
+          "published_at": "2026-10-14",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "videocardz-broadcast-23",
+          "note": "VideoCardz를 News Source로 표시하므로 독립 두 번째 근거로 세지 않음"
+        }
+      ],
+      "selection_score": {
+        "confidence": 28,
+        "impact": 18,
+        "utility": 18,
+        "recency": 7,
+        "community": 2,
+        "total": 73
+      },
+      "time_scope": "recent_7d_material_followup",
+      "followup": {
+        "event_date": "2026-10-13",
+        "previous_state": "주로 실시간 마이크·카메라 효과를 제공하던 Broadcast",
+        "material_change": "2.3 정식 업데이트로 저장된 파일 처리와 새 베타 영상 효과 추가",
+        "timestamp_note": "최근 일주일의 미수록 기능 업데이트. 오늘 발표로 표현하지 않음"
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "direct_use",
+        "gate": "pass",
+        "affected_reader": "RTX PC로 강의·게임·개인 영상을 만드는 사람",
+        "reader_benefit": "가지고 있는 그래픽카드에서 영상 확대와 프레임 생성 중 무엇을 쓸 수 있는지 구분할 수 있습니다.",
+        "evidence_urls": [
+          "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/release-notes/",
+          "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/"
+        ],
+        "top_eligible": true
+      },
+      "verification": {
+        "status": "official_release_requirements_checked",
+        "missing": [
+          "두 번째 독립 근거 그룹",
+          "한국 환경 설치 시험",
+          "실제 보정 품질·처리 시간",
+          "별도 가격 조건 명시"
+        ],
+        "note": "제품 페이지 상단은 2.2.0으로 남아 있지만 하단 버전과 릴리스 노트는 2.3.0입니다. 지원 조건은 2.3 릴리스 노트를 우선했습니다.",
+        "official_source_count": 3,
+        "independent_evidence_groups": [
+          "videocardz-broadcast-23"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "찍어 둔 영상도 NVIDIA Broadcast로 보정할 수 있습니다",
+        "dek": "실시간 방송용 효과를 녹화 파일에도 적용하는 기능이 추가됐습니다. 영상 확대와 움직임 보정은 필요한 그래픽카드가 서로 다릅니다.",
+        "body": "NVIDIA가 10월 13일 안내한 Broadcast 2.3에는 저장된 영상과 음성을 처리하는 File Processor가 들어갔습니다. 방송 중 카메라와 마이크에만 효과를 거는 대신, 녹화를 마친 뒤 파일을 다듬는 용도로도 쓸 수 있습니다.\n\n베타 기능인 영상 확대는 최대 4K 출력을 지원하며 RTX 3060 이상이 필요합니다. 중간 프레임을 만들어 움직임을 부드럽게 하는 기능은 RTX 40 시리즈 이상에서 사용할 수 있고, 파일 처리에서는 프레임 수를 2배나 4배로 늘릴 수 있습니다. 앱이 설치되는 최소 사양과 모든 효과가 작동하는 사양은 같지 않습니다.\n\nWindows용 앱이며 지원 파일은 MP4·M4A·MP3·WAV, 코덱은 H.264 8비트와 AAC로 제한됩니다. 실시간 처리와 파일 처리는 동시에 켤 수 없어요. 한국 환경에서 설치하거나 실제 영상을 보정해 보지는 않았으므로, 높은 출력 해상도가 곧 좋은 화질을 보장한다고 보기는 어렵습니다.",
+        "takeaway": "이미 가진 PC로 할 수 있는지부터 확인하면, 기능 이름만 보고 장비를 바꾸는 일을 피할 수 있습니다.",
+        "what_to_watch": "빠른 움직임과 작은 글씨에서 잔상·왜곡이 생기는지, 긴 파일에서도 소리와 화면이 맞는지 확인해야 합니다.",
+        "action": "기존 녹화물의 짧은 복사본으로 처리해 원본과 나란히 비교한 뒤 전체 영상에 적용하세요."
+      }
+    }
+  ],
+  "business_ideas": [],
+  "tools": [],
+  "community": [],
+  "skill_of_the_day": {
+    "name": "AI 작업 전후를 직접 비교하기",
+    "when_to_use": "AI에게 문서 수정이나 웹 작업을 맡길 때",
+    "practical_example": "중요한 원본 대신 복사본을 사용하고, 바꾸기로 한 부분과 실제 바뀐 부분을 대조합니다.",
+    "prompt_example": "이 복사본에서 제목과 첫 문단만 고쳐줘. 나머지는 유지하고, 바꾼 위치와 변경 전후를 알려줘. 외부 전송이나 제출은 하지 마."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "문서 편집 AI는 어디서 틀릴까 — DocOps",
+      "url": "https://arxiv.org/abs/2607.19865",
+      "why_read": "문서의 긴 작업 흐름과 구조를 유지하는 데 생기는 실패를 다룬 연구입니다. AI의 완료 답변만 믿지 않고 파일을 확인해야 하는 이유를 이해하는 데 도움이 됩니다.",
+      "published_at": "2026-07-22",
+      "verification": {
+        "verified": true,
+        "scope": "arXiv 색인에서 제목·저자·날짜·초록 확인. 직접 페이지 조회 실패; 논문 전문 미검토."
+      }
+    },
+    {
+      "type": "GitHub",
+      "title": "ONLYOFFICE Desktop Editors 공식 저장소",
+      "url": "https://github.com/ONLYOFFICE/DesktopEditors",
+      "why_read": "개인용 문서 편집기의 지원 운영체제와 공식 설치 경로, 변경 이력을 확인할 수 있습니다. 코드를 빌드할 필요 없이 배포 파일을 찾는 용도로도 유용합니다.",
+      "published_at": "상시 갱신 자료",
+      "verification": {
+        "verified": true,
+        "scope": "공식 저장소 소개·README·설치 경로 확인; 실행 시험 없음."
+      }
+    },
+    {
+      "type": "YouTube",
+      "title": "3Blue1Brown — 대규모 언어 모델을 짧게 설명하는 영상",
+      "original_title": "Large Language Models explained briefly",
+      "url": "https://www.youtube.com/watch?v=LPZh9BOjkQs",
+      "why_read": "챗봇을 쓰면서 모델이 무엇인지부터 이해하고 싶은 독자를 위한 입문 자료입니다. 최신 뉴스가 아닌 2024년 설명 영상이며, 이번에는 전체 영상을 시청하지 않았습니다.",
+      "published_at": "2024-11-20",
+      "verification": {
+        "verified": true,
+        "scope": "YouTube 제목, 공개 메타데이터 색인과 HKU 강의 자료의 채널·링크 대조. 날짜는 공개 색인 기준; 전체 영상 미검토.",
+        "metadata_urls": [
+          "https://github.com/tamnd/3blue1brown-index/blob/main/videos/2024/11/20/large-language-models-explained-briefly-LPZh9BOjkQs.md",
+          "https://commoncore.hku.hk/ccai9024/"
+        ]
+      }
+    },
+    {
+      "type": "Blog",
+      "title": "AI에 개인정보·외부 글·전송 권한을 한꺼번에 주면 생기는 위험",
+      "original_title": "The lethal trifecta for AI agents: private data, untrusted content, and external communication",
+      "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+      "why_read": "브라우저나 이메일을 AI에 연결할 때 살펴볼 위험을 설명하는 Simon Willison의 글입니다. 2025년 분석이며 오늘 소개한 제품에서 새 취약점이 발견됐다는 뜻은 아닙니다.",
+      "published_at": "2025-06-16",
+      "verification": {
+        "verified": true,
+        "scope": "원문 확인; 특정 현재 제품의 취약성 검증으로 사용하지 않음."
+      }
+    }
+  ],
+  "todays_insight": "AI를 쓰려고 작업 화면을 떠나는 일이 줄어듭니다\n\nChatGPT의 크롬 확장과 ONLYOFFICE의 새 AI 도구는 보고 있던 페이지나 문서를 질문과 작업에 바로 활용합니다. 이 두 업데이트에서 읽을 수 있는 변화는, 자료를 별도 대화창으로 옮기는 수고가 줄어든다는 점입니다. 다만 같은 화면에서 쓴다고 해서 접근 권한이나 모델 사용료까지 사라지는 것은 아닙니다.",
+  "morning_paper": {
+    "insight_headline": "AI를 쓰려고 작업 화면을 떠나는 일이 줄어듭니다",
+    "insight_summary": "ChatGPT의 크롬 확장과 ONLYOFFICE의 새 AI 도구는 보고 있던 페이지나 문서를 질문과 작업에 바로 활용합니다. 이 두 업데이트에서 읽을 수 있는 변화는, 자료를 별도 대화창으로 옮기는 수고가 줄어든다는 점입니다. 다만 같은 화면에서 쓴다고 해서 접근 권한이나 모델 사용료까지 사라지는 것은 아닙니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "chatgpt-chrome-tab-workflow-update-2026-10-15",
+      "onlyoffice-desktop-editors-10-ai-tools-2026-10-13"
+    ],
+    "top_event_keys": [
+      "chatgpt-chrome-tab-workflow-update-2026-10-15",
+      "onlyoffice-desktop-editors-10-ai-tools-2026-10-13",
+      "nvidia-broadcast-2-3-file-processor-2026-10-13"
+    ]
+  },
+  "build_candidate": null,
+  "research_window": {
+    "cutoff_kst": "2026-10-20T07:02:28+09:00",
+    "new_since_kst": "2026-10-19T07:02:28+09:00",
+    "followup_since_kst": "2026-10-13T07:02:28+09:00",
+    "note": "24시간 신규 후보도 조사했으나 선정은 최근 일주일의 미수록 중요 기능 업데이트 3건. 날짜만 새로 붙여 재발행하지 않음. 날짜만 있는 13일 발표는 시간대 경계 불확실성을 남김."
+  },
+  "warnings": [
+    "세 뉴스는 오늘 발표가 아닌 10월 13~16일 기능 업데이트입니다.",
+    "한국 계정별 제공·한글 품질·실제 성능은 직접 시험하지 않았습니다.",
+    "NVIDIA 외부 보도 두 곳은 인용 관계여서 독립 근거 한 그룹으로 계산했습니다.",
+    "공식 X 발표 원문과 The Verge 전체 본문 접근 실패. 다른 공식 문서와 보도에서 기능 확인.",
+    "Paper는 색인 초록, YouTube는 메타데이터까지만 확인했습니다."
+  ],
+  "editorial_review": {
+    "method": "personal_reader_v1",
+    "direct_use_count": 3,
+    "corporate_context_count": 0,
+    "top_event_keys": [
+      "chatgpt-chrome-tab-workflow-update-2026-10-15",
+      "onlyoffice-desktop-editors-10-ai-tools-2026-10-13",
+      "nvidia-broadcast-2-3-file-processor-2026-10-13"
+    ],
+    "recent_briefings_compared": [
+      {
+        "date_kst": "2026-10-18",
+        "insight_headline": "발표 자료를 함께 고치려면 ChatGPT 요금제부터 확인해야 합니다"
+      },
+      {
+        "date_kst": "2026-10-17",
+        "insight_headline": "AI 학습에 쓰지 않는 문서도 서버에는 남을 수 있습니다"
+      },
+      {
+        "date_kst": "2026-10-16",
+        "insight_headline": "신청이나 환불을 할 때는 설명보다 공식 창구가 먼저입니다"
+      },
+      {
+        "date_kst": "2026-10-15",
+        "insight_headline": "AI 표시가 없는 노래도 사람이 만들었다고 단정할 수 없습니다"
+      },
+      {
+        "date_kst": "2026-10-14",
+        "insight_headline": "Character.AI 대화를 보관하려면 마지막 날까지 기다리기 어렵습니다"
+      },
+      {
+        "date_kst": "2026-10-12",
+        "insight_headline": "AI 기업의 몸값만 보고 잘나간다고 생각하면 안 됩니다"
+      },
+      {
+        "date_kst": "2026-10-11",
+        "insight_headline": "아직 없는 칩은 25억달러, 켜지는 도구엔 정지 스위치"
+      }
+    ],
+    "insight_check": "한 가지 의미: 작업하던 화면에서 AI를 사용할 수 있어 자료 이동을 줄임. 크롬과 문서 편집기 두 사례에만 근거를 한정. 이전 7개 제목의 시작·뼈대·의미 반복 없음.",
+    "reader_checks": [
+      "각 기사 3문단, 문단당 2~3문장",
+      "독자 원고만 기본 Markdown에 렌더링; 내부 FACT 카드는 반복 출력하지 않음",
+      "제목·요약·첫 문단으로 기능 변화와 독자 관련성 설명 가능",
+      "takeaway는 별도 의미만 남기고 ONLYOFFICE는 null",
+      "전망은 검증할 변수, 행동은 복사본·읽기 작업 등 실제 실행 가능한 항목"
+    ],
+    "excluded_candidates": [
+      {
+        "title": "Anthropic 공익 기금 지분 약정",
+        "reason": "개인 기능·비용·선택에 미치는 구체적 변화 불명; industry_background"
+      },
+      {
+        "title": "Gmail Live",
+        "reason": "공식 초기 제공 범위가 미국·영어 중심; 한국 직접 사용 근거 부족"
+      },
+      {
+        "title": "Google Play 개인 앱 배포",
+        "reason": "일부 시장 제공으로 한국 범위 미확인; 오늘 선정의 직접 사용 개수를 채우는 데 쓰지 않음"
+      },
+      {
+        "title": "Apple 합성 이미지 규정·ChatGPT Slides",
+        "reason": "10월 18일 게시한 동일 사건으로 새로운 후속 근거 없이 재선정하지 않음"
+      }
+    ]
+  },
+  "opportunity_review": {
+    "status": "no_qualified_idea",
+    "ideas_count": 0,
+    "reason": "공개된 편집 실패는 확인됐지만 제작사가 수정했다고 안내했습니다. 한국 고객의 반복 수요·지불 의사·기존 도구 대비 차별성을 입증하지 못해 아이디어로 승격하지 않았습니다.",
+    "problem_evidence": [
+      {
+        "url": "https://community.onlyoffice.com/t/using-ai-agents-on-spreadsheets-community-help/20319",
+        "source_type": "other",
+        "summary": "AI가 완료라고 응답해도 셀이 바뀌지 않았다는 공개 신고와 설정 재시도 기록이 있습니다. 제작사는 10월 14일 10.0에서 수정됐다고 답했습니다. 반복 고객 수요·수정 후 사용자 재현은 미확인.",
+        "observed_at": "2026-10-20",
+        "evidence_group": "onlyoffice-spreadsheet-edit-issue"
+      }
+    ],
+    "excluded_source_note": "삭제된 Reddit 게시물의 내용은 사용하지 않음. 공개 글의 개인 식별정보는 저장하지 않음."
+  },
+  "provenance": {
+    "repository": "Alliesy/ai-daily-intelligence",
+    "base_commit": "8f11c0931d0c43226030d6de5dece8db51640862",
+    "schema_sha": "f7a3d0cf2f3c2d07406a26107a751e5d7299bbc6",
+    "automation_prompt_sha": "a2f7af4b061af916cbb4b8ad82390196db7dd041",
+    "research_method": "official-first; date-aware; personal relevance gate before weighted scoring; no product execution"
+  }
+}

@@ -1,118 +1,93 @@
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-18.md) · [원본 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-18.json)
+AI Daily Intelligence · 2026-10-20 KST
 
-# AI Daily Intelligence · 2026-10-18
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-20.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-20.json)
 
 뉴스 3개 · 사업 아이디어 0개 · 구축 후보 없음
 
-## 오늘의 인사이트
+이번 호는 최근 일주일의 중요 기능 업데이트를 다룹니다. 세 건 모두 오늘 새로 발표된 소식은 아닙니다.
 
-발표 자료를 함께 고치려면 ChatGPT 요금제부터 확인해야 합니다
+### AI를 쓰려고 작업 화면을 떠나는 일이 줄어듭니다
 
-ChatGPT가 파일을 만들어 주는 것과, 여러 사람이 Space에서 같은 슬라이드를 편집하는 것은 별개의 기능입니다. 이번 공동 편집 기능은 Space 접근 권한이 있는 Pro·Business·Enterprise부터 순차 제공되며 Plus는 대상 목록에 없습니다. 발표용 AI를 고를 때는 결과물 예시뿐 아니라 내가 필요한 편집 방식을 현재 계정에서 쓸 수 있는지도 확인해야 합니다.
+ChatGPT의 크롬 확장과 ONLYOFFICE의 새 AI 도구는 보고 있던 페이지나 문서를 질문과 작업에 바로 활용합니다. 이 두 업데이트에서 읽을 수 있는 변화는, 자료를 별도 대화창으로 옮기는 수고가 줄어든다는 점입니다. 다만 같은 화면에서 쓴다고 해서 접근 권한이나 모델 사용료까지 사라지는 것은 아닙니다.
 
-## 오늘의 뉴스
+### ChatGPT에서 열어 둔 크롬 탭을 비교하고 작업할 수 있습니다
 
-### ChatGPT에서 발표 자료를 함께 편집할 수 있게 됩니다
+여러 페이지의 내용을 대화창에 옮기는 수고를 덜 수 있는 업데이트입니다. 내용을 읽게 하는 것과 웹사이트에서 행동하게 하는 것은 권한을 나눠 살펴야 합니다.
 
-AI가 만든 초안을 파일로 받아 따로 고치는 데서 한 단계 더 나아갑니다. Space에 있는 같은 슬라이드를 동료와 수정하고 댓글을 남기는 기능이 순차 제공됩니다.
+OpenAI가 지난주 크롬 확장 프로그램의 활용 범위를 넓혔습니다. 쇼핑몰이나 서비스 안내 페이지를 열어 둔 채 AI에게 비교를 부탁하거나, 보고 있는 페이지 옆에서 대화를 이어갈 수 있습니다.
 
-OpenAI가 10월 16일 안내한 Slides는 대화나 메모, 참고 파일에서 발표 자료를 만드는 기능입니다. 예시 자료를 건네 원하는 모양을 알려줄 수도 있습니다. 만든 뒤에는 글자와 이미지, 도형, 차트를 직접 손보거나 AI에게 수정을 요청합니다.
+공식 문서에는 특정 탭을 대화에 넣고 선택한 글을 질문에 활용하는 방법이 나옵니다. Work에서는 로그인된 사이트의 양식 작성 같은 작업도 이어갈 수 있어요. 예전부터 있던 브라우저 제어 전체가 이번에 처음 생겼다는 뜻은 아닙니다.
 
-다만 유료 이용자 모두에게 열리는 것은 아닙니다. 현재 안내된 대상은 Space 접근 권한이 있는 Pro·Business·Enterprise이며, Plus는 목록에 없습니다. 한국 계정에서 실제로 보이는지는 이번 조사에서 확인하지 못했습니다.
+편리해진 만큼 무엇을 허용하는지 살펴야 합니다. 새 사이트를 사용할 때는 기본적으로 확인을 요청하지만, 모든 사이트를 허용하면 이 확인이 사라집니다. 이용 범위는 배포 상황과 계정·워크스페이스 설정에 따라 달라지며, 한국 계정에서 무료·유료별로 어디까지 제공되는지는 이번 조사로 확정하지 못했습니다.
 
-웹에서는 PowerPoint·PDF·Google Slides로 내보낼 수 있습니다. 데스크톱에서는 관련 앱이 설치돼 있을 때 PowerPoint나 Keynote로 여는 경로를 제공합니다. 제출 전에 내보낸 파일의 숫자와 배치를 다시 살펴보라는 것이 공식 안내입니다.
+하나만 기억한다면: AI가 읽을 자료를 고르는 일도 이제 작업을 맡기는 과정의 일부입니다.
 
-앞으로 볼 건: 한국어 글꼴과 복잡한 차트가 내보낸 파일에서도 유지되는지는 실제 작업물로 확인할 필요가 있습니다.
+앞으로 볼 건: 비교 결과가 각 탭의 출처와 일치하는지, 로그인 화면이나 팝업이 끼어도 작업이 정확히 멈추는지 확인할 필요가 있습니다.
 
-지금 확인할 것: 새로 결제하기 전에 현재 계정의 Space에서 공동 편집용 슬라이드를 만들 수 있는지 확인해 보세요.
+지금 확인할 것: 처음에는 공개된 페이지 두 개만 골라 읽기·비교 작업으로 시험하고, 제출이나 메시지 전송은 직접 검토한 뒤 진행하세요.
 
-더 궁금하다면:
+더 궁금하다면: [OpenAI](https://learn.chatgpt.com/docs/chrome-extension) · [OpenAI](https://learn.chatgpt.com/docs/pricing) · [9to5Google](https://9to5google.com/2026/10/16/chatgpt-gets-deeper-google-chrome-integration-including-control-over-tabs/) · [The Verge](https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs)
 
-- [ChatGPT release notes — October 16, 2026](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) — OpenAI, 2026-10-16
-- [Get started with ChatGPT Space](https://learn.chatgpt.com/docs/space/getting-started) — OpenAI, 2026-10-18 조회; 게시일 미표시
-- [ChatGPT Slides Launches for Pro, Business and Enterprise, How It Works](https://pasqualepillitteri.it/en/news/24910/chatgpt-slides-launches-pro-business-enterprise) — Pasquale Pillitteri, 2026-10-17
+### ONLYOFFICE, 문서·표·PDF를 다루는 AI 기능을 한곳에 모았습니다
 
-### 애플, 동의 없는 AI 성적 합성물을 앱이 먼저 막도록 규정 강화
+10.0에서는 필요할 때 AI 도구를 따로 설치해 쓸 수 있습니다. 편집기가 무료여도 연결한 모델 사용료까지 무료인 것은 아닙니다.
 
-앱이 문제가 생긴 뒤 신고만 기다려서는 안 된다는 요구가 더 분명해졌습니다. 충분한 보호 조치를 마련하지 않으면 앱스토어에서 퇴출될 수 있습니다.
+ONLYOFFICE가 10월 13일 Windows·macOS·Linux용 Desktop Editors 10.0을 내놓았습니다. 따로 움직이던 AI 에이전트와 플러그인을 AI Tools라는 모듈로 합쳤고, 현재는 베타로 제공합니다.
 
-Apple은 10월 16일 앱 심사 지침을 손보면서 AI로 만든 비동의 성적 이미지도 예방하고 제거해야 할 콘텐츠라고 명시했습니다. 실존 인물의 사진을 동의 없이 성적으로 바꾸는 기능이나 이를 유통하는 앱이 대상이 될 수 있습니다.
+이제 시작 화면에서 파일을 붙여 질문하거나, 문서를 편집하면서 요약과 교정 등을 요청할 수 있습니다. 스프레드시트에서 AI가 완료했다고 답해도 실제 셀이 바뀌지 않던 문제에 대해서는 제작사가 14일 수정됐다고 알렸습니다. 다만 해당 사용자가 다시 시험해 확인한 결과까지 확보한 것은 아닙니다.
 
-이런 이미지가 지금까지 허용됐다는 뜻은 아닙니다. Apple은 음란물 금지와 이용자 신고·차단 기능 요구가 원래 있었다고 설명합니다. 이번에는 금지 대상과 앱 제공자의 책임을 더 직접적인 문장으로 적었습니다.
+설치 뒤에는 모델 연결이 필요합니다. 클라우드 AI의 API 키를 넣거나 Ollama·LM Studio 같은 도구로 실행한 로컬 모델을 연결할 수 있어요. 로컬 모델은 PC 성능과 설정 과정이 필요하고, 클라우드 모델은 제공사 요금이 적용될 수 있어 간단한 채팅 앱처럼 바로 시작하는 방식과는 다릅니다.
 
-심사를 통과한 뒤 숨겨둔 유해 기능을 켜는 방식도 금지 대상으로 다시 짚었습니다. 다만 규정이 생겼다고 모든 앱이 즉시 안전해지는 것은 아닙니다. 이미 퍼진 이미지가 모두 삭제되거나 피해가 자동으로 해결된다는 보장도 아닙니다.
+앞으로 볼 건: 업그레이드 후 기존 설정이 유지되는지, 복잡한 수식과 한글 서식이 손상되지 않는지가 실제 사용의 관건입니다.
 
-앞으로 볼 건: 위반 앱에 대한 실제 제재와 신고 후 처리 시간이 공개되는지 봐야 합니다.
+지금 확인할 것: 중요한 원본 대신 복사본으로 시작해, AI가 완료했다고 말한 부분이 실제 파일에도 반영됐는지 확인하세요.
 
-더 궁금하다면:
+더 궁금하다면: [ONLYOFFICE](https://www.onlyoffice.com/blog/2026/10/onlyoffice-desktop-editors-10) · [ONLYOFFICE](https://www.onlyoffice.com/blog/2026/10/onlyoffice-ai-tools) · [OMG! Ubuntu](https://www.omgubuntu.co.uk/2026/10/onlyoffice-10-expands-ai-tools) · [It's FOSS](https://itsfoss.com/news/onlyoffice-docs-10-release/)
 
-- [Strengthening App Review Guidelines against nonconsensual intimate imagery and bait-and-switch apps](https://developer.apple.com/news/?id=vvzx6cul) — Apple, 2026-10-16
-- [Apple’s updated App Store rules go after ‘nudify’ AI apps](https://www.theverge.com/tech/1013314/apple-app-store-nudify-ai-apps-harassment) — The Verge, 2026-10-17
+### 찍어 둔 영상도 NVIDIA Broadcast로 보정할 수 있습니다
 
-### ChatGPT 광고, 다른 곳에 남긴 이메일·전화번호와 연결될 수 있습니다
+실시간 방송용 효과를 녹화 파일에도 적용하는 기능이 추가됐습니다. 영상 확대와 움직임 보정은 필요한 그래픽카드가 서로 다릅니다.
 
-404 Media의 10월 15일 취재는 광고주가 보유한 고객 명단을 ChatGPT 광고에 사용하는 방식을 다뤘습니다. 광고를 볼 때 현재 대화 내용만 단서가 되는 것은 아니라는 얘기입니다.
+NVIDIA가 10월 13일 안내한 Broadcast 2.3에는 저장된 영상과 음성을 처리하는 File Processor가 들어갔습니다. 방송 중 카메라와 마이크에만 효과를 거는 대신, 녹화를 마친 뒤 파일을 다듬는 용도로도 쓸 수 있습니다.
 
-공식 광고 문서에는 이메일, 전화번호, 해시 처리한 식별자나 Google 광고 ID를 올려 타겟을 만드는 방법이 나옵니다. 다만 특정 한 사람을 골라 광고를 보내는 기능으로 설명하면 틀립니다. 노출 대상 지정에는 일치하는 이용자 최소 2만 5천 명이 필요하며, 광고주에게 개별 일치 사용자 목록을 보여주지 않는다고 명시돼 있습니다.
+베타 기능인 영상 확대는 최대 4K 출력을 지원하며 RTX 3060 이상이 필요합니다. 중간 프레임을 만들어 움직임을 부드럽게 하는 기능은 RTX 40 시리즈 이상에서 사용할 수 있고, 파일 처리에서는 프레임 수를 2배나 4배로 늘릴 수 있습니다. 앱이 설치되는 최소 사양과 모든 효과가 작동하는 사양은 같지 않습니다.
 
-그렇다고 광고주가 ChatGPT 대화를 읽는다는 뜻도 아닙니다. OpenAI는 대화와 개인 정보를 광고주에게 넘기지 않으며 집계된 광고 성과를 제공한다고 설명합니다. 광고주가 원래 갖고 있던 고객 정보로 대상을 정하는 일과, 대화 내용을 전달받는 일은 구분해야 합니다.
+Windows용 앱이며 지원 파일은 MP4·M4A·MP3·WAV, 코덱은 H.264 8비트와 AAC로 제한됩니다. 실시간 처리와 파일 처리는 동시에 켤 수 없어요. 한국 환경에서 설치하거나 실제 영상을 보정해 보지는 않았으므로, 높은 출력 해상도가 곧 좋은 화질을 보장한다고 보기는 어렵습니다.
 
-광고는 일부 지역의 Free·Go 계정에 순차 제공됩니다. 한국은 광고 관리자 지원 국가에 있지만, 이것만으로 한국의 모든 개인 계정에 광고가 뜬다고 단정할 수는 없습니다. Plus·Pro 등은 광고 대상이 아니라고 안내돼 있습니다.
+하나만 기억한다면: 이미 가진 PC로 할 수 있는지부터 확인하면, 기능 이름만 보고 장비를 바꾸는 일을 피할 수 있습니다.
 
-개인화를 꺼도 현재 대화 맥락을 바탕으로 한 광고는 남을 수 있습니다. 고객 명단 대조까지 어떤 방식으로 제한되는지는 이번에 확인한 문서만으로 단정하기 어렵습니다. ‘개인화 끄기’를 모든 광고나 모든 정보 활용의 중단으로 받아들이지는 않는 편이 정확합니다.
+앞으로 볼 건: 빠른 움직임과 작은 글씨에서 잔상·왜곡이 생기는지, 긴 파일에서도 소리와 화면이 맞는지 확인해야 합니다.
 
-앞으로 볼 건: 광고주가 올린 명단의 이용 동의를 어떻게 검증하고, 오용을 어떻게 제재하는지 공개되는지 봐야 합니다.
+지금 확인할 것: 기존 녹화물의 짧은 복사본으로 처리해 원본과 나란히 비교한 뒤 전체 영상에 적용하세요.
 
-지금 확인할 것: Free·Go에서 광고가 보인다면 설정의 광고 제어에서 개인화와 광고 데이터 삭제 항목을 확인해 보세요.
+더 궁금하다면: [NVIDIA](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/release-notes/) · [NVIDIA](https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/) · [NVIDIA](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/) · [VideoCardz](https://videocardz.com/newz/nvidia-broadcast-2-3-adds-4k-video-upscaling-and-4x-frame-generation-for-prerecorded-videos) · [TweakTown](https://www.tweaktown.com/news/114077/nvidia-broadcast-2-3-0-adds-rtx-video-upscaling-and-frame-generation-to-video-files-and-webcams/index.html)
 
-더 궁금하다면:
+### 오늘의 활용법
 
-- [How ChatGPT Targets Ads To You Based On Your Prompts, Phone Number, and Email](https://www.404media.co/how-chatgpt-targets-ads-to-you-based-on-your-prompts-phone-number-and-email/) — 404 Media, 2026-10-15
-- [Set up Custom Audiences for your Campaign](https://help.openai.com/en/articles/20001346-set-up-custom-audiences-for-your-campaign) — OpenAI, 2026-10-18 조회; 최초 게시일 미확인
-- [Ads in ChatGPT](https://help.openai.com/en/articles/20001047-ads-in-chatgpt) — OpenAI, 2026-10-18 조회; 최초 게시일 미확인
-- [Ads Manager Availability](https://help.openai.com/en/articles/20001245-ads-manager-availability) — OpenAI, 2026-10-18 조회; 최초 게시일 미확인
+AI 작업 전후를 직접 비교하기
 
-## 사업 아이디어
+중요한 원본 대신 복사본을 사용하고, 바꾸기로 한 부분과 실제 바뀐 부분을 대조합니다.
 
-새로 제안하는 아이디어는 없습니다. 발표 자료 도구와 구독 선택을 고민하는 공개 사례는 확인했습니다. 그러나 한국 고객의 반복 문제·지불 의사·고객 접근 근거가 없고 기존 도구 자체 기능으로 대체될 수 있어 사업 아이디어로 승격하지 않았습니다.
+예시 요청: “이 복사본에서 제목과 첫 문단만 고쳐줘. 나머지는 유지하고, 바꾼 위치와 변경 전후를 알려줘. 외부 전송이나 제출은 하지 마.”
 
-구축 후보: 없음. 설계·구현·배포는 실행하지 않았습니다.
+### 더 읽고 볼 자료
 
-## 오늘의 활용법
+최신 발표와 구분한 배경 자료입니다.
 
-### 발표 자료의 사실과 제안을 나눠 검토하기
+- Paper · [문서 편집 AI는 어디서 틀릴까 — DocOps](https://arxiv.org/abs/2607.19865) — 2026-07-22. 문서의 긴 작업 흐름과 구조를 유지하는 데 생기는 실패를 다룬 연구입니다. AI의 완료 답변만 믿지 않고 파일을 확인해야 하는 이유를 이해하는 데 도움이 됩니다.
 
-AI로 수업·회의용 슬라이드 초안을 만든 뒤
+- GitHub · [ONLYOFFICE Desktop Editors 공식 저장소](https://github.com/ONLYOFFICE/DesktopEditors) — 상시 갱신 자료. 개인용 문서 편집기의 지원 운영체제와 공식 설치 경로, 변경 이력을 확인할 수 있습니다. 코드를 빌드할 필요 없이 배포 파일을 찾는 용도로도 유용합니다.
 
-슬라이드에 적힌 수치가 첨부 원문에서 나온 값인지 먼저 확인합니다. AI가 제안한 설명은 사실처럼 섞지 않고 표시합니다.
+- YouTube · [3Blue1Brown — 대규모 언어 모델을 짧게 설명하는 영상](https://www.youtube.com/watch?v=LPZh9BOjkQs) — 2024-11-20. 챗봇을 쓰면서 모델이 무엇인지부터 이해하고 싶은 독자를 위한 입문 자료입니다. 최신 뉴스가 아닌 2024년 설명 영상이며, 이번에는 전체 영상을 시청하지 않았습니다.
 
-예시 요청: 이 발표 자료에서 숫자·날짜·인용이 들어간 문장만 뽑아 원문 파일의 해당 위치와 짝지어 주세요. 근거가 없으면 채우지 말고 미확인이라고 적어 주세요. 제안이나 추정은 사실과 분리해 주세요.
+- Blog · [AI에 개인정보·외부 글·전송 권한을 한꺼번에 주면 생기는 위험](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) — 2025-06-16. 브라우저나 이메일을 AI에 연결할 때 살펴볼 위험을 설명하는 Simon Willison의 글입니다. 2025년 분석이며 오늘 소개한 제품에서 새 취약점이 발견됐다는 뜻은 아닙니다.
 
-## Worth Reading
+### 확인 범위
 
-### Paper · [AI가 제안한 글쓰기 계획, 그대로 믿어도 될까](https://arxiv.org/abs/2601.18033)
+이번에는 별도 사업 아이디어를 제안하지 않습니다. 공개 포럼의 문서 편집 실패 사례는 확인했지만, 제작사 수정 안내 이후에도 남는 문제와 한국 고객의 구매 수요는 확인하지 못했습니다.
 
-2026-01-25 공개 연구입니다. AI 작성 계획의 가정을 따져보는 방식과 과도한 의존을 비교했습니다. 초록을 확인했으며 연구 전체 평가나 재현은 하지 않았습니다. 최신 뉴스가 아닌 검토 습관을 위한 참고 자료입니다.
+한국 계정별 기능 제공, 한글 편집 품질, 영상 보정 성능은 직접 시험하지 않았습니다. NVIDIA Broadcast 2.3의 별도 가격 조건은 확인하지 못했습니다. NVIDIA 외부 기사 두 곳은 서로 인용한 관계여서 독립 근거 두 개로 세지 않았습니다. 제품 페이지 상단에는 2.2.0 표기가 남아 있으나 하단 버전과 릴리스 노트는 2.3.0으로 확인했습니다.
 
-### GitHub · [Marp — 글로 작성하는 발표 자료](https://github.com/marp-team/marp)
+ChatGPT의 공식 X 발표 원문과 The Verge 전체 기사에는 접근하지 못했습니다. 기능과 권한은 공식 OpenAI 문서로, 업데이트 보도는 9to5Google과 검색 제공 본문으로 대조했습니다. 무료·유료별 한국 제공 범위를 확정하지 않았습니다.
 
-AI가 정리한 초안을 Markdown으로 다듬어 슬라이드로 만드는 공개 도구 모음입니다. 간단한 문법과 별도 편집 도구 사용이 필요하므로 설치 없이 쓰는 공동 편집 서비스와는 다릅니다. README·MIT 라이선스를 확인했으며 설치·실행은 하지 않았습니다.
-
-### YouTube · [LLM 설명 (요약버전) — 3Blue1Brown 한국어](https://www.youtube.com/watch?v=HnvitMTkXro)
-
-2025-04-24 게시된 한국어 입문 영상입니다. ChatGPT 같은 언어 모델의 기본 작동을 이해하고 싶을 때 볼 자료입니다. 제목·채널·날짜·설명만 검증했으며 전체 영상·자막·번역 정확성은 검토하지 않았습니다.
-
-### Blog · [Marp에서 글을 고치며 슬라이드 모양 확인하기](https://marp.app/blog/marp-for-vs-code-v1)
-
-2021-05-20 개발자 글입니다. VS Code에서 글과 슬라이드 미리보기를 함께 쓰는 방식을 설명합니다. 오래된 버전 소개이므로 현재 설치 조건은 저장소 문서를 따라야 하며, 오늘의 새 기능으로 소개하지 않습니다.
-
-## 확인 범위와 남은 질문
-
-- Slides의 한국 계정별 제공·한글 내보내기 품질과 독립 실사용 평가 두 건은 미확인입니다.
-- Apple 규정의 실제 삭제·제재 성과와 한국 신고 처리 결과는 미확인입니다. 독립 취재는 The Verge 한 건입니다.
-- 광고 관련 독립 실험은 404 Media 한 건이며 공개 도입부만 접근했습니다. 한국 계정별 노출과 개인화 해제 후 명단 대조 범위는 미확인입니다.
-- YouTube는 메타데이터만 확인했습니다. Paper 전문 평가·도구 실행은 수행하지 않았습니다.
-
-10월 15~16일의 중요한 후속 변화 세 건입니다. 날짜만 확인된 발표를 최근 24시간 신규로 단정하지 않았으며 최근 7개 브리핑과 동일 사건은 없습니다.
-
-개인에게 직접 영향을 주는 뉴스 2건, 개인에게 중요한 맥락 뉴스 1건입니다. 기업·투자 중심 뉴스로 개수를 채우지 않았습니다. 뉴스·URL 중복, 최근 제목, 후보 승인 조건, 읽을거리 네 유형과 최신 데이터 포인터 구조를 검증했습니다. 공통 근거가 없는 사건은 하나의 시장 추세로 묶지 않았습니다.
+Paper는 arXiv 색인의 초록까지만, YouTube는 제목·채널·날짜 등 메타데이터까지만 확인했습니다. 논문 전문과 전체 영상은 검토하지 않았습니다.
