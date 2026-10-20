@@ -1,0 +1,552 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-10-21",
+  "research_window": {
+    "cutoff_kst": "2026-10-21T06:56:02+09:00",
+    "new_since_kst": "2026-10-20T06:56:02+09:00",
+    "followup_since_kst": "2026-10-14T06:56:02+09:00",
+    "note": "ChatGPT 잠금과 Meta의 Muse 공유 중단은 직전 24시간의 새 변화입니다. Lightroom 발표는 최근 7일 범위이며 10월 20일 독립 보도로 이용 조건을 보강했습니다."
+  },
+  "generated_at": "2026-10-20T22:05:48Z",
+  "status": "complete",
+  "todays_insight": "AI 대화를 잠가도 저장된 내용까지 사라지는 것은 아닙니다\n\nChatGPT의 새 잠금 기능은 다른 사람의 눈에 대화가 보이지 않게 하지만, 보관 기간과 학습 설정은 바꾸지 않습니다. Meta가 Muse 공유를 중단한 뒤에도 대화 제목이 들어간 주소 흔적은 DNS 기록에 남았습니다. 민감한 대화를 다룰 때는 화면에서 숨기기, 서비스에서 삭제하기, 공유 링크 끊기를 서로 다른 일로 봐야 합니다.",
+  "morning_paper": {
+    "insight_headline": "AI 대화를 잠가도 저장된 내용까지 사라지는 것은 아닙니다",
+    "insight_summary": "ChatGPT의 새 잠금 기능은 다른 사람의 눈에 대화가 보이지 않게 하지만, 보관 기간과 학습 설정은 바꾸지 않습니다. Meta가 Muse 공유를 중단한 뒤에도 대화 제목이 들어간 주소 흔적은 DNS 기록에 남았습니다. 민감한 대화를 다룰 때는 화면에서 숨기기, 서비스에서 삭제하기, 공유 링크 끊기를 서로 다른 일로 봐야 합니다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "chatgpt-locked-chats-2026-10-20",
+      "meta-muse-ghostshares-sharing-paused-2026-10-20"
+    ],
+    "top_event_keys": [
+      "chatgpt-locked-chats-2026-10-20",
+      "meta-muse-ghostshares-sharing-paused-2026-10-20",
+      "adobe-lightroom-open-eyes-mobile-2026-10-19"
+    ]
+  },
+  "news": [
+    {
+      "event_key": "chatgpt-locked-chats-2026-10-20",
+      "title": "ChatGPT, 민감한 대화를 PIN으로 숨기는 기능을 내놓았습니다",
+      "importance": "A",
+      "one_line_summary": "10월 20일 공개된 Locked Chats는 선택한 대화를 일반 기록·검색에서 숨기고 PIN이나 지원 기기의 생체 인증으로 열게 합니다.",
+      "impact": "화면 공유나 공용 기기에서 특정 대화를 가릴 수 있지만, 보관 기간·학습 설정·기존 메모리는 그대로라 보호 목적을 구분해야 합니다.",
+      "original_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "key_quote": "Your retention and model-improvement settings stay unchanged.",
+      "quote_translation": "보관 및 모델 개선 설정은 바뀌지 않습니다.",
+      "summary": "FACT: OpenAI는 선택한 대화를 일반 기록·고정 목록·검색에서 숨기고 4자리 PIN 또는 지원 기기 인증으로 여는 Locked Chats를 단계적으로 배포합니다. 잠금은 종단간 암호화나 별도 금고를 만들지 않으며 보관·학습·기존 메모리 설정을 바꾸지 않습니다.\nINTERPRETATION: 옆 사람이 화면을 보는 위험을 줄이는 기능이지, 서버에서 대화를 지우거나 학습 제외로 바꾸는 기능은 아닙니다.\nSIGNAL: 소비자용 AI에서도 대화별 화면 접근 통제가 별도 기능으로 자리 잡고 있습니다.\nSPECULATION: 한국 계정별 실제 도착 시점과 장기적인 PIN 복구 경험은 아직 확인하지 못했습니다.",
+      "why_it_matters": "민감한 대화를 남겨 두면서 화면 노출만 줄이고 싶은 개인이 기능의 범위와 한계를 정확히 구분할 수 있습니다.",
+      "industry_mood": {
+        "official": "화면·기기 공유 때 대화를 보이지 않게 하는 용도와 보관·학습 설정이 바뀌지 않는다는 한계를 함께 안내했습니다.",
+        "independent": "TechCrunch와 Android Authority가 실제 출시와 단계적 배포, 암호화·보관 설정의 한계를 각각 확인해 보도했습니다."
+      },
+      "outlook": "한국 계정별 배포 속도, 잠금 대화와 Memory의 실제 상호작용, PIN 분실 때 삭제 경고가 충분히 눈에 띄는지 확인해야 합니다.",
+      "business_opportunity": "대화 잠금 보조 도구는 플랫폼 내장 기능과 겹치며, 별도 서비스가 접근해야 할 민감 데이터 자체가 보안 부담이어서 오늘 사업 아이디어로 승격하지 않았습니다.",
+      "tags": [
+        "ChatGPT",
+        "개인정보",
+        "대화 잠금"
+      ],
+      "sources": [
+        {
+          "title": "ChatGPT release notes — Introducing locked chats",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "publisher": "OpenAI",
+          "published_at": "2026-10-20",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-locked-chats"
+        },
+        {
+          "title": "Using locked chats in ChatGPT",
+          "url": "https://help.openai.com/en/articles/20001411-using-locked-chats-in-chatgpt",
+          "publisher": "OpenAI",
+          "published_at": "2026-10-20 확인; 단계적 배포",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-locked-chats"
+        },
+        {
+          "title": "ChatGPT now lets you lock your chats",
+          "url": "https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/",
+          "publisher": "TechCrunch",
+          "published_at": "2026-10-20",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "techcrunch-locked-chats"
+        },
+        {
+          "title": "ChatGPT's latest feature will keep your chats shielded from prying eyes",
+          "url": "https://www.androidauthority.com/chatgpt-rolls-out-locked-chats-3725766/",
+          "publisher": "Android Authority",
+          "published_at": "2026-10-20",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "androidauthority-locked-chats"
+        }
+      ],
+      "selection_score": {
+        "confidence": 30,
+        "impact": 23,
+        "utility": 20,
+        "recency": 14,
+        "community": 3,
+        "total": 90
+      },
+      "time_scope": "new_24h",
+      "followup": {
+        "event_date": "2026-10-20",
+        "previous_state": "대화를 보관하려면 일반 기록·검색에 남기거나 삭제·임시 대화를 선택해야 했습니다.",
+        "material_change": "선택한 대화를 계정 PIN이나 지원 기기 인증 뒤로 옮기는 별도 보관 방식이 추가됐습니다.",
+        "timestamp_note": "공식 릴리스 노트와 독립 보도 모두 10월 20일로 확인했습니다."
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "direct_use",
+        "gate": "pass",
+        "affected_reader": "민감한 상담·업무·학습 대화를 남겨 두는 ChatGPT 사용자",
+        "reader_benefit": "화면 노출 방지와 삭제·학습 제외가 서로 다른 설정임을 알고 목적에 맞게 선택할 수 있습니다.",
+        "evidence_urls": [
+          "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "https://help.openai.com/en/articles/20001411-using-locked-chats-in-chatgpt"
+        ],
+        "top_eligible": true
+      },
+      "verification": {
+        "status": "official_docs_and_independent_reporting_checked",
+        "missing": [
+          "한국 계정별 실제 배포 시점",
+          "PIN 분실·재설정 경험에 대한 독립 시험",
+          "장기 보관·Memory 동작의 독립 검증"
+        ],
+        "note": "잠금은 별도 암호화 금고나 삭제 기능이 아닙니다. PIN 재설정은 잠긴 대화와 관련 파일을 영구 삭제할 수 있다는 공식 경고를 확인했습니다.",
+        "official_source_count": 2,
+        "independent_evidence_groups": [
+          "techcrunch-locked-chats",
+          "androidauthority-locked-chats"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "ChatGPT, 민감한 대화를 PIN으로 숨기는 기능을 내놓았습니다",
+        "dek": "대화를 일반 기록과 검색에서 가리고 PIN이나 생체 인증으로 열 수 있습니다. 화면 노출은 줄지만 삭제·암호화·학습 제외가 되는 것은 아닙니다.",
+        "body": "OpenAI가 10월 20일 ChatGPT에 Locked Chats를 공개했습니다. 선택한 대화는 일반 대화 기록과 고정 목록, 검색에서 빠지고 4자리 계정 PIN으로 열 수 있습니다. 지원하는 휴대전화에서는 Face ID·Touch ID·기기 잠금도 쓸 수 있습니다.\n\n무료·Go·Plus·Pro와 Business·Enterprise·Edu에 단계적으로 배포됩니다. 웹과 iOS·Android, 새 macOS·Windows 앱이 대상이라 메뉴가 아직 보이지 않는 계정도 있을 수 있습니다. Codex 대화와 로컬 Work 대화, Healthcare에서는 지원되지 않습니다.\n\n이 기능은 누군가 화면이나 기기를 볼 때 대화를 가리는 용도입니다. 종단간 암호화나 별도 보안 금고가 생기는 것은 아니고, OpenAI의 보관 기간과 모델 개선 설정도 그대로입니다. PIN을 잊어 재설정하면 모든 잠금 대화와 관련 파일이 영구 삭제될 수 있으니 삭제와 잠금을 같은 기능으로 생각하면 안 됩니다.",
+        "takeaway": "대화를 안 보이게 하는 것과 서비스에서 지우는 것은 다른 일입니다.",
+        "what_to_watch": "잠금 뒤 기존 Memory가 어디에 남는지, 회사 계정의 관리자·컴플라이언스 접근이 어떻게 적용되는지 확인할 필요가 있습니다.",
+        "action": "잠글 대화가 있다면 먼저 Settings의 Data Controls와 Memory 설정을 확인하고, PIN을 안전한 곳에 보관한 뒤 한 개의 덜 민감한 대화로 시험하세요."
+      }
+    },
+    {
+      "event_key": "meta-muse-ghostshares-sharing-paused-2026-10-20",
+      "title": "Meta, 쉽게 찾아낼 수 있던 Muse 대화 공유를 중단했습니다",
+      "importance": "A",
+      "one_line_summary": "보안 연구진이 공개 DNS 기록에서 6,800개가 넘는 Muse 공유 주소를 찾아낸 뒤 Meta가 10월 20일 공유 기능을 일시 중단했습니다.",
+      "impact": "AI 대화의 “링크를 아는 사람만” 공유가 실제로는 검색 가능한 주소 흔적을 남길 수 있어, 공유 링크를 공개 게시물처럼 다뤄야 한다는 경고입니다.",
+      "original_url": "https://blog.claroc.io/ghostshares-muse-passive-dns/",
+      "key_quote": "The hostnames themselves, titles included, are still in passive-DNS history.",
+      "quote_translation": "제목을 포함한 호스트명 자체는 여전히 수동 DNS 기록에 남아 있습니다.",
+      "summary": "FACT: Claroc은 Muse 공유 주소가 대화 제목과 ID를 호스트명에 넣어 공개 DNS 기록에서 6,800개 이상 발견됐다고 보고했습니다. Meta는 10월 20일 공유 기능을 중단했고 연구진이 다시 확인한 40개 페이지는 열리지 않았지만, 제목이 포함된 주소 흔적은 DNS 기록에 남았습니다.\nINTERPRETATION: 링크를 전달받지 않은 사람도 주소를 찾을 수 있었으므로 “링크 전용”을 비공개로 이해하면 안 됩니다.\nSIGNAL: AI 공유 기능은 내용 접근뿐 아니라 주소·제목이 남기는 메타데이터까지 점검해야 합니다.\nSPECULATION: 기존 이용자에게 개별 통지가 이뤄질지와 Meta가 새 공유 방식을 언제 내놓을지는 확인하지 못했습니다.",
+      "why_it_matters": "한국에서 Muse를 바로 쓰지 않더라도 ChatGPT·Claude·Grok 등 다른 AI의 공유 링크에 민감한 내용을 넣을 때 적용할 수 있는 구체적인 위험 사례입니다.",
+      "industry_mood": {
+        "primary": "Claroc은 발견 방법과 표본·한계·공개 일정을 설명했고, 10월 20일 40개 링크 재확인 결과를 공개했습니다.",
+        "independent": "The Verge와 Ars Technica가 Meta의 중단 답변과 DNS 설계 문제를 각각 확인해 보도했습니다."
+      },
+      "outlook": "Meta의 재설계, 기존 링크 삭제·알림 여부, 호스트명에서 제목을 제거하는지와 접근 인증 추가 여부를 봐야 합니다.",
+      "business_opportunity": "공유 링크 검사 서비스는 문제 근거가 있지만 공개 DNS 수집의 법적·윤리적 경계와 민감 데이터 취급 보안이 미해결이라 사업 아이디어로 제안하지 않았습니다.",
+      "tags": [
+        "Meta Muse",
+        "공유 링크",
+        "개인정보"
+      ],
+      "sources": [
+        {
+          "title": "GhostShares: A Shared Muse Chat Exposed Prep for a Confidential Call With a Frontier AI Lab Leader",
+          "url": "https://blog.claroc.io/ghostshares-muse-passive-dns/",
+          "publisher": "Claroc Research Team",
+          "published_at": "2026-10-18; 2026-10-20 수정",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "primary",
+          "verification_status": "verified",
+          "evidence_group": "claroc-ghostshares"
+        },
+        {
+          "title": "Meta pauses Muse sharing after researchers find AI chats on the web",
+          "url": "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats",
+          "publisher": "The Verge",
+          "published_at": "2026-10-20 18:07 UTC",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "theverge-muse-sharing"
+        },
+        {
+          "title": "Meta Muse exposes users' personal and business secrets when they share conversations",
+          "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+          "publisher": "Ars Technica",
+          "published_at": "2026-10-20",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "arstechnica-muse-sharing"
+        },
+        {
+          "title": "Muse",
+          "url": "https://ai.meta.com/muse/",
+          "publisher": "Meta",
+          "published_at": "2026-10-21 조회",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "meta-muse-product",
+          "note": "서비스 소개와 제공 범위 확인용; 공유 취약점의 독립 검증으로 계산하지 않음"
+        }
+      ],
+      "selection_score": {
+        "confidence": 29,
+        "impact": 24,
+        "utility": 19,
+        "recency": 14,
+        "community": 4,
+        "total": 90
+      },
+      "time_scope": "new_24h_material_response",
+      "followup": {
+        "event_date": "2026-10-20",
+        "previous_state": "Muse 공유 링크가 계정 로그인 없이 열렸고 주소가 공개 DNS 기록에서 발견될 수 있었습니다.",
+        "material_change": "Meta가 보도를 확인한 뒤 공유 기능을 중단했고 기존 표본 페이지도 열리지 않게 됐습니다.",
+        "timestamp_note": "Claroc 최초 보고는 10월 18일이지만, Meta의 중단과 재확인 결과는 10월 20일에 추가됐습니다."
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "personal_context",
+        "gate": "pass",
+        "affected_reader": "AI 대화를 링크로 공유하거나 업무·개인 자료를 AI에 넣는 사람",
+        "reader_benefit": "공유 링크는 전달 대상만 보는 비공개 문서가 아닐 수 있고 제목도 외부 흔적을 남길 수 있음을 알 수 있습니다.",
+        "evidence_urls": [
+          "https://blog.claroc.io/ghostshares-muse-passive-dns/",
+          "https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats"
+        ],
+        "top_eligible": true
+      },
+      "verification": {
+        "status": "primary_report_and_two_independent_reports_checked",
+        "missing": [
+          "Meta의 별도 공식 공지 원문",
+          "영향받은 이용자 수와 개별 통지 여부",
+          "기존 공유 주소의 완전 삭제 여부",
+          "한국 제공 계획"
+        ],
+        "note": "연구진은 오용 증거가 없다고 밝혔습니다. 6,800개는 공개 DNS에서 발견된 호스트명 수이지 민감 대화 수나 피해자 수가 아닙니다.",
+        "official_source_count": 1,
+        "independent_evidence_groups": [
+          "theverge-muse-sharing",
+          "arstechnica-muse-sharing"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "Meta, 쉽게 찾아낼 수 있던 Muse 대화 공유를 중단했습니다",
+        "dek": "Muse가 만든 공유 주소가 공개 DNS 기록에서 6,800개 넘게 발견됐습니다. 기능은 멈췄지만 제목이 들어간 주소 흔적은 기록에 남았습니다.",
+        "body": "보안 회사 Claroc은 Meta의 AI 에이전트 Muse가 만든 공유 주소를 공개 DNS 기록에서 6,800개 넘게 찾아냈다고 밝혔습니다. 링크를 받은 사람만 볼 수 있다고 생각하기 쉬웠지만, 대화 제목과 임의 ID가 주소의 호스트명에 들어가 링크를 받지 않은 사람도 찾아낼 수 있었습니다.\n\n연구진은 수백 개를 표본으로 열어 봤고, 일부에서 대출 신청서·매출 검토·직원 일정 같은 민감한 내용을 확인했습니다. 전체 6,800개가 민감하거나 악용됐다는 뜻은 아니며, 연구진도 실제 오용 증거는 없다고 밝혔습니다.\n\nMeta는 10월 20일 공유 기능을 중단했습니다. 연구진이 다시 확인한 40개 페이지는 더 이상 열리지 않았지만, 제목이 포함된 호스트명은 수동 DNS 기록에 남아 있다고 했습니다. Muse는 미국·캐나다 중심 서비스라 한국 독자의 직접 사용 변화는 제한적이지만, 다른 AI에서도 공유 링크를 비공개 보관함처럼 취급해서는 안 된다는 사례입니다.",
+        "takeaway": "AI 대화를 공유하면 내용뿐 아니라 제목과 주소도 외부에 남을 수 있습니다.",
+        "what_to_watch": "Meta가 공유 주소에서 제목을 제거하는지, 로그인·만료 기능을 추가하는지, 기존 이용자에게 어떤 통지를 하는지 확인해야 합니다.",
+        "action": "어떤 AI에서든 이미 만든 공유 링크를 점검하고, 개인정보·계약·재무 내용이 있다면 링크를 삭제하거나 공유를 해제하세요."
+      }
+    },
+    {
+      "event_key": "adobe-lightroom-open-eyes-mobile-2026-10-19",
+      "title": "Lightroom 모바일, 단체사진에서 감은 눈을 AI로 고칩니다",
+      "importance": "A",
+      "one_line_summary": "Adobe가 모바일 Lightroom의 Quick Actions에 감은 눈을 생성형 AI로 보정하는 Open Eyes를 추가했습니다.",
+      "impact": "가족·여행·단체사진을 다시 찍기 어려운 개인이 한 번의 탭으로 보정할 수 있지만, 무료 사용 횟수와 생성 결과의 자연스러움을 확인해야 합니다.",
+      "original_url": "https://blog.adobe.com/en/publish/2026/10/19/give-your-photos-a-second-chance-with-open-eyes-in-lightroom-on-mobile",
+      "key_quote": "In one tap, Open Eyes creates a natural-looking result on any photo, for free.",
+      "quote_translation": "Open Eyes는 한 번의 탭으로 어떤 사진이든 자연스러운 결과를 무료로 만듭니다.",
+      "summary": "FACT: Open Eyes는 모바일 Lightroom이 감은 눈을 감지하면 Quick Action으로 제시되고, 라이브러리에 같은 사람의 다른 사진이 있으면 눈 색·모양·크기를 맞추는 데 활용합니다. Adobe는 무료라고 표현했지만 DPReview는 무료판에서 두 번 사용 뒤 구독 안내를 확인했습니다.\nINTERPRETATION: 일상 사진 보정은 쉬워졌지만 “무료 기능”의 실제 반복 사용 조건은 앱 화면에서 확인해야 합니다.\nSIGNAL: 사진 편집의 복잡한 생성형 보정이 모바일의 한 번 누르는 기능으로 내려오고 있습니다.\nSPECULATION: 한국 계정에서 동일한 무료 횟수가 적용되는지와 다른 얼굴·표정에서의 오류율은 확인하지 못했습니다.",
+      "why_it_matters": "일반 사진 이용자가 전문 편집 없이 결과를 고칠 수 있는 실제 기능 변화이며, 결제 전 무료 범위를 판단할 근거가 됩니다.",
+      "industry_mood": {
+        "official": "Adobe는 모바일 앱의 무료 기능으로 소개하고 동일 인물의 라이브러리 사진을 참고할 수 있다고 설명했습니다.",
+        "independent": "DPReview는 실제 UI에서 무료판 두 번 사용 뒤 구독 안내와 제3자 모델 표시를 확인했고, The Verge도 10월 20일 기능을 보도했습니다."
+      },
+      "outlook": "한국 계정의 정확한 무료 횟수, 얼굴·눈 모양이 달라지는 오류, 사진 라이브러리 참조 범위와 표시 방식을 확인해야 합니다.",
+      "business_opportunity": "유사 보정은 기존 스마트폰·Photoshop 기능과 경쟁이 치열하고, 별도 제품에 지불할 국내 반복 수요를 확인하지 못했습니다.",
+      "tags": [
+        "Lightroom",
+        "사진 편집",
+        "생성형 AI"
+      ],
+      "sources": [
+        {
+          "title": "Give your photos a second chance with Open Eyes in Lightroom on mobile",
+          "url": "https://blog.adobe.com/en/publish/2026/10/19/give-your-photos-a-second-chance-with-open-eyes-in-lightroom-on-mobile",
+          "publisher": "Adobe",
+          "published_at": "2026-10-19",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "adobe-open-eyes"
+        },
+        {
+          "title": "Lightroom 모바일",
+          "url": "https://www.adobe.com/kr/products/photoshop-lightroom/mobile.html",
+          "publisher": "Adobe Korea",
+          "published_at": "2026-10-21 조회",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "adobe-open-eyes",
+          "note": "한국어 모바일 앱 및 무료 앱 제공 안내 확인용"
+        },
+        {
+          "title": "Adobe adds easy AI eye generation to Lightroom Mobile",
+          "url": "https://www.dpreview.com/news/adobe-adds-easy-ai-eye-generation-to-lightroom-mobile/",
+          "publisher": "DPReview",
+          "published_at": "2026-10-20",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "dpreview-open-eyes"
+        },
+        {
+          "title": "Lightroom's newest AI tool fixes closed eyes",
+          "url": "https://www.theverge.com/tech/1014246/adobe-lightroom-mobile-ai-quick-action-open-eyes-closed-blink-repair",
+          "publisher": "The Verge",
+          "published_at": "2026-10-20 13:06 UTC",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "verified",
+          "evidence_group": "theverge-open-eyes"
+        }
+      ],
+      "selection_score": {
+        "confidence": 28,
+        "impact": 20,
+        "utility": 20,
+        "recency": 13,
+        "community": 3,
+        "total": 84
+      },
+      "time_scope": "recent_7d_material_coverage",
+      "followup": {
+        "event_date": "2026-10-19",
+        "previous_state": "비슷한 보정은 Photoshop Elements·Generative Fill이나 일부 스마트폰의 연속 촬영 합성으로 가능했습니다.",
+        "material_change": "모바일 Lightroom의 감지 기반 Quick Action으로 한 번에 생성형 보정을 할 수 있게 됐습니다.",
+        "timestamp_note": "Adobe 발표는 최근 7일 범위이며 DPReview·The Verge의 독립 보도는 10월 20일에 확인했습니다."
+      },
+      "audience_relevance": {
+        "method": "personal_reader_v1",
+        "category": "direct_use",
+        "gate": "pass",
+        "affected_reader": "가족·여행·행사 사진을 휴대전화에서 보정하는 개인과 소규모 콘텐츠 제작자",
+        "reader_benefit": "다시 찍기 어려운 사진을 고치는 새 방법과 무료 사용 조건의 불확실성을 함께 알 수 있습니다.",
+        "evidence_urls": [
+          "https://blog.adobe.com/en/publish/2026/10/19/give-your-photos-a-second-chance-with-open-eyes-in-lightroom-on-mobile",
+          "https://www.adobe.com/kr/products/photoshop-lightroom/mobile.html"
+        ],
+        "top_eligible": true
+      },
+      "verification": {
+        "status": "official_release_and_independent_test_checked",
+        "missing": [
+          "한국 계정의 정확한 무료 사용 횟수",
+          "Android·iOS별 동일 배포 여부",
+          "다양한 얼굴·조명에서의 독립 품질 시험",
+          "라이브러리 참조 사진의 처리 범위"
+        ],
+        "note": "Adobe의 “무료” 표현과 DPReview가 확인한 “무료판 두 번”이 달라 완전 무료로 단정하지 않았습니다.",
+        "official_source_count": 2,
+        "independent_evidence_groups": [
+          "dpreview-open-eyes",
+          "theverge-open-eyes"
+        ]
+      },
+      "reader": {
+        "version": "1.3",
+        "headline": "Lightroom 모바일, 단체사진에서 감은 눈을 AI로 고칩니다",
+        "dek": "감은 눈을 자동으로 찾아 한 번에 보정하는 Open Eyes가 추가됐습니다. Adobe는 무료라고 안내하지만 독립 매체는 무료판에서 두 번 뒤 구독 화면이 나온다고 확인했습니다.",
+        "body": "Adobe가 모바일 Lightroom의 Quick Actions에 Open Eyes를 추가했습니다. 앱이 사진에서 감은 눈을 찾으면 보정 버튼을 보여 주고, 생성형 AI로 눈을 뜬 결과를 만듭니다. 개인 사진과 단체사진 모두 대상입니다.\n\n같은 사람의 다른 사진이 Lightroom 라이브러리에 있으면 눈 색과 모양, 크기를 맞추는 데 참고할 수 있습니다. 얼굴 전체를 바꾸기보다 필요한 눈 주변만 고친다는 설명이지만, 실제 결과가 원래 표정과 자연스럽게 맞는지는 사진마다 직접 확인해야 합니다.\n\n가격 안내에는 주의가 필요합니다. Adobe 발표는 이 기능을 무료라고 표현했지만, DPReview는 무료판에서 두 번 사용한 뒤 AI 또는 Creative Cloud 구독 안내가 나왔다고 전했습니다. 한국 계정의 정확한 무료 횟수와 iOS·Android별 배포 상태는 이번 조사에서 확정하지 못했습니다.",
+        "takeaway": "한 번 눌러 고칠 수 있어도 생성된 얼굴이 원래 사람과 같은지는 직접 봐야 합니다.",
+        "what_to_watch": "한국 계정의 무료 사용 횟수, 여러 사람이 있는 사진에서 잘못된 눈을 고르는지, 수정 표시·원본 보존이 쉬운지 확인해야 합니다.",
+        "action": "원본을 복사한 뒤 한 장으로 시험하고, 확대해서 눈동자 방향과 표정이 자연스러운지 확인한 다음 공유하세요."
+      }
+    }
+  ],
+  "business_ideas": [],
+  "opportunity_review": {
+    "status": "no_qualified_idea",
+    "ideas_count": 0,
+    "reason": "Muse 사건은 공유 링크 점검 수요를 보여 주지만 Meta가 기능을 중단했고, 공개 DNS·민감 대화를 다루는 서비스는 법률·윤리·보안 게이트가 남습니다. ChatGPT 잠금과 Lightroom 보정은 플랫폼 내장 기능이라 소규모 팀의 별도 유료 제품 차별성을 확인하지 못했습니다.",
+    "problem_evidence": [
+      {
+        "url": "https://apnews.com/article/449734d41d3750aad7038b761faa49c9",
+        "source_type": "article",
+        "summary": "AI 에이전트가 개인 계정과 일상 업무에 접근할 때 사용자가 이해하지 못한 권한으로 민감 정보를 전달할 수 있다는 실제 사례와 전문가 우려를 보도했습니다.",
+        "observed_at": "2026-10-21",
+        "evidence_group": "ap-agent-privacy"
+      }
+    ],
+    "gate_review": {
+      "candidate": "AI 공유 링크 노출 점검",
+      "customer": "unknown — 한국 개인·소규모 팀의 반복 지불 수요 미확인",
+      "pain": "pass — 민감 자료가 공개적으로 발견된 사례 확인",
+      "existing_solution": "fail — 링크 삭제·비공유와 플랫폼 자체 중단이 즉시 대안",
+      "technology_change": "pass — 에이전트 공유 기능 확산",
+      "buildability": "unknown — 공개 DNS 접근과 민감 데이터 최소수집 설계 필요",
+      "mvp": "unknown — 합법적·비침해적 시험 범위 확정 필요",
+      "customer_access": "unknown — 국내 고객군 미검증",
+      "replacement_risk": "fail — 플랫폼이 URL 설계를 고치면 핵심 가치 감소",
+      "dependency": "fail — 외부 DNS 데이터와 플랫폼 URL 구조에 의존"
+    }
+  },
+  "build_candidate": null,
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "개인 AI 도구를 고를 때 신뢰와 개인정보가 실제 선택에 미치는 영향",
+      "original_title": "Platform Choice, Trust, and Privacy in the Consumer AI Assistant Market",
+      "url": "https://arxiv.org/abs/2607.15134",
+      "why_read": "미국 성인 AI 사용자 1,999명의 선택을 분석한 연구입니다. 이용자가 개인정보를 걱정하면서도 설정을 잘 몰라 행동하지 못한다는 결과가 오늘의 잠금·공유 뉴스와 맞닿아 있습니다.",
+      "published_at": "2026-07-16",
+      "verification": {
+        "verified": true,
+        "scope": "arXiv 제목·저자·날짜·초록 확인. 미국 표본 연구이며 논문 전문은 이번에 검토하지 않음."
+      }
+    },
+    {
+      "type": "GitHub",
+      "title": "nanoMuse — 직접 운영할 수 있는 오픈소스 개인 에이전트",
+      "url": "https://github.com/nano-muse/nanoMuse",
+      "why_read": "대화·기억·승인 구조를 공개한 개인 에이전트입니다. 다양한 기기용 설치 파일이 있지만 아직 빠르게 변하는 프로젝트이므로 중요한 계정과 연결하기 전 문서·권한·서명을 확인해야 합니다.",
+      "published_at": "2026-09-25 최초 공개; 2026-10-21 조회",
+      "verification": {
+        "verified": true,
+        "scope": "README, GPL-3.0-or-later 라이선스, 설치 대상, 승인·개인정보 문서 링크 확인. 설치·실행·보안 감사 없음."
+      }
+    },
+    {
+      "type": "YouTube",
+      "title": "OpenAI Academy — ChatGPT에 넣지 말아야 할 정보와 재확인 방법",
+      "original_title": "ChatGPT Privacy: What Not to Share and When to Double-Check",
+      "url": "https://www.youtube.com/watch?v=dfAZbuAQxi8",
+      "why_read": "ChatGPT를 쓰면서 무엇을 공유하지 말아야 하는지 설명하는 입문 영상입니다. 제품 제공자의 교육 자료이므로 독립적인 개인정보 평가로 보지는 않습니다.",
+      "published_at": "2026-09",
+      "verification": {
+        "verified": true,
+        "scope": "YouTube 제목·채널과 OpenAI Academy 원문 페이지를 대조. 전체 영상은 이번에 시청하지 않음."
+      }
+    },
+    {
+      "type": "Blog",
+      "title": "Meta가 설명한 Muse의 권한·자격 증명 보호 구조",
+      "original_title": "How We Built Safety Into Muse",
+      "url": "https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse",
+      "why_read": "Muse가 읽기·쓰기 권한과 자격 증명을 어떻게 나눈다고 설계했는지 볼 수 있습니다. 오늘 드러난 공유 주소 문제를 독립 검증하는 글이 아니라 제작사의 설계 설명이라는 한계도 함께 봐야 합니다.",
+      "published_at": "2026-09",
+      "verification": {
+        "verified": true,
+        "scope": "Meta AI Research 원문에서 권한 범위·최소 권한·자격 증명 격리 설명 확인. 제품 전체 보안의 독립 감사 아님."
+      }
+    }
+  ],
+  "skill_of_the_day": {
+    "name": "대화 보호 목적을 세 가지로 나누기",
+    "when_to_use": "민감한 AI 대화를 보관하거나 다른 사람과 공유하려 할 때",
+    "practical_example": "옆 사람에게 안 보이게 할지, 서비스에서 지울지, 학습에서 제외할지와 공유 링크를 끊을지를 각각 확인합니다.",
+    "prompt_example": "이 대화에는 개인정보가 있어. 화면에서 숨기기, 삭제하기, 학습 제외하기, 공유 링크 해제하기를 각각 어디서 설정하는지 구분해서 알려줘. 확인되지 않은 메뉴는 추측하지 마."
+  },
+  "community": [],
+  "tools": [],
+  "editorial_review": {
+    "method": "personal_reader_v1",
+    "direct_use_count": 2,
+    "personal_context_count": 1,
+    "corporate_context_count": 0,
+    "top_event_keys": [
+      "chatgpt-locked-chats-2026-10-20",
+      "meta-muse-ghostshares-sharing-paused-2026-10-20",
+      "adobe-lightroom-open-eyes-mobile-2026-10-19"
+    ],
+    "recent_briefings_compared": [
+      {
+        "date_kst": "2026-10-20",
+        "insight_headline": "AI를 쓰려고 작업 화면을 떠나는 일이 줄어듭니다"
+      },
+      {
+        "date_kst": "2026-10-18",
+        "insight_headline": "발표 자료를 함께 고치려면 ChatGPT 요금제부터 확인해야 합니다"
+      },
+      {
+        "date_kst": "2026-10-17",
+        "insight_headline": "AI 학습에 쓰지 않는 문서도 서버에는 남을 수 있습니다"
+      },
+      {
+        "date_kst": "2026-10-16",
+        "insight_headline": "신청이나 환불을 할 때는 설명보다 공식 창구가 먼저입니다"
+      },
+      {
+        "date_kst": "2026-10-15",
+        "insight_headline": "AI 표시가 없는 노래도 사람이 만들었다고 단정할 수 없습니다"
+      },
+      {
+        "date_kst": "2026-10-14",
+        "insight_headline": "Character.AI 대화를 보관하려면 마지막 날까지 기다리기 어렵습니다"
+      },
+      {
+        "date_kst": "2026-10-12",
+        "insight_headline": "AI 기업의 몸값만 보고 잘나간다고 생각하면 안 됩니다"
+      }
+    ],
+    "insight_check": "한 가지 의미: AI 대화의 화면 잠금은 삭제·학습 제외와 다름. ChatGPT 잠금의 공식 한계와 Muse 공유 중단 뒤 남은 DNS 흔적 두 사건만 근거로 사용. 최근 7개 제목과 시작·문장 뼈대가 겹치지 않음.",
+    "reader_checks": [
+      "뉴스 3개, direct_use 2개, personal_context 1개, 기업 맥락 0개",
+      "각 기사에서 한국 제공 여부·무료 조건·행동 가능 범위를 확인 가능한 만큼 명시",
+      "Muse 6,800개를 민감 대화 수나 피해자 수로 표현하지 않음",
+      "잠금·삭제·학습 제외를 같은 개인정보 기능으로 오해하지 않게 설명",
+      "Lightroom 무료 표현 충돌을 공개하고 한국 계정 조건을 미확인으로 남김"
+    ],
+    "excluded_candidates": [
+      {
+        "title": "Notion Agent의 ChatGPT 플랜 연결 안내",
+        "reason": "연결 기능은 9월 말부터 공개된 자료가 있어 10월 19일 문서를 오늘의 새 출시로 단정하지 않음. 새 크레딧 전환은 Business·Enterprise 중심이라 일반 개인 직접성도 제한적."
+      },
+      {
+        "title": "Gemini 소상공인 허브",
+        "reason": "조사 마감 뒤 게시된 항목이며 지역·요금제·한국 제공 범위를 확인하지 못함."
+      },
+      {
+        "title": "AI 기업 투자·데이터센터 동향",
+        "reason": "개인의 기능·비용·선택에 대한 당일 직접 변화가 확인되지 않아 industry_background로 제외."
+      }
+    ]
+  },
+  "provenance": {
+    "repository": "Alliesy/ai-daily-intelligence",
+    "base_commit": "00ec1b5c0b0c8de5e41114ca8611faa635d11e7d",
+    "schema_sha": "f7a3d0cf2f3c2d07406a26107a751e5d7299bbc6",
+    "automation_prompt_sha": "a2f7af4b061af916cbb4b8ad82390196db7dd041",
+    "research_method": "official-first; date-aware; personal relevance gate before weighted scoring; no product execution"
+  },
+  "warnings": [
+    "Locked Chats와 Open Eyes는 단계적 배포라 한국 계정에서 메뉴가 보이는 시점을 확정하지 못했습니다.",
+    "ChatGPT 잠금은 종단간 암호화·삭제·학습 제외가 아니며 PIN 재설정은 잠금 대화를 영구 삭제할 수 있습니다.",
+    "Muse 6,800개는 공개 DNS에서 발견된 호스트명 수이며 민감 대화·피해자 수가 아닙니다. 실제 오용 증거는 확인되지 않았습니다.",
+    "Lightroom의 무료 범위는 Adobe 설명과 DPReview 시험이 달라 한국 계정의 정확한 횟수를 확인하지 못했습니다.",
+    "Paper는 초록, YouTube는 메타데이터까지만 확인했으며 전문과 전체 영상은 검토하지 않았습니다."
+  ]
+}

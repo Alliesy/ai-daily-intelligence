@@ -1,93 +1,97 @@
-AI Daily Intelligence · 2026-10-20 KST
+AI Daily Intelligence · 2026-10-21 KST
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-20.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-20.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-21.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-21.json)
 
 뉴스 3개 · 사업 아이디어 0개 · 구축 후보 없음
 
-이번 호는 최근 일주일의 중요 기능 업데이트를 다룹니다. 세 건 모두 오늘 새로 발표된 소식은 아닙니다.
+이번 호는 개인이 직접 설정하거나 써볼 수 있는 변화 2건과, AI 대화 공유의 개인정보 위험 1건을 다룹니다.
 
-### AI를 쓰려고 작업 화면을 떠나는 일이 줄어듭니다
+### AI 대화를 잠가도 저장된 내용까지 사라지는 것은 아닙니다
 
-ChatGPT의 크롬 확장과 ONLYOFFICE의 새 AI 도구는 보고 있던 페이지나 문서를 질문과 작업에 바로 활용합니다. 이 두 업데이트에서 읽을 수 있는 변화는, 자료를 별도 대화창으로 옮기는 수고가 줄어든다는 점입니다. 다만 같은 화면에서 쓴다고 해서 접근 권한이나 모델 사용료까지 사라지는 것은 아닙니다.
+ChatGPT의 새 잠금 기능은 다른 사람의 눈에 대화가 보이지 않게 하지만, 보관 기간과 학습 설정은 바꾸지 않습니다. Meta가 Muse 공유를 중단한 뒤에도 대화 제목이 들어간 주소 흔적은 DNS 기록에 남았습니다. 민감한 대화를 다룰 때는 화면에서 숨기기, 서비스에서 삭제하기, 공유 링크 끊기를 서로 다른 일로 봐야 합니다.
 
-### ChatGPT에서 열어 둔 크롬 탭을 비교하고 작업할 수 있습니다
+### ChatGPT, 민감한 대화를 PIN으로 숨기는 기능을 내놓았습니다
 
-여러 페이지의 내용을 대화창에 옮기는 수고를 덜 수 있는 업데이트입니다. 내용을 읽게 하는 것과 웹사이트에서 행동하게 하는 것은 권한을 나눠 살펴야 합니다.
+대화를 일반 기록과 검색에서 가리고 PIN이나 생체 인증으로 열 수 있습니다. 화면 노출은 줄지만 삭제·암호화·학습 제외가 되는 것은 아닙니다.
 
-OpenAI가 지난주 크롬 확장 프로그램의 활용 범위를 넓혔습니다. 쇼핑몰이나 서비스 안내 페이지를 열어 둔 채 AI에게 비교를 부탁하거나, 보고 있는 페이지 옆에서 대화를 이어갈 수 있습니다.
+OpenAI가 10월 20일 ChatGPT에 Locked Chats를 공개했습니다. 선택한 대화는 일반 대화 기록과 고정 목록, 검색에서 빠지고 4자리 계정 PIN으로 열 수 있습니다. 지원하는 휴대전화에서는 Face ID·Touch ID·기기 잠금도 쓸 수 있습니다.
 
-공식 문서에는 특정 탭을 대화에 넣고 선택한 글을 질문에 활용하는 방법이 나옵니다. Work에서는 로그인된 사이트의 양식 작성 같은 작업도 이어갈 수 있어요. 예전부터 있던 브라우저 제어 전체가 이번에 처음 생겼다는 뜻은 아닙니다.
+무료·Go·Plus·Pro와 Business·Enterprise·Edu에 단계적으로 배포됩니다. 웹과 iOS·Android, 새 macOS·Windows 앱이 대상이라 메뉴가 아직 보이지 않는 계정도 있을 수 있습니다. Codex 대화와 로컬 Work 대화, Healthcare에서는 지원되지 않습니다.
 
-편리해진 만큼 무엇을 허용하는지 살펴야 합니다. 새 사이트를 사용할 때는 기본적으로 확인을 요청하지만, 모든 사이트를 허용하면 이 확인이 사라집니다. 이용 범위는 배포 상황과 계정·워크스페이스 설정에 따라 달라지며, 한국 계정에서 무료·유료별로 어디까지 제공되는지는 이번 조사로 확정하지 못했습니다.
+이 기능은 누군가 화면이나 기기를 볼 때 대화를 가리는 용도입니다. 종단간 암호화나 별도 보안 금고가 생기는 것은 아니고, OpenAI의 보관 기간과 모델 개선 설정도 그대로입니다. PIN을 잊어 재설정하면 모든 잠금 대화와 관련 파일이 영구 삭제될 수 있으니 삭제와 잠금을 같은 기능으로 생각하면 안 됩니다.
 
-하나만 기억한다면: AI가 읽을 자료를 고르는 일도 이제 작업을 맡기는 과정의 일부입니다.
+하나만 기억한다면: 대화를 안 보이게 하는 것과 서비스에서 지우는 것은 다른 일입니다.
 
-앞으로 볼 건: 비교 결과가 각 탭의 출처와 일치하는지, 로그인 화면이나 팝업이 끼어도 작업이 정확히 멈추는지 확인할 필요가 있습니다.
+앞으로 볼 건: 잠금 뒤 기존 Memory가 어디에 남는지, 회사 계정의 관리자·컴플라이언스 접근이 어떻게 적용되는지 확인할 필요가 있습니다.
 
-지금 확인할 것: 처음에는 공개된 페이지 두 개만 골라 읽기·비교 작업으로 시험하고, 제출이나 메시지 전송은 직접 검토한 뒤 진행하세요.
+지금 확인할 것: 잠글 대화가 있다면 먼저 Settings의 Data Controls와 Memory 설정을 확인하고, PIN을 안전한 곳에 보관한 뒤 한 개의 덜 민감한 대화로 시험하세요.
 
-더 궁금하다면: [OpenAI](https://learn.chatgpt.com/docs/chrome-extension) · [OpenAI](https://learn.chatgpt.com/docs/pricing) · [9to5Google](https://9to5google.com/2026/10/16/chatgpt-gets-deeper-google-chrome-integration-including-control-over-tabs/) · [The Verge](https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs)
+더 궁금하다면: [OpenAI](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) · [OpenAI](https://help.openai.com/en/articles/20001411-using-locked-chats-in-chatgpt) · [TechCrunch](https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/) · [Android Authority](https://www.androidauthority.com/chatgpt-rolls-out-locked-chats-3725766/)
 
-### ONLYOFFICE, 문서·표·PDF를 다루는 AI 기능을 한곳에 모았습니다
+### Meta, 쉽게 찾아낼 수 있던 Muse 대화 공유를 중단했습니다
 
-10.0에서는 필요할 때 AI 도구를 따로 설치해 쓸 수 있습니다. 편집기가 무료여도 연결한 모델 사용료까지 무료인 것은 아닙니다.
+Muse가 만든 공유 주소가 공개 DNS 기록에서 6,800개 넘게 발견됐습니다. 기능은 멈췄지만 제목이 들어간 주소 흔적은 기록에 남았습니다.
 
-ONLYOFFICE가 10월 13일 Windows·macOS·Linux용 Desktop Editors 10.0을 내놓았습니다. 따로 움직이던 AI 에이전트와 플러그인을 AI Tools라는 모듈로 합쳤고, 현재는 베타로 제공합니다.
+보안 회사 Claroc은 Meta의 AI 에이전트 Muse가 만든 공유 주소를 공개 DNS 기록에서 6,800개 넘게 찾아냈다고 밝혔습니다. 링크를 받은 사람만 볼 수 있다고 생각하기 쉬웠지만, 대화 제목과 임의 ID가 주소의 호스트명에 들어가 링크를 받지 않은 사람도 찾아낼 수 있었습니다.
 
-이제 시작 화면에서 파일을 붙여 질문하거나, 문서를 편집하면서 요약과 교정 등을 요청할 수 있습니다. 스프레드시트에서 AI가 완료했다고 답해도 실제 셀이 바뀌지 않던 문제에 대해서는 제작사가 14일 수정됐다고 알렸습니다. 다만 해당 사용자가 다시 시험해 확인한 결과까지 확보한 것은 아닙니다.
+연구진은 수백 개를 표본으로 열어 봤고, 일부에서 대출 신청서·매출 검토·직원 일정 같은 민감한 내용을 확인했습니다. 전체 6,800개가 민감하거나 악용됐다는 뜻은 아니며, 연구진도 실제 오용 증거는 없다고 밝혔습니다.
 
-설치 뒤에는 모델 연결이 필요합니다. 클라우드 AI의 API 키를 넣거나 Ollama·LM Studio 같은 도구로 실행한 로컬 모델을 연결할 수 있어요. 로컬 모델은 PC 성능과 설정 과정이 필요하고, 클라우드 모델은 제공사 요금이 적용될 수 있어 간단한 채팅 앱처럼 바로 시작하는 방식과는 다릅니다.
+Meta는 10월 20일 공유 기능을 중단했습니다. 연구진이 다시 확인한 40개 페이지는 더 이상 열리지 않았지만, 제목이 포함된 호스트명은 수동 DNS 기록에 남아 있다고 했습니다. Muse는 미국·캐나다 중심 서비스라 한국 독자의 직접 사용 변화는 제한적이지만, 다른 AI에서도 공유 링크를 비공개 보관함처럼 취급해서는 안 된다는 사례입니다.
 
-앞으로 볼 건: 업그레이드 후 기존 설정이 유지되는지, 복잡한 수식과 한글 서식이 손상되지 않는지가 실제 사용의 관건입니다.
+하나만 기억한다면: AI 대화를 공유하면 내용뿐 아니라 제목과 주소도 외부에 남을 수 있습니다.
 
-지금 확인할 것: 중요한 원본 대신 복사본으로 시작해, AI가 완료했다고 말한 부분이 실제 파일에도 반영됐는지 확인하세요.
+앞으로 볼 건: Meta가 공유 주소에서 제목을 제거하는지, 로그인·만료 기능을 추가하는지, 기존 이용자에게 어떤 통지를 하는지 확인해야 합니다.
 
-더 궁금하다면: [ONLYOFFICE](https://www.onlyoffice.com/blog/2026/10/onlyoffice-desktop-editors-10) · [ONLYOFFICE](https://www.onlyoffice.com/blog/2026/10/onlyoffice-ai-tools) · [OMG! Ubuntu](https://www.omgubuntu.co.uk/2026/10/onlyoffice-10-expands-ai-tools) · [It's FOSS](https://itsfoss.com/news/onlyoffice-docs-10-release/)
+지금 확인할 것: 어떤 AI에서든 이미 만든 공유 링크를 점검하고, 개인정보·계약·재무 내용이 있다면 링크를 삭제하거나 공유를 해제하세요.
 
-### 찍어 둔 영상도 NVIDIA Broadcast로 보정할 수 있습니다
+더 궁금하다면: [Claroc Research Team](https://blog.claroc.io/ghostshares-muse-passive-dns/) · [The Verge](https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats) · [Ars Technica](https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/) · [Meta](https://ai.meta.com/muse/)
 
-실시간 방송용 효과를 녹화 파일에도 적용하는 기능이 추가됐습니다. 영상 확대와 움직임 보정은 필요한 그래픽카드가 서로 다릅니다.
+### Lightroom 모바일, 단체사진에서 감은 눈을 AI로 고칩니다
 
-NVIDIA가 10월 13일 안내한 Broadcast 2.3에는 저장된 영상과 음성을 처리하는 File Processor가 들어갔습니다. 방송 중 카메라와 마이크에만 효과를 거는 대신, 녹화를 마친 뒤 파일을 다듬는 용도로도 쓸 수 있습니다.
+감은 눈을 자동으로 찾아 한 번에 보정하는 Open Eyes가 추가됐습니다. Adobe는 무료라고 안내하지만 독립 매체는 무료판에서 두 번 뒤 구독 화면이 나온다고 확인했습니다.
 
-베타 기능인 영상 확대는 최대 4K 출력을 지원하며 RTX 3060 이상이 필요합니다. 중간 프레임을 만들어 움직임을 부드럽게 하는 기능은 RTX 40 시리즈 이상에서 사용할 수 있고, 파일 처리에서는 프레임 수를 2배나 4배로 늘릴 수 있습니다. 앱이 설치되는 최소 사양과 모든 효과가 작동하는 사양은 같지 않습니다.
+Adobe가 모바일 Lightroom의 Quick Actions에 Open Eyes를 추가했습니다. 앱이 사진에서 감은 눈을 찾으면 보정 버튼을 보여 주고, 생성형 AI로 눈을 뜬 결과를 만듭니다. 개인 사진과 단체사진 모두 대상입니다.
 
-Windows용 앱이며 지원 파일은 MP4·M4A·MP3·WAV, 코덱은 H.264 8비트와 AAC로 제한됩니다. 실시간 처리와 파일 처리는 동시에 켤 수 없어요. 한국 환경에서 설치하거나 실제 영상을 보정해 보지는 않았으므로, 높은 출력 해상도가 곧 좋은 화질을 보장한다고 보기는 어렵습니다.
+같은 사람의 다른 사진이 Lightroom 라이브러리에 있으면 눈 색과 모양, 크기를 맞추는 데 참고할 수 있습니다. 얼굴 전체를 바꾸기보다 필요한 눈 주변만 고친다는 설명이지만, 실제 결과가 원래 표정과 자연스럽게 맞는지는 사진마다 직접 확인해야 합니다.
 
-하나만 기억한다면: 이미 가진 PC로 할 수 있는지부터 확인하면, 기능 이름만 보고 장비를 바꾸는 일을 피할 수 있습니다.
+가격 안내에는 주의가 필요합니다. Adobe 발표는 이 기능을 무료라고 표현했지만, DPReview는 무료판에서 두 번 사용한 뒤 AI 또는 Creative Cloud 구독 안내가 나왔다고 전했습니다. 한국 계정의 정확한 무료 횟수와 iOS·Android별 배포 상태는 이번 조사에서 확정하지 못했습니다.
 
-앞으로 볼 건: 빠른 움직임과 작은 글씨에서 잔상·왜곡이 생기는지, 긴 파일에서도 소리와 화면이 맞는지 확인해야 합니다.
+하나만 기억한다면: 한 번 눌러 고칠 수 있어도 생성된 얼굴이 원래 사람과 같은지는 직접 봐야 합니다.
 
-지금 확인할 것: 기존 녹화물의 짧은 복사본으로 처리해 원본과 나란히 비교한 뒤 전체 영상에 적용하세요.
+앞으로 볼 건: 한국 계정의 무료 사용 횟수, 여러 사람이 있는 사진에서 잘못된 눈을 고르는지, 수정 표시·원본 보존이 쉬운지 확인해야 합니다.
 
-더 궁금하다면: [NVIDIA](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/release-notes/) · [NVIDIA](https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/) · [NVIDIA](https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/) · [VideoCardz](https://videocardz.com/newz/nvidia-broadcast-2-3-adds-4k-video-upscaling-and-4x-frame-generation-for-prerecorded-videos) · [TweakTown](https://www.tweaktown.com/news/114077/nvidia-broadcast-2-3-0-adds-rtx-video-upscaling-and-frame-generation-to-video-files-and-webcams/index.html)
+지금 확인할 것: 원본을 복사한 뒤 한 장으로 시험하고, 확대해서 눈동자 방향과 표정이 자연스러운지 확인한 다음 공유하세요.
+
+더 궁금하다면: [Adobe](https://blog.adobe.com/en/publish/2026/10/19/give-your-photos-a-second-chance-with-open-eyes-in-lightroom-on-mobile) · [Adobe Korea](https://www.adobe.com/kr/products/photoshop-lightroom/mobile.html) · [DPReview](https://www.dpreview.com/news/adobe-adds-easy-ai-eye-generation-to-lightroom-mobile/) · [The Verge](https://www.theverge.com/tech/1014246/adobe-lightroom-mobile-ai-quick-action-open-eyes-closed-blink-repair)
 
 ### 오늘의 활용법
 
-AI 작업 전후를 직접 비교하기
+대화 보호 목적을 세 가지로 나누기
 
-중요한 원본 대신 복사본을 사용하고, 바꾸기로 한 부분과 실제 바뀐 부분을 대조합니다.
+옆 사람에게 안 보이게 할지, 서비스에서 지울지, 학습에서 제외할지와 공유 링크를 끊을지를 각각 확인합니다.
 
-예시 요청: “이 복사본에서 제목과 첫 문단만 고쳐줘. 나머지는 유지하고, 바꾼 위치와 변경 전후를 알려줘. 외부 전송이나 제출은 하지 마.”
+예시 요청: “이 대화에는 개인정보가 있어. 화면에서 숨기기, 삭제하기, 학습 제외하기, 공유 링크 해제하기를 각각 어디서 설정하는지 구분해서 알려줘. 확인되지 않은 메뉴는 추측하지 마.”
 
 ### 더 읽고 볼 자료
 
 최신 발표와 구분한 배경 자료입니다.
 
-- Paper · [문서 편집 AI는 어디서 틀릴까 — DocOps](https://arxiv.org/abs/2607.19865) — 2026-07-22. 문서의 긴 작업 흐름과 구조를 유지하는 데 생기는 실패를 다룬 연구입니다. AI의 완료 답변만 믿지 않고 파일을 확인해야 하는 이유를 이해하는 데 도움이 됩니다.
+- Paper · [개인 AI 도구를 고를 때 신뢰와 개인정보가 실제 선택에 미치는 영향](https://arxiv.org/abs/2607.15134) — 2026-07-16. 미국 성인 AI 사용자 1,999명의 선택을 분석한 연구입니다. 이용자가 개인정보를 걱정하면서도 설정을 잘 몰라 행동하지 못한다는 결과가 오늘의 잠금·공유 뉴스와 맞닿아 있습니다.
 
-- GitHub · [ONLYOFFICE Desktop Editors 공식 저장소](https://github.com/ONLYOFFICE/DesktopEditors) — 상시 갱신 자료. 개인용 문서 편집기의 지원 운영체제와 공식 설치 경로, 변경 이력을 확인할 수 있습니다. 코드를 빌드할 필요 없이 배포 파일을 찾는 용도로도 유용합니다.
+- GitHub · [nanoMuse — 직접 운영할 수 있는 오픈소스 개인 에이전트](https://github.com/nano-muse/nanoMuse) — 2026-09-25 최초 공개; 2026-10-21 조회. 대화·기억·승인 구조를 공개한 개인 에이전트입니다. 다양한 기기용 설치 파일이 있지만 아직 빠르게 변하는 프로젝트이므로 중요한 계정과 연결하기 전 문서·권한·서명을 확인해야 합니다.
 
-- YouTube · [3Blue1Brown — 대규모 언어 모델을 짧게 설명하는 영상](https://www.youtube.com/watch?v=LPZh9BOjkQs) — 2024-11-20. 챗봇을 쓰면서 모델이 무엇인지부터 이해하고 싶은 독자를 위한 입문 자료입니다. 최신 뉴스가 아닌 2024년 설명 영상이며, 이번에는 전체 영상을 시청하지 않았습니다.
+- YouTube · [OpenAI Academy — ChatGPT에 넣지 말아야 할 정보와 재확인 방법](https://www.youtube.com/watch?v=dfAZbuAQxi8) — 2026-09. ChatGPT를 쓰면서 무엇을 공유하지 말아야 하는지 설명하는 입문 영상입니다. 제품 제공자의 교육 자료이므로 독립적인 개인정보 평가로 보지는 않습니다.
 
-- Blog · [AI에 개인정보·외부 글·전송 권한을 한꺼번에 주면 생기는 위험](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) — 2025-06-16. 브라우저나 이메일을 AI에 연결할 때 살펴볼 위험을 설명하는 Simon Willison의 글입니다. 2025년 분석이며 오늘 소개한 제품에서 새 취약점이 발견됐다는 뜻은 아닙니다.
+- Blog · [Meta가 설명한 Muse의 권한·자격 증명 보호 구조](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse) — 2026-09. Muse가 읽기·쓰기 권한과 자격 증명을 어떻게 나눈다고 설계했는지 볼 수 있습니다. 오늘 드러난 공유 주소 문제를 독립 검증하는 글이 아니라 제작사의 설계 설명이라는 한계도 함께 봐야 합니다.
 
 ### 확인 범위
 
-이번에는 별도 사업 아이디어를 제안하지 않습니다. 공개 포럼의 문서 편집 실패 사례는 확인했지만, 제작사 수정 안내 이후에도 남는 문제와 한국 고객의 구매 수요는 확인하지 못했습니다.
+이번에는 별도 사업 아이디어를 제안하지 않습니다. AI 공유 링크 점검 수요는 확인했지만 공개 DNS·민감 대화를 다루는 법률·윤리·보안 게이트와 플랫폼 수정에 따른 대체 위험이 남았습니다.
 
-한국 계정별 기능 제공, 한글 편집 품질, 영상 보정 성능은 직접 시험하지 않았습니다. NVIDIA Broadcast 2.3의 별도 가격 조건은 확인하지 못했습니다. NVIDIA 외부 기사 두 곳은 서로 인용한 관계여서 독립 근거 두 개로 세지 않았습니다. 제품 페이지 상단에는 2.2.0 표기가 남아 있으나 하단 버전과 릴리스 노트는 2.3.0으로 확인했습니다.
+ChatGPT Locked Chats는 한국 계정별 배포 시점과 PIN 분실 경험을 직접 시험하지 않았습니다. 잠금은 삭제나 학습 제외가 아니며, PIN 재설정은 잠금 대화와 관련 파일을 영구 삭제할 수 있습니다.
 
-ChatGPT의 공식 X 발표 원문과 The Verge 전체 기사에는 접근하지 못했습니다. 기능과 권한은 공식 OpenAI 문서로, 업데이트 보도는 9to5Google과 검색 제공 본문으로 대조했습니다. 무료·유료별 한국 제공 범위를 확정하지 않았습니다.
+Muse의 6,800개는 공개 DNS에서 발견된 공유 호스트명 수입니다. 민감 대화나 피해자 수로 계산하지 않았고 실제 오용 증거도 확인되지 않았습니다. Meta의 별도 공식 공지, 이용자 통지와 기존 주소 완전 삭제 여부는 확인하지 못했습니다.
 
-Paper는 arXiv 색인의 초록까지만, YouTube는 제목·채널·날짜 등 메타데이터까지만 확인했습니다. 논문 전문과 전체 영상은 검토하지 않았습니다.
+Lightroom의 무료 범위는 Adobe의 “무료” 설명과 DPReview가 시험한 “무료판 두 번”이 달랐습니다. 한국 계정의 정확한 무료 횟수와 다양한 얼굴·조명에서의 품질은 확인하지 못했습니다.
+
+Paper는 arXiv 초록까지만, YouTube는 제목·채널·연결된 OpenAI Academy 페이지까지만 확인했습니다. 논문 전문과 전체 영상은 검토하지 않았습니다.
