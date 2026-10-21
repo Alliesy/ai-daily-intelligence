@@ -1,97 +1,97 @@
-AI Daily Intelligence · 2026-10-21 KST
+AI Daily Intelligence · 2026-10-22 KST
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-21.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-21.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-10-22.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-10-22.json)
 
 뉴스 3개 · 사업 아이디어 0개 · 구축 후보 없음
 
-이번 호는 개인이 직접 설정하거나 써볼 수 있는 변화 2건과, AI 대화 공유의 개인정보 위험 1건을 다룹니다.
+이번 호는 개인이 직접 써볼 수 있는 변화 2건과, 영향을 받는 Enterprise 이용자가 준비해야 할 종료 일정 1건을 다룹니다.
 
-### AI 대화를 잠가도 저장된 내용까지 사라지는 것은 아닙니다
+### Custom GPT를 플러그인으로 옮겨도 공유 권한은 따라오지 않습니다
 
-ChatGPT의 새 잠금 기능은 다른 사람의 눈에 대화가 보이지 않게 하지만, 보관 기간과 학습 설정은 바꾸지 않습니다. Meta가 Muse 공유를 중단한 뒤에도 대화 제목이 들어간 주소 흔적은 DNS 기록에 남았습니다. 민감한 대화를 다룰 때는 화면에서 숨기기, 서비스에서 삭제하기, 공유 링크 끊기를 서로 다른 일로 봐야 합니다.
+영향받는 Enterprise의 이전 도구는 최신 공개 지침과 지식 파일을 옮기지만, 선택 모델과 공유 설정, Custom Action은 자동으로 옮기지 않습니다. 회사·고객·수강생이 쓰는 GPT라면 이전 완료 표시보다 실제 계정으로 접근과 외부 연동을 다시 시험하는 일이 더 중요합니다. 이 일정은 모든 개인 GPT에 같은 방식으로 적용되는 것이 아니므로 워크스페이스 공지를 먼저 확인해야 합니다.
 
-### ChatGPT, 민감한 대화를 PIN으로 숨기는 기능을 내놓았습니다
+### Gemini, 1인 사업자의 브랜드·영수증 작업을 한 화면에 모읍니다
 
-대화를 일반 기록과 검색에서 가리고 PIN이나 생체 인증으로 열 수 있습니다. 화면 노출은 줄지만 삭제·암호화·학습 제외가 되는 것은 아닙니다.
+브랜드 자료와 영수증·스프레드시트 분석, 여러 업무 앱 연결을 한곳에서 시작할 수 있습니다. 전 세계 순차 배포지만 한국 계정의 도착 시점과 무료 한도는 확인되지 않았습니다.
 
-OpenAI가 10월 20일 ChatGPT에 Locked Chats를 공개했습니다. 선택한 대화는 일반 대화 기록과 고정 목록, 검색에서 빠지고 4자리 계정 PIN으로 열 수 있습니다. 지원하는 휴대전화에서는 Face ID·Touch ID·기기 잠금도 쓸 수 있습니다.
+Google이 Gemini 앱에 소상공인용 비즈니스 화면을 추가했습니다. 브랜드 키트와 폰트·색상을 올리면 같은 분위기의 마케팅 이미지를 반복해서 만들고, 스프레드시트·영수증·구매 기록을 그래프와 설명으로 정리할 수 있습니다.
 
-무료·Go·Plus·Pro와 Business·Enterprise·Edu에 단계적으로 배포됩니다. 웹과 iOS·Android, 새 macOS·Windows 앱이 대상이라 메뉴가 아직 보이지 않는 계정도 있을 수 있습니다. Codex 대화와 로컬 Work 대화, Healthcare에서는 지원되지 않습니다.
+Google Business Profile·Ads·Workspace뿐 아니라 Canva, Shopify, Wix, Xero 등 외부 앱 연결도 예고했습니다. Google은 수일에 걸쳐 전 세계 모든 Gemini 앱 이용자에게 배포한다고 밝혔지만, 계정과 지역에 따라 메뉴가 늦게 보일 수 있습니다.
 
-이 기능은 누군가 화면이나 기기를 볼 때 대화를 가리는 용도입니다. 종단간 암호화나 별도 보안 금고가 생기는 것은 아니고, OpenAI의 보관 기간과 모델 개선 설정도 그대로입니다. PIN을 잊어 재설정하면 모든 잠금 대화와 관련 파일이 영구 삭제될 수 있으니 삭제와 잠금을 같은 기능으로 생각하면 안 됩니다.
+생성된 재무 설명은 회계 처리나 신고를 대신하지 않습니다. 개인 정보와 거래 기록을 넣기 전에 연결 권한과 데이터 사용 조건을 확인하고, 합계와 분류를 원본 자료와 대조해야 합니다.
 
-하나만 기억한다면: 대화를 안 보이게 하는 것과 서비스에서 지우는 것은 다른 일입니다.
+하나만 기억한다면: 업무가 한 화면에 모여도 재무 숫자의 책임까지 AI로 넘어가지는 않습니다.
 
-앞으로 볼 건: 잠금 뒤 기존 Memory가 어디에 남는지, 회사 계정의 관리자·컴플라이언스 접근이 어떻게 적용되는지 확인할 필요가 있습니다.
+앞으로 볼 건: 한국 계정의 배포, 무료 한도, Xero·Shopify 등 연결 앱의 국내 지원, 거래 자료 보관 조건을 확인해야 합니다.
 
-지금 확인할 것: 잠글 대화가 있다면 먼저 Settings의 Data Controls와 Memory 설정을 확인하고, PIN을 안전한 곳에 보관한 뒤 한 개의 덜 민감한 대화로 시험하세요.
+지금 확인할 것: 기능이 보이면 민감하지 않은 샘플 영수증과 가짜 브랜드 키트로 먼저 시험하고, 결과의 합계와 권한 범위를 직접 확인하세요.
 
-더 궁금하다면: [OpenAI](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) · [OpenAI](https://help.openai.com/en/articles/20001411-using-locked-chats-in-chatgpt) · [TechCrunch](https://techcrunch.com/2026/10/20/chatgpt-now-lets-you-lock-your-chats/) · [Android Authority](https://www.androidauthority.com/chatgpt-rolls-out-locked-chats-3725766/)
+더 궁금하다면: [Google](https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/) · [Google India](https://blog.google/intl/en-in/products/new-gemini-tools-for-small-business-owners/) · [Financial Express](https://www.financialexpress.com/life/technology-google-introduces-gemini-tools-for-small-businesses-adds-branding-and-finance-features-4366352/)
 
-### Meta, 쉽게 찾아낼 수 있던 Muse 대화 공유를 중단했습니다
+### Spotify, AI 스팸 5천만 곡을 추천에서 제외했습니다
 
-Muse가 만든 공유 주소가 공개 DNS 기록에서 6,800개 넘게 발견됐습니다. 기능은 멈췄지만 제목이 들어간 주소 흔적은 기록에 남았습니다.
+Discover Weekly 같은 추천에 저품질·스팸 트랙이 덜 나오도록 시스템을 바꿨습니다. 다만 5천만 곡을 서비스에서 삭제한 것은 아닙니다.
 
-보안 회사 Claroc은 Meta의 AI 에이전트 Muse가 만든 공유 주소를 공개 DNS 기록에서 6,800개 넘게 찾아냈다고 밝혔습니다. 링크를 받은 사람만 볼 수 있다고 생각하기 쉬웠지만, 대화 제목과 임의 ID가 주소의 호스트명에 들어가 링크를 받지 않은 사람도 찾아낼 수 있었습니다.
+Spotify는 지난 6개월 동안 추천 시스템을 고쳐 올해 5천만 곡이 넘는 AI 생성 저품질·스팸 트랙을 추천에서 제외했다고 밝혔습니다. 청취 반응과 신고, 업로드 패턴, 메타데이터와 외부 AI 탐지 신호를 함께 본다고 설명했습니다.
 
-연구진은 수백 개를 표본으로 열어 봤고, 일부에서 대출 신청서·매출 검토·직원 일정 같은 민감한 내용을 확인했습니다. 전체 6,800개가 민감하거나 악용됐다는 뜻은 아니며, 연구진도 실제 오용 증거는 없다고 밝혔습니다.
+숫자는 구분해야 합니다. 5천만 곡은 추천에서 빠진 것이어서 검색해 직접 재생할 수 있는 곡이 포함될 수 있습니다. 심각하거나 반복된 규칙 위반으로 서비스에서 완전히 삭제한 스팸 트랙 7천5백만 곡은 별도 집계입니다.
 
-Meta는 10월 20일 공유 기능을 중단했습니다. 연구진이 다시 확인한 40개 페이지는 더 이상 열리지 않았지만, 제목이 포함된 호스트명은 수동 DNS 기록에 남아 있다고 했습니다. Muse는 미국·캐나다 중심 서비스라 한국 독자의 직접 사용 변화는 제한적이지만, 다른 AI에서도 공유 링크를 비공개 보관함처럼 취급해서는 안 된다는 사례입니다.
+Spotify는 AI Persona 배지와 곡 크레딧의 AI 사용 정보도 확대하고 있습니다. 그러나 탐지가 완벽하지 않다고 인정하며, 사람과 AI가 함께 만든 곡을 모두 같은 방식으로 거르지는 않습니다.
 
-하나만 기억한다면: AI 대화를 공유하면 내용뿐 아니라 제목과 주소도 외부에 남을 수 있습니다.
+하나만 기억한다면: 추천에서 빠진 곡과 서비스에서 삭제된 곡은 같은 숫자가 아닙니다.
 
-앞으로 볼 건: Meta가 공유 주소에서 제목을 제거하는지, 로그인·만료 기능을 추가하는지, 기존 이용자에게 어떤 통지를 하는지 확인해야 합니다.
+앞으로 볼 건: 한국 계정의 AI 표시, 정상 창작물의 오탐과 이의 제기, 추천 품질이 실제로 좋아지는지 확인해야 합니다.
 
-지금 확인할 것: 어떤 AI에서든 이미 만든 공유 링크를 점검하고, 개인정보·계약·재무 내용이 있다면 링크를 삭제하거나 공유를 해제하세요.
+지금 확인할 것: 추천에서 반복적으로 원치 않는 곡이 나오면 숨기기·신고 피드백을 사용하되, AI 표시가 없다고 사람이 만든 곡이라고 단정하지 마세요.
 
-더 궁금하다면: [Claroc Research Team](https://blog.claroc.io/ghostshares-muse-passive-dns/) · [The Verge](https://www.theverge.com/tech/1014627/meta-muse-ai-sharing-ai-chats) · [Ars Technica](https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/) · [Meta](https://ai.meta.com/muse/)
+더 궁금하다면: [Spotify](https://newsroom.spotify.com/2026-10-20/prioritizing-human-artistry/) · [The Verge](https://www.theverge.com/entertainment/1014284/spotify-ai-slop-spam-songs-removed) · [The Guardian](https://www.theguardian.com/music/2026/oct/21/artificial-intelligence-music-grimes-asap-rocky) · [Music Business Worldwide](https://www.musicbusinessworldwide.com/spotify-has-pulled-more-than-50m-ai-slop-and-spam-tracks-out-of-its-recommendations-this-year/)
 
-### Lightroom 모바일, 단체사진에서 감은 눈을 AI로 고칩니다
+### 일부 Enterprise Custom GPT는 10월 26일부터 새로 만들 수 없습니다
 
-감은 눈을 자동으로 찾아 한 번에 보정하는 Open Eyes가 추가됐습니다. Adobe는 무료라고 안내하지만 독립 매체는 무료판에서 두 번 뒤 구독 화면이 나온다고 확인했습니다.
+영향받는 회사 워크스페이스는 기존 GPT를 플러그인으로 옮겨야 합니다. 지침과 지식 파일은 옮겨져도 모델·공유 권한·Custom Action은 자동으로 따라오지 않습니다.
 
-Adobe가 모바일 Lightroom의 Quick Actions에 Open Eyes를 추가했습니다. 앱이 사진에서 감은 눈을 찾으면 보정 버튼을 보여 주고, 생성형 AI로 눈을 뜬 결과를 만듭니다. 개인 사진과 단체사진 모두 대상입니다.
+OpenAI의 FAQ에 따르면 영향받는 Enterprise 워크스페이스에서는 10월 26일부터 새로운 Custom GPT를 만들 수 없게 될 예정입니다. 기존 GPT는 표준 일정으로 12월 11일 사용 종료가 예정돼 있고, 승인된 일부 Enterprise는 2027년 2월 11일까지 미룰 수 있습니다. 정확한 날짜는 워크스페이스 공지가 우선입니다.
 
-같은 사람의 다른 사진이 Lightroom 라이브러리에 있으면 눈 색과 모양, 크기를 맞추는 데 참고할 수 있습니다. 얼굴 전체를 바꾸기보다 필요한 눈 주변만 고친다는 설명이지만, 실제 결과가 원래 표정과 자연스럽게 맞는지는 사진마다 직접 확인해야 합니다.
+이전은 최신 공개 버전을 기준으로 합니다. 지침은 Skill로, 지식 파일은 플러그인으로 복사되지만 초안과 선택 모델은 옮겨지지 않습니다. Custom Action은 자동 이전되지 않아 앱이나 Custom MCP로 다시 구성해야 할 수 있습니다.
 
-가격 안내에는 주의가 필요합니다. Adobe 발표는 이 기능을 무료라고 표현했지만, DPReview는 무료판에서 두 번 사용한 뒤 AI 또는 Creative Cloud 구독 안내가 나왔다고 전했습니다. 한국 계정의 정확한 무료 횟수와 iOS·Android별 배포 상태는 이번 조사에서 확정하지 못했습니다.
+공유 설정도 따라오지 않습니다. 옮긴 개인 플러그인은 처음에 비공개이며, 고객·동료·수강생이 쓰던 GPT라면 접근 권한을 새로 배포하고 실제 계정으로 시험해야 합니다. 기존 대화는 남지만 원래 GPT는 이전 뒤 읽기 전용이 됩니다.
 
-하나만 기억한다면: 한 번 눌러 고칠 수 있어도 생성된 얼굴이 원래 사람과 같은지는 직접 봐야 합니다.
+하나만 기억한다면: 내용을 옮겼다고 공유 권한과 외부 연동까지 옮겨진 것은 아닙니다.
 
-앞으로 볼 건: 한국 계정의 무료 사용 횟수, 여러 사람이 있는 사진에서 잘못된 눈을 고르는지, 수정 표시·원본 보존이 쉬운지 확인해야 합니다.
+앞으로 볼 건: 내 워크스페이스의 실제 종료 공지, 공개 사용자 접근, Custom Action과 공유 링크의 대체 방법을 확인해야 합니다.
 
-지금 확인할 것: 원본을 복사한 뒤 한 장으로 시험하고, 확대해서 눈동자 방향과 표정이 자연스러운지 확인한 다음 공유하세요.
+지금 확인할 것: 해당 워크스페이스 관리자라면 최신 버전을 공개하고 지식 파일 목록을 내려받은 뒤, 권한·Action·모델을 별도 체크리스트로 시험하세요.
 
-더 궁금하다면: [Adobe](https://blog.adobe.com/en/publish/2026/10/19/give-your-photos-a-second-chance-with-open-eyes-in-lightroom-on-mobile) · [Adobe Korea](https://www.adobe.com/kr/products/photoshop-lightroom/mobile.html) · [DPReview](https://www.dpreview.com/news/adobe-adds-easy-ai-eye-generation-to-lightroom-mobile/) · [The Verge](https://www.theverge.com/tech/1014246/adobe-lightroom-mobile-ai-quick-action-open-eyes-closed-blink-repair)
+더 궁금하다면: [OpenAI](https://help.openai.com/en/articles/20001519-custom-gpt-retirement-and-migration-faq) · [OpenAI](https://help.openai.com/ko-kr/articles/20001519-custom-gpt-retirement-and-migration-faq) · [Operator Intelligence](https://operatorintelligence.ai/resources/custom-gpt-migration) · [InvokeRank](https://invokerank.com/custom-gpt-retirement)
 
 ### 오늘의 활용법
 
-대화 보호 목적을 세 가지로 나누기
+AI 도구 이전을 내용·권한·연동으로 나눠 점검하기
 
-옆 사람에게 안 보이게 할지, 서비스에서 지울지, 학습에서 제외할지와 공유 링크를 끊을지를 각각 확인합니다.
+지침·지식 파일이 옮겨졌는지와 별개로 공유 대상, 외부 API, 선택 모델을 각각 시험합니다.
 
-예시 요청: “이 대화에는 개인정보가 있어. 화면에서 숨기기, 삭제하기, 학습 제외하기, 공유 링크 해제하기를 각각 어디서 설정하는지 구분해서 알려줘. 확인되지 않은 메뉴는 추측하지 마.”
+예시 요청: “이 AI 도구를 이전하려고 해. 내용, 공유 권한, 외부 연동, 모델, 사용자 접근을 별도 체크리스트로 만들고 자동 이전이 확인되지 않은 항목은 미확인으로 표시해줘.”
 
 ### 더 읽고 볼 자료
 
 최신 발표와 구분한 배경 자료입니다.
 
-- Paper · [개인 AI 도구를 고를 때 신뢰와 개인정보가 실제 선택에 미치는 영향](https://arxiv.org/abs/2607.15134) — 2026-07-16. 미국 성인 AI 사용자 1,999명의 선택을 분석한 연구입니다. 이용자가 개인정보를 걱정하면서도 설정을 잘 몰라 행동하지 못한다는 결과가 오늘의 잠금·공유 뉴스와 맞닿아 있습니다.
+- Paper · [음악 스트리밍의 AI 저품질 콘텐츠를 실제 데이터로 분석한 연구](https://arxiv.org/abs/2606.18052) — 2026-06-16. AI 음악의 93%가 거의 재생되지 않았고 유통사 정책과 탐지 정확도에 큰 차이가 있다는 연구입니다. Spotify 발표 숫자를 플랫폼 주장 하나로만 보지 않게 해 줍니다.
 
-- GitHub · [nanoMuse — 직접 운영할 수 있는 오픈소스 개인 에이전트](https://github.com/nano-muse/nanoMuse) — 2026-09-25 최초 공개; 2026-10-21 조회. 대화·기억·승인 구조를 공개한 개인 에이전트입니다. 다양한 기기용 설치 파일이 있지만 아직 빠르게 변하는 프로젝트이므로 중요한 계정과 연결하기 전 문서·권한·서명을 확인해야 합니다.
+- GitHub · [Basic Pitch — 오디오를 MIDI로 바꾸는 Spotify의 공개 도구](https://github.com/spotify/basic-pitch) — 2026-10-22 조회. 노래나 연주 녹음을 MIDI 음표로 바꿔 편곡·학습에 활용할 수 있는 공개 프로젝트입니다. 로컬 설치가 필요하고, 입력 음원의 권리와 변환 오류를 직접 확인해야 합니다.
 
-- YouTube · [OpenAI Academy — ChatGPT에 넣지 말아야 할 정보와 재확인 방법](https://www.youtube.com/watch?v=dfAZbuAQxi8) — 2026-09. ChatGPT를 쓰면서 무엇을 공유하지 말아야 하는지 설명하는 입문 영상입니다. 제품 제공자의 교육 자료이므로 독립적인 개인정보 평가로 보지는 않습니다.
+- YouTube · [소규모 도자기 사업자가 Gemini로 제품 설명과 뉴스레터를 만드는 사례](https://www.youtube.com/watch?v=S6ApN3dJQgM) — 2026-10. Google의 소상공인 발표가 직접 연결한 사용 사례 영상입니다. 제품 설명·뉴스레터·소셜 문구에 AI를 쓰는 흐름을 볼 수 있지만 제작사의 홍보 사례이지 독립 평가가 아닙니다.
 
-- Blog · [Meta가 설명한 Muse의 권한·자격 증명 보호 구조](https://research.meta.ai/blog/security-and-safety-for-ai-agents-our-approach-with-muse) — 2026-09. Muse가 읽기·쓰기 권한과 자격 증명을 어떻게 나눈다고 설계했는지 볼 수 있습니다. 오늘 드러난 공유 주소 문제를 독립 검증하는 글이 아니라 제작사의 설계 설명이라는 한계도 함께 봐야 합니다.
+- Blog · [재생목록 속 AI 생성 음악을 확인하는 무료 검사 도구](https://newsroom-deezer.com/2026/06/check-ai-generated-music-in-playlists-with-deezer-detector/) — 2026-06. Spotify를 포함한 여러 서비스의 공개 재생목록을 점검하는 소비자용 도구 설명입니다. 탐지 결과는 확률적이며 사람의 창작 여부를 확정하는 증거로 쓰면 안 됩니다.
 
 ### 확인 범위
 
-이번에는 별도 사업 아이디어를 제안하지 않습니다. AI 공유 링크 점검 수요는 확인했지만 공개 DNS·민감 대화를 다루는 법률·윤리·보안 게이트와 플랫폼 수정에 따른 대체 위험이 남았습니다.
+오늘은 별도 사업 아이디어를 제안하지 않습니다. Gemini는 플랫폼 대체 위험과 종속성이 크고, AI 음악 판별은 무료 대안과 정확도 한계가 있으며, Custom GPT 이전 지원은 단기·제한적 수요와 권한·보안 게이트가 남습니다.
 
-ChatGPT Locked Chats는 한국 계정별 배포 시점과 PIN 분실 경험을 직접 시험하지 않았습니다. 잠금은 삭제나 학습 제외가 아니며, PIN 재설정은 잠금 대화와 관련 파일을 영구 삭제할 수 있습니다.
+Gemini의 한국 계정 배포 시점, 무료 한도, 외부 앱별 국내 연결 범위와 재무 출력의 독립 정확도는 확인하지 못했습니다.
 
-Muse의 6,800개는 공개 DNS에서 발견된 공유 호스트명 수입니다. 민감 대화나 피해자 수로 계산하지 않았고 실제 오용 증거도 확인되지 않았습니다. Meta의 별도 공식 공지, 이용자 통지와 기존 주소 완전 삭제 여부는 확인하지 못했습니다.
+Spotify의 5천만 곡은 추천 제외 수치이고 서비스에서 삭제된 7천5백만 스팸 트랙은 별도 조치입니다. 한국 추천에서의 체감 변화와 오탐률은 확인하지 못했습니다.
 
-Lightroom의 무료 범위는 Adobe의 “무료” 설명과 DPReview가 시험한 “무료판 두 번”이 달랐습니다. 한국 계정의 정확한 무료 횟수와 다양한 얼굴·조명에서의 품질은 확인하지 못했습니다.
+Custom GPT 일정은 영향을 받는 Enterprise 워크스페이스 대상입니다. 10월 26일은 계획된 신규 제작 종료일이며, 실제 일정과 연기 여부는 워크스페이스 공지가 우선입니다.
 
-Paper는 arXiv 초록까지만, YouTube는 제목·채널·연결된 OpenAI Academy 페이지까지만 확인했습니다. 논문 전문과 전체 영상은 검토하지 않았습니다.
+Paper는 arXiv 초록, GitHub는 README, YouTube는 Google 공식 발표의 연결 맥락, Blog는 Deezer 원문 설명까지만 확인했습니다. 전체 시험과 독립 정확도 감사는 하지 않았습니다.
