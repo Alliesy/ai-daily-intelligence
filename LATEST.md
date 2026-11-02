@@ -1,180 +1,158 @@
-# AI Daily Intelligence · 2026-11-02
+# AI Daily Intelligence · 2026-11-03
 
-> 상태: PARTIAL · 24시간 내 대형 신규 발표가 부족해 최근 7일 후속 변화까지 포함했습니다.
+> 상태: PARTIAL · 대형 발표가 없어 검증 가능한 소규모 제품 출시 3건만 선별했습니다.
 
 ## Today's Insight
 
-프런티어 AI의 다음 해자는 성능만이 아니라 누가 접근하고, 어떤 행동을 승인하며, 모든 결정을 어떻게 감사할 수 있는가다.
+오늘의 신호는 더 똑똑한 에이전트보다, 에이전트가 읽을 자료와 함께 일한 기록과 실패 증거를 표준화하는 도구가 늘고 있다는 점이다.
 
 # Today's Top 3
 
-## 1. OpenAI, 생명과학용 GPT-6 Rosalind Research 제한 배포
-
-- 중요도: S
-- 한줄요약: OpenAI가 GPT-6 Rosalind Research를 승인된 생명과학 조직의 Work·Codex·API에 제한 배포했다.
-- 영향도: 고성능 연구 에이전트의 경쟁축이 성능에서 신뢰 접근·승인·감사 체계까지 확대된다.
-- 원문: https://openai.com/rosalind/
-
-### 원문 핵심문장
-
-> GPT-6 Rosalind Research is rolling out to a limited set of approved Research customers.
-
-GPT-6 Rosalind Research는 제한된 승인 연구 고객에게 순차 배포되고 있다.
-
-### 원문 요약
-
-[FACT] 10월 30일 공개됐으며 Chat 탭이 아닌 Work, Codex, API에서 제공된다. Enterprise에는 2주 Admin Preview가 적용된다. [FACT] Safety Hub는 GPT-6 Astra와 같은 가중치를 사용하고 추가 학습 없이 생명과학 연구용으로 구성됐다고 설명한다. [INTERPRETATION] 도메인 특화의 핵심은 도구·데이터·접근통제를 묶는 제품화다.
-
-### 왜 중요한가?
-
-민감 분야에서 에이전트를 도입하려면 권한관리, 검토 가능한 산출물, 감사로그가 제품의 일부여야 한다.
-
-### 업계 분위기
-
-연구 생산성 기대와 높은 생물학 역량에 대한 안전 우려가 공존한다.
-
-### 앞으로의 전망
-
-승인 조직 중심으로 통합 사례가 축적되고 도메인별 도구 체인과 거버넌스가 차별점이 될 전망이다.
-
-### 사업 기회
-
-국내 바이오팀용 연구 에이전트 도입 전 평가·권한·감사 템플릿 패키지.
-
-### 관련 태그
-
-OpenAI · LLM · Agent · AI Security · AI Infra · Workflow
-
-## 2. OpenAI, Model Spec을 5대 가치와 인간 감독 중심으로 개편
+## 1. Linkly AI Clipper, 웹을 에이전트용 Markdown으로 저장
 
 - 중요도: A
-- 한줄요약: OpenAI가 행동 지침을 인간 의도·피해 최소화·정직성·주체성·배려의 다섯 가치로 재구성했다.
-- 영향도: 에이전트 품질 기준이 정확도뿐 아니라 기억·개인화·감독·사용자 통제까지 확장된다.
-- 원문: https://openai.com/index/updated-model-spec/
+- 한줄요약: Linkly AI Clipper가 웹페이지·대화·영상 자막을 로컬의 구조화 Markdown으로 저장하는 확장 프로그램을 공개했다.
+- 영향도: 개인 AI 지식베이스의 병목이 검색보다 출처와 구조를 보존하는 수집 단계로 이동하고 있다.
+- 원문: https://linkly.ai/extension
 
 ### 원문 핵심문장
 
-> The updated Model Spec is organized around five core values.
+> One click turns the page you are on into cleanly formatted Markdown.
 
-업데이트된 Model Spec은 다섯 가지 핵심 가치를 중심으로 구성된다.
+한 번의 클릭으로 현재 페이지를 깔끔하게 구성된 Markdown으로 바꾼다.
 
 ### 원문 요약
 
-[FACT] 10월 29일 다섯 가치 중심으로 재편됐고 컨텍스트, 기억, 개인화, 감독 지침이 추가됐다. [FACT] 명세는 현재 모델 동작의 완전한 보증이 아니라 지향점이다. [SIGNAL] 제품팀은 정책 테스트와 사용자 통제 UX를 관리해야 한다.
+[FACT] 11월 2일 Product Hunt에 소개됐다. 공식 페이지는 본문·이미지·번역·영상 자막·AI 대화를 YAML 메타데이터가 포함된 Markdown으로 로컬 저장한다고 설명한다. [FACT] Chrome 웹스토어는 0.6.3 버전, 1,000명 이상 사용자, 5개 평가를 표시한다. [INTERPRETATION] 에이전트용 개인 지식베이스에서 수집 포맷 표준화가 별도 제품 범주로 자리잡는 신호다.
 
 ### 왜 중요한가?
 
-행동정책을 명시하고 결과가 정책과 일치하는지 회귀 테스트하는 운영 역량이 필요해진다.
+링크만 저장하면 페이지 변경·삭제와 불필요한 DOM 때문에 재사용성이 낮다. 출처 메타데이터가 붙은 로컬 Markdown은 Git·RAG·에이전트 모두에 이식하기 쉽다.
 
 ### 업계 분위기
 
-투명성 확대는 환영받지만 명세와 실제 행동 사이의 간극 측정이 핵심이다.
+Product Hunt: 에이전트 친화적 로컬 수집이라는 메시지가 주목받았지만 장기 사용성과 사이트별 추출 정확도는 검증 전이다. Chrome Web Store: 소수 평가에서 높은 점수를 보이지만 표본이 작다.
 
 ### 앞으로의 전망
 
-벤더별 행동정책을 비교하고 변경 때 자동 평가하는 기능이 운영 스택의 표준이 될 수 있다.
+클리퍼 경쟁은 단순 저장보다 출처 보존, 중복 제거, 변경 감지, 저작권·민감정보 처리로 확장될 가능성이 높다.
 
 ### 사업 기회
 
-한국어 업무 에이전트 정책 회귀 테스트와 승인 UX 진단.
+한국어 사이트 특화 에이전트용 웹 수집 품질 진단과 로컬 지식베이스 구축 패키지.
 
 ### 관련 태그
 
-OpenAI · Agent · Prompt · AI Security · Workflow
+Agent · RAG · Workflow · AI Tool · Knowledge Base
 
-## 3. Navige, AI 에이전트 비용·권한 거버넌스 프록시 공개
+## 2. Surfaces, 인간·에이전트 공동 작업을 서명 기록으로 관리
 
 - 중요도: A
-- 한줄요약: Navige가 비용 귀속, 예산, 승인, 킬스위치, 감사로그를 적용하는 에이전트 프록시를 공개했다.
-- 영향도: 에이전트의 비용·권한·감사 가능성을 독립 제어면으로 관리하려는 수요가 제품화되고 있다.
-- 원문: https://www.producthunt.com/products/navige
+- 한줄요약: Surfaces가 완료 조건이 있는 작업 카드와 참여자별 서명을 중심으로 한 에이전트 네이티브 협업 공간을 선보였다.
+- 영향도: 에이전트 협업 제품의 차별점이 채팅 UI에서 책임 소재·승인·검증 가능한 기록으로 이동한다.
+- 원문: https://surfaces.live/
 
 ### 원문 핵심문장
 
-> Every call is priced, recorded, and attributed.
+> Every participant, human or agent, signs their own contributions with their own key.
 
-모든 호출은 가격이 계산되고 기록되며 주체가 귀속된다.
+모든 인간과 에이전트 참여자는 자신의 기여에 자기 키로 서명한다.
 
 ### 원문 요약
 
-[FACT] Product Hunt에 소개됐고 공식 문서는 에이전트와 모델·도구 사이의 프록시 구조를 설명한다. [FACT] 예산, 유료 작업 정책, 승인, 킬스위치, 감사 추적을 제공한다고 주장한다. [SPECULATION] 절감률과 차단 효과는 독립 벤치마크가 없어 미검증이다.
+[FACT] 공식 사이트는 인간과 에이전트가 작업 카드를 인계하고 각자 기여에 서명하며 기록을 기기 소유 피드에 보관한다고 설명한다. [FACT] 중앙 서버는 임시 복제본이고 카드 기록을 재계산해 검증할 수 있다고 주장한다. [SIGNAL] 멀티에이전트 협업에서 책임성과 이동성이 제품 핵심으로 부상하고 있다. [SPECULATION] 분산 구조와 서명 검증의 실제 운영 편의성은 공개 자료만으로 확인할 수 없다.
 
 ### 왜 중요한가?
 
-다중 에이전트 운영에서는 누가 어떤 유료 행동을 했는지 추적하고 즉시 중단하는 능력이 중요하다.
+에이전트가 결과를 만들수록 누가 무엇을 승인했고 어떤 산출물이 완료 조건을 충족했는지 남기는 것이 팀 운영의 필수 기능이 된다.
 
 ### 업계 분위기
 
-비용 통제와 감사 가능성에 관심이 모였지만 실제 도입 사례는 부족하다.
+Launch directory: 사람과 에이전트의 공동 기록·소유권 메시지가 신선하지만 초기 제품이라 운영 사례는 부족하다. Vendor: 중앙 서버 의존을 줄이는 장점을 강조한다.
 
 ### 앞으로의 전망
 
-게이트웨이, 관측성, 승인 워크플로가 결합된 제어면 시장이 성장할 전망이다.
+협업 도구는 에이전트를 봇으로 추가하는 수준을 넘어 신원, 권한, 서명, 산출물 검증을 기본 객체로 다룰 전망이다.
 
 ### 사업 기회
 
-한국 기업용 에이전트 비용·권한 감사 대시보드와 도입 진단.
+국내 소규모팀을 위한 에이전트 작업 인수인계·승인·산출물 증빙 레이어.
 
 ### 관련 태그
 
-Agent · AI Infra · AI Security · Workflow · AI Startup
+Agent · Workflow · AI Security · A2A · Collaboration
+
+## 3. NAIF Gravity SOS, MCP·API·Webhook 실패 진단 에이전트 공개
+
+- 중요도: B
+- 한줄요약: NAIF Gravity SOS가 MCP 스키마·타임아웃, API 오류, Webhook 서명, JSON 구조 문제를 제한된 진단 패킷으로 분석한다.
+- 영향도: 에이전트 생태계에서 실행 도구뿐 아니라 실패를 기계 판독 가능한 증거로 설명하는 진단 서비스가 등장하고 있다.
+- 원문: https://a2aregistry.org/agents/34dc02e8-6277-4c06-9dc6-67bb26b42d74/
+
+### 원문 핵심문장
+
+> Diagnose MCP server and tool failures first and return structured JSON evidence.
+
+MCP 서버와 도구 실패를 먼저 진단하고 구조화된 JSON 증거를 반환한다.
+
+### 원문 요약
+
+[FACT] A2A Registry는 1.7.2 에이전트 카드와 진단·수리 패킷·서명 영수증 등 선언된 기능을 표시한다. [FACT] The Colony 프로필은 11월 2일 가입과 소개 글을 보여준다. [INTERPRETATION] 에이전트 간 거래에서 실행 전 점검과 증거 패킷이 신뢰 계층이 될 수 있다. [SPECULATION] 실제 진단 정확도와 유료 전환은 검증되지 않았다.
+
+### 왜 중요한가?
+
+MCP와 API 장애는 재현 정보가 흩어져 수리가 느리다. 입력을 제한하고 원인·검사·복구를 JSON으로 반환하면 사람과 에이전트가 같은 증거를 사용할 수 있다.
+
+### 업계 분위기
+
+A2A Registry: 도달성·기능 선언은 확인되지만 사용자 리뷰와 독립 테스트는 없다. The Colony: 초기 소개 단계로 반응 데이터가 매우 적다.
+
+### 앞으로의 전망
+
+MCP·A2A 도입이 늘수록 연결 전 preflight, 서명된 진단 결과, 재현 가능한 실패 패킷 수요가 커질 수 있다.
+
+### 사업 기회
+
+한국 개발팀용 MCP 연동 실패 재현 패킷 생성과 사내 런북 연결 도구.
+
+### 관련 태그
+
+MCP · A2A · Agent · AI Infra · AI Security · Developer Tool
 
 # Business Radar
 
-## AI 에이전트 거버넌스 레디니스 팩
-
-- 점수: 4/5 · ★★★★ · 가능성 High
-- 난이도: Medium
-- 고객: AI 에이전트를 도입하려는 국내 20~300인 기업과 구축 대행사
-- 문제: 비용·권한·승인·감사 기준이 없어 PoC가 운영 단계로 넘어가지 못한다.
-- 경쟁사: Navige, LLM 게이트웨이·관측성 제품, 보안 컨설팅사
-- 차별점: 한국어 정책 템플릿과 업무 시나리오 점검을 2주 고정형 서비스로 제공한다.
-- 2주 MVP: 에이전트 1개의 호출, 예산, 승인점, 킬스위치, 감사로그를 진단하고 정책 문서를 납품한다.
-- 수익화: 진단 150만~300만원, 월간 정책 회귀 테스트 구독
-- 반증 조건: 10개 인터뷰 중 3곳 미만이 운영 전 감사·승인을 유료 문제로 인정하면 중단한다.
-
-## 규제 연구팀용 AI 산출물 검증 워크플로
-
-- 점수: 3.8/5 · ★★★★ · 가능성 Medium
-- 난이도: High
-- 고객: 국내 바이오 스타트업 연구운영·데이터·컴플라이언스 담당자
-- 문제: 연구 에이전트 결과의 출처, 검토자, 승인 이력을 일관되게 남기기 어렵다.
-- 경쟁사: ELN/LIMS 벤더, 범용 문서관리·승인 시스템
-- 차별점: AI 산출물 근거와 사람 검토 단계를 연구 산출물에 맞춰 묶는다.
-- 2주 MVP: 가설 메모의 근거 수집, 검토 대기, 승인, 변경 이력을 보여주는 프로토타입과 사용자 테스트 3건.
-- 수익화: 도입 컨설팅과 팀 단위 월 구독
-- 반증 조건: 기존 ELN으로 충분하거나 규제 검토 비용이 MVP 범위를 넘으면 보류한다.
-
-> 오늘의 구축 후보: 없음. 고객 검증 또는 규제·보안 확인이 먼저입니다.
+> 오늘은 강한 사업 기회 신호 없음. 세 제품 모두 고객 수요와 독립 성능 근거가 부족해 아이디어 승격을 보류했습니다.
 
 # AI Tool Radar
 
-- **Navige** (★★★★): 에이전트별 비용, 예산, 승인, 킬스위치, 감사로그를 한 제어면으로 제안했다. 샌드박스에서 비용 계산 정확도와 차단 동작을 먼저 검증할 가치는 있다. — https://navige.ai/
-- **GPT-6 Rosalind Research** (★★★★): 승인된 생명과학 조직에 Work·Codex·API 형태로 제한 배포된다. 접근 가능한 연구 조직이라면 출처 추적과 검토 흐름을 포함한 제한 평가가 적합하다. — https://openai.com/rosalind/
+- **Linkly AI Clipper** (★★★★): 웹 콘텐츠를 출처 메타데이터가 있는 에이전트용 Markdown으로 로컬 저장한다. 한국어 기사·X 스레드·YouTube 자막 10건으로 추출 정확도와 개인정보 처리를 시험할 만하다. — https://linkly.ai/extension
+- **Surfaces** (★★★): 인간·에이전트의 기여 서명과 완료 조건이 있는 카드를 협업 중심에 둔다. 초기 제품이므로 비민감 프로젝트 하나에서 승인·인수인계 기록의 실용성만 제한 평가하는 편이 좋다. — https://surfaces.live/
+- **NAIF Gravity SOS** (★★★): MCP·API·Webhook 실패를 구조화된 증거와 복구 패킷으로 반환한다. 비밀정보를 제거한 재현 사례로 진단 정확도와 데이터 보존 정책을 먼저 확인해야 한다. — https://a2aregistry.org/agents/34dc02e8-6277-4c06-9dc6-67bb26b42d74/
 
 # Community Pulse
 
-- **Product Hunt · 관심 우세·검증 대기**: Navige의 비용 통제와 킬스위치 메시지는 반응을 얻었지만 독립 성능 자료는 없다. — https://www.producthunt.com/products/navige
-- **Reddit · 기대와 안전 우려 혼재**: GPT-Rosalind의 연구 자동화 가능성과 생물안전·과장 위험을 함께 논의한다. — https://www.reddit.com/r/aiwars/comments/1xc6i8f/openai_deploys_nearly_2000_gptrosalind_agents_to/
-- **GitHub · 투명성 환영·실행 격차 주시**: 공개 변경 이력은 추적성을 높였지만 실제 모델의 명세 준수가 관건이다. — https://github.com/openai/model_spec/blob/main/CHANGELOG.md
+- **Product Hunt · 로컬·에이전트 친화 포맷에 관심**: Linkly AI Clipper가 11월 2일 목록에 올랐지만 장기 사용자 지표는 아직 없다. — https://www.producthunt.com/leaderboard/daily/2026/11/2
+- **Other · 초기 발견 단계**: AgentLaunch에는 Surfaces와 MCP 진단 도구 등 에이전트 운영 보조 제품이 다수 등장했다. — https://agents-launch.lovable.app/
+- **Other · 기능 확인·신뢰 검증 대기**: A2A Registry는 NAIF의 선언된 기능과 도달성을 보여주지만 독립 정확도 평가는 없다. — https://a2aregistry.org/agents/34dc02e8-6277-4c06-9dc6-67bb26b42d74/
 
 # AI Skill of the Day
 
-## Human-in-the-loop 승인 게이트 설계
+## 에이전트용 수집 문서 정규화
 
-- 언제: 에이전트가 결제, 외부 전송, 데이터 변경, 고비용 호출처럼 되돌리기 어려운 행동을 할 때.
-- 실무 예제: 메일 초안은 자동 생성하되 발송 전 수신자·첨부·민감정보·예상 비용을 보여주고 사람이 승인한다.
-- 프롬프트 예제: 행동을 실행하지 말고 승인 패킷만 작성하라. 목적, 대상, 변경, 비용, 개인정보, 되돌리기, 실패 영향, 승인/거절을 포함하라.
+- 언제: 웹페이지·대화·영상 자막을 반복 검색하거나 RAG와 코딩 에이전트에 넘길 때 사용한다.
+- 실무 예제: 본문만 Markdown으로 추출하고 제목, 원문 URL, 작성자, 게시일, 수집일, 콘텐츠 해시를 YAML front matter에 저장한다.
+- 프롬프트 예제: 다음 문서를 에이전트 재사용용 Markdown으로 정규화하라. 원문을 왜곡하지 말고 YAML에 title, source_url, author, published_at, collected_at, content_hash를 넣고 광고·메뉴는 제외하라.
 
 # Worth Reading
 
-- **Paper · From Reactive Containment to Proactive Assurance**: 에이전트 보안을 사후 차단이 아닌 배포 전 보증 문제로 본다. — https://arxiv.org/abs/2610.12463
-- **GitHub · OpenAI Model Spec changelog**: 행동정책 변경을 원문에서 추적할 수 있다. — https://github.com/openai/model_spec/blob/main/CHANGELOG.md
-- **YouTube · Turning scattered evidence into discovery decisions for life sciences**: GPT-Rosalind의 공식 연구 워크플로 데모다. — https://www.youtube.com/watch?v=a-YJ6h7EJv8
-- **Blog · An updated Model Spec**: 다섯 가치와 기억·개인화·감독 지침을 파악할 수 있다. — https://openai.com/index/updated-model-spec/
+- **Paper · The Agent Incident Registry: Toward Preventing Repeated AI Agent Failures**: 공개 에이전트 실패를 비교 가능한 구조로 기록하는 방법을 제안한다. — https://arxiv.org/abs/2609.11030
+- **GitHub · Linkly AI CLI**: 로컬 문서 검색과 에이전트 연동 구조를 코드 수준에서 확인할 수 있다. — https://github.com/LinklyAI/linkly-ai-cli
+- **YouTube · Turning scattered evidence into discovery decisions for life sciences**: 근거를 보존한 수집이 실제 연구 의사결정으로 이어지는 공식 데모다. — https://www.youtube.com/watch?v=a-YJ6h7EJv8
+- **Blog · Surfaces — From Tools to Teammates**: 에이전트 협업을 대화가 아니라 책임 있는 작업 기록으로 보는 제품 관점을 읽을 수 있다. — https://surfaces.live/
 
 # 수집 경고
 
-- 직전 24시간에 독립 검증 가능한 대형 발표가 부족해 최근 7일의 중요한 후속 변화까지 포함했습니다.
-- Navige의 효율·차단 효과는 공급사 주장으로 실제 워크로드 검증이 필요합니다.
-- Notion 최신 보기 갱신은 이전 안전 게이트 거절로 건너뛰었습니다. Git 보고서가 정본입니다.
+- 직전 24시간에 대형 공식 발표가 없어 검증 가능한 소규모 제품 출시 3건만 선별했습니다.
+- 세 제품의 성능·보안·사용자 지표는 공급사 주장 중심이며 독립 검증이 부족합니다.
+- X와 Hacker News에서 신뢰 가능한 당일 반응을 확보하지 못했습니다.
+- Notion 최신 페이지 갱신은 기존 안전 게이트 제한 때문에 시도하지 않았습니다.
