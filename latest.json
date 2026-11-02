@@ -1,6 +1,7 @@
 {
-  "date_kst": "2026-11-01",
-  "data_path": "data/daily/2026/2026-11-01.json",
-  "report_path": "reports/2026/2026-11-01.md",
-  "status": "partial"
+  "date_kst": "2026-11-02",
+  "status": "partial",
+  "data_path": "data/daily/2026/2026-11-02.json",
+  "report_path": "reports/2026/2026-11-02.md",
+  "generated_at": "2026-11-02T00:04:13.758Z"
 }
