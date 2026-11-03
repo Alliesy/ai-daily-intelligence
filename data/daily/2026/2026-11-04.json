@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "date_kst": "2026-11-04",
   "generated_at": "2026-11-03T22:01:12.918Z",
-  "status": "complete",
+  "status": "partial",
   "warnings": [
     "PagerDuty의 성능·효과 수치는 공급사 자료이므로 독립 운영 데이터 확인이 필요합니다.",
     "OpenAI의 BenchCAD 2.0 최신 내부 모델 결과는 외부 재현 전까지 방향성 증거로만 해석했습니다.",
@@ -273,5 +273,6 @@
       "openai-chief-corporate-affairs-hazelbaker-2026-11-03"
     ]
   },
-  "build_candidate": null
+  "build_candidate": null,
+  "partial_failure": "notion_publish"
 }

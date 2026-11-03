@@ -2,7 +2,7 @@
 
 # AI Daily Intelligence · 2026-11-04
 
-> 상태: COMPLETE · 직전 24시간의 공식 발표 3건을 선별했습니다.
+> 상태: PARTIAL · 직전 24시간의 공식 발표 3건을 선별했습니다.
 
 ## Today's Insight
 
