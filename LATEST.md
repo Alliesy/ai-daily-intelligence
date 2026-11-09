@@ -1,180 +1,219 @@
-# AI Daily Intelligence · 2026-11-06
+# AI Daily Intelligence · 2026-11-09
 
-> 상태: PARTIAL · Git 정본 작성 완료, Notion 최신 페이지 갱신은 안전 제한으로 보류했습니다.
+> 상태: PARTIAL · 최근 72시간의 미수록 공식 발표를 선별했습니다. Git이 정본이며 Notion 갱신은 안전 제한으로 보류했습니다.
 
 ## Today's Insight
 
-AI 확장의 경쟁력은 더 큰 모델만이 아니라 지역사회·민감한 업무·실제 행동 앞에서 비용과 데이터, 승인 책임을 보이는 인터페이스에 달려 있다.
+지속형 에이전트의 핵심 경쟁력은 더 오래 기억하고 더 많이 실행하는 능력이 아니라, 기억과 증거와 권한을 검증한 뒤 필요한 순간에만 승격하는 운영체계다.
 
-# Today's Top 3
+# Today's Top 4
 
-## 1. OpenAI, AI 컴퓨트 캠퍼스 지역사회 책임 기준 공개
+## 1. Anthropic, 에이전트 메모리의 ‘dreaming’ 구조와 평가 공개
 
 - 중요도: S
-- 한줄요약: OpenAI가 향후 자체 운영 컴퓨트 캠퍼스에 지역 협약, 에너지 비용 부담, 물·전력 공개, 주민 참여 원칙을 적용한다고 발표했다.
-- 영향도: AI 인프라 경쟁의 핵심 제약이 칩·전력 확보를 넘어 지역 신뢰와 비용·자원 책임으로 확대됐다.
-- 원문: https://openai.com/index/setting-new-standard-responsible-ai-infrastructure/
+- 한줄요약: Anthropic이 실행 중 메모, 원본 로그, 위키형 표현, 주입 컨텍스트를 나누고 비활성 시간의 재검토로 오류를 고치는 메모리 구조를 공개했다.
+- 영향도: 장기 실행 에이전트의 경쟁력이 기억량보다 출처 검증, 오류 수정, 압축과 검색을 포함한 메모리 유지보수로 이동한다.
+- 원문: https://www.anthropic.com/research/components-of-agent-memory
 
 ### 원문 핵심문장
 
-> The communities that host this infrastructure should have a clear say in shaping their futures, too.
+> Dreaming gives Claude an opportunity to look backward and use compute to organize its memory, correct mistakes, and maintain representations.
 
-이 인프라를 유치하는 지역사회도 자신의 미래를 만드는 데 분명한 발언권을 가져야 한다.
+Dreaming은 Claude가 과거를 돌아보며 메모리를 정리하고 오류를 고치며 표현을 유지하도록 한다.
 
 ### 원문 요약
 
-[FACT] OpenAI는 National Community Compact와 Compute Campus Policy Blueprint를 공개했다. [FACT] 향후 자체 소유·운영 캠퍼스별로 주민 참여, 전력·인프라 비용 부담, 물·전력 사용 공개, 고용·지역투자 보고를 약속했다. [FACT] 공공기관 관계자와의 NDA도 보안·영업비밀 등 좁은 예외로 제한한다. [INTERPRETATION] 컴퓨트 확장은 기술 조달이 아니라 지역 이해관계자와의 장기 운영 계약이 되고 있다.
+[FACT] Anthropic은 메모리를 세션 로그, 에이전트가 쓴 노트, 위키 같은 표현, 매 세션에 주입되는 컨텍스트의 계층으로 설명했다. [FACT] 35만 파일·약 4억2천만 토큰 말뭉치에서 위키와 검색을 함께 쓴 점수가 위키 성장에 따라 54%에서 61%로 올랐고 질문당 약 2만 토큰을 절약했다고 밝혔다. [FACT] 잘못된 노트는 원본 로그와 대조하는 dreaming으로 수정할 수 있었다. [INTERPRETATION] 지속 메모리는 저장소가 아니라 주기적 검증 파이프라인이다.
 
 ### 왜 중요한가?
 
-데이터센터 사업자는 전력 계약만이 아니라 주민 설명, 자원 영향 측정, 고용 약속과 책임 이행 증거를 제품처럼 관리해야 한다.
+장기 에이전트가 틀린 기억을 반복 사용하면 오류가 누적되므로 원본 로그, 수정 이력, 승격 기준과 폐기 규칙이 제품의 신뢰성을 좌우한다.
 
 ### 업계 분위기
 
-Infrastructure: 투명한 비용·자원 공개가 확산될 것이라는 기대가 있다. Community: 자발적 약속의 집행력과 독립 검증이 충분한지는 지켜봐야 한다.
+Builders: 단순 벡터 검색보다 계층형 메모리와 야간 정리 작업에 관심이 커지고 있다. Caution: dreaming 비용과 잘못된 기억의 자동 승격, 메모리 프롬프트 주입 위험은 별도 통제가 필요하다.
 
 ### 앞으로의 전망
 
-대형 AI 캠퍼스 허가와 투자 심사에서 전력·물·소음·고용을 정량 보고하는 지역 상생 패키지가 표준 요구사항이 될 가능성이 높다.
+에이전트 플랫폼은 메모리 생성·검증·병합·만료를 코드처럼 버전 관리하고, 고위험 기억은 사람 승인 뒤 상위 컨텍스트로 승격하는 방향으로 발전할 전망이다.
 
 ### 사업 기회
 
-AI 데이터센터 개발사와 지자체를 위한 지역영향 지표·약속 이행 증거 대시보드.
+기업용 에이전트 메모리의 출처·드리프트·민감정보를 검사하는 ‘memory CI’ 서비스.
 
 ### 관련 태그
 
-OpenAI · AI Infra · AI Regulation · AI Security · Workflow
+Anthropic · Claude · Agent · Context Engineering · Workflow · AI Security
 
-## 2. Anthropic, 과학자 20만여 세션의 Claude 사용 패턴 공개
+## 2. OpenAI·Ligo, 원시 실험데이터용 BioBasicsBench 공개
 
 - 중요도: S
-- 한줄요약: Anthropic이 개인정보 보호형 분류로 과학 연구 세션 207,049건을 분석해 데이터 분석·글쓰기 중심의 AI 활용 편중을 공개했다.
-- 영향도: 과학 AI 도입의 실제 병목이 모델 능력뿐 아니라 물리·대인 작업, 규제, 데이터 통합 가능성에 있음을 수치로 보여준다.
-- 원문: https://www.anthropic.com/research/how-researchers-use-claude
+- 한줄요약: OpenAI와 Ligo가 젤·현미경·배양판 등 원시 실험 증거를 해석하고 오류와 근거 부족을 판별하는 100개 과제 벤치마크를 공개했다.
+- 영향도: 과학 에이전트 평가가 정제된 논문 그림에서 실패·모호성·대조군 오류가 섞인 실제 실험실 판단으로 확장됐다.
+- 원문: https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/
 
 ### 원문 핵심문장
 
-> Data analysis tasks have the highest usage in absolute terms and are overrepresented relative to researcher time.
+> The benchmark’s 100 tasks test whether agents can interpret raw experimental data, identify errors, and recognize when the evidence cannot support a conclusion.
 
-데이터 분석 작업은 절대 사용량이 가장 높고 연구자가 쓰는 시간에 비해 과대표집됐다.
+100개 과제는 원시 데이터를 해석하고 오류를 찾으며 증거가 결론을 지지하지 못하는 경우를 인식하는지 평가한다.
 
 ### 원문 요약
 
-[FACT] 연구는 2026년 8월 2일~9월 30일 소비자 플랜의 과학 세션 207,049건을 분석했다. [FACT] 데이터 분석은 Claude 33.7%, Claude Code 48.1%로 연구시간 추정치 27.6%보다 높았다. [FACT] 건강과학은 이론적 AI 역량 대비 사용이 낮았고 규제·데이터 제약이 가능한 원인으로 제시됐다. [INTERPRETATION] 텍스트·코드로 닫히는 작업이 먼저 확산되고 실험·현장 통합은 뒤처진다.
+[FACT] BioBasicsBench는 단백질법, 이미징·유세포분석, 정량·분석, 핵산법, 분자클로닝의 100개 과제로 구성된다. [FACT] GPT-6 Astra는 xhigh 설정에서 66.7%, GPT-5.6 Sol은 43.8%를 기록했다고 OpenAI가 밝혔다. [FACT] 이미지 해석, 대조군 확인, 실험 맥락 적용에는 여전히 개선 여지가 있다. [INTERPRETATION] 과학 AI의 핵심 지표가 답 생성에서 증거 부족을 멈춰 말하는 능력으로 이동한다.
 
 ### 왜 중요한가?
 
-연구기관은 범용 챗봇 도입률보다 분야별 작업 흐름, 데이터 경계, 검증 산출물과 실제 시간 절감을 함께 측정해야 한다.
+실험실에서는 그럴듯한 오판이 비용과 시간을 낭비하므로 모델이 결론뿐 아니라 대조군·오류·불확실성을 구조화해 보여줘야 한다.
 
 ### 업계 분위기
 
-Research: 대규모 실제 사용 데이터로 분야별 격차를 본 점이 주목된다. Caution: 소비자 플랜과 적극 사용자 중심 표본이라 전체 과학자를 대표하지 않는다는 한계가 있다.
+Biotech: 실제 원시 데이터 기반 평가가 부족했던 공백을 메운다는 기대가 있다. Validation: 제작사 결과이며 공개 데이터·독립 재현 범위와 모델별 비용 비교가 더 필요하다.
 
 ### 앞으로의 전망
 
-연구용 AI 제품은 논문 작성·분석을 넘어 실험 데이터 연결, 감사 가능한 산출물, 규제 준수 워크플로에서 차별화될 전망이다.
+바이오 AI 도입은 범용 벤치마크보다 조직별 장비·프로토콜·실패 사례를 반영한 사내 평가세트와 사람 검토 루프를 먼저 요구할 전망이다.
 
 ### 사업 기회
 
-대학·연구소용 개인정보 보호형 AI 업무 사용 진단과 도입 우선순위 컨설팅.
+국내 바이오 연구실의 익명화된 실패 실험으로 사내 에이전트 평가세트를 구축하는 서비스.
 
 ### 관련 태그
 
-Anthropic · Claude · Agent · Workflow · AI Science
+OpenAI · Agent · AI Science · Workflow · AI Security
 
-## 3. Aina, 승인형 AI 인터페이스 ‘Aina Ring’ 공개
+## 3. OpenAI, Hacktron과 제3자 서비스 경계 보안 테스트 확대
 
 - 중요도: A
-- 한줄요약: Aina가 일정·위치·루틴을 기기 안에서 학습하고 OLED 제안에 사용자가 스와이프로 승인하는 399달러 AI 링을 공개했다.
-- 영향도: 웨어러블 AI가 음성 비서에서 상황별 단일 제안과 명시적 승인에 기반한 행동 인터페이스로 이동한다.
-- 원문: https://www.aina.com/
+- 한줄요약: OpenAI가 Hacktron과 고우선순위 공격면을 공동 선정하고 Daybreak Red 접근을 확대해 자사 시스템과 제3자 서비스 연결부를 집중 점검한다.
+- 영향도: 에이전트 보안의 공격면이 단일 모델·앱에서 인증, 클라우드, 외부 도구가 만나는 시스템 경계로 이동한다.
+- 원문: https://openai.com/index/partnering-with-hacktron/
 
 ### 원문 핵심문장
 
-> It learns. You approve.
+> As AI agents connect services in new ways, that combination of skills becomes even more valuable.
 
-기기가 학습하고, 사용자가 승인한다.
+AI 에이전트가 서비스를 새로운 방식으로 연결할수록 이러한 결합 역량은 더 중요해진다.
 
 ### 원문 요약
 
-[FACT] Aina Ring은 OLED 화면, 일곱 가지 제스처, 음성, Mac 제어와 통화를 제공한다. [FACT] 루틴 학습은 사용자 기기에서 수행하며 제안된 행동은 스와이프 승인 후 실행된다. [FACT] 가격은 초기 399달러부터이며 2027년 초 배송 예정이다. [SIGNAL] 에이전트 행동의 신뢰 문제를 화면에 하나의 제안만 표시하고 물리 제스처로 승인하는 방식으로 풀려는 시도다.
+[FACT] OpenAI와 Hacktron은 우선순위 영역을 함께 정하고 특히 제3자 서비스와의 상호작용을 시험한다. [FACT] Hacktron은 Daybreak Red를 통해 프런티어 모델 접근을 확대한다. [FACT] 양측은 이전 버그바운티 관계를 공식 협업으로 확장했다. [SIGNAL] AI 레드팀은 모델 단독 테스트보다 권한·ID·클라우드·도구 연쇄의 취약점 검증으로 이동한다.
 
 ### 왜 중요한가?
 
-에이전트가 실제 행동을 수행할수록 모델 정확도보다 제안 시점, 승인 부담, 잘못된 실행을 막는 인터페이스가 중요해진다.
+에이전트는 여러 서비스 권한을 연결하므로 각각 안전해도 조합 과정에서 계정 탈취·권한 상승·데이터 유출 경로가 생길 수 있다.
 
 ### 업계 분위기
 
-Hardware: 새로운 입력장치와 온디바이스 개인화에 기대가 있다. Market: 선주문 하드웨어의 배송·배터리·실사용 가치와 399달러 가격은 검증이 필요하다.
+Security: 외부 전문팀과 프런티어 모델을 결합한 실전 검증에 기대가 있다. Governance: 공격 모델 접근 확대에는 범위 통제, 증거 보존, 책임 있는 공개가 필수라는 경계가 강하다.
 
 ### 앞으로의 전망
 
-AI 웨어러블은 항상 듣는 비서보다 저빈도 고가치 제안, 기기 내 학습, 물리적 승인과 실행 확인을 중심으로 경쟁할 가능성이 높다.
+기업 보안 평가는 에이전트의 도구 호출 그래프와 인증 경계를 중심으로 시나리오를 만들고, 발견부터 재현·패치까지 연속 증거를 요구할 전망이다.
 
 ### 사업 기회
 
-앱·업무도구가 웨어러블 승인 인터페이스에 안전하게 노출되도록 하는 액션 정책·커넥터 SDK.
+SaaS 에이전트의 OAuth·MCP·클라우드 연결부를 자동 맵핑하고 승인 범위를 검증하는 레드팀 패키지.
 
 ### 관련 태그
 
-Agent · Voice AI · Workflow · AI Tool · Wearable
+OpenAI · AI Security · Agent · MCP · AI Infra
+
+## 4. Meta, Muse 안에서 자연어로 만드는 맞춤형 ‘Spaces’ 출시
+
+- 중요도: A
+- 한줄요약: Meta가 일정·쇼핑·학교·고객관리 등 개인화 화면을 자연어로 만들고 앱 연결로 백그라운드 갱신하는 Muse Spaces를 출시했다.
+- 영향도: 개인 에이전트가 채팅창을 넘어 사용자가 직접 조립하는 지속형 미니앱·대시보드 운영체제로 확장된다.
+- 원문: https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/
+
+### 원문 핵심문장
+
+> Today, we’re introducing spaces, an interactive way to build a more personalized Muse.
+
+오늘 우리는 Muse를 더 개인화하도록 만드는 상호작용형 Spaces를 소개한다.
+
+### 원문 요약
+
+[FACT] 사용자는 아이디어를 설명해 공간을 만들고 레이아웃·모양·동작을 대화로 수정할 수 있다. [FACT] 공간을 사이드바·메인 탭에 두거나 숨기고 일정에 맞춰 표시할 수 있다. [FACT] 연결 앱의 새 정보로 공간이 백그라운드에서 갱신되며 Muse Wonder 학습을 반영한 특화 모델도 순차 적용된다. [INTERPRETATION] 에이전트 제품은 대화형 답변에서 지속되는 사용자 정의 업무 화면으로 이동하고 있다.
+
+### 왜 중요한가?
+
+일회성 프롬프트보다 반복해서 보는 상태, 입력, 자동 갱신과 실행 제어를 한 화면에 묶는 것이 에이전트의 일상적 사용성을 높인다.
+
+### 업계 분위기
+
+Consumers: 코딩 없이 생활·업무용 미니앱을 만든다는 점은 매력적이다. Privacy: 메일·캘린더·메시지 연결과 백그라운드 실행이 늘수록 권한 가시성과 행동 승인 문제가 커진다.
+
+### 앞으로의 전망
+
+대형 에이전트 플랫폼은 범용 채팅과 앱스토어 사이에 사용자가 자연어로 조립하는 개인 Spaces 시장을 만들고, 템플릿·커넥터 생태계로 확장할 가능성이 높다.
+
+### 사업 기회
+
+한국 자영업자용 주문·고객문의·배송을 묶는 에이전트 Space 템플릿과 안전한 커넥터.
+
+### 관련 태그
+
+Meta · Agent · Workflow · AI Tool · AI Startup
 
 # Business Radar
 
-## 1. 연구기관 AI 업무 사용 진단
+## 1. 에이전트 메모리 CI·드리프트 감사
+
+- 점수: 4.2/5 (4★)
+- 가능성: High
+- 난이도: Medium
+- 예상 고객: 장기 실행 고객지원·코딩·업무 에이전트를 운영하는 SaaS팀
+- 문제: 에이전트가 만든 기억이 오래되거나 잘못되거나 민감정보를 포함해 이후 판단을 지속 오염시킬 수 있다.
+- 경쟁사: Mem0, Letta, LangSmith, 사내 RAG 품질 점검
+- 차별점: 기억 저장보다 원본 출처 대조, 변경 diff, 만료, 민감정보, 상위 컨텍스트 승격 정책을 CI 검사로 제공한다.
+- 2주 MVP: 공개 대화 로그와 메모 500건으로 오류·출처없음·민감정보·만료 규칙 10개를 검사하고 수정 제안 리포트를 만든다.
+- 수익화: 에이전트·메모리량 기반 월 구독과 감사 보고서
+- 반증 조건: 10개 에이전트팀 중 3곳 미만이 실제 메모리 오류 사례를 보유하거나 월 20만원 이상 지불 의사가 없으면 중단한다.
+
+## 2. 바이오 연구실 맞춤형 AI 증거 QA 벤치
 
 - 점수: 4.1/5 (4★)
 - 가능성: High
-- 난이도: Medium
-- 예상 고객: 대학 연구실, 정부출연연구소, R&D 조직
-- 문제: 범용 AI를 도입해도 분야별 데이터·규제·실험 흐름 차이 때문에 실제 생산성과 위험을 측정하기 어렵다.
-- 경쟁사: Microsoft Copilot Analytics, 컨설팅사 AI 진단, 내부 설문
-- 차별점: 내용을 저장하지 않고 작업 유형·검증 산출물·시간 절감만 분류해 분야별 도입 우선순위를 만든다.
-- 2주 MVP: 연구팀 3곳의 익명 작업일지 100건을 분류해 고빈도·저위험 후보와 데이터 경계를 담은 대시보드를 제공한다.
-- 수익화: 진단 프로젝트 비용과 분기별 모니터링 구독
-- 반증 조건: 5개 연구팀 중 2곳 미만이 익명 텔레메트리 제공에 동의하거나 개선 후보가 기존 설문보다 유용하지 않으면 중단한다.
-
-## 2. AI 인프라 지역약속 이행 대시보드
-
-- 점수: 4/5 (4★)
-- 가능성: High
 - 난이도: High
-- 예상 고객: 데이터센터 개발사, 지자체, 전력·환경 자문사
-- 문제: 전력·물·소음·고용·지역투자 약속이 문서에 흩어져 주민과 승인기관이 이행 여부를 지속 확인하기 어렵다.
-- 경쟁사: ESG 보고 플랫폼, 환경영향평가 컨설팅, 데이터센터 DCIM
-- 차별점: 캠퍼스별 지역협약을 측정 가능한 지표·증거·공개 일정으로 변환하고 주민용 요약을 함께 제공한다.
-- 2주 MVP: 공개된 캠퍼스 협약 3건을 지표 20개로 구조화하고 샘플 월간 공개 페이지와 누락 경고를 만든다.
-- 수익화: 캠퍼스별 구축비와 연간 공개·감사 구독
-- 반증 조건: 개발사·지자체 인터뷰 10건 중 3건 미만이 수작업 보고 부담과 지불 의사를 확인하거나 공공데이터 확보가 불가능하면 중단한다.
+- 예상 고객: 국내 바이오 스타트업, 대학 공동기기실, CRO
+- 문제: 범용 AI 벤치마크는 각 연구실 장비·프로토콜·실패 패턴을 반영하지 않아 실제 도입 전 신뢰도를 판단하기 어렵다.
+- 경쟁사: BioBasicsBench, Benchling, 내부 검증 스프레드시트, 바이오 컨설팅
+- 차별점: 실패 실험과 불충분한 증거를 익명화해 조직 전용 평가세트로 만들고 대조군·불확실성·근거 인용을 채점한다.
+- 2주 MVP: 한 연구팀의 과거 실험 이미지 30건을 익명화하고 전문가 루브릭으로 모델 2종을 비교하는 비공개 리포트를 만든다.
+- 수익화: 초기 평가세트 구축비와 모델 업데이트 회귀검사 구독
+- 반증 조건: 연구팀 5곳 중 2곳 미만이 데이터 반출 없이 평가 참여하거나 전문가 채점 비용을 감당할 수 없으면 중단한다.
 
 # AI Tool Radar
 
-- **Aina Ring** (3★): 온디바이스 루틴 학습과 물리적 승인 제스처를 결합한 AI 인터페이스를 공개했다. 배송 후 실제 배터리, 오작동률, 승인 피로와 iPhone·Mac 통합 범위를 검증해야 한다. — https://www.aina.com/
-- **Vidbyte SDK** (3★): 에이전트 빌드·평가·추적·MCP와 실행당 비용 상한을 하나의 MIT Python SDK에 묶었다. 0-star 신생 프로젝트이므로 샌드박스에서 비용 상한과 로컬 추적만 작은 예제로 검증할 만하다. — https://github.com/cerredz/Vidbyte-SDK
+- **Claude Agent Memory Dreaming Cookbook** (4★): 완료 세션을 읽어 위키형 메모리를 야간에 재구성하는 실제 워크플로를 제공한다. 민감정보가 없는 작은 세션 묶음에서 출처 링크, 오류 수정, 토큰 비용과 잘못된 승격을 먼저 측정할 만하다. — https://platform.claude.com/cookbook/managed-agents-cma-dreaming-with-a-dynamic-workflow
+- **BioBasicsBench** (4★): 정제된 논문 그림이 아니라 실패와 모호성이 섞인 원시 실험 증거 100개 과제를 평가한다. 생명과학 조직은 공개 점수보다 자체 장비·프로토콜의 20~30개 사례로 사내 회귀검사를 만드는 출발점으로 쓸 만하다. — https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/
+- **Muse Spaces** (3★): 자연어로 지속형 개인 대시보드를 만들고 연결 앱 정보로 백그라운드 갱신한다. 사용 가능 지역이라면 읽기 전용 커넥터로 시작해 권한 표시와 자동 실행 승인 흐름을 확인할 가치가 있다. — https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/
 
 # Community Pulse
 
-- **Product Hunt · 새 AI 인터페이스·도구 탐색 활발** — 신제품 순위에서는 에이전트와 개인화 인터페이스가 계속 주목받지만 초기 투표는 실사용 검증과 구분해야 한다. (https://www.hunted.space/calendar)
-- **GitHub · 기능은 폭넓지만 신뢰 신호는 초기** — Vidbyte SDK는 에이전트 평가·추적·비용 상한을 폭넓게 제공하지만 별 0개인 신생 저장소라 보수적 검증이 필요하다. (https://github.com/cerredz/Vidbyte-SDK)
-- **Other · 지역 수용성과 투명성 논의 확대** — AI 컴퓨트 확장에서 전력·물·고용·주민 발언권을 공개 약속으로 묶는 흐름이 뚜렷해졌다. (https://openai.com/index/setting-new-standard-responsible-ai-infrastructure/)
+- **GitHub · 에이전트 메모리를 파일·워크플로로 운영하려는 실험 확대** — Anthropic cookbook 업데이트와 커뮤니티 구현은 메모리를 벡터DB가 아니라 버전 가능한 작업 산출물로 다루는 흐름을 보여준다. (https://github.com/anthropics/claude-cookbooks)
+- **Reddit · 기억 유용성보다 오염·비용을 걱정하는 신중론** — 빌더들은 장기 기억이 맥락을 살리지만 잘못된 정보와 토큰 사용이 누적될 수 있어 로그 대조와 제한적 주입이 필요하다고 본다. (https://www.reddit.com/r/BuildWithClaude/comments/1tx3ljs/i_benchmarked_4_ways_to_give_an_ai_agent_longterm/)
+- **Other · 실험실 AI의 ‘모르면 멈춤’ 평가에 관심** — BioBasicsBench 발표 이후 원시 증거·대조군·근거 부족 인식이 과학 에이전트의 실용 기준으로 부상했다. (https://benchlm.ai/benchmarks/biobasicsbench)
+- **Other · 개인화 기대와 커넥터 개인정보 우려가 공존** — Muse Spaces는 미니앱 제작 장벽을 낮추지만 이메일·캘린더·메시지 연결의 권한과 백그라운드 행동 가시성이 관건이다. (https://apnews.com/article/449734d41d3750aad7038b761faa49c9)
 
 # AI Skill of the Day
 
-## 내용 비저장형 사용 텔레메트리
+## 메모리 승격 게이트
 
-- 언제 사용하는가: 민감한 연구·업무 내용을 보관하지 않으면서 AI가 어떤 작업에 쓰이고 어디서 막히는지 측정할 때.
-- 실무 예제: 세션 내용을 즉시 작업 분류·도구·검증 결과·소요시간 라벨로 바꾸고 원문은 폐기한 뒤 최소 계정 수 이상인 집계만 보고한다.
-- 프롬프트 예제: 다음 세션을 고정된 작업 분류표로만 라벨링하라. 자유서술 내용, 데이터셋명, 가설, 미공개 결과는 저장하지 말고 작업유형·사용도구·검증유무·완료상태만 반환하라.
+- 언제 사용하는가: 에이전트가 세션 로그에서 장기 기억을 만들고 다음 작업의 기본 컨텍스트로 불러올 때.
+- 실무 예제: 새 기억은 원본 로그 링크, 작성 시각, 신뢰도, 만료일을 포함해 격리 저장하고 두 번 이상 재사용되거나 사람 검토를 통과한 항목만 MEMORY.md 상단 인덱스로 승격한다.
+- 프롬프트 예제: 다음 세션 로그에서 장기 기억 후보를 추출하라. 각 후보에 원문 근거, 반대 근거, 민감정보 여부, 만료 조건, 신뢰도를 붙이고 원문으로 검증할 수 없는 항목은 승격하지 마라.
 
 # Worth Reading
 
-- **Paper · How scientists use Claude** — 20만여 실제 세션에서 분야·작업별 AI 사용 격차와 개인정보 보호형 측정법을 볼 수 있다. (https://www.anthropic.com/research/how-researchers-use-claude)
-- **GitHub · Vidbyte SDK** — 에이전트 비용 상한, 평가, 추적, MCP 통합 구조를 한 저장소에서 비교할 수 있다. (https://github.com/cerredz/Vidbyte-SDK)
-- **YouTube · Aina funding film** — AI 시대의 입력장치라는 제품 가설과 하드웨어 방향을 시각적으로 확인할 수 있다. (https://youtu.be/wFW_EGMl3V8)
-- **Blog · Setting a new standard for responsible AI infrastructure** — AI 컴퓨트 캠퍼스의 전력·물·주민 참여·고용 책임을 구체적 약속으로 읽을 수 있다. (https://openai.com/index/setting-new-standard-responsible-ai-infrastructure/)
+- **Paper · The components of agent memory** — 로그·노트·위키·주입 컨텍스트의 계층과 dreaming 평가 결과를 구체적으로 확인할 수 있다. (https://www.anthropic.com/research/components-of-agent-memory)
+- **GitHub · Anthropic Claude Cookbooks** — 동적 워크플로로 세션을 위키형 메모리로 재구성하는 구현 자료를 볼 수 있다. (https://github.com/anthropics/claude-cookbooks)
+- **YouTube · Memory and dreaming for self-learning agents** — 동시 실행 에이전트가 공유 메모리를 다루는 구조와 dreaming의 역할을 설명한다. (https://www.youtube.com/watch?v=RtywqDFBYnQ)
+- **Blog · Measuring how AI agents handle everyday wet-lab science** — 원시 실험 증거에서 오류와 근거 부족을 평가하는 100개 과제의 설계와 한계를 볼 수 있다. (https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/)
 
 # 운영 상태
 
 - 정본: Git
-- Notion: 갱신 보류 — 전체 페이지 교체가 필요한 방식의 안전 제한
 - Architect 후보: 없음
+- Notion: 갱신 보류 — 자식 콘텐츠 삭제 가능성이 있는 전체 교체는 실행하지 않음
