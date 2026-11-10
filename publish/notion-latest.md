@@ -1,219 +1,219 @@
-# AI Daily Intelligence · 2026-11-09
+# AI Daily Intelligence · 2026-11-10
 
-> 상태: PARTIAL · 최근 72시간의 미수록 공식 발표를 선별했습니다. Git이 정본이며 Notion 갱신은 안전 제한으로 보류했습니다.
+> 상태: PARTIAL · Git 정본 작성 완료, Notion Latest는 안전 제한으로 갱신하지 못했습니다.
 
 ## Today's Insight
 
-지속형 에이전트의 핵심 경쟁력은 더 오래 기억하고 더 많이 실행하는 능력이 아니라, 기억과 증거와 권한을 검증한 뒤 필요한 순간에만 승격하는 운영체계다.
+프런티어 AI의 다음 경쟁은 더 강한 모델 하나가 아니라, 어려운 작업만 승격하고 생성된 결과를 검토·제조·조달 경계에서 통과시키는 운영 설계다.
 
 # Today's Top 4
 
-## 1. Anthropic, 에이전트 메모리의 ‘dreaming’ 구조와 평가 공개
+## 1. Anthropic, Claude Fable 5.2·Mythos 5.2 출시
 
 - 중요도: S
-- 한줄요약: Anthropic이 실행 중 메모, 원본 로그, 위키형 표현, 주입 컨텍스트를 나누고 비활성 시간의 재검토로 오류를 고치는 메모리 구조를 공개했다.
-- 영향도: 장기 실행 에이전트의 경쟁력이 기억량보다 출처 검증, 오류 수정, 압축과 검색을 포함한 메모리 유지보수로 이동한다.
-- 원문: https://www.anthropic.com/research/components-of-agent-memory
+- 한줄요약: Anthropic이 고난도 기술 작업용 Fable 5.2와 검증 조직용 Mythos 5.2를 출시하며 가격을 $8/$40로 낮추고 출력 속도를 최대 30% 높였다.
+- 영향도: 프런티어 모델 경쟁이 절대 성능뿐 아니라 고위험 기능의 접근 계층, 가격·속도, 장기 실행 오케스트레이션으로 이동한다.
+- 원문: https://www.anthropic.com/claude-fable-and-mythos-5-2
 
 ### 원문 핵심문장
 
-> Dreaming gives Claude an opportunity to look backward and use compute to organize its memory, correct mistakes, and maintain representations.
+> Claude Fable and Claude Mythos are the same underlying model.
 
-Dreaming은 Claude가 과거를 돌아보며 메모리를 정리하고 오류를 고치며 표현을 유지하도록 한다.
+Claude Fable과 Claude Mythos는 같은 기반 모델이다.
 
 ### 원문 요약
 
-[FACT] Anthropic은 메모리를 세션 로그, 에이전트가 쓴 노트, 위키 같은 표현, 매 세션에 주입되는 컨텍스트의 계층으로 설명했다. [FACT] 35만 파일·약 4억2천만 토큰 말뭉치에서 위키와 검색을 함께 쓴 점수가 위키 성장에 따라 54%에서 61%로 올랐고 질문당 약 2만 토큰을 절약했다고 밝혔다. [FACT] 잘못된 노트는 원본 로그와 대조하는 dreaming으로 수정할 수 있었다. [INTERPRETATION] 지속 메모리는 저장소가 아니라 주기적 검증 파이프라인이다.
+[FACT] Fable 5.2와 Mythos 5.2는 동일 기반 모델이며 Fable에는 사이버·바이오 보호장치가 적용되고 Mythos는 검증 프로그램 승인 조직만 접근한다. [FACT] 표준 가격은 입력 100만 토큰당 8달러, 출력 40달러이며 이전 세대보다 출력이 최대 30% 빠르다고 밝혔다. [FACT] 2.5배 빠른 Fast 모드는 $16/$80이다. [INTERPRETATION] 동일 능력을 위험도와 고객 검증 수준에 따라 다른 배포 경계로 제공하는 전략이 명확해졌다.
 
 ### 왜 중요한가?
 
-장기 에이전트가 틀린 기억을 반복 사용하면 오류가 누적되므로 원본 로그, 수정 이력, 승격 기준과 폐기 규칙이 제품의 신뢰성을 좌우한다.
+기업은 가장 강한 모델을 기본값으로 쓰기보다 일상 작업은 저비용 모델, 어려운 문제는 Fable, 고위험 연구는 검증형 Mythos로 라우팅해야 비용과 통제를 함께 맞출 수 있다.
 
 ### 업계 분위기
 
-Builders: 단순 벡터 검색보다 계층형 메모리와 야간 정리 작업에 관심이 커지고 있다. Caution: dreaming 비용과 잘못된 기억의 자동 승격, 메모리 프롬프트 주입 위험은 별도 통제가 필요하다.
+Developers: 가격 인하와 장기 기술 작업 성능에 관심이 집중된다. Safety: 같은 기반 모델을 공개형·검증형으로 나눈 배포 정책과 실제 오차·거절률을 지켜보는 분위기다.
 
 ### 앞으로의 전망
 
-에이전트 플랫폼은 메모리 생성·검증·병합·만료를 코드처럼 버전 관리하고, 고위험 기억은 사람 승인 뒤 상위 컨텍스트로 승격하는 방향으로 발전할 전망이다.
+프런티어 모델 제품군은 한 모델의 등급 차이가 아니라 능력·보호장치·데이터 보존·고객 검증을 조합한 접근 계층으로 세분화될 전망이다.
 
 ### 사업 기회
 
-기업용 에이전트 메모리의 출처·드리프트·민감정보를 검사하는 ‘memory CI’ 서비스.
+여러 모델의 비용·위험·작업 난도를 기준으로 자동 라우팅하고 결과를 비교하는 기술팀용 운영 레이어.
 
 ### 관련 태그
 
-Anthropic · Claude · Agent · Context Engineering · Workflow · AI Security
+Anthropic · Claude · LLM · Agent · AI Security · AI Infra
 
-## 2. OpenAI·Ligo, 원시 실험데이터용 BioBasicsBench 공개
+## 2. Claude Fable 5.2, 전자제품 3종을 설계해 작동 프로토타입 제작
 
 - 중요도: S
-- 한줄요약: OpenAI와 Ligo가 젤·현미경·배양판 등 원시 실험 증거를 해석하고 오류와 근거 부족을 판별하는 100개 과제 벤치마크를 공개했다.
-- 영향도: 과학 에이전트 평가가 정제된 논문 그림에서 실패·모호성·대조군 오류가 섞인 실제 실험실 판단으로 확장됐다.
-- 원문: https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/
+- 한줄요약: Anthropic과 Diode가 Claude로 회로·PCB·케이스·펌웨어·부품표를 설계하고 수정 없이 회로가 작동한 전자기기 프로토타입 3종을 제작했다.
+- 영향도: AI 코딩이 소프트웨어를 넘어 데이터시트, CAD, PCB 라우팅, 제조성 검사를 연결하는 물리 제품 개발 루프로 진입했다.
+- 원문: https://www.anthropic.com/research/claude-electronics-design
 
 ### 원문 핵심문장
 
-> The benchmark’s 100 tasks test whether agents can interpret raw experimental data, identify errors, and recognize when the evidence cannot support a conclusion.
+> Now, Claude can both design and prototype electronic hardware from start to finish.
 
-100개 과제는 원시 데이터를 해석하고 오류를 찾으며 증거가 결론을 지지하지 못하는 경우를 인식하는지 평가한다.
+이제 Claude는 전자 하드웨어를 처음부터 끝까지 설계하고 프로토타입으로 만들 수 있다.
 
 ### 원문 요약
 
-[FACT] BioBasicsBench는 단백질법, 이미징·유세포분석, 정량·분석, 핵산법, 분자클로닝의 100개 과제로 구성된다. [FACT] GPT-6 Astra는 xhigh 설정에서 66.7%, GPT-5.6 Sol은 43.8%를 기록했다고 OpenAI가 밝혔다. [FACT] 이미지 해석, 대조군 확인, 실험 맥락 적용에는 여전히 개선 여지가 있다. [INTERPRETATION] 과학 AI의 핵심 지표가 답 생성에서 증거 부족을 멈춰 말하는 능력으로 이동한다.
+[FACT] Fable 5.2는 스피커폰, 음성비서 허브, 가상펫의 사양·회로도·PCB·3D 케이스·펌웨어·부품표를 만들었다. [FACT] Diode는 설계 파일로 세 보드를 제작했고 회로 수정 왕복이 없었다고 밝혔다. [FACT] PCB 배치·라우팅 평가에서 83.5%를 기록했다고 Anthropic이 보고했다. [FACT] 전기 검증, 안테나 튜닝, 열 시험, 인증과 양산 설계는 아직 수행되지 않았다.
 
 ### 왜 중요한가?
 
-실험실에서는 그럴듯한 오판이 비용과 시간을 낭비하므로 모델이 결론뿐 아니라 대조군·오류·불확실성을 구조화해 보여줘야 한다.
+하드웨어 개발의 초기 반복 비용은 높다. AI가 제조 제약과 부품 재고까지 확인하면 1~3인 팀도 아이디어에서 작동 샘플까지의 시간을 크게 줄일 수 있지만 인증과 안전 검토는 남는다.
 
 ### 업계 분위기
 
-Biotech: 실제 원시 데이터 기반 평가가 부족했던 공백을 메운다는 기대가 있다. Validation: 제작사 결과이며 공개 데이터·독립 재현 범위와 모델별 비용 비교가 더 필요하다.
+Hardware: 한 문단 요구에서 작동 보드까지 간 사례에 기대가 크다. Caution: Anthropic과 상업 파트너의 데모이며 장기 내구성·인증·양산 수율은 독립 검증되지 않았다.
 
 ### 앞으로의 전망
 
-바이오 AI 도입은 범용 벤치마크보다 조직별 장비·프로토콜·실패 사례를 반영한 사내 평가세트와 사람 검토 루프를 먼저 요구할 전망이다.
+초기 PCB·케이스·펌웨어 통합 설계는 빠르게 자동화되지만, 시험 장비 피드백과 인증 증거를 연결한 폐쇄 루프가 상용화의 핵심 병목이 될 전망이다.
 
 ### 사업 기회
 
-국내 바이오 연구실의 익명화된 실패 실험으로 사내 에이전트 평가세트를 구축하는 서비스.
+한국 하드웨어 스타트업용 AI 설계 산출물의 DFM·부품수급·인증 준비 검증 서비스.
 
 ### 관련 태그
 
-OpenAI · Agent · AI Science · Workflow · AI Security
+Anthropic · Claude · Agent · AI Coding · Workflow · Hardware
 
-## 3. OpenAI, Hacktron과 제3자 서비스 경계 보안 테스트 확대
+## 3. ChatGPT Enterprise, AWS Marketplace에서 구매·관리 가능
 
 - 중요도: A
-- 한줄요약: OpenAI가 Hacktron과 고우선순위 공격면을 공동 선정하고 Daybreak Red 접근을 확대해 자사 시스템과 제3자 서비스 연결부를 집중 점검한다.
-- 영향도: 에이전트 보안의 공격면이 단일 모델·앱에서 인증, 클라우드, 외부 도구가 만나는 시스템 경계로 이동한다.
-- 원문: https://openai.com/index/partnering-with-hacktron/
+- 한줄요약: OpenAI가 ChatGPT Enterprise를 AWS Marketplace에 등록해 기존 AWS 구매·청구 관계와 약정 지출을 활용한 도입 경로를 열었다.
+- 영향도: 기업 AI 경쟁에서 모델 선택보다 조달, 예산 귀속, 보안 심사와 클라우드 약정을 통과하는 유통 경로가 중요해졌다.
+- 원문: https://openai.com/index/chatgpt-enterprise-aws-marketplace/
 
 ### 원문 핵심문장
 
-> As AI agents connect services in new ways, that combination of skills becomes even more valuable.
+> The listing gives organizations a simpler way to discover, buy, and manage ChatGPT Enterprise using their existing AWS purchasing and billing relationship.
 
-AI 에이전트가 서비스를 새로운 방식으로 연결할수록 이러한 결합 역량은 더 중요해진다.
+기존 AWS 구매·청구 관계로 ChatGPT Enterprise를 더 쉽게 찾고 구매하며 관리할 수 있다.
 
 ### 원문 요약
 
-[FACT] OpenAI와 Hacktron은 우선순위 영역을 함께 정하고 특히 제3자 서비스와의 상호작용을 시험한다. [FACT] Hacktron은 Daybreak Red를 통해 프런티어 모델 접근을 확대한다. [FACT] 양측은 이전 버그바운티 관계를 공식 협업으로 확장했다. [SIGNAL] AI 레드팀은 모델 단독 테스트보다 권한·ID·클라우드·도구 연쇄의 취약점 검증으로 이동한다.
+[FACT] AWS 고객은 Marketplace에서 ChatGPT Enterprise를 구매하고 적격 지출을 AWS 약정에 적용할 수 있다. [FACT] 직접 구매와 같은 모델·기능을 같은 시점에 제공한다고 OpenAI가 밝혔다. [FACT] ChatGPT for Healthcare와 Financial Services도 적격 고객이 Marketplace에서 접근할 수 있다. [INTERPRETATION] 대기업 도입 병목이 기능 검증에서 조달·계약·비용 통합으로 이동하고 있다.
 
 ### 왜 중요한가?
 
-에이전트는 여러 서비스 권한을 연결하므로 각각 안전해도 조합 과정에서 계정 탈취·권한 상승·데이터 유출 경로가 생길 수 있다.
+이미 AWS 약정과 공급사 심사 체계를 가진 기업은 별도 계약 경로를 줄일 수 있고, AI 예산을 기존 클라우드 거버넌스 안에서 관리하기 쉬워진다.
 
 ### 업계 분위기
 
-Security: 외부 전문팀과 프런티어 모델을 결합한 실전 검증에 기대가 있다. Governance: 공격 모델 접근 확대에는 범위 통제, 증거 보존, 책임 있는 공개가 필수라는 경계가 강하다.
+Enterprise: 구매·청구 통합이 도입 시간을 줄일 것이라는 기대가 있다. Governance: Marketplace 구매가 데이터 처리·권한·내부 사용정책 검토를 대신하지는 않는다는 신중론이 필요하다.
 
 ### 앞으로의 전망
 
-기업 보안 평가는 에이전트의 도구 호출 그래프와 인증 경계를 중심으로 시나리오를 만들고, 발견부터 재현·패치까지 연속 증거를 요구할 전망이다.
+주요 AI 제품은 다중 클라우드 마켓플레이스와 산업별 패키지를 통해 유통되고, 기업은 모델 비용과 좌석 비용을 하나의 FinOps·AI 거버넌스 체계로 묶게 될 전망이다.
 
 ### 사업 기회
 
-SaaS 에이전트의 OAuth·MCP·클라우드 연결부를 자동 맵핑하고 승인 범위를 검증하는 레드팀 패키지.
+AWS 약정 고객용 AI SaaS 조달 비교, 권한 설계, 비용 귀속을 묶은 도입 준비 패키지.
 
 ### 관련 태그
 
-OpenAI · AI Security · Agent · MCP · AI Infra
+OpenAI · AWS · AI Infra · Workflow · Enterprise
 
-## 4. Meta, Muse 안에서 자연어로 만드는 맞춤형 ‘Spaces’ 출시
+## 4. CodeRabbit, 에이전트 개발의 병목을 코드 생성에서 검토·보안으로 이동
 
 - 중요도: A
-- 한줄요약: Meta가 일정·쇼핑·학교·고객관리 등 개인화 화면을 자연어로 만들고 앱 연결로 백그라운드 갱신하는 Muse Spaces를 출시했다.
-- 영향도: 개인 에이전트가 채팅창을 넘어 사용자가 직접 조립하는 지속형 미니앱·대시보드 운영체제로 확장된다.
-- 원문: https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/
+- 한줄요약: CodeRabbit이 Codex로 같은 인원에서 소프트웨어 출하량이 약 20배 늘었고 Daybreak 기반 보안 에이전트로 검토·취약점 수정 범위를 확장했다고 밝혔다.
+- 영향도: 코딩 에이전트 확산으로 제품 가치는 생성 속도보다 변경 우선순위, 검토 설명, 보안과 자동 병합 경계에서 커지고 있다.
+- 원문: https://openai.com/index/coderabbit-codex-daybreak/
 
 ### 원문 핵심문장
 
-> Today, we’re introducing spaces, an interactive way to build a more personalized Muse.
+> The first bottleneck that every company hits as soon as you adopt coding agents is code reviews.
 
-오늘 우리는 Muse를 더 개인화하도록 만드는 상호작용형 Spaces를 소개한다.
+기업이 코딩 에이전트를 도입하자마자 처음 만나는 병목은 코드 리뷰다.
 
 ### 원문 요약
 
-[FACT] 사용자는 아이디어를 설명해 공간을 만들고 레이아웃·모양·동작을 대화로 수정할 수 있다. [FACT] 공간을 사이드바·메인 탭에 두거나 숨기고 일정에 맞춰 표시할 수 있다. [FACT] 연결 앱의 새 정보로 공간이 백그라운드에서 갱신되며 Muse Wonder 학습을 반영한 특화 모델도 순차 적용된다. [INTERPRETATION] 에이전트 제품은 대화형 답변에서 지속되는 사용자 정의 업무 화면으로 이동하고 있다.
+[FACT] CodeRabbit은 2만 개 이상 조직과 15만 개 이상 오픈소스 프로젝트에서 사용된다고 밝혔다. [FACT] CEO는 지난 6개월간 인원 증가 없이 약 20배 더 많은 소프트웨어를 출하했다고 추정했다. [FACT] 회사는 저위험 변경 자동 병합, Codex 기반 사고·지원 티켓 처리, Daybreak 기반 보안 검사를 운영한다. [SPECULATION] 20배 생산성과 4만3천 건 취약점 수치는 회사 주장 중심이며 독립 검증되지 않았다.
 
 ### 왜 중요한가?
 
-일회성 프롬프트보다 반복해서 보는 상태, 입력, 자동 갱신과 실행 제어를 한 화면에 묶는 것이 에이전트의 일상적 사용성을 높인다.
+에이전트가 PR을 대량 생성하면 사람의 리뷰 시간이 새 병목이 된다. 변경 위험, 테스트, 보안 증거와 승인 경계를 자동화해야 속도 증가가 품질 저하로 이어지지 않는다.
 
 ### 업계 분위기
 
-Consumers: 코딩 없이 생활·업무용 미니앱을 만든다는 점은 매력적이다. Privacy: 메일·캘린더·메시지 연결과 백그라운드 실행이 늘수록 권한 가시성과 행동 승인 문제가 커진다.
+Developers: 에이전트 병렬화의 실제 운영 패턴과 리뷰 자동화에 관심이 높다. Skepticism: 공급사 사례 연구의 생산성·취약점 수치를 일반화하기 어렵고 오탐과 유지보수 비용을 봐야 한다.
 
 ### 앞으로의 전망
 
-대형 에이전트 플랫폼은 범용 채팅과 앱스토어 사이에 사용자가 자연어로 조립하는 개인 Spaces 시장을 만들고, 템플릿·커넥터 생태계로 확장할 가능성이 높다.
+코드 생성 도구는 리뷰·보안·회귀검사·릴리스 정책과 결합되고, 팀은 PR 수보다 자동 수정 채택률과 회귀율을 핵심 지표로 삼을 전망이다.
 
 ### 사업 기회
 
-한국 자영업자용 주문·고객문의·배송을 묶는 에이전트 Space 템플릿과 안전한 커넥터.
+소규모 개발팀용 에이전트 생성 PR의 위험도·테스트 증거·리뷰 순서를 정리하는 경량 대시보드.
 
 ### 관련 태그
 
-Meta · Agent · Workflow · AI Tool · AI Startup
+OpenAI · Codex · AI Coding · Agent · AI Security · Workflow
 
 # Business Radar
 
-## 1. 에이전트 메모리 CI·드리프트 감사
+## 1. AI 하드웨어 설계 검증 패스
 
 - 점수: 4.2/5 (4★)
 - 가능성: High
-- 난이도: Medium
-- 예상 고객: 장기 실행 고객지원·코딩·업무 에이전트를 운영하는 SaaS팀
-- 문제: 에이전트가 만든 기억이 오래되거나 잘못되거나 민감정보를 포함해 이후 판단을 지속 오염시킬 수 있다.
-- 경쟁사: Mem0, Letta, LangSmith, 사내 RAG 품질 점검
-- 차별점: 기억 저장보다 원본 출처 대조, 변경 diff, 만료, 민감정보, 상위 컨텍스트 승격 정책을 CI 검사로 제공한다.
-- 2주 MVP: 공개 대화 로그와 메모 500건으로 오류·출처없음·민감정보·만료 규칙 10개를 검사하고 수정 제안 리포트를 만든다.
-- 수익화: 에이전트·메모리량 기반 월 구독과 감사 보고서
-- 반증 조건: 10개 에이전트팀 중 3곳 미만이 실제 메모리 오류 사례를 보유하거나 월 20만원 이상 지불 의사가 없으면 중단한다.
+- 난이도: High
+- 예상 고객: 전자제품을 만드는 국내 1~10인 하드웨어 스타트업·메이커 제조사
+- 문제: AI가 회로·PCB·케이스를 빠르게 만들 수 있어도 제조성, 부품 수급, 열·EMI·인증 누락은 실제 제작 비용과 일정 실패로 이어진다.
+- 경쟁사: Altium DFM, JLCPCB DFM, 하드웨어 설계사무소, Diode Computers
+- 차별점: AI 생성 설계의 출처·가정·제조 규칙을 자동 검사하고 국내 KC·전파 인증 준비 체크리스트와 사람 리뷰를 연결한다.
+- 2주 MVP: 공개 KiCad 설계 10개와 의도적으로 오류를 넣은 20개 샘플에서 DFM·BOM·핀맵·인증 누락 15개 규칙을 검사하고 전자 엔지니어 3명에게 결과를 평가받는다.
+- 수익화: 설계 건별 검증비와 월간 회귀검사 구독
+- 반증 조건: 하드웨어팀 10곳 중 3곳 미만이 AI 설계 검증에 건당 30만원 이상 지불하거나 주요 오류 재현율이 80% 미만이면 중단한다.
 
-## 2. 바이오 연구실 맞춤형 AI 증거 QA 벤치
+## 2. 에이전트 PR 리스크·리뷰 큐
 
 - 점수: 4.1/5 (4★)
 - 가능성: High
-- 난이도: High
-- 예상 고객: 국내 바이오 스타트업, 대학 공동기기실, CRO
-- 문제: 범용 AI 벤치마크는 각 연구실 장비·프로토콜·실패 패턴을 반영하지 않아 실제 도입 전 신뢰도를 판단하기 어렵다.
-- 경쟁사: BioBasicsBench, Benchling, 내부 검증 스프레드시트, 바이오 컨설팅
-- 차별점: 실패 실험과 불충분한 증거를 익명화해 조직 전용 평가세트로 만들고 대조군·불확실성·근거 인용을 채점한다.
-- 2주 MVP: 한 연구팀의 과거 실험 이미지 30건을 익명화하고 전문가 루브릭으로 모델 2종을 비교하는 비공개 리포트를 만든다.
-- 수익화: 초기 평가세트 구축비와 모델 업데이트 회귀검사 구독
-- 반증 조건: 연구팀 5곳 중 2곳 미만이 데이터 반출 없이 평가 참여하거나 전문가 채점 비용을 감당할 수 없으면 중단한다.
+- 난이도: Medium
+- 예상 고객: 코딩 에이전트를 3개 이상 병렬로 쓰는 5~50인 SaaS 개발팀
+- 문제: 에이전트가 PR을 대량 생성하면 리뷰 우선순위와 테스트 근거가 흩어져 사람이 병목이 되고 저위험·고위험 변경을 같은 방식으로 처리한다.
+- 경쟁사: CodeRabbit, Graphite, GitHub Copilot code review, SonarQube
+- 차별점: 리뷰 생성보다 에이전트별 변경 의도, 테스트 증거, 파일 위험도, 배포 영향과 승인 경계를 한 큐로 정리한다.
+- 2주 MVP: 한 팀의 최근 PR 100개를 읽어 위험도·테스트 누락·자동 병합 후보를 분류하고 기존 리뷰 시간과 회귀율을 비교한다.
+- 수익화: 개발자 수·PR 수 기반 구독
+- 반증 조건: 5개 팀 중 2곳 미만이 주당 3시간 이상 리뷰 병목을 보고하거나 기존 GitHub 규칙 대비 리뷰 시간이 25% 줄지 않으면 중단한다.
 
 # AI Tool Radar
 
-- **Claude Agent Memory Dreaming Cookbook** (4★): 완료 세션을 읽어 위키형 메모리를 야간에 재구성하는 실제 워크플로를 제공한다. 민감정보가 없는 작은 세션 묶음에서 출처 링크, 오류 수정, 토큰 비용과 잘못된 승격을 먼저 측정할 만하다. — https://platform.claude.com/cookbook/managed-agents-cma-dreaming-with-a-dynamic-workflow
-- **BioBasicsBench** (4★): 정제된 논문 그림이 아니라 실패와 모호성이 섞인 원시 실험 증거 100개 과제를 평가한다. 생명과학 조직은 공개 점수보다 자체 장비·프로토콜의 20~30개 사례로 사내 회귀검사를 만드는 출발점으로 쓸 만하다. — https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/
-- **Muse Spaces** (3★): 자연어로 지속형 개인 대시보드를 만들고 연결 앱 정보로 백그라운드 갱신한다. 사용 가능 지역이라면 읽기 전용 커넥터로 시작해 권한 표시와 자동 실행 승인 흐름을 확인할 가치가 있다. — https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/
+- **Claude Fable 5.2** (4★): Fable 5.1보다 최대 30% 빠르고 20% 낮은 가격으로 고난도 코딩·과학·공학 작업을 겨냥한다. 일상 작업은 Opus 5.5와 비교하고, 장기 기술 과제 3개에서 성공률·비용·거절률을 평가한 뒤 제한적으로 라우팅할 만하다. — https://www.anthropic.com/claude-fable-and-mythos-5-2
+- **Diode PCB / Zener** (4★): Claude 전자설계 사례가 PCB·CAD·펌웨어와 제조성 검사를 한 작업 흐름으로 묶는 가능성을 보여줬다. 공개 보드 하나에서 읽기·검증 위주로 시작하고 실제 제조 전 전자 엔지니어 검토와 DFM·안전 검사를 필수로 둬야 한다. — https://github.com/diodeinc/pcb
+- **CodeRabbit Secure** (4★): 여러 저장소를 가로지르는 취약점 추적과 병합 차단을 에이전트 코드리뷰에 결합했다. 작은 비공개 저장소에서 오탐, 수정 채택률, 데이터 처리 조건과 기존 SAST 대비 추가 발견을 비교할 가치가 있다. — https://www.coderabbit.ai/blog/coderabbit-secure-cross-repository-security
 
 # Community Pulse
 
-- **GitHub · 에이전트 메모리를 파일·워크플로로 운영하려는 실험 확대** — Anthropic cookbook 업데이트와 커뮤니티 구현은 메모리를 벡터DB가 아니라 버전 가능한 작업 산출물로 다루는 흐름을 보여준다. (https://github.com/anthropics/claude-cookbooks)
-- **Reddit · 기억 유용성보다 오염·비용을 걱정하는 신중론** — 빌더들은 장기 기억이 맥락을 살리지만 잘못된 정보와 토큰 사용이 누적될 수 있어 로그 대조와 제한적 주입이 필요하다고 본다. (https://www.reddit.com/r/BuildWithClaude/comments/1tx3ljs/i_benchmarked_4_ways_to_give_an_ai_agent_longterm/)
-- **Other · 실험실 AI의 ‘모르면 멈춤’ 평가에 관심** — BioBasicsBench 발표 이후 원시 증거·대조군·근거 부족 인식이 과학 에이전트의 실용 기준으로 부상했다. (https://benchlm.ai/benchmarks/biobasicsbench)
-- **Other · 개인화 기대와 커넥터 개인정보 우려가 공존** — Muse Spaces는 미니앱 제작 장벽을 낮추지만 이메일·캘린더·메시지 연결의 권한과 백그라운드 행동 가시성이 관건이다. (https://apnews.com/article/449734d41d3750aad7038b761faa49c9)
+- **Hacker News · 성능 기대와 모델 접근·가격 토론** — Fable 5.2의 벤치마크 우위보다 실제 사용 한도, 이전 버전 대비 체감, 일반 사용자와 검증 고객의 접근 차이가 주요 관심사다. (https://news.ycombinator.com/item?id=50429947)
+- **Reddit · 코드리뷰 자동화는 환영하지만 오탐과 신뢰를 확인하려는 분위기** — CodeRabbit 사용자는 교차 저장소 보안과 자동 수정에 관심을 보이지만 무료 프로모션 이후 비용과 검토 정확도를 따져보려 한다. (https://www.reddit.com/r/coderabbit/comments/1xgvsb2/new_in_coderabbit_secure_crossrepo_vulnerability/)
+- **GitHub · AI 전자설계 도구와 재현 가능한 산출물에 관심** — Diode와 Anthropic 관련 공개 자료는 회로·PCB 생성보다 엔지니어 승인과 구조적 검증을 함께 두는 방향을 강조한다. (https://github.com/diodeinc/blog/blob/main/anthropic-partnership.mdx)
+- **Other · 기업 AI 도입의 조달 마찰 감소 기대** — AWS Marketplace 등록은 기능보다 기존 약정·청구·벤더 관리 체계에 AI 제품을 넣는 유통 변화로 평가된다. (https://openai.com/index/chatgpt-enterprise-aws-marketplace/)
 
 # AI Skill of the Day
 
-## 메모리 승격 게이트
+## 모델 라우팅 게이트
 
-- 언제 사용하는가: 에이전트가 세션 로그에서 장기 기억을 만들고 다음 작업의 기본 컨텍스트로 불러올 때.
-- 실무 예제: 새 기억은 원본 로그 링크, 작성 시각, 신뢰도, 만료일을 포함해 격리 저장하고 두 번 이상 재사용되거나 사람 검토를 통과한 항목만 MEMORY.md 상단 인덱스로 승격한다.
-- 프롬프트 예제: 다음 세션 로그에서 장기 기억 후보를 추출하라. 각 후보에 원문 근거, 반대 근거, 민감정보 여부, 만료 조건, 신뢰도를 붙이고 원문으로 검증할 수 없는 항목은 승격하지 마라.
+- 언제 사용하는가: 여러 가격·성능·안전 등급의 모델을 같은 에이전트 워크플로에서 선택해야 할 때.
+- 실무 예제: 기본은 저비용 모델로 실행하고, 실패한 평가 항목·복잡도·위험 등급이 임계치를 넘을 때만 Fable급 모델로 승격하며 사이버·바이오 고위험 작업은 검증된 계정과 격리 환경에서만 실행한다.
+- 프롬프트 예제: 작업을 난이도, 실패 비용, 필요한 도구, 민감도, 검증 가능성으로 채점하라. 기본 모델로 충분하면 유지하고, 승격할 경우 예상 추가 비용과 성공 기준을 명시하라. 고위험 작업은 자동 실행하지 말고 승인 대기로 전환하라.
 
 # Worth Reading
 
-- **Paper · The components of agent memory** — 로그·노트·위키·주입 컨텍스트의 계층과 dreaming 평가 결과를 구체적으로 확인할 수 있다. (https://www.anthropic.com/research/components-of-agent-memory)
-- **GitHub · Anthropic Claude Cookbooks** — 동적 워크플로로 세션을 위키형 메모리로 재구성하는 구현 자료를 볼 수 있다. (https://github.com/anthropics/claude-cookbooks)
-- **YouTube · Memory and dreaming for self-learning agents** — 동시 실행 에이전트가 공유 메모리를 다루는 구조와 dreaming의 역할을 설명한다. (https://www.youtube.com/watch?v=RtywqDFBYnQ)
-- **Blog · Measuring how AI agents handle everyday wet-lab science** — 원시 실험 증거에서 오류와 근거 부족을 평가하는 100개 과제의 설계와 한계를 볼 수 있다. (https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/)
+- **Paper · Claude Fable 5.2 and Mythos 5.2 System Card** — 성능 주장보다 배포 전 안전 평가, 보호장치, 데이터 보존과 접근 조건을 확인할 수 있다. (https://platform.claude.com/docs/en/resources/overview)
+- **GitHub · Diode’s Anthropic electronics partnership notes** — AI가 실제 PCB 설계에 쓰일 때 구조적 검증과 엔지니어 승인 경계를 어떻게 두는지 볼 수 있다. (https://github.com/diodeinc/blog/blob/main/anthropic-partnership.mdx)
+- **YouTube · Introducing Claude Fable 5** — Fable 계열이 장기 고난도 작업과 검증형 배포로 출발한 배경을 이해하는 공식 영상이다. (https://www.youtube.com/watch?v=Y9Wz2PV404E)
+- **Blog · Testing Claude on real-world electronics design** — 회로·PCB·케이스·펌웨어·제조성 검사 전 과정과 아직 남은 인증·검증 한계를 함께 볼 수 있다. (https://www.anthropic.com/research/claude-electronics-design)
 
 # 운영 상태
 
 - 정본: Git
 - Architect 후보: 없음
-- Notion: 갱신 보류 — 자식 콘텐츠 삭제 가능성이 있는 전체 교체는 실행하지 않음
+- Notion: 갱신 보류 — 전체 교체의 삭제 위험으로 연결 도구가 차단함
