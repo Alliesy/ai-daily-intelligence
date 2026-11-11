@@ -1,216 +1,217 @@
-# AI Daily Intelligence · 2026-11-10
+# AI Daily Intelligence · 2026-11-11
 
 > 상태: PARTIAL · Git 정본 작성 완료, Notion Latest는 안전 제한으로 갱신하지 못했습니다.
 
 ## Today's Insight
 
-프런티어 AI의 다음 경쟁은 더 강한 모델 하나가 아니라, 어려운 작업만 승격하고 생성된 결과를 검토·제조·조달 경계에서 통과시키는 운영 설계다.
+AI의 다음 유통 전쟁은 답변 품질만이 아니라 누가 검증된 사업자 정보와 행동 경로를 소유하고, 그 에이전트의 실제 행동을 어떻게 감시하느냐에서 벌어진다.
 
 # Today's Top 4
 
-## 1. Anthropic, Claude Fable 5.2·Mythos 5.2 출시
+## 1. OpenAI, ChatGPT 안에 사업자 프로필·Business Agent 도입
 
 - 중요도: S
-- 한줄요약: Anthropic이 고난도 기술 작업용 Fable 5.2와 검증 조직용 Mythos 5.2를 출시하며 가격을 $8/$40로 낮추고 출력 속도를 최대 30% 높였다.
-- 영향도: 프런티어 모델 경쟁이 절대 성능뿐 아니라 고위험 기능의 접근 계층, 가격·속도, 장기 실행 오케스트레이션으로 이동한다.
-- 원문: https://www.anthropic.com/claude-fable-and-mythos-5-2
+- 한줄요약: OpenAI가 Business Hub에서 사업자 정보를 직접 관리하고, 미국의 적격 사업자는 ChatGPT 안에 고객 응대용 Business Agent를 만들 수 있게 했다.
+- 영향도: AI 검색 최적화가 검증된 사업자 정체성, 상품 피드, 대화형 전환과 광고 연결까지 확장된다.
+- 원문: https://openai.com/index/introducing-businesses-chatgpt/
 
 ### 원문 핵심문장
 
-> Claude Fable and Claude Mythos are the same underlying model.
+> Businesses can claim their organization in ChatGPT and, once verified, update key details and add self-service product feeds.
 
-Claude Fable과 Claude Mythos는 같은 기반 모델이다.
+사업자는 ChatGPT에서 조직을 등록·검증한 뒤 주요 정보와 셀프서비스 상품 피드를 갱신할 수 있다.
 
 ### 원문 요약
 
-[FACT] Fable 5.2와 Mythos 5.2는 동일 기반 모델이며 Fable에는 사이버·바이오 보호장치가 적용되고 Mythos는 검증 프로그램 승인 조직만 접근한다. [FACT] 표준 가격은 입력 100만 토큰당 8달러, 출력 40달러이며 이전 세대보다 출력이 최대 30% 빠르다고 밝혔다. [FACT] 2.5배 빠른 Fast 모드는 $16/$80이다. [INTERPRETATION] 동일 능력을 위험도와 고객 검증 수준에 따라 다른 배포 경계로 제공하는 전략이 명확해졌다.
+[FACT] Business Hub는 사업자 등록, 정보 관리, 언급·클릭·발견 주제 인사이트를 제공한다. [FACT] 미국의 적격 이커머스·온라인 서비스 사업자는 별도 표시되는 Business Agent를 만들고 광고 목적지로 후원할 수 있다. [FACT] 사업자에게는 개별 대화가 아닌 집계 인사이트만 제공된다. [INTERPRETATION] ChatGPT가 탐색 채널에서 사업자 소유의 대화형 유통 채널로 이동한다.
 
 ### 왜 중요한가?
 
-기업은 가장 강한 모델을 기본값으로 쓰기보다 일상 작업은 저비용 모델, 어려운 문제는 Fable, 고위험 연구는 검증형 Mythos로 라우팅해야 비용과 통제를 함께 맞출 수 있다.
+국내 사업자도 정확한 회사·상품·가격·재고·정책 데이터를 AI가 읽을 수 있게 관리해야 향후 지역 확대에 대응할 수 있다.
 
 ### 업계 분위기
 
-Developers: 가격 인하와 장기 기술 작업 성능에 관심이 집중된다. Safety: 같은 기반 모델을 공개형·검증형으로 나눈 배포 정책과 실제 오차·거절률을 지켜보는 분위기다.
+HackerNews: 검색 플랫폼의 광고·발견 구조가 ChatGPT 안으로 이동하는지 주목한다. Reddit: 추천 유입을 체감하면서도 잘못된 주소·정책 정보와 출처 불투명성을 우려한다. DeveloperCommunity: 명확한 Agent 표시와 대상 국가·카테고리 확대를 기다린다.
 
 ### 앞으로의 전망
 
-프런티어 모델 제품군은 한 모델의 등급 차이가 아니라 능력·보호장치·데이터 보존·고객 검증을 조합한 접근 계층으로 세분화될 전망이다.
+사업자 프로필은 AI 시대의 기본 인프라가 되고, 피드 품질·출처 일관성·Agent 정책·전환 측정이 새로운 운영 업무가 될 가능성이 높다.
 
 ### 사업 기회
 
-여러 모델의 비용·위험·작업 난도를 기준으로 자동 라우팅하고 결과를 비교하는 기술팀용 운영 레이어.
+한국 소상공인을 위한 AI 발견 채널 정보 정합성 점검, 상품 피드 준비, 추천 노출 모니터링.
 
 ### 관련 태그
 
-Anthropic · Claude · LLM · Agent · AI Security · AI Infra
+OpenAI · Agent · AI Startup · Workflow · AI Infra
 
-## 2. Claude Fable 5.2, 전자제품 3종을 설계해 작동 프로토타입 제작
+## 2. OpenAI·Upwork, AI가 프리랜서 수요를 재편한다는 공동 연구 공개
+
+- 중요도: A
+- 한줄요약: AI 관련 프로젝트가 여러 전문 역량을 결합하고 더 큰 예산과 작업 시간을 동반하는 반면 일부 기존 서비스의 비중은 줄고 있다는 연구가 공개됐다.
+- 영향도: 프리랜서 경쟁력이 단일 산출물 제작에서 AI와 도메인 전문성을 묶어 성과를 내는 서비스 패키지로 이동한다.
+- 원문: https://openai.com/index/ai-effect-on-freelance-work/
+
+### 원문 핵심문장
+
+> Some familiar services are losing market share, while AI-related projects bring together different capabilities.
+
+일부 익숙한 서비스는 시장 비중을 잃는 반면 AI 관련 프로젝트는 서로 다른 역량을 결합한다.
+
+### 원문 요약
+
+[FACT] 연구는 ChatGPT 사용 패턴과 Upwork 구인 데이터를 비교했다. [FACT] AI 관련 프로젝트는 복합 역량, 더 큰 예산, 더 많은 작업 시간과 연결되는 경향을 보였다. [FACT] Upwork 지수는 미국 숙련 지식노동자의 38%가 프리랜서라고 보고한다. [INTERPRETATION] 문제 정의·도메인 판단·AI 실행·검증을 묶은 서비스가 유리해지고 있다.
+
+### 왜 중요한가?
+
+한국 1인 사업자와 소규모 에이전시는 ‘AI를 쓴다’보다 고객의 반복 업무를 어떤 입력·검증·성과지표로 바꾸는지 상품화해야 한다.
+
+### 업계 분위기
+
+HackerNews: 자동화로 줄어드는 일과 AI로 커지는 고부가 프로젝트의 구분에 관심이 모인다. Reddit: AI 생성 구인의 품질과 가격 하락을 비판하면서 전문 분야와 AI를 결합한 포지셔닝 필요성에는 공감한다. Market: 전체 수요 증감보다 서비스 구성과 예산 배분 변화로 보는 시각이 우세하다.
+
+### 앞으로의 전망
+
+프리랜서 프로필은 직무명보다 해결한 문제, 사용 데이터, 사람 검토, 비용·시간 절감 증거 중심으로 재구성될 전망이다.
+
+### 사업 기회
+
+국내 프리랜서가 기존 경력을 AI 결합형 서비스와 검증 가능한 사례로 전환하도록 돕는 진단 도구.
+
+### 관련 태그
+
+OpenAI · AI Startup · Workflow · LLM
+
+## 3. OpenAI, 모델 수명주기 전반에서 CoT 모니터링 약화 가능성 보고
 
 - 중요도: S
-- 한줄요약: Anthropic과 Diode가 Claude로 회로·PCB·케이스·펌웨어·부품표를 설계하고 수정 없이 회로가 작동한 전자기기 프로토타입 3종을 제작했다.
-- 영향도: AI 코딩이 소프트웨어를 넘어 데이터시트, CAD, PCB 라우팅, 제조성 검사를 연결하는 물리 제품 개발 루프로 진입했다.
-- 원문: https://www.anthropic.com/research/claude-electronics-design
+- 한줄요약: 모델 성능 향상, 강화학습, 모델 생성 데이터가 숨은 추론 능력과 CoT 제어 가능성을 높여 가시적 사고흐름에 의존한 감시를 어렵게 할 수 있다는 연구다.
+- 영향도: 에이전트 안전성은 사고흐름 텍스트 하나가 아니라 행동·도구 사용·권한·결과 검증을 함께 보는 다중 신호 관측으로 전환해야 한다.
+- 원문: https://alignment.openai.com/cot-monitorability-model-lifecycle/
 
 ### 원문 핵심문장
 
-> Now, Claude can both design and prototype electronic hardware from start to finish.
+> As we scale toward ever-more intelligent systems, models are becoming harder to monitor through their CoT.
 
-이제 Claude는 전자 하드웨어를 처음부터 끝까지 설계하고 프로토타입으로 만들 수 있다.
+더 지능적인 시스템으로 확장할수록 모델은 사고흐름을 통해 감시하기 더 어려워지고 있다.
 
 ### 원문 요약
 
-[FACT] Fable 5.2는 스피커폰, 음성비서 허브, 가상펫의 사양·회로도·PCB·3D 케이스·펌웨어·부품표를 만들었다. [FACT] Diode는 설계 파일로 세 보드를 제작했고 회로 수정 왕복이 없었다고 밝혔다. [FACT] PCB 배치·라우팅 평가에서 83.5%를 기록했다고 Anthropic이 보고했다. [FACT] 전기 검증, 안테나 튜닝, 열 시험, 인증과 양산 설계는 아직 수행되지 않았다.
+[FACT] 낮은 기반 모델 perplexity는 no-CoT 성능 증가와 강하게 연결됐다. [FACT] RL 동안 직접적인 CoT 보상 압력이 없어도 CoT 제어 가능성이 증가했고, 더 제어 가능한 교사의 생성 데이터로 SFT한 학생도 특성을 이어받았다. [FACT] 저자들은 제어 가능성이 모니터 회피의 불완전하고 잡음 많은 대리 지표라고 명시한다. [INTERPRETATION] CoT만을 감사 로그처럼 취급해서는 부족하다.
 
 ### 왜 중요한가?
 
-하드웨어 개발의 초기 반복 비용은 높다. AI가 제조 제약과 부품 재고까지 확인하면 1~3인 팀도 아이디어에서 작동 샘플까지의 시간을 크게 줄일 수 있지만 인증과 안전 검토는 남는다.
+장기 실행 에이전트가 파일·브라우저·코드·외부 시스템을 다룰수록 내부 설명보다 권한 경계, 실제 행동 로그, 독립 평가, 중단 조건이 중요해진다.
 
 ### 업계 분위기
 
-Hardware: 한 문단 요구에서 작동 보드까지 간 사례에 기대가 크다. Caution: Anthropic과 상업 파트너의 데모이며 장기 내구성·인증·양산 수율은 독립 검증되지 않았다.
+HackerNews: CoT는 불완전한 표현이며 활성·행동 기반 관측이 필요하다는 주장과 검증 가능성에 대한 회의가 공존한다. SafetyResearch: 능력과 모니터링 가능성을 별도 평가 축으로 추적해야 한다는 경고로 받아들인다. Builders: 도구 호출 감사와 외부 평가기를 결합하려는 관심이 커질 수 있다.
 
 ### 앞으로의 전망
 
-초기 PCB·케이스·펌웨어 통합 설계는 빠르게 자동화되지만, 시험 장비 피드백과 인증 증거를 연결한 폐쇄 루프가 상용화의 핵심 병목이 될 전망이다.
+CoT 모니터는 보조 신호로 남되, 고위험 배포는 행동 기반 탐지·샌드박스·독립 검증·재현 로그를 결합하는 방향으로 발전할 전망이다.
 
 ### 사업 기회
 
-한국 하드웨어 스타트업용 AI 설계 산출물의 DFM·부품수급·인증 준비 검증 서비스.
+에이전트의 도구 호출·권한·산출물·평가 결과를 재현 가능한 안전 증거로 묶는 경량 관측 레이어.
 
 ### 관련 태그
 
-Anthropic · Claude · Agent · AI Coding · Workflow · Hardware
+OpenAI · Agent · AI Security · LLM · AI Infra
 
-## 3. ChatGPT Enterprise, AWS Marketplace에서 구매·관리 가능
+## 4. Anthropic, 최대 8억2500만 주 규모 IPO 로드쇼 시작
 
 - 중요도: A
-- 한줄요약: OpenAI가 ChatGPT Enterprise를 AWS Marketplace에 등록해 기존 AWS 구매·청구 관계와 약정 지출을 활용한 도입 경로를 열었다.
-- 영향도: 기업 AI 경쟁에서 모델 선택보다 조달, 예산 귀속, 보안 심사와 클라우드 약정을 통과하는 유통 경로가 중요해졌다.
-- 원문: https://openai.com/index/chatgpt-enterprise-aws-marketplace/
+- 한줄요약: Anthropic이 주당 70~78달러 범위의 기업공개 로드쇼를 시작하고 나스닥 티커 ANT 상장을 신청했다.
+- 영향도: 프런티어 AI 기업의 자본집약적 성장, 인프라 지출, 수익성과 지배구조가 공개시장 검증 단계로 들어간다.
+- 원문: https://www.anthropic.com/news/roadshow-launch
 
 ### 원문 핵심문장
 
-> The listing gives organizations a simpler way to discover, buy, and manage ChatGPT Enterprise using their existing AWS purchasing and billing relationship.
+> Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock.
 
-기존 AWS 구매·청구 관계로 ChatGPT Enterprise를 더 쉽게 찾고 구매하며 관리할 수 있다.
-
-### 원문 요약
-
-[FACT] AWS 고객은 Marketplace에서 ChatGPT Enterprise를 구매하고 적격 지출을 AWS 약정에 적용할 수 있다. [FACT] 직접 구매와 같은 모델·기능을 같은 시점에 제공한다고 OpenAI가 밝혔다. [FACT] ChatGPT for Healthcare와 Financial Services도 적격 고객이 Marketplace에서 접근할 수 있다. [INTERPRETATION] 대기업 도입 병목이 기능 검증에서 조달·계약·비용 통합으로 이동하고 있다.
-
-### 왜 중요한가?
-
-이미 AWS 약정과 공급사 심사 체계를 가진 기업은 별도 계약 경로를 줄일 수 있고, AI 예산을 기존 클라우드 거버넌스 안에서 관리하기 쉬워진다.
-
-### 업계 분위기
-
-Enterprise: 구매·청구 통합이 도입 시간을 줄일 것이라는 기대가 있다. Governance: Marketplace 구매가 데이터 처리·권한·내부 사용정책 검토를 대신하지는 않는다는 신중론이 필요하다.
-
-### 앞으로의 전망
-
-주요 AI 제품은 다중 클라우드 마켓플레이스와 산업별 패키지를 통해 유통되고, 기업은 모델 비용과 좌석 비용을 하나의 FinOps·AI 거버넌스 체계로 묶게 될 전망이다.
-
-### 사업 기회
-
-AWS 약정 고객용 AI SaaS 조달 비교, 권한 설계, 비용 귀속을 묶은 도입 준비 패키지.
-
-### 관련 태그
-
-OpenAI · AWS · AI Infra · Workflow · Enterprise
-
-## 4. CodeRabbit, 에이전트 개발의 병목을 코드 생성에서 검토·보안으로 이동
-
-- 중요도: A
-- 한줄요약: CodeRabbit이 Codex로 같은 인원에서 소프트웨어 출하량이 약 20배 늘었고 Daybreak 기반 보안 에이전트로 검토·취약점 수정 범위를 확장했다고 밝혔다.
-- 영향도: 코딩 에이전트 확산으로 제품 가치는 생성 속도보다 변경 우선순위, 검토 설명, 보안과 자동 병합 경계에서 커지고 있다.
-- 원문: https://openai.com/index/coderabbit-codex-daybreak/
-
-### 원문 핵심문장
-
-> The first bottleneck that every company hits as soon as you adopt coding agents is code reviews.
-
-기업이 코딩 에이전트를 도입하자마자 처음 만나는 병목은 코드 리뷰다.
+Anthropic PBC는 클래스 A 보통주의 기업공개를 위한 로드쇼를 시작했다.
 
 ### 원문 요약
 
-[FACT] CodeRabbit은 2만 개 이상 조직과 15만 개 이상 오픈소스 프로젝트에서 사용된다고 밝혔다. [FACT] CEO는 지난 6개월간 인원 증가 없이 약 20배 더 많은 소프트웨어를 출하했다고 추정했다. [FACT] 회사는 저위험 변경 자동 병합, Codex 기반 사고·지원 티켓 처리, Daybreak 기반 보안 검사를 운영한다. [SPECULATION] 20배 생산성과 4만3천 건 취약점 수치는 회사 주장 중심이며 독립 검증되지 않았다.
+[FACT] 총 8억2500만 주 중 약 8억135만 주는 회사가, 약 2365만 주는 기존 주주가 매각한다. [FACT] 예상 가격은 주당 70~78달러이며 나스닥 티커 ANT를 신청했다. [FACT] 같은 날 SEC S-1/A가 조건을 공시했다. [INTERPRETATION] AI 산업의 매출 경쟁이 초대형 인프라 약정과 손실 구조를 공개시장 투자자가 평가하는 단계로 넘어간다.
 
 ### 왜 중요한가?
 
-에이전트가 PR을 대량 생성하면 사람의 리뷰 시간이 새 병목이 된다. 변경 위험, 테스트, 보안 증거와 승인 경계를 자동화해야 속도 증가가 품질 저하로 이어지지 않는다.
+AI 도구 구매자와 스타트업은 공급사의 자본 여력·가격 정책·인프라 계약·지배구조가 API 안정성과 생태계 전략에 미치는 영향을 봐야 한다.
 
 ### 업계 분위기
 
-Developers: 에이전트 병렬화의 실제 운영 패턴과 리뷰 자동화에 관심이 높다. Skepticism: 공급사 사례 연구의 생산성·취약점 수치를 일반화하기 어렵고 오탐과 유지보수 비용을 봐야 한다.
+Markets: 상장 규모와 가치평가에 관심이 집중되지만 대규모 지출과 손실을 함께 따진다. Reddit: 상장 직후 가격과 창업자 통제, 손실 숫자의 성격을 두고 기대와 회의가 갈린다. Enterprise: 재무 투명성 향상 기대와 단기 실적 압력에 대한 우려가 공존한다.
 
 ### 앞으로의 전망
 
-코드 생성 도구는 리뷰·보안·회귀검사·릴리스 정책과 결합되고, 팀은 PR 수보다 자동 수정 채택률과 회귀율을 핵심 지표로 삼을 전망이다.
+주요 AI 연구소는 인프라 투자와 안전·거버넌스 약속을 정기 공시와 투자자 질문 아래 설명해야 할 것이다.
 
 ### 사업 기회
 
-소규모 개발팀용 에이전트 생성 PR의 위험도·테스트 증거·리뷰 순서를 정리하는 경량 대시보드.
+AI 공급사 재무·가격·모델 변경·리스크 공시를 기업 구매 관점에서 추적하는 벤더 리스크 브리핑.
 
 ### 관련 태그
 
-OpenAI · Codex · AI Coding · Agent · AI Security · Workflow
+Anthropic · Claude · AI Startup · AI Infra
 
 # Business Radar
 
-## 1. AI 하드웨어 설계 검증 패스
+## 1. AI 발견 채널 사업자 정보 준비 점검
 
-- 점수: 4.2/5 (4★)
-- 가능성: High
-- 난이도: High
-- 예상 고객: 전자제품을 만드는 국내 1~10인 하드웨어 스타트업·메이커 제조사
-- 문제: AI가 회로·PCB·케이스를 빠르게 만들 수 있어도 제조성, 부품 수급, 열·EMI·인증 누락은 실제 제작 비용과 일정 실패로 이어진다.
-- 경쟁사: Altium DFM, JLCPCB DFM, 하드웨어 설계사무소, Diode Computers
-- 차별점: AI 생성 설계의 출처·가정·제조 규칙을 자동 검사하고 국내 KC·전파 인증 준비 체크리스트와 사람 리뷰를 연결한다.
-- 2주 MVP: 공개 KiCad 설계 10개와 의도적으로 오류를 넣은 20개 샘플에서 DFM·BOM·핀맵·인증 누락 15개 규칙을 검사하고 전자 엔지니어 3명에게 결과를 평가받는다.
-- 수익화: 설계 건별 검증비와 월간 회귀검사 구독
-- 반증 조건: 하드웨어팀 10곳 중 3곳 미만이 AI 설계 검증에 건당 30만원 이상 지불하거나 주요 오류 재현율이 80% 미만이면 중단한다.
-
-## 2. 에이전트 PR 리스크·리뷰 큐
-
-- 점수: 4.1/5 (4★)
+- 점수: 4.2/5 (★★★★)
 - 가능성: High
 - 난이도: Medium
-- 예상 고객: 코딩 에이전트를 3개 이상 병렬로 쓰는 5~50인 SaaS 개발팀
-- 문제: 에이전트가 PR을 대량 생성하면 리뷰 우선순위와 테스트 근거가 흩어져 사람이 병목이 되고 저위험·고위험 변경을 같은 방식으로 처리한다.
-- 경쟁사: CodeRabbit, Graphite, GitHub Copilot code review, SonarQube
-- 차별점: 리뷰 생성보다 에이전트별 변경 의도, 테스트 증거, 파일 위험도, 배포 영향과 승인 경계를 한 큐로 정리한다.
-- 2주 MVP: 한 팀의 최근 PR 100개를 읽어 위험도·테스트 누락·자동 병합 후보를 분류하고 기존 리뷰 시간과 회귀율을 비교한다.
-- 수익화: 개발자 수·PR 수 기반 구독
-- 반증 조건: 5개 팀 중 2곳 미만이 주당 3시간 이상 리뷰 병목을 보고하거나 기존 GitHub 규칙 대비 리뷰 시간이 25% 줄지 않으면 중단한다.
+- 예상 고객: AI 추천 유입을 관리하려는 국내 이커머스·온라인 서비스 소상공인
+- 문제: 사업자·상품·가격·재고·정책 정보가 채널마다 달라 AI 답변이 틀리거나 추천 기회를 놓친다.
+- 경쟁사: Peec AI, Profound, Otterly.AI, SEO 대행사
+- 차별점: 국내 사업자용 정보 정합성, 상품 피드 준비, 추천 질문 세트, 오답 증거와 수정 우선순위를 한글 보고서로 제공한다.
+- 2주 MVP: 10개 사업자와 30개 구매 질문에서 답변의 이름·가격·정책 불일치를 기록하고 수정 전후를 비교한다.
+- 수익화: 초기 진단비 + 월간 모니터링 구독
+- 반증 조건: 10곳 중 3곳 미만이 문제를 인정하거나 2곳 미만이 유료 진단 의향을 보이면 중단한다.
+
+## 2. 프리랜서 AI 서비스 패키지 설계 도구
+
+- 점수: 4/5 (★★★★)
+- 가능성: High
+- 난이도: Medium
+- 예상 고객: 기존 직무를 AI 결합형 서비스로 전환하려는 한국 프리랜서·1인 에이전시
+- 문제: 자신의 도메인 경험을 어떤 고객 문제, AI 워크플로, 검증 기준과 가격으로 묶어야 하는지 어렵다.
+- 경쟁사: Upwork Uma, Contra, Notion 템플릿, 커리어 코칭
+- 차별점: 실제 고객 업무를 입력받아 반복성·데이터·검증·성과지표 기준의 2주 유료 파일럿을 만든다.
+- 2주 MVP: 15명의 최근 프로젝트를 인터뷰해 패키지 3개를 만들고 고객 제안 30건의 상담 전환을 비교한다.
+- 수익화: 패키지 생성 1회 결제 + 업데이트 구독
+- 반증 조건: 15명 중 5명 미만이 실제 제안에 쓰거나 상담 전환이 20% 개선되지 않으면 중단한다.
 
 # AI Tool Radar
 
-- **Claude Fable 5.2** (4★): Fable 5.1보다 최대 30% 빠르고 20% 낮은 가격으로 고난도 코딩·과학·공학 작업을 겨냥한다. 일상 작업은 Opus 5.5와 비교하고, 장기 기술 과제 3개에서 성공률·비용·거절률을 평가한 뒤 제한적으로 라우팅할 만하다. — https://www.anthropic.com/claude-fable-and-mythos-5-2
-- **Diode PCB / Zener** (4★): Claude 전자설계 사례가 PCB·CAD·펌웨어와 제조성 검사를 한 작업 흐름으로 묶는 가능성을 보여줬다. 공개 보드 하나에서 읽기·검증 위주로 시작하고 실제 제조 전 전자 엔지니어 검토와 DFM·안전 검사를 필수로 둬야 한다. — https://github.com/diodeinc/pcb
-- **CodeRabbit Secure** (4★): 여러 저장소를 가로지르는 취약점 추적과 병합 차단을 에이전트 코드리뷰에 결합했다. 작은 비공개 저장소에서 오탐, 수정 채택률, 데이터 처리 조건과 기존 SAST 대비 추가 발견을 비교할 가치가 있다. — https://www.coderabbit.ai/blog/coderabbit-secure-cross-repository-security
+- **OpenAI Business Hub** (★★★★): 사업자 프로필, 상품 피드, 발견 인사이트와 Business Agent를 한 채널로 묶었다. 지원 지역 사업자는 정보 정확성과 정책을 확인할 가치가 있고 국내 사업자는 데이터 준비가 우선이다. — https://openai.com/index/introducing-businesses-chatgpt/
+- **anthropics/skills** (★★★★): GitHub Trending에서 재사용 가능한 Agent Skills에 대한 관심이 이어진다. 읽기 전용 작업부터 설치 구조와 권한 범위를 검토해 참고할 만하다. — https://github.com/anthropics/skills
+- **homeassistant-ai/ha-mcp** (★★★★): GitHub Trending 상위권에서 AI 비서와 홈 자동화 연결 수요를 보여줬다. 테스트 인스턴스의 읽기 권한으로 시작하고 기기 제어는 승인과 허용 목록을 둬야 한다. — https://github.com/homeassistant-ai/ha-mcp
 
 # Community Pulse
 
-- **Hacker News · 성능 기대와 모델 접근·가격 토론** — Fable 5.2의 벤치마크 우위보다 실제 사용 한도, 이전 버전 대비 체감, 일반 사용자와 검증 고객의 접근 차이가 주요 관심사다. (https://news.ycombinator.com/item?id=50429947)
-- **Reddit · 코드리뷰 자동화는 환영하지만 오탐과 신뢰를 확인하려는 분위기** — CodeRabbit 사용자는 교차 저장소 보안과 자동 수정에 관심을 보이지만 무료 프로모션 이후 비용과 검토 정확도를 따져보려 한다. (https://www.reddit.com/r/coderabbit/comments/1xgvsb2/new_in_coderabbit_secure_crossrepo_vulnerability/)
-- **GitHub · AI 전자설계 도구와 재현 가능한 산출물에 관심** — Diode와 Anthropic 관련 공개 자료는 회로·PCB 생성보다 엔지니어 승인과 구조적 검증을 함께 두는 방향을 강조한다. (https://github.com/diodeinc/blog/blob/main/anthropic-partnership.mdx)
-- **Other · 기업 AI 도입의 조달 마찰 감소 기대** — AWS Marketplace 등록은 기능보다 기존 약정·청구·벤더 관리 체계에 AI 제품을 넣는 유통 변화로 평가된다. (https://openai.com/index/chatgpt-enterprise-aws-marketplace/)
+- **Hacker News · 관심·회의 혼합** — 사업자 기능과 프리랜서 연구가 같은 날 올라오며 AI가 검색·거래·노동 중개를 흡수하는지 토론이 시작됐다. (https://news.ycombinator.com/news?p=2)
+- **Reddit · 실용적 우려** — 소상공인은 ChatGPT 추천 유입을 체감하지만 잘못된 위치·정책 정보와 측정 불가능성을 문제로 꼽는다. (https://www.reddit.com/r/smallbusiness/comments/1wf9gxy/anyone_had_a_customer_say_they_found_you_through/)
+- **Reddit · 불안·재포지셔닝** — 프리랜서는 AI 생성 구인의 품질과 가격 압박을 비판하며 전문성 결합과 외부 고객 채널을 찾는다. (https://www.reddit.com/r/Upwork/comments/1x9va4l/what_happened_to_upwork/)
+- **GitHub · Agent Skills 강세** — 스킬 저장소와 MCP 도구가 Trending 상위권을 차지하며 재사용 가능한 운영 자산에 관심이 집중됐다. (https://github.com/trending)
+- **Other · 투자 기대와 경계** — Anthropic IPO는 초대형 AI 성장의 상징이자 인프라 지출·손실·지배구조의 공개시장 시험대다. (https://apnews.com/article/8cf2319c870322019712ab658f71ec55)
 
 # AI Skill of the Day
 
-## 모델 라우팅 게이트
+## Agent 관측성 삼각측량
 
-- 언제 사용하는가: 여러 가격·성능·안전 등급의 모델을 같은 에이전트 워크플로에서 선택해야 할 때.
-- 실무 예제: 기본은 저비용 모델로 실행하고, 실패한 평가 항목·복잡도·위험 등급이 임계치를 넘을 때만 Fable급 모델로 승격하며 사이버·바이오 고위험 작업은 검증된 계정과 격리 환경에서만 실행한다.
-- 프롬프트 예제: 작업을 난이도, 실패 비용, 필요한 도구, 민감도, 검증 가능성으로 채점하라. 기본 모델로 충분하면 유지하고, 승격할 경우 예상 추가 비용과 성공 기준을 명시하라. 고위험 작업은 자동 실행하지 말고 승인 대기로 전환하라.
+- 언제 사용하는가: 에이전트가 브라우저·파일·코드·외부 API처럼 실패 비용이 있는 도구를 장시간 사용할 때.
+- 실무 예제: 내부 설명은 참고 신호로만 두고 실제 도구 호출·권한 변경·산출물 diff·독립 평가를 함께 기록하며 위험 임계치에서 사람 승인으로 전환한다.
+- 프롬프트 예제: 이 실행을 의도 설명, 실제 행동, 최종 산출물의 세 축으로 평가하라. 증거 URL·로그·해시를 남기고 불일치하면 완료하지 말고 재현 절차를 보고하라.
 
 # Worth Reading
 
-- **Paper · Claude Fable 5.2 and Mythos 5.2 System Card** — 성능 주장보다 배포 전 안전 평가, 보호장치, 데이터 보존과 접근 조건을 확인할 수 있다. (https://platform.claude.com/docs/en/resources/overview)
-- **GitHub · Diode’s Anthropic electronics partnership notes** — AI가 실제 PCB 설계에 쓰일 때 구조적 검증과 엔지니어 승인 경계를 어떻게 두는지 볼 수 있다. (https://github.com/diodeinc/blog/blob/main/anthropic-partnership.mdx)
-- **YouTube · Introducing Claude Fable 5** — Fable 계열이 장기 고난도 작업과 검증형 배포로 출발한 배경을 이해하는 공식 영상이다. (https://www.youtube.com/watch?v=Y9Wz2PV404E)
-- **Blog · Testing Claude on real-world electronics design** — 회로·PCB·케이스·펌웨어·제조성 검사 전 과정과 아직 남은 인증·검증 한계를 함께 볼 수 있다. (https://www.anthropic.com/research/claude-electronics-design)
+- **Paper · What affects chain-of-thought monitorability across the model lifecycle?** — CoT 모니터링 약화가 학습 전반에서 어떻게 나타나는지와 지표 한계를 함께 볼 수 있다. (https://alignment.openai.com/cot-monitorability-model-lifecycle/)
+- **GitHub · Anthropic Agent Skills** — 에이전트 기능을 재사용 가능한 지침과 자원으로 패키징하는 공개 구조를 볼 수 있다. (https://github.com/anthropics/skills)
+- **YouTube · Introducing Claude Fable 5** — 프런티어 모델이 장기 작업과 검증형 접근 계층으로 제품화되는 흐름을 이해할 수 있다. (https://www.youtube.com/watch?v=Y9Wz2PV404E)
+- **Blog · Introducing Businesses in ChatGPT** — 프로필·상품 피드·발견 인사이트·Business Agent가 하나의 AI 유통 채널로 결합되는 방식을 확인할 수 있다. (https://openai.com/index/introducing-businesses-chatgpt/)
 
 # 운영 상태
 
