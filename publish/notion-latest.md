@@ -1,220 +1,259 @@
-# AI Daily Intelligence · 2026-11-11
+# AI Daily Intelligence · Latest
 
-> 상태: PARTIAL · Git 정본 작성 완료, Notion Latest는 안전 제한으로 갱신하지 못했습니다.
+> 2026-11-12 KST · Git canonical projection
+
+> 상태: PARTIAL · Git 정본 작성 완료, Notion Latest는 갱신 결과에 따라 별도 표시합니다.
 
 ## Today's Insight
 
-AI의 다음 유통 전쟁은 답변 품질만이 아니라 누가 검증된 사업자 정보와 행동 경로를 소유하고, 그 에이전트의 실제 행동을 어떻게 감시하느냐에서 벌어진다.
+생성형 AI의 다음 효율화는 더 짧은 답변이 아니라, 판단 가능한 문제를 전용 결정 모델로 분리하고 애매한 사례만 비싼 추론과 사람에게 보내는 데서 나온다.
 
-# Today's Top 4
+# Today's Top 5
 
-## 1. OpenAI, ChatGPT 안에 사업자 프로필·Business Agent 도입
-
-- 중요도: S
-- 한줄요약: OpenAI가 Business Hub에서 사업자 정보를 직접 관리하고, 미국의 적격 사업자는 ChatGPT 안에 고객 응대용 Business Agent를 만들 수 있게 했다.
-- 영향도: AI 검색 최적화가 검증된 사업자 정체성, 상품 피드, 대화형 전환과 광고 연결까지 확장된다.
-- 원문: https://openai.com/index/introducing-businesses-chatgpt/
-
-### 원문 핵심문장
-
-> Businesses can claim their organization in ChatGPT and, once verified, update key details and add self-service product feeds.
-
-사업자는 ChatGPT에서 조직을 등록·검증한 뒤 주요 정보와 셀프서비스 상품 피드를 갱신할 수 있다.
-
-### 원문 요약
-
-[FACT] Business Hub는 사업자 등록, 정보 관리, 언급·클릭·발견 주제 인사이트를 제공한다. [FACT] 미국의 적격 이커머스·온라인 서비스 사업자는 별도 표시되는 Business Agent를 만들고 광고 목적지로 후원할 수 있다. [FACT] 사업자에게는 개별 대화가 아닌 집계 인사이트만 제공된다. [INTERPRETATION] ChatGPT가 탐색 채널에서 사업자 소유의 대화형 유통 채널로 이동한다.
-
-### 왜 중요한가?
-
-국내 사업자도 정확한 회사·상품·가격·재고·정책 데이터를 AI가 읽을 수 있게 관리해야 향후 지역 확대에 대응할 수 있다.
-
-### 업계 분위기
-
-HackerNews: 검색 플랫폼의 광고·발견 구조가 ChatGPT 안으로 이동하는지 주목한다. Reddit: 추천 유입을 체감하면서도 잘못된 주소·정책 정보와 출처 불투명성을 우려한다. DeveloperCommunity: 명확한 Agent 표시와 대상 국가·카테고리 확대를 기다린다.
-
-### 앞으로의 전망
-
-사업자 프로필은 AI 시대의 기본 인프라가 되고, 피드 품질·출처 일관성·Agent 정책·전환 측정이 새로운 운영 업무가 될 가능성이 높다.
-
-### 사업 기회
-
-한국 소상공인을 위한 AI 발견 채널 정보 정합성 점검, 상품 피드 준비, 추천 노출 모니터링.
-
-### 관련 태그
-
-OpenAI · Agent · AI Startup · Workflow · AI Infra
-
-## 2. OpenAI·Upwork, AI가 프리랜서 수요를 재편한다는 공동 연구 공개
-
-- 중요도: A
-- 한줄요약: AI 관련 프로젝트가 여러 전문 역량을 결합하고 더 큰 예산과 작업 시간을 동반하는 반면 일부 기존 서비스의 비중은 줄고 있다는 연구가 공개됐다.
-- 영향도: 프리랜서 경쟁력이 단일 산출물 제작에서 AI와 도메인 전문성을 묶어 성과를 내는 서비스 패키지로 이동한다.
-- 원문: https://openai.com/index/ai-effect-on-freelance-work/
-
-### 원문 핵심문장
-
-> Some familiar services are losing market share, while AI-related projects bring together different capabilities.
-
-일부 익숙한 서비스는 시장 비중을 잃는 반면 AI 관련 프로젝트는 서로 다른 역량을 결합한다.
-
-### 원문 요약
-
-[FACT] 연구는 ChatGPT 사용 패턴과 Upwork 구인 데이터를 비교했다. [FACT] AI 관련 프로젝트는 복합 역량, 더 큰 예산, 더 많은 작업 시간과 연결되는 경향을 보였다. [FACT] Upwork 지수는 미국 숙련 지식노동자의 38%가 프리랜서라고 보고한다. [INTERPRETATION] 문제 정의·도메인 판단·AI 실행·검증을 묶은 서비스가 유리해지고 있다.
-
-### 왜 중요한가?
-
-한국 1인 사업자와 소규모 에이전시는 ‘AI를 쓴다’보다 고객의 반복 업무를 어떤 입력·검증·성과지표로 바꾸는지 상품화해야 한다.
-
-### 업계 분위기
-
-HackerNews: 자동화로 줄어드는 일과 AI로 커지는 고부가 프로젝트의 구분에 관심이 모인다. Reddit: AI 생성 구인의 품질과 가격 하락을 비판하면서 전문 분야와 AI를 결합한 포지셔닝 필요성에는 공감한다. Market: 전체 수요 증감보다 서비스 구성과 예산 배분 변화로 보는 시각이 우세하다.
-
-### 앞으로의 전망
-
-프리랜서 프로필은 직무명보다 해결한 문제, 사용 데이터, 사람 검토, 비용·시간 절감 증거 중심으로 재구성될 전망이다.
-
-### 사업 기회
-
-국내 프리랜서가 기존 경력을 AI 결합형 서비스와 검증 가능한 사례로 전환하도록 돕는 진단 도구.
-
-### 관련 태그
-
-OpenAI · AI Startup · Workflow · LLM
-
-## 3. OpenAI, 모델 수명주기 전반에서 CoT 모니터링 약화 가능성 보고
+## 1. Google, 초저지연 분류용 Gemini Decisions API 출시
 
 - 중요도: S
-- 한줄요약: 모델 성능 향상, 강화학습, 모델 생성 데이터가 숨은 추론 능력과 CoT 제어 가능성을 높여 가시적 사고흐름에 의존한 감시를 어렵게 할 수 있다는 연구다.
-- 영향도: 에이전트 안전성은 사고흐름 텍스트 하나가 아니라 행동·도구 사용·권한·결과 검증을 함께 보는 다중 신호 관측으로 전환해야 한다.
-- 원문: https://alignment.openai.com/cot-monitorability-model-lifecycle/
+- 한줄요약: Gemini Decision 1이 하나의 멀티모달 입력에 최대 1,000개의 폐쇄형 질문을 평가하고 확률·신뢰도를 반환한다.
+- 영향도: 에이전트의 라우팅·도구 선택·정책 검사 같은 제어 평면이 생성 모델 호출에서 저비용 전용 결정 모델로 분리된다.
+- 원문: https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/
 
 ### 원문 핵심문장
 
-> As we scale toward ever-more intelligent systems, models are becoming harder to monitor through their CoT.
+> Evaluate up to 1,000 yes/no, choice, and rubric-scoring questions in a fast, single pass.
 
-더 지능적인 시스템으로 확장할수록 모델은 사고흐름을 통해 감시하기 더 어려워지고 있다.
+최대 1,000개의 예·아니오, 선택형, 루브릭 점수 질문을 빠른 단일 패스로 평가한다.
 
 ### 원문 요약
 
-[FACT] 낮은 기반 모델 perplexity는 no-CoT 성능 증가와 강하게 연결됐다. [FACT] RL 동안 직접적인 CoT 보상 압력이 없어도 CoT 제어 가능성이 증가했고, 더 제어 가능한 교사의 생성 데이터로 SFT한 학생도 특성을 이어받았다. [FACT] 저자들은 제어 가능성이 모니터 회피의 불완전하고 잡음 많은 대리 지표라고 명시한다. [INTERPRETATION] CoT만을 감사 로그처럼 취급해서는 부족하다.
+[FACT] Google은 Gemini API에 gemini-decision-1과 Decisions API를 공개했다. [FACT] 텍스트·이미지·오디오·비디오·PDF를 입력해 예·아니오, 2~255개 선택지, 순서형 점수를 확률로 반환한다. [FACT] 공식 가격은 입력 100만 토큰당 0.10달러, 출력 토큰 0달러이며 Google은 종단 간 150~250ms를 주장한다. [SIGNAL] VentureBeat와 ITmedia가 출시 당일 독립 보도했다. [SPECULATION] 실제 업무에서의 보정 정확도와 지연은 독립 벤치마크가 더 필요하다.
 
 ### 왜 중요한가?
 
-장기 실행 에이전트가 파일·브라우저·코드·외부 시스템을 다룰수록 내부 설명보다 권한 경계, 실제 행동 로그, 독립 평가, 중단 조건이 중요해진다.
+LLM이 문장을 생성한 뒤 JSON을 파싱해 분기하던 비용과 불안정성을 줄이고, 낮은 신뢰도만 상위 모델이나 사람에게 보내는 구조를 만들 수 있다.
 
 ### 업계 분위기
 
-HackerNews: CoT는 불완전한 표현이며 활성·행동 기반 관측이 필요하다는 주장과 검증 가능성에 대한 회의가 공존한다. SafetyResearch: 능력과 모니터링 가능성을 별도 평가 축으로 추적해야 한다는 경고로 받아들인다. Builders: 도구 호출 감사와 외부 평가기를 결합하려는 관심이 커질 수 있다.
+Developers: 낮은 가격과 1,000개 질문 배치에 관심이 크다. Caution: 정확도·보정 수치는 Google 내부 평가 중심이라 독립 검증을 기다린다. Ecosystem: LangChain·Vercel·LiteLLM 등 연동 예고로 빠른 확산 가능성이 있다.
 
 ### 앞으로의 전망
 
-CoT 모니터는 보조 신호로 남되, 고위험 배포는 행동 기반 탐지·샌드박스·독립 검증·재현 로그를 결합하는 방향으로 발전할 전망이다.
+에이전트 스택은 생성 모델, 전용 결정 모델, 규칙 엔진, 사람 승인으로 계층화되고 비용·지연·위험에 따라 라우팅될 전망이다.
 
 ### 사업 기회
 
-에이전트의 도구 호출·권한·산출물·평가 결과를 재현 가능한 안전 증거로 묶는 경량 관측 레이어.
+한국 중소기업 문서·통화·이미지 입력을 대량 분류하고 애매한 건만 사람에게 보내는 결정 게이트 구축 서비스.
 
 ### 관련 태그
 
-OpenAI · Agent · AI Security · LLM · AI Infra
+Google · Gemini · Agent · Workflow · AI Infra
 
-## 4. Anthropic, 최대 8억2500만 주 규모 IPO 로드쇼 시작
+## 2. Gemini Live, Apple CarPlay에 글로벌 출시
 
 - 중요도: A
-- 한줄요약: Anthropic이 주당 70~78달러 범위의 기업공개 로드쇼를 시작하고 나스닥 티커 ANT 상장을 신청했다.
-- 영향도: 프런티어 AI 기업의 자본집약적 성장, 인프라 지출, 수익성과 지배구조가 공개시장 검증 단계로 들어간다.
-- 원문: https://www.anthropic.com/news/roadshow-launch
+- 한줄요약: iPhone의 Gemini Live가 CarPlay에서 이메일·일정 요약, 브레인스토밍, 대화 연습을 핸즈프리로 제공한다.
+- 영향도: 음성 AI가 스마트폰 앱을 넘어 운전 중의 연속적 업무·생각 정리 인터페이스로 확장된다.
+- 원문: https://blog.google/innovation-and-ai/products/gemini-app/gemini-on-apple-carplay/
 
 ### 원문 핵심문장
 
-> Anthropic, PBC launched the roadshow for its proposed initial public offering of its Class A common stock.
+> Today we’re bringing the Gemini app directly to Apple CarPlay.
 
-Anthropic PBC는 클래스 A 보통주의 기업공개를 위한 로드쇼를 시작했다.
+오늘 Gemini 앱을 Apple CarPlay에 직접 제공한다.
 
 ### 원문 요약
 
-[FACT] 총 8억2500만 주 중 약 8억135만 주는 회사가, 약 2365만 주는 기존 주주가 매각한다. [FACT] 예상 가격은 주당 70~78달러이며 나스닥 티커 ANT를 신청했다. [FACT] 같은 날 SEC S-1/A가 조건을 공시했다. [INTERPRETATION] AI 산업의 매출 경쟁이 초대형 인프라 약정과 손실 구조를 공개시장 투자자가 평가하는 단계로 넘어간다.
+[FACT] Google은 지원되는 Gemini Live 언어의 iOS 사용자를 대상으로 CarPlay 출시를 시작했다. [FACT] Gmail·Calendar 연결로 요약과 답장 초안을 만들고, 대화는 iPhone Gemini 기록과 동기화된다. [FACT] 일부 개인화 기능은 EEA·나이지리아와 18세 미만에게 제공되지 않는다. [INTERPRETATION] 이동 시간도 AI와 지속적으로 상호작용하는 작업 공간이 된다.
 
 ### 왜 중요한가?
 
-AI 도구 구매자와 스타트업은 공급사의 자본 여력·가격 정책·인프라 계약·지배구조가 API 안정성과 생태계 전략에 미치는 영향을 봐야 한다.
+Voice AI 서비스는 짧은 명령이 아니라 컨텍스트를 이어받는 대화, 안전한 읽기 중심 동작, 주차 후 후속 작업 연결을 설계해야 한다.
 
 ### 업계 분위기
 
-Markets: 상장 규모와 가치평가에 관심이 집중되지만 대규모 지출과 손실을 함께 따진다. Reddit: 상장 직후 가격과 창업자 통제, 손실 숫자의 성격을 두고 기대와 회의가 갈린다. Enterprise: 재무 투명성 향상 기대와 단기 실적 압력에 대한 우려가 공존한다.
+Users: 운전 중 메일·일정 정리에 기대가 있다. Safety: 주의 분산과 음성으로 수행 가능한 작업 경계를 신중히 봐야 한다. Privacy: 차량 탑승자와 민감한 이메일을 음성으로 다루는 점이 우려된다.
 
 ### 앞으로의 전망
 
-주요 AI 연구소는 인프라 투자와 안전·거버넌스 약속을 정기 공시와 투자자 질문 아래 설명해야 할 것이다.
+차량 AI는 요약·생각 정리에서 시작해 주차 이후 태스크 생성으로 이어지되, 운전 중 쓰기·전송은 더 강한 확인 절차를 요구할 것이다.
 
 ### 사업 기회
 
-AI 공급사 재무·가격·모델 변경·리스크 공시를 기업 구매 관점에서 추적하는 벤더 리스크 브리핑.
+차량 음성 메모를 주차 후 안전하게 CRM·할 일·회의 준비로 변환하는 한국어 후처리 워크플로.
 
 ### 관련 태그
 
-Anthropic · Claude · AI Startup · AI Infra
+Google · Gemini · Voice AI · Workflow
+
+## 3. Google Labs, 실시간 협업형 AI 공간 Tabletop 공개
+
+- 중요도: A
+- 한줄요약: 링크·파일·아이디어를 넣으면 여행 일정, 투표, 비용 정산, 대진표 같은 인터랙티브 협업 공간을 생성한다.
+- 영향도: 생성 AI가 개인 문서 작성에서 여러 사람이 동시에 수정하고 결정하는 임시 업무 앱 제작으로 이동한다.
+- 원문: https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/
+
+### 원문 핵심문장
+
+> Today, we’re introducing Tabletop, a new Google Labs experiment built for real-time collaboration.
+
+오늘 실시간 협업을 위해 만든 Google Labs 실험 Tabletop을 공개한다.
+
+### 원문 요약
+
+[FACT] Tabletop은 링크·파일·아이디어를 기반으로 계획·투표·정산·토너먼트 도구를 생성한다. [FACT] 초대 링크를 통해 여러 사용자가 동시에 참여할 수 있다. [FACT] 현재 미국 18세 이상 대기자 명단으로 제공된다. [INTERPRETATION] AI 생성물이 정적 답변보다 공유 가능한 경량 애플리케이션으로 바뀌고 있다.
+
+### 왜 중요한가?
+
+팀 도구의 진입 장벽이 낮아지면서 범용 SaaS보다 특정 모임·행사의 짧은 수명을 가진 협업 앱 시장이 커질 수 있다.
+
+### 업계 분위기
+
+EarlyUsers: 문서처럼 공유되는 즉석 앱 개념에 관심이 예상된다. Caution: 미국 대기자 명단 단계라 실제 동시 편집 안정성과 데이터 정책은 검증 전이다. Builders: 여행·행사·동호회 운영 도구가 가장 빠른 실험 영역으로 보인다.
+
+### 앞으로의 전망
+
+협업형 생성 UI는 문서, 폼, 스프레드시트, 소형 앱의 경계를 흐리고 템플릿보다 목적별 즉석 생성이 일반화될 수 있다.
+
+### 사업 기회
+
+한국 동호회·학부모 모임·소규모 행사에 맞춘 카카오톡 친화형 AI 협업 미니앱.
+
+### 관련 태그
+
+Google · Workflow · AI Startup · Agent
+
+## 4. Google Cloud, Professional Agentic Architect 자격증 출시
+
+- 중요도: A
+- 한줄요약: 객관식 감독 시험과 실습 랩을 결합해 엔터프라이즈 Agent 설계·배포 역량을 검증하는 전문 자격을 공개했다.
+- 영향도: 프롬프트 기술을 넘어 보안·다중 앱 워크플로·운영을 아우르는 Agent 아키텍처가 독립 전문 직무로 표준화된다.
+- 원문: https://cloud.google.com/blog/topics/training-certifications/google-cloud-agentic-architect-certification-dont-just-prompt-ai-design-it
+
+### 원문 핵심문장
+
+> It just got easier to prove your expertise in building production-ready agents.
+
+프로덕션 준비가 된 Agent 구축 전문성을 입증하기가 더 쉬워졌다.
+
+### 원문 요약
+
+[FACT] 자격은 감독형 객관식 시험과 Google Skills 실습 랩으로 구성된다. [FACT] Google은 내부 forward deployed engineer와 파트너를 대상으로 지난 4개월간 교육한 과정을 외부에 개방했다고 밝혔다. [FACT] GEAR 프로그램은 무료 학습 크레딧과 코호트를 제공한다. [INTERPRETATION] Agent 설계가 개발자의 부가 기술에서 검증 가능한 전문 역할로 이동한다.
+
+### 왜 중요한가?
+
+기업 채용과 컨설팅에서 모델 사용법보다 권한, 오케스트레이션, 보안, 관측성, 장애 대응을 설계하는 능력이 차별점이 된다.
+
+### 업계 분위기
+
+Professionals: 새로운 경력 증명 수단에 관심이 높다. Reddit: 베타 응시 경험과 바우처·학습 계획 문의가 이미 이어졌다. Caution: Google Cloud 종속성과 자격증의 실제 채용 가치 검증은 남아 있다.
+
+### 앞으로의 전망
+
+AWS·Microsoft 등도 Agent 운영 역량을 자격 체계에 강화하고, 기업 RFP에 공인 Agent 아키텍처 역량이 포함될 가능성이 높다.
+
+### 사업 기회
+
+한국어 실습형 Agent 아키텍처 교육과 실전 포트폴리오·모의 평가 프로그램.
+
+### 관련 태그
+
+Google · Agent · Workflow · AI Infra
+
+## 5. Google Cloud, 2027 보안 핵심으로 Agent 의사결정 무결성 제시
+
+- 중요도: A
+- 한줄요약: 자율 Agent의 모든 중대한 행동을 설명 가능하게 하고, 접근 권한과 실제 행동을 지속 관찰해야 한다는 보안 전망을 제시했다.
+- 영향도: Zero Trust가 사용자·기기 인증을 넘어 Agent의 의도, 권한, 실행 결과를 실시간 검증하는 체계로 확장된다.
+- 원문: https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/cybersecurity-2027/
+
+### 원문 핵심문장
+
+> Never blindly trusting any AI tool, and having visibility into what they can access and what they are doing.
+
+어떤 AI 도구도 맹목적으로 신뢰하지 말고, 접근 대상과 실제 행동을 볼 수 있어야 한다.
+
+### 원문 요약
+
+[FACT] Google Cloud·Mandiant 리더들은 결정 무결성, Beyond Zero, 다중 모델 기반 ground truth를 2027 보안 우선순위로 제시했다. [FACT] 보고서는 자율 Agent가 핵심 운영을 맡는 환경을 전제로 한다. [INTERPRETATION] Agent 보안은 설치 여부가 아니라 매 행동의 권한·근거·결과를 추적하는 운영 문제가 된다. [SPECULATION] 구체적 제품·표준 채택 속도는 아직 불확실하다.
+
+### 왜 중요한가?
+
+Agent에게 직원 수준 권한을 주는 기업은 계정 하나를 보호하는 것만으로 부족하며, 작업 단위 승인·최소 권한·감사·중단 기능이 필요하다.
+
+### 업계 분위기
+
+Security: Agent를 새로운 내부자 위험 주체로 다루는 방향이 확산된다. Enterprise: 가시성과 정책 집행 요구는 높지만 운영 복잡성·비용을 우려한다. Builders: 권한 최소화와 행동 로그를 제품 초기 설계에 넣어야 한다는 압력이 커진다.
+
+### 앞으로의 전망
+
+Agent identity, 동적 권한, 의사결정 증거, 실행 전후 정책 검사가 보안 플랫폼의 기본 기능으로 통합될 전망이다.
+
+### 사업 기회
+
+국내 중소기업용 Agent 권한 인벤토리와 고위험 행동 승인·감사 리포트 서비스.
+
+### 관련 태그
+
+Google · Agent · AI Security · AI Infra
 
 # Business Radar
 
-## 1. AI 발견 채널 사업자 정보 준비 점검
+## 1. 멀티모달 결정 게이트 구축 서비스
 
 - 점수: 4.2/5 (★★★★)
 - 가능성: High
 - 난이도: Medium
-- 예상 고객: AI 추천 유입을 관리하려는 국내 이커머스·온라인 서비스 소상공인
-- 문제: 사업자·상품·가격·재고·정책 정보가 채널마다 달라 AI 답변이 틀리거나 추천 기회를 놓친다.
-- 경쟁사: Peec AI, Profound, Otterly.AI, SEO 대행사
-- 차별점: 국내 사업자용 정보 정합성, 상품 피드 준비, 추천 질문 세트, 오답 증거와 수정 우선순위를 한글 보고서로 제공한다.
-- 2주 MVP: 10개 사업자와 30개 구매 질문에서 답변의 이름·가격·정책 불일치를 기록하고 수정 전후를 비교한다.
-- 수익화: 초기 진단비 + 월간 모니터링 구독
-- 반증 조건: 10곳 중 3곳 미만이 문제를 인정하거나 2곳 미만이 유료 진단 의향을 보이면 중단한다.
+- 예상 고객: 보험·커머스·고객센터에서 문서·사진·통화를 분류하는 한국 중소기업
+- 문제: 생성형 LLM으로 라우팅·정책 검사를 하면 느리고 비싸며 출력 파싱과 신뢰도 임계값 운영이 어렵다.
+- 경쟁사: Google Gemini Decisions API, OpenAI Decisions API, 규칙 엔진, RPA 구축사
+- 차별점: 업무별 질문·선택지·신뢰도 임계값을 설계하고 결정 로그, 사람 검토 큐, 비용 비교를 함께 제공한다.
+- 2주 MVP: 한 고객의 과거 사례 500건으로 20개 결정 질문을 만들고 기존 규칙·생성 모델·Decision 모델의 정확도·지연·비용을 비교한다.
+- 수익화: 초기 진단·구축비 + 월간 모니터링
+- 반증 조건: 3개 파일럿 중 2개 이상에서 비용 50% 또는 처리시간 30% 개선과 사람 검토 품질 유지가 나오지 않으면 중단한다.
 
-## 2. 프리랜서 AI 서비스 패키지 설계 도구
+## 2. Agent 권한·행동 안전 점검
 
-- 점수: 4/5 (★★★★)
+- 점수: 4.1/5 (★★★★)
 - 가능성: High
 - 난이도: Medium
-- 예상 고객: 기존 직무를 AI 결합형 서비스로 전환하려는 한국 프리랜서·1인 에이전시
-- 문제: 자신의 도메인 경험을 어떤 고객 문제, AI 워크플로, 검증 기준과 가격으로 묶어야 하는지 어렵다.
-- 경쟁사: Upwork Uma, Contra, Notion 템플릿, 커리어 코칭
-- 차별점: 실제 고객 업무를 입력받아 반복성·데이터·검증·성과지표 기준의 2주 유료 파일럿을 만든다.
-- 2주 MVP: 15명의 최근 프로젝트를 인터뷰해 패키지 3개를 만들고 고객 제안 30건의 상담 전환을 비교한다.
-- 수익화: 패키지 생성 1회 결제 + 업데이트 구독
-- 반증 조건: 15명 중 5명 미만이 실제 제안에 쓰거나 상담 전환이 20% 개선되지 않으면 중단한다.
+- 예상 고객: 사내 업무 Agent를 도입하는 20~200인 한국 기업과 MSP
+- 문제: Agent가 어떤 시스템에 접근하고 어떤 고위험 행동을 하는지 한눈에 파악하지 못해 과도한 권한과 감사 공백이 생긴다.
+- 경쟁사: Microsoft Agent 365, Google Cloud Security, Credo AI, 수동 보안 점검
+- 차별점: 대형 플랫폼 도입 전 사용할 수 있는 경량 인벤토리, 권한 그래프, 고위험 행동 시나리오와 승인 체크리스트를 제공한다.
+- 2주 MVP: 기업 2곳의 Agent 10개를 조사해 접근 자원·자격증명·행동·책임자를 맵핑하고 상위 10개 위험과 개선안을 검증한다.
+- 수익화: 진단 프로젝트 + 분기별 재점검 구독
+- 반증 조건: 인터뷰 10곳 중 3곳 미만이 Agent 권한 현황을 모르는 상태이거나 2곳 미만이 유료 진단 의향을 보이면 중단한다.
 
 # AI Tool Radar
 
-- **OpenAI Business Hub** (★★★★): 사업자 프로필, 상품 피드, 발견 인사이트와 Business Agent를 한 채널로 묶었다. 지원 지역 사업자는 정보 정확성과 정책을 확인할 가치가 있고 국내 사업자는 데이터 준비가 우선이다. — https://openai.com/index/introducing-businesses-chatgpt/
-- **anthropics/skills** (★★★★): GitHub Trending에서 재사용 가능한 Agent Skills에 대한 관심이 이어진다. 읽기 전용 작업부터 설치 구조와 권한 범위를 검토해 참고할 만하다. — https://github.com/anthropics/skills
-- **homeassistant-ai/ha-mcp** (★★★★): GitHub Trending 상위권에서 AI 비서와 홈 자동화 연결 수요를 보여줬다. 테스트 인스턴스의 읽기 권한으로 시작하고 기기 제어는 승인과 허용 목록을 둬야 한다. — https://github.com/homeassistant-ai/ha-mcp
+- **Gemini Decisions API** (★★★★★): 멀티모달 입력 하나에 최대 1,000개의 폐쇄형 판단을 저가·저지연으로 처리한다. 비가역 행동은 금지하고 과거 라벨 데이터로 보정도와 임계값부터 검증할 가치가 있다. — https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/
+- **Google Tabletop** (★★★): 공유 문서처럼 여러 사람이 함께 쓰는 즉석 인터랙티브 앱을 생성한다. 미국 대기자 명단 단계이므로 실제 협업 안정성·데이터 내보내기·권한을 확인한 뒤 평가해야 한다. — https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/
+- **addyosmani/agent-skills** (★★★★): 프로덕션 엔지니어링용 재사용 스킬이 GitHub Trending 상위권을 유지한다. 설치 전 각 스킬의 지침·외부 명령·쓰기 범위를 검토하고 읽기 전용 작업부터 시험한다. — https://github.com/addyosmani/agent-skills
+- **homeassistant-ai/ha-mcp** (★★★★): 홈 자동화와 AI 비서 연결 수요로 GitHub Trending에서 높은 상승세를 보였다. 테스트 인스턴스와 허용 목록에서 시작하고 실제 기기 제어는 명시 승인 뒤 실행해야 한다. — https://github.com/homeassistant-ai/ha-mcp
 
 # Community Pulse
 
-- **Hacker News · 관심·회의 혼합** — 사업자 기능과 프리랜서 연구가 같은 날 올라오며 AI가 검색·거래·노동 중개를 흡수하는지 토론이 시작됐다. (https://news.ycombinator.com/news?p=2)
-- **Reddit · 실용적 우려** — 소상공인은 ChatGPT 추천 유입을 체감하지만 잘못된 위치·정책 정보와 측정 불가능성을 문제로 꼽는다. (https://www.reddit.com/r/smallbusiness/comments/1wf9gxy/anyone_had_a_customer_say_they_found_you_through/)
-- **Reddit · 불안·재포지셔닝** — 프리랜서는 AI 생성 구인의 품질과 가격 압박을 비판하며 전문성 결합과 외부 고객 채널을 찾는다. (https://www.reddit.com/r/Upwork/comments/1x9va4l/what_happened_to_upwork/)
-- **GitHub · Agent Skills 강세** — 스킬 저장소와 MCP 도구가 Trending 상위권을 차지하며 재사용 가능한 운영 자산에 관심이 집중됐다. (https://github.com/trending)
-- **Other · 투자 기대와 경계** — Anthropic IPO는 초대형 AI 성장의 상징이자 인프라 지출·손실·지배구조의 공개시장 시험대다. (https://apnews.com/article/8cf2319c870322019712ab658f71ec55)
+- **X · 초기 관심** — Google Developers 공식 게시물은 빠른 라우팅·도구 선택·안전 검사와 낮은 비용을 전면에 내세웠지만 초기 반응 규모는 아직 작다. (https://badinfluence.news/items/g3d9nda6i5nghykcxpqqn6vm3)
+- **Reddit · 경력 준비 중심** — Google Cloud 커뮤니티는 Agentic Architect 베타 시험의 학습 계획·바우처·실습 범위를 묻는 단계다. (https://www.reddit.com/r/googlecloud/comments/1waq1gl/professional_agentic_architect_beta_study_plan/)
+- **GitHub · Agent 실행·스킬 강세** — Agent Skills, 브라우저 자동화, MCP 홈 자동화가 Trending 상위권을 차지해 실행 도구와 재사용 지침 수요가 이어진다. (https://github.com/trending)
+- **Other · 검증 대기** — 독립 보도는 Decisions API의 가격·배치 장점을 주목하면서 Google 내부 벤치마크 외 실제 정확도 검증이 부족하다고 본다. (https://venturebeat.com/technology/googles-gemini-decision-1-model-scores-up-to-1-000-questions-in-one-api-call)
 
 # AI Skill of the Day
 
-## Agent 관측성 삼각측량
+## 신뢰도 기반 결정 라우팅
 
-- 언제 사용하는가: 에이전트가 브라우저·파일·코드·외부 API처럼 실패 비용이 있는 도구를 장시간 사용할 때.
-- 실무 예제: 내부 설명은 참고 신호로만 두고 실제 도구 호출·권한 변경·산출물 diff·독립 평가를 함께 기록하며 위험 임계치에서 사람 승인으로 전환한다.
-- 프롬프트 예제: 이 실행을 의도 설명, 실제 행동, 최종 산출물의 세 축으로 평가하라. 증거 URL·로그·해시를 남기고 불일치하면 완료하지 말고 재현 절차를 보고하라.
+- 언제 사용하는가: 분류·도구 선택·정책 검사처럼 가능한 답이 정해져 있고 애매한 사례만 상위 모델이나 사람에게 보내고 싶을 때.
+- 실무 예제: Decision 모델의 선택 확률이 0.9 이상이면 읽기 전용 자동 처리, 0.6~0.9면 상위 모델 재검토, 0.6 미만이거나 쓰기 작업이면 사람 승인으로 보낸다.
+- 프롬프트 예제: 입력에 대해 가능한 선택지를 먼저 고정하고 각 선택의 명확한 기준을 작성하라. 신뢰도 임계값별 자동 처리·재검토·사람 승인 경로와 오분류 비용을 정의하라.
 
 # Worth Reading
 
-- **Paper · What affects chain-of-thought monitorability across the model lifecycle?** — CoT 모니터링 약화가 학습 전반에서 어떻게 나타나는지와 지표 한계를 함께 볼 수 있다. (https://alignment.openai.com/cot-monitorability-model-lifecycle/)
-- **GitHub · Anthropic Agent Skills** — 에이전트 기능을 재사용 가능한 지침과 자원으로 패키징하는 공개 구조를 볼 수 있다. (https://github.com/anthropics/skills)
-- **YouTube · Introducing Claude Fable 5** — 프런티어 모델이 장기 작업과 검증형 접근 계층으로 제품화되는 흐름을 이해할 수 있다. (https://www.youtube.com/watch?v=Y9Wz2PV404E)
-- **Blog · Introducing Businesses in ChatGPT** — 프로필·상품 피드·발견 인사이트·Business Agent가 하나의 AI 유통 채널로 결합되는 방식을 확인할 수 있다. (https://openai.com/index/introducing-businesses-chatgpt/)
+- **Paper · Agents on the Patch Path** — AI Agent가 실제 보안 취약점 수정 커밋에 참여한 흔적과 검토 시점을 데이터로 살펴본다. (https://arxiv.org/abs/2611.09808)
+- **GitHub · Production-grade engineering skills for AI coding agents** — Agent Skills가 반복 가능한 엔지니어링 절차를 어떻게 패키징하는지 확인할 수 있다. (https://github.com/addyosmani/agent-skills)
+- **YouTube · Introduction to Gemini APIs and AI Studio** — Gemini API와 AI Studio의 기본 호출·실험 흐름을 공식 개발자 영상으로 익힐 수 있다. (https://www.youtube.com/watch?v=4oyqd7CB09c)
+- **Blog · Gemini Decisions API: Fast, calibrated multimodal decisions** — 폐쇄형 결정 API의 질문 형식, 확률 출력, 가격과 내부 활용 사례를 코드와 함께 볼 수 있다. (https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/)
 
 # 운영 상태
 
 - 정본: Git
 - Architect 후보: 없음
-- Notion: 갱신 보류 — 전체 교체의 삭제 위험으로 연결 도구가 차단함
+- Notion: Git 발행 후 고정 Latest 페이지 갱신 시도
