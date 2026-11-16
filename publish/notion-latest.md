@@ -2,276 +2,197 @@
 
 Git 정본의 최신 브리핑을 읽기용으로 투영한 페이지입니다.
 
-# AI Daily Intelligence · 2026-11-13
+# AI Daily Intelligence · 2026-11-16
 
-> 상태: PARTIAL · Git 정본 작성 완료, Notion Latest는 안전 제한으로 갱신하지 못했습니다.
+> 상태: PARTIAL · 강한 뉴스 3건만 선별했으며 Notion 게시 결과는 아래 운영 상태에 기록합니다.
 
 ## Today's Insight
 
-AI 경쟁은 가장 강한 단일 모델보다 계획자·실행자·검증자를 비용과 위험에 맞게 배치하고, 그 결과를 실제 운영 지표로 증명하는 구조로 이동한다.
+에이전트가 돈을 쓰고 과학적 주장을 만들며 법적 책임의 대상이 되는 순간, 경쟁력은 생성 능력보다 승인·증거·검증을 실행과 결박하는 구조에서 나온다.
 
 ## Morning Paper
 
-### 모델 능력보다 운영 구조가 성과를 결정하는 날
+### 행동하는 AI의 핵심 자산은 증거다
 
-Gemini 4 Hydrogen은 빠른 실행 모델과 계획 모델의 조합을 제품화했고, Holiday Extras 사례는 AI 코딩을 오류율·전환율로 평가하려는 방향을 보여준다. 동시에 AI 안경과 아동 안전 선언은 배포 표면이 넓어질수록 프라이버시·연령 적합성·독립 검증이 운영 설계의 일부가 되어야 함을 드러낸다.
+ChatGPT Wallet은 에이전트 행동을 실제 결제로 연결했고, OpenAI의 과학 사례는 AI의 기여를 사람 검토와 열린 질문 속에 배치했다. 동시에 프런티어 AI 동결 소송은 기업의 안전 주장과 내부 행동 기록이 법적 증거가 될 수 있음을 보여준다. 세 사건의 공통점은 승인, 연구 검증, 안전 공시가 사후 문서가 아니라 실행 전후를 묶는 운영 계층이 되어야 한다는 점이다.
 
-# Today's Top 5
+# Today's Top 3
 
-## 1. Google, 에이전트 실행형 Gemini 4 Hydrogen 공개
-
-- 중요도: S
-- 한줄요약: Google이 코딩·에이전트 작업에 맞춘 Gemini 4 Hydrogen을 전 제품군에 출시하고 고정 가격과 네 단계 추론 강도를 제시했다.
-- 영향도: 프런티어 모델 경쟁이 단일 최고 성능보다 계획 모델과 빠른 실행 모델을 섞어 비용·속도·성공률을 최적화하는 운영 구조로 이동한다.
-- 원문: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/
-
-### 원문 핵심문장
-
-> Hydrogen is built for rapid execution across diverse agentic workflows.
-
-Hydrogen은 다양한 에이전트 워크플로에서 빠르게 실행하도록 설계됐다.
-
-### 원문 요약
-
-[FACT] Google은 Gemini 4 Hydrogen을 AI Studio·API·Gemini 앱·Search·Antigravity 등에 출시했다. [FACT] 100만 토큰 범위에서 입력 1.50달러, 출력 7.50달러이며 low부터 xhigh까지 네 단계 추론을 제공한다. [SIGNAL] Google은 Terminal-Bench 4.0에서 Carbon에 가까운 성공률과 더 낮은 할당량·빠른 속도를 주장했다. [SIGNAL] Vals AI의 공개 평가는 세금 에이전트에서 강했지만 코딩 평가는 중간권으로 나타났다. [SPECULATION] 실제 팀의 비용 우위는 작업별 라우팅과 재시도 정책에 좌우된다.
-
-### 왜 중요한가?
-
-한국의 소규모 팀도 모든 작업에 가장 비싼 모델을 쓰기보다 계획·실행·검증 역할을 분리해 비용과 지연을 통제할 수 있다.
-
-### 업계 분위기
-
-- **Developers**: 가격과 추론 강도 선택, 에이전트 실행 속도에 관심이 크다.
-- **Evaluators**: 공급사 벤치마크와 공개 평가의 차이를 보고 작업별 실측을 요구한다.
-- **Market**: 단일 모델 순위보다 멀티모델 오케스트레이션이 제품 차별점이 되는 분위기다.
-
-### 앞으로의 전망
-
-고성능 계획 모델과 빠른 실행 모델을 함께 쓰는 라우터, 실패 재시도, 예산 제한, 독립 검증 도구의 가치가 커질 전망이다.
-
-### 사업 기회
-
-한국 중소 개발팀을 위한 작업별 모델 라우팅·비용·성공률 검증 대시보드.
-
-### 관련 태그
-
-Google · Gemini · Agent · AI Coding · AI Infra · Workflow
-
-## 2. Google·Samsung AI 안경, 한국·미국 사전예약 시작
+## 1. OpenAI, AI 에이전트 결제용 ChatGPT Wallet 출시
 
 - 중요도: S
-- 한줄요약: Google·Samsung과 안경 브랜드들이 Gemini 기반 지능형 안경의 사전예약을 열고 12월 10일 한국·미국 출시를 확정했다.
-- 영향도: AI가 화면 속 도구에서 사용자의 시야·음성·상황을 지속적으로 다루는 웨어러블 인터페이스로 확장되며 프라이버시 설계가 구매 조건이 된다.
-- 원문: https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/
+- 한줄요약: ChatGPT의 dots 에이전트가 실제 카드번호를 보지 않고 사용자 생체 인증을 거쳐 구매를 완료하는 Wallet이 미국 Pro 사용자에게 출시됐다.
+- 영향도: 에이전트가 추천을 넘어 실제 금전 거래를 수행하면서 권한·승인·책임·감사 기록이 제품의 핵심 계층이 된다.
+- 원문: https://openai.com/index/introducing-chatgpt-wallet/
 
 ### 원문 핵심문장
 
-> Every pair of glasses has an outer indicator light.
+> Users review the items, total, and selected card before each purchase, then approve it with a security check.
 
-모든 안경에는 외부 표시등이 있다.
+사용자는 구매 전 상품·총액·카드를 검토하고 보안 확인으로 승인한다.
 
 ### 원문 요약
 
-[FACT] Google은 Samsung·Gentle Monster·Warby Parker와 만든 지능형 안경의 사전예약과 12월 10일 한국·미국 출시를 발표했다. [FACT] Pixel·Samsung·iPhone과 연동하고 한국·미국 Google 계정을 지원한다. [FACT] 물리 전원 스위치와 외부 녹화 표시등을 두며, 표시등이 가려지거나 훼손되면 캡처를 막도록 설계했다고 밝혔다. [SIGNAL] Ars Technica는 395달러부터 시작하는 가격과 프라이버시 메시지에 주목했다. [INTERPRETATION] 카메라가 달린 AI의 사회적 수용성이 핵심 경쟁 변수가 된다.
+[FACT] OpenAI는 미국의 18세 이상 ChatGPT Pro 사용자에게 dots를 통한 ChatGPT Wallet을 출시했다. [FACT] American Express·Mastercard·Visa가 결제 토큰을 제공해 에이전트와 판매자가 실제 카드번호를 보지 않으며, 매 구매마다 생체 인증 등 보안 확인을 요구한다. [FACT] Reuters가 출시 범위와 승인 절차를 독립 보도했다. [INTERPRETATION] ‘사람 승인’은 버튼 하나가 아니라 승인 대상과 실제 실행 효과를 묶는 계약이 된다. [SPECULATION] 향후 지출 한도·카테고리·기간 위임이 확장되면 사전 승인 정책과 사후 감사 시장이 커질 수 있다.
 
 ### 왜 중요한가?
 
-현장 서비스·리테일·교육에서 핸즈프리 AI 활용 가능성이 열리지만 얼굴·대화·업무 정보에 대한 동의와 보관 정책이 먼저 필요하다.
+한국 기업이 구매·정산 에이전트를 만들 때 금액 한도, 허용 판매자, 증빙, 취소, 분쟁 책임을 모델 프롬프트 밖의 통제 계층으로 구현해야 한다.
 
 ### 업계 분위기
 
-- **Consumers**: 핸즈프리 도움과 디자인에는 기대가 있지만 얼굴 앞 카메라에 대한 거부감이 남아 있다.
-- **Privacy**: 녹화 표시등과 물리 스위치를 긍정적으로 보면서도 실제 우회 방지와 데이터 처리를 검증하려 한다.
-- **Business**: 리테일·현장 업무 파일럿 가능성과 직원·고객 동의 비용을 함께 계산한다.
+- **Consumers**: 편리함보다 카드 정보·오구매·책임 소재를 먼저 묻는 반응이 강하다.
+- **Developers**: 승인 화면, 지출 한도, 감사 로그와 사람 개입을 필수 설계로 본다.
+- **Payments**: 기존 카드 네트워크의 토큰·분쟁 보호를 에이전트 거래에 연결하는 방향이다.
 
 ### 앞으로의 전망
 
-초기 채택은 소비자 대중화보다 번역·현장 점검·고객 지원처럼 가치가 명확하고 통제된 환경에서 먼저 일어날 가능성이 높다.
+초기에는 건별 승인으로 제한되지만, 신뢰가 쌓이면 정책 기반 사전 승인과 기업 구매 워크플로로 확장될 가능성이 높다.
 
 ### 사업 기회
 
-한국 기업용 AI 안경 도입 전 개인정보·동의·업무 시나리오·금지 구역을 점검하는 파일럿 패키지.
+한국 중소기업용 에이전트 구매 승인·예산·영수증·감사 로그 게이트웨이.
 
 ### 관련 태그
 
-Google · Samsung · Gemini · Voice AI · AI Security · Workflow
+OpenAI · Agent · Workflow · AI Security · AI Startup
 
-## 3. OpenAI, 아동 AI 안전 연구에 200만 달러 약속
+## 2. OpenAI, 과학 블로그 출범과 GPT-6 Astra 물리학 증명 사례 공개
 
 - 중요도: A
-- 한줄요약: OpenAI가 아동을 위한 안전한 AI 헌장에 참여하고 부정적·불확정 결과까지 공개하는 독립 연구 네트워크에 200만 달러를 지원한다.
-- 영향도: 아동용 AI 제품의 경쟁 기준이 기능에서 연령 적합성, 부모 도구, 위험평가, 결과 공개와 책임성으로 확대된다.
-- 원문: https://openai.com/index/children-first-declaration/
+- 한줄요약: OpenAI가 과학 연구 방법과 한계를 공유하는 채널을 열고 GPT-6 Astra가 표준모형의 격자 정의 후보 증명에 기여한 첫 사례를 공개했다.
+- 영향도: AI 과학 경쟁이 정답 발표에서 증명 과정·검증자·미해결 조건을 공개하는 재현 가능한 연구 워크플로로 이동한다.
+- 원문: https://openai.com/index/step-toward-defining-the-standard-model/
 
 ### 원문 핵심문장
 
-> Research teams retain control over their conclusions, and findings will be published, including negative or inconclusive results.
+> Scientific dialogue among experts is required to decide if this prescription has all the properties we desire.
 
-연구팀은 결론 통제권을 유지하며 부정적이거나 불확정한 결과도 공개한다.
+이 구성이 필요한 모든 성질을 갖는지 판단하려면 전문가들의 과학적 논의가 필요하다.
 
 ### 원문 요약
 
-[FACT] OpenAI는 Paris Peace Forum의 아동 안전 AI 참여 헌장에 서명했다고 밝혔다. [FACT] 200만 달러를 연구 네트워크에 지원하고 연령 적합 보호, 부모 도구, 위험 평가와 책임성을 약속했다. [FACT] 연구팀이 결론 통제권을 가지며 부정적·불확정 결과도 공개한다고 명시했다. [SIGNAL] 독립적인 구체 연구 과제와 집행 일정은 아직 제한적으로 공개됐다.
+[FACT] 물리학자 Nathaniel Craig는 GPT-6 Astra와 함께 표준모형의 비섭동적 격자 정의 후보를 구성했다고 설명했다. [FACT] 논문은 arXiv에 공개됐고 외부 격자장론 연구자들이 증명을 검토했다. [FACT] OpenAI는 같은 날 과학 블로그를 열어 방법, 실무 지침, 한계와 검증을 공유하겠다고 밝혔다. [CAUTION] 저자들은 결과가 현실적 시뮬레이션보다 원리적 답에 가깝고 추가 검토가 필요하다고 명시한다. [INTERPRETATION] AI 연구 성과의 신뢰는 모델 이름보다 증거·검증자·열린 질문을 얼마나 구조적으로 남기는지에 달린다.
 
 ### 왜 중요한가?
 
-교육·대화형 AI를 만드는 팀은 성인용 안전 설정을 축소 적용하는 수준을 넘어 연령 확인, 보호자 제어, 민감 상호작용 평가를 제품 요구사항으로 다뤄야 한다.
+과학·R&D 팀은 AI가 만든 가설이나 증명을 최종 답으로 저장하지 말고 출처, 검증 단계, 반례, 전문가 피드백을 함께 관리해야 한다.
 
 ### 업계 분위기
 
-- **Policy**: 자발적 헌장을 실행 가능한 평가와 공시로 이어갈지 지켜본다.
-- **Parents**: 투명성과 부모 도구는 환영하지만 데이터 사용과 기본 설정에 대한 구체성을 요구한다.
-- **Builders**: 아동 대상 기능에 별도 테스트·모니터링 체계가 필요하다는 신호로 받아들인다.
+- **Researchers**: 도전적 문제에 대한 기여를 주목하지만 동료 검토와 재현을 요구한다.
+- **Builders**: 문헌 탐색·증명 보조·실험 계획에 에이전트를 쓰는 방법론에 관심이 커진다.
+- **Caution**: 기업 블로그의 성과 서술과 학술적 검증을 분리해 보려는 분위기다.
 
 ### 앞으로의 전망
 
-아동 대상 AI는 연령별 기능 제한, 보호자 투명성, 독립 연구와 사고 보고가 조달·규제의 기본 조건이 될 가능성이 높다.
+과학용 AI 제품은 생성 능력보다 증거 그래프, 검증 워크플로, 기여 추적, 실패 공개를 중심으로 차별화될 전망이다.
 
 ### 사업 기회
 
-에듀테크와 가족용 AI 서비스의 연령별 안전 요구·프롬프트·대화 로그를 점검하는 사전 평가 서비스.
+연구팀이 AI 생성 가설·계산·증명과 사람 검토를 추적하는 경량 연구 감사 노트.
 
 ### 관련 태그
 
-OpenAI · AI Security · LLM · AI Startup
+OpenAI · LLM · Agent · AI Research · Workflow
 
-## 4. Holiday Extras, Codex 도입 성과 사례 공개
+## 3. 미 비영리단체들, 5개 AI 기업 상대 ‘프런티어 모델 동결’ 소송
 
 - 중요도: A
-- 한줄요약: Holiday Extras가 Codex를 전사 도입해 앱 오류율과 개발 기간, 전환율을 개선했다고 주장하는 운영 사례를 공개했다.
-- 영향도: AI 코딩 도입의 논의가 생성 코드량에서 전환율·오류율·출시 기간 같은 실제 사업 지표로 이동한다.
-- 원문: https://openai.com/business/customer-stories/holidays-extras-codex/
+- 한줄요약: 네 비영리단체가 Anthropic·Google·Meta·OpenAI·SpaceXSI를 상대로 더 강력한 AI 모델 개발·배포 중단을 요구하는 소송을 냈다.
+- 영향도: AI 규제의 전장이 입법뿐 아니라 기존 불공정경쟁·공공안전 법리를 활용한 법원 명령 요청으로 확대됐다.
+- 원문: https://www.justsecurity.org/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf
 
 ### 원문 핵심문장
 
-> It’s not a question of can I build it anymore. It’s how I would build it.
+> Plaintiffs bring this suit to stop Defendants from continuing their unlawful path to disaster.
 
-이제 만들 수 있느냐가 아니라 어떻게 만들 것인가의 문제다.
-
-### 원문 요약
-
-[FACT] OpenAI 고객 사례는 Holiday Extras가 ChatGPT Enterprise와 Codex를 전사 도입했다고 소개한다. [SIGNAL] 회사는 앱 재구축 기간이 6개월에서 2주로, 오류율이 19%에서 9%로 줄고 전환율이 32.5% 개선됐다고 보고했다. [CAUTION] 수치는 공급사·고객이 제공한 사례이며 비교 기간과 외부 검증이 공개되지 않았다. [INTERPRETATION] AI 코딩 성과를 실제 제품 지표에 연결하는 측정 방식이 중요해진다.
-
-### 왜 중요한가?
-
-도입 여부보다 어떤 업무에서 리드타임·품질·매출이 얼마나 변했는지 추적해야 AI 개발 투자의 재현 가능성을 판단할 수 있다.
-
-### 업계 분위기
-
-- **Executives**: 전사 도입과 사업 지표 연결에 관심이 크다.
-- **Developers**: 빠른 재구축보다 코드 품질·유지보수·리뷰 부담의 장기 데이터가 필요하다고 본다.
-- **Caution**: 공급사 사례 수치이므로 독립 비교와 기준선 공개를 요구한다.
-
-### 앞으로의 전망
-
-기업의 AI 코딩 구매는 좌석 수보다 변경 리드타임, 결함률, 리뷰 시간, 매출 기여를 묶은 성과 계약과 실험 설계로 발전할 전망이다.
-
-### 사업 기회
-
-AI 코딩 도입 전후의 리드타임·결함·리뷰·제품 성과를 팀별로 추적하는 경량 검증 대시보드.
-
-### 관련 태그
-
-OpenAI · Codex · AI Coding · Workflow · AI Startup
-
-## 5. Google Flow, 제작자 실험에서 나온 AI 영상 도구 5종 공개
-
-- 중요도: A
-- 한줄요약: Google Labs가 제작자와 함께 실험한 캐릭터 일관성·영상 변환 중심의 Flow 도구 다섯 가지를 공개했다.
-- 영향도: 생성 영상 제품이 단일 프롬프트에서 반복 가능한 캐릭터·장면·촬영 스타일을 유지하는 제작 워크플로 도구로 진화한다.
-- 원문: https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools/
-
-### 원문 핵심문장
-
-> We built five new experimental tools with filmmakers and creators.
-
-우리는 영화 제작자와 크리에이터와 함께 다섯 가지 새 실험 도구를 만들었다.
+원고들은 피고들의 위법한 재난 경로를 막기 위해 이 소송을 제기한다.
 
 ### 원문 요약
 
-[FACT] Google Labs는 영화 제작자·크리에이터와 만든 Flow 실험 도구 5종을 발표했다. [FACT] 공개 사례는 인물을 여러 시대에 걸쳐 일관되게 유지하고 휴대폰 영상을 정교한 장면으로 변환하는 작업을 포함한다. [INTERPRETATION] 생성 품질만큼 반복 수정, 연속성, 원본 영상 재활용이 제작 도구의 핵심 가치가 된다. [CAUTION] 출시 당일 독립적인 품질·권리 검증 자료는 제한적이다.
+[FACT] Irreplaceable Education Fund 등 네 단체는 11월 12일 샌프란시스코 고등법원에 소장을 제출했다. [FACT] 소장은 캘리포니아 불공정경쟁법 등을 근거로 피고들이 기준일보다 더 강력한 AI를 개발·배포하지 못하게 해달라고 요구한다. [FACT] AP가 소송과 피고 기업들의 당시 무응답을 독립 보도했다. [CAUTION] 이는 원고의 주장과 청구일 뿐 법원 명령이나 책임 인정이 아니다. [INTERPRETATION] AI 기업은 안전 주장뿐 아니라 내부 사용·자기개선·사고 대응 증거가 소송 자료가 될 수 있음을 고려해야 한다.
 
 ### 왜 중요한가?
 
-소규모 브랜드와 제작사는 촬영 비용을 줄일 기회를 얻지만 인물·상표·음원 권리와 결과 일관성 검수를 워크플로에 넣어야 한다.
+AI 공급사와 이를 의존하는 스타트업은 모델 접근 중단, 기능 변경, 지역 제한 같은 법적 공급망 위험을 계약과 대체 모델 계획에 반영해야 한다.
 
 ### 업계 분위기
 
-- **Creators**: 반복 가능한 캐릭터와 장면 제어에는 관심이 높다.
-- **Studios**: 속도보다 권리·연속성·수정 가능성을 본다.
-- **Caution**: 선별된 데모와 실제 장기 프로젝트의 차이를 검증하려 한다.
+- **Policy**: 규제 공백을 기존 법으로 메울 수 있는지 주목한다.
+- **Industry**: 요청 범위와 능력 기준의 모호성이 혁신·공급 안정성에 미칠 영향을 우려한다.
+- **Community**: 실제 동결 가능성에는 회의적이지만 안전 증거 공개 요구에는 공감이 섞인다.
 
 ### 앞으로의 전망
 
-영상 AI 도구는 생성 버튼보다 에셋 관리, 일관성 검사, 장면별 승인, 권리 증거를 묶은 제작 운영체계로 경쟁할 것이다.
+초기 단계에서 동결 명령이 바로 내려질 가능성은 불확실하지만, 안전 프레임워크와 사고 기록의 증거 가치가 커질 것이다.
 
 ### 사업 기회
 
-한국 소규모 브랜드를 위한 제품·캐릭터 일관성 체크와 권리 기록이 포함된 AI 영상 제작 워크플로.
+멀티모델 공급사 의존도·지역 규제·서비스 중단 대체 경로를 점검하는 AI 벤더 리스크 브리핑.
 
 ### 관련 태그
 
-Google · Workflow · AI Tool · AI Startup
+OpenAI · Anthropic · Google · Meta · AI Security · AI Infra
 
 # Business Radar
 
-## 1. 멀티모델 Agent 라우팅·검증 대시보드
+## 1. 에이전트 결제 승인·감사 게이트웨이
 
 - 점수: 4.2/5 (★★★★)
 - 가능성: High
+- 난이도: High
+- 예상 고객: 구매·정산·광고비 집행 에이전트를 도입하려는 한국 중소기업과 SaaS
+- 문제: 에이전트가 잘못된 상품·금액·판매자를 선택해도 프롬프트와 단순 승인창만으로 실제 실행 효과를 보장하기 어렵다.
+- 경쟁사: Stripe Issuing, Visa Intelligent Commerce, Mastercard Agent Pay, 사내 ERP 결재
+- 차별점: 한국형 법인카드·전자결재·세금계산서 흐름에 맞춰 의도, 장바구니, 승인, 결제, 증빙 해시를 하나의 감사 로그로 묶는다.
+- 2주 MVP: 실결제 없이 3개 구매 시나리오에서 승인 카드와 실행 요청의 금액·판매자·품목 일치 여부를 검증하는 시뮬레이터를 만든다.
+- 수익화: 도입 진단비 + 거래량 기반 구독
+- 반증 조건: 인터뷰 10곳 중 3곳 미만이 12개월 내 에이전트 구매를 계획하거나 2곳 미만이 유료 파일럿 의향을 보이면 중단한다.
+
+## 2. AI 연구 증거·검증 노트
+
+- 점수: 3.9/5 (★★★★)
+- 가능성: Medium
 - 난이도: Medium
-- 예상 고객: LLM 비용과 실패율을 관리해야 하는 한국 SaaS·개발 대행사
-- 문제: 계획·코딩·분류 작업에 같은 모델을 사용해 비용·지연이 커지고 실패 원인을 비교하기 어렵다.
-- 경쟁사: LiteLLM, Portkey, Langfuse, Helicone
-- 차별점: 한국 팀의 실제 태스크를 계획자·실행자·검증자로 나눠 성공률, 비용, 재시도, 사람 개입률을 한글로 비교한다.
-- 2주 MVP: 3개 팀의 반복 태스크 100건을 두 모델 조합으로 실행해 단일 모델 대비 비용·성공률·지연을 비교한다.
-- 수익화: 초기 진단비 + 팀별 월 구독
-- 반증 조건: 3개 팀에서 20% 이상의 비용 절감 또는 10%p 성공률 개선이 없거나 1곳도 유료 파일럿에 동의하지 않으면 중단한다.
-
-## 2. AI 안경 기업 도입 프라이버시 점검
-
-- 점수: 4/5 (★★★★)
-- 가능성: High
-- 난이도: Medium-High
-- 예상 고객: 리테일·현장 서비스·교육에서 AI 안경을 시험하려는 국내 기업
-- 문제: 직원과 고객의 얼굴·음성·업무 정보가 수집될 수 있지만 동의, 금지 구역, 보관과 사고 대응 기준이 없다.
-- 경쟁사: 개인정보 컨설팅사, XR 도입 컨설팅, 보안 진단사
-- 차별점: 기술 보안과 한국 개인정보보호 실무를 현장 시나리오·표지·동의·운영 체크리스트로 묶는다.
-- 2주 MVP: 도입 관심 기업 5곳 인터뷰와 모의 현장 2곳에서 촬영 구역·데이터 흐름·동의 문구를 점검한다.
-- 수익화: 파일럿 진단 프로젝트 + 정기 운영 감사
-- 반증 조건: 5곳 중 2곳 미만이 3개월 내 파일럿 계획을 갖거나 유료 진단 의향이 없으면 보류한다.
+- 예상 고객: AI로 문헌·가설·계산을 보조하는 대학 연구실과 기업 R&D 팀
+- 문제: AI가 만든 가설·증명·코드의 출처와 사람 검토가 대화 기록에 흩어져 재현과 책임 추적이 어렵다.
+- 경쟁사: Benchling, Notion, ELN, GitHub
+- 차별점: 주장, 근거, 계산, 반례, 검토자, 미해결 조건을 연결하고 AI 기여를 별도로 표시한다.
+- 2주 MVP: 연구팀 2곳의 실제 AI 보조 작업 20건을 증거 그래프로 기록하고 검토 시간과 누락 근거를 비교한다.
+- 수익화: 팀 구독 + 감사 내보내기
+- 반증 조건: 2개 팀에서 검토 시간이나 근거 누락이 20% 이상 개선되지 않으면 보류한다.
 
 # AI Tool Radar
 
-- **Gemini 4 Hydrogen** (★★★★★): 빠른 에이전트 실행, 고정 가격, 네 단계 추론과 Google 전 제품군 배포가 동시에 이뤄졌다. 반복 코딩·브라우저 작업을 Carbon 등 상위 계획 모델과 나눠 비용·성공률을 직접 비교할 가치가 있다. — https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/
-- **Google Intelligent Eyewear** (★★★★): 한국·미국 사전예약과 출시일, 프라이버시 장치가 구체화됐다. 개인 구매보다 통제된 현장 시나리오에서 동의·표시등·데이터 흐름을 먼저 검증해야 한다. — https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/
-- **Google Flow experimental tools** (★★★★): 캐릭터 일관성과 원본 영상 변환 같은 실제 제작 병목을 다섯 도구로 다룬다. 브랜드 에셋 한 세트로 여러 장면의 일관성과 수정 시간을 측정해 볼 만하다. — https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools/
-- **LiteLLM** (★★★★): 멀티모델 라우팅과 예산·호환 계층의 중요성이 Hydrogen 같은 실행 모델 출시로 더 커졌다. 읽기·테스트 환경에서 두 모델의 비용·지연·실패율을 통합 기록하는 작은 실험부터 권장한다. — https://github.com/BerriAI/litellm
+- **ChatGPT Wallet** (★★★★★): AI 에이전트가 기존 카드 네트워크와 생체 승인으로 실제 구매를 완료하는 단계에 들어갔다. 현재는 미국 제한 출시이므로 한국 팀은 실결제보다 승인·감사 설계와 판매자 접근 가이드부터 참고할 가치가 있다. — https://openai.com/index/introducing-chatgpt-wallet/
+- **FlashML FreeToken** (★★★★): 11월 15일 GitHub Trending에서 큰 별 증가를 보이며 다양한 GGUF·MoE 모델의 GPU 실행 수요를 드러냈다. 지원 GPU·CUDA 조건이 엄격하므로 별도 테스트 머신에서 API 호환성과 메모리 사용량을 먼저 검증해야 한다. — https://github.com/FlashML-org/FreeToken
+- **OpenAI Science Blog** (★★★★): 연구 결과뿐 아니라 실무 방법, 한계, 과학자 관점을 함께 공개하는 새 채널이다. 과학용 AI를 다룬다면 결과보다 검증 과정과 미해결 조건을 읽는 자료원으로 유용하다. — https://openai.com/news/science/
 
 # Community Pulse
 
-- **Reddit · 기대와 감시** — AI 안경의 자연스러운 도움에는 기대하지만 얼굴 앞 카메라, 녹화 표시와 데이터 사용에 대한 불안이 반복된다. (https://www.reddit.com/r/SmartGlasses/comments/1v3fq8l/samsung_brings_galaxy_ecosystem_into_everyday/)
-- **GitHub · 라우팅·운영 도구 강세** — AI 에이전트 저장소와 모델 게이트웨이가 Trending에서 강세를 보여 단일 모델보다 운영 계층에 관심이 모인다. (https://githubtrending.today/topic/ai-agents/)
-- **Other · 벤치마크 분화** — Gemini 4 Hydrogen은 공급사 에이전트 벤치마크에서는 강하지만 공개 평가별 강점이 달라 작업별 실측 필요성이 커졌다. (https://www.vals.ai/models/google_gemini-4-hydrogen)
-- **Other · 성과 증거 요구** — AI 코딩 성공 사례가 전환율·오류율을 제시하면서도 독립 기준선과 장기 유지보수 지표를 요구하는 분위기다. (https://openai.com/business/customer-stories/holidays-extras-codex/)
+- **Reddit · 편리함보다 통제 우선** — ChatGPT Wallet 반응은 오구매·카드 정보·책임 소재를 우려하며 건별 생체 승인만으로 충분한지 묻는다. (https://www.reddit.com/r/OpenAI/comments/1xvd1ci/openai_introduces_chatgpt_wallet_so_agents_can/)
+- **Reddit · 개발 설계 논의** — 에이전트 결제는 승인 흐름, 지출 상한, 감사 로그와 사람 개입을 기본 요구사항으로 만든다는 논의가 시작됐다. (https://www.reddit.com/r/LangChain/comments/1xxbs34/chatgpt_wallet_lets_agents_spend_real_money_what/)
+- **GitHub · 로컬 추론 관심** — FreeToken 등 추론 엔진과 Agent 도구가 주말 Trending에서 강세를 보여 모델 소유·운영 최적화 수요가 이어졌다. (https://trend.ondo.sh/github/en.html)
+- **Reddit · 규제 필요와 실효성 회의** — 프런티어 AI 동결 소송에는 안전 증거 요구에 대한 공감과 법원이 기술 능력선을 정의할 수 있는지에 대한 회의가 공존한다. (https://www.reddit.com/r/technology/comments/1xumctr/advocacy_groups_sue_ai_giants_to_freeze_models/)
 
 # AI Skill of the Day
 
-## Planner–Worker–Verifier 모델 라우팅
+## Effect-bound Approval
 
-- 언제 사용하는가: 한 에이전트가 계획, 반복 실행, 결과 검증을 모두 맡아 비용이 커지거나 실패 원인을 찾기 어려울 때.
-- 실무 예제: 상위 모델이 작업 계획과 수용 기준을 만들고 빠른 실행 모델이 단계별 작업을 수행한 뒤 별도 검증 모델이 산출물과 증거를 검사한다.
-- 프롬프트 예제: 이 작업을 계획자·실행자·검증자로 분리하라. 각 역할의 입력·출력·예산·중단 조건을 정의하고, 검증 실패 시 전체 재실행 대신 실패 단계만 재시도하라.
+- 언제 사용하는가: 에이전트가 결제, 전송, 삭제처럼 되돌리기 어렵거나 비용이 드는 행동을 수행할 때.
+- 실무 예제: 승인 화면을 자유 텍스트가 아니라 판매자·품목·수량·총액·통화·만료시간이 포함된 정규화된 효과 명세에서 생성하고, 승인된 해시와 실제 실행 요청이 일치할 때만 처리한다.
+- 프롬프트 예제: 실행 전 의도와 효과를 분리하라. 승인 대상의 판매자, 품목, 수량, 총액, 통화, 만료시간을 JSON으로 고정하고 승인 후 값이 하나라도 바뀌면 실행하지 말고 다시 승인받아라.
 
 # Worth Reading
 
-- **Paper · Gemini 4 Hydrogen model card** — 공급사가 제시한 능력·안전 평가와 제한을 제품 발표와 분리해 확인할 수 있다. (https://deepmind.google/models/model-cards/gemini-4-hydrogen/)
-- **GitHub · LiteLLM** — 여러 모델을 하나의 호환 계층에서 라우팅하고 비용·실패를 통제하는 구현을 살펴볼 수 있다. (https://github.com/BerriAI/litellm)
-- **YouTube · Introduction to Gemini APIs and AI Studio** — Gemini API 실험과 배포 흐름의 기본을 짧게 익힐 수 있다. (https://www.youtube.com/watch?v=4oyqd7CB09c)
-- **Blog · Introducing Gemini 4 Hydrogen** — 모델의 가격, 배포 범위, 추론 강도와 오케스트레이션 방향을 원문에서 확인할 수 있다. (https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/)
+- **Paper · A gauge-invariant measure for lattice chiral fermions** — AI가 기여한 후보 증명의 실제 주장과 수학적 범위를 기업 설명과 분리해 확인할 수 있다. (https://arxiv.org/abs/2610.09093)
+- **GitHub · FlashML FreeToken** — 여러 오픈 모델을 OpenAI·Anthropic 호환 API로 제공하는 추론 엔진의 설계와 제약을 볼 수 있다. (https://github.com/FlashML-org/FreeToken)
+- **YouTube · OpenAI Science** — OpenAI가 공개하는 과학 연구 발표와 시연을 후속 확인할 채널이다. (https://www.youtube.com/@OpenAI)
+- **Blog · Our new blog for science** — AI 과학 결과와 함께 방법·검증·한계를 공개하겠다는 편집 원칙을 확인할 수 있다. (https://openai.com/index/our-new-blog-for-science/)
 
 # 운영 상태
 
 - 정본: Git
 - Architect 후보: 없음
-- Notion: 갱신 보류 — 전체 교체의 삭제 위험으로 연결 도구가 차단함
+- Notion: 전체 교체 안전 검증 후 결과 반영
