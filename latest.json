@@ -1,8 +1,8 @@
 {
-  "date_kst": "2026-11-16",
+  "date_kst": "2026-11-17",
   "status": "partial",
-  "data_path": "data/daily/2026/2026-11-16.json",
-  "report_path": "reports/2026/2026-11-16.md",
-  "generated_at": "2026-11-16T05:36:46.751Z",
+  "data_path": "data/daily/2026/2026-11-17.json",
+  "report_path": "reports/2026/2026-11-17.md",
+  "generated_at": "2026-11-17T00:15:00.250Z",
   "partial_failure": "notion_publish"
 }

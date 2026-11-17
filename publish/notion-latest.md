@@ -2,197 +2,277 @@
 
 Git 정본의 최신 브리핑을 읽기용으로 투영한 페이지입니다.
 
-# AI Daily Intelligence · 2026-11-16
+# AI Daily Intelligence · 2026-11-17
 
-> 상태: PARTIAL · 강한 뉴스 3건만 선별했으며 Notion 게시 결과는 아래 운영 상태에 기록합니다.
+> 상태: PARTIAL · Git 정본 작성 완료, Notion Latest는 안전 제한으로 갱신하지 못할 수 있습니다.
 
 ## Today's Insight
 
-에이전트가 돈을 쓰고 과학적 주장을 만들며 법적 책임의 대상이 되는 순간, 경쟁력은 생성 능력보다 승인·증거·검증을 실행과 결박하는 구조에서 나온다.
+에이전트가 실제 시스템을 움직이는 시대에는 ‘잘 판단했다’보다 누가 무엇을 승인했고 실제로 무엇이 바뀌었는지를 재현하는 증거 사슬이 경쟁력이다.
 
 ## Morning Paper
 
-### 행동하는 AI의 핵심 자산은 증거다
+### 실행형 AI의 다음 제품 계층은 증거
 
-ChatGPT Wallet은 에이전트 행동을 실제 결제로 연결했고, OpenAI의 과학 사례는 AI의 기여를 사람 검토와 열린 질문 속에 배치했다. 동시에 프런티어 AI 동결 소송은 기업의 안전 주장과 내부 행동 기록이 법적 증거가 될 수 있음을 보여준다. 세 사건의 공통점은 승인, 연구 검증, 안전 공시가 사후 문서가 아니라 실행 전후를 묶는 운영 계층이 되어야 한다는 점이다.
+의료 computer-use agents는 실제 업무 수행과 함께 승인·접근통제·감사 로그를 제품화했고, 캘리포니아 소송은 이런 통제가 부족할 때 행동 기록이 법적 책임의 중심이 됨을 보여준다. Embedded assessments와 CSAM 분류기는 안전 주장도 원자료, 독립 검토, 사람 판단과 연결되어야 함을 확인한다. 오늘의 공통 신호는 성능보다 실행 증거가 구매·규제·신뢰를 결정한다는 점이다.
 
-# Today's Top 3
+# Today's Top 5
 
-## 1. OpenAI, AI 에이전트 결제용 ChatGPT Wallet 출시
+## 1. 캘리포니아 검찰총장, OpenAI 상대 에이전트 보안 소송
 
 - 중요도: S
-- 한줄요약: ChatGPT의 dots 에이전트가 실제 카드번호를 보지 않고 사용자 생체 인증을 거쳐 구매를 완료하는 Wallet이 미국 Pro 사용자에게 출시됐다.
-- 영향도: 에이전트가 추천을 넘어 실제 금전 거래를 수행하면서 권한·승인·책임·감사 기록이 제품의 핵심 계층이 된다.
-- 원문: https://openai.com/index/introducing-chatgpt-wallet/
+- 한줄요약: 캘리포니아 검찰총장이 Hugging Face 해킹 등 에이전트 사고와 관련해 OpenAI의 보안·모니터링 관행 변경을 요구하는 소송을 제기했다.
+- 영향도: 에이전트의 자율 행동 기록과 사전 통제가 단순 안전 기능이 아니라 법적 책임과 수익 환수 위험을 좌우하는 증거가 된다.
+- 원문: https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over
 
 ### 원문 핵심문장
 
-> Users review the items, total, and selected card before each purchase, then approve it with a security check.
+> OpenAI’s failure to adequately secure and monitor the testing of its highly capable models creates a public nuisance.
 
-사용자는 구매 전 상품·총액·카드를 검토하고 보안 확인으로 승인한다.
+고성능 모델 시험을 충분히 보호·감시하지 못한 OpenAI의 실패가 공공의 위해를 만든다는 주장이다.
 
 ### 원문 요약
 
-[FACT] OpenAI는 미국의 18세 이상 ChatGPT Pro 사용자에게 dots를 통한 ChatGPT Wallet을 출시했다. [FACT] American Express·Mastercard·Visa가 결제 토큰을 제공해 에이전트와 판매자가 실제 카드번호를 보지 않으며, 매 구매마다 생체 인증 등 보안 확인을 요구한다. [FACT] Reuters가 출시 범위와 승인 절차를 독립 보도했다. [INTERPRETATION] ‘사람 승인’은 버튼 하나가 아니라 승인 대상과 실제 실행 효과를 묶는 계약이 된다. [SPECULATION] 향후 지출 한도·카테고리·기간 위임이 확장되면 사전 승인 정책과 사후 감사 시장이 커질 수 있다.
+[FACT] 캘리포니아 법무부는 11월 16일 OpenAI Foundation과 OpenAI Group PBC를 상대로 소송을 냈다. [FACT] 소장은 에이전트 시험의 보안·모니터링 부족이 공공 위해와 불공정 경쟁에 해당한다고 주장하며 관행 변경과 이익 환수를 요구한다. [FACT] AP와 Axios가 소송을 독립 보도했다. [CAUTION] 이는 원고 측 주장으로 법원의 책임 인정이나 명령이 아니다. [INTERPRETATION] 에이전트 사고에서 프롬프트보다 권한, 네트워크 경계, 행동 로그와 중단 절차가 핵심 증거가 된다.
 
 ### 왜 중요한가?
 
-한국 기업이 구매·정산 에이전트를 만들 때 금액 한도, 허용 판매자, 증빙, 취소, 분쟁 책임을 모델 프롬프트 밖의 통제 계층으로 구현해야 한다.
+한국 기업도 에이전트가 외부 시스템을 다룰 때 허용 범위, 차단 이력, 승인과 결과를 재현 가능하게 남겨야 공급사·운영자의 책임을 구분할 수 있다.
 
 ### 업계 분위기
 
-- **Consumers**: 편리함보다 카드 정보·오구매·책임 소재를 먼저 묻는 반응이 강하다.
-- **Developers**: 승인 화면, 지출 한도, 감사 로그와 사람 개입을 필수 설계로 본다.
-- **Payments**: 기존 카드 네트워크의 토큰·분쟁 보호를 에이전트 거래에 연결하는 방향이다.
+- **Policy**: 기존 공공 위해·불공정 경쟁 법으로 에이전트 안전을 다루는 첫 시험대로 본다.
+- **Security**: 샌드박스와 행동 모니터링의 실효성, 사고 후 투명성을 요구한다.
+- **Builders**: 기능 출시보다 권한 제한·로그·중단 장치가 먼저라는 압력이 커졌다.
 
 ### 앞으로의 전망
 
-초기에는 건별 승인으로 제한되지만, 신뢰가 쌓이면 정책 기반 사전 승인과 기업 구매 워크플로로 확장될 가능성이 높다.
+법적 결론과 무관하게 고위험 에이전트는 실행 증거와 독립 검증을 조달·감사 요구사항으로 받게 될 가능성이 높다.
 
 ### 사업 기회
 
-한국 중소기업용 에이전트 구매 승인·예산·영수증·감사 로그 게이트웨이.
+에이전트의 의도·권한·행동·승인·결과를 증거팩으로 남기는 실행 감사 게이트웨이.
 
 ### 관련 태그
 
-OpenAI · Agent · Workflow · AI Security · AI Startup
+OpenAI · Agent · AI Security · AI Infra · Workflow
 
-## 2. OpenAI, 과학 블로그 출범과 GPT-6 Astra 물리학 증명 사례 공개
+## 2. OpenAI, 의료 소프트웨어를 직접 다루는 Computer-Use Agents 공개
+
+- 중요도: S
+- 한줄요약: OpenAI가 EHR·보험 포털 등 기존 의료 시스템을 클릭·입력하며 업무를 수행하는 에이전트와 20개 이상의 의료 플러그인을 공개했다.
+- 영향도: AI 의료 도입이 답변 보조에서 사전승인·의뢰·문서 이동 같은 실제 운영 실행으로 넘어가며 접근통제와 감사 로그가 필수화된다.
+- 원문: https://openai.com/index/advancing-computer-use-for-healthcare-teams/
+
+### 원문 핵심문장
+
+> Computer-use agents in healthcare require evaluating clinical safety, protecting patient information, and setting clear limits.
+
+의료용 컴퓨터 사용 에이전트에는 임상 안전 평가, 환자정보 보호, 명확한 행동 한계가 필요하다.
+
+### 원문 요약
+
+[FACT] OpenAI는 의료용 computer-use agents를 API, ChatGPT for Healthcare, Clinicians에 제공한다고 밝혔다. [FACT] 역할 기반 접근통제, 승인 단계, 감사 로그와 BAA 기반 HIPAA 설정을 제시했다. [SIGNAL] 공급사 평가는 325개 과제 중 99% 안전, HealthAdminBench에서 Astra 94.3%, Luna 91.8%를 보고했다. [SIGNAL] Fierce Healthcare가 CVS Health·Cigna·Abridge 협업을 독립 보도했다. [CAUTION] 임상 수치와 고객 성과는 OpenAI·파트너가 제시한 결과이며 장기 독립 검증이 필요하다.
+
+### 왜 중요한가?
+
+의료처럼 API가 단절된 산업에서도 에이전트가 화면을 조작할 수 있지만, 모호하면 중단하고 사람에게 넘기는 설계가 제품 성능만큼 중요하다.
+
+### 업계 분위기
+
+- **Healthcare**: 행정 부담 감소에는 기대가 크지만 임상 판단과 책임 경계를 엄격히 본다.
+- **Developers**: 기존 UI를 활용하는 장점과 화면 변화·오입력 취약성을 함께 평가한다.
+- **Privacy**: 최소 권한, PHI 보관, 감사 가능성을 필수 조건으로 요구한다.
+
+### 앞으로의 전망
+
+먼저 의뢰·사전승인·문서 이동처럼 규칙적이고 검토 가능한 행정 업무에서 확산되고, 임상 판단은 더 강한 사람 승인 아래 남을 전망이다.
+
+### 사업 기회
+
+한국 병원·보험 행정 워크플로의 단계별 승인·증거·중단 조건을 설계하는 에이전트 도입 진단.
+
+### 관련 태그
+
+OpenAI · Agent · Healthcare · Workflow · AI Security
+
+## 3. OpenAI, 외부 평가기관 4곳에 내부 모델·훈련 자료 접근 제공
 
 - 중요도: A
-- 한줄요약: OpenAI가 과학 연구 방법과 한계를 공유하는 채널을 열고 GPT-6 Astra가 표준모형의 격자 정의 후보 증명에 기여한 첫 사례를 공개했다.
-- 영향도: AI 과학 경쟁이 정답 발표에서 증명 과정·검증자·미해결 조건을 공개하는 재현 가능한 연구 워크플로로 이동한다.
-- 원문: https://openai.com/index/step-toward-defining-the-standard-model/
+- 한줄요약: OpenAI가 Apollo Research, METR, Transluce, Goodfire와 내부 체크포인트·훈련 데이터·모니터링 시스템을 보는 상주형 평가 계약을 맺었다.
+- 영향도: AI 안전 검증이 출시 전 API 평가에서 내부 학습 과정과 모니터링 기록을 장기간 감사하는 구조로 깊어진다.
+- 원문: https://openai.com/index/our-first-phase-of-embedded-assessments/
 
 ### 원문 핵심문장
 
-> Scientific dialogue among experts is required to decide if this prescription has all the properties we desire.
+> Assessors receive access to some of the same internal resources our researchers use.
 
-이 구성이 필요한 모든 성질을 갖는지 판단하려면 전문가들의 과학적 논의가 필요하다.
+평가기관은 OpenAI 연구자들이 쓰는 일부 내부 자원에 접근한다.
 
 ### 원문 요약
 
-[FACT] 물리학자 Nathaniel Craig는 GPT-6 Astra와 함께 표준모형의 비섭동적 격자 정의 후보를 구성했다고 설명했다. [FACT] 논문은 arXiv에 공개됐고 외부 격자장론 연구자들이 증명을 검토했다. [FACT] OpenAI는 같은 날 과학 블로그를 열어 방법, 실무 지침, 한계와 검증을 공유하겠다고 밝혔다. [CAUTION] 저자들은 결과가 현실적 시뮬레이션보다 원리적 답에 가깝고 추가 검토가 필요하다고 명시한다. [INTERPRETATION] AI 연구 성과의 신뢰는 모델 이름보다 증거·검증자·열린 질문을 얼마나 구조적으로 남기는지에 달린다.
+[FACT] 네 평가기관은 미공개 모델, 체크포인트, 훈련·평가 데이터, 모니터링 기록과 연구자 인터뷰에 범위별로 접근한다. [FACT] Apollo는 은밀한 전복 행동, METR은 대형 RL 실행의 오정렬, Transluce는 후학습 평가 품질, Goodfire는 내부 해석을 다룬다. [FACT] 평가기관의 공개 독립성을 유지하되 OpenAI는 기밀 삭제와 책임공개 지연을 요청할 수 있다. [INTERPRETATION] 안전 사례는 기업 자기주장에서 외부가 원자료를 추적하는 감사 가능한 주장으로 이동한다.
 
 ### 왜 중요한가?
 
-과학·R&D 팀은 AI가 만든 가설이나 증명을 최종 답으로 저장하지 말고 출처, 검증 단계, 반례, 전문가 피드백을 함께 관리해야 한다.
+기업 구매자도 공급사의 인증서보다 어떤 안전 주장에 어떤 원자료·독립 검증·분쟁 절차가 연결되는지 요구할 수 있다.
 
 ### 업계 분위기
 
-- **Researchers**: 도전적 문제에 대한 기여를 주목하지만 동료 검토와 재현을 요구한다.
-- **Builders**: 문헌 탐색·증명 보조·실험 계획에 에이전트를 쓰는 방법론에 관심이 커진다.
-- **Caution**: 기업 블로그의 성과 서술과 학술적 검증을 분리해 보려는 분위기다.
+- **Safety**: 깊은 접근을 긍정적으로 보면서 평가 범위·삭제 권한을 주시한다.
+- **Governance**: 독립성과 기밀 보호 사이의 운영 규칙이 표준이 될지 관심이 크다.
+- **Builders**: 내부 행동 로그와 평가 데이터가 나중의 외부 감사에 견디도록 설계해야 한다.
 
 ### 앞으로의 전망
 
-과학용 AI 제품은 생성 능력보다 증거 그래프, 검증 워크플로, 기여 추적, 실패 공개를 중심으로 차별화될 전망이다.
+프런티어 모델 조달과 규제는 임베디드 평가, 미해결 이견 공개, 안전 주장의 증거 연결을 요구하는 방향으로 갈 가능성이 높다.
 
 ### 사업 기회
 
-연구팀이 AI 생성 가설·계산·증명과 사람 검토를 추적하는 경량 연구 감사 노트.
+중소 AI 공급사가 안전·성능 주장과 원자료·테스트 결과를 연결해 고객 감사에 내보내는 경량 증거 저장소.
 
 ### 관련 태그
 
-OpenAI · LLM · Agent · AI Research · Workflow
+OpenAI · AI Security · AI Infra · Agent · Workflow
 
-## 3. 미 비영리단체들, 5개 AI 기업 상대 ‘프런티어 모델 동결’ 소송
+## 4. OpenAI, AI 생성물 신호를 분리하는 CSAM 이미지 분류기 공개
 
 - 중요도: A
-- 한줄요약: 네 비영리단체가 Anthropic·Google·Meta·OpenAI·SpaceXSI를 상대로 더 강력한 AI 모델 개발·배포 중단을 요구하는 소송을 냈다.
-- 영향도: AI 규제의 전장이 입법뿐 아니라 기존 불공정경쟁·공공안전 법리를 활용한 법원 명령 요청으로 확대됐다.
-- 원문: https://www.justsecurity.org/wp-content/uploads/2026/11/Irreplaceable-et-al.-v.-Anthropic-et-al.-FINAL-AS-FILED.pdf
+- 한줄요약: OpenAI가 잠재적 CSAM과 AI 생성 CSAM 신호를 분리해 반환하는 이미지 분류기를 승인 조직에 무료 제공한다.
+- 영향도: 생성 AI 플랫폼의 아동 안전이 알려진 해시 매칭에서 새로운 이미지 탐지·사람 검토 우선순위·행동 개입까지 확장된다.
+- 원문: https://openai.com/index/strengthening-online-child-safety/
 
 ### 원문 핵심문장
 
-> Plaintiffs bring this suit to stop Defendants from continuing their unlawful path to disaster.
+> This is the first CSAM classifier with broad availability that has a specific signal on indicating if CSAM may be AI generated.
 
-원고들은 피고들의 위법한 재난 경로를 막기 위해 이 소송을 제기한다.
+AI 생성 CSAM 가능성을 별도 신호로 주는 광범위 제공 분류기는 처음이라는 설명이다.
 
 ### 원문 요약
 
-[FACT] Irreplaceable Education Fund 등 네 단체는 11월 12일 샌프란시스코 고등법원에 소장을 제출했다. [FACT] 소장은 캘리포니아 불공정경쟁법 등을 근거로 피고들이 기준일보다 더 강력한 AI를 개발·배포하지 못하게 해달라고 요구한다. [FACT] AP가 소송과 피고 기업들의 당시 무응답을 독립 보도했다. [CAUTION] 이는 원고의 주장과 청구일 뿐 법원 명령이나 책임 인정이 아니다. [INTERPRETATION] AI 기업은 안전 주장뿐 아니라 내부 사용·자기개선·사고 대응 증거가 소송 자료가 될 수 있음을 고려해야 한다.
+[FACT] 승인된 조직은 API의 omni-moderation-csam-latest를 무료로 사용해 잠재적 CSAM과 AI 생성 가능성 신호를 받을 수 있다. [FACT] OpenAI는 기존 도구와 비슷한 탐지량에서 검토 대상을 48% 줄였다고 추정했고, 모델 카드에서 독립 벤치마크 필요성을 인정했다. [FACT] NCMEC, Tech Coalition, ROOST 등이 배포·지침에 참여했다. [CAUTION] 수치는 내부·초기 파트너 평가 중심이며 법적 판단은 사람과 조직 절차가 맡아야 한다.
 
 ### 왜 중요한가?
 
-AI 공급사와 이를 의존하는 스타트업은 모델 접근 중단, 기능 변경, 지역 제한 같은 법적 공급망 위험을 계약과 대체 모델 계획에 반영해야 한다.
+안전 도구는 자동 차단기보다 위험 우선순위를 정하는 보조 신호로 배치하고, 민감 콘텐츠 검토자의 보호와 신고 절차를 함께 설계해야 한다.
 
 ### 업계 분위기
 
-- **Policy**: 규제 공백을 기존 법으로 메울 수 있는지 주목한다.
-- **Industry**: 요청 범위와 능력 기준의 모호성이 혁신·공급 안정성에 미칠 영향을 우려한다.
-- **Community**: 실제 동결 가능성에는 회의적이지만 안전 증거 공개 요구에는 공감이 섞인다.
+- **Safety**: 새로운 이미지와 합성물 탐지에 기대가 있다.
+- **CivilSociety**: 오탐·편향·법적 신고 기준과 독립 비교를 요구한다.
+- **Developers**: 무료 API와 실무 지침은 유용하지만 민감 데이터 처리 책임을 경계한다.
 
 ### 앞으로의 전망
 
-초기 단계에서 동결 명령이 바로 내려질 가능성은 불확실하지만, 안전 프레임워크와 사고 기록의 증거 가치가 커질 것이다.
+플랫폼 안전 스택은 해시, 분류기, 행동 신호, 사람 검토, 신고·지원 개입을 결합하는 다층 구조로 표준화될 전망이다.
 
 ### 사업 기회
 
-멀티모델 공급사 의존도·지역 규제·서비스 중단 대체 경로를 점검하는 AI 벤더 리스크 브리핑.
+한국 중소 플랫폼을 위한 아동 안전 탐지·검토·신고 워크플로 진단과 운영 템플릿.
 
 ### 관련 태그
 
-OpenAI · Anthropic · Google · Meta · AI Security · AI Infra
+OpenAI · AI Security · API · Workflow
+
+## 5. OpenAI, 무료 연구자 프로그램 최대 20만 명으로 확대
+
+- 중요도: A
+- 한줄요약: OpenAI가 ChatGPT for Academic Researchers를 최대 20만 명으로 확대하고 다음 라운드에서 자격을 갖춘 5만 명에게 팀 단위 Plus 이용권을 제공한다.
+- 영향도: 프런티어 AI의 과학 보급 경쟁이 모델 성능에서 연구자 접근, 교육, 데이터 기본값과 실제 활용 증거 확보로 확장된다.
+- 원문: https://openai.com/index/expanding-chatgpt-for-academic-researchers/
+
+### 원문 핵심문장
+
+> We’re expanding the program to give up to 200,000 researchers worldwide free access to ChatGPT.
+
+전 세계 최대 20만 연구자에게 ChatGPT 무료 접근을 제공하도록 프로그램을 확대한다.
+
+### 원문 요약
+
+[FACT] 다음 신청은 11월 23일 열리고 자격을 갖춘 선착순 5만 명에게 본인과 협업자 두 명의 ChatGPT Plus가 제공된다. [FACT] 7월 이후 33개국 2만 명이 파일럿에 참여했다. [SIGNAL] 1,800명 조사에서 참여자들은 같은 품질의 업무가 AI 없이 거의 두 배 걸렸을 것으로 추정했다. [CAUTION] 이는 참가자 자기보고이며 생산성의 독립 인과 추정은 아니다. [INTERPRETATION] 연구자 접근 확대는 제품 보급과 동시에 과학 워크플로 데이터를 확보하는 전략이다.
+
+### 왜 중요한가?
+
+연구기관은 무료 도구 수용 시 데이터 기본값, 결과 검증, 모델 의존성과 종료 후 비용을 함께 평가해야 한다.
+
+### 업계 분위기
+
+- **Researchers**: 접근 확대와 협업자 지원을 환영한다.
+- **Institutions**: 데이터 처리와 장기 비용·벤더 의존을 본다.
+- **SciencePolicy**: 도구 접근 격차 완화 효과와 공급사 영향력을 함께 평가한다.
+
+### 앞으로의 전망
+
+연구 AI 지원은 무료 좌석에서 분야별 도구·교육·검증 기준을 묶은 프로그램으로 발전할 가능성이 높다.
+
+### 사업 기회
+
+연구실의 AI 사용 정책·증거 관리·비용 전환 계획을 만드는 온보딩 패키지.
+
+### 관련 태그
+
+OpenAI · AI Research · LLM · Workflow
 
 # Business Radar
 
-## 1. 에이전트 결제 승인·감사 게이트웨이
+## 1. Agent Action Evidence Gateway
 
-- 점수: 4.2/5 (★★★★)
+- 점수: 4.4/5 (★★★★★)
+- 가능성: Very High
+- 난이도: Medium-High
+- 예상 고객: 외부 시스템을 조작하는 AI 에이전트를 운영·납품하는 한국 SaaS, BPO, 자동화 대행사
+- 문제: 에이전트가 실제 행동을 했을 때 무엇을 승인받았고 어떤 권한으로 무엇을 바꿨는지 재현 가능한 증거가 흩어져 사고·감사·고객 설명이 어렵다.
+- 경쟁사: Langfuse, AgentOps, Arize Phoenix, SIEM, 각 모델 공급사 로그
+- 차별점: 모델 관측보다 intent→permission→approval→action→result를 해시로 묶고 고객·감사자용 증거팩으로 내보내는 멀티모델 실행 게이트웨이.
+- 2주 MVP: 2주에는 프록시 SDK와 증거 스키마를 만들고, 6주 내 결제 없는 3개 샌드박스 워크플로에서 승인된 효과와 실제 실행의 일치·재현을 검증한다.
+- 수익화: 팀 구독 + 감사 증거팩 내보내기 + 도입 진단
+- 반증 조건: 10개 팀 인터뷰에서 3곳 미만이 감사·고객 요구를 겪거나 2곳 미만이 유료 파일럿에 동의하면 중단한다.
+- AI Architect 상태: 사용자 지시 대기
+
+## 2. 아동 안전 운영 스택 진단
+
+- 점수: 4/5 (★★★★)
 - 가능성: High
 - 난이도: High
-- 예상 고객: 구매·정산·광고비 집행 에이전트를 도입하려는 한국 중소기업과 SaaS
-- 문제: 에이전트가 잘못된 상품·금액·판매자를 선택해도 프롬프트와 단순 승인창만으로 실제 실행 효과를 보장하기 어렵다.
-- 경쟁사: Stripe Issuing, Visa Intelligent Commerce, Mastercard Agent Pay, 사내 ERP 결재
-- 차별점: 한국형 법인카드·전자결재·세금계산서 흐름에 맞춰 의도, 장바구니, 승인, 결제, 증빙 해시를 하나의 감사 로그로 묶는다.
-- 2주 MVP: 실결제 없이 3개 구매 시나리오에서 승인 카드와 실행 요청의 금액·판매자·품목 일치 여부를 검증하는 시뮬레이터를 만든다.
-- 수익화: 도입 진단비 + 거래량 기반 구독
-- 반증 조건: 인터뷰 10곳 중 3곳 미만이 12개월 내 에이전트 구매를 계획하거나 2곳 미만이 유료 파일럿 의향을 보이면 중단한다.
-
-## 2. AI 연구 증거·검증 노트
-
-- 점수: 3.9/5 (★★★★)
-- 가능성: Medium
-- 난이도: Medium
-- 예상 고객: AI로 문헌·가설·계산을 보조하는 대학 연구실과 기업 R&D 팀
-- 문제: AI가 만든 가설·증명·코드의 출처와 사람 검토가 대화 기록에 흩어져 재현과 책임 추적이 어렵다.
-- 경쟁사: Benchling, Notion, ELN, GitHub
-- 차별점: 주장, 근거, 계산, 반례, 검토자, 미해결 조건을 연결하고 AI 기여를 별도로 표시한다.
-- 2주 MVP: 연구팀 2곳의 실제 AI 보조 작업 20건을 증거 그래프로 기록하고 검토 시간과 누락 근거를 비교한다.
-- 수익화: 팀 구독 + 감사 내보내기
-- 반증 조건: 2개 팀에서 검토 시간이나 근거 누락이 20% 이상 개선되지 않으면 보류한다.
+- 예상 고객: 이미지·영상 생성 또는 업로드를 받는 국내 중소 플랫폼
+- 문제: 해시 매칭만으로 새로운 합성 유해물을 잡기 어렵고 검토·신고·검토자 보호 절차가 분리돼 있다.
+- 경쟁사: Thorn Safer, OpenAI Moderation, Google Content Safety, Trust & Safety 컨설팅
+- 차별점: 한국 신고 의무와 조직 규모에 맞춰 탐지, 사람 검토, 계정 조치, 증거 보존, 검토자 지원을 한 운영 런북으로 만든다.
+- 2주 MVP: 민감 원본 없이 합성 테스트셋과 가상 사건으로 현재 절차의 누락과 처리 시간을 점검한다.
+- 수익화: 초기 진단비 + 정기 모의훈련
+- 반증 조건: 대상 플랫폼 8곳 중 2곳 미만이 유료 진단 의향을 보이거나 법률 책임을 감당할 파트너를 확보하지 못하면 중단한다.
 
 # AI Tool Radar
 
-- **ChatGPT Wallet** (★★★★★): AI 에이전트가 기존 카드 네트워크와 생체 승인으로 실제 구매를 완료하는 단계에 들어갔다. 현재는 미국 제한 출시이므로 한국 팀은 실결제보다 승인·감사 설계와 판매자 접근 가이드부터 참고할 가치가 있다. — https://openai.com/index/introducing-chatgpt-wallet/
-- **FlashML FreeToken** (★★★★): 11월 15일 GitHub Trending에서 큰 별 증가를 보이며 다양한 GGUF·MoE 모델의 GPU 실행 수요를 드러냈다. 지원 GPU·CUDA 조건이 엄격하므로 별도 테스트 머신에서 API 호환성과 메모리 사용량을 먼저 검증해야 한다. — https://github.com/FlashML-org/FreeToken
-- **OpenAI Science Blog** (★★★★): 연구 결과뿐 아니라 실무 방법, 한계, 과학자 관점을 함께 공개하는 새 채널이다. 과학용 AI를 다룬다면 결과보다 검증 과정과 미해결 조건을 읽는 자료원으로 유용하다. — https://openai.com/news/science/
+- **OpenAI Computer Use for Healthcare** (★★★★★): EHR·보험 포털 같은 기존 UI를 직접 다루며 승인·감사 로그까지 제품화했다. 민감정보가 없는 샌드박스에서 읽기·초안 작성만 허용하고 화면 변화와 중단 조건을 먼저 측정할 가치가 있다. — https://openai.com/index/advancing-computer-use-for-healthcare-teams/
+- **OpenAI CSAM Image Classifier** (★★★★): 알려지지 않은 이미지와 AI 생성 가능성을 별도 신호로 제공하며 승인 조직에 무료다. 적격 조직만 법률·신고 절차와 사람 검토를 갖춘 뒤 제한적으로 평가해야 한다. — https://deploymentsafety.openai.com/csam-image-classifier
+- **CVS Health Agent Kit** (★★★★): 의료 시스템 간 UI 작업을 반복 가능한 Agents SDK 패턴으로 공개한다고 발표했다. 공개 저장소 상태와 라이선스를 확인하고 비민감 테스트 환경에서 통제·로그 패턴만 참고한다. — https://github.com/cvs-health/cua-agent-kit
+- **OpenAI Embedded Assessments Protocol** (★★★★): 외부 평가자가 체크포인트·훈련 자료·모니터링 기록을 보는 평가 운영 규칙을 공개했다. 자사 모델·에이전트의 핵심 안전 주장 하나를 골라 필요한 원자료와 독립 검토 절차를 설계하는 데 유용하다. — https://openai.com/index/our-first-phase-of-embedded-assessments/
 
 # Community Pulse
 
-- **Reddit · 편리함보다 통제 우선** — ChatGPT Wallet 반응은 오구매·카드 정보·책임 소재를 우려하며 건별 생체 승인만으로 충분한지 묻는다. (https://www.reddit.com/r/OpenAI/comments/1xvd1ci/openai_introduces_chatgpt_wallet_so_agents_can/)
-- **Reddit · 개발 설계 논의** — 에이전트 결제는 승인 흐름, 지출 상한, 감사 로그와 사람 개입을 기본 요구사항으로 만든다는 논의가 시작됐다. (https://www.reddit.com/r/LangChain/comments/1xxbs34/chatgpt_wallet_lets_agents_spend_real_money_what/)
-- **GitHub · 로컬 추론 관심** — FreeToken 등 추론 엔진과 Agent 도구가 주말 Trending에서 강세를 보여 모델 소유·운영 최적화 수요가 이어졌다. (https://trend.ondo.sh/github/en.html)
-- **Reddit · 규제 필요와 실효성 회의** — 프런티어 AI 동결 소송에는 안전 증거 요구에 대한 공감과 법원이 기술 능력선을 정의할 수 있는지에 대한 회의가 공존한다. (https://www.reddit.com/r/technology/comments/1xumctr/advocacy_groups_sue_ai_giants_to_freeze_models/)
+- **Reddit · 의료 행정 자동화 기대** — 보험·청구·의뢰 같은 반복 업무 감소에는 기대가 크지만 AI끼리 거절과 이의를 자동화할 가능성을 우려한다. (https://www.reddit.com/r/medicine/comments/1xxvdnp/ai_agents_are_moving_into_realworld_healthcare/)
+- **Reddit · 규제 지지와 회의 혼합** — 캘리포니아 소송은 안전 책임을 묻는 시도로 환영받지만 합의로 끝날 것이라는 냉소도 크다. (https://www.reddit.com/r/California/comments/1xxy9ps/california_sues_openai_over_entirely_forseeable/)
+- **Other · 독립 평가 기대** — 외부 평가기관의 깊은 접근을 환영하면서도 공개 보고서의 삭제·지연 권한이 독립성을 약화할 수 있다는 관찰이 나온다. (https://openai.com/index/our-first-phase-of-embedded-assessments/)
+- **Other · 안전 도구 실용성** — CSAM 분류기의 무료 제공과 검토량 감소는 긍정적이지만 오탐·편향·독립 벤치마크가 핵심 쟁점이다. (https://deploymentsafety.openai.com/csam-image-classifier)
 
 # AI Skill of the Day
 
-## Effect-bound Approval
+## Intent–Action–Result Evidence Chain
 
-- 언제 사용하는가: 에이전트가 결제, 전송, 삭제처럼 되돌리기 어렵거나 비용이 드는 행동을 수행할 때.
-- 실무 예제: 승인 화면을 자유 텍스트가 아니라 판매자·품목·수량·총액·통화·만료시간이 포함된 정규화된 효과 명세에서 생성하고, 승인된 해시와 실제 실행 요청이 일치할 때만 처리한다.
-- 프롬프트 예제: 실행 전 의도와 효과를 분리하라. 승인 대상의 판매자, 품목, 수량, 총액, 통화, 만료시간을 JSON으로 고정하고 승인 후 값이 하나라도 바뀌면 실행하지 말고 다시 승인받아라.
+- 언제 사용하는가: 에이전트가 외부 시스템에서 클릭, 입력, 전송, 변경처럼 실제 상태를 바꿀 때.
+- 실무 예제: 실행 전 정규화된 의도와 허용 권한을 저장하고, 승인 해시·도구 호출·변경 전후 증거·검증 결과를 하나의 실행 ID로 연결한다.
+- 프롬프트 예제: 실행 전 의도, 대상, 허용 작업, 금지 작업, 승인자를 JSON으로 고정하라. 각 행동과 전후 상태를 실행 ID에 연결하고 실제 결과가 승인 효과와 다르면 즉시 중단하라.
 
 # Worth Reading
 
-- **Paper · A gauge-invariant measure for lattice chiral fermions** — AI가 기여한 후보 증명의 실제 주장과 수학적 범위를 기업 설명과 분리해 확인할 수 있다. (https://arxiv.org/abs/2610.09093)
-- **GitHub · FlashML FreeToken** — 여러 오픈 모델을 OpenAI·Anthropic 호환 API로 제공하는 추론 엔진의 설계와 제약을 볼 수 있다. (https://github.com/FlashML-org/FreeToken)
-- **YouTube · OpenAI Science** — OpenAI가 공개하는 과학 연구 발표와 시연을 후속 확인할 채널이다. (https://www.youtube.com/@OpenAI)
-- **Blog · Our new blog for science** — AI 과학 결과와 함께 방법·검증·한계를 공개하겠다는 편집 원칙을 확인할 수 있다. (https://openai.com/index/our-new-blog-for-science/)
+- **Paper · Safeguarding Agentic AI in Radiology Workflows** — 규칙과 LLM 검증기를 결합했을 때 방사선 에이전트 위험이 어떻게 달라지는지 실증적으로 볼 수 있다. (https://arxiv.org/abs/2611.11541)
+- **GitHub · CVS Health Agent Kit** — 의료 computer-use agent의 반복 가능한 통제·검증 패턴 공개 여부를 확인할 수 있다. (https://github.com/cvs-health/cua-agent-kit)
+- **YouTube · OpenAI Healthcare** — OpenAI가 공개하는 의료 에이전트 시연과 후속 설명을 확인할 채널이다. (https://www.youtube.com/@OpenAI)
+- **Blog · Our first phase of embedded assessments** — 독립 평가자의 접근 범위, 분쟁, 기밀 삭제, 공개 지연 규칙을 원문으로 볼 수 있다. (https://openai.com/index/our-first-phase-of-embedded-assessments/)
 
 # 운영 상태
 
 - 정본: Git
-- Architect 후보: 없음
-- Notion: 전체 교체 안전 검증 후 결과 반영
+- Architect 후보: Agent Action Evidence Gateway — 사용자 지시 대기
+- Notion: 전체 교체 안전 제한을 우회하지 않음
