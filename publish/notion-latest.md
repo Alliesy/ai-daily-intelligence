@@ -1,136 +1,136 @@
-AI Daily Intelligence · 2026-11-18 KST
+AI Daily Intelligence · 2026-11-19 KST
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-18.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-18.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-19.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-19.json)
 
 뉴스 5개 · 사업 아이디어 2개 · 구축 후보 1개
 
 <callout icon="💡" color="blue_bg">
-AI가 답변에서 계정·결제·배포로 넘어갔다
+커넥터 수보다 권한 증거가 중요해졌다
 
-Gemini Tasks와 AWS 온보딩은 에이전트가 실제 상태를 바꾸기 시작했음을 보여주고, OpenAI와 Microsoft의 다중 모델 전략은 그 행동에 어떤 모델을 쓸지 지속 평가하는 운영층의 중요성을 높인다.
+GitHub는 MCP 연결을 빠르게 넓히고 OpenAI는 샌드박스 경계를 공개했다. 이제 기업의 병목은 연결 자체가 아니라 각 도구가 실제로 무엇을 할 수 있는지 검증하고 철회 가능한 상태로 운영하는 일이다.
 </callout>
 
 ## 오늘의 핵심 뉴스
 
-### 1. OpenAI, GPT-6.2 Astra·Sol 출시
+### 1. OpenAI, 프런티어 AI 위험관리와 Codex 샌드박스 경계 공개
 
-**S · OpenAI가 전문 업무용 Astra와 일상 에이전트용 Sol을 Work·Codex·API에 출시하고 Astra 가격을 이전 세대보다 20% 낮췄다.**
+**S · OpenAI가 훈련부터 실제 Codex 실행까지 모델 위험을 관리하는 절차와 샌드박스가 보호하는 범위·보호하지 못하는 범위를 공개했다.**
 
-한국 팀은 가장 비싼 모델을 고정하기보다 업무별 품질 기준과 실패 비용을 정의해 Astra·Sol·타사 모델을 라우팅해야 비용 절감이 실제 생산성으로 이어진다.
+에이전트에 '읽기 전용'이나 '워크스페이스 전용'이라고 표시하는 것만으로 충분하지 않고, 실제 자식 프로세스와 연결 도구가 동일한 제한을 상속하는지 시험해야 한다.
 
-앞으로 볼 것: 프런티어 모델 구매는 단일 벤더 선정에서 업무별 동적 라우팅과 지속 평가 계약으로 이동할 가능성이 높다.
+앞으로 볼 것: 고위험 에이전트 도입은 모델 평가와 별도로 샌드박스·도구·자격증명·중단 경로를 검증하는 실행 안전 사례를 요구할 가능성이 높다.
 
-[원문 보기](https://openai.com/index/introducing-gpt-6-2-astra-sol/)
+[원문 보기](https://openai.com/index/managing-frontier-ai-risk/)
 
-### 2. Google, 전화·결제까지 수행하는 Gemini Tasks 확대
+### 2. OpenAI, 실제 칩 회로 최적화 결과와 GPT-Synopsys 계획 공개
 
-**S · Google이 Gemini Tasks를 한국 등 6개국에 무료 배포하고 미국에서는 전화 예약, 웹 로그인, Google Pay 결제까지 지원한다.**
+**S · OpenAI가 GPT-6 계열 모델로 Jalapeño 실리콘과 RISC‑V 코어의 면적·성능을 개선한 결과를 공개하고 Synopsys와 칩 설계 특화 모델을 개발한다.**
 
-한국에서도 무료 Tasks가 배포되지만 행동 범위가 국가별로 다르므로, 기업은 데모 화면보다 실제 계정·지역·승인 단계에서 가능한 작업을 따로 검증해야 한다.
+칩 설계처럼 결과 검증이 엄격한 분야에서는 모델 답변보다 도구 실행 기록, 설계 전후 지표, 엔지니어 승인과 재현 가능성이 제품 가치가 된다.
 
-앞으로 볼 것: 개인 에이전트는 결제 직전 사람 승인, 사업자 식별, 짧은 세션 권한과 영수증 추적을 기본 계약으로 채택할 가능성이 높다.
+앞으로 볼 것: 전문 엔지니어링 AI는 자연어 인터페이스보다 기존 검증 도구를 반복 실행하고 결과를 증거로 남기는 도메인 에이전트로 발전할 전망이다.
 
-[원문 보기](https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/)
+[원문 보기](https://openai.com/index/advancing-chip-design-with-our-models/)
 
-### 3. Microsoft, 자체 AI 모델과 멀티모델 Copilot 운영계층 공개
+### 3. GitHub Copilot, Supabase·Box 등 검증된 MCP 커넥터 8종 추가
 
-**S · Microsoft가 Ignite에서 자체 특화 모델 6종, MAI 가중치 라이선스, Copilot 자동 모델 라우팅과 Managed Runtime을 공개했다.**
+**S · GitHub가 Copilot에 Supabase, Box, Buildkite, Calendly, ClickUp, Mixpanel, Webflow, Wix 커넥터를 공개 프리뷰로 추가했다.**
 
-기업은 특정 모델 계약보다 라우팅 기준, 데이터 경계, 실패 시 대체 모델과 비용 증거를 소유해야 플랫폼 변경에도 업무를 유지할 수 있다.
+커넥터가 '검증됨'은 모든 작업이 안전하다는 뜻이 아니므로 조직은 읽기·쓰기·삭제·비용 발생 권한을 서비스별로 분리하고 실제 계정으로 시험해야 한다.
 
-앞으로 볼 것: 기업용 AI는 멀티모델 게이트웨이와 업무 맥락 계층, 에이전트 런타임이 분리된 표준 스택으로 수렴할 가능성이 높다.
+앞으로 볼 것: MCP 커넥터 마켓은 빠르게 커지지만 기업 구매 기준은 커넥터 수보다 권한 선언, 승인 단계, 감사 로그와 철회 가능성으로 이동할 전망이다.
 
-[원문 보기](https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/)
+[원문 보기](https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/)
 
-### 4. Isomorphic Labs, AI 신약개발에 50억 달러 투자 유치
+### 4. Google, 실시간 편집·오디오 지원 Genie 4를 Project Genie에 배포
 
-**A · Alphabet 계열 Isomorphic Labs가 Sequoia·Greenoaks 공동 주도 Series C에서 50억 달러를 조달해 AI 신약 엔진과 파이프라인을 확장한다.**
+**A · Google이 AI Ultra 구독자에게 자연어로 실시간 수정하고 오디오를 생성하는 Genie 4 인터랙티브 월드 제작 경험을 제공한다.**
 
-소규모 팀이 신약 전체를 경쟁하기보다 문헌·실험 운영·규제 증거처럼 대형 플랫폼의 병목을 좁혀야 현실적인 시장 진입이 가능하다.
+소규모 창작팀은 완성 자산 생성보다 아이디어·공간·상호작용을 빠르게 검증하는 전단계 도구로 활용할 때 실패 비용을 줄일 수 있다.
 
-앞으로 볼 것: 대형 AI 신약사는 후보물질을 직접 소유하고, 주변 생태계는 실험 데이터 품질·증거 추적·파트너 협업 도구로 분화할 전망이다.
+앞으로 볼 것: 월드 모델은 게임 엔진을 즉시 대체하기보다 콘셉트 검증, 합성 훈련 환경, 교육 시뮬레이션의 앞단 도구로 자리 잡을 가능성이 높다.
 
-[원문 보기](https://www.isomorphiclabs.com/articles/isomorphic-labs-announces-series-c-investment-round)
+[원문 보기](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/)
 
-### 5. AWS, 코딩 에이전트에서 계정 생성·단기 자격증명 연결
+### 5. NVIDIA RTX Spark 소형 데스크톱 출하 시작
 
-**A · AWS가 Codex·Claude Code·Cursor 같은 코딩 에이전트에서 가입 화면을 열고 단기 자격증명을 돌려받아 바로 배포하는 흐름을 지원한다.**
+**A · ASUS·Dell·MSI가 128GB 통합 메모리와 Grace CPU·Blackwell GPU를 갖춘 RTX Spark 소형 데스크톱 판매를 시작했다.**
 
-개발 편의가 좋아질수록 에이전트가 만든 계정의 소유자, 결제 전환, IAM 권한과 삭제 책임을 명시적으로 기록해야 한다.
+클라우드 비용이나 데이터 반출이 문제인 팀은 모델 크기보다 실제 업무 처리량, 전력, 소프트웨어 호환성, 3년 총비용으로 구매 여부를 판단해야 한다.
 
-앞으로 볼 것: 클라우드사는 에이전트 친화적 가입·권한 API를 확대하되 결제 전환과 고위험 권한에서는 사람 승인과 정책 증명을 요구할 전망이다.
+앞으로 볼 것: 로컬 AI PC는 범용 노트북이 아니라 규제 데이터, 오프라인 추론, 상시 에이전트 같은 명확한 워크로드에서 먼저 채택될 전망이다.
 
-[원문 보기](https://aws.amazon.com/about-aws/whats-new/2026/11/agentic-account-creation/)
+[원문 보기](https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/)
 
 ## Business Radar
 
-### 1. Model Routing Evidence Bench
+### 1. MCP Permission Auditor
 
 ★★★★★ · Very High · 난이도 Medium
 
-**고객**: 여러 LLM을 쓰는 한국 SaaS·AI 에이전시·사내 자동화팀
+**고객**: MCP 커넥터를 도입하는 한국 SaaS·개발팀·보안 담당자
 
-**문제**: 업무마다 어떤 모델이 품질·비용·지연 측면에서 최적인지 판단 근거가 흩어져 자동 라우팅 결과와 비용을 설명하기 어렵다.
+**문제**: 커넥터가 실제로 읽기·쓰기·삭제·비용 발생 중 무엇을 할 수 있고 샌드박스 밖에서 어떤 자격증명을 쓰는지 조직이 재현 가능하게 증명하기 어렵다.
 
-**차별점**: 한국어 실제 업무 골든셋에서 라우팅 결정, 성공 기준, 비용, 실패 유형을 하나의 증거 레코드로 저장하고 주간 교체 권고를 만든다.
+**차별점**: 연결 전 권한 선언과 실제 도구 호출을 비교해 과도 권한, 승인 누락, 네트워크 범위와 철회 실패를 한국어 증거팩으로 내보낸다.
 
-**MVP**: 2주 동안 3개 업무 유형과 30개 골든 태스크를 지원하는 프록시·평가 대시보드를 만들고, 6주 안에 3개 팀에서 수동 선택 대비 비용·성공률 개선을 검증한다.
+**MVP**: 2주에는 Supabase·GitHub·Box 샘플 커넥터의 읽기·쓰기·파괴 작업 매트릭스와 재생 로그를 만들고, 6주 내 3개 팀에서 정책과 실제 권한 불일치를 탐지한다.
 
 <callout icon="🎯" color="yellow_bg">
 AI Architect 후보 · 사용자 지시 대기
 
-설계를 원하면 “승인: Model Routing Evidence Bench”이라고 지시하세요.
+설계를 원하면 “승인: MCP Permission Auditor”이라고 지시하세요.
 </callout>
-### 2. Agent Permission Dry-Run Lab
+### 2. Local AI Workstation Fit Calculator
 
-★★★★☆ · High · 난이도 Medium-High
+★★★★☆ · High · 난이도 Low-Medium
 
-**고객**: 결제·로그인·클라우드 배포 에이전트를 도입하는 국내 스타트업과 SI
+**고객**: 민감 데이터·상시 에이전트 때문에 로컬 AI PC 구매를 검토하는 1~20인 팀
 
-**문제**: 에이전트가 실제 계정과 결제 수단을 쓰기 전에 승인·권한·비용·사람 인계 경계를 반복 시험하기 어렵다.
+**문제**: 고가 AI PC가 실제 업무에서 클라우드보다 싼지, 필요한 모델과 도구가 호환되는지 구매 전에 판단하기 어렵다.
 
-**차별점**: 업무 시나리오를 실행 전 검증하고 결제·자격증명·외부 통화 단계별 사람 승인 누락을 한국어 리포트로 보여준다.
+**차별점**: 한국 전기요금·구매가·업무 처리량·데이터 반출 요구를 묶어 손익분기점과 호환성 위험을 계산한다.
 
-**MVP**: Gemini Tasks와 AWS 가입 흐름을 모사한 두 개의 가상 시나리오에서 권한·승인·비용 전환 체크리스트와 재생 로그를 만든다.
+**MVP**: 대표 모델 5종과 문서·코딩·이미지 업무의 공개 벤치마크를 입력하는 비교 계산기와 구매 체크리스트를 만든다.
 
 
 ## AI Tool Radar
 
-- **GPT-6.2 Astra & Sol API** · ★★★★★ — 전문 업무용 Astra와 일상 에이전트용 Sol이 동시에 출시돼 업무별 비용·성능 라우팅 선택지가 넓어졌다. [확인](https://developers.openai.com/api/docs/changelog)
-- **Gemini Tasks** · ★★★★★ — 한국 포함 무료 배포와 함께 전화·로그인·결제까지 이어지는 실행형 개인 에이전트로 확장됐다. [확인](https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/)
-- **AWS Agent Toolkit** · ★★★★☆ — 코딩 에이전트가 계정 생성과 단기 자격증명을 받아 첫 배포까지 이어지는 온보딩을 제공한다. [확인](https://aws.amazon.com/about-aws/whats-new/2026/11/agentic-account-creation/)
-- **EmbeddingGemma 2** · ★★★★☆ — 740M 규모로 텍스트·이미지·오디오·비디오를 하나의 벡터 공간에 매핑하고 로컬 실행을 지원한다. [확인](https://github.com/google-gemma/docs/blob/main/docs/models/embeddinggemma/index.md)
+- **GitHub Copilot Connectors** · ★★★★★ — Supabase·Box·Buildkite 등 8개 서비스가 GitHub 검증 커넥터로 추가됐다. [확인](https://docs.github.com/en/copilot/concepts/customizations/copilot-connectors)
+- **Codex Sandbox Profiles** · ★★★★★ — 파일·네트워크·자식 프로세스와 MCP 서버의 실제 보호 경계를 구체적으로 공개했다. [확인](https://openai.com/index/inside-the-codex-sandbox/)
+- **Project Genie 4** · ★★★★☆ — 실시간 자연어 편집과 네이티브 오디오를 포함한 인터랙티브 월드 제작을 Ultra 구독자에게 배포했다. [확인](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/)
+- **NVIDIA RTX Spark Desktop** · ★★★★☆ — 128GB 통합 메모리의 소형 AI 데스크톱이 실제 판매 단계에 들어갔다. [확인](https://www.nvidia.com/en-us/products/rtx-spark/)
 
 ## Community Pulse
 
-- **Reddit · 기대와 초기 품질 논쟁** — GPT-6.2 배포 자체는 빠르게 확인됐지만 실제 코딩 품질, 사용량 한도, 가드레일 평가는 엇갈렸다.
-- **Reddit · 편의 기대와 권한 우려** — Gemini Tasks의 전화·결제 기능을 반기면서 비밀번호 관리자와 결제 권한 집중을 경계한다.
-- **Reddit · 온보딩 단축과 비용 경계** — AWS 커뮤니티는 무료 구간의 비용 제한과 기존 파트너 온보딩보다 빨라진 흐름을 비교한다.
-- **Other · 멀티모델 경쟁 심화** — Microsoft의 자체 특화 모델과 외부 모델 자동 라우팅이 OpenAI 의존도를 낮출 수 있다는 관측이 나온다.
+- **Reddit · 투명성 환영과 독립 검증 요구** — Codex 샌드박스 설명은 유용하지만 MCP 서버와 넓은 읽기 권한이 실제로 어떻게 통제되는지 별도 시험이 필요하다는 반응이다.
+- **Reddit · 관리형 연결과 자체호스팅 혼선** — Supabase 사용자는 관리형 MCP 커넥터가 자체호스팅 인스턴스와 자동 호환되지 않는 점과 서비스 역할 키 위험을 반복 질문한다.
+- **Hacker News · 월드 모델의 실용성 관찰** — Genie 4 공개 뒤 실시간 세계 생성의 시연 가치는 인정하면서도 엔진 수준 일관성과 실제 제작 전환을 지켜보는 분위기다.
+- **Reddit · 로컬 AI 기대와 가격 회의** — RTX Spark의 128GB 메모리는 매력적이지만 높은 가격과 Windows on ARM 호환성 때문에 명확한 로컬 워크로드가 필요하다는 의견이 우세하다.
 
 ## 오늘의 활용법
 
-**Golden-Task Model Routing**
+**MCP Permission Diff**
 
-같은 업무에 여러 LLM이나 에이전트 모델을 선택해야 하고 가격·속도·품질이 자주 바뀔 때.
+새 MCP 서버나 관리형 커넥터를 에이전트에 연결하거나 버전을 올릴 때.
 
-예시 요청: “이 업무를 실행하기 전 성공 기준을 JSON으로 고정하고 후보 모델별 결과, 총비용, 지연, 수정 횟수, 실패 유형을 비교하라. 기준을 통과한 모델 중 예상 비용이 가장 낮은 모델을 선택하고 선택 근거를 남겨라.”
+예시 요청: “이 MCP 연결의 도구별 선언 권한과 실제 효과를 비교하라. 읽기, 쓰기, 삭제, 외부 전송, 비용 발생, 자격증명 범위, 사람 승인, 철회 후 접근을 각각 pass/fail/unknown으로 기록하고 증거가 없는 항목은 안전하다고 추정하지 마라.”
 
 ## 더 읽고 볼 자료
 
-- Paper · [GPT-6.2 Astra and Sol System Card](https://deploymentsafety.openai.com/gpt-6-2-astra-sol/gpt-6-2-astra-sol.pdf) — 사이버·생화학·AI 자기개선 위험 등급과 공개 모델의 통제 근거를 원문으로 확인할 수 있다.
-- GitHub · [EmbeddingGemma 2 model overview](https://github.com/google-gemma/docs/blob/main/docs/models/embeddinggemma/index.md) — 로컬 멀티모달 임베딩의 크기, 라이선스, 벡터 차원과 활용 경계를 확인할 수 있다.
-- YouTube · [Microsoft Ignite 2026](https://www.youtube.com/@Microsoft) — Copilot Auto, Agent 365와 자체 모델 발표의 실제 데모·후속 세션을 확인할 공식 채널이다.
-- Blog · [Put Gemini to work for you](https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/) — 전화·결제·로그인·사람 인계가 어떤 지역과 승인 조건에서 동작하는지 원문으로 볼 수 있다.
+- Paper · [MCP Transport Trust Gap](https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/11/CSA_research_note_mcp_transport_trust_gap_20261109-csa-styled.pdf) — MCP OAuth 등록·토큰·서명키가 신뢰 경계를 넘을 때 필요한 회수·재바인딩 조치를 볼 수 있다.
+- GitHub · [Supabase MCP Server](https://github.com/supabase/mcp) — 실제 MCP 서버의 도구·확인 절차·버전 변경을 코드와 릴리스에서 확인할 수 있다.
+- YouTube · [Official Supabase MCP Server](https://www.youtube.com/watch?v=1SMldLoOhbg) — 데이터베이스·Auth·RLS를 에이전트가 다루는 기본 흐름을 공식 시연으로 볼 수 있다.
+- Blog · [Inside the Codex sandbox](https://openai.com/index/inside-the-codex-sandbox/) — 파일·네트워크·MCP 프로세스가 어디까지 같은 샌드박스 경계를 공유하는지 원문으로 확인할 수 있다.
 
 ## 오늘의 한 문장
 
 <quote color="purple_bg">
-AI 경쟁의 중심이 답변 품질에서 전화·결제·클라우드 계정·배포를 안전하게 실행하고 그 선택 근거를 남기는 운영계층으로 이동했다.
+에이전트 연결의 경쟁력은 커넥터 개수가 아니라 선언된 권한과 실제 행동이 일치하는지 재현 가능한 증거로 보여주는 능력이다.
 </quote>
 
 ## 확인 범위
 
-- GPT-6.2 성능·비용 비교의 상당수는 공급사와 초기 평가기관 결과이므로 실제 한국어 업무 재검증이 필요합니다.
-- AWS agentic account creation은 공식 발표와 커뮤니티 반응만 확인됐고 독립 보안·비용 평가는 찾지 못했습니다.
-- Gemini의 전화·결제·웹 로그인 고급 기능은 현재 미국 중심이며 한국에서는 무료 Tasks 배포만 확인됐습니다.
+- OpenAI 칩 설계와 위험관리 핵심 수치는 공급사·파트너 설명 중심이며 독립 재현·침투시험이 제한적입니다.
+- Genie 4는 Ultra 구독자 순차 배포 단계로 장기 일관성·상업 이용성 독립 평가가 부족합니다.
+- Notion Latest 전체 교체는 기존 내용 삭제 가능성에 대한 사용자의 명시적 승인이 없어 수행하지 않습니다.

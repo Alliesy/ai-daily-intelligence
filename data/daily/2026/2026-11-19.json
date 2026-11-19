@@ -1,0 +1,531 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-11-19",
+  "generated_at": "2026-11-19T00:15:14.518Z",
+  "status": "partial",
+  "warnings": [
+    "OpenAI 칩 설계와 위험관리 핵심 수치는 공급사·파트너 설명 중심이며 독립 재현·침투시험이 제한적입니다.",
+    "Genie 4는 Ultra 구독자 순차 배포 단계로 장기 일관성·상업 이용성 독립 평가가 부족합니다.",
+    "Notion Latest 전체 교체는 기존 내용 삭제 가능성에 대한 사용자의 명시적 승인이 없어 수행하지 않습니다."
+  ],
+  "news": [
+    {
+      "event_key": "openai-frontier-risk-codex-sandbox-2026-11-18",
+      "title": "OpenAI, 프런티어 AI 위험관리와 Codex 샌드박스 경계 공개",
+      "importance": "S",
+      "one_line_summary": "OpenAI가 훈련부터 실제 Codex 실행까지 모델 위험을 관리하는 절차와 샌드박스가 보호하는 범위·보호하지 못하는 범위를 공개했다.",
+      "impact": "에이전트 안전이 모델 정렬만의 문제가 아니라 파일·네트워크·MCP 프로세스·중단 권한을 결합한 운영 통제로 이동한다.",
+      "original_url": "https://openai.com/index/managing-frontier-ai-risk/",
+      "key_quote": "The model’s actions now have a direct impact on the systems we use to build and run OpenAI.",
+      "quote_translation": "모델의 행동이 OpenAI를 구축·운영하는 시스템에 직접 영향을 주기 때문에 위험의 성격이 크게 달라졌다는 설명이다.",
+      "summary": "[FACT] OpenAI는 고위험 훈련을 일시 중지하거나 모델 출시를 보류하는 안전 사례 절차를 설명했다. [FACT] Codex 샌드박스는 OS 수준에서 파일·네트워크 권한을 제한하지만, stdio MCP 서버를 시작하는 명령은 자동으로 같은 경계에 들어가지 않는다고 밝혔다. [FACT] 7월 Hugging Face 사고 뒤 훈련·평가·배포 통제를 강화했다고 설명했다. [SIGNAL] 개발자 커뮤니티는 넓은 읽기 권한, 네트워크 프록시 설정, MCP 서버의 별도 권한 검토를 핵심 실무 문제로 본다. [CAUTION] 이는 OpenAI가 설명한 통제이며 독립 침투시험 결과는 아니다.",
+      "why_it_matters": "에이전트에 '읽기 전용'이나 '워크스페이스 전용'이라고 표시하는 것만으로 충분하지 않고, 실제 자식 프로세스와 연결 도구가 동일한 제한을 상속하는지 시험해야 한다.",
+      "industry_mood": {
+        "Security": "샌드박스 경계를 문서화한 점은 긍정적이지만 독립 검증을 요구한다.",
+        "Builders": "MCP 서버와 외부 의존성이 별도 권한 통로가 될 수 있음을 경계한다.",
+        "Enterprise": "권한 프로필과 실제 실행 증거를 조달·감사 항목으로 만들려 한다."
+      },
+      "outlook": "고위험 에이전트 도입은 모델 평가와 별도로 샌드박스·도구·자격증명·중단 경로를 검증하는 실행 안전 사례를 요구할 가능성이 높다.",
+      "business_opportunity": "에이전트와 MCP 연결의 실제 권한·네트워크·파괴 작업 경계를 자동 점검하는 실행 전 감사 도구.",
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "Agent",
+        "MCP",
+        "AI Security",
+        "AI Infra"
+      ],
+      "sources": [
+        {
+          "title": "Managing frontier AI risk",
+          "url": "https://openai.com/index/managing-frontier-ai-risk/",
+          "publisher": "OpenAI",
+          "published_at": "2026-11-18",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-frontier-risk"
+        },
+        {
+          "title": "Inside the Codex sandbox",
+          "url": "https://openai.com/index/inside-the-codex-sandbox/",
+          "publisher": "OpenAI",
+          "published_at": "2026-11-18",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-frontier-risk"
+        },
+        {
+          "title": "California sues OpenAI after Hugging Face hack",
+          "url": "https://apnews.com/article/1dd7be56134b4f09fb2fb974803edc69",
+          "publisher": "Associated Press",
+          "published_at": "2026-11-16",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "openai-frontier-risk"
+        }
+      ]
+    },
+    {
+      "event_key": "openai-ai-chip-design-results-2026-11-18",
+      "title": "OpenAI, 실제 칩 회로 최적화 결과와 GPT-Synopsys 계획 공개",
+      "importance": "S",
+      "one_line_summary": "OpenAI가 GPT-6 계열 모델로 Jalapeño 실리콘과 RISC‑V 코어의 면적·성능을 개선한 결과를 공개하고 Synopsys와 칩 설계 특화 모델을 개발한다.",
+      "impact": "AI 코딩 에이전트가 소프트웨어를 넘어 검증 비용이 큰 반도체 설계 도구를 직접 반복 실행하는 전문 엔지니어링 계층으로 진입한다.",
+      "original_url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+      "key_quote": "GPT‑6.2 Astra had the highest average score on both cores.",
+      "quote_translation": "GPT‑6.2 Astra가 두 코어 모두에서 가장 높은 평균 점수를 기록했다는 공급사 평가다.",
+      "summary": "[FACT] OpenAI는 모델 제안이 Jalapeño 내부 벡터·행렬 유닛 면적을 각각 약 13%와 10% 줄였고 AMD GPU IP에서 최대 14% 개선을 냈다고 보고했다. [FACT] 약 11만2천 토큰의 동일 예산에서 GPT‑6.2 Astra가 두 RISC‑V 코어 평가에서 최고 평균 점수를 기록했다고 밝혔다. [FACT] Synopsys와 EDA 도구를 사용하는 GPT-Synopsys를 공동 개발한다. [CAUTION] 핵심 수치는 공급사·파트너 평가이며 제조 전반의 독립 재현 결과는 아니다.",
+      "why_it_matters": "칩 설계처럼 결과 검증이 엄격한 분야에서는 모델 답변보다 도구 실행 기록, 설계 전후 지표, 엔지니어 승인과 재현 가능성이 제품 가치가 된다.",
+      "industry_mood": {
+        "Semiconductor": "반복 탐색 속도에는 기대가 크지만 최종 sign-off 책임은 사람에게 둔다.",
+        "EDA": "도구 사용을 배우는 특화 모델과 감사 가능한 워크플로에 투자한다.",
+        "Builders": "범용 챗보다 검증기와 폐루프 최적화가 중요하다고 본다."
+      },
+      "outlook": "전문 엔지니어링 AI는 자연어 인터페이스보다 기존 검증 도구를 반복 실행하고 결과를 증거로 남기는 도메인 에이전트로 발전할 전망이다.",
+      "business_opportunity": "중소 하드웨어팀의 AI 설계 제안과 검증 결과·승인 이력을 연결하는 경량 실험 추적 레이어.",
+      "tags": [
+        "OpenAI",
+        "AI Infra",
+        "Agent",
+        "Workflow",
+        "AI Coding"
+      ],
+      "sources": [
+        {
+          "title": "Advancing chip design with OpenAI models",
+          "url": "https://openai.com/index/advancing-chip-design-with-our-models/",
+          "publisher": "OpenAI",
+          "published_at": "2026-11-18",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "openai-chip-design"
+        },
+        {
+          "title": "OpenAI and Synopsys announce GPT-Synopsys",
+          "url": "https://investor.synopsys.com/news/news-details/2026/OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design/",
+          "publisher": "Synopsys",
+          "published_at": "2026-09-30",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "corroborated",
+          "evidence_group": "openai-chip-design"
+        },
+        {
+          "title": "IEEE Spectrum November 2026",
+          "url": "https://spectrum.ieee.org/files/113916/11_Spectrum_26.pdf",
+          "publisher": "IEEE Spectrum",
+          "published_at": "2026-11-01",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "openai-chip-design"
+        }
+      ]
+    },
+    {
+      "event_key": "github-copilot-eight-mcp-connectors-2026-11-18",
+      "title": "GitHub Copilot, Supabase·Box 등 검증된 MCP 커넥터 8종 추가",
+      "importance": "S",
+      "one_line_summary": "GitHub가 Copilot에 Supabase, Box, Buildkite, Calendly, ClickUp, Mixpanel, Webflow, Wix 커넥터를 공개 프리뷰로 추가했다.",
+      "impact": "코딩 에이전트가 코드뿐 아니라 데이터베이스·CI·콘텐츠·분석 서비스의 실제 상태를 바꿀 수 있어 연결 승인과 최소 권한 관리가 핵심 운영 과제가 된다.",
+      "original_url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/",
+      "key_quote": "You can now connect eight more services to Copilot using GitHub-verified MCP servers, or connectors, available in public preview.",
+      "quote_translation": "GitHub가 검증한 MCP 서버를 사용해 Copilot에 8개 서비스를 더 연결할 수 있다는 발표다.",
+      "summary": "[FACT] 8개 커넥터는 모든 Copilot 플랜의 공개 프리뷰로 제공된다. [FACT] Business·Enterprise에서는 관리자 정책과 MCP allowlist 변경이 필요할 수 있고 Box 등은 서비스 측 승인도 요구한다. [FACT] Supabase는 자체 AI 도구 문서에서 MCP·플러그인·로컬 스택 흐름을 제공한다. [SIGNAL] 커뮤니티에서는 자체 호스팅 Supabase와 관리형 커넥터의 연결 차이, 서비스 역할 키 사용 위험이 반복 질문으로 나타난다.",
+      "why_it_matters": "커넥터가 '검증됨'은 모든 작업이 안전하다는 뜻이 아니므로 조직은 읽기·쓰기·삭제·비용 발생 권한을 서비스별로 분리하고 실제 계정으로 시험해야 한다.",
+      "industry_mood": {
+        "Developers": "도구 전환 없이 빌드 실패와 DB 스키마를 다루는 편의를 환영한다.",
+        "Admins": "allowlist와 외부 서비스 관리자 승인을 추가 통제 지점으로 본다.",
+        "Security": "관리형 커넥터와 로컬 MCP의 자격증명·권한 차이를 확인하려 한다."
+      },
+      "outlook": "MCP 커넥터 마켓은 빠르게 커지지만 기업 구매 기준은 커넥터 수보다 권한 선언, 승인 단계, 감사 로그와 철회 가능성으로 이동할 전망이다.",
+      "business_opportunity": "MCP 커넥터별 실제 권한과 파괴 가능 작업을 재생 테스트하고 관리자용 증거팩을 만드는 감사 서비스.",
+      "tags": [
+        "GitHub",
+        "MCP",
+        "Agent",
+        "AI Coding",
+        "AI Security",
+        "Workflow"
+      ],
+      "sources": [
+        {
+          "title": "Connect Supabase, Box, Calendly, and more to Copilot",
+          "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/",
+          "publisher": "GitHub",
+          "published_at": "2026-11-18",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "github-copilot-connectors"
+        },
+        {
+          "title": "Copilot connectors documentation",
+          "url": "https://docs.github.com/en/copilot/concepts/customizations/copilot-connectors",
+          "publisher": "GitHub Docs",
+          "published_at": "2026-11-18",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "github-copilot-connectors"
+        },
+        {
+          "title": "Supabase AI Tools",
+          "url": "https://supabase.com/docs/guides/ai-tools",
+          "publisher": "Supabase",
+          "published_at": "2026-11-16",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "corroborated",
+          "evidence_group": "github-copilot-connectors"
+        }
+      ]
+    },
+    {
+      "event_key": "google-genie-4-project-genie-availability-2026-11-18",
+      "title": "Google, 실시간 편집·오디오 지원 Genie 4를 Project Genie에 배포",
+      "importance": "A",
+      "one_line_summary": "Google이 AI Ultra 구독자에게 자연어로 실시간 수정하고 오디오를 생성하는 Genie 4 인터랙티브 월드 제작 경험을 제공한다.",
+      "impact": "월드 모델이 연구 데모에서 기획·교육·게임 프로토타입을 직접 만지는 도구로 이동하며 빠른 실험과 완제품 제작의 경계를 다시 정의한다.",
+      "original_url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+      "key_quote": "Genie 4 is now available.",
+      "quote_translation": "Genie 4를 이제 사용할 수 있다는 배포 발표다.",
+      "summary": "[FACT] Genie 4는 Google AI Ultra 적격 구독자에게 순차 배포되며 Project Genie Agent와 커뮤니티 갤러리를 포함한다. [FACT] 사용자는 텍스트로 환경을 실시간 수정하고 네이티브 오디오를 추가할 수 있다. [FACT] Pro 사용자는 대기 명단에 등록할 수 있다. [CAUTION] 독립적인 장기 일관성·제어·상업 이용성 평가는 아직 제한적이다.",
+      "why_it_matters": "소규모 창작팀은 완성 자산 생성보다 아이디어·공간·상호작용을 빠르게 검증하는 전단계 도구로 활용할 때 실패 비용을 줄일 수 있다.",
+      "industry_mood": {
+        "Creators": "텍스트만으로 인터랙티브 시제품을 만드는 속도에 기대한다.",
+        "GameDev": "일관성·물리 규칙·엔진 이전 가능성을 의심한다.",
+        "Research": "생성된 세계가 실제 환경 이해를 의미하는지는 분리해 본다."
+      },
+      "outlook": "월드 모델은 게임 엔진을 즉시 대체하기보다 콘셉트 검증, 합성 훈련 환경, 교육 시뮬레이션의 앞단 도구로 자리 잡을 가능성이 높다.",
+      "business_opportunity": "한국 교육·전시 팀을 위한 월드 모델 기반 체험형 콘셉트 검증 스프린트.",
+      "tags": [
+        "Google",
+        "Gemini",
+        "Agent",
+        "AI Tool",
+        "Workflow"
+      ],
+      "sources": [
+        {
+          "title": "Genie 4 is now available",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+          "publisher": "Google DeepMind",
+          "published_at": "2026-11-18",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "google-genie-4"
+        },
+        {
+          "title": "Google's Genie 4 looks incredible but is far from AGI",
+          "url": "https://www.techradar.com/ai-platforms-assistants/google-says-its-new-genie-4-model-is-a-key-stepping-stone-to-agi-but-creating-convincing-fake-worlds-doesnt-mean-ai-understands-the-real-one",
+          "publisher": "TechRadar",
+          "published_at": "2026-10-31",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "google-genie-4"
+        }
+      ]
+    },
+    {
+      "event_key": "nvidia-rtx-spark-compact-desktops-2026-11-18",
+      "title": "NVIDIA RTX Spark 소형 데스크톱 출하 시작",
+      "importance": "A",
+      "one_line_summary": "ASUS·Dell·MSI가 128GB 통합 메모리와 Grace CPU·Blackwell GPU를 갖춘 RTX Spark 소형 데스크톱 판매를 시작했다.",
+      "impact": "24시간 로컬 에이전트와 민감 데이터 추론을 위한 전용 AI PC가 실험 장비에서 구매 가능한 업무 인프라로 이동한다.",
+      "original_url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/",
+      "key_quote": "New NVIDIA RTX Spark compact desktops from ASUS, Dell and MSI are available today.",
+      "quote_translation": "ASUS, Dell, MSI의 NVIDIA RTX Spark 소형 데스크톱이 오늘부터 판매된다는 발표다.",
+      "summary": "[FACT] NVIDIA는 세 제조사의 RTX Spark 소형 데스크톱이 판매를 시작했다고 밝혔다. [FACT] 플랫폼은 6,144 CUDA 코어, Grace CPU와 최대 128GB 통합 메모리를 제공하며 로컬 에이전트·생성·미세조정을 겨냥한다. [FACT] HardwareZone이 사양과 지역별 가격·가용성을 별도 보도했다. [SIGNAL] 커뮤니티는 높은 가격과 ARM 앱 호환성, 로컬 에이전트 성능의 실제 이점을 비교한다.",
+      "why_it_matters": "클라우드 비용이나 데이터 반출이 문제인 팀은 모델 크기보다 실제 업무 처리량, 전력, 소프트웨어 호환성, 3년 총비용으로 구매 여부를 판단해야 한다.",
+      "industry_mood": {
+        "LocalAI": "민감 데이터와 상시 에이전트 운영에 관심이 크다.",
+        "Hardware": "128GB 통합 메모리는 매력적이지만 가격을 부담스러워한다.",
+        "Developers": "Windows on ARM 도구·드라이버 호환성을 우려한다."
+      },
+      "outlook": "로컬 AI PC는 범용 노트북이 아니라 규제 데이터, 오프라인 추론, 상시 에이전트 같은 명확한 워크로드에서 먼저 채택될 전망이다.",
+      "business_opportunity": "로컬 AI PC와 클라우드 GPU의 업무별 처리량·비용·보안 비교 진단.",
+      "tags": [
+        "NVIDIA",
+        "AI Infra",
+        "Agent",
+        "LLM",
+        "AI Tool"
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA RTX Spark compact desktops out now",
+          "url": "https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/",
+          "publisher": "NVIDIA",
+          "published_at": "2026-11-18",
+          "tier": "A",
+          "source_type": "official_blog",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "nvidia-rtx-spark"
+        },
+        {
+          "title": "NVIDIA RTX Spark product page",
+          "url": "https://www.nvidia.com/en-us/products/rtx-spark/",
+          "publisher": "NVIDIA",
+          "published_at": "2026-11-18",
+          "tier": "A",
+          "source_type": "documentation",
+          "authority": "official",
+          "verification_status": "verified",
+          "evidence_group": "nvidia-rtx-spark"
+        },
+        {
+          "title": "NVIDIA RTX Spark compact desktop availability",
+          "url": "https://www.hardwarezone.com.sg/pc/nvidia-rtx-spark-compact-desktop-price-availability",
+          "publisher": "HardwareZone",
+          "published_at": "2026-11-18",
+          "tier": "B",
+          "source_type": "article",
+          "authority": "independent",
+          "verification_status": "corroborated",
+          "evidence_group": "nvidia-rtx-spark"
+        }
+      ]
+    }
+  ],
+  "business_ideas": [
+    {
+      "name": "MCP Permission Auditor",
+      "score": 4.5,
+      "stars": 5,
+      "potential": "Very High",
+      "difficulty": "Medium",
+      "customer": "MCP 커넥터를 도입하는 한국 SaaS·개발팀·보안 담당자",
+      "problem": "커넥터가 실제로 읽기·쓰기·삭제·비용 발생 중 무엇을 할 수 있고 샌드박스 밖에서 어떤 자격증명을 쓰는지 조직이 재현 가능하게 증명하기 어렵다.",
+      "competitors": [
+        "MCP Inspector",
+        "Prompt Security",
+        "Invariant Labs",
+        "GitHub allowlist",
+        "수동 보안 체크리스트"
+      ],
+      "differentiation": "연결 전 권한 선언과 실제 도구 호출을 비교해 과도 권한, 승인 누락, 네트워크 범위와 철회 실패를 한국어 증거팩으로 내보낸다.",
+      "mvp_2_weeks": "2주에는 Supabase·GitHub·Box 샘플 커넥터의 읽기·쓰기·파괴 작업 매트릭스와 재생 로그를 만들고, 6주 내 3개 팀에서 정책과 실제 권한 불일치를 탐지한다.",
+      "monetization": "팀 구독 + 커넥터 검사 실행량 + 도입 감사 리포트",
+      "falsification": "10개 팀 중 3곳 미만이 커넥터 권한 검토를 반복하거나 2곳 미만이 유료 파일럿에 동의하면 중단한다.",
+      "problem_evidence": [
+        {
+          "url": "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/",
+          "source_type": "official_blog",
+          "summary": "GitHub는 실제 업무 시스템을 다루는 MCP 커넥터 8종을 공개 프리뷰로 추가했다.",
+          "observed_at": "2026-11-19",
+          "evidence_group": "mcp-permission-audit"
+        },
+        {
+          "url": "https://openai.com/index/inside-the-codex-sandbox/",
+          "source_type": "documentation",
+          "summary": "OpenAI는 stdio MCP 서버 시작 명령이 자동으로 Codex 샌드박스 경계에 들어가지 않는다고 설명한다.",
+          "observed_at": "2026-11-19",
+          "evidence_group": "mcp-permission-audit"
+        },
+        {
+          "url": "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/11/CSA_research_note_mcp_transport_trust_gap_20261109-csa-styled.pdf",
+          "source_type": "paper",
+          "summary": "Cloud Security Alliance는 MCP 전송 신뢰와 OAuth 키·토큰 재바인딩 위험을 별도 분석했다.",
+          "observed_at": "2026-11-19",
+          "evidence_group": "mcp-permission-audit"
+        }
+      ],
+      "realism_gates": {
+        "customer": {
+          "status": "pass",
+          "evidence": "MCP를 운영하는 개발팀과 보안 담당자는 명확하고 접근 가능한 고객이다."
+        },
+        "pain": {
+          "status": "pass",
+          "evidence": "새 커넥터 도입과 권한 변경마다 검토가 반복된다."
+        },
+        "existing_solution": {
+          "status": "pass",
+          "evidence": "프로토콜 검사기와 정책 도구는 있으나 선언 권한과 실제 효과를 연결한 증거팩은 부족하다."
+        },
+        "technology_change": {
+          "status": "pass",
+          "evidence": "GitHub 등 대형 플랫폼이 검증 커넥터를 빠르게 늘리고 있다."
+        },
+        "buildability": {
+          "status": "pass",
+          "evidence": "도구 스키마 수집, 샌드박스 호출, 정책 비교와 리포트는 1~3명이 6주 내 구축 가능하다."
+        },
+        "mvp": {
+          "status": "pass",
+          "evidence": "세 커넥터와 파괴 작업 시뮬레이션으로 가치를 검증할 수 있다."
+        },
+        "customer_access": {
+          "status": "pass",
+          "evidence": "국내 SaaS·AI 에이전시·보안 커뮤니티를 인터뷰할 수 있다."
+        },
+        "replacement_risk": {
+          "status": "pass",
+          "evidence": "플랫폼 allowlist와 달리 멀티클라이언트·멀티커넥터 실제 효과 검증으로 차별화한다."
+        },
+        "dependency": {
+          "status": "pass",
+          "evidence": "오픈 MCP 사양과 테스트 계정으로 시작하며 유료 의존성·법적 게이트가 없다."
+        }
+      },
+      "today_eligible": true,
+      "eligibility_method": "opportunity_gate_v1"
+    },
+    {
+      "name": "Local AI Workstation Fit Calculator",
+      "score": 4,
+      "stars": 4,
+      "potential": "High",
+      "difficulty": "Low-Medium",
+      "customer": "민감 데이터·상시 에이전트 때문에 로컬 AI PC 구매를 검토하는 1~20인 팀",
+      "problem": "고가 AI PC가 실제 업무에서 클라우드보다 싼지, 필요한 모델과 도구가 호환되는지 구매 전에 판단하기 어렵다.",
+      "competitors": [
+        "NVIDIA sizing guides",
+        "RunPod calculator",
+        "수동 벤치마크"
+      ],
+      "differentiation": "한국 전기요금·구매가·업무 처리량·데이터 반출 요구를 묶어 손익분기점과 호환성 위험을 계산한다.",
+      "mvp_2_weeks": "대표 모델 5종과 문서·코딩·이미지 업무의 공개 벤치마크를 입력하는 비교 계산기와 구매 체크리스트를 만든다.",
+      "monetization": "진단 리포트 + 제휴 없는 구매 자문",
+      "falsification": "구매 검토팀 8곳 중 2곳 미만이 유료 진단에 동의하면 중단한다.",
+      "today_eligible": false
+    }
+  ],
+  "tools": [
+    {
+      "name": "GitHub Copilot Connectors",
+      "type": "MCP Connectors",
+      "url": "https://docs.github.com/en/copilot/concepts/customizations/copilot-connectors",
+      "stars": 5,
+      "why_trending": "Supabase·Box·Buildkite 등 8개 서비스가 GitHub 검증 커넥터로 추가됐다.",
+      "worth_trying": "테스트 조직에서 읽기 전용 계정으로 연결하고 도구 목록·승인 단계·철회 후 접근 여부를 먼저 확인한다."
+    },
+    {
+      "name": "Codex Sandbox Profiles",
+      "type": "Security Runtime",
+      "url": "https://openai.com/index/inside-the-codex-sandbox/",
+      "stars": 5,
+      "why_trending": "파일·네트워크·자식 프로세스와 MCP 서버의 실제 보호 경계를 구체적으로 공개했다.",
+      "worth_trying": "실제 자동화 명령과 MCP 서버를 같은 프로필로 실행해 금지 경로·네트워크가 차단되는지 검증할 가치가 있다."
+    },
+    {
+      "name": "Project Genie 4",
+      "type": "World Model",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+      "stars": 4,
+      "why_trending": "실시간 자연어 편집과 네이티브 오디오를 포함한 인터랙티브 월드 제작을 Ultra 구독자에게 배포했다.",
+      "worth_trying": "완성 콘텐츠보다 30분 콘셉트 검증에서 일관성·제어·내보내기 가능성을 측정한다."
+    },
+    {
+      "name": "NVIDIA RTX Spark Desktop",
+      "type": "Local AI Hardware",
+      "url": "https://www.nvidia.com/en-us/products/rtx-spark/",
+      "stars": 4,
+      "why_trending": "128GB 통합 메모리의 소형 AI 데스크톱이 실제 판매 단계에 들어갔다.",
+      "worth_trying": "구매 전 동일 워크로드의 클라우드 비용, 처리량, ARM 호환성과 전력 사용량을 비교한다."
+    }
+  ],
+  "community": [
+    {
+      "platform": "Reddit",
+      "mood": "투명성 환영과 독립 검증 요구",
+      "one_line_summary": "Codex 샌드박스 설명은 유용하지만 MCP 서버와 넓은 읽기 권한이 실제로 어떻게 통제되는지 별도 시험이 필요하다는 반응이다.",
+      "url": "https://www.reddit.com/r/CodexAutomation/comments/1xznyzh/openai_explains_the_codex_sandbox_workspace/"
+    },
+    {
+      "platform": "Reddit",
+      "mood": "관리형 연결과 자체호스팅 혼선",
+      "one_line_summary": "Supabase 사용자는 관리형 MCP 커넥터가 자체호스팅 인스턴스와 자동 호환되지 않는 점과 서비스 역할 키 위험을 반복 질문한다.",
+      "url": "https://www.reddit.com/r/Supabase/comments/1xpqn8r/selfhosted_supabase_how_can_i_connect_mcp_or_ai/"
+    },
+    {
+      "platform": "Hacker News",
+      "mood": "월드 모델의 실용성 관찰",
+      "one_line_summary": "Genie 4 공개 뒤 실시간 세계 생성의 시연 가치는 인정하면서도 엔진 수준 일관성과 실제 제작 전환을 지켜보는 분위기다.",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "platform": "Reddit",
+      "mood": "로컬 AI 기대와 가격 회의",
+      "one_line_summary": "RTX Spark의 128GB 메모리는 매력적이지만 높은 가격과 Windows on ARM 호환성 때문에 명확한 로컬 워크로드가 필요하다는 의견이 우세하다.",
+      "url": "https://www.reddit.com/r/nvidia/comments/1xwsazu/msi_confirms_7999_price_for_rtx_spark_mini_pc/"
+    }
+  ],
+  "skill_of_the_day": {
+    "name": "MCP Permission Diff",
+    "when_to_use": "새 MCP 서버나 관리형 커넥터를 에이전트에 연결하거나 버전을 올릴 때.",
+    "practical_example": "문서상 도구 스키마와 테스트 계정에서 관찰한 읽기·쓰기·삭제·비용 발생 효과를 표로 비교하고, 사람 승인과 철회 뒤 재접속을 시험한다.",
+    "prompt_example": "이 MCP 연결의 도구별 선언 권한과 실제 효과를 비교하라. 읽기, 쓰기, 삭제, 외부 전송, 비용 발생, 자격증명 범위, 사람 승인, 철회 후 접근을 각각 pass/fail/unknown으로 기록하고 증거가 없는 항목은 안전하다고 추정하지 마라."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "MCP Transport Trust Gap",
+      "url": "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/11/CSA_research_note_mcp_transport_trust_gap_20261109-csa-styled.pdf",
+      "why_read": "MCP OAuth 등록·토큰·서명키가 신뢰 경계를 넘을 때 필요한 회수·재바인딩 조치를 볼 수 있다."
+    },
+    {
+      "type": "GitHub",
+      "title": "Supabase MCP Server",
+      "url": "https://github.com/supabase/mcp",
+      "why_read": "실제 MCP 서버의 도구·확인 절차·버전 변경을 코드와 릴리스에서 확인할 수 있다."
+    },
+    {
+      "type": "YouTube",
+      "title": "Official Supabase MCP Server",
+      "url": "https://www.youtube.com/watch?v=1SMldLoOhbg",
+      "why_read": "데이터베이스·Auth·RLS를 에이전트가 다루는 기본 흐름을 공식 시연으로 볼 수 있다."
+    },
+    {
+      "type": "Blog",
+      "title": "Inside the Codex sandbox",
+      "url": "https://openai.com/index/inside-the-codex-sandbox/",
+      "why_read": "파일·네트워크·MCP 프로세스가 어디까지 같은 샌드박스 경계를 공유하는지 원문으로 확인할 수 있다."
+    }
+  ],
+  "todays_insight": "에이전트 연결의 경쟁력은 커넥터 개수가 아니라 선언된 권한과 실제 행동이 일치하는지 재현 가능한 증거로 보여주는 능력이다.",
+  "morning_paper": {
+    "insight_headline": "커넥터 수보다 권한 증거가 중요해졌다",
+    "insight_summary": "GitHub는 MCP 연결을 빠르게 넓히고 OpenAI는 샌드박스 경계를 공개했다. 이제 기업의 병목은 연결 자체가 아니라 각 도구가 실제로 무엇을 할 수 있는지 검증하고 철회 가능한 상태로 운영하는 일이다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "openai-frontier-risk-codex-sandbox-2026-11-18",
+      "github-copilot-eight-mcp-connectors-2026-11-18"
+    ],
+    "top_event_keys": [
+      "github-copilot-eight-mcp-connectors-2026-11-18",
+      "openai-frontier-risk-codex-sandbox-2026-11-18",
+      "openai-ai-chip-design-results-2026-11-18"
+    ]
+  },
+  "build_candidate": {
+    "idea_name": "MCP Permission Auditor",
+    "score": 4.5,
+    "owner_action_required": true,
+    "status": "waiting_for_owner",
+    "evidence_urls": [
+      "https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/",
+      "https://openai.com/index/inside-the-codex-sandbox/",
+      "https://labs.cloudsecurityalliance.org/wp-content/uploads/2026/11/CSA_research_note_mcp_transport_trust_gap_20261109-csa-styled.pdf"
+    ]
+  }
+}
