@@ -2,10 +2,11 @@
   "schema_version": "1.0",
   "date_kst": "2026-11-23",
   "generated_at": "2026-11-23T00:37:32.729Z",
-  "status": "complete",
+  "status": "partial",
   "warnings": [
     "INSUFFICIENT_STRONG_NEWS: 주말 발표 공백으로 최근 24시간 신규 사건 대신 최근 7일 Watch List의 중요한 후속 4건을 선별했습니다.",
-    "OpenAI의 공격 성공률과 AWS·Microsoft의 성능 수치는 공급사 자체 평가 중심이며 독립 장기 검증이 제한적입니다."
+    "OpenAI의 공격 성공률과 AWS·Microsoft의 성능 수치는 공급사 자체 평가 중심이며 독립 장기 검증이 제한적입니다.",
+    "Notion Latest 전체 교체는 기존 내용을 광범위하게 삭제하는 작업으로 분류되어, 구체적 삭제 위험에 대한 사용자의 명시적 승인이 없어 거부됐습니다."
   ],
   "news": [
     {
