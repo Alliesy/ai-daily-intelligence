@@ -1,118 +1,116 @@
-AI Daily Intelligence · 2026-11-20 KST
+AI Daily Intelligence · 2026-11-23 KST
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-20.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-20.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-23.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-23.json)
 
-뉴스 4개 · 사업 아이디어 2개 · 구축 후보 1개
+뉴스 4개 · 사업 아이디어 2개 · 구축 후보 없음
 
 <callout icon="💡" color="blue_bg">
-에이전트의 병목이 생성에서 실행 증거로 이동했다
+에이전트가 운영비와 보안 경계의 문제로 이동했다
 
-Gemini는 개인 Mac을 직접 조작하고 OpenAI는 Codex를 서비스 최적화 루프에 넣었다. 동시에 SEAM은 에이전트가 위해를 인식하고도 실행할 수 있음을 보여준다. 실제 상태 변경이 늘수록 승인, 변경 전후 diff, 되돌리기와 독립 검증이 핵심 제품 계층이 된다.
+Copilot 클라우드 샌드박스는 오늘부터 실제 컴퓨팅 예산을 사용하고, AWS와 Microsoft는 추론·결정 라우팅을 전문 계층으로 분리한다. OpenAI는 추론 탈취 방어를 도구 호출과 계정 캠페인까지 넓혔다. 이제 에이전트 경쟁력은 성능뿐 아니라 작업당 비용, 정책, 데이터 경계를 재현 가능하게 증명하는 데 달렸다.
 </callout>
 
 ## 오늘의 핵심 뉴스
 
-### 1. Anthropic, 사상 최대 IPO로 상장하며 AI 수익성 검증대에 올라
+### 1. GitHub Copilot 클라우드 샌드박스 과금 오늘 시작
 
-**S · Anthropic이 주당 83달러에 9억8천만 주를 공모한 뒤 Nasdaq 거래를 시작해 프런티어 모델 기업의 비용·성장·안전 약속이 공개시장 평가를 받게 됐다.**
+**S · GitHub Copilot의 클라우드 샌드박스 사용량이 11월 23일부터 Actions 공유 컴퓨팅 한도에서 차감되기 시작한다.**
 
-프런티어 모델 사업의 경제성이 규제 공시와 분기 실적으로 검증되면 API 가격, 기업 계약, 인프라 투자와 안전 지출의 균형이 더 투명해진다.
+코딩 에이전트의 경제성은 좌석 가격만이 아니라 샌드박스 시간, Actions 경쟁, 실패 재시도와 사람 검토 시간까지 합쳐 판단해야 한다.
 
-앞으로 볼 것: 향후 핵심 지표는 단순 매출보다 추론 총마진, 컴퓨팅 약정, 기업 고객 유지율, 안전·연구비 비중이 될 가능성이 높다.
+앞으로 볼 것: 조직은 에이전트별 비용·성공률·회귀율을 결합한 FinOps 대시보드와 세션 예산 정책을 도입할 가능성이 높다.
 
-[원문 보기](https://www.anthropic.com/news/anthropic-prices-initial-public-offering)
+[원문 보기](https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/)
 
-### 2. Google, Gemini에 Mac 컴퓨터 사용 기능 공개
+### 2. OpenAI, 추론 탈취형 증류 공격 방어 결과 공개
 
-**S · Gemini Mac 앱이 화면을 보고 클릭·입력하며 반복 업무를 대신하는 컴퓨터 사용 기능을 미국 영어권 유료 구독자에게 제공한다.**
+**S · OpenAI가 GPT‑6.2 Astra에서 이전 턴 보호 추론 추출 공격 성공률을 자체 평가 기준 54.0%에서 0.2%로 낮췄다고 발표했다.**
 
-개인 데스크톱에는 이메일·문서·결제·비밀키가 함께 존재하므로 한 번의 잘못된 클릭이 챗봇 오답보다 훨씬 큰 실제 비용을 만든다.
+에이전트와 도구 호출에서는 민감한 내부 추론이 최종 답변이 아니라 로그·인수·캐시·재사용 컨텍스트를 통해 새어 나갈 수 있다.
 
-앞으로 볼 것: 컴퓨터 사용 에이전트는 고위험 작업 분류, 중요 변경 전 확인, 실행 후 상태 비교, 재현 가능한 감사 로그를 제공하는 방향으로 진화할 것이다.
+앞으로 볼 것: 모델 공급사는 추론 캐시의 사용자·조직·모델 경계를 강화하고 파트너 호스팅에도 같은 증류 방어 증거를 요구할 가능성이 높다.
 
-[원문 보기](https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/)
+[원문 보기](https://openai.com/index/combatting-adversarial-distillation/)
 
-### 3. OpenAI, Codex 기반 Performance Factory 운영체계 공개
+### 3. AWS, 여러 리전·GPU 클러스터를 하나로 묶는 추론 게이트웨이 출시
 
-**A · OpenAI가 성능 저하 탐지부터 원인 분석·수정·검증 지식을 재사용하는 Codex 기반 소프트웨어 최적화 체계를 공개했다.**
+**A · SageMaker HyperPod Global Inference Gateway가 여러 리전과 클러스터의 GPU 큐·KV 캐시 상태를 보고 단일 엔드포인트에서 요청을 라우팅한다.**
 
-에이전트 도입의 ROI를 생성 코드 줄 수가 아니라 지연시간·비용·오류율 변화와 재현 가능한 실험 기록으로 연결하는 운영 설계가 필요하다.
+고가 GPU가 한 리전에서 유휴 상태인데 다른 리전 요청은 대기하는 비효율을 줄이면 같은 용량으로 더 높은 처리량과 장애 대응을 얻을 수 있다.
 
-앞으로 볼 것: 대형 개발조직은 코딩 에이전트를 IDE 도우미보다 관측 데이터와 검증기를 연결한 지속 최적화 시스템으로 확장할 가능성이 높다.
+앞으로 볼 것: 멀티리전 추론은 모델 라우팅뿐 아니라 데이터 거주성, 캐시 일관성, 비용 상한과 장애 드릴을 포함한 정책 계층으로 발전할 전망이다.
 
-[원문 보기](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/)
+[원문 보기](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/)
 
-### 4. Google, Genie 4를 Gemini API·AI Studio에 공개
+### 4. Microsoft, 저비용 결정 전용 모델 Decision 1.1 정식 출시
 
-**A · 개발자가 텍스트·참조 이미지에서 720p 24fps 네이티브 오디오 인터랙티브 세계를 생성하고 실시간으로 조작할 수 있게 됐다.**
+**A · Microsoft-Decision-1.1이 라우팅·분류·우선순위·검증을 위한 구조화 결정 모델로 Foundry·OpenRouter·Vercel에 정식 출시됐다.**
 
-소규모 팀이 완성 게임을 만들기 전 공간·상호작용·교육 시나리오를 코드로 호출해 빠르게 검증할 수 있는 새로운 실험 계층이 열린다.
+에이전트의 도구 선택·검증·에스컬레이션은 생성보다 결정 문제에 가까워 별도 모델로 분리하면 비용과 지연, 정책 통제를 개선할 수 있다.
 
-앞으로 볼 것: 초기 채택은 완제품보다 콘셉트 테스트, 합성 데이터, 교육 시뮬레이션과 인터랙티브 프리비주얼에 집중될 전망이다.
+앞으로 볼 것: 에이전트 스택은 생성 모델 하나가 아니라 결정·검증·생성·컴퓨터 사용 모델을 비용·위험별로 배치하는 구조로 세분화될 가능성이 높다.
 
-[원문 보기](https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/)
+[원문 보기](https://commandline.microsoft.com/microsoft-decision-model-ga/)
 
 ## Business Radar
 
-### Desktop Agent Safety Replay
+### Agent FinOps Router Lab
 
-**4.5/5 · ★★★★★ · Very High**
+**4.2/5 · ★★★★☆ · High**
 
-에이전트의 개별 화면 행동은 정상이어도 여러 앱의 정보가 결합되면 부적절한 전송·삭제·결제가 발생할 수 있고, 실행 뒤 무엇이 바뀌었는지 증명하기 어렵다.
+좌석료 외 샌드박스 시간, 모델 호출, Actions 경쟁, 실패 재시도와 사람 검토 비용이 흩어져 작업당 총비용과 품질을 비교하기 어렵다.
 
-- 고객: Mac 기반 컴퓨터 사용 에이전트를 도입하는 한국 스타트업·AI 에이전시·보안팀
-- 차별점: 모델이나 에이전트를 교체하지 않고 계획, 승인, 화면·파일·브라우저 변경 전후를 묶어 교차화면 위해와 되돌리기 가능성을 한국어 증거팩으로 만든다.
-- 2주 MVP: macOS 테스트 VM에서 파일 이동·메일 초안·웹 폼 20개 시나리오를 실행하고 화면 로그와 파일·브라우저 상태 diff, 위험 행동 전 확인 규칙을 구현한다.
-- Architect: 사용자 지시 대기
+- 고객: Copilot·Codex·Claude Code를 함께 쓰는 한국 5~100인 개발조직
+- 차별점: 개발 작업 단위로 클라우드 샌드박스·모델·CI 비용과 완료율·리드타임·재작업을 연결하고 결정 모델 라우팅 대안을 시뮬레이션한다.
+- 2주 MVP: GitHub Actions·Copilot 사용량 CSV와 에이전트 세션 로그를 가져와 저장소·작업 유형별 비용, 성공률, 사람 재작업 시간을 보여주는 리포트를 만든다.
+- Architect: 후보 아님
 
-### AI Vendor Filing Monitor KR
+### Reasoning Leakage Gateway
 
 **4.1/5 · ★★★★☆ · High**
 
-모델 회사의 컴퓨팅 의무, 손실, 가격, 안전·거버넌스 변화가 공시·보도·제품 문서에 흩어져 공급사 위험을 비교하기 어렵다.
+보호 추론이나 민감 문맥이 최종 답변이 아니라 도구 인수, 스트림, 캐시와 로그를 통해 노출되거나 대량 수집될 수 있다.
 
-- 고객: 여러 LLM 공급사를 조달·투자·전략 관점에서 비교하는 한국 기업과 VC
-- 차별점: AI 공급사별 API 가격·가용성·컴퓨팅 약정·추론 총마진·안전 정책 변화를 한글 조달 체크리스트로 연결한다.
-- 2주 MVP: Anthropic 공시와 OpenAI·Google 공식 문서의 20개 지표를 수집해 주간 변경 알림과 조달 리스크 요약을 만든다.
+- 고객: 여러 LLM API와 도구 호출을 운영하는 한국 SaaS·보안팀
+- 차별점: 모델 독립 프록시로 도구 인수·스트림·대화 재사용 경계를 검사하고 계정·조직 간 비정상 추출 패턴을 증거화한다.
+- 2주 MVP: 두 모델 API와 세 도구 호출 유형에서 알려진 추출 패턴, 대량 반복, 교차 사용자 캐시 재사용을 탐지하는 리플레이 테스트를 만든다.
 - Architect: 후보 아님
 
 ## AI Tool Radar
 
-- **Gemini Computer Use for Mac · ★★★★☆** — Gemini가 개인 Mac에서 반복 작업을 직접 수행하는 단계로 확장됐다. [보기](https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/)
-- **Genie 4 Gemini API · ★★★★☆** — 720p 24fps 네이티브 오디오 세계를 API와 AI Studio에서 실시간 제어할 수 있게 됐다. [보기](https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/)
-- **OpenAI Performance Factory · ★★★★☆** — Codex를 성능 회귀 조사와 최적화 지식 재사용의 운영 루프에 연결했다. [보기](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/)
-- **SEAM · ★★★★★** — 교차화면에서만 드러나는 위해를 600개 작업과 서버 로그 기반으로 측정한다. [보기](https://arxiv.org/abs/2611.22971)
+- **GitHub Copilot Cloud Sandbox · ★★★★☆** — 오늘부터 공유 Actions 컴퓨팅 한도에서 사용량 차감이 시작된다. [보기](https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/)
+- **SageMaker HyperPod Global Inference Gateway · ★★★★☆** — 여러 리전·클러스터의 GPU 큐와 KV 캐시를 단일 엔드포인트로 라우팅한다. [보기](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/)
+- **Microsoft-Decision-1.1 · ★★★★☆** — 저비용 구조화 결정, 신뢰도와 기권을 에이전트 라우팅에 제공한다. [보기](https://commandline.microsoft.com/microsoft-decision-model-ga/)
+- **GPT-6.2 Distillation Safeguards · ★★★★☆** — 도구 인수와 계정 네트워크까지 포함한 추론 탈취 방어를 공개했다. [보기](https://openai.com/index/combatting-adversarial-distillation/)
 
 ## Community Pulse
 
-- **Reddit · 상장 기대와 안전 약속 검증** — Claude 사용자들은 자금 조달이 제품 투자로 이어질 가능성을 기대하면서 공개시장 압력이 가격·안전 우선순위를 바꿀지 토론한다.
-- **Reddit · 기록적 수요와 고평가 경계** — 첫 거래와 공모 규모에 관심이 집중됐지만 가치평가가 수년의 완벽한 성장을 선반영했다는 회의도 함께 나타난다.
-- **Security Research · 인식과 실행의 간극 경고** — 연구자들은 에이전트가 위해를 추론으로 인식하고도 실행하는 교차화면 실패를 지적한다.
-- **Tech Media · 편의보다 권한 경계 확인** — Gemini Mac 자동화 보도는 편의를 인정하면서 초기 지역·구독 제한과 개인 앱 접근 범위를 핵심 확인점으로 본다.
+- **GitHub Community · 편의와 비용 가시성 요구** — 클라우드 세션의 연속성은 환영하지만 Actions 공유 한도에서 빌드와 에이전트 사용량을 구분할 수 있는 지표가 필요하다는 분위기다.
+- **Security Research · 공급사 자체 평가 검증 요구** — 증류 공격 성공률 감소는 의미 있지만 외부 반복평가와 파트너 호스팅에서 동일한 방어가 적용되는지 확인해야 한다.
+- **Cloud Infra · 멀티리전 효율 기대와 주권 우려** — 유휴 GPU 활용과 장애 우회에는 기대가 크지만 리전 간 데이터 이동·네트워크 비용·모델 버전 일관성을 확인하려 한다.
 
 ## AI Skill of the Day
 
-### Action-State Verification
+### Agent Cost Attribution
 
-컴퓨터 사용 에이전트가 파일, 이메일, 웹 폼, 결제나 계정 설정을 실제로 변경할 때.
+클라우드 코딩 에이전트, CI, 모델 API가 같은 예산 풀이나 개발 작업에 함께 비용을 발생시킬 때.
 
-> 이 작업의 목표 상태, 금지 상태, 되돌릴 수 없는 행동을 먼저 나열하라. 각 고위험 행동 직전에 승인을 요청하고 실행 후 실제 파일·URL·수신자·금액을 재조회해 pass/fail/unknown과 증거를 기록하라.
+> 이 작업의 에이전트 세션, 모델 호출, CI, 저장소 실행, 사람 검토 시간을 하나의 작업 ID로 묶어라. 직접비용, 실패 재시도, 완료율, 리드타임, 사람 재작업을 계산하고 비용 절감이 품질 저하로 바뀌는 지점을 표시하라.
 
 ## Worth Reading
 
-- **Paper** · [SEAM: Computer-Use Agents Know the Harm Between Screens](https://arxiv.org/abs/2611.22971) — 개별 화면 안전검사만으로 놓치는 교차화면 위해와 서버 로그 기반 평가법을 볼 수 있다.
-- **GitHub** · [OSWorld](https://github.com/xlang-ai/OSWorld) — 실제 데스크톱 작업을 재현 가능한 환경에서 평가하는 기본 구조와 작업 정의를 확인할 수 있다.
-- **YouTube** · [Anthropic President Cites High Computing Costs as Driver for IPO](https://www.youtube.com/watch?v=4wMD7-zaS1A) — 프런티어 모델 회사가 공개시장 자금과 컴퓨팅 비용을 어떻게 설명해 왔는지 맥락을 얻을 수 있다.
-- **Blog** · [How OpenAI’s Performance Factory keeps ChatGPT fast](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/) — 에이전트가 운영 지표, 실험, 검증 지식을 하나의 지속 최적화 루프로 묶는 방식을 볼 수 있다.
+- **Paper** · [Improving Fuzzy Robustness in LLM Safety with Automated Red Teaming](https://cdn.openai.com/pdf/OAI_Improving_Fuzzy_Robustness_in_LLM_Safety_with_Automated_Red_Teaming.pdf) — 자동 공격자가 모델 방어를 어떻게 적응적으로 우회하고 방어 학습에 쓰이는지 볼 수 있다.
+- **GitHub** · [Microsoft Decision Benchmarks](https://github.com/microsoftconnect/Decision-Benchmarks) — 결정 모델을 실제 분류·라우팅·검증 문제에서 비교하는 평가 구조를 확인할 수 있다.
+- **YouTube** · [Anthropic President Cites High Computing Costs as Driver for IPO](https://www.youtube.com/watch?v=4wMD7-zaS1A) — 프런티어 AI의 컴퓨팅 비용이 자금조달과 운영 전략에 미치는 맥락을 들을 수 있다.
+- **Blog** · [Combatting adversarial distillation](https://openai.com/index/combatting-adversarial-distillation/) — 추론 탈취 방어를 요청·도구 인수·대화 이력·계정 캠페인까지 확장하는 구조를 볼 수 있다.
 
 ## Today's Insight
 
 <callout icon="🎯" color="green_bg">
-AI 에이전트의 다음 경쟁력은 무엇을 할 수 있느냐보다 실제로 무엇을 바꿨는지 안전하게 증명하는 능력이다.
+에이전트 운영의 다음 병목은 모델 선택이 아니라 비용·권한·데이터 경계를 작업 단위로 귀속하고 검증하는 능력이다.
 </callout>
 
 ## 운영 상태
 
-- Git 정본: 작성 완료 예정
-- Notion: 전체 교체 승인 대기
-- Architect 후보: Desktop Agent Safety Replay — 승인: Desktop Agent Safety Replay
+- Git 정본: 작성 완료
+- Architect 후보: 없음
