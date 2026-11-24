@@ -1,116 +1,118 @@
-AI Daily Intelligence · 2026-11-23 KST
+AI Daily Intelligence · 2026-11-24 KST
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-23.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-23.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-24.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-24.json)
 
 뉴스 4개 · 사업 아이디어 2개 · 구축 후보 없음
 
 <callout icon="💡" color="blue_bg">
-에이전트가 운영비와 보안 경계의 문제로 이동했다
+AI 실행력의 병목은 검증 가능한 임시 통제다
 
-Copilot 클라우드 샌드박스는 오늘부터 실제 컴퓨팅 예산을 사용하고, AWS와 Microsoft는 추론·결정 라우팅을 전문 계층으로 분리한다. OpenAI는 추론 탈취 방어를 도구 호출과 계정 캠페인까지 넓혔다. 이제 에이전트 경쟁력은 성능뿐 아니라 작업당 비용, 정책, 데이터 경계를 재현 가능하게 증명하는 데 달렸다.
+Shirudo는 AI가 만든 커널 실드로 패치 공백을 메우고, GPT‑6.2는 고위험 능력 임계치 모델을 일반 Chat으로 확장했다. GitHub는 사람과 에이전트가 공유하는 Issue 상태를 추가했다. 실행 범위가 넓어질수록 임시 통제의 서명·시험·만료·롤백과 작업 상태의 공통 원장이 핵심이 된다.
 </callout>
 
 ## 오늘의 핵심 뉴스
 
-### 1. GitHub Copilot 클라우드 샌드박스 과금 오늘 시작
+### 1. OpenAI·Cisco, 패치 전 Linux를 보호하는 오픈소스 Shirudo 공개
 
-**S · GitHub Copilot의 클라우드 샌드박스 사용량이 11월 23일부터 Actions 공유 컴퓨팅 한도에서 차감되기 시작한다.**
+**S · Shirudo가 서명된 eBPF 실드로 재시작 없이 실행 중 Linux 서비스를 임시 보호하고 패치 배포까지의 공백을 줄인다.**
 
-코딩 에이전트의 경제성은 좌석 가격만이 아니라 샌드박스 시간, Actions 경쟁, 실패 재시도와 사람 검토 시간까지 합쳐 판단해야 한다.
+취약점 공개 뒤 정식 패치가 검증될 때까지의 수일·수주 공백은 공격자가 노리는 구간이며, 임시 실드가 잘못되면 정상 트래픽이나 시스템 안정성을 해칠 수 있다.
 
-앞으로 볼 것: 조직은 에이전트별 비용·성공률·회귀율을 결합한 FinOps 대시보드와 세션 예산 정책을 도입할 가능성이 높다.
+앞으로 볼 것: 실시간 완화 런타임은 CVE별 실드 서명, 재현 가능한 테스트, 자동 만료와 정식 패치 전환 증거를 요구하는 보안 공급망으로 발전할 가능성이 높다.
 
-[원문 보기](https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/)
+[원문 보기](https://openai.com/index/introducing-shirudo/)
 
-### 2. OpenAI, 추론 탈취형 증류 공격 방어 결과 공개
+### 2. OpenAI, GPT‑6.2를 ChatGPT 일반 Chat 탭에 배포
 
-**S · OpenAI가 GPT‑6.2 Astra에서 이전 턴 보호 추론 추출 공격 성공률을 자체 평가 기준 54.0%에서 0.2%로 낮췄다고 발표했다.**
+**S · GPT‑6.2 대화 최적화 버전이 Plus·Pro·Business·Enterprise에 순차 배포되며 이미지 이해와 상세 지시 수행을 강화했다.**
 
-에이전트와 도구 호출에서는 민감한 내부 추론이 최종 답변이 아니라 로그·인수·캐시·재사용 컨텍스트를 통해 새어 나갈 수 있다.
+일반 대화에 고위험 능력 임계치 모델이 들어오면 조직은 모델 이름보다 실제 화면·관리자 정책·데이터 처리와 안전 통제를 다시 확인해야 한다.
 
-앞으로 볼 것: 모델 공급사는 추론 캐시의 사용자·조직·모델 경계를 강화하고 파트너 호스팅에도 같은 증류 방어 증거를 요구할 가능성이 높다.
+앞으로 볼 것: ChatGPT의 일반 Chat과 Work·Codex는 사용 목적별로 다른 모델·통제·한도를 유지하며 관리자는 화면별 정책 가시성을 요구할 전망이다.
 
-[원문 보기](https://openai.com/index/combatting-adversarial-distillation/)
+[원문 보기](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
 
-### 3. AWS, 여러 리전·GPU 클러스터를 하나로 묶는 추론 게이트웨이 출시
+### 3. OpenAI, 사전학습 perplexity를 공동 안전 기준 후보로 제안
 
-**A · SageMaker HyperPod Global Inference Gateway가 여러 리전과 클러스터의 GPU 큐·KV 캐시 상태를 보고 단일 엔드포인트에서 요청을 라우팅한다.**
+**A · OpenAI 수석과학자가 내부 사전학습 perplexity 추이를 공개하고 연구소 간 비교 가능한 진행 속도·안전 임계치 지표로 발전시키자고 제안했다.**
 
-고가 GPU가 한 리전에서 유휴 상태인데 다른 리전 요청은 대기하는 비효율을 줄이면 같은 용량으로 더 높은 처리량과 장애 대응을 얻을 수 있다.
+벤치마크 점수는 출시 뒤 행동을 보지만 perplexity는 학습 중 진행을 보여줄 수 있어 위험 능력 상승을 더 일찍 감지할 가능성이 있다.
 
-앞으로 볼 것: 멀티리전 추론은 모델 라우팅뿐 아니라 데이터 거주성, 캐시 일관성, 비용 상한과 장애 드릴을 포함한 정책 계층으로 발전할 전망이다.
+앞으로 볼 것: 공통 토큰화·평가 코퍼스·감사 절차가 없다면 단일 perplexity 숫자는 제한적이며, 여러 능력·안전 지표와 함께 쓰이는 조기 경보가 될 가능성이 높다.
 
-[원문 보기](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/)
+[원문 보기](https://openai.com/index/perplexity-and-intelligence/)
 
-### 4. Microsoft, 저비용 결정 전용 모델 Decision 1.1 정식 출시
+### 4. GitHub, 에이전트와 공유하는 Issue 상태·Repository Board 공개
 
-**A · Microsoft-Decision-1.1이 라우팅·분류·우선순위·검증을 위한 구조화 결정 모델로 Foundry·OpenRouter·Vercel에 정식 출시됐다.**
+**A · Issue에 Backlog·Todo·In progress·In review·Done 등 상태를 직접 부여하고 저장소 Board와 Projects에 동기화할 수 있게 됐다.**
 
-에이전트의 도구 선택·검증·에스컬레이션은 생성보다 결정 문제에 가까워 별도 모델로 분리하면 비용과 지연, 정책 통제를 개선할 수 있다.
+에이전트가 동시에 여러 Issue를 다룰 때 실제 진행·검토·중복 상태가 저장소에 남아야 사람과 자동화가 같은 다음 행동을 선택할 수 있다.
 
-앞으로 볼 것: 에이전트 스택은 생성 모델 하나가 아니라 결정·검증·생성·컴퓨터 사용 모델을 비용·위험별로 배치하는 구조로 세분화될 가능성이 높다.
+앞으로 볼 것: 저장소 Issue는 단순 요청 기록에서 사람·에이전트의 실행 큐와 상태 원장으로 확장되고 자동화 정책·감사 로그 중요성이 커질 전망이다.
 
-[원문 보기](https://commandline.microsoft.com/microsoft-decision-model-ga/)
+[원문 보기](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview/)
 
 ## Business Radar
 
-### Agent FinOps Router Lab
+### Runtime Shield Validation Pack
 
 **4.2/5 · ★★★★☆ · High**
 
-좌석료 외 샌드박스 시간, 모델 호출, Actions 경쟁, 실패 재시도와 사람 검토 비용이 흩어져 작업당 총비용과 품질을 비교하기 어렵다.
+패치 전 임시 eBPF 실드가 공격을 막더라도 정상 트래픽·성능·롤백에 미치는 영향을 빠르게 증명하기 어렵다.
 
-- 고객: Copilot·Codex·Claude Code를 함께 쓰는 한국 5~100인 개발조직
-- 차별점: 개발 작업 단위로 클라우드 샌드박스·모델·CI 비용과 완료율·리드타임·재작업을 연결하고 결정 모델 라우팅 대안을 시뮬레이션한다.
-- 2주 MVP: GitHub Actions·Copilot 사용량 CSV와 에이전트 세션 로그를 가져와 저장소·작업 유형별 비용, 성공률, 사람 재작업 시간을 보여주는 리포트를 만든다.
+- 고객: Linux 서비스를 운영하지만 전담 보안 연구팀이 없는 한국 SaaS·MSP
+- 차별점: 실드별 공격 재현, 정상 트래픽 회귀, CPU·지연 비용, 서명·만료·롤백과 정식 패치 전환을 한국어 증거팩으로 묶는다.
+- 2주 MVP: 격리된 Linux VM에서 공개 CVE 3개와 정상 요청 세트를 재생해 실드 전후 차단률, p95 지연, 오탐, 제거 복구를 자동 리포트한다.
 - Architect: 후보 아님
 
-### Reasoning Leakage Gateway
+### Agent Issue Flow Guard
 
-**4.1/5 · ★★★★☆ · High**
+**4/5 · ★★★★☆ · High**
 
-보호 추론이나 민감 문맥이 최종 답변이 아니라 도구 인수, 스트림, 캐시와 로그를 통해 노출되거나 대량 수집될 수 있다.
+에이전트가 작업 상태를 제때 갱신하지 않거나 Projects 자동화와 충돌하면 중복 구현·검토 대기·완료 오판이 생긴다.
 
-- 고객: 여러 LLM API와 도구 호출을 운영하는 한국 SaaS·보안팀
-- 차별점: 모델 독립 프록시로 도구 인수·스트림·대화 재사용 경계를 검사하고 계정·조직 간 비정상 추출 패턴을 증거화한다.
-- 2주 MVP: 두 모델 API와 세 도구 호출 유형에서 알려진 추출 패턴, 대량 반복, 교차 사용자 캐시 재사용을 탐지하는 리플레이 테스트를 만든다.
+- 고객: GitHub에서 여러 코딩 에이전트와 사람 개발자가 함께 일하는 3~30인 팀
+- 차별점: Issue 상태, PR, 에이전트 세션을 대조해 상태 드리프트와 중복 소유를 탐지하고 다음 행동 근거를 남긴다.
+- 2주 MVP: 단일 조직의 Issue·PR 이벤트를 읽어 In progress인데 활동 없음, PR 있는데 Todo, 검토 완료인데 In review 같은 규칙 10개를 알림한다.
 - Architect: 후보 아님
 
 ## AI Tool Radar
 
-- **GitHub Copilot Cloud Sandbox · ★★★★☆** — 오늘부터 공유 Actions 컴퓨팅 한도에서 사용량 차감이 시작된다. [보기](https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/)
-- **SageMaker HyperPod Global Inference Gateway · ★★★★☆** — 여러 리전·클러스터의 GPU 큐와 KV 캐시를 단일 엔드포인트로 라우팅한다. [보기](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/)
-- **Microsoft-Decision-1.1 · ★★★★☆** — 저비용 구조화 결정, 신뢰도와 기권을 에이전트 라우팅에 제공한다. [보기](https://commandline.microsoft.com/microsoft-decision-model-ga/)
-- **GPT-6.2 Distillation Safeguards · ★★★★☆** — 도구 인수와 계정 네트워크까지 포함한 추론 탈취 방어를 공개했다. [보기](https://openai.com/index/combatting-adversarial-distillation/)
+- **Shirudo · ★★★★☆** — AI가 만든 서명된 eBPF 실드로 패치 전 실행 중 서비스를 보호하는 오픈소스 런타임이 공개됐다. [보기](https://openai.com/index/introducing-shirudo/)
+- **GPT-6.2 Chat · ★★★★☆** — GPT‑6.2가 일반 Chat 탭의 유료 요금제에 배포되기 시작했다. [보기](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
+- **GitHub Issue Statuses · ★★★★☆** — Issue와 Repository Board에 사람·에이전트가 공유하는 세부 진행 상태가 생겼다. [보기](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview/)
+- **OpenAI Perplexity Tracking · ★★★☆☆** — OpenAI가 내부 사전학습 추이를 공개하고 공동 안전 기준 후보로 제안했다. [보기](https://openai.com/index/perplexity-and-intelligence/)
 
 ## Community Pulse
 
-- **GitHub Community · 편의와 비용 가시성 요구** — 클라우드 세션의 연속성은 환영하지만 Actions 공유 한도에서 빌드와 에이전트 사용량을 구분할 수 있는 지표가 필요하다는 분위기다.
-- **Security Research · 공급사 자체 평가 검증 요구** — 증류 공격 성공률 감소는 의미 있지만 외부 반복평가와 파트너 호스팅에서 동일한 방어가 적용되는지 확인해야 한다.
-- **Cloud Infra · 멀티리전 효율 기대와 주권 우려** — 유휴 GPU 활용과 장애 우회에는 기대가 크지만 리전 간 데이터 이동·네트워크 비용·모델 버전 일관성을 확인하려 한다.
+- **Reddit · GPT‑6.2 배포 기대와 모델표 혼선** — 사용자들은 일반 Chat 탭 배포를 환영하면서 Work·Codex와의 차이, 실제 모델 선택기 표시와 한도를 확인하고 있다.
+- **Reddit · perplexity 투명성 환영과 비교 가능성 회의** — 내부 추세 공개는 의미 있지만 평가 데이터셋·토큰화가 다르면 연구소 간 공통 안전 기준으로 쓰기 어렵다는 반응이다.
+- **Open Source Security · 라이브 완화 기대와 검증 요구** — Shirudo의 패치 공백 축소 가능성에는 기대하지만 커널 실드의 오탐·성능·서명·철회에 독립 재현이 필요하다는 분위기다.
+- **GitHub · 경량 작업 상태 공유 환영** — Issue 자체에서 세부 상태와 Board를 쓰는 기능은 소규모팀과 에이전트의 공유 실행 큐를 단순화할 수 있다는 반응이다.
 
 ## AI Skill of the Day
 
-### Agent Cost Attribution
+### Temporary Mitigation Gate
 
-클라우드 코딩 에이전트, CI, 모델 API가 같은 예산 풀이나 개발 작업에 함께 비용을 발생시킬 때.
+정식 패치 전에 eBPF 규칙, WAF 룰, 프록시 필터 같은 임시 완화책을 운영환경에 적용할 때.
 
-> 이 작업의 에이전트 세션, 모델 호출, CI, 저장소 실행, 사람 검토 시간을 하나의 작업 ID로 묶어라. 직접비용, 실패 재시도, 완료율, 리드타임, 사람 재작업을 계산하고 비용 절감이 품질 저하로 바뀌는 지점을 표시하라.
+> 이 임시 완화책을 공격 차단, 정상 트래픽 회귀, 성능 비용, 서명·출처, 적용 범위, 자동 만료, 롤백, 정식 패치 전환으로 검증하라. 증거 없는 항목은 unknown으로 두고 운영 적용을 승인하지 마라.
 
 ## Worth Reading
 
-- **Paper** · [Improving Fuzzy Robustness in LLM Safety with Automated Red Teaming](https://cdn.openai.com/pdf/OAI_Improving_Fuzzy_Robustness_in_LLM_Safety_with_Automated_Red_Teaming.pdf) — 자동 공격자가 모델 방어를 어떻게 적응적으로 우회하고 방어 학습에 쓰이는지 볼 수 있다.
-- **GitHub** · [Microsoft Decision Benchmarks](https://github.com/microsoftconnect/Decision-Benchmarks) — 결정 모델을 실제 분류·라우팅·검증 문제에서 비교하는 평가 구조를 확인할 수 있다.
-- **YouTube** · [Anthropic President Cites High Computing Costs as Driver for IPO](https://www.youtube.com/watch?v=4wMD7-zaS1A) — 프런티어 AI의 컴퓨팅 비용이 자금조달과 운영 전략에 미치는 맥락을 들을 수 있다.
-- **Blog** · [Combatting adversarial distillation](https://openai.com/index/combatting-adversarial-distillation/) — 추론 탈취 방어를 요청·도구 인수·대화 이력·계정 캠페인까지 확장하는 구조를 볼 수 있다.
+- **Paper** · [GPT-6.2 in ChatGPT System Card](https://deploymentsafety.openai.com/gpt-6-2-chatgpt/gpt-6-2-chatgpt.pdf) — 일반 Chat 탭 모델의 Cyber·Bio·자기개선 임계치와 배포 안전 통제를 확인할 수 있다.
+- **GitHub** · [Shirudo](https://github.com/openai/shirudo) — eBPF 실드의 코드, 서명·적용 구조와 실제 공개 이슈를 직접 검토할 수 있다.
+- **YouTube** · [How to use GitHub issues and projects](https://www.youtube.com/watch?v=c67GaAkf1BE) — Issue와 Project Board를 연결해 작업 상태를 운영하는 기본 흐름을 볼 수 있다.
+- **Blog** · [Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence/) — 사전학습 perplexity를 능력 진전과 공동 안전 기준에 연결하려는 원문 논리를 확인할 수 있다.
 
 ## Today's Insight
 
 <callout icon="🎯" color="green_bg">
-에이전트 운영의 다음 병목은 모델 선택이 아니라 비용·권한·데이터 경계를 작업 단위로 귀속하고 검증하는 능력이다.
+AI가 직접 시스템을 바꾸기 시작할수록 생성 능력보다 임시 조치의 검증·만료·롤백과 공유 상태가 더 중요한 운영 자산이 된다.
 </callout>
 
 ## 운영 상태
 
 - Git 정본: 작성 완료
 - Architect 후보: 없음
+- Notion: 전체 교체 승인 대기
