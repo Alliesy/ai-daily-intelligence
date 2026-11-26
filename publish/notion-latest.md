@@ -1,118 +1,76 @@
-AI Daily Intelligence · 2026-11-24 KST
+AI Daily Intelligence · 2026-11-26 KST
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-24.md) · [날짜별 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-24.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-26.md) · [정본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-26.json)
 
-뉴스 4개 · 사업 아이디어 2개 · 구축 후보 없음
+뉴스 3건 · 사업 아이디어 0건 · 구축 후보 0건
 
 <callout icon="💡" color="blue_bg">
-AI 실행력의 병목은 검증 가능한 임시 통제다
-
-Shirudo는 AI가 만든 커널 실드로 패치 공백을 메우고, GPT‑6.2는 고위험 능력 임계치 모델을 일반 Chat으로 확장했다. GitHub는 사람과 에이전트가 공유하는 Issue 상태를 추가했다. 실행 범위가 넓어질수록 임시 통제의 서명·시험·만료·롤백과 작업 상태의 공통 원장이 핵심이 된다.
+MCP는 작업 절차를, Claude Artifacts는 작은 앱을 쉽게 배포한다. 두 경로 모두 배포 속도와 별개로 출처와 쓰기 권한을 점검해야 한다.
 </callout>
 
 ## 오늘의 핵심 뉴스
 
-### 1. OpenAI·Cisco, 패치 전 Linux를 보호하는 오픈소스 Shirudo 공개
+### 1. Claude Code 2.1.332, MCP 서버 스킬 베타 지원
 
-**S · Shirudo가 서명된 eBPF 실드로 재시작 없이 실행 중 Linux 서비스를 임시 보호하고 패치 배포까지의 공백을 줄인다.**
+Claude Code 2.1.332의 변경기록에 MCP 서버가 배포하는 스킬이 추가됐다. 스킬에 포함된 인라인 셸 명령을 거부할 수 있는 별도 훅도 추가됐다.
 
-취약점 공개 뒤 정식 패치가 검증될 때까지의 수일·수주 공백은 공격자가 노리는 구간이며, 임시 실드가 잘못되면 정상 트래픽이나 시스템 안정성을 해칠 수 있다.
+팀 공통 절차를 배포하는 수고가 줄 수 있지만, 어떤 서버가 어떤 절차를 공급하는지 검토할 필요가 있다. [원문](https://code.claude.com/docs/en/changelog)
 
-앞으로 볼 것: 실시간 완화 런타임은 CVE별 실드 서명, 재현 가능한 테스트, 자동 만료와 정식 패치 전환 증거를 요구하는 보안 공급망으로 발전할 가능성이 높다.
+### 2. Claude Artifacts, Mac·Windows 앱 설치 베타
 
-[원문 보기](https://openai.com/index/introducing-shirudo/)
+11월 24일 발표에 이어 25일 후속 보도에서 설치 조건을 확인했다. 적격 Artifact는 독립 창으로 열 수 있지만 Claude 계정과 온라인 연결이 필요하다. 권한은 선택할 수 있으며 원본 수정이 설치본에 반영된다.
 
-### 2. OpenAI, GPT‑6.2를 ChatGPT 일반 Chat 탭에 배포
+개인용 반복 업무 도구의 배포 부담은 낮아지지만, 독립·오프라인 앱을 대체하지는 않는다. [원문](https://claude.com/resources/articles/install-as-app)
 
-**S · GPT‑6.2 대화 최적화 버전이 Plus·Pro·Business·Enterprise에 순차 배포되며 이미지 이해와 상세 지시 수행을 강화했다.**
+### 3. Sakana AI, 30B Namazu Small 발표
 
-일반 대화에 고위험 능력 임계치 모델이 들어오면 조직은 모델 이름보다 실제 화면·관리자 정책·데이터 처리와 안전 통제를 다시 확인해야 한다.
+Sakana AI가 NVIDIA Nemotron 3 Nano의 사전학습 모델을 바탕으로 추가 학습한 30B 모델을 발표했다. 검색과 장문 문서 처리를 강조하며 온프레미스 제공 조건은 추후 안내한다고 밝혔다.
 
-앞으로 볼 것: ChatGPT의 일반 Chat과 Work·Codex는 사용 목적별로 다른 모델·통제·한도를 유지하며 관리자는 화면별 정책 가시성을 요구할 전망이다.
-
-[원문 보기](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
-
-### 3. OpenAI, 사전학습 perplexity를 공동 안전 기준 후보로 제안
-
-**A · OpenAI 수석과학자가 내부 사전학습 perplexity 추이를 공개하고 연구소 간 비교 가능한 진행 속도·안전 임계치 지표로 발전시키자고 제안했다.**
-
-벤치마크 점수는 출시 뒤 행동을 보지만 perplexity는 학습 중 진행을 보여줄 수 있어 위험 능력 상승을 더 일찍 감지할 가능성이 있다.
-
-앞으로 볼 것: 공통 토큰화·평가 코퍼스·감사 절차가 없다면 단일 perplexity 숫자는 제한적이며, 여러 능력·안전 지표와 함께 쓰이는 조기 경보가 될 가능성이 높다.
-
-[원문 보기](https://openai.com/index/perplexity-and-intelligence/)
-
-### 4. GitHub, 에이전트와 공유하는 Issue 상태·Repository Board 공개
-
-**A · Issue에 Backlog·Todo·In progress·In review·Done 등 상태를 직접 부여하고 저장소 Board와 Projects에 동기화할 수 있게 됐다.**
-
-에이전트가 동시에 여러 Issue를 다룰 때 실제 진행·검토·중복 상태가 저장소에 남아야 사람과 자동화가 같은 다음 행동을 선택할 수 있다.
-
-앞으로 볼 것: 저장소 Issue는 단순 요청 기록에서 사람·에이전트의 실행 큐와 상태 원장으로 확장되고 자동화 정책·감사 로그 중요성이 커질 전망이다.
-
-[원문 보기](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview/)
+규모보다 실제 문서 작업의 인용 정확도와 총비용으로 모델을 비교할 이유가 커졌다. [원문](https://sakana.ai/namazu-small/)
 
 ## Business Radar
 
-### Runtime Shield Validation Pack
-
-**4.2/5 · ★★★★☆ · High**
-
-패치 전 임시 eBPF 실드가 공격을 막더라도 정상 트래픽·성능·롤백에 미치는 영향을 빠르게 증명하기 어렵다.
-
-- 고객: Linux 서비스를 운영하지만 전담 보안 연구팀이 없는 한국 SaaS·MSP
-- 차별점: 실드별 공격 재현, 정상 트래픽 회귀, CPU·지연 비용, 서명·만료·롤백과 정식 패치 전환을 한국어 증거팩으로 묶는다.
-- 2주 MVP: 격리된 Linux VM에서 공개 CVE 3개와 정상 요청 세트를 재생해 실드 전후 차단률, p95 지연, 오탐, 제거 복구를 자동 리포트한다.
-- Architect: 후보 아님
-
-### Agent Issue Flow Guard
-
-**4/5 · ★★★★☆ · High**
-
-에이전트가 작업 상태를 제때 갱신하지 않거나 Projects 자동화와 충돌하면 중복 구현·검토 대기·완료 오판이 생긴다.
-
-- 고객: GitHub에서 여러 코딩 에이전트와 사람 개발자가 함께 일하는 3~30인 팀
-- 차별점: Issue 상태, PR, 에이전트 세션을 대조해 상태 드리프트와 중복 소유를 탐지하고 다음 행동 근거를 남긴다.
-- 2주 MVP: 단일 조직의 Issue·PR 이벤트를 읽어 In progress인데 활동 없음, PR 있는데 Todo, 검토 완료인데 In review 같은 규칙 10개를 알림한다.
-- Architect: 후보 아님
+오늘은 강한 사업 기회 신호 없음: 한국 소규모팀의 반복 수요와 지불 의향은 미확인.
 
 ## AI Tool Radar
 
-- **Shirudo · ★★★★☆** — AI가 만든 서명된 eBPF 실드로 패치 전 실행 중 서비스를 보호하는 오픈소스 런타임이 공개됐다. [보기](https://openai.com/index/introducing-shirudo/)
-- **GPT-6.2 Chat · ★★★★☆** — GPT‑6.2가 일반 Chat 탭의 유료 요금제에 배포되기 시작했다. [보기](https://help.openai.com/en/articles/6825453-chatgpt-release-notes)
-- **GitHub Issue Statuses · ★★★★☆** — Issue와 Repository Board에 사람·에이전트가 공유하는 세부 진행 상태가 생겼다. [보기](https://github.blog/changelog/2026-11-23-issue-statuses-and-repository-boards-are-in-public-preview/)
-- **OpenAI Perplexity Tracking · ★★★☆☆** — OpenAI가 내부 사전학습 추이를 공개하고 공동 안전 기준 후보로 제안했다. [보기](https://openai.com/index/perplexity-and-intelligence/)
+- [Claude Code 2.1.332](https://code.claude.com/docs/en/changelog) · ★★★★ — MCP 서버에서 배포한 스킬을 불러올 수 있다. 테스트 저장소에서 신뢰하는 서버만 연결해 스킬 출처와 쓰기 승인 범위를 확인한다.
+- [Claude Install as app](https://claude.com/resources/articles/install-as-app) · ★★★★ — 재사용하던 Artifact를 별도 앱 창에서 실행할 수 있다. 가짜 데이터로 만든 읽기 전용 체크리스트부터 시험한다.
 
 ## Community Pulse
 
-- **Reddit · GPT‑6.2 배포 기대와 모델표 혼선** — 사용자들은 일반 Chat 탭 배포를 환영하면서 Work·Codex와의 차이, 실제 모델 선택기 표시와 한도를 확인하고 있다.
-- **Reddit · perplexity 투명성 환영과 비교 가능성 회의** — 내부 추세 공개는 의미 있지만 평가 데이터셋·토큰화가 다르면 연구소 간 공통 안전 기준으로 쓰기 어렵다는 반응이다.
-- **Open Source Security · 라이브 완화 기대와 검증 요구** — Shirudo의 패치 공백 축소 가능성에는 기대하지만 커널 실드의 오탐·성능·서명·철회에 독립 재현이 필요하다는 분위기다.
-- **GitHub · 경량 작업 상태 공유 환영** — Issue 자체에서 세부 상태와 Board를 쓰는 기능은 소규모팀과 에이전트의 공유 실행 큐를 단순화할 수 있다는 반응이다.
+- [Reddit · 스킬과 도구 역할 논의](https://www.reddit.com/r/mcp/comments/1y4utyx/anthropic_just_announced_skills_over_mcp_i_built/) — MCP 서버가 호출 도구와 재사용 가능한 작업 절차를 함께 배포할 때 둘을 어떻게 구분할지 논의했다.
+- [Reddit · 데스크톱 앱 권한 점검](https://www.reddit.com/r/ClaudeAI/comments/1y4ybgy/claude_can_now_install_artifacts_as_mac_and/) — 한 사용자는 커넥터를 쓰는 앱에서 실제 변경 전에 미리보기를 보여주자고 제안했다.
+- [Reddit · 공유 범위 질문](https://www.reddit.com/r/ClaudeCode/comments/1y4o0wx/install_claude_artifacts_as_desktop_apps_on_mac/) — 설치형 Artifact를 Claude를 쓰지 않는 사람에게 배포해도 실행할 수 있는지 질문이 나왔다.
 
 ## AI Skill of the Day
 
-### Temporary Mitigation Gate
+**스킬 배포 전 권한 점검** — 외부 서버의 스킬을 팀에 배포하기 전
 
-정식 패치 전에 eBPF 규칙, WAF 룰, 프록시 필터 같은 임시 완화책을 운영환경에 적용할 때.
+가짜 데이터가 들어 있는 테스트 저장소에서 읽기 전용 업무를 수행하고 어떤 서버·도구를 호출했는지 기록한다.
 
-> 이 임시 완화책을 공격 차단, 정상 트래픽 회귀, 성능 비용, 서명·출처, 적용 범위, 자동 만료, 롤백, 정식 패치 전환으로 검증하라. 증거 없는 항목은 unknown으로 두고 운영 적용을 승인하지 마라.
+> 스킬의 출처, 버전, 필요한 읽기·쓰기 권한을 표로 정리해. 확인되지 않은 권한은 미확인으로 표시하고 외부 전송이나 쓰기는 실행하지 마.
 
 ## Worth Reading
 
-- **Paper** · [GPT-6.2 in ChatGPT System Card](https://deploymentsafety.openai.com/gpt-6-2-chatgpt/gpt-6-2-chatgpt.pdf) — 일반 Chat 탭 모델의 Cyber·Bio·자기개선 임계치와 배포 안전 통제를 확인할 수 있다.
-- **GitHub** · [Shirudo](https://github.com/openai/shirudo) — eBPF 실드의 코드, 서명·적용 구조와 실제 공개 이슈를 직접 검토할 수 있다.
-- **YouTube** · [How to use GitHub issues and projects](https://www.youtube.com/watch?v=c67GaAkf1BE) — Issue와 Project Board를 연결해 작업 상태를 운영하는 기본 흐름을 볼 수 있다.
-- **Blog** · [Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence/) — 사전학습 perplexity를 능력 진전과 공동 안전 기준에 연결하려는 원문 논리를 확인할 수 있다.
+- Paper · [J-tau: 일본어 도구형 에이전트 평가](https://arxiv.org/abs/2610.19638) — 번역만으로는 해결되지 않는 주소·통화 등 현지화 평가 문제를 보여준다.
+- GitHub · [Claude Code v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332) — 이번 변경과 알려진 제한을 버전 단위로 확인할 수 있다.
+- YouTube · [Everything new in Claude this month](https://www.youtube.com/watch?v=EuOg5f_Egns) — 공식 영상으로 최근 Claude 기능의 배경을 살펴볼 수 있다. 이번 데스크톱 베타와는 별개다.
+- Blog · [Turn artifacts into Mac and Windows apps](https://claude.com/resources/articles/install-as-app) — 설치형 도구의 업데이트, 계정 의존성과 권한을 함께 설명한다.
 
 ## Today's Insight
 
-<callout icon="🎯" color="green_bg">
-AI가 직접 시스템을 바꾸기 시작할수록 생성 능력보다 임시 조치의 검증·만료·롤백과 공유 상태가 더 중요한 운영 자산이 된다.
-</callout>
+AI로 도구를 만드는 시간이 줄어들수록, 팀이 그 도구의 출처와 권한 변경을 확인하는 절차가 더 중요해진다.
 
-## 운영 상태
+## 확인 범위
 
-- Git 정본: 작성 완료
-- Architect 후보: 없음
-- Notion: 전체 교체 승인 대기
+- INSUFFICIENT_STRONG_NEWS: 검증 기준을 만족한 3건만 선별했습니다.
+- Claude 앱은 11월 24일 최초 발표, 25일 후속 보도입니다. Namazu의 발표 시각은 원문에 없어 확인 가능한 보도 시각을 사용했습니다.
+- Namazu 온프레미스 제공 조건·성능 독립 재현 및 Claude 베타의 한국 계정별 가용성은 미확인입니다.
+- Notion Latest는 본문 전체 교체 승인이 없어 미갱신입니다.
+- 커뮤니티 신호는 Reddit 사례로 제한됩니다. 다른 채널의 대표 반응은 확인되지 않았습니다.
+
+## 추적 질문
+
+[지역 특화 추론](https://sakana.ai/namazu-small/): 12월 온프레미스 조건과 일본어 문서 실측이 공개되는가?
+
