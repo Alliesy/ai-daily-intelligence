@@ -35,6 +35,16 @@
       ],
       "sources": [
         {
+          "title": "OpenAI 공식 제품 페이지",
+          "url": "https://openai.com/rosalind/",
+          "publisher": "OpenAI",
+          "published_at": "",
+          "tier": "A",
+          "source_type": "other",
+          "authority": "official",
+          "verification_status": "unverified"
+        },
+        {
           "title": "GPT-6 Rosalind Research release note",
           "url": "https://help.openai.com/en/articles/9624314-model-release-notes",
           "publisher": "OpenAI",
