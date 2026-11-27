@@ -1,0 +1,255 @@
+{
+  "schema_version": "1.0",
+  "date_kst": "2026-11-27",
+  "generated_at": "2026-11-27T00:39:38.342Z",
+  "status": "partial",
+  "warnings": [
+    "INSUFFICIENT_STRONG_NEWS: 근거를 확인한 주요 사건 3건만 선별.",
+    "DeepL 지연 개선 및 Patram 성능의 독립 실측은 미확인. XEBO.ai 투자 납입 완료는 미확인.",
+    "XEBO.ai 원문은 발표일만 명시해 연구 패킷 시각은 날짜 기준의 표기값입니다.",
+    "커뮤니티는 로컬 모델에 관한 소수 Reddit 사례로 제한됩니다.",
+    "Notion Latest 본문 전체 교체 승인 대기로 미갱신."
+  ],
+  "news": [
+    {
+      "event_key": "deepl-aure-v2-launch-2026-11-26",
+      "title": "DeepL, 한국어 포함 실시간 음성 번역 Aure v2 출시",
+      "importance": "S",
+      "one_line_summary": "DeepL은 도쿄 행사에서 Aure v2를 발표했다. 지원 언어에는 한국어가 포함되며 DeepL Voice의 온라인·대면 서비스와 Voice API에 적용된다고 밝혔다.",
+      "impact": "한·일 고객 미팅이나 현장 상담에서는 번역 정확도뿐 아니라 상대방이 끼어들 수 있는 정상적인 대화 속도가 중요하다.",
+      "original_url": "https://www.deepl.com/en/press-release/aure-v2",
+      "key_quote": "Aure v2 supports six languages at launch: English, German, French, Spanish, Japanese and Korean.",
+      "quote_translation": "출시 시점에 영어·독일어·프랑스어·스페인어·일본어·한국어 6개 언어를 지원합니다.",
+      "summary": "DeepL은 도쿄 행사에서 Aure v2를 발표했다. 지원 언어에는 한국어가 포함되며 DeepL Voice의 온라인·대면 서비스와 Voice API에 적용된다고 밝혔다.",
+      "why_it_matters": "한·일 고객 미팅이나 현장 상담에서는 번역 정확도뿐 아니라 상대방이 끼어들 수 있는 정상적인 대화 속도가 중요하다.",
+      "industry_mood": {
+        "확인된 신호": "일본 AI Watch가 행사 발표와 서비스 제공 개시를 보도했다. 지연 개선 수치는 공급사 자체 시험이며 독립 현장 수치는 아니다."
+      },
+      "outlook": "산업 용어·고유명사·동시 발화에서 강점을 확인할 경우 통역을 쓰기 어려웠던 짧은 상담부터 채택될 수 있다.",
+      "business_opportunity": "한국 고객의 반복 업무와 지불 의향을 확인하기 전 사업 후보로 올리지 않는다.",
+      "tags": [
+        "Voice AI",
+        "DeepL",
+        "Workflow"
+      ],
+      "sources": [
+        {
+          "title": "DeepL introduces Aure v2",
+          "url": "https://www.deepl.com/en/press-release/aure-v2",
+          "publisher": "DeepL",
+          "tier": "A",
+          "source_type": "official_blog",
+          "published_at": "2026-11-26",
+          "authority": "official",
+          "verification_status": "verified"
+        },
+        {
+          "title": "Unmute Tokyo 현장 취재",
+          "url": "https://ai.watch.impress.co.jp/docs/news/2159746.html",
+          "publisher": "Impress AI Watch",
+          "tier": "B",
+          "source_type": "article",
+          "published_at": "2026-11-26",
+          "authority": "independent",
+          "verification_status": "corroborated"
+        }
+      ]
+    },
+    {
+      "event_key": "bharatgen-patram15-weights-2026-11-26",
+      "title": "BharatGen, 문서 비전 모델 Patram 1.5 가중치 공개",
+      "importance": "A",
+      "one_line_summary": "BharatGen이 문서 구조화·필드 추출·질의응답을 지원하는 7B 모델을 공개했다. 개발진은 답을 뒷받침할 자료가 없을 때 답변을 유보하는 기능을 소개했다.",
+      "impact": "잘못 읽은 금액이나 날짜를 그대로 시스템에 쓰는 것보다, 불확실한 필드를 검토 대상으로 보내는 편이 실무적으로 중요하다.",
+      "original_url": "https://bharatgen.com/blogs/introducing-patram-1-5/",
+      "key_quote": "The model weights are out under the Apache 2.0 license.",
+      "quote_translation": "모델 가중치를 Apache 2.0 라이선스로 공개했습니다.",
+      "summary": "BharatGen이 문서 구조화·필드 추출·질의응답을 지원하는 7B 모델을 공개했다. 개발진은 답을 뒷받침할 자료가 없을 때 답변을 유보하는 기능을 소개했다.",
+      "why_it_matters": "잘못 읽은 금액이나 날짜를 그대로 시스템에 쓰는 것보다, 불확실한 필드를 검토 대상으로 보내는 편이 실무적으로 중요하다.",
+      "industry_mood": {
+        "확인된 신호": "Economic Times가 개발진에 질의해 공개 제공과 문서 업무 범위를 확인했다. 한국 양식의 성능과 답변 유보 정확도는 미확인이다."
+      },
+      "outlook": "영수증·송장처럼 정답 확인이 가능한 영역에서 기존 OCR과 비교한 뒤 제한적으로 도입할 수 있다.",
+      "business_opportunity": "한국 고객의 반복 업무와 지불 의향을 확인하기 전 사업 후보로 올리지 않는다.",
+      "tags": [
+        "OCR",
+        "LLM",
+        "Open Source",
+        "Workflow"
+      ],
+      "sources": [
+        {
+          "title": "Introducing Patram 1.5",
+          "url": "https://bharatgen.com/blogs/introducing-patram-1-5/",
+          "publisher": "BharatGen",
+          "tier": "A",
+          "source_type": "official_blog",
+          "published_at": "2026-11-26",
+          "authority": "official",
+          "verification_status": "verified"
+        },
+        {
+          "title": "Patram 1.5 model card",
+          "url": "https://huggingface.co/bharatgenai/Patram1.5-7B",
+          "publisher": "BharatGen",
+          "tier": "A",
+          "source_type": "documentation",
+          "published_at": "2026-11-26",
+          "authority": "official",
+          "verification_status": "verified"
+        },
+        {
+          "title": "Patram 1.5 reporting",
+          "url": "https://economictimes.indiatimes.com/ai/ai-insights/bharatgens-7-billion-parameter-patram-1-5-is-trained-to-hold-back-rather-than-guess/articleshow/136172471.cms",
+          "publisher": "The Economic Times",
+          "tier": "B",
+          "source_type": "article",
+          "published_at": "2026-11-26",
+          "authority": "independent",
+          "verification_status": "corroborated"
+        }
+      ]
+    },
+    {
+      "event_key": "egf-xebo-investment-agreement-2026-11-26",
+      "title": "Emirates Growth Fund, XEBO.ai에 1,050만 달러 투자 계약",
+      "importance": "A",
+      "one_line_summary": "EGF와 XEBO.ai는 시리즈 A 투자 계약 금액을 1,050만 달러로 발표했다. XEBO.ai는 고객 피드백 제품을 통화와 디지털 접점 분석으로 넓힐 계획이라고 밝혔다.",
+      "impact": "범용 챗봇보다 기존 고객경험 업무에 붙는 분석 제품에도 성장 자금이 들어가는 사례다. 단일 거래로 시장 전체를 판단할 수는 없다.",
+      "original_url": "https://www.egf.gov.ae/en/news/emirates-growth-fund-invests-%2410.5-million-in-uae-built-ai-company-xebo.ai",
+      "key_quote": "Emirates Growth Fund (EGF) has signed an agreement to invest $10.5 million in XEBO.ai",
+      "quote_translation": "Emirates Growth Fund가 XEBO.ai에 1,050만 달러를 투자하는 계약을 체결했습니다.",
+      "summary": "EGF와 XEBO.ai는 시리즈 A 투자 계약 금액을 1,050만 달러로 발표했다. XEBO.ai는 고객 피드백 제품을 통화와 디지털 접점 분석으로 넓힐 계획이라고 밝혔다.",
+      "why_it_matters": "범용 챗봇보다 기존 고객경험 업무에 붙는 분석 제품에도 성장 자금이 들어가는 사례다. 단일 거래로 시장 전체를 판단할 수는 없다.",
+      "industry_mood": {
+        "확인된 신호": "투자사와 회사의 발표가 계약 금액에서 일치한다. 투자사는 계약을 체결했다고 표현하므로 납입 완료는 단정하지 않는다."
+      },
+      "outlook": "후속 확인점은 분석 기능 자체보다 민원 대응·제품 개선에 연결되는 운영 지표다.",
+      "business_opportunity": "한국 고객의 반복 업무와 지불 의향을 확인하기 전 사업 후보로 올리지 않는다.",
+      "tags": [
+        "AI Startup",
+        "Voice of Customer",
+        "Workflow"
+      ],
+      "sources": [
+        {
+          "title": "EGF investment announcement",
+          "url": "https://www.egf.gov.ae/en/news/emirates-growth-fund-invests-%2410.5-million-in-uae-built-ai-company-xebo.ai",
+          "publisher": "Emirates Growth Fund",
+          "tier": "A",
+          "source_type": "official_blog",
+          "published_at": "2026-11-26",
+          "authority": "official",
+          "verification_status": "verified"
+        },
+        {
+          "title": "XEBO.ai Series A announcement",
+          "url": "https://www.xebo.ai/pr/xebo-ai-series-a-emirates-growth-fund",
+          "publisher": "XEBO.ai",
+          "tier": "A",
+          "source_type": "official_blog",
+          "published_at": "2026-11-26",
+          "authority": "official",
+          "verification_status": "verified"
+        },
+        {
+          "title": "XEBO investment coverage",
+          "url": "https://fifty.degree/news/2026-11-26-xebo-ai-series-a/",
+          "publisher": "Fifty Degrees",
+          "tier": "B",
+          "source_type": "article",
+          "published_at": "2026-11-26",
+          "authority": "independent",
+          "verification_status": "corroborated"
+        }
+      ]
+    }
+  ],
+  "business_ideas": [],
+  "tools": [
+    {
+      "name": "DeepL Aure v2",
+      "type": "Voice AI",
+      "url": "https://www.deepl.com/en/press-release/aure-v2",
+      "stars": 4,
+      "why_trending": "한국어를 포함해 실시간 음성 번역을 지원한다.",
+      "worth_trying": "공개 샘플 회화에서 지연과 전문용어 오류를 따로 측정한다."
+    },
+    {
+      "name": "Patram 1.5",
+      "type": "Document AI",
+      "url": "https://huggingface.co/bharatgenai/Patram1.5-7B",
+      "stars": 4,
+      "why_trending": "문서 추출을 지원하는 공개 가중치 모델이다.",
+      "worth_trying": "누락·번짐이 있는 합성 양식으로 잘못 채운 필드와 답변 유보를 각각 센다."
+    }
+  ],
+  "community": [
+    {
+      "platform": "Reddit",
+      "mood": "단일 GPU 비교",
+      "one_line_summary": "사용자 1명이 Bonsai 2.5의 디코딩 속도와 에이전트 작업 통과율 사이의 차이를 보고했다. 비교 런타임 빌드는 같지 않았다.",
+      "url": "https://www.reddit.com/r/LocalLLM/comments/1y64y04/ran_prismmls_ternary_bonsai_25_27b_on_a_single/"
+    },
+    {
+      "platform": "Reddit",
+      "mood": "하드웨어별 실험",
+      "one_line_summary": "한 사용자가 M2 Pro에서 Bonsai 2.5 실행을 시험했다. 일반 하드웨어 성능으로 확대 해석할 수 없다.",
+      "url": "https://www.reddit.com/r/llamacpp/comments/1y6dnxw/ternary_bonsai_25_27b_on_a_mac_mini_m2_pro_134_20/"
+    },
+    {
+      "platform": "Reddit",
+      "mood": "포맷과 효율",
+      "one_line_summary": "LocalLLaMA에서 Bonsai 2.5 모델 카드와 삼진 양자화 선택을 논의했다.",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1y4mech/prismmlternarybonsai2527bgguf_hugging_face/"
+    }
+  ],
+  "skill_of_the_day": {
+    "name": "문서 AI의 답변 유보 평가",
+    "when_to_use": "추출한 날짜·금액을 사람이 검토하거나 후속 업무 시스템에 전달할 때.",
+    "practical_example": "정답이 있는 양식과 필드를 의도적으로 가린 양식을 섞어 정답률, 잘못 채운 비율, 검토 대기 비율을 따로 기록한다.",
+    "prompt_example": "필드별 값과 근거가 보이는 위치를 제시해. 근거가 없거나 읽을 수 없으면 값을 만들지 말고 검토 대기로 표시해."
+  },
+  "worth_reading": [
+    {
+      "type": "Paper",
+      "title": "OCRBench v2",
+      "url": "https://arxiv.org/abs/2501.00321",
+      "why_read": "문서 인식 능력을 여러 작업으로 나눠 평가하는 배경 자료."
+    },
+    {
+      "type": "GitHub",
+      "title": "PrismML Bonsai demo의 모델 포맷",
+      "url": "https://github.com/PrismML-Eng/Bonsai-demo/blob/main/MODEL-FORMATS.md",
+      "why_read": "같은 모델도 실행 형식과 런타임 지원이 다를 수 있음을 확인."
+    },
+    {
+      "type": "YouTube",
+      "title": "DeepL Voice Spring Launch 데모",
+      "url": "https://www.youtube.com/watch?v=3dqlJ-yxYvM",
+      "why_read": "실시간 음성 번역의 기존 제품 흐름을 보는 배경 영상으로, Aure v2 독립 시험은 아니다."
+    },
+    {
+      "type": "Blog",
+      "title": "Introducing Patram 1.5",
+      "url": "https://bharatgen.com/blogs/introducing-patram-1-5/",
+      "why_read": "답변 유보와 추출 기능을 개발진이 어떻게 정의했는지 확인."
+    }
+  ],
+  "todays_insight": "업무용 AI는 평균 정확도만큼 답할 수 없을 때 멈추는 방식과 사람이 넘겨받는 지점이 중요하다.",
+  "morning_paper": {
+    "insight_headline": "다국어 AI를 평가할 때 업무 흐름을 먼저 보라",
+    "insight_summary": "DeepL은 대화의 대기 시간을, Patram은 읽을 수 없는 필드의 답변 유보를 겨냥한다. 도입 평가는 정확도 외에 대화나 검토 흐름을 얼마나 덜 끊는지까지 측정해야 한다.",
+    "insight_method": "cross_event_signal_v1",
+    "evidence_event_keys": [
+      "deepl-aure-v2-launch-2026-11-26",
+      "bharatgen-patram15-weights-2026-11-26"
+    ],
+    "top_event_keys": [
+      "deepl-aure-v2-launch-2026-11-26",
+      "bharatgen-patram15-weights-2026-11-26",
+      "egf-xebo-investment-agreement-2026-11-26"
+    ]
+  },
+  "build_candidate": null
+}

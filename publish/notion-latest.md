@@ -1,76 +1,74 @@
-AI Daily Intelligence · 2026-11-26 KST
+AI Daily Intelligence · 2026-11-27 KST
 
-[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-26.md) · [정본 JSON](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-26.json)
+[전체 보고서](https://github.com/Alliesy/ai-daily-intelligence/blob/main/reports/2026/2026-11-27.md) · [정본 데이터](https://github.com/Alliesy/ai-daily-intelligence/blob/main/data/daily/2026/2026-11-27.json)
 
 뉴스 3건 · 사업 아이디어 0건 · 구축 후보 0건
 
-<callout icon="💡" color="blue_bg">
-MCP는 작업 절차를, Claude Artifacts는 작은 앱을 쉽게 배포한다. 두 경로 모두 배포 속도와 별개로 출처와 쓰기 권한을 점검해야 한다.
-</callout>
+DeepL은 대화의 대기 시간을, Patram은 읽을 수 없는 필드의 답변 유보를 겨냥한다. 도입 평가는 정확도 외에 대화나 검토 흐름을 얼마나 덜 끊는지까지 측정해야 한다.
 
 ## 오늘의 핵심 뉴스
 
-### 1. Claude Code 2.1.332, MCP 서버 스킬 베타 지원
+### DeepL, 한국어 포함 실시간 음성 번역 Aure v2 출시
 
-Claude Code 2.1.332의 변경기록에 MCP 서버가 배포하는 스킬이 추가됐다. 스킬에 포함된 인라인 셸 명령을 거부할 수 있는 별도 훅도 추가됐다.
+**S** · DeepL은 도쿄 행사에서 Aure v2를 발표했다. 지원 언어에는 한국어가 포함되며 DeepL Voice의 온라인·대면 서비스와 Voice API에 적용된다고 밝혔다.
 
-팀 공통 절차를 배포하는 수고가 줄 수 있지만, 어떤 서버가 어떤 절차를 공급하는지 검토할 필요가 있다. [원문](https://code.claude.com/docs/en/changelog)
+한·일 고객 미팅이나 현장 상담에서는 번역 정확도뿐 아니라 상대방이 끼어들 수 있는 정상적인 대화 속도가 중요하다. [원문](https://www.deepl.com/en/press-release/aure-v2)
 
-### 2. Claude Artifacts, Mac·Windows 앱 설치 베타
+### BharatGen, 문서 비전 모델 Patram 1.5 가중치 공개
 
-11월 24일 발표에 이어 25일 후속 보도에서 설치 조건을 확인했다. 적격 Artifact는 독립 창으로 열 수 있지만 Claude 계정과 온라인 연결이 필요하다. 권한은 선택할 수 있으며 원본 수정이 설치본에 반영된다.
+**A** · BharatGen이 문서 구조화·필드 추출·질의응답을 지원하는 7B 모델을 공개했다. 개발진은 답을 뒷받침할 자료가 없을 때 답변을 유보하는 기능을 소개했다.
 
-개인용 반복 업무 도구의 배포 부담은 낮아지지만, 독립·오프라인 앱을 대체하지는 않는다. [원문](https://claude.com/resources/articles/install-as-app)
+잘못 읽은 금액이나 날짜를 그대로 시스템에 쓰는 것보다, 불확실한 필드를 검토 대상으로 보내는 편이 실무적으로 중요하다. [원문](https://bharatgen.com/blogs/introducing-patram-1-5/)
 
-### 3. Sakana AI, 30B Namazu Small 발표
+### Emirates Growth Fund, XEBO.ai에 1,050만 달러 투자 계약
 
-Sakana AI가 NVIDIA Nemotron 3 Nano의 사전학습 모델을 바탕으로 추가 학습한 30B 모델을 발표했다. 검색과 장문 문서 처리를 강조하며 온프레미스 제공 조건은 추후 안내한다고 밝혔다.
+**A** · EGF와 XEBO.ai는 시리즈 A 투자 계약 금액을 1,050만 달러로 발표했다. XEBO.ai는 고객 피드백 제품을 통화와 디지털 접점 분석으로 넓힐 계획이라고 밝혔다.
 
-규모보다 실제 문서 작업의 인용 정확도와 총비용으로 모델을 비교할 이유가 커졌다. [원문](https://sakana.ai/namazu-small/)
+범용 챗봇보다 기존 고객경험 업무에 붙는 분석 제품에도 성장 자금이 들어가는 사례다. 단일 거래로 시장 전체를 판단할 수는 없다. [원문](https://www.egf.gov.ae/en/news/emirates-growth-fund-invests-%2410.5-million-in-uae-built-ai-company-xebo.ai)
 
 ## Business Radar
 
-오늘은 강한 사업 기회 신호 없음: 한국 소규모팀의 반복 수요와 지불 의향은 미확인.
+오늘은 강한 사업 기회 신호 없음. 다국어 상담과 문서 검토는 검증할 문제지만, 한국 소규모팀의 반복 수요·지불 의향을 보여주는 근거는 부족하다.
 
 ## AI Tool Radar
 
-- [Claude Code 2.1.332](https://code.claude.com/docs/en/changelog) · ★★★★ — MCP 서버에서 배포한 스킬을 불러올 수 있다. 테스트 저장소에서 신뢰하는 서버만 연결해 스킬 출처와 쓰기 승인 범위를 확인한다.
-- [Claude Install as app](https://claude.com/resources/articles/install-as-app) · ★★★★ — 재사용하던 Artifact를 별도 앱 창에서 실행할 수 있다. 가짜 데이터로 만든 읽기 전용 체크리스트부터 시험한다.
+- [DeepL Aure v2](https://www.deepl.com/en/press-release/aure-v2) · ★★★★ — 한국어를 포함해 실시간 음성 번역을 지원한다. 공개 샘플 회화에서 지연과 전문용어 오류를 따로 측정한다.
+- [Patram 1.5](https://huggingface.co/bharatgenai/Patram1.5-7B) · ★★★★ — 문서 추출을 지원하는 공개 가중치 모델이다. 누락·번짐이 있는 합성 양식으로 잘못 채운 필드와 답변 유보를 각각 센다.
 
 ## Community Pulse
 
-- [Reddit · 스킬과 도구 역할 논의](https://www.reddit.com/r/mcp/comments/1y4utyx/anthropic_just_announced_skills_over_mcp_i_built/) — MCP 서버가 호출 도구와 재사용 가능한 작업 절차를 함께 배포할 때 둘을 어떻게 구분할지 논의했다.
-- [Reddit · 데스크톱 앱 권한 점검](https://www.reddit.com/r/ClaudeAI/comments/1y4ybgy/claude_can_now_install_artifacts_as_mac_and/) — 한 사용자는 커넥터를 쓰는 앱에서 실제 변경 전에 미리보기를 보여주자고 제안했다.
-- [Reddit · 공유 범위 질문](https://www.reddit.com/r/ClaudeCode/comments/1y4o0wx/install_claude_artifacts_as_desktop_apps_on_mac/) — 설치형 Artifact를 Claude를 쓰지 않는 사람에게 배포해도 실행할 수 있는지 질문이 나왔다.
+- [Reddit · 단일 GPU 비교](https://www.reddit.com/r/LocalLLM/comments/1y64y04/ran_prismmls_ternary_bonsai_25_27b_on_a_single/) — 사용자 1명이 Bonsai 2.5의 디코딩 속도와 에이전트 작업 통과율 사이의 차이를 보고했다. 비교 런타임 빌드는 같지 않았다.
+- [Reddit · 하드웨어별 실험](https://www.reddit.com/r/llamacpp/comments/1y6dnxw/ternary_bonsai_25_27b_on_a_mac_mini_m2_pro_134_20/) — 한 사용자가 M2 Pro에서 Bonsai 2.5 실행을 시험했다. 일반 하드웨어 성능으로 확대 해석할 수 없다.
+- [Reddit · 포맷과 효율](https://www.reddit.com/r/LocalLLaMA/comments/1y4mech/prismmlternarybonsai2527bgguf_hugging_face/) — LocalLLaMA에서 Bonsai 2.5 모델 카드와 삼진 양자화 선택을 논의했다.
 
 ## AI Skill of the Day
 
-**스킬 배포 전 권한 점검** — 외부 서버의 스킬을 팀에 배포하기 전
+**문서 AI의 답변 유보 평가** — 추출한 날짜·금액을 사람이 검토하거나 후속 업무 시스템에 전달할 때.
 
-가짜 데이터가 들어 있는 테스트 저장소에서 읽기 전용 업무를 수행하고 어떤 서버·도구를 호출했는지 기록한다.
+정답이 있는 양식과 필드를 의도적으로 가린 양식을 섞어 정답률, 잘못 채운 비율, 검토 대기 비율을 따로 기록한다.
 
-> 스킬의 출처, 버전, 필요한 읽기·쓰기 권한을 표로 정리해. 확인되지 않은 권한은 미확인으로 표시하고 외부 전송이나 쓰기는 실행하지 마.
+> 필드별 값과 근거가 보이는 위치를 제시해. 근거가 없거나 읽을 수 없으면 값을 만들지 말고 검토 대기로 표시해.
 
 ## Worth Reading
 
-- Paper · [J-tau: 일본어 도구형 에이전트 평가](https://arxiv.org/abs/2610.19638) — 번역만으로는 해결되지 않는 주소·통화 등 현지화 평가 문제를 보여준다.
-- GitHub · [Claude Code v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332) — 이번 변경과 알려진 제한을 버전 단위로 확인할 수 있다.
-- YouTube · [Everything new in Claude this month](https://www.youtube.com/watch?v=EuOg5f_Egns) — 공식 영상으로 최근 Claude 기능의 배경을 살펴볼 수 있다. 이번 데스크톱 베타와는 별개다.
-- Blog · [Turn artifacts into Mac and Windows apps](https://claude.com/resources/articles/install-as-app) — 설치형 도구의 업데이트, 계정 의존성과 권한을 함께 설명한다.
+- Paper · [OCRBench v2](https://arxiv.org/abs/2501.00321) — 문서 인식 능력을 여러 작업으로 나눠 평가하는 배경 자료.
+- GitHub · [PrismML Bonsai demo의 모델 포맷](https://github.com/PrismML-Eng/Bonsai-demo/blob/main/MODEL-FORMATS.md) — 같은 모델도 실행 형식과 런타임 지원이 다를 수 있음을 확인.
+- YouTube · [DeepL Voice Spring Launch 데모](https://www.youtube.com/watch?v=3dqlJ-yxYvM) — 실시간 음성 번역의 기존 제품 흐름을 보는 배경 영상으로, Aure v2 독립 시험은 아니다.
+- Blog · [Introducing Patram 1.5](https://bharatgen.com/blogs/introducing-patram-1-5/) — 답변 유보와 추출 기능을 개발진이 어떻게 정의했는지 확인.
 
 ## Today's Insight
 
-AI로 도구를 만드는 시간이 줄어들수록, 팀이 그 도구의 출처와 권한 변경을 확인하는 절차가 더 중요해진다.
+업무용 AI는 평균 정확도만큼 답할 수 없을 때 멈추는 방식과 사람이 넘겨받는 지점이 중요하다.
 
 ## 확인 범위
 
-- INSUFFICIENT_STRONG_NEWS: 검증 기준을 만족한 3건만 선별했습니다.
-- Claude 앱은 11월 24일 최초 발표, 25일 후속 보도입니다. Namazu의 발표 시각은 원문에 없어 확인 가능한 보도 시각을 사용했습니다.
-- Namazu 온프레미스 제공 조건·성능 독립 재현 및 Claude 베타의 한국 계정별 가용성은 미확인입니다.
-- Notion Latest는 본문 전체 교체 승인이 없어 미갱신입니다.
-- 커뮤니티 신호는 Reddit 사례로 제한됩니다. 다른 채널의 대표 반응은 확인되지 않았습니다.
+- INSUFFICIENT_STRONG_NEWS: 근거를 확인한 주요 사건 3건만 선별.
+- DeepL 지연 개선 및 Patram 성능의 독립 실측은 미확인. XEBO.ai 투자 납입 완료는 미확인.
+- XEBO.ai 원문은 발표일만 명시해 연구 패킷 시각은 날짜 기준의 표기값입니다.
+- 커뮤니티는 로컬 모델에 관한 소수 Reddit 사례로 제한됩니다.
+- Notion Latest 본문 전체 교체 승인 대기로 미갱신.
 
 ## 추적 질문
 
-[지역 특화 추론](https://sakana.ai/namazu-small/): 12월 온프레미스 조건과 일본어 문서 실측이 공개되는가?
+[지역 특화 문서 모델](https://bharatgen.com/blogs/introducing-patram-1-5/): 한국어 양식에서 필드 정확도와 유보 정확도는 기존 OCR 대비 어떤가?
 
