@@ -1,0 +1,65 @@
+.page {
+  background: #fdfcf9;
+  color: var(--color-stone-950);
+
+  /* Keep the shared detail components on the Morning Paper neutral palette. */
+  --color-white: #fffdfa;
+  --color-slate-50: var(--color-stone-50);
+  --color-slate-100: var(--color-stone-100);
+  --color-slate-200: var(--color-stone-200);
+  --color-slate-300: var(--color-stone-300);
+  --color-slate-400: var(--color-stone-400);
+  --color-slate-500: var(--color-stone-500);
+  --color-slate-600: var(--color-stone-600);
+  --color-slate-700: var(--color-stone-700);
+  --color-slate-800: var(--color-stone-800);
+  --color-slate-900: var(--color-stone-900);
+  --color-slate-950: var(--color-stone-950);
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+.headline {
+  max-width: 960px;
+  margin-top: 20px;
+  font-family: var(--editorial-serif);
+  font-size: clamp(1.85rem, 3.4vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.page :global(.detail-heading) > h2,
+.page :global(.detail-heading) > span:first-child {
+  font-family: var(--editorial-serif);
+  font-weight: 600;
+}
+
+.page :global(.content-mode) {
+  border-radius: 2px;
+  background: var(--color-stone-100);
+  color: var(--color-stone-600);
+}
+
+.page :global(.rounded-lg) {
+  border-radius: 4px;
+}
+
+.page section[aria-labelledby="opportunity-heading"] > div:last-child {
+  border-color: #e8dfd2;
+  background: #fbf7f0;
+}
+
+@media (min-width: 640px) {
+  .container { padding-inline: 32px; }
+}
+
+@media (min-width: 1024px) {
+  .container { padding-inline: 40px; }
+}

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- hero images use verified, dynamically sourced URLs with attribution. */
 import type { Metadata } from "next";
+import styles from "./event-detail.module.css";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ChevronRight, Clock3, ExternalLink, Lightbulb, ShieldCheck } from "lucide-react";
@@ -31,12 +32,12 @@ export default async function EventDetailPage({ params }: Props) {
   const event = route.event;
   const primary = event.sources.find((source) => source.isPrimary) ?? event.sources[0];
 
-  return <main className="bg-white"><article className="mx-auto max-w-[1440px]">
-    <nav aria-label="현재 위치" className="mx-auto flex max-w-6xl items-center gap-1.5 px-4 py-4 text-xs text-slate-500 sm:px-6 lg:px-8"><Link href="/" className="hover:text-blue-700">홈</Link><ChevronRight className="size-3" aria-hidden /><span>뉴스</span><ChevronRight className="size-3" aria-hidden /><span className="text-slate-800">상세</span></nav>
+  return <main className={styles.page}><article>
+    <nav aria-label="현재 위치" className={`${styles.container} flex items-center gap-1.5 py-4 text-xs text-slate-500`}><Link href="/" className="hover:text-blue-700">홈</Link><ChevronRight className="size-3" aria-hidden /><span>뉴스</span><ChevronRight className="size-3" aria-hidden /><span className="text-slate-800">상세</span></nav>
 
-    <header className="mx-auto max-w-6xl px-4 pb-5 sm:px-6 lg:px-8"><div className={`grid gap-6 ${event.heroImageUrl ? "lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start" : ""}`}>
-      <div className="min-w-0"><div className="flex flex-wrap gap-1.5"><Badge className={importanceStyle[event.importance]}>중요도 {event.importance}</Badge>{event.topics.slice(0, 3).map((topic, index) => <Badge key={topic} className={index === 0 ? "border-blue-100 bg-blue-50 text-blue-700" : "bg-slate-100"}>{topic}</Badge>)}</div>
-        <h1 className="mt-4 text-balance text-[1.75rem] font-black leading-[1.25] tracking-[-0.03em] text-slate-950 sm:text-[2.1rem] lg:text-[2.25rem]">{event.title}</h1>
+    <header className={`${styles.container} pb-5`}><div className={`grid gap-6 ${event.heroImageUrl ? "lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start" : ""}`}>
+      <div className="min-w-0"><div className="flex flex-wrap gap-1.5"><Badge className={importanceStyle[event.importance]}>중요도 {event.importance}</Badge>{event.topics.slice(0, 3).map((topic) => <Badge key={topic} className="border-stone-200 bg-stone-100 text-stone-700">{topic}</Badge>)}</div>
+        <h1 className={styles.headline}>{event.title}</h1>
         {event.oneLineSummary && <p className="mt-3 max-w-3xl text-[15px] leading-7 text-slate-600">{event.oneLineSummary}</p>}
         <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500">{primary && <span className="font-semibold text-slate-700">{primary.publisher}</span>}{primary?.publishedAt && <span className="inline-flex items-center gap-1"><Clock3 className="size-3.5" aria-hidden />{primary.publishedAt.slice(0, 10)}</span>}{primary && <span className={`inline-flex items-center gap-1 font-semibold ${primary.verificationStatus === "verified" ? "text-emerald-700" : "text-slate-500"}`}><ShieldCheck className="size-3.5" aria-hidden />{verificationLabel[primary.verificationStatus]}</span>}</div>
         {!event.heroImageUrl && primary && <Button variant="outline" size="sm" className="mt-5 rounded-md" asChild><a href={primary.url} target="_blank" rel="noopener noreferrer">원문에서 보기<ExternalLink aria-hidden /></a></Button>}
@@ -44,9 +45,9 @@ export default async function EventDetailPage({ params }: Props) {
       {event.heroImageUrl && <figure className="overflow-hidden rounded-lg border border-slate-200 bg-slate-50"><div className="aspect-[16/8.5] overflow-hidden"><img src={event.heroImageUrl} alt={event.title} className="size-full object-cover" /></div>{primary && <a href={primary.url} target="_blank" rel="noopener noreferrer" className="flex h-9 items-center justify-center gap-1 border-t border-slate-200 bg-white text-xs font-bold hover:bg-slate-50">원문에서 보기<ExternalLink className="size-3" aria-hidden /></a>}{event.heroImageAttribution && <figcaption className="sr-only">이미지: {event.heroImageAttribution}</figcaption>}</figure>}
     </div></header>
 
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"><EventActions eventId={event.id} returnPath={`/events/${event.slug}`} /><div className="mt-3 flex flex-wrap items-start justify-between gap-3"><TopicFollow names={event.topics} returnPath={`/events/${event.slug}`} />{event.entities.length > 0 && <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500"><span className="font-bold">관련 Entity</span>{event.entities.map((entity) => <Badge key={entity}>{entity}</Badge>)}</div>}</div></div>
+    <div className={`${styles.container} `}><EventActions eventId={event.id} returnPath={`/events/${event.slug}`} /><div className="mt-3 flex flex-wrap items-start justify-between gap-3"><TopicFollow names={event.topics} returnPath={`/events/${event.slug}`} />{event.entities.length > 0 && <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500"><span className="font-bold">관련 Entity</span>{event.entities.map((entity) => <Badge key={entity}>{entity}</Badge>)}</div>}</div></div>
 
-    <div className="mx-auto max-w-6xl space-y-8 px-4 py-8 sm:px-6 lg:px-8">
+    <div className={`${styles.container} space-y-8 py-8`}>
       <OriginalContent content={event.originalContent} />
       <AnalysisCards event={event} />
       {event.businessOpportunity && <section aria-labelledby="opportunity-heading" className="detail-section"><div className="detail-heading"><span>3.</span><h2 id="opportunity-heading">사업 기회</h2><span className="content-mode">OPPORTUNITY</span></div><div className="mt-3 grid gap-3 rounded-lg border border-amber-200 bg-amber-50/60 px-4 py-4 sm:grid-cols-[10rem_1fr_auto] sm:items-center"><div className="flex items-center gap-2 font-extrabold text-amber-950"><Lightbulb className="size-4 text-amber-600" aria-hidden />핵심 기회</div><p className="text-sm leading-6 text-amber-950/80">{event.businessOpportunity}</p><Link href="/opportunities" className="text-xs font-bold text-amber-800 hover:underline">전체 기회 보기 →</Link></div></section>}
