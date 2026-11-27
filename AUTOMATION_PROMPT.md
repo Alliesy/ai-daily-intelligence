@@ -87,7 +87,7 @@ GitHub 플러그인으로 `Alliesy/ai-daily-intelligence`의 `main`을 읽고 �
 3. 같은 날짜 파일이 있으면 기존 검증된 사실·출처는 보존하고 동일 사건 키와 정규화 URL을 중복 생성하지 않습니다. 사용자 승인 편집 재검토로 선정에서 제외할 때에는 검증된 원문을 삭제하지 말고 배경 자료로 보존하며 제외 사유·개정 이력을 기록합니다. 새 기준의 뉴스 개수가 부족하면 status=partial과 경고를 명시하며 complete라고 게시하지 않습니다.
 4. `reports/YYYY/YYYY-MM-DD.md`, `LATEST.md`, `publish/notion-latest.md`를 동일 데이터에서 갱신합니다.
 5. `latest.json`은 전체 패킷이 아니라 `date_kst`, `data_path`, `report_path`, `status` 네 필드만 가진 포인터로 유지합니다. 전체 패킷은 날짜별 JSON에만 저장합니다.
-6. 게시 전 최우선 쉬운 말 편집 기준(설명되지 않은 전문용어와 첫 3문장 이해도 포함), 개인 관련성 gate, 독자용 뉴스 3~5개 중 direct_use 최소 2개·기업 맥락 최대 1개, 인사이트 한 가지 의미·비개발자 이해 검사, Morning Paper가 있으면 실제 근거 key와 적격 Top 최대 3개, 사업 아이디어 0~3개, Today Opportunity 최대 1개, 아홉 현실성 Gate, Worth Reading 네 유형, 중복 사건·URL, 후보 승인 게이트, `latest.json` 포인터 구조를 schema로 검증합니다. 하나라도 실패하면 Git/Notion을 완료로 게시하지 않습니다.
+6. 게시 전 최우선 쉬운 말 편집 기준(설명되지 않은 전문용어와 첫 3문장 이해도 포함), 개인 관련성 gate, 독자용 뉴스 3~5개 중 direct_use 최소 2개·기업 맥락 최대 1개, 인사이트 한 가지 의미를 편집 검토합니다. 이와 별도로 Morning Paper가 있으면 실제 근거 key와 적격 Top 최대 3개, 사업 아이디어 0~3개, Today Opportunity 최대 1개, 아홉 현실성 Gate, Worth Reading 네 유형, 중복 사건·URL, 후보 승인 게이트, `latest.json` 포인터 구조를 schema와 기존 구조 검증기로 검증합니다. 편집 검토나 구조 검증이 실패하면 다시 작성·검증한 뒤 게시하며, 해결되지 않은 결과를 완료로 게시하지 않습니다.
 7. JSON과 Markdown의 뉴스 제목·개수·구축 후보 상태가 일치하는지 확인한 뒤 하나의 커밋으로 저장합니다. 커밋 메시지는 `daily: YYYY-MM-DD intelligence`입니다.
 8. Git 저장이 실패하면 Notion을 갱신하지 말고 실패를 보고합니다.
 
