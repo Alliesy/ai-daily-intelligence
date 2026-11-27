@@ -386,13 +386,13 @@
       "url": "https://www.reddit.com/r/Anthropic/comments/1y0jjnv/interesting_ipo_day/"
     },
     {
-      "platform": "Security Research",
+      "platform": "Other",
       "mood": "인식과 실행의 간극 경고",
       "one_line_summary": "연구자들은 에이전트가 위해를 추론으로 인식하고도 실행하는 교차화면 실패를 지적한다.",
       "url": "https://arxiv.org/abs/2611.22971"
     },
     {
-      "platform": "Tech Media",
+      "platform": "Other",
       "mood": "편의보다 권한 경계 확인",
       "one_line_summary": "Gemini Mac 자동화 보도는 편의를 인정하면서 초기 지역·구독 제한과 개인 앱 접근 범위를 핵심 확인점으로 본다.",
       "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/"
