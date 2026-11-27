@@ -236,10 +236,10 @@
       "why_read": "답변 유보와 추출 기능을 개발진이 어떻게 정의했는지 확인."
     }
   ],
-  "todays_insight": "AI를 고를 때는 답이 맞는지와 함께 번역을 기다리는 시간, 사람이 다시 확인할 부분도 살펴보세요.",
+  "todays_insight": "AI 번역과 문서 읽기, 실제로 얼마나 잘되는지는 따로 확인해야 합니다",
   "morning_paper": {
-    "insight_headline": "AI를 고를 땐 기다림과 재확인도 따져보세요",
-    "insight_summary": "통역 AI는 번역을 기다리는 시간이 길면 대화가 끊길 수 있습니다. 문서를 읽는 AI가 답을 보류하면, 그 부분은 사람이 다시 확인해야 합니다. 오늘 DeepL과 Patram 소식은 정답률만큼 실제로 쓰는 과정도 살펴봐야 한다는 점을 보여줍니다.",
+    "insight_headline": "AI 번역과 문서 읽기, 실제로 얼마나 잘되는지는 따로 확인해야 합니다",
+    "insight_summary": "DeepL이 한국어도 지원하는 음성 번역 새 버전을 내놨고, BharatGen은 문서에서 필요한 내용을 찾는 AI 파일을 공개했습니다. 하지만 실제 대화에서 번역이 얼마나 빠르고 정확한지, 한국어 문서의 금액·날짜를 얼마나 잘 읽는지는 아직 확인되지 않았습니다. 회사 발표만으로 성능을 단정하기 어렵다는 뜻입니다.",
     "insight_method": "cross_event_signal_v1",
     "evidence_event_keys": [
       "deepl-aure-v2-launch-2026-11-26",
